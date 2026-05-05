@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-surface: #131313;
+  --color-surface-dim: #131313;
+  --color-surface-bright: #393939;
+  --color-surface-container: #201f1f;
+  --color-surface-container-low: #1c1b1b;
+  --color-surface-container-high: #2a2a2a;
+  --color-surface-container-highest: #353534;
+  --color-surface-container-lowest: #0e0e0e;
+  --color-surface-variant: #353534;
+  --color-on-surface: #e5e2e1;
+  --color-on-surface-variant: #b0c4b0;
+  --color-on-background: #e5e2e1;
+  --color-background: #131313;
+  --color-primary: #90EE90;
+  --color-primary-accent: #00912F;
+  --color-primary-container: #00912F;
+  --color-primary-fixed: #c8f7c8;
+  --color-on-primary: #003300;
+  --color-on-primary-container: #002800;
+  --color-secondary: #a8d8a8;
+  --color-secondary-container: #1a5c2a;
+  --color-on-secondary: #0a3a14;
+  --color-on-secondary-container: #b5e0b5;
+  --color-tertiary: #70d6da;
+  --color-tertiary-container: #319fa3;
+  --color-on-tertiary: #003738;
+  --color-on-tertiary-container: #002f31;
+  --color-error: #a8d8a8;
+  --color-error-container: #1a5c2a;
+  --color-on-error: #003300;
+  --color-on-error-container: #c8f7c8;
+  --color-outline: #6b8f6b;
+  --color-outline-variant: #2d4a2d;
+  --color-inverse-surface: #e5e2e1;
+  --color-inverse-on-surface: #313030;
+  --color-inverse-primary: #006b1f;
+  --color-surface-tint: #90EE90;
+
+  --font-headline: "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-label: "Space Grotesk", sans-serif;
+
+  --radius-DEFAULT: 0rem;
+  --radius-lg: 0rem;
+  --radius-xl: 0rem;
+  --radius-2xl: 0rem;
+  --radius-3xl: 0rem;
+}
+
+* {
+  border-radius: 0 !important;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #0e0e0e; }
+::-webkit-scrollbar-thumb { background: #353534; }
+
+.tabular-nums { font-variant-numeric: tabular-nums; }
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+body {
+  background: var(--color-surface);
+  color: var(--color-on-surface);
+  font-family: var(--font-body);
+}
