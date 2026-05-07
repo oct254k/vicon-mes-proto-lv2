@@ -1,3 +1,7 @@
+export function generateStaticParams() {
+  return [{ id: "BOM-001" }, { id: "BOM-002" }];
+}
+
 import { PageHeader } from "@/components/ui/PageHeader";
 import { FieldHeader } from "@/components/ui/FieldHeader";
 import { StatusBadge } from "@/components/ui/StatusBadge";
