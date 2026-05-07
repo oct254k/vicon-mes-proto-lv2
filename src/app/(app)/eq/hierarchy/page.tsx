@@ -5,7 +5,7 @@ import { PageHeader } from "@/components/ui/PageHeader";
 import { StatusBadge } from "@/components/ui/StatusBadge";
 
 const treeData = {
-  kind: "PLANT", id: "P3000", name: "제3공장", oee7d: 87.3,
+  kind: "PLANT", id: "P3000", name: "제3 이천공장 (데크)", oee7d: 87.3,
   children: [
     {
       kind: "WC", id: "WC-CUT-01", name: "절단 라인",

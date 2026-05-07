@@ -21,9 +21,10 @@ const FLAG_LABELS: Record<FlagKey, string> = {
 };
 
 const INITIAL: PlantConfig[] = [
-  { id: "P1000", name: "제1공장", tz: "Asia/Seoul", currency: "KRW", shift: "D/N", flags: { rfid_enabled: true, fifo_strict: true, qr_scan_only: false, external_allowed: false } },
-  { id: "P2000", name: "제2공장", tz: "Asia/Seoul", currency: "KRW", shift: "D/E/N", flags: { rfid_enabled: false, fifo_strict: true, qr_scan_only: true, external_allowed: false } },
-  { id: "P3000", name: "제3공장", tz: "Asia/Seoul", currency: "KRW", shift: "D", flags: { rfid_enabled: true, fifo_strict: false, qr_scan_only: false, external_allowed: true } },
+  { id: "P1000", name: "제1 이천공장",          tz: "Asia/Seoul", currency: "KRW", shift: "주간/야간",     flags: { rfid_enabled: true,  fifo_strict: true,  qr_scan_only: false, external_allowed: true  } },
+  { id: "P2000", name: "제2 이천공장",          tz: "Asia/Seoul", currency: "KRW", shift: "주간/석간/야간", flags: { rfid_enabled: false, fifo_strict: true,  qr_scan_only: true,  external_allowed: false } },
+  { id: "P3000", name: "제3 이천공장 (데크)",   tz: "Asia/Seoul", currency: "KRW", shift: "주간",         flags: { rfid_enabled: true,  fifo_strict: false, qr_scan_only: false, external_allowed: true  } },
+  { id: "P4000", name: "제4 안성공장 (가설재)", tz: "Asia/Seoul", currency: "KRW", shift: "주간/야간",     flags: { rfid_enabled: false, fifo_strict: true,  qr_scan_only: false, external_allowed: false } },
 ];
 
 export default function SYSPlantPage() {

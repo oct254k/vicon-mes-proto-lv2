@@ -3,10 +3,10 @@
 import { PageHeader } from "@/components/ui/PageHeader";
 
 const PLANTS = [
-  { id: "P1000", name: "제1공장", oee: 82.1, defect: 1.2, progress: 88, eq: "14/16", status: "정상" },
-  { id: "P2000", name: "제2공장", oee: 74.5, defect: 2.1, progress: 75, eq: "10/14", status: "주의" },
-  { id: "P3000", name: "제3공장", oee: 78.4, defect: 1.8, progress: 92, eq: "12/15", status: "정상" },
-  { id: "P4000", name: "제4공장", oee: 68.0, defect: 3.5, progress: 61, eq: "9/12",  status: "위험" },
+  { id: "P1000", name: "제1 이천공장",          oee: 82.1, defect: 1.2, progress: 88, eq: "14/16", status: "정상" },
+  { id: "P2000", name: "제2 이천공장",          oee: 74.5, defect: 2.1, progress: 75, eq: "10/14", status: "주의" },
+  { id: "P3000", name: "제3 이천공장 (데크)",   oee: 78.4, defect: 1.8, progress: 92, eq: "12/15", status: "정상" },
+  { id: "P4000", name: "제4 안성공장 (가설재)", oee: 68.0, defect: 3.5, progress: 61, eq: "9/12",  status: "위험" },
 ];
 
 const STATUS_COLOR: Record<string, string> = { 정상: "text-primary-accent", 주의: "text-[#f59e0b]", 위험: "text-error" };

@@ -3,10 +3,10 @@
 import { PageHeader } from "@/components/ui/PageHeader";
 
 const PLANTS = [
-  { id: "P1000", name: "제1공장", oee: 82.1, progress: 88, defect: 1.2, highlight: "진척률 88% — 전주 대비 +3%p" },
-  { id: "P2000", name: "제2공장", oee: 74.5, progress: 75, defect: 2.1, highlight: "불량률 2.1% — 주의 임계치 근접" },
-  { id: "P3000", name: "제3공장", oee: 78.4, progress: 92, defect: 1.8, highlight: "진척률 92% — 이번 주 최고" },
-  { id: "P4000", name: "제4공장", oee: 68.0, progress: 61, defect: 3.5, highlight: "OEE 68% — 목표 75% 대비 -7%p 조치 필요" },
+  { id: "P1000", name: "제1 이천공장", oee: 82.1, progress: 88, defect: 1.2, highlight: "진척률 88% — 전주 대비 +3%p" },
+  { id: "P2000", name: "제2 이천공장", oee: 74.5, progress: 75, defect: 2.1, highlight: "불량률 2.1% — 주의 임계치 근접" },
+  { id: "P3000", name: "제3 이천공장 (데크)", oee: 78.4, progress: 92, defect: 1.8, highlight: "진척률 92% — 이번 주 최고" },
+  { id: "P4000", name: "제4 안성공장 (가설재)", oee: 68.0, progress: 61, defect: 3.5, highlight: "OEE 68% — 목표 75% 대비 -7%p 조치 필요" },
 ];
 
 const DISPATCH_LOG = [

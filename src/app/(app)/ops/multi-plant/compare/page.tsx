@@ -17,10 +17,10 @@ const COLS = [
 ];
 
 const DATA = [
-  { plant: "P1000", name: "제1공장", oee: "82.1%", avail: "94%", perf: "91%", qual: "96%", defect: "1.2%", progress: "88%", eq: "14/16", status: "정상" },
-  { plant: "P2000", name: "제2공장", oee: "74.5%", avail: "88%", perf: "85%", qual: "99%", defect: "2.1%", progress: "75%", eq: "10/14", status: "주의" },
-  { plant: "P3000", name: "제3공장", oee: "78.4%", avail: "92%", perf: "88%", qual: "98%", defect: "1.8%", progress: "92%", eq: "12/15", status: "정상" },
-  { plant: "P4000", name: "제4공장", oee: "68.0%", avail: "82%", perf: "78%", qual: "94%", defect: "3.5%", progress: "61%", eq: "9/12",  status: "위험" },
+  { plant: "P1000", name: "제1 이천공장", oee: "82.1%", avail: "94%", perf: "91%", qual: "96%", defect: "1.2%", progress: "88%", eq: "14/16", status: "정상" },
+  { plant: "P2000", name: "제2 이천공장", oee: "74.5%", avail: "88%", perf: "85%", qual: "99%", defect: "2.1%", progress: "75%", eq: "10/14", status: "주의" },
+  { plant: "P3000", name: "제3 이천공장 (데크)", oee: "78.4%", avail: "92%", perf: "88%", qual: "98%", defect: "1.8%", progress: "92%", eq: "12/15", status: "정상" },
+  { plant: "P4000", name: "제4 안성공장 (가설재)", oee: "68.0%", avail: "82%", perf: "78%", qual: "94%", defect: "3.5%", progress: "61%", eq: "9/12",  status: "위험" },
 ];
 
 const CHART_ITEMS = ["P1000","P2000","P3000","P4000"];

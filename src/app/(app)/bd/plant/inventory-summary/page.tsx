@@ -4,9 +4,9 @@ import { FieldHeader } from "@/components/ui/FieldHeader";
 const AS_OF = "2026-05-05 09:00";
 
 const KPI = [
-  { plant: "P1000", label: "제1공장", materials: 82, totalQty: "1,240m", transactions: 317 },
-  { plant: "P2000", label: "제2공장", materials: 74, totalQty: "960m", transactions: 248 },
-  { plant: "P3000", label: "제3공장", materials: 91, totalQty: "1,580m", transactions: 401 },
+  { plant: "P1000", label: "제1 이천공장", materials: 82, totalQty: "1,240m", transactions: 317 },
+  { plant: "P2000", label: "제2 이천공장", materials: 74, totalQty: "960m", transactions: 248 },
+  { plant: "P3000", label: "제3 이천공장 (데크)", materials: 91, totalQty: "1,580m", transactions: 401 },
 ];
 
 const SUMMARY = [

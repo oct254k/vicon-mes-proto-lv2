@@ -14,9 +14,9 @@ interface PlantKPI {
 }
 
 const PLANTS: PlantKPI[] = [
-  { id: "P3000", name: "제3공장", oee: 78, defectRate: 1.8, progress: 92, isOutsource: false, status: "green" },
-  { id: "P2000", name: "제2공장", oee: 65, defectRate: 2.3, progress: 85, isOutsource: false, status: "green" },
-  { id: "P1000", name: "제1공장", oee: 52, defectRate: 4.1, progress: 71, isOutsource: false, status: "red" },
+  { id: "P3000", name: "제3 이천공장 (데크)", oee: 78, defectRate: 1.8, progress: 92, isOutsource: false, status: "green" },
+  { id: "P2000", name: "제2 이천공장", oee: 65, defectRate: 2.3, progress: 85, isOutsource: false, status: "green" },
+  { id: "P1000", name: "제1 이천공장", oee: 52, defectRate: 4.1, progress: 71, isOutsource: false, status: "red" },
 ];
 
 const STATUS_ACCENT: Record<string, string> = {
