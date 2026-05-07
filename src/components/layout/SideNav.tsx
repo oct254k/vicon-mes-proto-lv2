@@ -30,12 +30,13 @@ function filterTree(nodes: MenuNode[], q: string): MenuNode[] {
 
 interface TreeNodeProps {
   node: MenuNode;
-  depth: number;          // 0 = 1Depth(도메인), 1 = 2Depth, 2 = 3Depth, ...
+  depth: number;
   pathname: string;
-  forceExpand?: boolean;  // 검색 중에는 전부 펼침
+  forceExpand?: boolean;
+  onNavigate?: () => void;  // 모바일: 링크 클릭 시 SideNav 닫기
 }
 
-function TreeNode({ node, depth, pathname, forceExpand }: TreeNodeProps) {
+function TreeNode({ node, depth, pathname, forceExpand, onNavigate }: TreeNodeProps) {
   const hasChildren = (node.children?.length ?? 0) > 0;
   const active = isNodeActive(node, pathname);
   // 기본 상태: 현재 경로 조상이면 펼침, 아니면 접힘
@@ -73,6 +74,7 @@ function TreeNode({ node, depth, pathname, forceExpand }: TreeNodeProps) {
       {node.url && !hasChildren ? (
         <Link
           href={node.url}
+          onClick={onNavigate}
           style={indentStyle}
           className={[
             "flex items-center gap-2 py-1.5 pr-4 transition-colors duration-150 border-l-2",
@@ -147,6 +149,7 @@ function TreeNode({ node, depth, pathname, forceExpand }: TreeNodeProps) {
               depth={depth + 1}
               pathname={pathname}
               forceExpand={forceExpand}
+              onNavigate={onNavigate}
             />
           ))}
         </ul>
@@ -155,7 +158,12 @@ function TreeNode({ node, depth, pathname, forceExpand }: TreeNodeProps) {
   );
 }
 
-export function SideNav() {
+interface SideNavProps {
+  open?: boolean;
+  onClose?: () => void;
+}
+
+export function SideNav({ open = false, onClose }: SideNavProps) {
   const pathname = usePathname();
   const [query, setQuery] = useState("");
   const searchRef = useRef<HTMLInputElement>(null);
@@ -181,7 +189,13 @@ export function SideNav() {
     : MENU;
 
   return (
-    <aside className="fixed left-0 top-16 z-40 w-72 h-[calc(100vh-64px)] bg-surface-container-lowest border-r border-surface-container-highest/10 flex flex-col">
+    <aside className={[
+      "fixed left-0 top-16 z-40 w-72 h-[calc(100vh-64px)] bg-surface-container-lowest border-r border-surface-container-highest/10 flex flex-col",
+      "transition-transform duration-300",
+      // 모바일: open 상태에 따라 슬라이드, 데스크톱: 항상 표시
+      "lg:translate-x-0",
+      open ? "translate-x-0" : "-translate-x-full",
+    ].join(" ")}>
       {/* 검색 입력 */}
       <div className="px-4 py-3 border-b border-surface-container-highest/10 shrink-0">
         <div className="flex items-center gap-2 bg-surface-container px-3 py-2">
@@ -219,6 +233,7 @@ export function SideNav() {
                 depth={0}
                 pathname={pathname}
                 forceExpand={query.trim().length > 0}
+                onNavigate={onClose}
               />
             ))}
           </ul>
