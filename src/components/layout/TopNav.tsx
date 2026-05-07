@@ -2,12 +2,16 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
+import { GlossaryModal } from "@/components/ui/GlossaryModal";
 
 export function TopNav() {
+  const [glossaryOpen, setGlossaryOpen] = useState(false);
+
   return (
     <nav className="fixed top-0 flex justify-between items-center w-full px-10 h-16 z-50 bg-surface border-b border-surface-container-highest/20">
       <div className="flex items-center gap-8">
-        <Link href="/dashboard" className="flex items-center gap-3">
+        <Link href="/ops" className="flex items-center gap-3">
           <Image
             src="/vicon_logo.png"
             alt="VICON Logo"
@@ -18,7 +22,7 @@ export function TopNav() {
           />
         </Link>
         <div className="hidden md:flex gap-6 font-headline font-bold tracking-tighter tabular-nums">
-          <Link href="/dashboard" className="text-on-surface opacity-70 hover:opacity-100 hover:bg-surface-container-highest transition-colors duration-150 py-1 px-2">
+          <Link href="/ops" className="text-on-surface opacity-70 hover:opacity-100 hover:bg-surface-container-highest transition-colors duration-150 py-1 px-2">
             대시보드
           </Link>
           <Link href="/trace" className="text-on-surface opacity-70 hover:opacity-100 hover:bg-surface-container-highest transition-colors duration-150 py-1 px-2">
@@ -30,6 +34,13 @@ export function TopNav() {
         </div>
       </div>
       <div className="flex items-center gap-6">
+        <button
+          onClick={() => setGlossaryOpen(true)}
+          title="MES 용어사전"
+          className="material-symbols-outlined text-on-surface cursor-pointer hover:text-primary-accent"
+        >
+          book_2
+        </button>
         <span className="material-symbols-outlined text-on-surface cursor-pointer hover:text-primary-accent">
           notifications
         </span>
@@ -40,6 +51,7 @@ export function TopNav() {
           <span className="material-symbols-outlined text-sm">person</span>
         </div>
       </div>
+      <GlossaryModal isOpen={glossaryOpen} onClose={() => setGlossaryOpen(false)} />
     </nav>
   );
 }

@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
-import { TopNav } from "@/components/layout/TopNav";
-import { SideNav } from "@/components/layout/SideNav";
-import { TelemetryStrip } from "@/components/layout/TelemetryStrip";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -35,13 +32,8 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-surface text-on-surface font-body overflow-hidden">
-        <TopNav />
-        <SideNav />
-        <main className="ml-72 mt-16 p-8 h-[calc(100vh-64px)] overflow-y-auto">
-          {children}
-        </main>
-        <TelemetryStrip />
+      <body className="bg-surface text-on-surface font-body">
+        {children}
       </body>
     </html>
   );
