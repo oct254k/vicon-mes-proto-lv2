@@ -7,10 +7,10 @@ const CONTEXT = {
   woId:     "WO-P3000-20260506-0007",
   memberId: "B01-1-G22C-C-171",
   memberType: "C형 6000mm",
-  operation: "CUT (절단)",
+  operation: "신선공정",
   material:  "M-COIL-A",
   neededM:   812.4,
-  lotId:     "CUT-20260506-001",
+  lotId:     "신선-20260506-001",
   location:  "WH-P3000-A-003",
 };
 
@@ -81,7 +81,7 @@ export default function IssueScanPage() {
             value={lotInput}
             onChange={(e) => { setLotInput(e.target.value); setError(""); }}
             onKeyDown={(e) => e.key === "Enter" && handleScan()}
-            placeholder="CUT-YYYYMMDD-NNN"
+            placeholder="신선-YYYYMMDD-NNN"
             className="flex-1 bg-surface-container-lowest border-b-2 border-outline/30 px-3 py-3 text-lg font-mono text-on-surface placeholder:text-on-surface/20 focus:outline-none focus:border-primary-accent"
           />
           {/* 시뮬레이션 버튼 */}

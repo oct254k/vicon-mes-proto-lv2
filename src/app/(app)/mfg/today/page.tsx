@@ -2,19 +2,19 @@
 import { useState } from "react";
 import { StatusBadge } from "@/components/ui/StatusBadge";
 
-const SESSION = { name: "김작업", plant: "P3000 제3 이천공장 (데크)", wc: "WC-CUT-01", shift: "주간조" };
+const SESSION = { name: "김작업", plant: "P3000 제3 이천공장 (데크)", wc: "WC-신선-01", shift: "주간조" };
 const TODAY = "2026-05-06 (수)";
 
 const LINES = [
   {
     id: "WOL-7001", woId: "WO-P3000-20260506-0007",
     memberId: "B01-1-G22C-C-171", memberType: "C형 6000mm",
-    material: "COIL-A", nextOp: "BENT", status: "IN_PROGRESS", priority: 3,
+    material: "COIL-A", nextOp: "TG공정", status: "IN_PROGRESS", priority: 3,
   },
   {
     id: "WOL-7002", woId: "WO-P3000-20260506-0008",
     memberId: "B01-1-G22C-C-172", memberType: "C형 6000mm",
-    material: "COIL-A", nextOp: "CUT", status: "PENDING", priority: 2,
+    material: "COIL-A", nextOp: "신선공정", status: "PENDING", priority: 2,
   },
   {
     id: "WOL-7003", woId: "",

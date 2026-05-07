@@ -3,22 +3,23 @@ import { DataTable } from "@/components/ui/DataTable";
 import { StatusBadge } from "@/components/ui/StatusBadge";
 
 const COLUMNS = [
-  { key: "part", label: "부재" },
-  { key: "op", label: "공정" },
-  { key: "lot", label: "생산 LOT" },
-  { key: "plan", label: "계획" },
-  { key: "actual", label: "실적" },
-  { key: "worker", label: "작업자" },
+  { key: "part",    label: "부재" },
+  { key: "op",      label: "공정" },
+  { key: "wc",      label: "WC" },
+  { key: "lot",     label: "생산 LOT" },
+  { key: "worker",  label: "작업자" },
   { key: "startAt", label: "시작" },
-  { key: "status", label: "상태" },
+  { key: "status",  label: "상태" },
 ];
 
+// 제3공장 4공정: 신선 → TG → 포밍 → 데크플레이트
 const DATA = [
-  { part: "B01-1-G22C-C-171", op: "G22C", lot: "PRD-20260506-001", plan: "1", actual: "1", worker: "김철수", startAt: "08:20", status: "완료" },
-  { part: "B01-1-G22C-C-172", op: "G22C", lot: "PRD-20260506-002", plan: "1", actual: "0", worker: "김철수", startAt: "09:05", status: "진행중" },
-  { part: "B02-2-G22C-C-088", op: "G22C", lot: "PRD-20260506-003", plan: "2", actual: "1", worker: "박영희", startAt: "08:45", status: "진행중" },
-  { part: "B03-1-G22C-C-054", op: "G22C", lot: "PRD-20260505-011", plan: "3", actual: "3", worker: "이민준", startAt: "07:30", status: "완료" },
-  { part: "B04-2-G22C-C-033", op: "G22C", lot: "PRD-20260505-012", plan: "1", actual: "0", worker: "—", startAt: "—", status: "대기" },
+  { part: "B01-1-G22C-C-171", op: "신선공정",       wc: "WC-신선-01", lot: "신선-20260506-001", worker: "김작업", startAt: "08:10", status: "완료" },
+  { part: "B01-1-G22C-C-171", op: "TG공정",         wc: "WC-TG-01",   lot: "TG-20260506-001",  worker: "이TG",   startAt: "10:05", status: "진행중" },
+  { part: "B01-1-G22C-C-171", op: "포밍공정",       wc: "WC-포밍-01", lot: "—",                worker: "—",      startAt: "—",     status: "대기" },
+  { part: "B01-1-G22C-C-171", op: "데크플레이트공정", wc: "WC-DP-01",   lot: "—",                worker: "—",      startAt: "—",     status: "대기" },
+  { part: "B01-1-G22C-C-172", op: "신선공정",       wc: "WC-신선-01", lot: "신선-20260506-002", worker: "김작업", startAt: "09:05", status: "진행중" },
+  { part: "B01-2-G15A-S-040", op: "신선공정",       wc: "WC-신선-01", lot: "신선-20260506-010", worker: "박신선", startAt: "07:30", status: "완료" },
 ];
 
 const STATUS_TYPE: Record<string, "running" | "idle" | "warning"> = {

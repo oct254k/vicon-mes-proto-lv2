@@ -2,14 +2,14 @@
 import { useState } from "react";
 import { StatusBadge } from "@/components/ui/StatusBadge";
 
-const MEMBER = { id: "B01-1-G22C-C-171", type: "C형 6000mm", woId: "WO-P3000-20260506-0007", operation: "CUT (절단)" };
-const LOT_PREVIEW = "CUT-20260506-001";
-const GATE_STATUS = { prev: "—", ok: true };  // CUT = 첫 공정, 선행 없음
+const MEMBER = { id: "B01-1-G22C-C-171", type: "C형 6000mm", woId: "WO-P3000-20260506-0007", operation: "신선공정" };
+const LOT_PREVIEW = "신선-20260506-001";
+const GATE_STATUS = { prev: "—", ok: true };  // 신선 = 첫 공정, 선행 없음
 
 const HISTORY = [
-  { memberId: "B01-1-G22C-C-168", lot: "CUT-20260506-044", time: "09:15" },
-  { memberId: "B01-1-G22C-C-169", lot: "CUT-20260506-045", time: "10:42" },
-  { memberId: "B01-1-G22C-C-170", lot: "CUT-20260506-046", time: "13:58" },
+  { memberId: "B01-1-G22C-C-168", lot: "신선-20260506-044", time: "09:15" },
+  { memberId: "B01-1-G22C-C-169", lot: "신선-20260506-045", time: "10:42" },
+  { memberId: "B01-1-G22C-C-170", lot: "신선-20260506-046", time: "13:58" },
 ];
 
 export default function MFGProducePage() {
