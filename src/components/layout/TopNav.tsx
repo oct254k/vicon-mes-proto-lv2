@@ -25,11 +25,11 @@ export function TopNav({ onMenuClick }: TopNavProps) {
         </button>
         <Link href="/ops" className="flex items-center gap-3">
           <Image
-            src="/vicon_logo.png"
-            alt="VICON Logo"
-            width={120}
-            height={35}
-            className="h-8 w-auto invert-0"
+            src="/sungigroup_logo.png"
+            alt="성지그룹 Logo"
+            width={106}
+            height={26}
+            className="h-7 w-auto brightness-0 invert"
             priority
           />
         </Link>

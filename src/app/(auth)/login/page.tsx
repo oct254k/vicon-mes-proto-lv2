@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const MOCK_USERS: Record<string, { pin: string; name: string; plant: string; role: string }> = {
   "park.planner": { pin: "Demo1234!", name: "박계획", plant: "P3000 제3 이천공장 (데크)", role: "PLANNER" },
@@ -45,10 +46,15 @@ export default function LoginPage() {
 
       {/* 로고 */}
       <div className="mb-10 border-l-4 border-primary-accent pl-5">
-        <div className="text-4xl font-black tracking-tighter uppercase font-headline text-white leading-none">
-          VICON
-        </div>
-        <div className="text-xs font-label uppercase tracking-[0.35em] text-primary-accent mt-1">
+        <Image
+          src="/sungigroup_logo.png"
+          alt="성지그룹"
+          width={106}
+          height={26}
+          className="h-9 w-auto brightness-0 invert mb-1"
+          priority
+        />
+        <div className="text-xs font-label uppercase tracking-[0.35em] text-primary-accent">
           MES · 데크 3공장
         </div>
       </div>
