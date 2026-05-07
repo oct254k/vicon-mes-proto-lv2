@@ -4,6 +4,113 @@ import { PageHeader } from "@/components/ui/PageHeader";
 import { StatusBadge } from "@/components/ui/StatusBadge";
 import { FieldHeader } from "@/components/ui/FieldHeader";
 
+// ── 라벨 미리보기 (인라인) ────────────────────────────────
+const MEMBER_INFO: Record<string, { type: string; len: string; wo: string; wc: string }> = {
+  "B01-1-G22C-C-171": { type: "C형", len: "6,000mm", wo: "WO-P3000-20260506-0007", wc: "WC-신선-01" },
+  "B01-1-G22C-S-172": { type: "S형", len: "6,000mm", wo: "WO-P3000-20260506-0007", wc: "WC-신선-01" },
+  "B01-2-G22C-C-201": { type: "C형", len: "9,000mm", wo: "WO-P3000-20260506-0008", wc: "WC-신선-01" },
+  "B01-2-G15A-S-040": { type: "S형", len: "12,000mm", wo: "WO-P3000-20260506-0007", wc: "WC-신선-01" },
+  "B02-1-T18B-S-102": { type: "S형", len: "8,000mm", wo: "WO-P3000-20260505-0002", wc: "WC-TG-01" },
+};
+const PACKING_INFO: Record<string, { wo: string; count: number; weight: string; dest: string }> = {
+  "PKG-WO-P3000-20260506-0007-001": { wo: "WO-P3000-20260506-0007", count: 12, weight: "2,450 kg", dest: "P1000 제1 이천공장" },
+  "PKG-WO-P3000-20260506-0007-002": { wo: "WO-P3000-20260506-0007", count:  8, weight: "1,800 kg", dest: "P1000 제1 이천공장" },
+  "PKG-WO-P3000-20260505-0001-001": { wo: "WO-P3000-20260505-0001", count:  6, weight: "1,200 kg", dest: "P1000 제1 이천공장" },
+};
+const KS_CERTIFIED = ["G22C-SLIPPER-TYPE-01","G22C-SLIPPER-TYPE-03"];
+
+function Barcode({ value }: { value: string }) {
+  const bars = value.split("").flatMap((c) => {
+    const n = c.charCodeAt(0) % 8;
+    return [1, n > 4 ? 2 : 1, n > 2 ? 1 : 2, 1];
+  }).slice(0, 52);
+  return (
+    <div className="flex items-end gap-px h-10">
+      {bars.map((w, i) => (
+        <div key={i} className="bg-black" style={{ width: `${w * 2}px`, height: i % 5 === 0 ? "100%" : "80%" }} />
+      ))}
+    </div>
+  );
+}
+function QRBlock({ size = 52 }: { size?: number }) {
+  return (
+    <div className="border-2 border-black bg-white p-1" style={{ width: size, height: size }}>
+      <div className="w-full h-full grid" style={{ gridTemplateColumns: "repeat(7,1fr)", gap: "1px" }}>
+        {Array.from({ length: 49 }).map((_, i) => {
+          const corner = [0,1,2,7,8,9,14,6,13,20,36,37,38,43,44,45,42,41,40,48,47,46];
+          return <div key={i} className={corner.includes(i) || i % 3 === 0 ? "bg-black" : "bg-white"} />;
+        })}
+      </div>
+    </div>
+  );
+}
+
+function LabelPreviewCard({ type, target }: { type: "MEMBER"|"PACKING"|"SLIPPER"; target: string }) {
+  if (type === "MEMBER") {
+    const m = MEMBER_INFO[target] ?? { type:"—", len:"—", wo:"—", wc:"—" };
+    return (
+      <div className="bg-white text-black p-4 border-2 border-black font-headline" style={{width:300}}>
+        <div className="flex justify-between items-start mb-3 border-b-2 border-black pb-2">
+          <div><p className="text-[10px] font-bold text-gray-400 uppercase">VICON MES</p><p className="text-xs font-black uppercase">부재 라벨 · MEMBER</p></div>
+          <QRBlock />
+        </div>
+        <p className="text-[10px] text-gray-400 uppercase mb-0.5">부재 코드</p>
+        <p className="text-sm font-black tracking-tight mb-2 break-all">{target}</p>
+        <div className="mb-2"><Barcode value={target} /><p className="text-[9px] text-center text-gray-400 mt-0.5 font-mono">{target}</p></div>
+        <div className="grid grid-cols-2 gap-x-3 gap-y-1 border-t border-gray-200 pt-2 text-[10px]">
+          <div><span className="text-gray-400">타입</span><br/><b>{m.type}</b></div>
+          <div><span className="text-gray-400">길이</span><br/><b>{m.len}</b></div>
+          <div><span className="text-gray-400">WO</span><br/><b className="text-[9px] font-mono">{m.wo}</b></div>
+          <div><span className="text-gray-400">WC</span><br/><b>{m.wc}</b></div>
+        </div>
+        <div className="border-t border-gray-200 mt-2 pt-1 flex justify-between text-[9px] text-gray-400">
+          <span>P3000 제3 이천공장</span><span>2026-05-06</span>
+        </div>
+      </div>
+    );
+  }
+  if (type === "PACKING") {
+    const p = PACKING_INFO[target] ?? { wo:"—", count:0, weight:"—", dest:"—" };
+    return (
+      <div className="bg-white text-black p-4 border-2 border-black font-headline" style={{width:300}}>
+        <div className="flex justify-between items-start mb-3 border-b-2 border-black pb-2">
+          <div><p className="text-[10px] font-bold text-gray-400 uppercase">VICON MES</p><p className="text-xs font-black uppercase">패킹 라벨 · PACKING</p></div>
+          <QRBlock />
+        </div>
+        <p className="text-[10px] text-gray-400 uppercase mb-0.5">패킹 ID</p>
+        <p className="text-[10px] font-black tracking-tight mb-2 break-all">{target}</p>
+        <div className="mb-2"><Barcode value={target.slice(-6)} /></div>
+        <div className="grid grid-cols-2 gap-x-3 gap-y-1 border-t border-gray-200 pt-2 text-[10px]">
+          <div><span className="text-gray-400">WO</span><br/><b className="text-[9px] font-mono">{p.wo}</b></div>
+          <div><span className="text-gray-400">부재 수</span><br/><b className="text-base">{p.count}건</b></div>
+          <div><span className="text-gray-400">총 중량</span><br/><b>{p.weight}</b></div>
+          <div><span className="text-gray-400">수신처</span><br/><b className="text-[9px]">{p.dest}</b></div>
+        </div>
+        <div className="border-t border-gray-200 mt-2 pt-1 flex justify-between text-[9px] text-gray-400">
+          <span>P3000 제3 이천공장</span><span>2026-05-06</span>
+        </div>
+      </div>
+    );
+  }
+  // SLIPPER
+  const ok = KS_CERTIFIED.includes(target);
+  return (
+    <div className={`bg-white text-black p-4 border-4 font-headline ${ok ? "border-black" : "border-red-600"}`} style={{width:300}}>
+      <div className="flex justify-between items-start mb-3 border-b-2 border-black pb-2">
+        <div><p className="text-[10px] font-bold text-gray-400 uppercase">VICON MES</p><p className="text-xs font-black uppercase">슬리퍼 라벨</p></div>
+        {ok ? <QRBlock /> : <div className="w-14 h-14 bg-red-100 border-2 border-red-600 flex items-center justify-center"><span className="text-red-600 font-black text-[10px] text-center leading-tight">KS<br/>BLOCKED</span></div>}
+      </div>
+      <p className="text-[10px] text-gray-400 uppercase mb-0.5">슬리퍼 타입</p>
+      <p className="text-sm font-black mb-2">{target}</p>
+      <div className="mb-2"><Barcode value={target.slice(-4)} /></div>
+      {ok
+        ? <div className="border border-green-600 bg-green-50 p-2 text-[10px] text-green-800 font-bold text-center">✓ KS 인증 유효</div>
+        : <div className="border-2 border-red-600 bg-red-50 p-2 text-[10px] text-red-700 font-bold text-center">✗ KS 인증 미등재 — 발행 차단</div>}
+    </div>
+  );
+}
+// ─────────────────────────────────────────────────────────
+
 type LabelStatus = "COMPLETED" | "PENDING" | "FAILED" | "BLOCKED" | "QUEUED";
 type LabelType   = "MEMBER" | "PACKING" | "SLIPPER";
 
@@ -95,11 +202,12 @@ const TABS: { key: LabelStatus | "ALL"; label: string }[] = [
 ];
 
 export default function LabelReprintPage() {
-  const [rows, setRows]     = useState<LabelRow[]>(ALL_LABELS);
-  const [tab, setTab]       = useState<LabelStatus | "ALL">("ALL");
-  const [locTab, setLocTab] = useState<ItemLocation | "ALL">("ALL");
-  const [scan, setScan]     = useState("");
-  const [toast, setToast]   = useState("");
+  const [rows, setRows]       = useState<LabelRow[]>(ALL_LABELS);
+  const [tab, setTab]         = useState<LabelStatus | "ALL">("ALL");
+  const [locTab, setLocTab]   = useState<ItemLocation | "ALL">("ALL");
+  const [scan, setScan]       = useState("");
+  const [toast, setToast]     = useState("");
+  const [previewRow, setPreviewRow] = useState<LabelRow | null>(null);
 
   // 재인쇄 처리 (최대 시도 초과 시 FAILED 유지)
   function handleReprint(id: string) {
@@ -279,14 +387,19 @@ export default function LabelReprintPage() {
                     </td>
                     <td className="px-3 py-2">
                       <div className="flex gap-1">
-                        {/* 재인쇄 — 완료·큐·실패 모두 가능 */}
+                        {/* 미리보기 */}
+                        <button onClick={() => setPreviewRow(r)}
+                          className="px-2 py-1 bg-surface-container-highest text-on-surface-variant text-[10px] font-label uppercase tracking-wider hover:text-primary-accent hover:border hover:border-primary-accent/40 whitespace-nowrap transition-colors">
+                          미리보기
+                        </button>
+                        {/* 재인쇄 */}
                         {r.status !== "BLOCKED" && (
                           <button onClick={() => handleReprint(r.id)}
                             className="px-2 py-1 bg-primary-accent text-black text-[10px] font-label uppercase tracking-wider hover:opacity-90 whitespace-nowrap">
                             재인쇄
                           </button>
                         )}
-                        {/* 재발행 — FAILED/BLOCKED: 시도 초기화 (관리자 권한) */}
+                        {/* 재발행 — FAILED/BLOCKED: 시도 초기화 */}
                         {(r.status === "FAILED" || r.status === "BLOCKED") && (
                           <button onClick={() => handleReissue(r.id)}
                             className="px-2 py-1 bg-[#f59e0b]/80 text-black text-[10px] font-label uppercase tracking-wider hover:opacity-90 whitespace-nowrap">
@@ -311,6 +424,50 @@ export default function LabelReprintPage() {
           KS BLOCKED: KS 인증 등재 후 재발행 가능 (FNC-WO-011)
         </p>
       </div>
+
+      {/* 미리보기 모달 */}
+      {previewRow && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70"
+          onClick={() => setPreviewRow(null)}>
+          <div onClick={(e) => e.stopPropagation()} className="flex flex-col gap-3">
+            {/* 모달 헤더 */}
+            <div className="flex items-center justify-between bg-surface-container-lowest px-4 py-2 border-b border-outline-variant/20">
+              <div>
+                <span className="text-xs font-label uppercase tracking-widest text-primary-accent">라벨 미리보기</span>
+                <span className="text-xs font-mono text-on-surface-variant opacity-60 ml-3">{previewRow.target}</span>
+              </div>
+              <button onClick={() => setPreviewRow(null)}
+                className="text-on-surface-variant hover:text-on-surface ml-8">
+                <span className="material-symbols-outlined text-xl">close</span>
+              </button>
+            </div>
+            {/* 라벨 렌더 */}
+            <LabelPreviewCard type={previewRow.type} target={previewRow.target} />
+            {/* 모달 액션 */}
+            <div className="flex gap-2 justify-end bg-surface-container-lowest px-4 py-3">
+              <p className="text-[10px] font-label text-on-surface-variant opacity-40 mr-auto self-center">
+                ※ 실제 출력은 프린터 드라이버 형식과 다를 수 있습니다
+              </p>
+              {previewRow.status !== "BLOCKED" && (
+                <button onClick={() => { handleReprint(previewRow.id); setPreviewRow(null); }}
+                  className="px-4 py-2 bg-primary-accent text-black text-xs font-label uppercase tracking-wider font-bold hover:opacity-90">
+                  재인쇄
+                </button>
+              )}
+              {(previewRow.status === "FAILED" || previewRow.status === "BLOCKED") && (
+                <button onClick={() => { handleReissue(previewRow.id); setPreviewRow(null); }}
+                  className="px-4 py-2 bg-[#f59e0b]/80 text-black text-xs font-label uppercase tracking-wider font-bold hover:opacity-90">
+                  재발행
+                </button>
+              )}
+              <button onClick={() => setPreviewRow(null)}
+                className="px-4 py-2 bg-surface-container text-on-surface-variant text-xs font-label uppercase tracking-wider">
+                닫기
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   );
 }
