@@ -174,11 +174,12 @@ function LabelPreview({ type, target }: { type: LabelType; target: string }) {
 }
 
 export default function LabelPrintPage() {
-  const [labelType, setLabelType] = useState<LabelType>("MEMBER");
-  const [target, setTarget]       = useState("");
-  const [copies, setCopies]       = useState(1);
-  const [printing, setPrinting]   = useState(false);
-  const [done, setDone]           = useState(false);
+  const [labelType, setLabelType]   = useState<LabelType>("MEMBER");
+  const [target, setTarget]         = useState("");
+  const [copies, setCopies]         = useState(1);
+  const [printing, setPrinting]     = useState(false);
+  const [done, setDone]             = useState(false);
+  const [showPreview, setShowPreview] = useState(false);  // 미리보기 토글
 
   const options = labelType === "PACKING" ? Object.keys(PACKING_INFO)
                 : labelType === "SLIPPER" ? SLIPPER_TYPES
@@ -186,10 +187,12 @@ export default function LabelPrintPage() {
 
   const isBlocked = labelType === "SLIPPER" && target && !KS_CERTIFIED.includes(target);
 
+  const handlePreview = () => setShowPreview(true);
+
   const handlePrint = () => {
     if (isBlocked) return;
     setPrinting(true);
-    setTimeout(() => { setPrinting(false); setDone(true); }, 1200);
+    setTimeout(() => { setPrinting(false); setDone(true); setShowPreview(false); }, 1200);
   };
 
   return (
@@ -230,7 +233,8 @@ export default function LabelPrintPage() {
               <label className="block text-xs font-label uppercase tracking-widest opacity-50 mb-2">
                 {labelType === "PACKING" ? "패킹 ID" : labelType === "SLIPPER" ? "슬리퍼 타입" : "부재 코드"} *
               </label>
-              <select value={target} onChange={(e) => { setTarget(e.target.value); setDone(false); }}
+              <select value={target}
+                onChange={(e) => { setTarget(e.target.value); setShowPreview(false); setDone(false); }}
                 className="w-full bg-surface-container px-3 py-2 text-sm font-headline border border-outline-variant/20 focus:border-primary-accent focus:outline-none">
                 <option value="">선택하세요</option>
                 {options.map((o) => <option key={o} value={o}>{o}</option>)}
@@ -254,31 +258,60 @@ export default function LabelPrintPage() {
               </div>
             )}
 
-            <button onClick={handlePrint}
-              disabled={!target || printing || !!isBlocked}
-              className={`w-full py-3 text-xs font-label uppercase tracking-widest font-bold transition-colors
-                ${isBlocked
-                  ? "bg-error-container text-error cursor-not-allowed opacity-60"
-                  : !target || printing
-                  ? "bg-surface-container text-on-surface/30 cursor-not-allowed"
-                  : "bg-primary-accent text-black hover:opacity-90"}`}>
-              {printing ? "발행 중..." : isBlocked ? "발행 차단됨" : `라벨 발행 (${copies}매)`}
-            </button>
+            {/* 버튼 그룹 */}
+            <div className="flex gap-2">
+              {/* 미리보기 버튼 */}
+              <button
+                onClick={handlePreview}
+                disabled={!target}
+                className="flex-1 py-3 text-xs font-label uppercase tracking-widest font-bold border transition-colors
+                  disabled:opacity-30 disabled:cursor-not-allowed
+                  enabled:border-primary-accent enabled:text-primary-accent enabled:hover:bg-primary-accent/10">
+                <span className="material-symbols-outlined text-sm align-middle mr-1">preview</span>
+                미리보기
+              </button>
+              {/* 발행 버튼 */}
+              <button onClick={handlePrint}
+                disabled={!target || printing || !!isBlocked}
+                className={`flex-1 py-3 text-xs font-label uppercase tracking-widest font-bold transition-colors
+                  ${isBlocked
+                    ? "bg-error-container text-error cursor-not-allowed opacity-60"
+                    : !target || printing
+                    ? "bg-surface-container text-on-surface/30 cursor-not-allowed"
+                    : "bg-primary-accent text-black hover:opacity-90"}`}>
+                {printing ? "발행 중..." : isBlocked ? "차단됨" : `발행 (${copies}매)`}
+              </button>
+            </div>
           </div>
 
-          {/* 라벨 미리보기 */}
-          <div>
-            <p className="text-xs font-label uppercase tracking-widest opacity-50 mb-3">
-              라벨 미리보기
-              {target && <span className="ml-2 text-primary-accent">— {target}</span>}
-            </p>
-            <LabelPreview type={labelType} target={target} />
-            {target && (
+          {/* 라벨 미리보기 패널 — 미리보기 버튼 클릭 후 표시 */}
+          {showPreview ? (
+            <div>
+              <div className="flex items-center gap-3 mb-3">
+                <p className="text-xs font-label uppercase tracking-widest text-primary-accent">
+                  라벨 미리보기
+                </p>
+                <span className="text-xs font-mono text-on-surface-variant opacity-60">{target}</span>
+                <button onClick={() => setShowPreview(false)}
+                  className="ml-auto text-on-surface-variant opacity-40 hover:opacity-80">
+                  <span className="material-symbols-outlined text-sm">close</span>
+                </button>
+              </div>
+              <LabelPreview type={labelType} target={target} />
               <p className="text-[10px] font-label text-on-surface-variant opacity-40 mt-2">
                 ※ 실제 출력은 프린터 드라이버 형식과 다를 수 있습니다
               </p>
-            )}
-          </div>
+            </div>
+          ) : (
+            <div className="flex items-center justify-center w-80 h-64 bg-surface-container-lowest border-2 border-dashed border-outline-variant/20 text-on-surface/20">
+              <div className="text-center">
+                <span className="material-symbols-outlined text-5xl block mb-2">label</span>
+                <p className="text-xs font-label uppercase tracking-widest">
+                  {target ? "미리보기 버튼을 누르세요" : "대상을 먼저 선택하세요"}
+                </p>
+              </div>
+            </div>
+          )}
 
         </div>
       )}
