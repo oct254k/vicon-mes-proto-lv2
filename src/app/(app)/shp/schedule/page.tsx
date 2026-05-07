@@ -5,16 +5,17 @@ import { DataTable } from "@/components/ui/DataTable";
 import { StatusBadge } from "@/components/ui/StatusBadge";
 
 const SHIPMENTS = [
-  { id: "SHP-P3000-20260504-0017", date: "2026-05-04", account: "한라조선", site: "거제 야드", status: "COMPLETED", vehicle: "25가7890", eta: "16:00" },
-  { id: "SHP-P3000-20260505-0018", date: "2026-05-05", account: "동양철강", site: "인천 A동", status: "IN_PROGRESS", vehicle: "12라3456", eta: "14:30" },
-  { id: "SHP-P3000-20260506-0019", date: "2026-05-06", account: "동양철강", site: "송도현장 A동", status: "SCHEDULED", vehicle: "12라3456", eta: "14:30" },
-  { id: "SHP-P3000-20260507-0020", date: "2026-05-07", account: "한라조선", site: "거제 야드", status: "SCHEDULED", vehicle: "25가7890", eta: "15:00" },
+  { id: "SHP-P3000-20260504-001", date: "2026-05-04", account: "P1000 제1 이천공장", site: "이천1공장", status: "COMPLETED",   vehicle: "VH-15TON-007", eta: "16:00" },
+  { id: "SHP-P3000-20260505-001", date: "2026-05-05", account: "P1000 제1 이천공장", site: "이천1공장", status: "COMPLETED",   vehicle: "VH-25TON-001", eta: "10:30" },
+  { id: "SHP-P3000-20260506-001", date: "2026-05-06", account: "P2000 제2 이천공장", site: "이천2공장", status: "IN_PROGRESS", vehicle: "VH-25TON-002", eta: "14:30" },
+  { id: "SHP-P3000-20260507-001", date: "2026-05-07", account: "P1000 제1 이천공장", site: "이천1공장", status: "SCHEDULED",   vehicle: "VH-25TON-003", eta: "10:30" },
+  { id: "SHP-P3000-20260508-001", date: "2026-05-08", account: "P1000 제1 이천공장", site: "이천1공장", status: "SCHEDULED",   vehicle: "VH-15TON-007", eta: "09:00" },
 ];
 
 const VEHICLES = [
-  { no: "12라3456", driver: "김철수", origin: "제3공장 P3000", dest: "송도현장 A동", load: "18,400kg / 25t", status: "SCHEDULED" },
-  { no: "25가7890", driver: "이영수", origin: "제3공장 P3000", dest: "거제 야드", load: "36,800kg / 40t", status: "IN_PROGRESS" },
-  { no: "88다1111", driver: "박민준", origin: "제3공장 P3000", dest: "부산 항만", load: "12,000kg / 15t", status: "COMPLETED" },
+  { no: "VH-25TON-003", driver: "외부운전자 (EXTERNAL)", origin: "P3000 제3 이천공장", dest: "P1000 제1 이천공장", load: "4,250kg / 25t", status: "SCHEDULED" },
+  { no: "VH-25TON-002", driver: "외부운전자 (EXTERNAL)", origin: "P3000 제3 이천공장", dest: "P2000 제2 이천공장", load: "6,800kg / 25t", status: "IN_PROGRESS" },
+  { no: "VH-25TON-001", driver: "외부운전자 (EXTERNAL)", origin: "P3000 제3 이천공장", dest: "P1000 제1 이천공장", load: "5,200kg / 25t", status: "COMPLETED" },
 ];
 
 const STATUS_MAP: Record<string, { type: "running" | "stopped" | "warning" | "idle"; label: string }> = {

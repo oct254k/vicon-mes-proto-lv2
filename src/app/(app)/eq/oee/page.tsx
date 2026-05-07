@@ -7,11 +7,12 @@ const oeeKpi = { oee: 87.3, availability: 92, performance: 96, quality: 99 };
 
 const mtbf = { min: 19200, hour: 320, target: 480 };
 
+// 제3공장 4공정 설비 — 신선 → TG → 포밍 → 데크플레이트
 const eqOee = [
-  { eq: "EQ-P3000-CUT-01", avail: "92%", perf: "96%", qual: "99%", oee: "87.3%" },
-  { eq: "EQ-P3000-CUT-02", avail: "88%", perf: "94%", qual: "98%", oee: "81.1%" },
-  { eq: "EQ-P3000-PRESS-01", avail: "91%", perf: "93%", qual: "99%", oee: "83.8%" },
-  { eq: "EQ-P3000-WELD-01", avail: "95%", perf: "97%", qual: "100%", oee: "92.2%" },
+  { eq: "EQ-P3000-신선-01",  avail: "94%", perf: "97%", qual: "99%", oee: "90.2%" },
+  { eq: "EQ-P3000-TG-01",   avail: "91%", perf: "95%", qual: "99%", oee: "85.7%" },
+  { eq: "EQ-P3000-포밍-01", avail: "89%", perf: "93%", qual: "98%", oee: "81.1%" },
+  { eq: "EQ-P3000-DP-01",   avail: "76%", perf: "88%", qual: "97%", oee: "64.9%" },  // ⚠ 낮음
 ];
 
 function GaugeCard({ label, value, color }: { label: string; value: number; color: string }) {

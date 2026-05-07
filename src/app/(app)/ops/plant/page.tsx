@@ -9,11 +9,11 @@ const HOURLY = [47, 62, 58, 71, 65, 80, 78, 94];
 const HOURS = ["08", "09", "10", "11", "12", "13", "14", "현재"];
 
 const WO_DATA = [
-  { id: "WO-P3000-0007", members: "120", done: "94", rate: "78%", status: "진행중" },
-  { id: "WO-P3000-0008", members: "80", done: "92", rate: "115%", status: "초과달성" },
-  { id: "WO-P3000-0009", members: "150", done: "45", rate: "30%", status: "미달" },
-  { id: "WO-P3000-0010", members: "200", done: "30", rate: "15%", status: "미달" },
-  { id: "WO-P3000-0011", members: "60", done: "58", rate: "97%", status: "진행중" },
+  { id: "WO-P3000-20260506-0007", members: "12", done: "9",  rate: "75%", status: "진행중" },
+  { id: "WO-P3000-20260506-0008", members: "12", done: "5",  rate: "42%", status: "진행중" },
+  { id: "WO-P3000-20260506-0005", members: "20", done: "6",  rate: "30%", status: "미달" },
+  { id: "WO-P3000-20260506-0006", members: "18", done: "3",  rate: "17%", status: "미달" },
+  { id: "WO-P3000-20260505-0002", members: "8",  done: "8",  rate: "100%", status: "완료" },
 ];
 
 export default function OPSPlantPage() {

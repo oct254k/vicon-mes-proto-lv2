@@ -10,11 +10,11 @@ const kpis = [
 ];
 
 const woData = [
-  { id: "WO-2026-0512", done: 18, total: 24, pct: 75, due: "2026-05-08", status: "running" as const, statusLabel: "진행중" },
-  { id: "WO-2026-0511", done: 24, total: 24, pct: 100, due: "2026-05-07", status: "running" as const, statusLabel: "완료" },
-  { id: "WO-2026-0510", done: 6, total: 30, pct: 20, due: "2026-05-10", status: "idle" as const, statusLabel: "대기" },
-  { id: "WO-2026-0509", done: 0, total: 12, pct: 0, due: "2026-05-12", status: "idle" as const, statusLabel: "대기" },
-  { id: "WO-2026-0508", done: 30, total: 30, pct: 100, due: "2026-05-05", status: "running" as const, statusLabel: "완료" },
+  { id: "WO-P3000-20260506-0007", done: 9,  total: 12, pct: 75,  due: "2026-05-08", status: "running" as const, statusLabel: "진행중" },
+  { id: "WO-P3000-20260506-0008", done: 5,  total: 12, pct: 42,  due: "2026-05-08", status: "running" as const, statusLabel: "진행중" },
+  { id: "WO-P3000-20260506-0005", done: 6,  total: 20, pct: 30,  due: "2026-05-09", status: "warning" as const, statusLabel: "미달" },
+  { id: "WO-P3000-20260506-0006", done: 3,  total: 18, pct: 17,  due: "2026-05-09", status: "warning" as const, statusLabel: "미달" },
+  { id: "WO-P3000-20260505-0002", done: 8,  total: 8,  pct: 100, due: "2026-05-07", status: "running" as const, statusLabel: "완료" },
 ];
 
 export default function WODashboardPage() {
