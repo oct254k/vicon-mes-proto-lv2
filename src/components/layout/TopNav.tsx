@@ -29,7 +29,7 @@ export function TopNav({ onMenuClick }: TopNavProps) {
             alt="성지그룹 Logo"
             width={106}
             height={26}
-            className="h-7 w-auto brightness-0 invert"
+            className="h-8 w-auto brightness-0 invert"
             priority
           />
         </Link>

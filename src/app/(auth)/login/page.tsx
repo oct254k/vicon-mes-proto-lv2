@@ -51,7 +51,7 @@ export default function LoginPage() {
           alt="성지그룹"
           width={106}
           height={26}
-          className="h-9 w-auto brightness-0 invert mb-1"
+          className="h-11 w-auto brightness-0 invert mb-1"
           priority
         />
         <div className="text-xs font-label uppercase tracking-[0.35em] text-primary-accent">
