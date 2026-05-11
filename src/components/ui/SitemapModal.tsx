@@ -18,7 +18,7 @@ const SITEMAP: SitemapCategory[] = [
   {
     title: "입고·재고",
     items: [
-      { label: "입고 등록", url: "/loc/receive/new", highlight: true },
+      { label: "입고-입고등록", url: "/loc/receive/new", highlight: true },
       { label: "입고 목록", url: "/loc/receive/list" },
       { label: "PDA 검수", url: "/loc/receive/inspect", highlight: true },
       { label: "위치별 재고", url: "/loc/inventory/by-location" },
@@ -31,10 +31,10 @@ const SITEMAP: SitemapCategory[] = [
     title: "작업지시",
     items: [
       { label: "작업지시 목록", url: "/wo/orders" },
-      { label: "WO 발행 결과", url: "/wo/orders/release", highlight: true },
-      { label: "패킹 그룹", url: "/wo/packing/groups", highlight: true },
+      { label: "WO 발행 결과", url: "/wo/orders/release" },
+      { label: "부재 코드 목록", url: "/wo/members" },
+      { label: "패킹 그룹", url: "/wo/packing/groups" },
       { label: "라벨 발행", url: "/wo/labels/print" },
-      { label: "패킹리스트 PDF", url: "/wo/documents" },
     ],
   },
   {
@@ -42,7 +42,7 @@ const SITEMAP: SitemapCategory[] = [
     items: [
       { label: "오늘의 작업", url: "/mfg/today" },
       { label: "자재 라벨 스캔 PDA", url: "/mfg/issue/scan", highlight: true },
-      { label: "공정 진행 스캔", url: "/mfg/produce", highlight: true },
+      { label: "공정진행 스캔", url: "/mfg/produce" },
       { label: "출고 스캔", url: "/mfg/transfer/out" },
       { label: "역방향 추적", url: "/mfg/recall/backward" },
     ],
@@ -51,27 +51,27 @@ const SITEMAP: SitemapCategory[] = [
     title: "품질",
     items: [
       { label: "품질 KPI", url: "/qc/dashboard/main" },
-      { label: "SPC 측정 입력", url: "/qc/spc/measure-pda", highlight: true },
-      { label: "QC 결과", url: "/qc/defect/inspect-queue" },
+      { label: "SPC측정 입력", url: "/qc/spc/measure-pda", highlight: true },
+      { label: "QC 결재", url: "/qc/defect/inspect-queue" },
       { label: "손실 환산 산출", url: "/qc/loss/calc" },
     ],
   },
   {
     title: "출하",
     items: [
-      { label: "출하 일정 캘린더", url: "/shp/schedule/calendar" },
-      { label: "패킹 현황 보드", url: "/shp/packing/board", highlight: true },
-      { label: "패킹 리스트", url: "/shp/documents" },
+      { label: "출하일정 캘린더", url: "/shp/schedule/calendar" },
+      { label: "패킹 현황 보드", url: "/shp/packing/board" },
+      { label: "패킹 리스트", url: "/shp/documents", highlight: true },
       { label: "RFID 모니터링", url: "/shp/gate/monitor" },
     ],
   },
   {
     title: "위치재고",
     items: [
-      { label: "야적장 도면", url: "/loc/yard-map/view", highlight: true },
+      { label: "야적장 도면", url: "/loc/yard-map/view" },
       { label: "도면 편집", url: "/loc/yard-map/edit" },
       { label: "점유현황 보드", url: "/loc/yard-map/occupancy" },
-      { label: "공장 간 이동", url: "/loc/transfer/out", highlight: true },
+      { label: "공장 간 이동", url: "/loc/transfer/out" },
       { label: "재고 보정", url: "/loc/adjust/new" },
       { label: "스크랩 등록", url: "/loc/scrap/new" },
       { label: "불량 처리", url: "/loc/scrap/defect" },
@@ -81,7 +81,7 @@ const SITEMAP: SitemapCategory[] = [
     title: "재고조회",
     items: [
       { label: "위치별 재고", url: "/loc/inventory/by-location" },
-      { label: "트랜잭션 이력", url: "/loc/inventory/history", highlight: true },
+      { label: "트랜잭션 이력", url: "/loc/inventory/history" },
       { label: "FIFO 추적", url: "/loc/inventory/trace" },
       { label: "MOVE 이동", url: "/loc/inventory/move" },
     ],
@@ -90,7 +90,7 @@ const SITEMAP: SitemapCategory[] = [
     title: "운영현황",
     items: [
       { label: "OPS 운영 현황", url: "/ops/plant" },
-      { label: "WC 상황판", url: "/ops/line/board", highlight: true },
+      { label: "WC 상황판", url: "/ops/line/board" },
       { label: "WO 진척 보드", url: "/wo/dashboard" },
       { label: "야적장 현황", url: "/loc/yard-map/occupancy" },
     ],
