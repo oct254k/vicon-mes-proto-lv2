@@ -233,15 +233,7 @@ export const MENU: MenuNode[] = [
           { id: "WO-LABELS-HISTORY", label: "발행 이력 조회", url: "/wo/labels/history" },
         ],
       },
-      {
-        id: "WO-DOCUMENTS",
-        label: "작업지시서·패킹리스트 PDF",
-        url: "/wo/documents",
-        children: [
-          { id: "WO-DOCUMENTS-WORKORDER", label: "작업지시서 PDF", url: "/wo/documents/work-order/{wo_id}" },
-          { id: "WO-DOCUMENTS-PACKINGLIST", label: "패킹리스트 PDF", url: "/wo/documents/packing-list/{packing_id}" },
-        ],
-      },
+      { id: "WO-DOCUMENTS", label: "작업지시서·패킹리스트 PDF", url: "/wo/documents" },
       { id: "WO-DASHBOARD", label: "WO·패킹 진척 보드", url: "/wo/dashboard" },
     ],
   },

@@ -15,11 +15,11 @@ export default function WODocumentsPage() {
   return (
     <div>
       <PageHeader
-        title="출력 문서"
-        accent="DOCUMENTS"
+        title="작업지시서·패킹리스트 PDF"
+        accent="WO-040"
         nodeRef="SCR-WO-040"
         status="PROTOTYPE"
-        description="작업지시서·패킹리스트 생성 이력 및 PDF 다운로드."
+        description="작업지시서·패킹리스트 생성 이력 조회 및 PDF 다운로드."
       />
 
       <FieldHeader title="문서 목록" moduleRef="SCR-WO-040" />
