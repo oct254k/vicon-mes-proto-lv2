@@ -14,7 +14,7 @@ export default function NoticeIndexPage() {
       <FieldHeader title="하위 화면" moduleRef="FNC-SYS-010~016" />
       <div className="grid grid-cols-2 gap-4">
         {CARDS.map(c => (
-          <a key={c.ref} href={c.url}
+          <a key={c.url} href={c.url}
             className="block bg-surface-container p-6 border-l-4 border-[#00912F] hover:bg-surface-container-high transition-colors">
             <p className="text-xs font-label uppercase tracking-widest text-[#00912F] mb-1">{c.label}</p>
             <p className="font-headline font-black text-base mb-1">{c.title}</p>
@@ -22,7 +22,6 @@ export default function NoticeIndexPage() {
             {c.alert > 0 && (
               <span className="mt-2 inline-block px-2 py-0.5 text-xs font-label bg-error/20 text-error uppercase">URGENT {c.alert}</span>
             )}
-            <p className="text-xs text-on-surface-variant/40 mt-3 font-label">{c.ref}</p>
           </a>
         ))}
       </div>

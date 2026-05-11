@@ -22,32 +22,26 @@ export default function MFGPage() {
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">TODAY</p>
           <p className="font-headline font-bold text-sm">금일 작업 현황</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-MFG-001 ~ 003</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">ISSUE</p>
           <p className="font-headline font-bold text-sm">자재 투입·불출</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-MFG-004 ~ 008</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">PRODUCE</p>
           <p className="font-headline font-bold text-sm">생산 실적 등록</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-MFG-009 ~ 014</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">TRANSFER</p>
           <p className="font-headline font-bold text-sm">공정 간 이송</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-MFG-015 ~ 019</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">RECALL</p>
           <p className="font-headline font-bold text-sm">공정 회수·반품</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-MFG-020 ~ 023</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">OUTSOURCE</p>
           <p className="font-headline font-bold text-sm">외주 공정 관리</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-MFG-024 ~ 028</p>
         </div>
       </div>
 

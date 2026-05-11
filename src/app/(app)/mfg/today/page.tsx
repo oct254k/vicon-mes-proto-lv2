@@ -41,7 +41,6 @@ export default function MFGTodayPage() {
       <div className="bg-surface-container border-l-4 border-primary-accent p-4">
         <div className="flex justify-between items-start mb-1">
           <span className="font-headline font-black text-lg">{SESSION.name}</span>
-          <span className="text-xs font-label text-primary-accent uppercase tracking-widest">SCR-MFG-001</span>
         </div>
         <p className="text-xs text-on-surface/60 font-label">{SESSION.wc} · {SESSION.shift}</p>
         <p className="text-xs text-on-surface/50 mt-0.5">{TODAY}</p>

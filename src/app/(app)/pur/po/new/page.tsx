@@ -16,7 +16,7 @@ export default function PONewPage() {
 
   return (
     <div>
-      <PageHeader title="PO 발행 결재" accent="SCR-PUR-021" nodeRef="IA-PUR-PO-NEW" status="PROTOTYPE"
+      <PageHeader title="PO 발행 결재" accent="PO 신규" nodeRef="IA-PUR-PO-NEW" status="PROTOTYPE"
         description="자재팀 결재 100% 필수 — 자동 PO 발행 절대 금지 (FR-PUR-003 MUST / FNC-PUR-003/030/032)" />
       <div className="bg-error/10 border border-error/30 px-4 py-2 mb-4 text-xs font-label text-error">
         SYSTEM GUARD: 자동 PO 발행 호출 차단 활성화 — 반드시 자재팀 결재자 서명 필요
@@ -60,7 +60,7 @@ export default function PONewPage() {
         <label htmlFor="overlimit" className="text-xs font-label uppercase">한도 초과 — L3 공장장 추가 결재 요청</label>
       </div>
       {overLimit && <div className="bg-[#f59e0b]/10 border border-[#f59e0b]/40 px-4 py-2 mb-4 text-xs font-label text-[#f59e0b]">
-        ⚠ L3 공장장 결재 워크리스트(SCR-PUR-022)로 이관됩니다.
+        ⚠ L3 공장장 결재 워크리스트로 이관됩니다.
       </div>}
       {approved ? (
         <div className="flex gap-3 items-center">

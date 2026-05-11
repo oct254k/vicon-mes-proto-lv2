@@ -58,7 +58,7 @@ export default function SessionPage() {
           </tbody>
         </table>
       </div>
-      <p className="text-xs opacity-40 font-label mt-2">ⓘ 세션 최대 8시간. 교대 종료 시 자동 만료. 단말 분실 시 SCR-USR-025 에서 신고.</p>
+      <p className="text-xs opacity-40 font-label mt-2">ⓘ 세션 최대 8시간. 교대 종료 시 자동 만료.</p>
     </div>
   );
 }

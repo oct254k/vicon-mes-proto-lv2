@@ -19,7 +19,7 @@ export default function OeeHistoryPage() {
         title="OEE"
         accent="추이 이력"
         nodeRef="IA-EQ-OEE-TREND"
-        description="SCR-EQ-082 — 월별 OEE 추이 + 손실 분해"
+        description="월별 OEE 추이 + 손실 분해"
       />
 
       {/* 월별 OEE 트렌드 */}

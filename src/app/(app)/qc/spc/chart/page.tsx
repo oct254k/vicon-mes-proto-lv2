@@ -60,7 +60,7 @@ export default function QCSpcChartPage() {
       </div>
 
       <p className="mt-4 text-xs text-on-surface-variant/40 font-label uppercase tracking-widest">
-        카드 클릭 → 상세 관리도 (SCR-QC-021) | [Rule 맵 →] /qc/spc/chart/rule-map
+        카드 클릭 → 상세 관리도 | [Rule 맵 →] /qc/spc/chart/rule-map
       </p>
     </div>
   );

@@ -22,42 +22,34 @@ export default function QCPage() {
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">SPC MASTER</p>
           <p className="font-headline font-bold text-sm">SPC 관리 항목</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-QC-001 ~ 006</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">SPC INPUT</p>
           <p className="font-headline font-bold text-sm">측정값 입력</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-QC-007 ~ 012</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">CHARTS</p>
           <p className="font-headline font-bold text-sm">관리도·공정능력</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-QC-013 ~ 018</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">DEFECTS</p>
           <p className="font-headline font-bold text-sm">불량 신고·분석</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-QC-019 ~ 025</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">RECALL</p>
           <p className="font-headline font-bold text-sm">불량품 회수·격리</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-QC-026 ~ 030</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">RISK</p>
           <p className="font-headline font-bold text-sm">위험 관리</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-QC-031 ~ 035</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">LOSS</p>
           <p className="font-headline font-bold text-sm">품질 손실 산출</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-QC-036 ~ 039</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">CERT</p>
           <p className="font-headline font-bold text-sm">품질 인증 관리</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-QC-040 ~ 043</p>
         </div>
       </div>
 

@@ -48,7 +48,6 @@ export default function IssueScanPage() {
       <div className="bg-surface-container border-l-4 border-primary-accent p-4">
         <div className="flex justify-between items-start mb-1">
           <span className="font-headline font-black text-base">자재 불출 — ISSUE</span>
-          <span className="text-xs font-label text-primary-accent uppercase tracking-widest">SCR-MFG-010</span>
         </div>
         <p className="text-xs font-mono text-on-surface/70">{CONTEXT.woId}</p>
         <p className="text-xs text-on-surface/60">{CONTEXT.memberId} · {CONTEXT.memberType}</p>

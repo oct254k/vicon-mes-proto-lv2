@@ -22,42 +22,34 @@ export default function OPSPage() {
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">LINE</p>
           <p className="font-headline font-bold text-sm">라인 상황판</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-OPS-001 ~ 003</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">PLANT</p>
           <p className="font-headline font-bold text-sm">Plant 종합 현황</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-OPS-004 ~ 006</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">MULTISITE</p>
           <p className="font-headline font-bold text-sm">멀티사이트 뷰</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-OPS-007 ~ 009</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">ORDERS PROGRESS</p>
           <p className="font-headline font-bold text-sm">수주 진행률</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-OPS-010 ~ 012</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">WO PROGRESS</p>
           <p className="font-headline font-bold text-sm">WO 진행 현황</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-OPS-013 ~ 015</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">PRODUCTION</p>
           <p className="font-headline font-bold text-sm">생산 실적 요약</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-OPS-016 ~ 018</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">INVENTORY</p>
           <p className="font-headline font-bold text-sm">재고 현황 요약</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-OPS-019 ~ 020</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">NOTIFICATIONS</p>
           <p className="font-headline font-bold text-sm">알림 센터</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-OPS-021 ~ 022</p>
         </div>
       </div>
 

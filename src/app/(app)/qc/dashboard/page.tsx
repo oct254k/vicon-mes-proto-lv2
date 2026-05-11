@@ -47,7 +47,6 @@ export default function QCDashboardLanding() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {NAV.map((n) => (
           <Link key={n.href} href={n.href} className="block bg-surface-container-low border-l-4 border-primary-accent p-5 hover:bg-surface-container transition-colors">
-            <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">{n.ref}</p>
             <p className="font-headline font-bold text-base mb-1">{n.label}</p>
             <p className="text-xs text-on-surface/50">{n.desc}</p>
           </Link>

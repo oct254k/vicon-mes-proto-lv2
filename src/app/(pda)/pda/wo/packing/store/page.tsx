@@ -101,9 +101,6 @@ export default function PdaYardStorePage() {
             <p className="text-xs font-label uppercase tracking-widest text-primary-accent font-bold">
               PDA · 야적장 입고
             </p>
-            <p className="text-[10px] font-label uppercase tracking-wider text-on-surface-variant opacity-40">
-              SCR-WO-023 · FNC-WO-024
-            </p>
           </div>
         </div>
         <div className="flex items-center gap-2">

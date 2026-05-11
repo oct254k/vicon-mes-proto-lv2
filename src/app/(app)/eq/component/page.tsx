@@ -21,7 +21,6 @@ export default function EQComponentPage() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {cards.map((c) => (
           <a key={c.ref} href={c.route} className="bg-surface-container-low p-5 block hover:border-l-4 hover:border-primary-accent transition-all">
-            <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">{c.ref}</p>
             <p className="font-headline font-bold text-sm mb-1">{c.label}</p>
             <p className="text-xs text-on-surface/50">{c.desc}</p>
           </a>

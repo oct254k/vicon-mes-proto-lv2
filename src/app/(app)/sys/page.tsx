@@ -22,42 +22,34 @@ export default function SYSPage() {
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">NOTICES</p>
           <p className="font-headline font-bold text-sm">공지사항</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-SYS-001 ~ 003</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">MENUS</p>
           <p className="font-headline font-bold text-sm">메뉴 구성 관리</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-SYS-004 ~ 006</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">CODES</p>
           <p className="font-headline font-bold text-sm">공통 코드 마스터</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-SYS-007 ~ 010</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">CHANNELS</p>
           <p className="font-headline font-bold text-sm">알림 채널 설정</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-SYS-011 ~ 013</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">AUDIT</p>
           <p className="font-headline font-bold text-sm">시스템 감사 로그</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-SYS-014 ~ 017</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">BACKUP</p>
           <p className="font-headline font-bold text-sm">데이터 백업·복구</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-SYS-018 ~ 020</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">INTEGRATION</p>
           <p className="font-headline font-bold text-sm">외부 시스템 연동</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-SYS-021 ~ 024</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">HEALTH</p>
           <p className="font-headline font-bold text-sm">서버 헬스·단말기</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-SYS-025 ~ 032</p>
         </div>
       </div>
 

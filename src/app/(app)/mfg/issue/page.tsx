@@ -32,7 +32,6 @@ export default function MFGIssuePage() {
       <div className="bg-surface-container border-l-4 border-primary-accent p-4">
         <div className="flex justify-between items-start">
           <span className="font-headline font-black text-base">자재 투입 — ISSUE</span>
-          <span className="text-xs font-label text-primary-accent uppercase tracking-widest">SCR-MFG-010</span>
         </div>
         <p className="text-xs font-mono text-on-surface/70 mt-1">{MEMBER.woId}</p>
         <p className="text-xs text-on-surface/60">{MEMBER.id} · {MEMBER.type}</p>

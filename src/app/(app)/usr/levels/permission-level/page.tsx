@@ -35,7 +35,7 @@ export default function PermissionLevelPage() {
       <div className="flex gap-3 mt-4">
         <button className="px-5 py-2 bg-surface-container border border-outline-variant/20 text-on-surface text-xs font-label uppercase tracking-widest opacity-50 cursor-not-allowed">레벨 추가 (L4 결재)</button>
       </div>
-      <p className="text-xs opacity-40 font-label mt-2">ⓘ 레벨 코드·범위 변경 시 매트릭스 영향 평가(SCR-USR-072) 선행 필요.</p>
+      <p className="text-xs opacity-40 font-label mt-2">ⓘ 레벨 코드·범위 변경 시 매트릭스 영향 평가 선행 필요.</p>
     </div>
   );
 }

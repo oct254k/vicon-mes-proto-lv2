@@ -99,7 +99,6 @@ export default function QCCertPage() {
             </div>
           </div>
           <div className="border-t border-outline-variant/10 pt-3 flex justify-between items-center">
-            <p className="text-xs text-on-surface/30 font-label uppercase tracking-widest">VICON MES · SCR-QC-083</p>
             <p className="text-xs text-on-surface/30 tabular-nums">{latest.issued}</p>
           </div>
         </div>

@@ -17,7 +17,6 @@ export default function SOProgressExternalPage() {
     <div className="p-6 bg-surface min-h-screen max-w-2xl mx-auto">
       {/* 공유 헤더 */}
       <div className="border-b border-outline-variant/20 pb-4 mb-6">
-        <p className="text-xs font-label uppercase tracking-widest text-on-surface-variant mb-1">SCR-OPS-041 · FNC-OPS-054 · Read-only</p>
         <h1 className="text-xl font-headline font-black text-on-surface">수주 진척 공유 뷰</h1>
         <p className="text-sm font-label text-on-surface-variant mt-1">SO-2026-0301 · 힐스테이트 일산 · (주)현대건설</p>
         <p className="text-xs font-label text-on-surface-variant mt-1">토큰 만료 2026-05-12 · 열람 전용 (다운로드 불가)</p>

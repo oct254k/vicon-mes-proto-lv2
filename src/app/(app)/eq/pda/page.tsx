@@ -81,10 +81,6 @@ export default function EQPdaPage() {
           ))}
         </div>
 
-        {/* 하단 안내 */}
-        <p className="text-center text-xs text-on-surface/30 font-label uppercase tracking-widest mt-6">
-          SCR-EQ-064 · PDA LANDING
-        </p>
       </div>
     </div>
   );

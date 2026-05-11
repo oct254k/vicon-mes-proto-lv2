@@ -92,7 +92,7 @@ export default function USRUsersPage() {
           ))}
         </div>
       </div>
-      <p className="text-xs opacity-40 font-label mt-2">ⓘ 행 클릭 → 상세(SCR-USR-003). status=LOCKED 🔒 → SCR-USR-024 잠금 해제</p>
+      <p className="text-xs opacity-40 font-label mt-2">ⓘ 행 클릭 → 상세. status=LOCKED 🔒 → 잠금 해제</p>
     </div>
   );
 }

@@ -72,7 +72,7 @@ export default function QCSpcMasterPage() {
       />
 
       <p className="mt-4 text-xs text-on-surface-variant/40 font-label uppercase tracking-widest">
-        행 클릭 → 수정 (SCR-QC-002) | [이력] → SCR-QC-003 | [한계 버전] → SCR-QC-004
+        행 클릭 → 수정 | [이력] | [한계 버전]
       </p>
     </main>
   );

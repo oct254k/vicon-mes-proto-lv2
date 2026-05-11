@@ -32,7 +32,6 @@ export default function ScrapNewPage() {
       {done ? (
         <div className="bg-[#00912F]/20 border-l-4 border-[#00912F] p-6 max-w-lg">
           <p className="font-label font-bold uppercase tracking-widest text-[#00912F] mb-1">SCRAP 등록 완료</p>
-          <p className="text-sm text-white/60">SCR-{new Date().toISOString().slice(0,10).replace(/-/g,"")}-XXX 생성됨</p>
           <button onClick={() => setDone(false)} className="mt-4 border border-white/20 text-white/60 font-label uppercase text-xs px-4 py-2">새 등록</button>
         </div>
       ) : (

@@ -109,9 +109,6 @@ export default function BDBomPage() {
       <FieldHeader title="BOM 목록" moduleRef={`${filtered.length}건`} />
       <DataTable title="BOM 버전 트리" columns={columns} data={tableData} bufferCount={filtered.length} />
 
-      <p className="mt-4 text-xs text-on-surface/40 font-label">
-        행 클릭 → BOM 다단계 펼침 View (SCR-BD-022) · Draft 행 [발행] → 발행 다이얼로그 (SCR-BD-021-D1)
-      </p>
     </div>
   );
 }

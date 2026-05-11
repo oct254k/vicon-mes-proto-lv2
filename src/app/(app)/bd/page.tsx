@@ -22,42 +22,34 @@ export default function BDPage() {
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">PLANT</p>
           <p className="font-headline font-bold text-sm">Plant 마스터</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-BD-001 ~ 003</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">MATERIAL</p>
           <p className="font-headline font-bold text-sm">자재 마스터</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-BD-004 ~ 008</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">BOM</p>
           <p className="font-headline font-bold text-sm">BOM 구성</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-BD-009 ~ 013</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">ROUTING</p>
           <p className="font-headline font-bold text-sm">라우팅·공정</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-BD-014 ~ 018</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">PROCESS LINE</p>
           <p className="font-headline font-bold text-sm">공정라인 마스터</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-BD-019 ~ 022</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">EQUIPMENT</p>
           <p className="font-headline font-bold text-sm">설비 마스터</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-BD-023 ~ 028</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">CUSTOMER / SUPPLIER</p>
           <p className="font-headline font-bold text-sm">고객·공급사</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-BD-029 ~ 033</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">CERTIFICATION</p>
           <p className="font-headline font-bold text-sm">KS인증 마스터</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-BD-034 ~ 037</p>
         </div>
       </div>
 

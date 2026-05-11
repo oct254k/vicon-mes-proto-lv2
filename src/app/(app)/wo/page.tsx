@@ -22,32 +22,26 @@ export default function WOPage() {
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">ORDERS</p>
           <p className="font-headline font-bold text-sm">작업지시 발행·조회</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-WO-001 ~ 005</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">MEMBERS</p>
           <p className="font-headline font-bold text-sm">부재코드 관리</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-WO-006 ~ 009</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">PACKING</p>
           <p className="font-headline font-bold text-sm">패킹 8단계 관리</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-WO-010 ~ 014</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">LABELS</p>
           <p className="font-headline font-bold text-sm">라벨 발행·재발행</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-WO-015 ~ 017</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">DOCUMENTS</p>
           <p className="font-headline font-bold text-sm">작업문서 출력</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-WO-018 ~ 019</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">DASHBOARD</p>
           <p className="font-headline font-bold text-sm">WO 진행 현황</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-WO-020 ~ 021</p>
         </div>
       </div>
 

@@ -22,32 +22,26 @@ export default function LOCPage() {
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">MASTER</p>
           <p className="font-headline font-bold text-sm">로케이션 마스터</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-LOC-001 ~ 004</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">MAP</p>
           <p className="font-headline font-bold text-sm">야적장 도면 뷰</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-LOC-005 ~ 008</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">RECEIVE</p>
           <p className="font-headline font-bold text-sm">입고 처리</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-LOC-009 ~ 013</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">TRANSFER</p>
           <p className="font-headline font-bold text-sm">위치 이동</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-LOC-014 ~ 018</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">ADJUST</p>
           <p className="font-headline font-bold text-sm">재고 조정</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-LOC-019 ~ 022</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">INVENTORY</p>
           <p className="font-headline font-bold text-sm">재고 실사·현황</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-LOC-023 ~ 028</p>
         </div>
       </div>
 

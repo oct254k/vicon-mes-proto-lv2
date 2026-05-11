@@ -17,12 +17,11 @@ export default function CodeIndexPage() {
       <FieldHeader title="하위 화면" moduleRef="FNC-SYS-030~035" />
       <div className="grid grid-cols-3 gap-4 mb-8">
         {CARDS.map(c => (
-          <a key={c.ref} href={c.url}
+          <a key={c.url} href={c.url}
             className="block bg-surface-container p-6 border-l-4 border-[#00912F] hover:bg-surface-container-high transition-colors">
             <p className="text-xs font-label uppercase tracking-widest text-[#00912F] mb-1">{c.label}</p>
             <p className="font-headline font-black text-base mb-1">{c.title}</p>
             <p className="text-xs text-on-surface-variant opacity-60">{c.desc}</p>
-            <p className="text-xs text-on-surface-variant/40 mt-3 font-label">{c.ref}</p>
           </a>
         ))}
       </div>

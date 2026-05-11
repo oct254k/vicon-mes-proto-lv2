@@ -52,7 +52,7 @@ export default function MatrixApprovalPage() {
         <FieldHeader title="C. 결재 의견" moduleRef="FNC-USR-092" />
         <div className="flex gap-3 mb-4 items-center">
           <StatusBadge type="running" label="회귀 0건" />
-          <span className="text-xs text-on-surface/50 font-body">영향 평가 완료 — SCR-USR-072 참조</span>
+          <span className="text-xs text-on-surface/50 font-body">영향 평가 완료</span>
         </div>
         <div>
           <label className="text-xs font-label uppercase tracking-widest opacity-50 mb-1 block">결재 의견 (선택)</label>

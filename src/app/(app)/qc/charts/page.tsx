@@ -45,7 +45,7 @@ export default function QCChartsPage() {
         title="관리도"
         accent="X-bar / R"
         nodeRef="IA-QC-SPC-CHART"
-        description="Western Electric 8 Rules 위반 시각화 — 위반 포인트 클릭 시 SCR-QC-021 상세 이동"
+        description="Western Electric 8 Rules 위반 시각화 — 위반 포인트 클릭 시 상세 이동"
       />
 
       <div className="flex flex-wrap gap-3 mb-6 items-center">
@@ -162,7 +162,7 @@ export default function QCChartsPage() {
           <div key={v.rule} className="bg-error/10 border border-error/30 p-4">
             <div className="text-xs font-label uppercase tracking-widest text-error font-bold mb-1">{v.rule} — {v.count}건</div>
             <div className="text-sm text-on-surface-variant">{v.label}</div>
-            <a href="/qc/charts/spc-detail" className="mt-2 inline-block text-xs text-primary-accent font-label uppercase tracking-wider hover:underline">→ 상세 분석 (SCR-QC-021)</a>
+            <a href="/qc/charts/spc-detail" className="mt-2 inline-block text-xs text-primary-accent font-label uppercase tracking-wider hover:underline">→ 상세 분석</a>
           </div>
         ))}
         <div className="bg-surface-container p-4 col-span-2">

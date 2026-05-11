@@ -29,7 +29,7 @@ export default function DeviceIndexPage() {
       <FieldHeader title="하위 화면" moduleRef="PRC-SYS-002" />
       <div className="grid grid-cols-2 gap-4">
         {CARDS.map(c => (
-          <a key={c.ref} href={c.url}
+          <a key={c.url} href={c.url}
             className="block bg-surface-container p-6 border-l-4 border-[#00912F] hover:bg-surface-container-high transition-colors">
             <div className="flex justify-between items-start mb-2">
               <p className="text-xs font-label uppercase tracking-widest text-[#00912F]">{c.label}</p>
@@ -37,7 +37,6 @@ export default function DeviceIndexPage() {
             </div>
             <p className="font-headline font-black text-base mb-1">{c.title}</p>
             <p className="text-xs text-on-surface-variant opacity-60">{c.desc}</p>
-            <p className="text-xs text-on-surface-variant/40 mt-3 font-label">{c.ref}</p>
           </a>
         ))}
       </div>

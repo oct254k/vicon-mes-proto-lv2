@@ -51,7 +51,6 @@ export default function POBoardPage() {
           </div>
         ))}
       </div>
-      <p className="text-xs opacity-30 font-label mt-3 text-right">SCR-PUR-020 · PO 진척 보드 · SITUATION_BOARD 겸용</p>
     </div>
   );
 }

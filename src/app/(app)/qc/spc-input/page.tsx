@@ -147,7 +147,7 @@ export default function QCSpcInputPage() {
             </div>
           )}
           <p className="mt-4 text-xs text-on-surface-variant/40 font-label uppercase tracking-wider text-center">
-            30분 내 본인 수정 가능 (SCR-QC-013)
+            30분 내 본인 수정 가능
           </p>
         </section>
       )}

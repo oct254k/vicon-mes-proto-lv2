@@ -34,7 +34,6 @@ export default function MFGProducePage() {
       <div className="bg-surface-container border-l-4 border-primary-accent p-4">
         <div className="flex justify-between items-start">
           <span className="font-headline font-black text-base">부재 완성 — PRODUCE</span>
-          <span className="text-xs font-label text-primary-accent uppercase tracking-widest">SCR-MFG-020</span>
         </div>
         <p className="text-xs font-mono text-on-surface/70 mt-1">{MEMBER.woId}</p>
         <p className="text-xs text-on-surface/60">{MEMBER.id} · {MEMBER.type}</p>

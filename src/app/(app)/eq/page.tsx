@@ -22,42 +22,34 @@ export default function EQPage() {
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">HIERARCHY</p>
           <p className="font-headline font-bold text-sm">설비 계층 마스터</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-EQ-001 ~ 005</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">RUNTIME</p>
           <p className="font-headline font-bold text-sm">가동 이력·현황</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-EQ-006 ~ 011</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">PM</p>
           <p className="font-headline font-bold text-sm">예방정비 계획</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-EQ-012 ~ 017</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">ORDERS</p>
           <p className="font-headline font-bold text-sm">정비 작업지시</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-EQ-018 ~ 023</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">PARTS</p>
           <p className="font-headline font-bold text-sm">예비품 재고</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-EQ-024 ~ 028</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">OEE</p>
           <p className="font-headline font-bold text-sm">OEE 분석</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-EQ-029 ~ 033</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">PDM</p>
           <p className="font-headline font-bold text-sm">예측 정비(PdM)</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-EQ-034 ~ 037</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">PDA</p>
           <p className="font-headline font-bold text-sm">현장 PDA 정비</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-EQ-038 ~ 040</p>
         </div>
       </div>
 

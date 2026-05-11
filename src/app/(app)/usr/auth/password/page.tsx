@@ -29,7 +29,7 @@ export default function PasswordPage() {
             <div><label className={LABEL}>현재 PIN</label><input type="password" className={INPUT} placeholder="4자리" maxLength={4} /></div>
             <div><label className={LABEL}>새 PIN</label><input type="password" className={INPUT} placeholder="4자리" maxLength={4} /></div>
             <div><label className={LABEL}>새 PIN 확인</label><input type="password" className={INPUT} placeholder="4자리" maxLength={4} /></div>
-            <p className="text-xs text-on-surface/40 font-body leading-relaxed">ⓘ PIN 5회 오류 시 10분 잠금. 잠금 수동 해제: SCR-USR-024 (L2+ 부서장).</p>
+            <p className="text-xs text-on-surface/40 font-body leading-relaxed">ⓘ PIN 5회 오류 시 10분 잠금.</p>
             <button className="px-6 py-2 bg-primary-accent text-black text-xs font-label uppercase tracking-widest font-bold">PIN 변경</button>
           </div>
         </div>

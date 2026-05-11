@@ -29,7 +29,6 @@ export default function SupplierLandingPage() {
               <h3 className="font-headline font-black text-sm uppercase tracking-widest text-primary-accent">
                 {card.label}
               </h3>
-              <span className="text-xs font-label opacity-30">{card.ref}</span>
             </div>
             <p className="text-sm text-on-surface-variant/70 mb-4">{card.desc}</p>
             <span className="text-xs font-label uppercase tracking-wider bg-surface-container-highest/50 px-2 py-1 text-on-surface/50">

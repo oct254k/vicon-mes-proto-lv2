@@ -61,7 +61,7 @@ export default function AuditRegressionPage() {
           </tbody>
         </table>
       </div>
-      <p className="text-xs opacity-40 font-label mt-2">ⓘ 실패 케이스 수정 후 재실행 → 전체 통과 시 L4 결재(SCR-USR-073) 잠금 해제.</p>
+      <p className="text-xs opacity-40 font-label mt-2">ⓘ 실패 케이스 수정 후 재실행 → 전체 통과 시 L4 결재 잠금 해제.</p>
     </div>
   );
 }

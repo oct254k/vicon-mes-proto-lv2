@@ -52,7 +52,7 @@ export default function QualificationExpirePage() {
           </tbody>
         </table>
       </div>
-      <p className="text-xs opacity-40 font-label mt-2">ⓘ 잔여 7일 이하는 긴급(URGENT). 만료 시 공정 실행 즉시 차단. 갱신 신청 → SCR-USR-051 자격 부여 폼 이동.</p>
+      <p className="text-xs opacity-40 font-label mt-2">ⓘ 잔여 7일 이하는 긴급(URGENT). 만료 시 공정 실행 즉시 차단. 갱신 신청 → 자격 부여 폼 이동.</p>
     </div>
   );
 }

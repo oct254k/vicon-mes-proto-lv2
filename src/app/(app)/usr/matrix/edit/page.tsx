@@ -25,7 +25,7 @@ export default function MatrixEditPage() {
 
       <div className="bg-surface-container-low border-l-4 border-[#f59e0b] p-4 mb-4 flex items-center gap-3">
         <span className="text-[#f59e0b] font-bold text-sm font-label uppercase tracking-widest">주의</span>
-        <span className="text-xs font-body text-on-surface/60">매트릭스 변경은 영향 평가(SCR-USR-072) 후 L4 결재(SCR-USR-073) 완료 시 발효. 회귀 테스트 0건 gating.</span>
+        <span className="text-xs font-body text-on-surface/60">매트릭스 변경은 영향 평가 후 L4 결재 완료 시 발효. 회귀 테스트 0건 gating.</span>
       </div>
 
       <div className="flex gap-3 mb-4">

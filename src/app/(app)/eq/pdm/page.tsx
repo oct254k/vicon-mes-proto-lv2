@@ -47,7 +47,7 @@ export default function EQPdmPage() {
         title="PdM"
         accent="알림 인박스"
         nodeRef="IA-EQ-PDM-LIST"
-        description="SCR-EQ-090 — 예지정비 발의 큐 (SPC / Component / 수동)"
+        description="예지정비 발의 큐 (SPC / Component / 수동)"
       />
 
       <DataTable

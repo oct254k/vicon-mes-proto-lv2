@@ -25,7 +25,6 @@ export default function NotifyLandingPage() {
         {cards.map(c=>(
           <a key={c.href} href={c.href}
             className="bg-surface-container-low border-l-4 border-primary-accent p-4 block hover:bg-surface-container transition-colors">
-            <p className="text-xs font-label text-primary-accent uppercase tracking-widest mb-1">{c.scr}</p>
             <p className="font-headline font-black text-sm mb-1">{c.label}</p>
             <p className="text-xs text-on-surface/50">{c.desc}</p>
           </a>

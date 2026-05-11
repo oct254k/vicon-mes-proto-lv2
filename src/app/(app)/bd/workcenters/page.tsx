@@ -139,9 +139,6 @@ export default function BDWorkcentersPage() {
         bufferCount={filtered.length}
       />
 
-      <p className="mt-4 text-xs text-on-surface/40 font-label">
-        WC → 공정라인 매핑 (FNC-BD-052) · 가용 캘린더 SCR-BD-051 · 정규식: ^WC-[A-Z]+-[0-9]+$
-      </p>
     </div>
   );
 }

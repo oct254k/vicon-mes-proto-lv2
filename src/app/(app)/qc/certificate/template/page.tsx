@@ -66,7 +66,7 @@ export default function QCCertificateTemplatePage() {
 
       <div className="mt-6 bg-surface-container-low border-l-4 border-outline-variant/20 p-4">
         <p className="font-label text-xs uppercase tracking-widest opacity-50 mb-2">탭 전환 안내</p>
-        <p className="text-xs opacity-50 font-body">KS 탭이 기본 표시됩니다. CE·3S 탭은 실제 구현 시 상태 관리로 전환. 행 클릭 → 양식 편집 (SCR-QC-083 상세).</p>
+        <p className="text-xs opacity-50 font-body">KS 탭이 기본 표시됩니다. CE·3S 탭은 실제 구현 시 상태 관리로 전환. 행 클릭 → 양식 편집.</p>
       </div>
     </div>
   );

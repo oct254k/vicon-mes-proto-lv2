@@ -39,7 +39,7 @@ export default function QCRecallPage() {
     <div>
       <PageHeader
         title="불량품 회수 처리"
-        accent="SCR-QC-050"
+        accent="RECALL"
         nodeRef="IA-QC-RECALL-WORKFLOW"
         status="PROTOTYPE"
         description="불량 LOT 회수 5단계 워크플로 — RECALL-2026-0003"
@@ -191,7 +191,7 @@ export default function QCRecallPage() {
           <div className="bg-surface-container border-l-4 border-primary-accent p-4">
             <p className="text-xs font-label uppercase tracking-widest opacity-50 mb-2">종결 의견</p>
             <p className="text-sm font-body text-on-surface/70 leading-relaxed">
-              RECALL-2026-0003 건은 2026-05-05 기준 전량 회수·격리 완료되었음. 원인: 용접 공정 파라미터 이탈. 재발 방지 조치: 용접 온도·속도 자동 모니터링 임계값 강화(SCR-QC-023 연계).
+              RECALL-2026-0003 건은 2026-05-05 기준 전량 회수·격리 완료되었음. 원인: 용접 공정 파라미터 이탈. 재발 방지 조치: 용접 온도·속도 자동 모니터링 임계값 강화.
             </p>
           </div>
         </div>

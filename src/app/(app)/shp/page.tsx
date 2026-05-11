@@ -22,42 +22,34 @@ export default function SHPPage() {
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">SCHEDULE</p>
           <p className="font-headline font-bold text-sm">출하 일정 관리</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-SHP-001 ~ 003</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">PACKING</p>
           <p className="font-headline font-bold text-sm">패킹 PDA 스캔</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-SHP-004 ~ 007</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">STORED</p>
           <p className="font-headline font-bold text-sm">출하 대기 보관</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-SHP-008 ~ 011</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">DOCUMENTS</p>
           <p className="font-headline font-bold text-sm">출하 서류 발행</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-SHP-012 ~ 015</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">LOADING</p>
           <p className="font-headline font-bold text-sm">상차 확인</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-SHP-016 ~ 018</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">GATE</p>
           <p className="font-headline font-bold text-sm">게이트 통과 확인</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-SHP-019 ~ 021</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">RECEIVE</p>
           <p className="font-headline font-bold text-sm">현장 검수 입력</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-SHP-022 ~ 024</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">NOTIFICATIONS</p>
           <p className="font-headline font-bold text-sm">출하 알림 관리</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-SHP-025 ~ 026</p>
         </div>
       </div>
 

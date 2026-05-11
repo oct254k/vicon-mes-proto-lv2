@@ -22,42 +22,34 @@ export default function USRPage() {
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">USERS</p>
           <p className="font-headline font-bold text-sm">사용자 마스터</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-USR-001 ~ 005</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">ROLES</p>
           <p className="font-headline font-bold text-sm">역할 정의</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-USR-006 ~ 010</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">AUTH</p>
           <p className="font-headline font-bold text-sm">인증 설정</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-USR-011 ~ 014</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">DELEGATION</p>
           <p className="font-headline font-bold text-sm">권한 위임</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-USR-015 ~ 018</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">QUALIFICATION</p>
           <p className="font-headline font-bold text-sm">자격·면허 관리</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-USR-019 ~ 022</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">TOKENS</p>
           <p className="font-headline font-bold text-sm">API 토큰 관리</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-USR-023 ~ 026</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">MATRIX</p>
           <p className="font-headline font-bold text-sm">권한 매트릭스</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-USR-027 ~ 031</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">AUDIT</p>
           <p className="font-headline font-bold text-sm">사용자 감사 로그</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-USR-032 ~ 035</p>
         </div>
       </div>
 

@@ -40,7 +40,7 @@ export default function EQOeePage() {
         title="OEE"
         accent="분석 대시보드"
         nodeRef="IA-EQ-OEE-TREND"
-        description="SCR-EQ-080 — 가용성 × 성능 × 품질 종합 OEE"
+        description="가용성 × 성능 × 품질 종합 OEE"
       />
 
       {/* KPI 게이지 카드 4종 */}

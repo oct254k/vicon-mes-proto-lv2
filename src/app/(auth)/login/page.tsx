@@ -67,9 +67,6 @@ export default function LoginPage() {
           <span className="font-headline font-black text-sm uppercase tracking-widest text-white">
             로그인
           </span>
-          <span className="ml-3 text-xs font-label uppercase tracking-[0.2em] text-on-surface-variant opacity-50">
-            SCR-USR-020
-          </span>
         </div>
 
         <form onSubmit={handleLogin} className="px-6 py-6 space-y-5">

@@ -30,7 +30,6 @@ export default function SHPGatePage() {
           <span className="mx-3 opacity-20">|</span>
           <span className="text-xs font-label uppercase tracking-[0.3em] text-primary-accent">GATE TERMINAL</span>
         </div>
-        <span className="text-xs font-mono opacity-40">SCR-SHP-006</span>
       </div>
 
       {/* 메인 상태 */}

@@ -22,42 +22,34 @@ export default function PURPage() {
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">PR</p>
           <p className="font-headline font-bold text-sm">구매요청</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-PUR-001 ~ 003</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">SUPPLIER</p>
           <p className="font-headline font-bold text-sm">공급사 관리</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-PUR-004 ~ 006</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">PO</p>
           <p className="font-headline font-bold text-sm">발주서 발행</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-PUR-007 ~ 010</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">ACK</p>
           <p className="font-headline font-bold text-sm">납기 확인</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-PUR-011 ~ 013</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">ASN</p>
           <p className="font-headline font-bold text-sm">사전출하통보</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-PUR-014 ~ 016</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">RECEIPT</p>
           <p className="font-headline font-bold text-sm">입고 처리</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-PUR-017 ~ 020</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">MATCHING</p>
           <p className="font-headline font-bold text-sm">3-Way Matching</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-PUR-021 ~ 023</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">CLAIMS</p>
           <p className="font-headline font-bold text-sm">클레임·반품</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-PUR-024 ~ 026</p>
         </div>
       </div>
 

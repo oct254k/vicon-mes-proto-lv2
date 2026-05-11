@@ -22,27 +22,22 @@ export default function SPPage() {
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">ORDERS</p>
           <p className="font-headline font-bold text-sm">수주 등록·조회</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-SP-001 ~ 005</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">MEMBERS</p>
           <p className="font-headline font-bold text-sm">부재리스트 관리</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-SP-006 ~ 010</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">PLANS</p>
           <p className="font-headline font-bold text-sm">일일생산계획</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-SP-011 ~ 015</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">MRP</p>
           <p className="font-headline font-bold text-sm">자재소요량 계획</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-SP-016 ~ 020</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-1">NOTIFICATIONS</p>
           <p className="font-headline font-bold text-sm">계획 알림·승인</p>
-          <p className="text-xs text-on-surface/50 mt-1">SCR-SP-021 ~ 023</p>
         </div>
       </div>
 

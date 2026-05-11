@@ -107,9 +107,6 @@ export default function BDProcessLinePage() {
         )}
       </div>
 
-      <p className="mt-4 text-xs text-on-surface/40 font-label">
-        행 클릭 → SCR-BD-041 세부 공정 시퀀스 · LINE_MASTER_CHANGED 이벤트 5초 자동 갱신 (FNC-BD-046)
-      </p>
     </div>
   );
 }
