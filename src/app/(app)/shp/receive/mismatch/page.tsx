@@ -17,7 +17,7 @@ export default function MismatchPage() {
   const [reason, setReason] = useState("");
   return (
     <div>
-      <PageHeader title="불일치 목록" accent="SCR-SHP-062" nodeRef="IA-SHP-RECEIVE-MISMATCH" status="PROTOTYPE"
+      <PageHeader title="불일치 목록" nodeRef="IA-SHP-RECEIVE-MISMATCH" status="PROTOTYPE"
         description="검수 불일치 5사유 (MISSING/DAMAGE/CODE_DIFF/QTY_DIFF/OTHER) 처리 보드 (FNC-SHP-074/076)" />
       <div className="flex justify-between items-center mb-4">
         <div className="flex gap-2 flex-wrap text-xs font-label">

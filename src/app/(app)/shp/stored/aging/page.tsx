@@ -14,7 +14,7 @@ export default function StoredAgingPage() {
   const max = Math.max(...MOCK.map(r=>r.storedDays));
   return (
     <div>
-      <PageHeader title="AGING 알림" accent="SCR-SHP-021" nodeRef="IA-SHP-STORED-AGING" status="PROTOTYPE"
+      <PageHeader title="AGING 알림" nodeRef="IA-SHP-STORED-AGING" status="PROTOTYPE"
         description="장기 야적 체류 AGING 모니터 (FNC-SHP-022/024) · SITUATION_BOARD 겸용" />
       <div className="bg-[#f59e0b]/10 border border-[#f59e0b]/40 px-4 py-3 mb-4 flex items-center gap-3">
         <span className="text-[#f59e0b] font-black text-xl">⚠</span>

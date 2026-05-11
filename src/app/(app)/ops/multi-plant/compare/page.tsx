@@ -29,7 +29,7 @@ const OEE_VALUES  = [82.1, 74.5, 78.4, 68.0];
 export default function MultiPlantComparePage() {
   return (
     <div className="p-4 bg-surface min-h-screen">
-      <PageHeader title="Plant 비교" accent="SCR-OPS-030" nodeRef="FNC-OPS-040~042,044" description="Plant 간 KPI 비교 막대 · 60초 갱신" />
+      <PageHeader title="Plant 비교" nodeRef="FNC-OPS-040~042,044" description="Plant 간 KPI 비교 막대 · 60초 갱신" />
 
       {/* OEE 비교 막대 차트 (텍스트 시각화) */}
       <div className="bg-surface-container p-5 mb-5">

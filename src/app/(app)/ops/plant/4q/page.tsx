@@ -29,7 +29,7 @@ const DATA = [
 export default function Plant4QPage() {
   return (
     <div className="p-4 bg-surface min-h-screen">
-      <PageHeader title="Plant 종합 4분면" accent="SCR-OPS-020" nodeRef="FNC-OPS-020~024" description="L3 공장장 · Plant 4분면 KPI · 60초+이벤트 갱신" />
+      <PageHeader title="Plant 종합 4분면" nodeRef="FNC-OPS-020~024" description="L3 공장장 · Plant 4분면 KPI · 60초+이벤트 갱신" />
 
       {/* 4분면 그리드 */}
       <div className="grid grid-cols-2 gap-4 mb-5">

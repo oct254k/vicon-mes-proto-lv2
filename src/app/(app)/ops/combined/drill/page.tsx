@@ -32,7 +32,7 @@ export default function CombinedDrillPage() {
 
   return (
     <div className="p-4 bg-surface min-h-screen">
-      <PageHeader title="설비 드릴다운" accent="SCR-OPS-061" nodeRef="FNC-OPS-071" description="Equipment·WC 단위 OEE 드릴다운 · 60초 갱신" />
+      <PageHeader title="설비 드릴다운" nodeRef="FNC-OPS-071" description="Equipment·WC 단위 OEE 드릴다운 · 60초 갱신" />
 
       <div className="flex items-center gap-2 mb-5 flex-wrap">
         {FILTERS.map(f => (

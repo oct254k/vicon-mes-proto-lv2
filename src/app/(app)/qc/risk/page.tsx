@@ -76,7 +76,7 @@ export default function QCRiskPage() {
     <div>
       <PageHeader
         title="위험 확산 평가"
-        accent="SCR-QC-060"
+       
         nodeRef="IA-QC-RISK-SPREAD"
         status="PROTOTYPE"
         description="불량 부재·LOT의 영향 범위를 추적하고 확산 위험을 평가합니다."

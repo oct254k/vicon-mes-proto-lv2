@@ -17,7 +17,7 @@ export default function ReceiptHistoryPage() {
   const rows = MOCK.filter(r => !q || r.lot.includes(q) || r.po.includes(q) || r.mat.includes(q));
   return (
     <div>
-      <PageHeader title="입고 이력" accent="SCR-PUR-051" nodeRef="IA-PUR-RECEIPT-HISTORY" status="PROTOTYPE"
+      <PageHeader title="입고 이력" nodeRef="IA-PUR-RECEIPT-HISTORY" status="PROTOTYPE"
         description="입고·Lot 채번·검수 결과 이력 조회 (FNC-PUR-068 / Lot: LOT-YYYYMMDD-NNN)" />
       <div className="bg-surface-container border-l-4 border-primary-accent p-4 mb-4 flex gap-4 items-end">
         <div className="flex flex-col gap-1">

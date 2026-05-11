@@ -35,7 +35,7 @@ const DATA = STEPS.map(s => {
 export default function PlantProcessStepPage() {
   return (
     <div className="p-4 bg-surface min-h-screen">
-      <PageHeader title="공정 단계 진척" accent="SCR-OPS-022" nodeRef="FNC-OPS-027" description="단계별 부재 카드 현황 · 60초 갱신" />
+      <PageHeader title="공정 단계 진척" nodeRef="FNC-OPS-027" description="단계별 부재 카드 현황 · 60초 갱신" />
 
       {/* 공정 단계 카드 열 */}
       <div className="grid grid-cols-6 gap-3 mb-5">

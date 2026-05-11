@@ -165,7 +165,7 @@ export default function WOOrdersPage() {
 
   return (
     <div>
-      <PageHeader title="작업지시 목록" accent="SCR-WO-003" nodeRef="IA-WO-ORDERS-LIST" status="PROTOTYPE"
+      <PageHeader title="작업지시 목록" nodeRef="IA-WO-ORDERS-LIST" status="PROTOTYPE"
         description="WO 목록 조회·필터. 행 클릭 시 부재 라인·상태·액션 상세 표시." />
 
       {/* 필터 바 */}

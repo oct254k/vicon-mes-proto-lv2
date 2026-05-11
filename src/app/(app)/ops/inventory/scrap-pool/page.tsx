@@ -34,7 +34,7 @@ const KPI = [
 export default function InventoryScrapPoolPage() {
   return (
     <div className="p-4 bg-surface min-h-screen">
-      <PageHeader title="SCRAP Pool" accent="SCR-OPS-072" nodeRef="FNC-OPS-084" description="자투리 풀 가시화 · 5분 갱신" />
+      <PageHeader title="SCRAP Pool" nodeRef="FNC-OPS-084" description="자투리 풀 가시화 · 5분 갱신" />
 
       <div className="grid grid-cols-4 gap-3 mb-5">
         {KPI.map(k => (

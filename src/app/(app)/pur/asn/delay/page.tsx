@@ -12,7 +12,7 @@ const MOCK = [
 export default function ASNDelayPage() {
   return (
     <div>
-      <PageHeader title="ASN 도착 지연" accent="SCR-PUR-042" nodeRef="IA-PUR-ASN-DELAY" status="PROTOTYPE"
+      <PageHeader title="ASN 도착 지연" nodeRef="IA-PUR-ASN-DELAY" status="PROTOTYPE"
         description="ETA 초과 ASN 도착 지연 경고 — 클레임 회귀 대상 (FNC-PUR-054)" />
       <div className="bg-[#f59e0b]/10 border border-[#f59e0b]/40 px-4 py-3 mb-4 flex items-center gap-3">
         <span className="text-[#f59e0b] font-black text-lg">⚠</span>

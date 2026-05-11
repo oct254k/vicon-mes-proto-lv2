@@ -16,7 +16,7 @@ const kpis = [{l:"금일 통과",v:2},{l:"RFID 인식",v:3},{l:"수동 처리",v
 export default function GateMonitorPage() {
   return (
     <div>
-      <PageHeader title="게이트 통과 이력" accent="SCR-SHP-051" nodeRef="IA-SHP-GATE-MONITOR" status="PROTOTYPE"
+      <PageHeader title="게이트 통과 이력" nodeRef="IA-SHP-GATE-MONITOR" status="PROTOTYPE"
         description="게이트 RFID/MANUAL 통과 이력 감사 (FNC-SHP-060/061/063) — GATE-MANAGER/ADMIN" />
       <div className="grid grid-cols-4 gap-3 mb-6">
         {kpis.map(k=>(

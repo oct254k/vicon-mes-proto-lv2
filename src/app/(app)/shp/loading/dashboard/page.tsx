@@ -14,7 +14,7 @@ const SM: Record<string,"running"|"idle"|"warning"> = { SHIPPED:"running", IN_PR
 export default function LoadingDashboardPage() {
   return (
     <div>
-      <PageHeader title="적재 현황 대시보드" accent="SCR-SHP-042" nodeRef="IA-SHP-LOADING-DASHBOARD" status="PROTOTYPE"
+      <PageHeader title="적재 현황 대시보드" nodeRef="IA-SHP-LOADING-DASHBOARD" status="PROTOTYPE"
         description="출발 결과·취소 이력 (FNC-SHP-054/055/050) — SHP-STAFF/MANAGER" />
       <div className="grid grid-cols-4 gap-3 mb-6">
         {kpis.map(k=>(

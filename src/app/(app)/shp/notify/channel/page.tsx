@@ -13,7 +13,7 @@ export default function ChannelPage() {
   const [saved, setSaved] = useState(false);
   return (
     <div>
-      <PageHeader title="채널 설정" accent="SCR-SHP-071" nodeRef="IA-SHP-NOTIFY-CHANNEL" status="PROTOTYPE"
+      <PageHeader title="채널 설정" nodeRef="IA-SHP-NOTIFY-CHANNEL" status="PROTOTYPE"
         description="거래처별 알림 채널 마스터 설정 (FNC-SHP-085) — SHP-STAFF/ADMIN" />
       <FieldHeader title="거래처 채널 설정" moduleRef={`${CUSTOMERS.length}개 거래처`} />
       <div className="bg-surface-container-lowest overflow-x-auto mb-4">

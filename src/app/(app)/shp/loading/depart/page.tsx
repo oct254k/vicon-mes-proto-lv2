@@ -11,7 +11,7 @@ export default function DepartPage() {
   const allLoaded = SHP.loadedPkg === SHP.totalPkg;
   return (
     <div className="max-w-sm mx-auto">
-      <PageHeader title="출발 확인" accent="SCR-SHP-041" nodeRef="IA-SHP-LOADING-DEPART" status="PROTOTYPE"
+      <PageHeader title="출발 확인" nodeRef="IA-SHP-LOADING-DEPART" status="PROTOTYPE"
         description="출발 누락 검증 후 SHIPPED 전이 (EXTERNAL 토큰 · FNC-SHP-052/054)" />
       <FieldHeader title="출하 정보" moduleRef={SHP.id} />
       <div className="bg-surface-container p-5 mb-4 space-y-2">

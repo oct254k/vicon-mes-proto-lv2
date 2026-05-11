@@ -26,7 +26,7 @@ const STATUS_COLOR: Record<string, string> = { UNRESOLVED: "text-error", READ: "
 export default function NotificationPage() {
   return (
     <div className="p-4 bg-surface min-h-screen">
-      <PageHeader title="알림 센터" accent="SCR-OPS-080" nodeRef="FNC-OPS-090~099" description="5채널 · 4액션 통합 알림 랜딩 · 30초 갱신" />
+      <PageHeader title="알림 센터" nodeRef="FNC-OPS-090~099" description="5채널 · 4액션 통합 알림 랜딩 · 30초 갱신" />
 
       <div className="grid grid-cols-4 gap-3 mb-5">
         {KPI.map(k => (

@@ -17,7 +17,7 @@ export default function ASNListPage() {
   const rows = MOCK.filter(r => !q || r.id.includes(q) || r.supplier.includes(q));
   return (
     <div>
-      <PageHeader title="ASN 목록" accent="SCR-PUR-040" nodeRef="IA-PUR-ASN-LIST" status="PROTOTYPE"
+      <PageHeader title="ASN 목록" nodeRef="IA-PUR-ASN-LIST" status="PROTOTYPE"
         description="사전출하통보 (ASN) 목록·ETA 추적 (FNC-PUR-050~053)" />
       <div className="bg-surface-container border-l-4 border-primary-accent p-4 mb-4 flex flex-wrap gap-4 items-end">
         <div className="flex flex-col gap-1">

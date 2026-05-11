@@ -20,7 +20,7 @@ function stateColor(state: string) {
 export default function WOMembersPage() {
   return (
     <div>
-      <PageHeader title="부재 코드 목록" accent="SCR-WO-010" nodeRef="IA-WO-MEMBERS-LIST" status="PROTOTYPE" />
+      <PageHeader title="부재 코드 목록" nodeRef="IA-WO-MEMBERS-LIST" status="PROTOTYPE" />
       <div className="bg-surface-container border-l-4 border-primary-accent p-3 mb-4 text-xs opacity-60 font-label">
         ⚠ DEC-BD-MEMBER-SCOPE — Member 마스터 = WO 책임 (site/bldg/grid/type/seq 분해·정규식 검증·attempt_no)
       </div>

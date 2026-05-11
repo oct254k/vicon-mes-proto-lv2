@@ -14,7 +14,7 @@ const STATUS_COLOR: Record<string, string> = { 정상: "text-primary-accent", �
 export default function MultiPlantPage() {
   return (
     <div className="p-4 bg-surface min-h-screen">
-      <PageHeader title="다공장 종합" accent="SCR-OPS-030" nodeRef="FNC-OPS-040~042,044" description="L4 임원 · Plant 전체 비교 · 60초 갱신" />
+      <PageHeader title="다공장 종합" nodeRef="FNC-OPS-040~042,044" description="L4 임원 · Plant 전체 비교 · 60초 갱신" />
 
       <div className="flex gap-3 mb-5">
         <a href="/ops/multi-plant/compare" className="bg-surface-container px-4 py-2 text-xs font-label hover:border hover:border-primary-accent/40">Plant 비교</a>

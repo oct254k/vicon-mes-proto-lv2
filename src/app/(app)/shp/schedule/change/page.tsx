@@ -13,7 +13,7 @@ const SM: Record<string,"warning"|"running"|"stopped"> = { PENDING_L3:"warning",
 export default function ScheduleChangePage() {
   return (
     <div>
-      <PageHeader title="일정 변경·취소" accent="SCR-SHP-003" nodeRef="IA-SHP-SCHEDULE-CHANGE" status="PROTOTYPE"
+      <PageHeader title="일정 변경·취소" nodeRef="IA-SHP-SCHEDULE-CHANGE" status="PROTOTYPE"
         description="출하 일정 변경·취소 — L3 결재 필요 (FNC-SHP-044/055)" />
       <FieldHeader title="변경 이력" moduleRef={`${MOCK.length}건`} />
       <div className="bg-surface-container-lowest overflow-x-auto">

@@ -7,7 +7,7 @@ export default function ScheduleNewPage() {
   const [saved, setSaved] = useState(false);
   return (
     <div>
-      <PageHeader title="출하 일정 등록" accent="SCR-SHP-004" nodeRef="IA-SHP-SCHEDULE-NEW" status="PROTOTYPE"
+      <PageHeader title="출하 일정 등록" nodeRef="IA-SHP-SCHEDULE-NEW" status="PROTOTYPE"
         description="신규 출하 일정 등록 폼 (FNC-SHP-040/003)" />
       <FieldHeader title="출하 기본 정보" moduleRef="FNC-SHP-040" />
       <div className="bg-surface-container-low p-6 grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">

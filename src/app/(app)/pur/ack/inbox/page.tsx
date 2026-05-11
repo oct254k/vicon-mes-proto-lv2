@@ -21,7 +21,7 @@ export default function ACKInboxPage() {
   const rows = MOCK.filter(r => tf === "ALL" || r.type === tf);
   return (
     <div>
-      <PageHeader title="답신 인박스" accent="SCR-PUR-030" nodeRef="IA-PUR-ACK-INBOX" status="PROTOTYPE"
+      <PageHeader title="답신 인박스" nodeRef="IA-PUR-ACK-INBOX" status="PROTOTYPE"
         description="공급사 답신 4유형 (ACCEPTED/PARTIALLY_ACCEPTED/REJECTED/COUNTER_PROPOSAL) 인박스 (FNC-PUR-040~043)" />
       <div className="flex gap-2 mb-4 flex-wrap">
         {TYPES.map(t=>(

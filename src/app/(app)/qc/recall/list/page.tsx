@@ -41,7 +41,7 @@ export default function QCRecallListPage() {
     <div>
       <PageHeader
         title="불량품 회수 목록"
-        accent="SCR-QC-051"
+       
         nodeRef="IA-QC-RECALL-LIST"
         status="PROTOTYPE"
         description="전체 회수 이력 및 현재 진행 단계 조회"

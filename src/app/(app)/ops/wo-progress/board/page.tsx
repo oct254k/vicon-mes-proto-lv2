@@ -37,7 +37,7 @@ export default function WOProgressBoardPage() {
 
   return (
     <div className="p-4 bg-surface min-h-screen">
-      <PageHeader title="WO 진척 보드" accent="SCR-OPS-050" nodeRef="FNC-OPS-060,063,064" description="계획 대비 진척 · 60초 갱신" />
+      <PageHeader title="WO 진척 보드" nodeRef="FNC-OPS-060,063,064" description="계획 대비 진척 · 60초 갱신" />
 
       <div className="grid grid-cols-4 gap-3 mb-5">
         {KPI.map(k => (

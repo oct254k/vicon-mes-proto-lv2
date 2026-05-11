@@ -33,7 +33,7 @@ const KPI = [
 export default function DispatchMonitorPage() {
   return (
     <div className="p-4 bg-surface min-h-screen">
-      <PageHeader title="발송 모니터" accent="SCR-OPS-081" nodeRef="FNC-OPS-092,098" description="알림 발송 실패·재시도 추적 · 30초 갱신" />
+      <PageHeader title="발송 모니터" nodeRef="FNC-OPS-092,098" description="알림 발송 실패·재시도 추적 · 30초 갱신" />
 
       <div className="grid grid-cols-4 gap-3 mb-5">
         {KPI.map(k => (

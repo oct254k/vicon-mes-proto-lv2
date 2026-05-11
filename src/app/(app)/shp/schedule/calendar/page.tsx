@@ -16,7 +16,7 @@ const kpis = [{l:"이번 주 출하",v:4},{l:"진행 중",v:1},{l:"예정",v:3},
 export default function ScheduleCalendarPage() {
   return (
     <div>
-      <PageHeader title="출하 일정 캘린더" accent="SCR-SHP-001" nodeRef="IA-SHP-SCHEDULE-CALENDAR" status="PROTOTYPE"
+      <PageHeader title="출하 일정 캘린더" nodeRef="IA-SHP-SCHEDULE-CALENDAR" status="PROTOTYPE"
         description="출하 일정 캘린더·간트 (FNC-SHP-046/040) — 1차 사용자: SHP-STAFF/MANAGER" />
       <div className="grid grid-cols-4 gap-3 mb-6">
         {kpis.map(k=>(

@@ -21,7 +21,7 @@ export default function PRListPage() {
   const rows = MOCK.filter(r => (sf === "ALL" || r.status === sf) && (!q || r.id.includes(q) || r.material.includes(q)));
   return (
     <div>
-      <PageHeader title="PR 목록" accent="SCR-PUR-002" nodeRef="IA-PUR-PR-LIST" status="PROTOTYPE"
+      <PageHeader title="PR 목록" nodeRef="IA-PUR-PR-LIST" status="PROTOTYPE"
         description="구매요청 워크리스트 — 상태·자재·요청자 필터 (FNC-PUR-010~015)" />
       <div className="bg-surface-container border-l-4 border-primary-accent p-4 mb-4 flex flex-wrap gap-4 items-end">
         <div className="flex flex-col gap-1">

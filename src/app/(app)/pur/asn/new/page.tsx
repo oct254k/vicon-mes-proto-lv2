@@ -7,7 +7,7 @@ export default function ASNNewPage() {
   const [saved, setSaved] = useState(false);
   return (
     <div>
-      <PageHeader title="ASN 수동 등록" accent="SCR-PUR-041" nodeRef="IA-PUR-ASN-NEW" status="PROTOTYPE"
+      <PageHeader title="ASN 수동 등록" nodeRef="IA-PUR-ASN-NEW" status="PROTOTYPE"
         description="공급사 전산 미등록 시 구매팀 수동 ASN 등록 (FNC-PUR-050/051)" />
       <FieldHeader title="ASN 기본 정보" moduleRef="FNC-PUR-050" />
       <div className="bg-surface-container-low p-6 grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">

@@ -54,7 +54,7 @@ export default function OPSLinePage() {
 
   return (
     <div className="p-4 bg-surface min-h-screen">
-      <PageHeader title="라인 상황판" accent="SCR-OPS-010" nodeRef="FNC-OPS-010~016" description="WC 단위 가동 현황 · 10초 자동 갱신" />
+      <PageHeader title="라인 상황판" nodeRef="FNC-OPS-010~016" description="WC 단위 가동 현황 · 10초 자동 갱신" />
 
       {/* WC 선택 + 메타 */}
       <div className="flex items-center gap-4 mb-5 flex-wrap">

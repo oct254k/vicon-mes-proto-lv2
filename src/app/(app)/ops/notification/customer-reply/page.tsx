@@ -30,7 +30,7 @@ const KPI = [
 export default function CustomerReplyPage() {
   return (
     <div className="p-4 bg-surface min-h-screen">
-      <PageHeader title="거래처 회신 큐" accent="SCR-OPS-082" nodeRef="FNC-OPS-099" description="거래처 통보 회신 인박스 · 5분+이벤트 갱신" />
+      <PageHeader title="거래처 회신 큐" nodeRef="FNC-OPS-099" description="거래처 통보 회신 인박스 · 5분+이벤트 갱신" />
 
       <div className="grid grid-cols-3 gap-3 mb-5">
         {KPI.map(k => (

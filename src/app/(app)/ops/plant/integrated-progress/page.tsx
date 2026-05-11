@@ -30,7 +30,7 @@ export default function PlantIntegratedProgressPage() {
 
   return (
     <div className="p-4 bg-surface min-h-screen">
-      <PageHeader title="통합 진척 조회" accent="SCR-OPS-023" nodeRef="FNC-OPS-029" description="제작번호·현장명 통합 조회 · 이벤트 갱신" />
+      <PageHeader title="통합 진척 조회" nodeRef="FNC-OPS-029" description="제작번호·현장명 통합 조회 · 이벤트 갱신" />
 
       {/* 검색 */}
       <div className="flex items-center gap-3 mb-5">

@@ -43,7 +43,7 @@ export default function QCLossPage() {
     <div>
       <PageHeader
         title="품질 손실 환산"
-        accent="SCR-QC-070"
+       
         nodeRef="IA-QC-LOSS-CALC"
         status="PROTOTYPE"
         description="불량 유형별 손실 금액·중량·건수 집계 및 월별 추이 분석"

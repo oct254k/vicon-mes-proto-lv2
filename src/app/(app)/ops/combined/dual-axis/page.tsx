@@ -16,7 +16,7 @@ const maxDefect = Math.max(...DATA.map(d => d.defect));
 export default function CombinedDualAxisPage() {
   return (
     <div className="p-4 bg-surface min-h-screen">
-      <PageHeader title="이중축 차트" accent="SCR-OPS-060" nodeRef="FNC-OPS-070,072~074" description="OEE × 불량률 동축 시각화 (텍스트 바) · 60초 갱신" />
+      <PageHeader title="이중축 차트" nodeRef="FNC-OPS-070,072~074" description="OEE × 불량률 동축 시각화 (텍스트 바) · 60초 갱신" />
 
       <div className="bg-surface-container p-5 mb-5">
         {/* 범례 */}

@@ -8,7 +8,7 @@ export default function SignPage() {
   const [signed, setSigned] = useState(false);
   return (
     <div className="max-w-sm mx-auto">
-      <PageHeader title="서명 수령" accent="SCR-SHP-061" nodeRef="IA-SHP-RECEIVE-SIGN" status="PROTOTYPE"
+      <PageHeader title="서명 수령" nodeRef="IA-SHP-RECEIVE-SIGN" status="PROTOTYPE"
         description="현장 검수자 서명 수령 — RECEIVED 전이 (EXTERNAL 토큰 · FNC-SHP-075/072/005)" />
       <FieldHeader title="출하 정보 확인" moduleRef="SHP-2026-0025" />
       <div className="bg-surface-container p-4 mb-4 space-y-2">

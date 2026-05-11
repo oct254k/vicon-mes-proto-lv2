@@ -21,7 +21,7 @@ export default function PackingScanPage() {
   }
   return (
     <div className="max-w-sm mx-auto">
-      <PageHeader title="PDA 패킹 스캔" accent="SCR-SHP-010" nodeRef="IA-SHP-PACKING-SCAN" status="PROTOTYPE"
+      <PageHeader title="PDA 패킹 스캔" nodeRef="IA-SHP-PACKING-SCAN" status="PROTOTYPE"
         description="포장팀 PDA 1:1 검증 스캔 (FNC-SHP-010/011/012)" />
       <div className="grid grid-cols-2 gap-3 mb-4">
         <div className="bg-surface-container p-4 text-center">

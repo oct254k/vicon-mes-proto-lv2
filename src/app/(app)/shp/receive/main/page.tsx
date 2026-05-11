@@ -12,7 +12,7 @@ const SM: Record<string,"warning"|"idle"> = { ETA_NEAR:"warning", SCHEDULED:"idl
 export default function ReceiveMainPage() {
   return (
     <div>
-      <PageHeader title="현장 검수 랜딩" accent="SCR-SHP-060" nodeRef="IA-SHP-RECEIVE-MAIN" status="PROTOTYPE"
+      <PageHeader title="현장 검수 랜딩" nodeRef="IA-SHP-RECEIVE-MAIN" status="PROTOTYPE"
         description="현장 검수자(EXTERNAL 토큰) 모바일 앱 메인 — 도착 알림 인박스 (FNC-SHP-070/081)" />
       <div className="bg-[#f59e0b]/10 border border-[#f59e0b]/40 px-4 py-3 mb-4 text-sm font-label text-[#f59e0b]">
         EXTERNAL 토큰 — 현장 검수자 단일 출하 범위 액션만 허용

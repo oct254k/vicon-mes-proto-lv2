@@ -27,7 +27,7 @@ export default function CombinedPage() {
 
   return (
     <div className="p-4 bg-surface min-h-screen">
-      <PageHeader title="생산·불량·가동 통합" accent="SCR-OPS-060" nodeRef="FNC-OPS-070,072~074" description="OEE × 불량률 통합 대시보드 · 60초 갱신" />
+      <PageHeader title="생산·불량·가동 통합" nodeRef="FNC-OPS-070,072~074" description="OEE × 불량률 통합 대시보드 · 60초 갱신" />
 
       <div className="grid grid-cols-4 gap-3 mb-5">
         {KPI.map(k => (

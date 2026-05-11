@@ -19,7 +19,7 @@ const ROWS = [
 export default function SOProgressPage() {
   return (
     <div className="p-4 bg-surface min-h-screen">
-      <PageHeader title="수주별 진척" accent="SCR-OPS-040" nodeRef="FNC-OPS-050~053" description="거래처·현장·동 단위 진척 · 5분 갱신" />
+      <PageHeader title="수주별 진척" nodeRef="FNC-OPS-050~053" description="거래처·현장·동 단위 진척 · 5분 갱신" />
 
       <div className="grid grid-cols-4 gap-3 mb-6">
         {KPI.map(k => (

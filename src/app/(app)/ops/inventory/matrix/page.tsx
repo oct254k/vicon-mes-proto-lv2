@@ -49,7 +49,7 @@ const KPI = [
 export default function InventoryMatrixPage() {
   return (
     <div className="p-4 bg-surface min-h-screen">
-      <PageHeader title="재고 매트릭스" accent="SCR-OPS-070" nodeRef="FNC-OPS-080,081,083" description="Plant × Material 재고 종합 · 5분 갱신" />
+      <PageHeader title="재고 매트릭스" nodeRef="FNC-OPS-080,081,083" description="Plant × Material 재고 종합 · 5분 갱신" />
 
       <div className="grid grid-cols-3 gap-3 mb-5">
         {KPI.map(k => (

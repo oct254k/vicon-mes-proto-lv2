@@ -47,7 +47,7 @@ export default function WOReleaseResultPage() {
 
   return (
     <div>
-      <PageHeader title="WO 발행 결과" accent="SCR-WO-001" nodeRef="IA-WO-ORDERS-RELEASE" status="PROTOTYPE" />
+      <PageHeader title="WO 발행 결과" nodeRef="IA-WO-ORDERS-RELEASE" status="PROTOTYPE" />
 
       <div className="grid grid-cols-2 gap-4">
         {/* 좌측 50% — 부재 묶음 */}

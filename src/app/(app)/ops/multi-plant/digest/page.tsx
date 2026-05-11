@@ -17,7 +17,7 @@ const DISPATCH_LOG = [
 export default function MultiPlantDigestPage() {
   return (
     <div className="p-4 bg-surface min-h-screen">
-      <PageHeader title="임원 다이제스트" accent="SCR-OPS-031" nodeRef="FNC-OPS-043" description="다공장 요약 카드 + 발송 모니터 · 이벤트 갱신" />
+      <PageHeader title="임원 다이제스트" nodeRef="FNC-OPS-043" description="다공장 요약 카드 + 발송 모니터 · 이벤트 갱신" />
 
       {/* 다이제스트 카드 */}
       <div className="grid grid-cols-2 gap-4 mb-6">

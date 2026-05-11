@@ -11,7 +11,7 @@ export default function SupplierOverridePage() {
   const [saved, setSaved] = useState(false);
   return (
     <div>
-      <PageHeader title="공급사 수동 변경" accent="SCR-PUR-011" nodeRef="IA-PUR-SUPPLIER-OVERRIDE" status="PROTOTYPE"
+      <PageHeader title="공급사 수동 변경" nodeRef="IA-PUR-SUPPLIER-OVERRIDE" status="PROTOTYPE"
         description="추천 공급사 외 수동 변경 — 근거 기록 필수 (FNC-PUR-023)" />
       <FieldHeader title="자동 추천 결과" moduleRef="PR-2026-0042 / M-COIL-A" />
       <div className="bg-surface-container p-4 mb-6 grid grid-cols-2 gap-3 text-sm">

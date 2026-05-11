@@ -34,7 +34,7 @@ export default function InventoryYardPage() {
 
   return (
     <div className="p-4 bg-surface min-h-screen">
-      <PageHeader title="야적장 현황" accent="SCR-OPS-071" nodeRef="FNC-OPS-082" description="야적장 점유율 통합 표시 · 5분 갱신" />
+      <PageHeader title="야적장 현황" nodeRef="FNC-OPS-082" description="야적장 점유율 통합 표시 · 5분 갱신" />
 
       <div className="grid grid-cols-3 gap-3 mb-5">
         {KPI.map(k => (

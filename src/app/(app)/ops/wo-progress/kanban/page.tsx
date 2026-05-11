@@ -35,7 +35,7 @@ const LANES = [
 export default function WOKanbanPage() {
   return (
     <div className="p-4 bg-surface min-h-screen">
-      <PageHeader title="WO 칸반 보드" accent="SCR-OPS-051" nodeRef="FNC-OPS-061,062" description="부재 단위 칸반 · attempt_no 배지 · 60초+이벤트 갱신" />
+      <PageHeader title="WO 칸반 보드" nodeRef="FNC-OPS-061,062" description="부재 단위 칸반 · attempt_no 배지 · 60초+이벤트 갱신" />
 
       <div className="grid grid-cols-4 gap-4 mt-4">
         {LANES.map(lane => (

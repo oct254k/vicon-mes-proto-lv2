@@ -22,7 +22,7 @@ export default function NotifyHistoryPage() {
   const rows = MOCK.filter(r=>(tf==="ALL"||r.type===tf)&&(cf==="ALL"||r.ch===cf));
   return (
     <div>
-      <PageHeader title="발송 이력" accent="SCR-SHP-072" nodeRef="IA-SHP-NOTIFY-HISTORY" status="PROTOTYPE"
+      <PageHeader title="발송 이력" nodeRef="IA-SHP-NOTIFY-HISTORY" status="PROTOTYPE"
         description="5종 알림 × 5채널 발송 이력 드릴다운 (FNC-SHP-084/080~083)" />
       <div className="flex gap-2 mb-2 flex-wrap">
         {NOTIFY_TYPES.map(t=>(

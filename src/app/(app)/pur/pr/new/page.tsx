@@ -7,7 +7,7 @@ export default function PRNewPage() {
   const [saved, setSaved] = useState(false);
   return (
     <div>
-      <PageHeader title="PR 등록" accent="SCR-PUR-003" nodeRef="IA-PUR-PR-NEW" status="PROTOTYPE"
+      <PageHeader title="PR 등록" nodeRef="IA-PUR-PR-NEW" status="PROTOTYPE"
         description="수동 구매요청 신규 등록 — 자동 PO 발행 절대 금지 (FR-PUR-003 MUST)" />
       <FieldHeader title="기본 정보" moduleRef="FNC-PUR-011/012" />
       <div className="bg-surface-container-low p-6 grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">

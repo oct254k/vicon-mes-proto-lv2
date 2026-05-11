@@ -13,7 +13,7 @@ const ITEMS = [
 export default function PacklistPage() {
   return (
     <div>
-      <PageHeader title="패킹리스트 PDF" accent="SCR-SHP-030" nodeRef="IA-SHP-DOC-PACKLIST" status="PROTOTYPE"
+      <PageHeader title="패킹리스트 PDF" nodeRef="IA-SHP-DOC-PACKLIST" status="PROTOTYPE"
         description="패킹리스트 PDF 발행·3부 출력 미리보기 (FNC-SHP-031/032/033)" />
       <div className="grid grid-cols-3 gap-4 mb-4">
         {[{l:"출하 ID",v:"SHP-2026-0025"},{l:"고객",v:"현대건설"},{l:"PKG ID",v:"PKG-0025-001"},{l:"부재 수",v:"24건"},{l:"총중량",v:"18.5 t"},{l:"목적지",v:"부산항"}].map(f=>(

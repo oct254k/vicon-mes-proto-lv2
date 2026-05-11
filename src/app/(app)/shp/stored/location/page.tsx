@@ -14,7 +14,7 @@ const SM: Record<string,"running"|"idle"|"warning"> = { READY:"running", STORED:
 export default function StoredLocationPage() {
   return (
     <div>
-      <PageHeader title="야적 위치 관리" accent="SCR-SHP-020" nodeRef="IA-SHP-STORED-LOCATION" status="PROTOTYPE"
+      <PageHeader title="야적 위치 관리" nodeRef="IA-SHP-STORED-LOCATION" status="PROTOTYPE"
         description="PDA 야적 위치 등록·변경 (FNC-SHP-020/023) — PACKAGER/SHP-STAFF" />
       <FieldHeader title="야적 위치 현황" moduleRef={`${MOCK.length}건`} />
       <div className="bg-surface-container-lowest overflow-x-auto mb-4">

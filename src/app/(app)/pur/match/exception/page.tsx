@@ -17,7 +17,7 @@ export default function MatchExceptionPage() {
   const rows = MOCK.filter(r => rf === "ALL" || r.reason === rf);
   return (
     <div>
-      <PageHeader title="매칭 예외 목록" accent="SCR-PUR-062" nodeRef="IA-PUR-MATCH-EXCEPTION" status="PROTOTYPE"
+      <PageHeader title="매칭 예외 목록" nodeRef="IA-PUR-MATCH-EXCEPTION" status="PROTOTYPE"
         description="3-Way Matching 예외 5사유 워크리스트 — 구매팀·L3 결재 (FNC-PUR-083/084/094)" />
       <div className="flex gap-2 mb-4 flex-wrap">
         {REASONS.map(r=>(

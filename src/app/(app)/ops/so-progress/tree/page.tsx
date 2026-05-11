@@ -22,7 +22,7 @@ export default function SOProgressTreePage() {
 
   return (
     <div className="p-4 bg-surface min-h-screen">
-      <PageHeader title="수주→부재 트리" accent="SCR-OPS-040" nodeRef="FNC-OPS-050~053" description="수주·현장·동·부재 단계별 공정 진척 · 5분 갱신" />
+      <PageHeader title="수주→부재 트리" nodeRef="FNC-OPS-050~053" description="수주·현장·동·부재 단계별 공정 진척 · 5분 갱신" />
 
       <div className="flex items-center gap-3 mb-4">
         <input value={filter} onChange={e => setFilter(e.target.value)}

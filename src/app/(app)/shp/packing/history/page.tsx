@@ -17,7 +17,7 @@ export default function PackingHistoryPage() {
   const rows = MOCK.filter(r => !q || r.id.includes(q) || r.wo.includes(q));
   return (
     <div>
-      <PageHeader title="패킹 이력" accent="SCR-SHP-012" nodeRef="IA-SHP-PACKING-HISTORY" status="PROTOTYPE"
+      <PageHeader title="패킹 이력" nodeRef="IA-SHP-PACKING-HISTORY" status="PROTOTYPE"
         description="패킹 진행 보드·이력 (PC 웹) — FNC-SHP-014/010" />
       <div className="bg-surface-container border-l-4 border-primary-accent p-4 mb-4 flex gap-4 items-end">
         <div className="flex flex-col gap-1">

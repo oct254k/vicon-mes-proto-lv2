@@ -14,7 +14,7 @@ export default function ClaimAgingPage() {
   const maxDays = Math.max(...MOCK.map(r=>r.overdueDays));
   return (
     <div>
-      <PageHeader title="AGING 목록" accent="SCR-PUR-072" nodeRef="IA-PUR-CLAIM-AGING" status="PROTOTYPE"
+      <PageHeader title="AGING 목록" nodeRef="IA-PUR-CLAIM-AGING" status="PROTOTYPE"
         description="미입고·과입고 AGING 워크리스트 (FNC-PUR-090/091/092) · SITUATION_BOARD 겸용" />
       <div className="bg-[#f59e0b]/10 border border-[#f59e0b]/40 px-4 py-3 mb-4 flex items-center gap-3">
         <span className="text-[#f59e0b] font-black text-lg">⚠</span>

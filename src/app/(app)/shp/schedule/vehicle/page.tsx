@@ -14,7 +14,7 @@ const SM: Record<string,"running"|"idle"|"warning"> = { DEPARTED:"running", SCHE
 export default function ScheduleVehiclePage() {
   return (
     <div>
-      <PageHeader title="차량 배차" accent="SCR-SHP-002" nodeRef="IA-SHP-SCHEDULE-VEHICLE" status="PROTOTYPE"
+      <PageHeader title="차량 배차" nodeRef="IA-SHP-SCHEDULE-VEHICLE" status="PROTOTYPE"
         description="출하 차량 배차 그리드 — 분할 적재 다이얼로그 (FNC-SHP-041/042/043/045)" />
       <FieldHeader title="배차 현황" moduleRef={`${MOCK.length}건`} />
       <div className="bg-surface-container-lowest overflow-x-auto">

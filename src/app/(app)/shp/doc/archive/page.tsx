@@ -18,7 +18,7 @@ export default function DocArchivePage() {
   const rows = MOCK.filter(r=>tf==="ALL"||r.type===tf);
   return (
     <div>
-      <PageHeader title="문서 보관" accent="SCR-SHP-032" nodeRef="IA-SHP-DOC-ARCHIVE" status="PROTOTYPE"
+      <PageHeader title="문서 보관" nodeRef="IA-SHP-DOC-ARCHIVE" status="PROTOTYPE"
         description="출하 문서 전자 사본 아카이브 조회 (FNC-SHP-034) — SHP-STAFF/ADMIN" />
       <div className="flex gap-2 mb-4">
         {TYPES.map(t=>(

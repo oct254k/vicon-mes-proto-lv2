@@ -8,7 +8,7 @@ export default function GateFallbackPage() {
   const [saved, setSaved] = useState(false);
   return (
     <div>
-      <PageHeader title="수동 게이트 인식" accent="SCR-SHP-050" nodeRef="IA-SHP-GATE-FALLBACK" status="PROTOTYPE"
+      <PageHeader title="수동 게이트 인식" nodeRef="IA-SHP-GATE-FALLBACK" status="PROTOTYPE"
         description="RFID 미인식 시 게이트 직원 수동 인식 폼 (FNC-SHP-060/061/062/063) — KIOSK/PC" />
       <div className="bg-[#f59e0b]/10 border border-[#f59e0b]/40 px-4 py-3 mb-4 text-sm font-label text-[#f59e0b]">
         ⚠ RFID 인식 실패 — 수동 입력 필요

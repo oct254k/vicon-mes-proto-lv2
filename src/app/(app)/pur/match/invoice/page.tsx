@@ -8,7 +8,7 @@ export default function InvoicePage() {
   const [matched, setMatched] = useState(false);
   return (
     <div>
-      <PageHeader title="Invoice 등록" accent="SCR-PUR-061" nodeRef="IA-PUR-MATCH-INVOICE" status="PROTOTYPE"
+      <PageHeader title="Invoice 등록" nodeRef="IA-PUR-MATCH-INVOICE" status="PROTOTYPE"
         description="공급사 Invoice 수신·등록 후 3-Way Matching 트리거 (FNC-PUR-080/087/088)" />
       <FieldHeader title="Invoice 기본 정보" moduleRef="FNC-PUR-080" />
       <div className="bg-surface-container-low p-6 grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">

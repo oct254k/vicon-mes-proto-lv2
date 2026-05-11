@@ -25,7 +25,7 @@ const kpis = [{l:"전체 PO",v:10},{l:"진행 중",v:4},{l:"입고 완료",v:3},
 export default function POBoardPage() {
   return (
     <div>
-      <PageHeader title="PO 진척 보드" accent="SCR-PUR-020" nodeRef="IA-PUR-PO-BOARD" status="PROTOTYPE"
+      <PageHeader title="PO 진척 보드" nodeRef="IA-PUR-PO-BOARD" status="PROTOTYPE"
         description="8상태 칸반 — DRAFT→SENT→ACKNOWLEDGED→IN_TRANSIT→PARTIALLY_RECEIVED→RECEIVED→CLOSED (FNC-PUR-033)" />
       <div className="grid grid-cols-4 gap-3 mb-6">
         {kpis.map(k=>(

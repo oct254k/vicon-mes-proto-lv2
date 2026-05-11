@@ -51,7 +51,7 @@ export default function WOPackingPage() {
 
   return (
     <div>
-      <PageHeader title="패킹 라이프사이클 보드" accent="SCR-WO-021" nodeRef="IA-WO-PACKING-LIFECYCLE" status="PROTOTYPE" />
+      <PageHeader title="패킹 라이프사이클 보드" nodeRef="IA-WO-PACKING-LIFECYCLE" status="PROTOTYPE" />
       <p className="text-xs opacity-40 font-label mb-4">PRC-WO-003 §7 — 8단계 상태머신 (CREATED → SHIPPED)</p>
 
       {/* 8단계 탭 */}

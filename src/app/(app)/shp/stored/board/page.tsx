@@ -17,7 +17,7 @@ export default function StoredBoardPage() {
   const rows = MOCK.filter(r=>filter==="ALL"||r.state===filter);
   return (
     <div>
-      <PageHeader title="STORED 보드" accent="SCR-SHP-022" nodeRef="IA-SHP-STORED-BOARD" status="PROTOTYPE"
+      <PageHeader title="STORED 보드" nodeRef="IA-SHP-STORED-BOARD" status="PROTOTYPE"
         description="출하 대기 보드 — READY/HOLD 전이 (FNC-SHP-021/024) · SITUATION_BOARD 겸용" />
       <div className="flex gap-2 mb-4">
         {["ALL","STORED","READY","HOLD"].map(s=>(

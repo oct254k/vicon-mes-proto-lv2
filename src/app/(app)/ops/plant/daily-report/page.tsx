@@ -17,7 +17,7 @@ export default function PlantDailyReportPage() {
 
   return (
     <div className="p-4 bg-surface min-h-screen">
-      <PageHeader title="일일 보고서 발송" accent="SCR-OPS-024" nodeRef="FNC-OPS-025" description="일일 보고서 생성·발송 모니터 · 이벤트 갱신" />
+      <PageHeader title="일일 보고서 발송" nodeRef="FNC-OPS-025" description="일일 보고서 생성·발송 모니터 · 이벤트 갱신" />
 
       {/* 보고서 생성 컨트롤 */}
       <div className="bg-surface-container p-5 mb-5 border-l-4 border-primary-accent">

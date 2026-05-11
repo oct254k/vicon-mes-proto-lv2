@@ -16,7 +16,7 @@ export default function LabelPage() {
   const [reprinting, setReprinting] = useState<string|null>(null);
   return (
     <div>
-      <PageHeader title="라벨 발행" accent="SCR-SHP-031" nodeRef="IA-SHP-DOC-LABEL" status="PROTOTYPE"
+      <PageHeader title="라벨 발행" nodeRef="IA-SHP-DOC-LABEL" status="PROTOTYPE"
         description="묶음 라벨 발행·재인쇄 큐 (FNC-SHP-030) — 라벨 훼손 예외 처리 포함" />
       <FieldHeader title="라벨 큐" moduleRef={`${QUEUE.length}건`} />
       {reprinting && (

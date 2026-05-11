@@ -36,7 +36,7 @@ export default function WOLabelsPage() {
 
   return (
     <div>
-      <PageHeader title="라벨 발행·재인쇄" accent="SCR-WO-031/032" nodeRef="IA-WO-LABELS" status="PROTOTYPE" />
+      <PageHeader title="라벨 발행·재인쇄" nodeRef="IA-WO-LABELS" status="PROTOTYPE" />
 
       {/* 필터 영역 */}
       <div className="flex flex-wrap gap-3 mb-4 items-end">

@@ -22,7 +22,7 @@ const kpis = [{l:"전체",v:6},{l:"PASS",v:2},{l:"예외",v:3},{l:"대기",v:1}]
 export default function MatchBoardPage() {
   return (
     <div>
-      <PageHeader title="매칭 현황 보드" accent="SCR-PUR-060" nodeRef="IA-PUR-MATCH-BOARD" status="PROTOTYPE"
+      <PageHeader title="매칭 현황 보드" nodeRef="IA-PUR-MATCH-BOARD" status="PROTOTYPE"
         description="PO·ASN·Invoice 3-Way Matching 결과 보드 — PASS/EXCEPTION/PENDING (FNC-PUR-081/082/085/086)" />
       <div className="grid grid-cols-4 gap-3 mb-6">
         {kpis.map(k=>(

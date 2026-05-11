@@ -20,7 +20,7 @@ export default function ReceiveScanPage() {
 
   return (
     <div className="max-w-sm mx-auto">
-      <PageHeader title="PDA QR 스캔 검수" accent="SCR-SHP-061" nodeRef="IA-SHP-RECEIVE-SCAN" status="PROTOTYPE"
+      <PageHeader title="PDA QR 스캔 검수" nodeRef="IA-SHP-RECEIVE-SCAN" status="PROTOTYPE"
         description="현장 검수 QR/Camera 스캔 (EXTERNAL 토큰 · FNC-SHP-071/072/073/075/076)" />
       <div className="bg-surface-container border-l-4 border-primary-accent p-4 mb-4">
         <p className="text-xs font-label uppercase tracking-widest opacity-50 mb-1">{SHIPMENT.id}</p>

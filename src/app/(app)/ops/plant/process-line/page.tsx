@@ -29,7 +29,7 @@ const BARS = DATA.map(d => ({ line: d.line, rate: parseInt(d.rate), status: d.st
 export default function PlantProcessLinePage() {
   return (
     <div className="p-4 bg-surface min-h-screen">
-      <PageHeader title="공정라인별 현황" accent="SCR-OPS-021" nodeRef="FNC-OPS-026,028" description="공정라인별 일일 생산량 · 60초 갱신" />
+      <PageHeader title="공정라인별 현황" nodeRef="FNC-OPS-026,028" description="공정라인별 일일 생산량 · 60초 갱신" />
 
       {/* 공정라인 바 차트 */}
       <div className="bg-surface-container p-5 mb-5">

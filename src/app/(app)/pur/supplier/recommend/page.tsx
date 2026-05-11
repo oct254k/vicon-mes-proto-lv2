@@ -14,7 +14,7 @@ export default function SupplierRecommendPage() {
   const [selected, setSelected] = useState<number|null>(null);
   return (
     <div>
-      <PageHeader title="공급사 자동 추천" accent="SCR-PUR-010" nodeRef="IA-PUR-SUPPLIER-RECOMMEND" status="PROTOTYPE"
+      <PageHeader title="공급사 자동 추천" nodeRef="IA-PUR-SUPPLIER-RECOMMEND" status="PROTOTYPE"
         description="1·2순위 자동 추천 — 점수·가격·납기·품질율 종합 (FNC-PUR-020~025)" />
       <FieldHeader title="PR 연계 자재" moduleRef="PR-2026-0042 / M-COIL-A / 500 m" />
       <div className="bg-surface-container p-4 mb-6 flex gap-6 text-sm">

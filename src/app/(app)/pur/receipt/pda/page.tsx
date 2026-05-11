@@ -22,7 +22,7 @@ export default function ReceiptPDAPage() {
 
   return (
     <div className="max-w-sm mx-auto">
-      <PageHeader title="PDA 입고 스캔" accent="SCR-PUR-050" nodeRef="IA-PUR-RECEIPT-PDA" status="PROTOTYPE"
+      <PageHeader title="PDA 입고 스캔" nodeRef="IA-PUR-RECEIPT-PDA" status="PROTOTYPE"
         description="창고팀 PDA 입고·Lot 채번·검수 (A5 시작점 FR-PUR-005)" />
       <div className="bg-surface-container border-l-4 border-primary-accent p-4 mb-4 text-center">
         <p className="text-xs font-label uppercase tracking-widest opacity-50 mb-1">입고 대기 ASN</p>

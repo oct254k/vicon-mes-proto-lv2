@@ -20,7 +20,7 @@ const kpis = [{l:"전체 클레임",v:7},{l:"OPEN",v:2},{l:"진행 중",v:3},{l:
 export default function ClaimBoardPage() {
   return (
     <div>
-      <PageHeader title="클레임 보드" accent="SCR-PUR-070" nodeRef="IA-PUR-CLAIM-BOARD" status="PROTOTYPE"
+      <PageHeader title="클레임 보드" nodeRef="IA-PUR-CLAIM-BOARD" status="PROTOTYPE"
         description="클레임 5상태 칸반 — OPEN→SUPPLIER_NOTIFIED→REPLENISHMENT_PO→REPLENISHED→CLOSED (FNC-PUR-094~099)" />
       <div className="grid grid-cols-4 gap-3 mb-6">
         {kpis.map(k=>(

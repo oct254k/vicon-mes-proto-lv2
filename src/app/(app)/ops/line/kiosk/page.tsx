@@ -31,7 +31,7 @@ export default function OPSLineKioskPage() {
         <span className="ml-auto text-xs font-label text-on-surface-variant">사용자 인증 비활성 · Read-only</span>
       </div>
 
-      <PageHeader title="키오스크 단말 모드" accent="SCR-OPS-011" nodeRef="FNC-OPS-015" description="표시·자동 갱신·푸시 수신만 — 모든 액션 비활성" />
+      <PageHeader title="키오스크 단말 모드" nodeRef="FNC-OPS-015" description="표시·자동 갱신·푸시 수신만 — 모든 액션 비활성" />
 
       {/* 가동 상태 대형 카드 */}
       <div className={`border-2 p-10 text-center mb-6 ${STATUS_STYLE[status]}`}>

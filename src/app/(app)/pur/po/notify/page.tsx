@@ -20,7 +20,7 @@ export default function PONotifyPage() {
   const rows = MOCK.filter(r => ch === "ALL" || r.ch === ch);
   return (
     <div>
-      <PageHeader title="4채널 통보 모니터" accent="SCR-PUR-024" nodeRef="IA-PUR-PO-NOTIFY" status="PROTOTYPE"
+      <PageHeader title="4채널 통보 모니터" nodeRef="IA-PUR-PO-NOTIFY" status="PROTOTYPE"
         description="PO 발송 EMAIL/EDI/PORTAL/FAX 채널별 상태·재시도 이력 (FNC-PUR-034/035/036)" />
       <div className="flex gap-2 mb-4 flex-wrap">
         {CHANNELS.map(c=>(

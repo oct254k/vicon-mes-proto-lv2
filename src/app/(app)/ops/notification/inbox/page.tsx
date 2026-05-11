@@ -36,7 +36,7 @@ export default function NotificationInboxPage() {
 
   return (
     <div className="p-4 bg-surface min-h-screen">
-      <PageHeader title="알림 인박스" accent="SCR-OPS-080" nodeRef="FNC-OPS-090,091,093,097" description="5채널 통합 인박스 · 4액션 · 30초 갱신" />
+      <PageHeader title="알림 인박스" nodeRef="FNC-OPS-090,091,093,097" description="5채널 통합 인박스 · 4액션 · 30초 갱신" />
 
       <div className="flex items-center gap-2 mb-4 flex-wrap">
         {CHANNELS.map(c => (

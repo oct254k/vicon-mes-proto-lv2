@@ -8,7 +8,7 @@ export default function ACKCounterPage() {
   const [result, setResult] = useState<""|"ACCEPTED"|"REJECTED">("");
   return (
     <div>
-      <PageHeader title="Counter Proposal 협상" accent="SCR-PUR-031" nodeRef="IA-PUR-ACK-COUNTER" status="PROTOTYPE"
+      <PageHeader title="Counter Proposal 협상" nodeRef="IA-PUR-ACK-COUNTER" status="PROTOTYPE"
         description="공급사 역제안 (COUNTER_PROPOSAL) 협상 폼 — 수락/거부 결정 (FNC-PUR-044)" />
       <FieldHeader title="역제안 내용" moduleRef="PO-2026-0015 | 포스코" />
       <div className="bg-surface-container p-5 mb-6 grid grid-cols-2 gap-4 text-sm">
