@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { GlossaryModal } from "@/components/ui/GlossaryModal";
+import { SitemapModal } from "@/components/ui/SitemapModal";
 
 interface TopNavProps {
   onMenuClick?: () => void;
@@ -11,6 +12,7 @@ interface TopNavProps {
 
 export function TopNav({ onMenuClick }: TopNavProps) {
   const [glossaryOpen, setGlossaryOpen] = useState(false);
+  const [sitemapOpen, setSitemapOpen] = useState(false);
 
   return (
     <nav className="fixed top-0 flex justify-between items-center w-full px-4 lg:px-10 h-16 z-50 bg-surface border-b border-surface-container-highest/20">
@@ -47,6 +49,13 @@ export function TopNav({ onMenuClick }: TopNavProps) {
       </div>
       <div className="flex items-center gap-6">
         <button
+          onClick={() => setSitemapOpen(true)}
+          title="사이트맵"
+          className="material-symbols-outlined text-on-surface cursor-pointer hover:text-primary-accent"
+        >
+          account_tree
+        </button>
+        <button
           onClick={() => setGlossaryOpen(true)}
           title="MES 용어사전"
           className="material-symbols-outlined text-on-surface cursor-pointer hover:text-primary-accent"
@@ -64,6 +73,7 @@ export function TopNav({ onMenuClick }: TopNavProps) {
         </div>
       </div>
       <GlossaryModal isOpen={glossaryOpen} onClose={() => setGlossaryOpen(false)} />
+      <SitemapModal isOpen={sitemapOpen} onClose={() => setSitemapOpen(false)} />
     </nav>
   );
 }
