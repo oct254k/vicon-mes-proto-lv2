@@ -30,7 +30,7 @@ const SUMMARY = [
 export default function AuditLeakPage() {
   return (
     <div>
-      <PageHeader title="권한 누수 정합성 보드" accent="USR-081" nodeRef="SCR-USR-081" status="PROTOTYPE" description="일 1회 배치 기반 권한-세션 정합성 검사 결과. AUDITOR·ADMIN read-only." />
+      <PageHeader title="권한 누수 정합성 보드" nodeRef="SCR-USR-081" status="PROTOTYPE" description="일 1회 배치 기반 권한-세션 정합성 검사 결과. AUDITOR·ADMIN read-only." />
 
       <div className="bg-surface-container-low border-l-4 border-[#f59e0b] p-4 mb-4">
         <FieldHeader title="A. 배치 실행 요약" moduleRef="FNC-USR-101/102" />

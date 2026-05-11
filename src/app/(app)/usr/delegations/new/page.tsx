@@ -9,7 +9,7 @@ const LABEL = "text-xs font-label uppercase tracking-widest opacity-50 mb-1 bloc
 export default function DelegationNewPage() {
   return (
     <div>
-      <PageHeader title="위임 등록" accent="USR-040" nodeRef="SCR-USR-040" status="PROTOTYPE" description="업무 임시 위임 등록. 최대 30일, 자기 위임·상향 위임 불가." />
+      <PageHeader title="위임 등록" nodeRef="SCR-USR-040" status="PROTOTYPE" description="업무 임시 위임 등록. 최대 30일, 자기 위임·상향 위임 불가." />
 
       <div className="bg-surface-container-low border-l-4 border-primary-accent p-6 mb-4">
         <FieldHeader title="A. 위임 기본 정보" moduleRef="FNC-USR-060" />

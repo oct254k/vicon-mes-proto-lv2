@@ -24,7 +24,7 @@ const COLS = [
 export default function DepartmentCodePage() {
   return (
     <div>
-      <PageHeader title="부서 코드 마스터" accent="USR-011" nodeRef="SCR-USR-011" status="PROTOTYPE" description="PRD/QC/WHS/MNT/SHP/SLS/SYS 7종 부서 코드 및 권한 매트릭스 연계" />
+      <PageHeader title="부서 코드 마스터" nodeRef="SCR-USR-011" status="PROTOTYPE" description="PRD/QC/WHS/MNT/SHP/SLS/SYS 7종 부서 코드 및 권한 매트릭스 연계" />
 
       <div className="bg-surface-container-low border-l-4 border-primary-accent p-4 mb-4">
         <FieldHeader title="A. 부서 코드 설명" moduleRef="FNC-USR-027/091" />

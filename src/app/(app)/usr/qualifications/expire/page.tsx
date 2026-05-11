@@ -13,7 +13,7 @@ const EXPIRE_LIST = [
 export default function QualificationExpirePage() {
   return (
     <div>
-      <PageHeader title="자격 만료 임박 보드" accent="USR-052" nodeRef="SCR-USR-052" status="PROTOTYPE" description="만료 30일 이내 자격 경고 목록. 갱신 안내. 만료 후 해당 공정 실행 즉시 차단." />
+      <PageHeader title="자격 만료 임박 보드" nodeRef="SCR-USR-052" status="PROTOTYPE" description="만료 30일 이내 자격 경고 목록. 갱신 안내. 만료 후 해당 공정 실행 즉시 차단." />
 
       <div className="bg-surface-container-low border-l-4 border-[#f59e0b] p-4 mb-4 flex items-center gap-4">
         <StatusBadge type="warning" label="EXPIRE ALERT" />

@@ -13,7 +13,7 @@ const DIFF = [
 export default function MatrixApprovalPage() {
   return (
     <div>
-      <PageHeader title="매트릭스 변경 결재 (L4)" accent="USR-073" nodeRef="SCR-USR-073" status="PROTOTYPE" description="권한 매트릭스 변경 초안 최종 결재. L4 ADMIN 전용. 회귀 테스트 0건 gating." />
+      <PageHeader title="매트릭스 변경 결재 (L4)" nodeRef="SCR-USR-073" status="PROTOTYPE" description="권한 매트릭스 변경 초안 최종 결재. L4 ADMIN 전용. 회귀 테스트 0건 gating." />
 
       <div className="bg-surface-container-low border-l-4 border-primary-accent p-4 mb-4">
         <FieldHeader title="A. 결재 요청 개요" moduleRef="FNC-USR-093/092/103" />

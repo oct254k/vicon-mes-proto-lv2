@@ -15,7 +15,7 @@ const RESULT_BADGE: Record<string, "running" | "error"> = { SUCCESS: "running", 
 export default function AuditLogsPage() {
   return (
     <div>
-      <PageHeader title="감사 로그 검색" accent="USR-080" nodeRef="SCR-USR-080" status="PROTOTYPE" description="로그인·권한 변경·PIN 오류 등 전체 보안 이벤트 감사 로그. AUDITOR·ADMIN 전용." />
+      <PageHeader title="감사 로그 검색" nodeRef="SCR-USR-080" status="PROTOTYPE" description="로그인·권한 변경·PIN 오류 등 전체 보안 이벤트 감사 로그. AUDITOR·ADMIN 전용." />
 
       <div className="bg-surface-container-low border-l-4 border-primary-accent p-4 mb-4">
         <FieldHeader title="A. 필터" moduleRef="FNC-USR-100/104" />

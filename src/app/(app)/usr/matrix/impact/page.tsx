@@ -36,7 +36,7 @@ const MENU_COLS = [
 export default function MatrixImpactPage() {
   return (
     <div>
-      <PageHeader title="매트릭스 변경 영향 평가" accent="USR-072" nodeRef="SCR-USR-072" status="PROTOTYPE" description="권한 매트릭스 변경 초안의 영향 사용자·메뉴·트랜잭션 자동 분석 결과." />
+      <PageHeader title="매트릭스 변경 영향 평가" nodeRef="SCR-USR-072" status="PROTOTYPE" description="권한 매트릭스 변경 초안의 영향 사용자·메뉴·트랜잭션 자동 분석 결과." />
 
       <div className="bg-surface-container-low border-l-4 border-[#f59e0b] p-4 mb-4">
         <FieldHeader title="A. 영향 요약" moduleRef="FNC-USR-093/103" />

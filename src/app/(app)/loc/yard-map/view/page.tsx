@@ -350,7 +350,6 @@ export default function YardMapViewPage() {
     <div>
       <PageHeader
         title="야적장 도면"
-        accent="LOC-010"
         nodeRef="SCR-LOC-010"
         status="PROTOTYPE"
         description="Canvas LOD 렌더러 — zoom 레벨에 따라 구역→Zone→Lot 자동 전환. 드래그 Pan / 휠 Zoom. Lot 클릭 상세."

@@ -17,7 +17,7 @@ const USERS = [
 export default function QualificationNewPage() {
   return (
     <div>
-      <PageHeader title="자격 부여" accent="USR-051" nodeRef="SCR-USR-051" status="PROTOTYPE" description="operation_code 기준 사용자×자격 매트릭스 부여. LEADER(PRD) 또는 MANAGER 전용." />
+      <PageHeader title="자격 부여" nodeRef="SCR-USR-051" status="PROTOTYPE" description="operation_code 기준 사용자×자격 매트릭스 부여. LEADER(PRD) 또는 MANAGER 전용." />
 
       <div className="bg-surface-container-low border-l-4 border-primary-accent p-6 mb-4">
         <FieldHeader title="A. 자격 대상 사용자 선택" moduleRef="FNC-USR-070/073" />

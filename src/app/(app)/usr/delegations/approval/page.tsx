@@ -12,7 +12,7 @@ const BADGE: Record<string, "warning" | "running" | "idle"> = { PENDING: "warnin
 export default function DelegationApprovalPage() {
   return (
     <div>
-      <PageHeader title="위임 결재 인박스" accent="USR-041" nodeRef="SCR-USR-041" status="PROTOTYPE" description="대기 중인 위임 신청 결재. 직속 상위 또는 L3 MANAGER 이상 처리." />
+      <PageHeader title="위임 결재 인박스" nodeRef="SCR-USR-041" status="PROTOTYPE" description="대기 중인 위임 신청 결재. 직속 상위 또는 L3 MANAGER 이상 처리." />
 
       <div className="bg-surface-container-low border-l-4 border-primary-accent p-4 mb-4">
         <FieldHeader title="A. 결재 원칙" moduleRef="FNC-USR-061" />

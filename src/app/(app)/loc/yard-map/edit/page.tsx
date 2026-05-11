@@ -164,7 +164,6 @@ export default function YardMapEditPage() {
     <div>
       <PageHeader
         title="도면 편집"
-        accent="LOC-011"
         nodeRef="SCR-LOC-011"
         status="PROTOTYPE"
         description="탭1: 벡터 도면 데이터(BOUNDARY·BUILDINGS·ROADS) 등록 + Canvas 미리보기. 탭2: Zone·Lot 격자 배치."

@@ -14,7 +14,7 @@ const TEST_CASES = [
 export default function AuditRegressionPage() {
   return (
     <div>
-      <PageHeader title="회귀 테스트 결과" accent="USR-082" nodeRef="SCR-USR-082" status="PROTOTYPE" description="매트릭스 변경 전후 권한 시나리오 회귀 테스트 결과. 실패 건 존재 시 L4 결재 gating." />
+      <PageHeader title="회귀 테스트 결과" nodeRef="SCR-USR-082" status="PROTOTYPE" description="매트릭스 변경 전후 권한 시나리오 회귀 테스트 결과. 실패 건 존재 시 L4 결재 gating." />
 
       <div className="bg-surface-container-low border-l-4 border-primary-accent p-4 mb-4">
         <FieldHeader title="A. 실행 요약" moduleRef="FNC-USR-103" />

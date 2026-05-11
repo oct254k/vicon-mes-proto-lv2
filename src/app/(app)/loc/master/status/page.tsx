@@ -32,7 +32,6 @@ export default function LocMasterStatusPage() {
     <div>
       <PageHeader
         title="위치 운영 상태"
-        accent="LOC-005"
         nodeRef="SCR-LOC-005"
         status="PROTOTYPE"
         description="위치 마스터 운영 상태(ACTIVE·FULL·MAINTENANCE·RETIRED) 실시간 모니터. 상태 변경·폐기 결재 진입."

@@ -131,7 +131,6 @@ export default function LocMasterNewPage() {
     <div>
       <PageHeader
         title="위치 등록"
-        accent="LOC-002~004"
         nodeRef="SCR-LOC-002"
         status="PROTOTYPE"
         description="Plant·Yard 신규 등록 / Zone 등록(비정형 폴리곤 pts 지원 + Canvas 미리보기) / Lot 일괄 등록."

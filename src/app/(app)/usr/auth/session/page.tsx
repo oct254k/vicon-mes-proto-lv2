@@ -13,7 +13,7 @@ const BADGE: Record<string, "running" | "idle"> = { ACTIVE: "running", EXPIRED: 
 export default function SessionPage() {
   return (
     <div>
-      <PageHeader title="내 활성 세션" accent="USR-023" nodeRef="SCR-USR-023" status="PROTOTYPE" description="로그인된 단말·세션 현황 조회 및 강제 로그아웃. 세션 최대 8시간." />
+      <PageHeader title="내 활성 세션" nodeRef="SCR-USR-023" status="PROTOTYPE" description="로그인된 단말·세션 현황 조회 및 강제 로그아웃. 세션 최대 8시간." />
 
       <div className="bg-surface-container-low border-l-4 border-primary-accent p-4 mb-4">
         <FieldHeader title="A. 현재 로그인 정보" moduleRef="FNC-USR-045/047" />

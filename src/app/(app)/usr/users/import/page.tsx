@@ -16,7 +16,7 @@ const BADGE: Record<string, "running" | "warning" | "error"> = { OK: "running", 
 export default function UsersImportPage() {
   return (
     <div>
-      <PageHeader title="CSV 일괄 Import" accent="USR-004" nodeRef="SCR-USR-004" status="PROTOTYPE" description="표준 CSV 양식으로 사용자 일괄 등록. 표준 컬럼: userId, name, email, plant, level, departments, empType, authMethods" />
+      <PageHeader title="CSV 일괄 Import" nodeRef="SCR-USR-004" status="PROTOTYPE" description="표준 CSV 양식으로 사용자 일괄 등록. 표준 컬럼: userId, name, email, plant, level, departments, empType, authMethods" />
 
       <div className="bg-surface-container-low border-l-4 border-primary-accent p-6 mb-4">
         <FieldHeader title="A. 파일 업로드" moduleRef="FNC-USR-006" />

@@ -9,7 +9,7 @@ const LABEL = "text-xs font-label uppercase tracking-widest opacity-50 mb-1 bloc
 export default function GrantRequestPage() {
   return (
     <div>
-      <PageHeader title="권한 부여 신청" accent="USR-030" nodeRef="SCR-USR-030" status="PROTOTYPE" description="부서원 권한 레벨 상향 또는 메뉴 권한 추가 신청. 셀프 신청 또는 L2+ 신청. 자기 한도 초과 불가." />
+      <PageHeader title="권한 부여 신청" nodeRef="SCR-USR-030" status="PROTOTYPE" description="부서원 권한 레벨 상향 또는 메뉴 권한 추가 신청. 셀프 신청 또는 L2+ 신청. 자기 한도 초과 불가." />
 
       <div className="bg-surface-container-low border-l-4 border-primary-accent p-6 mb-4">
         <FieldHeader title="A. 신청 대상" moduleRef="FNC-USR-026/050" />

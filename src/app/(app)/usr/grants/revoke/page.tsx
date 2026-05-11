@@ -11,7 +11,7 @@ const GRANTS = [
 export default function GrantRevokePage() {
   return (
     <div>
-      <PageHeader title="권한 회수" accent="USR-032" nodeRef="SCR-USR-032" status="PROTOTYPE" description="부여된 권한 즉시 회수. 5분 SLA 이내 세션 권한 갱신. L3 MANAGER 이상 전용." />
+      <PageHeader title="권한 회수" nodeRef="SCR-USR-032" status="PROTOTYPE" description="부여된 권한 즉시 회수. 5분 SLA 이내 세션 권한 갱신. L3 MANAGER 이상 전용." />
 
       <div className="bg-surface-container-low border-l-4 border-error p-4 mb-4 flex items-center gap-3">
         <span className="text-error font-bold text-sm font-label uppercase tracking-widest">주의</span>

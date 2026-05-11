@@ -13,7 +13,7 @@ const BADGE: Record<string, "warning" | "running" | "idle"> = { PENDING: "warnin
 export default function GrantApprovalPage() {
   return (
     <div>
-      <PageHeader title="권한 결재 인박스" accent="USR-031" nodeRef="SCR-USR-031" status="PROTOTYPE" description="대기 중인 권한 부여 신청 결재 목록. L3 MANAGER 이상 전용." />
+      <PageHeader title="권한 결재 인박스" nodeRef="SCR-USR-031" status="PROTOTYPE" description="대기 중인 권한 부여 신청 결재 목록. L3 MANAGER 이상 전용." />
 
       <div className="bg-surface-container-low border-l-4 border-primary-accent p-4 mb-4">
         <FieldHeader title="A. 필터" moduleRef="FNC-USR-051/054" />

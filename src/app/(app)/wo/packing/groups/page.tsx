@@ -180,7 +180,6 @@ export default function PackingGroupsPage() {
     <main className="p-8 bg-surface min-h-screen text-on-surface">
       <PageHeader
         title="패킹 그룹"
-        accent="WO-020"
         nodeRef="SCR-WO-020"
         description="패킹 그룹 템플릿 사전 정의 — 양산형 묶음 거부 검증. 행 클릭 시 상세·편집."
       />

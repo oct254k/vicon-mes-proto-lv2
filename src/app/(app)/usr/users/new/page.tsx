@@ -9,7 +9,7 @@ const LABEL = "text-xs font-label uppercase tracking-widest opacity-50 mb-1 bloc
 export default function UserNewPage() {
   return (
     <div>
-      <PageHeader title="사용자 신규 등록" accent="USR-002" nodeRef="SCR-USR-002" status="PROTOTYPE" description="사번·plant·권한 레벨·부서·인증수단·고용형태 등록" />
+      <PageHeader title="사용자 신규 등록" nodeRef="SCR-USR-002" status="PROTOTYPE" description="사번·plant·권한 레벨·부서·인증수단·고용형태 등록" />
 
       <div className="bg-surface-container-low border-l-4 border-primary-accent p-6 mb-4">
         <FieldHeader title="A. 기본 정보" moduleRef="FNC-USR-001/002" />

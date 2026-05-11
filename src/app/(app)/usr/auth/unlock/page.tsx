@@ -15,7 +15,7 @@ const LABEL = "text-xs font-label uppercase tracking-widest opacity-50 mb-1 bloc
 export default function UnlockPage() {
   return (
     <div>
-      <PageHeader title="PIN 잠금 수동 해제" accent="USR-024" nodeRef="SCR-USR-024" status="PROTOTYPE" description="PIN 5회 오류로 잠긴 사용자 수동 해제. L2+ 자기 부서원 한정." />
+      <PageHeader title="PIN 잠금 수동 해제" nodeRef="SCR-USR-024" status="PROTOTYPE" description="PIN 5회 오류로 잠긴 사용자 수동 해제. L2+ 자기 부서원 한정." />
 
       <div className="bg-surface-container-low border-l-4 border-[#f59e0b] p-4 mb-4 flex items-center gap-3">
         <span className="text-[#f59e0b] font-bold text-sm font-label uppercase tracking-widest">경고</span>

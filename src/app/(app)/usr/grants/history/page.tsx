@@ -24,7 +24,7 @@ const COLS = [
 export default function GrantHistoryPage() {
   return (
     <div>
-      <PageHeader title="권한 신청·결재 이력" accent="USR-033" nodeRef="SCR-USR-033" status="PROTOTYPE" description="본인 신청 및 결재 이력 전체 조회. 본인 또는 L3+ 열람 가능." />
+      <PageHeader title="권한 신청·결재 이력" nodeRef="SCR-USR-033" status="PROTOTYPE" description="본인 신청 및 결재 이력 전체 조회. 본인 또는 L3+ 열람 가능." />
 
       <div className="bg-surface-container-low border-l-4 border-primary-accent p-4 mb-4">
         <FieldHeader title="A. 필터" moduleRef="FNC-USR-056" />

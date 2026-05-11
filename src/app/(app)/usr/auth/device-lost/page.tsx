@@ -15,7 +15,7 @@ const QUEUE = [
 export default function DeviceLostPage() {
   return (
     <div>
-      <PageHeader title="단말 분실 신고" accent="USR-025" nodeRef="SCR-USR-025" status="PROTOTYPE" description="단말 분실 신고 후 5분 SLA 내 세션 무효화 및 단말 LOST 처리. 비동기 큐 진행 상황 표시." />
+      <PageHeader title="단말 분실 신고" nodeRef="SCR-USR-025" status="PROTOTYPE" description="단말 분실 신고 후 5분 SLA 내 세션 무효화 및 단말 LOST 처리. 비동기 큐 진행 상황 표시." />
 
       <div className="bg-surface-container-low border-l-4 border-error p-4 mb-4 flex items-center gap-3">
         <span className="text-error font-bold text-sm font-label uppercase tracking-widest">긴급</span>

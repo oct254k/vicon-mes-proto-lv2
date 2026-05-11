@@ -21,7 +21,7 @@ const CELL_CLR: Record<string, string> = { R: "text-[#3b82f6]", W: "text-[#f59e0
 export default function MatrixEditPage() {
   return (
     <div>
-      <PageHeader title="권한 매트릭스 편집" accent="USR-071" nodeRef="SCR-USR-071" status="PROTOTYPE" description="(Level × 부서) × 액션 매트릭스 셀 편집 및 diff 표시. ADMIN 전용. 변경 후 L4 결재 필요." />
+      <PageHeader title="권한 매트릭스 편집" nodeRef="SCR-USR-071" status="PROTOTYPE" description="(Level × 부서) × 액션 매트릭스 셀 편집 및 diff 표시. ADMIN 전용. 변경 후 L4 결재 필요." />
 
       <div className="bg-surface-container-low border-l-4 border-[#f59e0b] p-4 mb-4 flex items-center gap-3">
         <span className="text-[#f59e0b] font-bold text-sm font-label uppercase tracking-widest">주의</span>

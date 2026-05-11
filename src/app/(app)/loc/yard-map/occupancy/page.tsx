@@ -49,7 +49,6 @@ export default function YardMapOccupancyPage() {
     <div>
       <PageHeader
         title="점유율 통계"
-        accent="LOC-012"
         nodeRef="SCR-LOC-012"
         status="PROTOTYPE"
         description="야적장 점유율 대시보드. Yard별 통계 및 5일 추이. SITUATION_BOARD 대형 모니터 지원."

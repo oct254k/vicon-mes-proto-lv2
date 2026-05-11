@@ -93,7 +93,6 @@ export default function LOCMasterPage() {
     <div>
       <PageHeader
         title="위치 마스터"
-        accent="LOC-001"
         nodeRef="SCR-LOC-001~005"
         status="PROTOTYPE"
         description="Plant → Yard → Zone → Lot 4단계 위치 계층 관리. 클릭으로 상세 조회·상태 변경."

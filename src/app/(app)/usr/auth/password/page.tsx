@@ -9,7 +9,7 @@ const LABEL = "text-xs font-label uppercase tracking-widest opacity-50 mb-1 bloc
 export default function PasswordPage() {
   return (
     <div>
-      <PageHeader title="비밀번호·PIN 변경" accent="USR-022" nodeRef="SCR-USR-022" status="PROTOTYPE" description="본인 비밀번호 및 PIN 변경. 최초 로그인 시 PIN 변경 강제." />
+      <PageHeader title="비밀번호·PIN 변경" nodeRef="SCR-USR-022" status="PROTOTYPE" description="본인 비밀번호 및 PIN 변경. 최초 로그인 시 PIN 변경 강제." />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="bg-surface-container-low border-l-4 border-primary-accent p-6">

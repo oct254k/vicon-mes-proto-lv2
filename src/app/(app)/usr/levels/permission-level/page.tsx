@@ -23,7 +23,7 @@ const COLS = [
 export default function PermissionLevelPage() {
   return (
     <div>
-      <PageHeader title="권한 레벨 마스터" accent="USR-010" nodeRef="SCR-USR-010" status="PROTOTYPE" description="L1~L4 + EXTERNAL 레벨 enum 코드 마스터. 변경 시 L4 결재 필요." />
+      <PageHeader title="권한 레벨 마스터" nodeRef="SCR-USR-010" status="PROTOTYPE" description="L1~L4 + EXTERNAL 레벨 enum 코드 마스터. 변경 시 L4 결재 필요." />
 
       <div className="bg-surface-container-low border-l-4 border-primary-accent p-4 mb-4">
         <FieldHeader title="A. 레벨 정의" moduleRef="FNC-USR-020~025" />

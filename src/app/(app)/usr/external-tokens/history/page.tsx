@@ -23,7 +23,7 @@ const COLS = [
 export default function ExternalTokenHistoryPage() {
   return (
     <div>
-      <PageHeader title="EXTERNAL 토큰 이력" accent="USR-062" nodeRef="SCR-USR-062" status="PROTOTYPE" description="토큰 발급·자동 만료·즉시 회수 전체 이력. AUDITOR 및 L3+ 열람 가능." />
+      <PageHeader title="EXTERNAL 토큰 이력" nodeRef="SCR-USR-062" status="PROTOTYPE" description="토큰 발급·자동 만료·즉시 회수 전체 이력. AUDITOR 및 L3+ 열람 가능." />
 
       <div className="bg-surface-container-low border-l-4 border-primary-accent p-4 mb-4">
         <FieldHeader title="A. 필터" moduleRef="FNC-USR-085" />

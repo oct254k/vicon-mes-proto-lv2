@@ -9,7 +9,7 @@ const LABEL = "text-xs font-label uppercase tracking-widest opacity-50 mb-1 bloc
 export default function ExternalTokenNewPage() {
   return (
     <div>
-      <PageHeader title="EXTERNAL 토큰 발급" accent="USR-060" nodeRef="SCR-USR-060" status="PROTOTYPE" description="외부 운전자·검수자 대상 일회성 토큰 발급. L2/SHP 또는 L3 MANAGER 전용." />
+      <PageHeader title="EXTERNAL 토큰 발급" nodeRef="SCR-USR-060" status="PROTOTYPE" description="외부 운전자·검수자 대상 일회성 토큰 발급. L2/SHP 또는 L3 MANAGER 전용." />
 
       <div className="bg-surface-container-low border-l-4 border-primary-accent p-6 mb-4">
         <FieldHeader title="A. 외부 사용자 정보" moduleRef="FNC-USR-080/081" />

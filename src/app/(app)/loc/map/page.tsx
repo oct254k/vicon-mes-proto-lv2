@@ -86,7 +86,6 @@ export default function LOCMapPage() {
     <div>
       <PageHeader
         title="야적장 도면"
-        accent="LOC-010"
         nodeRef="SCR-LOC-010"
         status="PROTOTYPE"
         description="야적장 격자 도면 실시간 시각화. 셀 클릭 시 하단 부재 상세 표시."

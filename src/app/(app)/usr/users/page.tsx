@@ -17,7 +17,7 @@ const STATUS_MAP = { ACTIVE: "running", LOCKED: "warning", INACTIVE: "idle" } as
 export default function USRUsersPage() {
   return (
     <div>
-      <PageHeader title="사용자 마스터" accent="USR-001" nodeRef="SCR-USR-001" status="PROTOTYPE" description="사용자 목록 조회·필터·신규 등록 진입점" />
+      <PageHeader title="사용자 마스터" nodeRef="SCR-USR-001" status="PROTOTYPE" description="사용자 목록 조회·필터·신규 등록 진입점" />
 
       {/* 필터 영역 */}
       <div className="bg-surface-container-low border-l-4 border-primary-accent p-4 mb-4">

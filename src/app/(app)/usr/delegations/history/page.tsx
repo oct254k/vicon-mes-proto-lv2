@@ -24,7 +24,7 @@ const COLS = [
 export default function DelegationHistoryPage() {
   return (
     <div>
-      <PageHeader title="위임 이력" accent="USR-043" nodeRef="SCR-USR-043" status="PROTOTYPE" description="위임 신청·결재·만료·회수 전체 이력. REQUESTED/APPROVED/EXPIRED/REVOKED 상태 표시." />
+      <PageHeader title="위임 이력" nodeRef="SCR-USR-043" status="PROTOTYPE" description="위임 신청·결재·만료·회수 전체 이력. REQUESTED/APPROVED/EXPIRED/REVOKED 상태 표시." />
 
       <div className="bg-surface-container-low border-l-4 border-primary-accent p-4 mb-4">
         <FieldHeader title="A. 필터" moduleRef="FNC-USR-064" />
