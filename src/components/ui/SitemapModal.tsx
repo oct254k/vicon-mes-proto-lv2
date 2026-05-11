@@ -59,9 +59,9 @@ const SITEMAP: SitemapCategory[] = [
   {
     title: "출하",
     items: [
-      { label: "출하 일정 캘린더", url: "/shp/schedule" },
-      { label: "패킹 현황 보드", url: "/shp/stored/board" },
-      { label: "패킹 리스트", url: "/shp/packing/board", highlight: true },
+      { label: "출하 일정 캘린더", url: "/shp/schedule/calendar" },
+      { label: "패킹 현황 보드", url: "/shp/packing/board", highlight: true },
+      { label: "패킹 리스트", url: "/shp/documents" },
       { label: "RFID 모니터링", url: "/shp/gate/monitor" },
     ],
   },
@@ -70,9 +70,11 @@ const SITEMAP: SitemapCategory[] = [
     items: [
       { label: "야적장 도면", url: "/loc/yard-map/view", highlight: true },
       { label: "도면 편집", url: "/loc/yard-map/edit" },
-      { label: "정유 현황 보드", url: "/loc/yard-map/occupancy" },
+      { label: "점유현황 보드", url: "/loc/yard-map/occupancy" },
       { label: "공장 간 이동", url: "/loc/transfer/out", highlight: true },
       { label: "재고 보정", url: "/loc/adjust/new" },
+      { label: "스크랩 등록", url: "/loc/scrap/new" },
+      { label: "불량 처리", url: "/loc/scrap/defect" },
     ],
   },
   {
