@@ -73,7 +73,7 @@ function renderPreview(
 type ZoneRow = { code:string; name:string; coordType:"poly"|"rect"; pts:string; x:string; y:string; w:string; h:string; };
 
 // ── Lot 셀 타입 (탭2) ──────────────────────────────────────
-type SlotStatus = "EMPTY"|"OCCUPIED"|"MAINTENANCE"|"DISABLED";
+type SlotStatus = "가용"|"점유"|"정비"|"비활성";
 interface Cell {
   id: string;
   status: SlotStatus;
@@ -83,10 +83,10 @@ interface Cell {
 }
 
 const CELL_STYLE: Record<SlotStatus,string> = {
-  EMPTY:       "bg-[#1a1a1a] border-2 border-dashed border-white/10 text-white/20",
-  OCCUPIED:    "bg-[#00912F]/20 border-2 border-[#00912F]/50 text-[#00912F]",
-  MAINTENANCE: "bg-[#ef4444]/20 border-2 border-[#ef4444]/30 text-[#ef4444]",
-  DISABLED:    "bg-[#131313] border-2 border-white/5 text-white/10 opacity-40",
+  "가용":   "bg-[#1a1a1a] border-2 border-dashed border-white/10 text-white/20",
+  "점유":   "bg-[#00912F]/20 border-2 border-[#00912F]/50 text-[#00912F]",
+  "정비":   "bg-[#ef4444]/20 border-2 border-[#ef4444]/30 text-[#ef4444]",
+  "비활성": "bg-[#131313] border-2 border-white/5 text-white/10 opacity-40",
 };
 
 // 탭2 Zone 목록 (view/page.tsx의 SECTORS_INIT과 동일 구조)
@@ -110,20 +110,20 @@ function mkCells(zoneId:string, cols:number, rows:number): Cell[] {
   return Array.from({length:rows*cols},(_,i)=>{
     const r=Math.floor(i/cols), c=i%cols;
     const hash=(r*17+c*31)%10;
-    const status:SlotStatus = hash<4?"EMPTY":hash<7?"OCCUPIED":hash<8?"OCCUPIED":"EMPTY";
+    const status:SlotStatus = hash<4?"가용":hash<7?"점유":hash<8?"점유":"가용";
     return {
       id:`Y-P3000-${zoneId}-${String(r+1).padStart(2,"0")}-${String(c+1).padStart(2,"0")}`,
       status,
-      lotNo: status==="OCCUPIED"?`LOT-2026050${hash%9+1}-${String(hash*7+i+1).padStart(3,"0")}`:undefined,
-      material: status==="OCCUPIED"?MATS[hash%3]:undefined,
-      qty: status==="OCCUPIED"?(hash*500+1000):undefined,
+      lotNo: status==="점유"?`LOT-2026050${hash%9+1}-${String(hash*7+i+1).padStart(3,"0")}`:undefined,
+      material: status==="점유"?MATS[hash%3]:undefined,
+      qty: status==="점유"?(hash*500+1000):undefined,
     };
   });
 }
 
 const inputCls="w-full bg-[#1a1a1a] border border-white/10 px-3 py-2 text-xs text-white focus:outline-none focus:border-[#00912F]";
 const labelCls="block text-[10px] font-label uppercase tracking-widest text-white/40 mb-1.5";
-const STATUS_OPTIONS: SlotStatus[] = ["EMPTY","OCCUPIED","MAINTENANCE","DISABLED"];
+const STATUS_OPTIONS: SlotStatus[] = ["가용","점유","정비","비활성"];
 
 // ── 메인 컴포넌트 ──────────────────────────────────────
 export default function YardMapEditPage() {
@@ -167,7 +167,7 @@ export default function YardMapEditPage() {
   const [saved2, setSaved2] = useState(false);
 
   // 탭2 상세 편집 (우측 패널)
-  const [editStatus, setEditStatus] = useState<SlotStatus>("EMPTY");
+  const [editStatus, setEditStatus] = useState<SlotStatus>("가용");
   const [editLotNo, setEditLotNo] = useState("");
   const [editMaterial, setEditMaterial] = useState("");
   const [editQty, setEditQty] = useState("");
@@ -185,7 +185,7 @@ export default function YardMapEditPage() {
     if(!selectedCellId) return;
     updateCells(selectedZoneId, prev=>prev.map(c=>{
       if(c.id!==selectedCellId) return c;
-      const isOcc=editStatus==="OCCUPIED";
+      const isOcc=editStatus==="점유";
       return {
         ...c,
         status:editStatus,
@@ -199,7 +199,7 @@ export default function YardMapEditPage() {
 
   const clearCellEdit = ()=>{
     if(!selectedCellId) return;
-    updateCells(selectedZoneId, prev=>prev.map(c=>c.id===selectedCellId?{id:c.id,status:"EMPTY"}:c));
+    updateCells(selectedZoneId, prev=>prev.map(c=>c.id===selectedCellId?{id:c.id,status:"가용"}:c));
     setSelectedCellId(null);
     setSaved2(true);
   };
@@ -230,10 +230,10 @@ export default function YardMapEditPage() {
 
   // KPI
   const totalSlots = cells.length;
-  const occupiedSlots = cells.filter(c=>c.status==="OCCUPIED"||c.status==="MAINTENANCE").length;
-  const occupiedOnly = cells.filter(c=>c.status==="OCCUPIED").length;
-  const emptySlots = cells.filter(c=>c.status==="EMPTY").length;
-  const maintSlots = cells.filter(c=>c.status==="MAINTENANCE").length;
+  const occupiedSlots = cells.filter(c=>c.status==="점유"||c.status==="정비").length;
+  const occupiedOnly = cells.filter(c=>c.status==="점유").length;
+  const emptySlots = cells.filter(c=>c.status==="가용").length;
+  const maintSlots = cells.filter(c=>c.status==="정비").length;
   const occupancyPct = totalSlots>0?Math.round(occupiedSlots/totalSlots*100):0;
 
   // Canvas 미리보기
@@ -466,13 +466,13 @@ export default function YardMapEditPage() {
                       ].join(" ")}
                     >
                       <span className="text-[9px] opacity-60">{shortId}</span>
-                      {c.status==="OCCUPIED" && c.lotNo && (
+                      {c.status==="점유" && c.lotNo && (
                         <span className="text-[8px] text-[#00912F]/80 mt-0.5 truncate max-w-full px-1">{c.lotNo.slice(-8)}</span>
                       )}
-                      {c.status==="MAINTENANCE" && (
-                        <span className="text-[8px] text-[#ef4444]/60 mt-0.5">점검</span>
+                      {c.status==="정비" && (
+                        <span className="text-[8px] text-[#ef4444]/60 mt-0.5">정비</span>
                       )}
-                      {c.status==="DISABLED" && (
+                      {c.status==="비활성" && (
                         <span className="text-[8px] text-white/20 mt-0.5">비활성</span>
                       )}
                     </div>
@@ -510,7 +510,7 @@ export default function YardMapEditPage() {
                   </select>
                 </div>
 
-                {editStatus==="OCCUPIED" && (
+                {editStatus==="점유" && (
                   <>
                     <div>
                       <label className={labelCls}>Lot 번호</label>

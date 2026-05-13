@@ -4,7 +4,7 @@ import { useEffect, useRef, useState, useCallback } from "react";
 import { PageHeader } from "@/components/ui/PageHeader";
 
 // ── 타입 ──────────────────────────────────────────
-type SlotStatus = "EMPTY" | "OCCUPIED" | "FULL" | "MAINTENANCE" | "AGING";
+type SlotStatus = "가용" | "점유" | "만재" | "정비" | "양생중";
 interface Lot { x:number; y:number; w:number; h:number; occ:boolean; num:number; id:string; status:SlotStatus; material?:string; lot?:string; qty?:number; }
 interface Zone { id:string; pts:number[][]; lots:Lot[]; }
 interface Sector { id:string; label:string; pts:number[][]; zones:Zone[]; }
@@ -43,15 +43,15 @@ function mkLots(rx:number, ry:number, rw:number, rh:number, cols:number, rows:nu
   for(let r=0;r<rows;r++) for(let c=0;c<cols;c++){
     const num=r*cols+c+1;
     const hash=(r*17+c*31)%10;
-    const status:SlotStatus = hash<4?"EMPTY":hash<7?"OCCUPIED":hash<8?"FULL":hash<9?"AGING":"MAINTENANCE";
+    const status:SlotStatus = hash<4?"가용":hash<7?"점유":hash<8?"만재":hash<9?"양생중":"정비";
     lots.push({
       x:rx+pad+c*lw+1, y:ry+pad+r*lh+1, w:lw-2, h:lh-2,
-      occ:status!=="EMPTY"&&status!=="MAINTENANCE",
+      occ:status!=="가용"&&status!=="정비",
       num, id:`Y-P3000-${zoneId}-${String(r+1).padStart(2,"0")}-${String(c+1).padStart(2,"0")}`,
       status,
-      material: status!=="EMPTY"&&status!=="MAINTENANCE"?MATS[hash%3]:undefined,
-      lot: status!=="EMPTY"&&status!=="MAINTENANCE"?`LOT-2026050${hash%9+1}-${String(hash*7+num).padStart(3,"0")}`:undefined,
-      qty: status!=="EMPTY"&&status!=="MAINTENANCE"?(hash*500+1000):undefined,
+      material: status!=="가용"&&status!=="정비"?MATS[hash%3]:undefined,
+      lot: status!=="가용"&&status!=="정비"?`LOT-2026050${hash%9+1}-${String(hash*7+num).padStart(3,"0")}`:undefined,
+      qty: status!=="가용"&&status!=="정비"?(hash*500+1000):undefined,
     });
   }
   return lots;
@@ -98,7 +98,7 @@ const LOD_LABELS = ["🗺 구역 레벨","📦 Zone 레벨","🔲 Lot 레벨"];
 const LOD_COLORS = ["#7F77DD","#1D9E75","#378ADD"];
 
 const STATUS_COLOR: Record<SlotStatus,string> = {
-  EMPTY:"#2a2a2a", OCCUPIED:"#00912F", FULL:"#f59e0b", MAINTENANCE:"#ef4444", AGING:"#f97316",
+  "가용":"#2a2a2a", "점유":"#00912F", "만재":"#f59e0b", "정비":"#ef4444", "양생중":"#f97316",
 };
 
 // ── 렌더러 ──────────────────────────────────────────
@@ -162,10 +162,10 @@ function renderYard(
         const isSel=lot.id===selectedId;
         const isDragging=lot.id===draggingId;
         let fill:string, stroke:string;
-        if(lot.status==="EMPTY"){ fill=h2r("#2a2a2a",0.9); stroke="#3a3a3a"; }
-        else if(lot.status==="OCCUPIED"){ fill=h2r("#00912F",0.35); stroke="#00912F"; }
-        else if(lot.status==="FULL"){ fill=h2r("#f59e0b",0.35); stroke="#f59e0b"; }
-        else if(lot.status==="MAINTENANCE"){ fill=h2r("#ef4444",0.25); stroke="#ef4444"; }
+        if(lot.status==="가용"){ fill=h2r("#2a2a2a",0.9); stroke="#3a3a3a"; }
+        else if(lot.status==="점유"){ fill=h2r("#00912F",0.35); stroke="#00912F"; }
+        else if(lot.status==="만재"){ fill=h2r("#f59e0b",0.35); stroke="#f59e0b"; }
+        else if(lot.status==="정비"){ fill=h2r("#ef4444",0.25); stroke="#ef4444"; }
         else { fill=(agingTick?h2r("#f97316",0.5):h2r("#f97316",0.2)); stroke="#f97316"; }
         ctx.globalAlpha = isDragging ? 0.25 : 1;
         ctx.fillStyle=fill; ctx.strokeStyle=isSel?"#fff":isHL?"#ffe":stroke; ctx.lineWidth=(isSel||isHL)?2/zoom:0.8/zoom;
@@ -174,7 +174,7 @@ function renderYard(
         if(isHL){ ctx.strokeStyle="#fff"; ctx.lineWidth=2/zoom; ctx.beginPath(); ctx.roundRect(lot.x-1/zoom,lot.y-1/zoom,lot.w+2/zoom,lot.h+2/zoom,2); ctx.stroke(); }
         if(lot.w*zoom>18){
           const lfs=Math.min(7/zoom,lot.h*0.38);
-          ctx.fillStyle=lot.status==="EMPTY"?"rgba(255,255,255,0.25)":"rgba(255,255,255,0.85)";
+          ctx.fillStyle=lot.status==="가용"?"rgba(255,255,255,0.25)":"rgba(255,255,255,0.85)";
           ctx.font=`${lfs}px sans-serif`;
           const n=String(lot.num);
           ctx.fillText(n,lot.x+lot.w/2-ctx.measureText(n).width/2,lot.y+lot.h/2+lfs*0.35);
@@ -226,7 +226,7 @@ function hitTest(mx:number, my:number, sectors:Sector[]): Lot|null {
 
 function hitTestEmptySlot(mx:number, my:number, excludeId:string, sectors:Sector[]): Lot|null {
   for(const sec of sectors) for(const z of sec.zones) for(const lot of z.lots){
-    if(lot.id!==excludeId && lot.status==="EMPTY")
+    if(lot.id!==excludeId && lot.status==="가용")
       if(mx>=lot.x&&mx<=lot.x+lot.w&&my>=lot.y&&my<=lot.y+lot.h) return lot;
   }
   return null;
@@ -327,7 +327,7 @@ export default function YardMapViewPage() {
       if(getLOD(z)===2){
         const [mx,my]=canvasToMap(cx,cy,cw,ch,z,p.x,p.y);
         const hit=hitTest(mx,my,sectorsRef.current);
-        if(hit && hit.status!=="EMPTY" && hit.status!=="MAINTENANCE"){
+        if(hit && hit.status!=="가용" && hit.status!=="정비"){
           dragLotRef.current={lot:hit};
           dragGhostRef.current={mapX:mx,mapY:my,w:hit.w,h:hit.h,status:hit.status};
           setIsDraggingLot(true);
@@ -539,7 +539,7 @@ export default function YardMapViewPage() {
         <div className="w-52 shrink-0 space-y-4">
           <div className="bg-[#1a1a1a] border border-white/10 p-4">
             <p className="font-label text-[10px] uppercase tracking-widest text-white/40 mb-3">범례</p>
-            {([["EMPTY","#2a2a2a"],["OCCUPIED","#00912F"],["FULL","#f59e0b"],["MAINTENANCE","#ef4444"],["AGING","#f97316"]] as [string,string][]).map(([s,c])=>(
+            {([["가용","#2a2a2a"],["점유","#00912F"],["만재","#f59e0b"],["정비","#ef4444"],["양생중","#f97316"]] as [string,string][]).map(([s,c])=>(
               <div key={s} className="flex items-center gap-2 mb-1.5">
                 <div className="w-4 h-4 rounded-sm border border-white/20" style={{background:c+"44"}}/>
                 <span className="text-[10px] font-label text-white/50">{s}</span>
@@ -558,7 +558,7 @@ export default function YardMapViewPage() {
                   <div><span className="text-white/30">수량</span><p className="text-white/80 mt-0.5">{selected.qty?.toLocaleString()} m</p></div>
                 </div>
               )}
-              {!selected.material && <p className="text-white/30 text-[10px] font-label">{selected.status==="EMPTY"?"비어있음":"점검 중"}</p>}
+              {!selected.material && <p className="text-white/30 text-[10px] font-label">{selected.status==="가용"?"비어있음":"점검 중"}</p>}
             </div>
           ) : (
             <div className="bg-[#1a1a1a] border border-white/10 p-4">
