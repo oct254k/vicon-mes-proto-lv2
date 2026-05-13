@@ -36,7 +36,6 @@ const ROADS = [
   { pts:[[350,80],[700,40]], w:20 },
 ];
 
-// 목데이터 Lot 생성
 function mkLots(rx:number, ry:number, rw:number, rh:number, cols:number, rows:number, zoneId:string): Lot[] {
   const lots:Lot[] = [], pad=4;
   const lw=(rw-pad*2)/cols, lh=(rh-pad*2)/rows;
@@ -58,7 +57,7 @@ function mkLots(rx:number, ry:number, rw:number, rh:number, cols:number, rows:nu
   return lots;
 }
 
-const SECTORS: Sector[] = [
+const SECTORS_INIT: Sector[] = [
   { id:"A", label:"A 구역", pts:[[160,210],[420,210],[420,590],[340,590],[300,560],[160,560]], zones:[
     { id:"A-1", pts:[[170,220],[290,220],[290,380],[170,380]], lots:mkLots(170,220,120,160,3,4,"A-1") },
     { id:"A-2", pts:[[300,220],[415,220],[415,380],[300,380]], lots:mkLots(300,220,115,160,3,4,"A-2") },
@@ -106,7 +105,10 @@ const STATUS_COLOR: Record<SlotStatus,string> = {
 function renderYard(
   ctx: CanvasRenderingContext2D, cw:number, ch:number,
   zoom:number, panX:number, panY:number,
-  highlight:string, agingTick:boolean, selectedId:string
+  highlight:string, agingTick:boolean, selectedId:string,
+  sectors: Sector[],
+  draggingId?: string,
+  dragGhost?: { mapX:number; mapY:number; w:number; h:number; status:SlotStatus } | null
 ) {
   const dpr = window.devicePixelRatio||1;
   ctx.setTransform(1,0,0,1,0,0); ctx.scale(dpr,dpr);
@@ -116,27 +118,21 @@ function renderYard(
   ctx.translate(ox,oy); ctx.scale(zoom,zoom);
   const lod=getLOD(zoom);
 
-  // 외부 녹지
   ctx.fillStyle="#1a2410"; ctx.fillRect(-100,-100,W+200,H+200);
-  // 부지 지면
   drawPoly(ctx,BOUNDARY); ctx.fillStyle="#252520"; ctx.fill();
-  // 그리드 질감
   ctx.save(); drawPoly(ctx,BOUNDARY); ctx.clip();
   ctx.strokeStyle="rgba(255,255,255,0.03)"; ctx.lineWidth=0.5/zoom;
   for(let x=0;x<W;x+=50){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,H);ctx.stroke();}
   for(let y=0;y<H;y+=50){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);ctx.stroke();}
   ctx.restore();
-  // 외곽 펜스
   ctx.strokeStyle="#444"; ctx.lineWidth=3/zoom; ctx.setLineDash([6/zoom,4/zoom]);
   drawPoly(ctx,BOUNDARY); ctx.stroke(); ctx.setLineDash([]);
-  // 도로
   ROADS.forEach(({pts,w})=>{
     ctx.strokeStyle="#333"; ctx.lineWidth=w/zoom; ctx.lineCap="round"; ctx.lineJoin="round";
     ctx.beginPath(); pts.forEach(([x,y],i)=>i===0?ctx.moveTo(x,y):ctx.lineTo(x,y)); ctx.stroke();
     ctx.strokeStyle="rgba(255,255,255,0.12)"; ctx.lineWidth=1.5/zoom; ctx.setLineDash([10/zoom,8/zoom]);
     ctx.beginPath(); pts.forEach(([x,y],i)=>i===0?ctx.moveTo(x,y):ctx.lineTo(x,y)); ctx.stroke(); ctx.setLineDash([]);
   });
-  // 건물
   BUILDINGS.forEach(b=>{
     ctx.fillStyle=b.color; ctx.strokeStyle="#333"; ctx.lineWidth=1.5/zoom;
     if(b.type==="poly"){ drawPoly(ctx,(b as any).pts); ctx.fill(); ctx.stroke(); }
@@ -149,8 +145,7 @@ function renderYard(
       ctx.fillText(lbl,bx-tw/2,by+fs*0.4);
     }
   });
-  // Sector / Zone / Lot
-  SECTORS.forEach(sec=>{
+  sectors.forEach(sec=>{
     ctx.fillStyle=h2r("#7F77DD",0.18); ctx.strokeStyle="#7F77DD"; ctx.lineWidth=2.5/zoom;
     drawPoly(ctx,sec.pts); ctx.fill(); ctx.stroke();
     const [cx,cy]=polyCenter(sec.pts);
@@ -165,14 +160,17 @@ function renderYard(
       if(lod===2) z.lots.forEach(lot=>{
         const isHL=!!(highlight&&lot.id===highlight);
         const isSel=lot.id===selectedId;
+        const isDragging=lot.id===draggingId;
         let fill:string, stroke:string;
         if(lot.status==="EMPTY"){ fill=h2r("#2a2a2a",0.9); stroke="#3a3a3a"; }
         else if(lot.status==="OCCUPIED"){ fill=h2r("#00912F",0.35); stroke="#00912F"; }
         else if(lot.status==="FULL"){ fill=h2r("#f59e0b",0.35); stroke="#f59e0b"; }
         else if(lot.status==="MAINTENANCE"){ fill=h2r("#ef4444",0.25); stroke="#ef4444"; }
         else { fill=(agingTick?h2r("#f97316",0.5):h2r("#f97316",0.2)); stroke="#f97316"; }
+        ctx.globalAlpha = isDragging ? 0.25 : 1;
         ctx.fillStyle=fill; ctx.strokeStyle=isSel?"#fff":isHL?"#ffe":stroke; ctx.lineWidth=(isSel||isHL)?2/zoom:0.8/zoom;
         ctx.beginPath(); ctx.roundRect(lot.x,lot.y,lot.w,lot.h,1.5); ctx.fill(); ctx.stroke();
+        ctx.globalAlpha = 1;
         if(isHL){ ctx.strokeStyle="#fff"; ctx.lineWidth=2/zoom; ctx.beginPath(); ctx.roundRect(lot.x-1/zoom,lot.y-1/zoom,lot.w+2/zoom,lot.h+2/zoom,2); ctx.stroke(); }
         if(lot.w*zoom>18){
           const lfs=Math.min(7/zoom,lot.h*0.38);
@@ -184,6 +182,21 @@ function renderYard(
       });
     });
   });
+  // ghost lot (드래그 중)
+  if(dragGhost && lod===2){
+    const {mapX,mapY,w,h,status}=dragGhost;
+    const gx=mapX-w/2, gy=mapY-h/2;
+    const ghostFill=STATUS_COLOR[status];
+    ctx.save();
+    ctx.globalAlpha=0.75;
+    ctx.fillStyle=h2r(ghostFill,0.5);
+    ctx.strokeStyle="#fff";
+    ctx.lineWidth=1.5/zoom;
+    ctx.setLineDash([4/zoom,3/zoom]);
+    ctx.beginPath(); ctx.roundRect(gx,gy,w,h,1.5); ctx.fill(); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.restore();
+  }
   // 게이트
   ctx.fillStyle="#c8b97a"; ctx.strokeStyle="#8a7a3a"; ctx.lineWidth=2/zoom;
   ctx.beginPath(); ctx.roundRect(180,10,80,18,3); ctx.fill(); ctx.stroke();
@@ -199,25 +212,53 @@ function renderYard(
   ctx.restore();
 }
 
-// 좌표 역변환 (canvas px → 도면 px)
 function canvasToMap(cx:number, cy:number, cw:number, ch:number, zoom:number, panX:number, panY:number):[number,number]{
   const ox=cw/2+panX-(W*zoom)/2, oy=ch/2+panY-(H*zoom)/2;
   return [(cx-ox)/zoom,(cy-oy)/zoom];
 }
 
-function hitTest(mx:number, my:number): Lot|null {
-  for(const sec of SECTORS) for(const z of sec.zones) for(const lot of z.lots){
+function hitTest(mx:number, my:number, sectors:Sector[]): Lot|null {
+  for(const sec of sectors) for(const z of sec.zones) for(const lot of z.lots){
     if(mx>=lot.x&&mx<=lot.x+lot.w&&my>=lot.y&&my<=lot.y+lot.h) return lot;
   }
   return null;
 }
 
-// 특정 lot ID → 도면 좌표 중심
-function findLotCenter(id:string):[number,number]|null {
-  for(const sec of SECTORS) for(const z of sec.zones) for(const lot of z.lots){
+function hitTestEmptySlot(mx:number, my:number, excludeId:string, sectors:Sector[]): Lot|null {
+  for(const sec of sectors) for(const z of sec.zones) for(const lot of z.lots){
+    if(lot.id!==excludeId && lot.status==="EMPTY")
+      if(mx>=lot.x&&mx<=lot.x+lot.w&&my>=lot.y&&my<=lot.y+lot.h) return lot;
+  }
+  return null;
+}
+
+function findLotCenter(id:string, sectors:Sector[]):[number,number]|null {
+  for(const sec of sectors) for(const z of sec.zones) for(const lot of z.lots){
     if(lot.id===id) return [lot.x+lot.w/2, lot.y+lot.h/2];
   }
   return null;
+}
+
+function findZoneForLot(id:string, sectors:Sector[]): {sec:Sector; zone:Zone} | null {
+  for(const sec of sectors) for(const zone of sec.zones)
+    if(zone.lots.some(l=>l.id===id)) return {sec, zone};
+  return null;
+}
+
+// deep clone sectors
+function cloneSectors(s:Sector[]): Sector[] {
+  return s.map(sec=>({
+    ...sec,
+    zones: sec.zones.map(z=>({...z, lots:z.lots.map(l=>({...l}))}))
+  }));
+}
+
+// ── 패킹리스트 타입 ──────────────────────────────────────
+interface PackingInfo {
+  fromId: string; fromZone: string; fromSec: string;
+  toId:   string; toZone:   string; toSec:   string;
+  lotNo?:string; material?:string; qty?:number;
+  movedAt: string;
 }
 
 // ── 컴포넌트 ──────────────────────────────────────────
@@ -231,10 +272,19 @@ export default function YardMapViewPage() {
   const [search, setSearch] = useState("");
   const [scanMsg, setScanMsg] = useState("");
   const [agingTick, setAgingTick] = useState(false);
-  const dragRef  = useRef({active:false,lx:0,ly:0});
+  const [sectors, setSectors] = useState<Sector[]>(()=>cloneSectors(SECTORS_INIT));
+  const [packingInfo, setPackingInfo] = useState<PackingInfo|null>(null);
+  const [isDraggingLot, setIsDraggingLot] = useState(false);
+
+  const panDragRef  = useRef({active:false,lx:0,ly:0});
   const stateRef = useRef({zoom:0.52,pan:{x:0,y:0}});
+  const sectorsRef = useRef<Sector[]>(sectors);
+  const dragLotRef = useRef<{lot:Lot}|null>(null);
+  const dragGhostRef = useRef<{mapX:number;mapY:number;w:number;h:number;status:SlotStatus}|null>(null);
+  const [dragTick, setDragTick] = useState(0);
 
   useEffect(()=>{ stateRef.current={zoom,pan}; },[zoom,pan]);
+  useEffect(()=>{ sectorsRef.current=sectors; },[sectors]);
 
   // AGING 깜빡임 1Hz
   useEffect(()=>{
@@ -250,39 +300,109 @@ export default function YardMapViewPage() {
     canvas.width=cw*dpr; canvas.height=ch*dpr;
     canvas.style.width=cw+"px"; canvas.style.height=ch+"px";
     const ctx=canvas.getContext("2d")!;
-    renderYard(ctx,cw,ch,stateRef.current.zoom,stateRef.current.pan.x,stateRef.current.pan.y,highlight,agingTick,selected?.id??"");
+    renderYard(
+      ctx,cw,ch,
+      stateRef.current.zoom,stateRef.current.pan.x,stateRef.current.pan.y,
+      highlight,agingTick,selected?.id??"",
+      sectorsRef.current,
+      dragLotRef.current?.lot.id,
+      dragGhostRef.current
+    );
   },[highlight,agingTick,selected]);
 
-  useEffect(()=>{render();},[zoom,pan,render]);
+  useEffect(()=>{render();},[zoom,pan,render,dragTick]);
   useEffect(()=>{window.addEventListener("resize",render);return()=>window.removeEventListener("resize",render);},[render]);
 
   // 마우스 이벤트
   useEffect(()=>{
     const wrap=wrapRef.current; if(!wrap) return;
-    const onDown=(e:MouseEvent)=>{dragRef.current={active:true,lx:e.clientX,ly:e.clientY};};
+
+    const onDown=(e:MouseEvent)=>{
+      const rect=wrap.getBoundingClientRect();
+      const cx=e.clientX-rect.left, cy=e.clientY-rect.top;
+      const {zoom:z,pan:p}=stateRef.current;
+      const cw=wrap.clientWidth, ch=wrap.clientHeight;
+
+      // LOD2에서만 lot drag 가능
+      if(getLOD(z)===2){
+        const [mx,my]=canvasToMap(cx,cy,cw,ch,z,p.x,p.y);
+        const hit=hitTest(mx,my,sectorsRef.current);
+        if(hit && hit.status!=="EMPTY" && hit.status!=="MAINTENANCE"){
+          dragLotRef.current={lot:hit};
+          dragGhostRef.current={mapX:mx,mapY:my,w:hit.w,h:hit.h,status:hit.status};
+          setIsDraggingLot(true);
+          return;
+        }
+      }
+      panDragRef.current={active:true,lx:e.clientX,ly:e.clientY};
+    };
+
     const onMove=(e:MouseEvent)=>{
-      if(!dragRef.current.active) return;
-      const dx=e.clientX-dragRef.current.lx, dy=e.clientY-dragRef.current.ly;
-      dragRef.current.lx=e.clientX; dragRef.current.ly=e.clientY;
+      if(dragLotRef.current){
+        const wrap=wrapRef.current; if(!wrap) return;
+        const rect=wrap.getBoundingClientRect();
+        const cx=e.clientX-rect.left, cy=e.clientY-rect.top;
+        const {zoom:z,pan:p}=stateRef.current;
+        const cw=wrap.clientWidth, ch=wrap.clientHeight;
+        const [mx,my]=canvasToMap(cx,cy,cw,ch,z,p.x,p.y);
+        const lot=dragLotRef.current.lot;
+        dragGhostRef.current={mapX:mx,mapY:my,w:lot.w,h:lot.h,status:lot.status};
+        setDragTick(t=>t+1);
+        return;
+      }
+      if(!panDragRef.current.active) return;
+      const dx=e.clientX-panDragRef.current.lx, dy=e.clientY-panDragRef.current.ly;
+      panDragRef.current.lx=e.clientX; panDragRef.current.ly=e.clientY;
       setPan(p=>({x:p.x+dx,y:p.y+dy}));
     };
+
     const onUp=(e:MouseEvent)=>{
-      if(!dragRef.current.active) return;
-      const moved=Math.abs(e.clientX-dragRef.current.lx)+Math.abs(e.clientY-dragRef.current.ly)<3;
-      dragRef.current.active=false;
-      if(!moved) {
-        // 클릭 → hit test
+      // lot drag 종료
+      if(dragLotRef.current){
+        const wrap=wrapRef.current; if(!wrap) return;
+        const rect=wrap.getBoundingClientRect();
+        const cx=e.clientX-rect.left, cy=e.clientY-rect.top;
+        const {zoom:z,pan:p}=stateRef.current;
+        const cw=wrap.clientWidth, ch=wrap.clientHeight;
+        const [mx,my]=canvasToMap(cx,cy,cw,ch,z,p.x,p.y);
+        const fromLot=dragLotRef.current.lot;
+        const emptyTarget=hitTestEmptySlot(mx,my,fromLot.id,sectorsRef.current);
+
+        dragGhostRef.current=null;
+        setDragTick(t=>t+1);
+
+        if(emptyTarget){
+          const fromInfo=findZoneForLot(fromLot.id,sectorsRef.current);
+          const toInfo=findZoneForLot(emptyTarget.id,sectorsRef.current);
+          setPackingInfo({
+            fromId:fromLot.id, fromZone:fromInfo?.zone.id??"", fromSec:fromInfo?.sec.label??"",
+            toId:emptyTarget.id, toZone:toInfo?.zone.id??"", toSec:toInfo?.sec.label??"",
+            lotNo:fromLot.lot, material:fromLot.material, qty:fromLot.qty,
+            movedAt: new Date().toLocaleString("ko-KR",{year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit"}),
+          });
+        }
+        dragLotRef.current=null;
+        setIsDraggingLot(false);
+        return;
+      }
+
+      // pan 종료 + 클릭 판별
+      if(!panDragRef.current.active) return;
+      const moved=Math.abs(e.clientX-panDragRef.current.lx)+Math.abs(e.clientY-panDragRef.current.ly)<3;
+      panDragRef.current.active=false;
+      if(!moved){
         const rect=wrap.getBoundingClientRect();
         const cx=e.clientX-rect.left, cy=e.clientY-rect.top;
         const {zoom:z,pan:p}=stateRef.current;
         const cw=wrap.clientWidth, ch=wrap.clientHeight;
         const [mx,my]=canvasToMap(cx,cy,cw,ch,z,p.x,p.y);
         if(getLOD(z)===2){
-          const hit=hitTest(mx,my);
+          const hit=hitTest(mx,my,sectorsRef.current);
           setSelected(hit);
         }
       }
     };
+
     const onWheel=(e:WheelEvent)=>{e.preventDefault();setZoom(z=>Math.max(0.2,Math.min(3,z-e.deltaY*0.001)));};
     wrap.addEventListener("mousedown",onDown);
     window.addEventListener("mousemove",onMove);
@@ -300,17 +420,15 @@ export default function YardMapViewPage() {
   const doSearch = useCallback((q:string)=>{
     setSearch(q);
     if(!q){setHighlight("");return;}
-    // ID 직접 또는 lot_no 포함 검색
     let found:Lot|null=null;
     outer:
-    for(const sec of SECTORS) for(const z of sec.zones) for(const lot of z.lots){
+    for(const sec of sectorsRef.current) for(const z of sec.zones) for(const lot of z.lots){
       if(lot.id.includes(q)||lot.lot?.includes(q)||lot.material?.includes(q)){found=lot;break outer;}
     }
     if(found){
       setHighlight(found.id);
       setSelected(found);
-      // Pan to center
-      const center=findLotCenter(found.id);
+      const center=findLotCenter(found.id,sectorsRef.current);
       if(center){
         const wrap=wrapRef.current; if(!wrap) return;
         const cw=wrap.clientWidth, ch=wrap.clientHeight;
@@ -320,7 +438,7 @@ export default function YardMapViewPage() {
     } else { setHighlight(""); }
   },[]);
 
-  // 바코드 스캔 (BarcodeDetector API)
+  // 바코드 스캔
   const fileRef = useRef<HTMLInputElement>(null);
   const handleScan = useCallback(async(e:React.ChangeEvent<HTMLInputElement>)=>{
     const file=e.target.files?.[0]; if(!file) return;
@@ -330,21 +448,37 @@ export default function YardMapViewPage() {
         const bd=new (window as any).BarcodeDetector({formats:["qr_code","code_128","code_39","ean_13","data_matrix"]});
         const img=await createImageBitmap(file);
         const results=await bd.detect(img);
-        if(results.length>0){
-          const val=results[0].rawValue;
-          setScanMsg(`스캔 완료: ${val}`);
-          doSearch(val);
-        } else { setScanMsg("바코드를 찾을 수 없습니다."); }
-      } else {
-        // BarcodeDetector 미지원 → 파일명에서 ID 추출 시도 또는 안내
-        setScanMsg("BarcodeDetector 미지원 — 아래 검색창에 직접 입력하세요.");
-      }
-    } catch(err){ setScanMsg("스캔 실패 — 직접 입력하세요."); }
+        if(results.length>0){ const val=results[0].rawValue; setScanMsg(`스캔 완료: ${val}`); doSearch(val); }
+        else setScanMsg("바코드를 찾을 수 없습니다.");
+      } else { setScanMsg("BarcodeDetector 미지원 — 아래 검색창에 직접 입력하세요."); }
+    } catch{ setScanMsg("스캔 실패 — 직접 입력하세요."); }
     e.target.value="";
   },[doSearch]);
 
+  // lot 이동 실행
+  const confirmMove = useCallback(()=>{
+    if(!packingInfo) return;
+    const {fromId, toId} = packingInfo;
+    setSectors(prev=>{
+      const next=cloneSectors(prev);
+      let fromLot:Lot|null=null, toLot:Lot|null=null;
+      for(const sec of next) for(const z of sec.zones) for(const l of z.lots){
+        if(l.id===fromId) fromLot=l;
+        if(l.id===toId) toLot=l;
+      }
+      if(!fromLot||!toLot) return prev;
+      const {status:fs,material:fm,lot:fl,qty:fq,occ:fo}=fromLot;
+      fromLot.status=toLot.status; fromLot.material=toLot.material; fromLot.lot=toLot.lot; fromLot.qty=toLot.qty; fromLot.occ=toLot.occ;
+      toLot.status=fs; toLot.material=fm; toLot.lot=fl; toLot.qty=fq; toLot.occ=fo;
+      return next;
+    });
+    setSelected(null);
+    setPackingInfo(null);
+  },[packingInfo]);
+
   const lod=getLOD(zoom);
   const pct=Math.round(zoom*100);
+  const wrapCursor=isDraggingLot?"grabbing":lod===2?"crosshair":"grab";
 
   return (
     <div>
@@ -352,19 +486,17 @@ export default function YardMapViewPage() {
         title="야적장 도면"
         nodeRef="SCR-LOC-010"
         status="PROTOTYPE"
-        description="Canvas LOD 렌더러 — zoom 레벨에 따라 구역→Zone→Lot 자동 전환. 드래그 Pan / 휠 Zoom. Lot 클릭 상세."
+        description="Canvas LOD 렌더러 — zoom 레벨에 따라 구역→Zone→Lot 자동 전환. Lot 레벨에서 드래그로 위치 이동. 이동 시 패킹리스트 발행."
       />
 
       {/* 상단 컨트롤 */}
       <div className="flex flex-wrap items-center gap-3 mb-4">
-        {/* 검색 */}
         <input
           value={search}
           onChange={e=>doSearch(e.target.value)}
           placeholder="위치ID / Lot / 자재 검색..."
           className="bg-[#131313] border border-white/10 px-3 py-2 text-xs text-white focus:outline-none focus:border-[#00912F] w-64"
         />
-        {/* 바코드 스캔 버튼 */}
         <button
           onClick={()=>fileRef.current?.click()}
           className="bg-[#1a1a1a] border border-white/10 text-white/60 font-label uppercase tracking-widest px-4 py-2 text-xs hover:border-[#00912F]/50 transition-colors"
@@ -374,7 +506,6 @@ export default function YardMapViewPage() {
         <input ref={fileRef} type="file" accept="image/*" capture="environment" className="hidden" onChange={handleScan} />
         {scanMsg && <span className="text-xs font-label text-[#00912F]">{scanMsg}</span>}
 
-        {/* zoom */}
         <div className="flex items-center gap-2 ml-auto">
           <button onClick={()=>setZoom(z=>Math.max(0.2,z-0.15))} className="bg-[#1a1a1a] border border-white/10 text-white/60 px-3 py-2 text-sm hover:border-white/30">−</button>
           <input type="range" min={20} max={300} value={pct} onChange={e=>setZoom(Number(e.target.value)/100)} className="w-28" />
@@ -390,18 +521,22 @@ export default function YardMapViewPage() {
       {/* 본문 */}
       <div className="flex gap-4">
         {/* 캔버스 */}
-        <div ref={wrapRef} className="flex-1 border border-white/10 rounded-sm overflow-hidden" style={{height:520,cursor:"grab",position:"relative"}}>
+        <div ref={wrapRef} className="flex-1 border border-white/10 rounded-sm overflow-hidden" style={{height:520,cursor:wrapCursor,position:"relative"}}>
           <canvas ref={canvasRef} style={{display:"block"}} />
           {lod<2 && (
             <div className="absolute bottom-3 left-3 text-[10px] font-label text-white/30 pointer-events-none">
               줌인하면 Zone → Lot 상세 표시
             </div>
           )}
+          {lod===2 && !isDraggingLot && (
+            <div className="absolute bottom-3 left-3 text-[10px] font-label text-white/30 pointer-events-none">
+              점유 Lot을 드래그해 빈 슬롯으로 이동
+            </div>
+          )}
         </div>
 
         {/* 사이드바 */}
         <div className="w-52 shrink-0 space-y-4">
-          {/* 범례 */}
           <div className="bg-[#1a1a1a] border border-white/10 p-4">
             <p className="font-label text-[10px] uppercase tracking-widest text-white/40 mb-3">범례</p>
             {([["EMPTY","#2a2a2a"],["OCCUPIED","#00912F"],["FULL","#f59e0b"],["MAINTENANCE","#ef4444"],["AGING","#f97316"]] as [string,string][]).map(([s,c])=>(
@@ -412,7 +547,6 @@ export default function YardMapViewPage() {
             ))}
           </div>
 
-          {/* 선택 상세 */}
           {selected ? (
             <div className="bg-[#1a1a1a] border border-white/10 p-4">
               <p className="font-label text-[10px] uppercase tracking-widest mb-2" style={{color:STATUS_COLOR[selected.status]}}>{selected.status}</p>
@@ -432,12 +566,74 @@ export default function YardMapViewPage() {
             </div>
           )}
 
-          {/* 편집 모드 링크 */}
           <a href="/loc/yard-map/edit" className="block text-center bg-[#1a1a1a] border border-white/10 text-white/40 font-label uppercase tracking-widest px-4 py-2 text-[10px] hover:border-[#00912F]/50 transition-colors">
             [편집 모드 ▶]
           </a>
         </div>
       </div>
+
+      {/* 패킹리스트 모달 */}
+      {packingInfo && (
+        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50" onClick={()=>{dragLotRef.current=null;setIsDraggingLot(false);setPackingInfo(null);}}>
+          <div className="bg-[#1a1a1a] border border-white/20 w-80 shadow-2xl" onClick={e=>e.stopPropagation()}>
+            {/* 헤더 */}
+            <div className="flex items-center justify-between px-5 py-4 border-b border-white/10">
+              <p className="font-label text-[11px] uppercase tracking-widest text-[#00912F]">패킹리스트 발행</p>
+              <button onClick={()=>{dragLotRef.current=null;setIsDraggingLot(false);setPackingInfo(null);}} className="text-white/30 hover:text-white text-lg leading-none">×</button>
+            </div>
+            {/* 이동 정보 */}
+            <div className="px-5 py-4 border-b border-white/10">
+              <p className="font-label text-[9px] uppercase tracking-widest text-white/30 mb-3">이동 정보</p>
+              <div className="space-y-2 text-[10px] font-label">
+                <div className="flex items-start gap-2">
+                  <span className="text-white/30 w-10 shrink-0">From</span>
+                  <div>
+                    <p className="text-white/80 break-all">{packingInfo.fromId}</p>
+                    <p className="text-white/40">{packingInfo.fromSec} › {packingInfo.fromZone}</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2 text-white/30">
+                  <span className="w-10 shrink-0"/>
+                  <span>↓</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <span className="text-white/30 w-10 shrink-0">To</span>
+                  <div>
+                    <p className="text-white/80 break-all">{packingInfo.toId}</p>
+                    <p className="text-white/40">{packingInfo.toSec} › {packingInfo.toZone}</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2 mt-1">
+                  <span className="text-white/30 w-10 shrink-0">일시</span>
+                  <span className="text-white/60">{packingInfo.movedAt}</span>
+                </div>
+              </div>
+            </div>
+            {/* Lot 정보 */}
+            <div className="px-5 py-4 border-b border-white/10">
+              <p className="font-label text-[9px] uppercase tracking-widest text-white/30 mb-3">Lot 정보</p>
+              {packingInfo.lotNo ? (
+                <div className="space-y-2 text-[10px] font-label">
+                  <div className="flex gap-2"><span className="text-white/30 w-14 shrink-0">Lot 번호</span><span className="text-white/80">{packingInfo.lotNo}</span></div>
+                  <div className="flex gap-2"><span className="text-white/30 w-14 shrink-0">자재</span><span className="text-white/80">{packingInfo.material}</span></div>
+                  <div className="flex gap-2"><span className="text-white/30 w-14 shrink-0">수량</span><span className="text-white/80">{packingInfo.qty?.toLocaleString()} m</span></div>
+                </div>
+              ) : (
+                <p className="text-[10px] font-label text-white/30">Lot 정보 없음</p>
+              )}
+            </div>
+            {/* 버튼 */}
+            <div className="flex gap-2 px-5 py-4">
+              <button onClick={confirmMove} className="flex-1 bg-[#00912F] text-black font-label font-bold uppercase tracking-widest py-3 text-xs hover:opacity-90">
+                확인·이동
+              </button>
+              <button onClick={()=>{dragLotRef.current=null;setIsDraggingLot(false);setPackingInfo(null);}} className="flex-1 bg-[#131313] border border-white/10 text-white/50 font-label uppercase tracking-widest py-3 text-xs hover:border-white/30">
+                취소
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
