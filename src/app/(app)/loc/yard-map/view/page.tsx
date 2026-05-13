@@ -4,7 +4,7 @@ import { useEffect, useRef, useState, useCallback } from "react";
 import { PageHeader } from "@/components/ui/PageHeader";
 
 // ── 타입 ──────────────────────────────────────────
-type SlotStatus = "가용" | "점유" | "만재" | "정비" | "양생중";
+type SlotStatus = "가용" | "점유" | "만재" | "정비" | "대기중";
 interface Lot { x:number; y:number; w:number; h:number; occ:boolean; num:number; id:string; status:SlotStatus; material?:string; lot?:string; qty?:number; }
 interface Zone { id:string; pts:number[][]; lots:Lot[]; }
 interface Sector { id:string; label:string; pts:number[][]; zones:Zone[]; }
@@ -43,7 +43,7 @@ function mkLots(rx:number, ry:number, rw:number, rh:number, cols:number, rows:nu
   for(let r=0;r<rows;r++) for(let c=0;c<cols;c++){
     const num=r*cols+c+1;
     const hash=(r*17+c*31)%10;
-    const status:SlotStatus = hash<4?"가용":hash<7?"점유":hash<8?"만재":hash<9?"양생중":"정비";
+    const status:SlotStatus = hash<4?"가용":hash<7?"점유":hash<8?"만재":hash<9?"대기중":"정비";
     lots.push({
       x:rx+pad+c*lw+1, y:ry+pad+r*lh+1, w:lw-2, h:lh-2,
       occ:status!=="가용"&&status!=="정비",
@@ -98,7 +98,7 @@ const LOD_LABELS = ["🗺 구역 레벨","📦 Zone 레벨","🔲 Lot 레벨"];
 const LOD_COLORS = ["#7F77DD","#1D9E75","#378ADD"];
 
 const STATUS_COLOR: Record<SlotStatus,string> = {
-  "가용":"#2a2a2a", "점유":"#00912F", "만재":"#f59e0b", "정비":"#ef4444", "양생중":"#f97316",
+  "가용":"#2a2a2a", "점유":"#00912F", "만재":"#f59e0b", "정비":"#ef4444", "대기중":"#f97316",
 };
 
 // ── 렌더러 ──────────────────────────────────────────
@@ -539,7 +539,7 @@ export default function YardMapViewPage() {
         <div className="w-52 shrink-0 space-y-4">
           <div className="bg-[#1a1a1a] border border-white/10 p-4">
             <p className="font-label text-[10px] uppercase tracking-widest text-white/40 mb-3">범례</p>
-            {([["가용","#2a2a2a"],["점유","#00912F"],["만재","#f59e0b"],["정비","#ef4444"],["양생중","#f97316"]] as [string,string][]).map(([s,c])=>(
+            {([["가용","#2a2a2a"],["점유","#00912F"],["만재","#f59e0b"],["정비","#ef4444"],["대기중","#f97316"]] as [string,string][]).map(([s,c])=>(
               <div key={s} className="flex items-center gap-2 mb-1.5">
                 <div className="w-4 h-4 rounded-sm border border-white/20" style={{background:c+"44"}}/>
                 <span className="text-[10px] font-label text-white/50">{s}</span>
