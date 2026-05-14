@@ -4,6 +4,7 @@ import { useState } from "react";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { DataTable } from "@/components/ui/DataTable";
 import { FieldHeader } from "@/components/ui/FieldHeader";
+import { PLANTS } from "@/data/plants";
 
 const HOURLY = [47, 62, 58, 71, 65, 80, 78, 94];
 const HOURS = ["08", "09", "10", "11", "12", "13", "14", "현재"];
@@ -17,7 +18,7 @@ const WO_DATA = [
 ];
 
 export default function OPSPlantPage() {
-  const [plant, setPlant] = useState("P3000");
+  const [plant, setPlant] = useState(PLANTS[3].code);
   const maxVal = Math.max(...HOURLY);
 
   return (
@@ -36,9 +37,11 @@ export default function OPSPlantPage() {
           onChange={(e) => setPlant(e.target.value)}
           className="bg-surface-container border border-outline-variant/20 text-on-surface text-sm px-3 py-1.5 font-label"
         >
-          <option value="P1000">P1000</option>
-          <option value="P2000">P2000</option>
-          <option value="P3000">P3000</option>
+          {PLANTS.map((p) => (
+            <option key={p.code} value={p.code}>
+              {p.code} {p.shortName}
+            </option>
+          ))}
         </select>
         <span className="text-xs font-label text-on-surface-variant">기간: 오늘</span>
         <span className="text-xs font-label text-on-surface-variant ml-auto">마지막 갱신 14:32 ⟳ 60초</span>
