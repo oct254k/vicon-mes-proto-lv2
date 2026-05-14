@@ -266,6 +266,18 @@ function hitTestEmptySlot(mx:number, my:number, excludeId:string, sectors:Sector
   return null;
 }
 
+// 커서 근처 가장 가까운 빈 슬롯 반환 (정확한 hit 불필요 — ghost snap & 클릭 인식용)
+function nearestEmptySlot(mx:number, my:number, excludeId:string, sectors:Sector[], snapDist=35): Lot|null {
+  let best:Lot|null=null, bestD=Infinity;
+  for(const sec of sectors) for(const z of sec.zones) for(const lot of z.lots){
+    if(lot.id===excludeId || lot.status!=="가용") continue;
+    const cx=lot.x+lot.w/2, cy=lot.y+lot.h/2;
+    const d=Math.hypot(mx-cx,my-cy);
+    if(d<bestD&&d<snapDist){bestD=d;best=lot;}
+  }
+  return best;
+}
+
 function findLotCenter(id:string, sectors:Sector[]):[number,number]|null {
   for(const sec of sectors) for(const z of sec.zones) for(const lot of z.lots){
     if(lot.id===id) return [lot.x+lot.w/2, lot.y+lot.h/2];
@@ -370,7 +382,13 @@ export default function YardMapViewPage() {
         const cw=wrap.clientWidth, ch=wrap.clientHeight;
         const [mx,my]=canvasToMap(cx,cy,cw,ch,z,p.x,p.y);
         const lot=dragLotRef.current.lot;
-        dragGhostRef.current={mapX:mx,mapY:my,w:lot.w,h:lot.h,status:lot.status};
+        // 가장 가까운 빈 슬롯에 snap — 없으면 커서 중심
+        const snap=nearestEmptySlot(mx,my,lot.id,sectorsRef.current);
+        if(snap){
+          dragGhostRef.current={mapX:snap.x+snap.w/2,mapY:snap.y+snap.h/2,w:snap.w,h:snap.h,status:lot.status};
+        } else {
+          dragGhostRef.current={mapX:mx,mapY:my,w:lot.w,h:lot.h,status:lot.status};
+        }
         setDragTick(t=>t+1);
         return;
       }
@@ -389,7 +407,7 @@ export default function YardMapViewPage() {
         const cw=wrap.clientWidth, ch=wrap.clientHeight;
         const [mx,my]=canvasToMap(cx,cy,cw,ch,z,p.x,p.y);
         const fromLot=dragLotRef.current.lot;
-        const emptyTarget=hitTestEmptySlot(mx,my,fromLot.id,sectorsRef.current);
+        const emptyTarget=nearestEmptySlot(mx,my,fromLot.id,sectorsRef.current);
         dragGhostRef.current=null;
         setDragTick(t=>t+1);
         if(emptyTarget){
