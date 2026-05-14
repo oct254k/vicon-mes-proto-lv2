@@ -121,7 +121,7 @@
 .logo-adaptive { filter: brightness(0) invert(1); }
 :root[data-theme="light"] .logo-adaptive { filter: none; }
 
-.logo-dark  { display: block; }
+.logo-dark  { display: block; mix-blend-mode: screen; }
 .logo-light { display: none; }
 :root[data-theme="light"] .logo-dark  { display: none; }
 :root[data-theme="light"] .logo-light { display: block; }
