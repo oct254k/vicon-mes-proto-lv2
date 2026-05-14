@@ -78,7 +78,7 @@ export default function WOLabelsPage() {
             </div>
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="bg-surface-container border-b border-outline-variant/10">
+                <tr className="bg-surface-container border-b border-outline">
                   {["라벨 유형", "발행 대상 ID", "발행일시", "상태", "재인쇄"].map(h => (
                     <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50">{h}</th>
                   ))}
@@ -92,7 +92,7 @@ export default function WOLabelsPage() {
                     <tr
                       key={row.id}
                       onClick={() => setSelectedLabel(row.id)}
-                      className={`border-b border-outline-variant/5 cursor-pointer transition-colors
+                      className={`border-b border-outline-variant cursor-pointer transition-colors
                         ${isSelected
                           ? "bg-primary-accent/10 border-l-2 border-l-primary-accent"
                           : "hover:bg-surface-container-highest/20"
@@ -102,7 +102,7 @@ export default function WOLabelsPage() {
                         <span className={`text-xs font-label uppercase font-bold px-2 py-0.5
                           ${row.type === "부재" ? "bg-primary-accent/10 text-primary-accent" :
                             row.type === "패킹" ? "bg-tertiary/10 text-tertiary" :
-                            "bg-[#f59e0b]/10 text-[#f59e0b]"}`}>
+                            "bg-warning/10 text-warning"}`}>
                           {row.type}
                         </span>
                       </td>

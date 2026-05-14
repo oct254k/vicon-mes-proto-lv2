@@ -17,7 +17,7 @@ const BOARD: Record<POState, {id:string; supplier:string; mat:string}[]> = {
 };
 const COL_STYLE: Record<POState, string> = {
   DRAFT:"border-outline-variant/30", SENT:"border-primary-accent", ACKNOWLEDGED:"border-primary-accent",
-  IN_TRANSIT:"border-[#f59e0b]", PARTIALLY_RECEIVED:"border-[#f59e0b]", RECEIVED:"border-primary-accent",
+  IN_TRANSIT:"border-warning", PARTIALLY_RECEIVED:"border-warning", RECEIVED:"border-primary-accent",
   CLOSED:"border-outline-variant/20", CANCELLED:"border-error/40",
 };
 const kpis = [{l:"전체 PO",v:10},{l:"진행 중",v:4},{l:"입고 완료",v:3},{l:"취소",v:1}];

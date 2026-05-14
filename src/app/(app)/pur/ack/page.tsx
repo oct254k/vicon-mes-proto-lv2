@@ -32,7 +32,7 @@ export default function PURAckPage() {
       <div className="grid grid-cols-4 gap-4 mb-6">
         {[
           { label: "ACCEPTED", count: 2, color: "border-primary-accent" },
-          { label: "PARTIAL", count: 1, color: "border-[#f59e0b]" },
+          { label: "PARTIAL", count: 1, color: "border-warning" },
           { label: "REJECTED", count: 2, color: "border-error" },
           { label: "COUNTER", count: 1, color: "border-outline-variant/40" },
         ].map((kpi) => (
@@ -54,7 +54,7 @@ export default function PURAckPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="bg-surface-container border-b border-outline-variant/10">
+              <tr className="bg-surface-container border-b border-outline">
                 <th className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">PO 번호</th>
                 <th className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">공급사</th>
                 <th className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">답신 유형</th>
@@ -66,7 +66,7 @@ export default function PURAckPage() {
               {ACK_DATA.map((row, i) => (
                 <tr
                   key={i}
-                  className={`border-b border-outline-variant/5 transition-colors ${
+                  className={`border-b border-outline-variant transition-colors ${
                     row.ackType === "REJECTED"
                       ? "bg-error/5 hover:bg-error/10"
                       : "hover:bg-surface-container-highest/20"
@@ -82,7 +82,7 @@ export default function PURAckPage() {
                   </td>
                   <td className="px-4 py-2 tabular-nums text-xs opacity-70">{row.ackAt}</td>
                   <td className="px-4 py-2">
-                    <button className="px-3 py-1 text-xs font-label uppercase tracking-widest bg-surface-container hover:bg-primary-accent hover:text-white transition-colors border border-outline-variant/20">
+                    <button className="px-3 py-1 text-xs font-label uppercase tracking-widest bg-surface-container hover:bg-primary-accent hover:text-on-surface transition-colors border border-outline-variant/20">
                       상세
                     </button>
                   </td>

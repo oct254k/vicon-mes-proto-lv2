@@ -43,7 +43,7 @@ export default function ShippablePage() {
         </div>
         <table className="w-full text-left border-collapse text-sm">
           <thead>
-            <tr className="bg-surface-container border-b border-outline-variant/10">
+            <tr className="bg-surface-container border-b border-outline">
               {["수주 ID", "부재 코드", "패킹 ID", "야적 위치", "수량", "납기일", "상태"].map((h) => (
                 <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
               ))}
@@ -53,7 +53,7 @@ export default function ShippablePage() {
             {ROWS.map((r, i) => {
               const s = STATUS_MAP[r.status];
               return (
-                <tr key={i} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors cursor-pointer">
+                <tr key={i} className="border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors cursor-pointer">
                   <td className="px-4 py-2 font-mono text-xs text-primary-accent">{r.soId}</td>
                   <td className="px-4 py-2 font-mono text-xs">{r.member}</td>
                   <td className="px-4 py-2 font-mono text-xs opacity-70">{r.packingId}</td>

@@ -68,7 +68,7 @@ export default function MFGTodayPage() {
         {visible.map(line => {
           const st = STATUS_MAP[line.status] ?? STATUS_MAP.PENDING;
           return (
-            <div key={line.id} className="bg-surface-container-low border border-outline-variant/10 p-4 space-y-2">
+            <div key={line.id} className="bg-surface-container-low border border-outline p-4 space-y-2">
               <div className="flex items-center justify-between">
                 <StatusBadge type={st.badge} label={st.label} />
                 <span className="text-xs text-on-surface/40 font-label">

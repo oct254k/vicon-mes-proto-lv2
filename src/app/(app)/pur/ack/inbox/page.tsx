@@ -34,13 +34,13 @@ export default function ACKInboxPage() {
       <FieldHeader title="답신 목록" moduleRef={`${rows.length}건`} />
       <div className="bg-surface-container-lowest overflow-x-auto">
         <table className="w-full text-left border-collapse">
-          <thead><tr className="bg-surface-container border-b border-outline-variant/10">
+          <thead><tr className="bg-surface-container border-b border-outline">
             {["PO 번호","공급사","답신 유형","수신 시각","비고","액션"].map(h=>(
               <th key={h} className="px-4 py-2 font-label text-xs uppercase tracking-widest opacity-50">{h}</th>
             ))}</tr></thead>
           <tbody className="font-headline text-sm">
             {rows.map((r,i)=>(
-              <tr key={i} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20">
+              <tr key={i} className="border-b border-outline-variant hover:bg-surface-container-highest/20">
                 <td className="px-4 py-2 text-primary-accent font-mono text-xs">{r.po}</td>
                 <td className="px-4 py-2">{r.supplier}</td>
                 <td className="px-4 py-2"><StatusBadge type={TM[r.type]} label={r.type} /></td>

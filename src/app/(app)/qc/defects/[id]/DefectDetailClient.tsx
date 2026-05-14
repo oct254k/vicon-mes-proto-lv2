@@ -22,7 +22,7 @@ const MOCK_DETAIL = {
 };
 
 const TRANSACTIONS = [
-  { code: "DEFECT", label: "DEFECT", subLabel: "격리 보관", desc: "불량품 격리 후 추가 조치 없음 (사유 필수)", color: "border-[#f59e0b] bg-[#f59e0b]" },
+  { code: "DEFECT", label: "DEFECT", subLabel: "격리 보관", desc: "불량품 격리 후 추가 조치 없음 (사유 필수)", color: "border-warning bg-warning" },
   { code: "SCRAP", label: "SCRAP", subLabel: "폐기", desc: "재고 차감·손실 환산 → 공장장 최종 결재", color: "border-error bg-error" },
   { code: "CLAIM", label: "CLAIM", subLabel: "클레임", desc: "공급사·운송사 통보 발행", color: "border-[#3b82f6] bg-[#3b82f6]" },
   { code: "RETURN", label: "RETURN", subLabel: "반품", desc: "Y-DEFECT 격리 입고 처리", color: "border-primary-accent bg-primary-accent" },
@@ -70,7 +70,7 @@ export default function DefectDetailClient({ id }: { id: string }) {
             </div>
           ))}
         </div>
-        <div className="border-t border-outline-variant/10 pt-4">
+        <div className="border-t border-outline pt-4">
           <p className="font-label text-xs uppercase tracking-widest opacity-50 mb-1">불량 사유</p>
           <p className="text-sm font-body text-on-surface/80">{d.reasonText}</p>
         </div>

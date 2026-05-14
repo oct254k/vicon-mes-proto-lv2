@@ -37,7 +37,7 @@ export default function NotiHistoryPage() {
         </div>
         <table className="w-full text-left border-collapse text-sm">
           <thead>
-            <tr className="bg-surface-container border-b border-outline-variant/10">
+            <tr className="bg-surface-container border-b border-outline">
               {["알림 ID", "유형", "수신자", "채널", "발송일시", "시도", "결과"].map((h) => (
                 <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
               ))}
@@ -47,7 +47,7 @@ export default function NotiHistoryPage() {
             {ROWS.map((r) => {
               const s = STATUS_MAP[r.result] ?? STATUS_MAP.FAILED;
               return (
-                <tr key={r.id} className={`border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors ${r.result === "FAILED" ? "bg-error/5" : ""}`}>
+                <tr key={r.id} className={`border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors ${r.result === "FAILED" ? "bg-error/5" : ""}`}>
                   <td className="px-4 py-2 font-mono text-xs text-primary-accent">{r.id}</td>
                   <td className="px-4 py-2 text-xs opacity-70">{r.type}</td>
                   <td className="px-4 py-2 text-xs">{r.recipient}</td>

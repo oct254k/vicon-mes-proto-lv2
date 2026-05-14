@@ -38,46 +38,46 @@ export default function USRAuditPage() {
         description="사용자 행위·시스템 이벤트 감사 이력 조회."
       />
 
-      <div className="flex flex-wrap gap-3 mb-6 bg-[#1a1a1a] p-4">
+      <div className="flex flex-wrap gap-3 mb-6 bg-surface-elevated p-4">
         <div className="flex items-center gap-2">
-          <label className="text-xs font-label uppercase tracking-widest text-white/50 whitespace-nowrap">사용자</label>
+          <label className="text-xs font-label uppercase tracking-widest text-on-surface/50 whitespace-nowrap">사용자</label>
           <input
             value={user}
             onChange={(e) => setUser(e.target.value)}
-            className="bg-[#131313] border border-white/10 px-3 py-2 text-sm text-white focus:outline-none focus:border-[#00912F] w-32"
+            className="bg-surface border border-outline/20 px-3 py-2 text-sm text-on-surface focus:outline-none focus:border-[#00912F] w-32"
             placeholder="이름 검색"
           />
         </div>
         <div className="flex items-center gap-2">
-          <label className="text-xs font-label uppercase tracking-widest text-white/50 whitespace-nowrap">이벤트</label>
+          <label className="text-xs font-label uppercase tracking-widest text-on-surface/50 whitespace-nowrap">이벤트</label>
           <select
             value={eventType}
             onChange={(e) => setEventType(e.target.value)}
-            className="bg-[#131313] border border-white/10 px-3 py-2 text-sm text-white focus:outline-none focus:border-[#00912F]"
+            className="bg-surface border border-outline/20 px-3 py-2 text-sm text-on-surface focus:outline-none focus:border-[#00912F]"
           >
             {eventTypes.map((et) => <option key={et}>{et}</option>)}
           </select>
         </div>
         <div className="flex items-center gap-2">
-          <label className="text-xs font-label uppercase tracking-widest text-white/50 whitespace-nowrap">기간</label>
+          <label className="text-xs font-label uppercase tracking-widest text-on-surface/50 whitespace-nowrap">기간</label>
           <input
             type="date"
             value={from}
             onChange={(e) => setFrom(e.target.value)}
-            className="bg-[#131313] border border-white/10 px-3 py-2 text-sm text-white focus:outline-none focus:border-[#00912F]"
+            className="bg-surface border border-outline/20 px-3 py-2 text-sm text-on-surface focus:outline-none focus:border-[#00912F]"
           />
-          <span className="text-white/30">~</span>
+          <span className="text-on-surface/30">~</span>
           <input
             type="date"
             value={to}
             onChange={(e) => setTo(e.target.value)}
-            className="bg-[#131313] border border-white/10 px-3 py-2 text-sm text-white focus:outline-none focus:border-[#00912F]"
+            className="bg-surface border border-outline/20 px-3 py-2 text-sm text-on-surface focus:outline-none focus:border-[#00912F]"
           />
         </div>
       </div>
 
       <FieldHeader title="감사 이력" moduleRef="SCR-USR-082" />
-      <section className="bg-[#1a1a1a] mt-4">
+      <section className="bg-surface-elevated mt-4">
         <div className="p-4 bg-white/5 flex justify-between items-center border-l-4 border-[#00912F]">
           <h3 className="font-headline font-black text-sm uppercase tracking-widest">
             로그 목록{" "}
@@ -88,21 +88,21 @@ export default function USRAuditPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="border-b border-white/5">
-                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-white/40">일시</th>
-                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-white/40">사용자</th>
-                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-white/40">이벤트</th>
-                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-white/40">IP</th>
-                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-white/40">결과</th>
+              <tr className="border-b border-outline/10">
+                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-on-surface/40">일시</th>
+                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-on-surface/40">사용자</th>
+                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-on-surface/40">이벤트</th>
+                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-on-surface/40">IP</th>
+                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-on-surface/40">결과</th>
               </tr>
             </thead>
             <tbody className="font-headline text-sm">
               {filtered.map((row, i) => (
-                <tr key={i} className="border-b border-white/5 hover:bg-white/5 transition-colors">
-                  <td className="px-4 py-3 tabular-nums text-white/60 text-xs">{row.ts}</td>
-                  <td className="px-4 py-3 text-white/80">{row.user}</td>
+                <tr key={i} className="border-b border-outline/10 hover:bg-white/5 transition-colors">
+                  <td className="px-4 py-3 tabular-nums text-on-surface/60 text-xs">{row.ts}</td>
+                  <td className="px-4 py-3 text-on-surface/80">{row.user}</td>
                   <td className="px-4 py-3 font-mono text-xs text-[#00912F]">{row.event}</td>
-                  <td className="px-4 py-3 tabular-nums text-white/50 text-xs font-mono">{row.ip}</td>
+                  <td className="px-4 py-3 tabular-nums text-on-surface/50 text-xs font-mono">{row.ip}</td>
                   <td className="px-4 py-3">
                     <StatusBadge type={row.result} label={row.resultLabel} />
                   </td>

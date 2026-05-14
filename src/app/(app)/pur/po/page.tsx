@@ -77,7 +77,7 @@ export default function PURPoPage() {
       <div className="overflow-x-auto bg-surface-container-lowest">
         <table className="w-full text-left border-collapse">
           <thead>
-            <tr className="bg-surface-container border-b border-outline-variant/10">
+            <tr className="bg-surface-container border-b border-outline">
               {["PO 번호", "공급사", "Material", "수량", "단가(₩)", "납기일", "상태"].map((h) => (
                 <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
               ))}
@@ -85,7 +85,7 @@ export default function PURPoPage() {
           </thead>
           <tbody>
             {PO_DATA.map((row) => (
-              <tr key={row.id} className="border-b border-outline-variant/5 hover:bg-surface-container/40 cursor-pointer">
+              <tr key={row.id} className="border-b border-outline-variant hover:bg-surface-container/40 cursor-pointer">
                 <td className="px-4 py-3">
                   <Link href={`/pur/po/${row.id}`} className="font-mono text-xs text-primary-accent hover:underline">{row.id}</Link>
                 </td>

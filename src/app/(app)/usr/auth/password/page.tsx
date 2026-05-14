@@ -35,8 +35,8 @@ export default function PasswordPage() {
         </div>
       </div>
 
-      <div className="mt-6 bg-surface-container-low border-l-4 border-[#f59e0b] p-4">
-        <p className="text-xs font-label uppercase tracking-widest text-[#f59e0b] mb-1">변경 이력</p>
+      <div className="mt-6 bg-surface-container-low border-l-4 border-warning p-4">
+        <p className="text-xs font-label uppercase tracking-widest text-warning mb-1">변경 이력</p>
         <div className="flex gap-8 text-xs font-body text-on-surface/50">
           <span>최근 비밀번호 변경: 2026-03-01</span>
           <span>최근 PIN 변경: 2026-04-10</span>

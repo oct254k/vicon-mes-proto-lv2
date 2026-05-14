@@ -46,13 +46,13 @@ export default function MatchBoardPage() {
           ))}
         </div>
         {/* EXCEPTION */}
-        <div className="bg-surface-container-lowest border-t-2 border-[#f59e0b] p-4">
+        <div className="bg-surface-container-lowest border-t-2 border-warning p-4">
           <FieldHeader title="EXCEPTION" moduleRef={`${BOARD.EXCEPTION.length}건`} />
           {BOARD.EXCEPTION.map(m=>(
             <div key={m.id} className="bg-surface-container p-3 mb-2">
               <p className="text-xs font-mono text-primary-accent">{m.id}</p>
               <p className="text-xs opacity-60 mt-0.5">{m.po}</p>
-              <span className="text-xs text-[#f59e0b] font-label">{m.reason}</span>
+              <span className="text-xs text-warning font-label">{m.reason}</span>
             </div>
           ))}
         </div>

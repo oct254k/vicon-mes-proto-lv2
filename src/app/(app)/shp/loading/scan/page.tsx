@@ -24,7 +24,7 @@ export default function LoadingScanPage() {
     <div className="max-w-sm mx-auto">
       <PageHeader title="PDA 적재 스캔" nodeRef="IA-SHP-LOADING-SCAN" status="PROTOTYPE"
         description="운전자 PDA 적재 스캔 — LOADED 전이 (EXTERNAL 토큰 · FNC-SHP-050/051/053/055)" />
-      <div className="bg-[#f59e0b]/10 border border-[#f59e0b]/40 px-3 py-2 mb-4 text-xs font-label text-[#f59e0b]">
+      <div className="bg-warning/10 border border-warning/40 px-3 py-2 mb-4 text-xs font-label text-warning">
         EXTERNAL 토큰 — 단일 shipment 범위 내 액션만 허용
       </div>
       <div className="bg-surface-container border-l-4 border-primary-accent p-4 mb-2">

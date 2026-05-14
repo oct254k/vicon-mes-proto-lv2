@@ -21,7 +21,7 @@ const COLS = [
   { key: "status",   label: "상태" },
 ];
 
-const STATUS_COLOR: Record<string, string> = { 정상: "text-primary-accent", 만재: "text-error", 주의: "text-[#f59e0b]", 공석: "text-on-surface-variant" };
+const STATUS_COLOR: Record<string, string> = { 정상: "text-primary-accent", 만재: "text-error", 주의: "text-warning", 공석: "text-on-surface-variant" };
 
 const KPI = [
   { label: "전체 구역",  value: `${ZONES.length}개` },
@@ -57,7 +57,7 @@ export default function InventoryYardPage() {
               </div>
               <p className="text-xs font-label text-on-surface-variant mb-2">{z.type}</p>
               <div className="h-4 bg-surface-container-highest/30">
-                <div className={`h-4 ${z.pct>=90?"bg-error":z.pct>=70?"bg-[#f59e0b]":"bg-primary-accent"}`} style={{width:`${z.pct}%`}} />
+                <div className={`h-4 ${z.pct>=90?"bg-error":z.pct>=70?"bg-warning":"bg-primary-accent"}`} style={{width:`${z.pct}%`}} />
               </div>
               <p className="text-xs font-label text-on-surface-variant mt-1">{z.qty}/{z.capacity} ({z.pct}%)</p>
             </div>

@@ -33,7 +33,7 @@ export default function EQMasterTreePage() {
               <div key={p.plant} className="ml-4 mb-3 border-l border-outline-variant/20 pl-4">
                 <p className="font-headline font-bold text-sm mb-2">{p.plant}</p>
                 {p.lines.map((l) => (
-                  <div key={l.line} className="ml-4 mb-2 border-l border-outline-variant/10 pl-4">
+                  <div key={l.line} className="ml-4 mb-2 border-l border-outline pl-4">
                     <p className="font-label text-xs uppercase tracking-widest opacity-60 mb-1">{l.line}</p>
                     <div className="flex flex-wrap gap-2 ml-4">
                       {l.eqs.map((eq) => (

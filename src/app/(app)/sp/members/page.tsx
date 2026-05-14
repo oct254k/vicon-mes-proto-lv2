@@ -30,13 +30,13 @@ export default function SPMembersPage() {
         description="수주 분해 기반 부재리스트 — 수주 선택 후 상세 부재 목록을 조회합니다."
       />
 
-      <div className="bg-[#1a1a1a] border-l-4 border-[#00912F]/50 p-4 mb-6 flex items-center gap-3">
+      <div className="bg-surface-elevated border-l-4 border-[#00912F]/50 p-4 mb-6 flex items-center gap-3">
         <span className="text-[#00912F] font-label uppercase tracking-widest text-xs font-bold">안내</span>
-        <span className="text-white/60 text-sm">수주 선택 후 [부재 리스트 보기] 를 클릭하면 해당 수주의 부재 상세 목록이 표시됩니다.</span>
+        <span className="text-on-surface/60 text-sm">수주 선택 후 [부재 리스트 보기] 를 클릭하면 해당 수주의 부재 상세 목록이 표시됩니다.</span>
       </div>
 
       <FieldHeader title="수주 목록" moduleRef="SCR-SP-020" />
-      <section className="bg-[#1a1a1a] mt-4">
+      <section className="bg-surface-elevated mt-4">
         <div className="p-4 bg-white/5 flex justify-between items-center border-l-4 border-[#00912F]">
           <h3 className="font-headline font-black text-sm uppercase tracking-widest">
             수주 목록{" "}
@@ -49,18 +49,18 @@ export default function SPMembersPage() {
             <thead>
               <tr className="border-b border-white/5">
                 {columns.map((col) => (
-                  <th key={col.key} className="px-4 py-2 text-xs font-label uppercase tracking-widest text-white/40">{col.label}</th>
+                  <th key={col.key} className="px-4 py-2 text-xs font-label uppercase tracking-widest text-on-surface/40">{col.label}</th>
                 ))}
-                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-white/40">액션</th>
+                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-on-surface/40">액션</th>
               </tr>
             </thead>
             <tbody className="font-headline text-sm">
               {data.map((row, i) => (
                 <tr key={i} className="border-b border-white/5 hover:bg-white/5 transition-colors">
                   <td className="px-4 py-3 text-[#00912F]">{row.soNo}</td>
-                  <td className="px-4 py-3 text-white/80">{row.site}</td>
-                  <td className="px-4 py-3 tabular-nums text-white/70">{row.memberCount}</td>
-                  <td className="px-4 py-3 tabular-nums text-white/70">{row.regDate}</td>
+                  <td className="px-4 py-3 text-on-surface/80">{row.site}</td>
+                  <td className="px-4 py-3 tabular-nums text-on-surface/70">{row.memberCount}</td>
+                  <td className="px-4 py-3 tabular-nums text-on-surface/70">{row.regDate}</td>
                   <td className="px-4 py-3">
                     <StatusBadge
                       type={row.status === "진행중" ? "running" : "idle"}
@@ -68,7 +68,7 @@ export default function SPMembersPage() {
                     />
                   </td>
                   <td className="px-4 py-3">
-                    <button className="border border-white/20 text-white/60 font-label uppercase tracking-widest text-xs px-3 py-1 hover:border-[#00912F] hover:text-[#00912F] transition-colors">
+                    <button className="border border-outline/30 text-on-surface/60 font-label uppercase tracking-widest text-xs px-3 py-1 hover:border-[#00912F] hover:text-[#00912F] transition-colors">
                       부재 리스트 보기
                     </button>
                   </td>

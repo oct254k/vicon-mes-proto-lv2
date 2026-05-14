@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, useCallback } from "react";
 import { PageHeader } from "@/components/ui/PageHeader";
+import { useTheme } from "@/components/ThemeProvider";
 
 // ── 타입 ──────────────────────────────────────────
 type SlotStatus = "가용" | "점유" | "만재" | "정비" | "이동대기중";
@@ -86,6 +87,38 @@ function h2r(hex:string, a:number) {
   const r=parseInt(hex.slice(1,3),16),g=parseInt(hex.slice(3,5),16),b=parseInt(hex.slice(5,7),16);
   return `rgba(${r},${g},${b},${a})`;
 }
+
+const DARK_PALETTE = {
+  bg:             "#1a2410",
+  boundary:       "#252520",
+  grid:           "rgba(255,255,255,0.03)",
+  road:           "#333",
+  roadDash:       "rgba(255,255,255,0.12)",
+  buildingLabel:  "rgba(255,255,255,0.6)",
+  compassBg:      "rgba(30,30,30,0.85)",
+  compassBorder:  "#555",
+  lotEmpty:       "rgba(42,42,42,0.9)",
+  lotEmptyStroke: "#3a3a3a",
+  lotText:        "rgba(255,255,255,0.25)",
+  lotTextOcc:     "rgba(255,255,255,0.85)",
+};
+
+const LIGHT_PALETTE = {
+  bg:             "#eef0eb",
+  boundary:       "#dde0d8",
+  grid:           "rgba(0,0,0,0.04)",
+  road:           "#c8ccc4",
+  roadDash:       "rgba(0,0,0,0.10)",
+  buildingLabel:  "rgba(0,0,0,0.65)",
+  compassBg:      "rgba(240,240,240,0.9)",
+  compassBorder:  "#999",
+  lotEmpty:       "rgba(200,200,200,0.7)",
+  lotEmptyStroke: "#aaa",
+  lotText:        "rgba(0,0,0,0.35)",
+  lotTextOcc:     "rgba(0,0,0,0.85)",
+};
+
+type Palette = typeof DARK_PALETTE;
 function drawPoly(ctx:CanvasRenderingContext2D, pts:number[][]) {
   ctx.beginPath(); pts.forEach(([x,y],i)=>i===0?ctx.moveTo(x,y):ctx.lineTo(x,y)); ctx.closePath();
 }
@@ -108,7 +141,8 @@ function renderYard(
   highlight:string, agingTick:boolean, selectedId:string,
   sectors: Sector[],
   draggingId?: string,
-  dragGhost?: { mapX:number; mapY:number; w:number; h:number; status:SlotStatus } | null
+  dragGhost?: { mapX:number; mapY:number; w:number; h:number; status:SlotStatus } | null,
+  palette: Palette = DARK_PALETTE
 ) {
   const dpr = window.devicePixelRatio||1;
   ctx.setTransform(1,0,0,1,0,0); ctx.scale(dpr,dpr);
@@ -118,28 +152,28 @@ function renderYard(
   ctx.translate(ox,oy); ctx.scale(zoom,zoom);
   const lod=getLOD(zoom);
 
-  ctx.fillStyle="#1a2410"; ctx.fillRect(-100,-100,W+200,H+200);
-  drawPoly(ctx,BOUNDARY); ctx.fillStyle="#252520"; ctx.fill();
+  ctx.fillStyle=palette.bg; ctx.fillRect(-100,-100,W+200,H+200);
+  drawPoly(ctx,BOUNDARY); ctx.fillStyle=palette.boundary; ctx.fill();
   ctx.save(); drawPoly(ctx,BOUNDARY); ctx.clip();
-  ctx.strokeStyle="rgba(255,255,255,0.03)"; ctx.lineWidth=0.5/zoom;
+  ctx.strokeStyle=palette.grid; ctx.lineWidth=0.5/zoom;
   for(let x=0;x<W;x+=50){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,H);ctx.stroke();}
   for(let y=0;y<H;y+=50){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(W,y);ctx.stroke();}
   ctx.restore();
   ctx.strokeStyle="#444"; ctx.lineWidth=3/zoom; ctx.setLineDash([6/zoom,4/zoom]);
   drawPoly(ctx,BOUNDARY); ctx.stroke(); ctx.setLineDash([]);
   ROADS.forEach(({pts,w})=>{
-    ctx.strokeStyle="#333"; ctx.lineWidth=w/zoom; ctx.lineCap="round"; ctx.lineJoin="round";
+    ctx.strokeStyle=palette.road; ctx.lineWidth=w/zoom; ctx.lineCap="round"; ctx.lineJoin="round";
     ctx.beginPath(); pts.forEach(([x,y],i)=>i===0?ctx.moveTo(x,y):ctx.lineTo(x,y)); ctx.stroke();
-    ctx.strokeStyle="rgba(255,255,255,0.12)"; ctx.lineWidth=1.5/zoom; ctx.setLineDash([10/zoom,8/zoom]);
+    ctx.strokeStyle=palette.roadDash; ctx.lineWidth=1.5/zoom; ctx.setLineDash([10/zoom,8/zoom]);
     ctx.beginPath(); pts.forEach(([x,y],i)=>i===0?ctx.moveTo(x,y):ctx.lineTo(x,y)); ctx.stroke(); ctx.setLineDash([]);
   });
   BUILDINGS.forEach(b=>{
-    ctx.fillStyle=b.color; ctx.strokeStyle="#333"; ctx.lineWidth=1.5/zoom;
+    ctx.fillStyle=b.color; ctx.strokeStyle=palette.road; ctx.lineWidth=1.5/zoom;
     if(b.type==="poly"){ drawPoly(ctx,(b as any).pts); ctx.fill(); ctx.stroke(); }
     else if(b.type==="rect"){ const br=b as any; ctx.beginPath(); ctx.roundRect(br.x,br.y,br.w,br.h,3); ctx.fill(); ctx.stroke(); }
     else if(b.type==="circle"){ const bc=b as any; ctx.beginPath(); ctx.arc(bc.cx,bc.cy,bc.r,0,Math.PI*2); ctx.fill(); ctx.stroke(); }
     if(zoom>0.35){
-      const fs=9/zoom; ctx.fillStyle="rgba(255,255,255,0.6)"; ctx.font=`${fs}px sans-serif`;
+      const fs=9/zoom; ctx.fillStyle=palette.buildingLabel; ctx.font=`${fs}px sans-serif`;
       const lbl=(b as any).label; const tw=ctx.measureText(lbl).width;
       const [bx,by]=b.type==="poly"?polyCenter((b as any).pts):b.type==="rect"?[(b as any).x+(b as any).w/2,(b as any).y+(b as any).h/2]:[(b as any).cx,(b as any).cy];
       ctx.fillText(lbl,bx-tw/2,by+fs*0.4);
@@ -162,7 +196,7 @@ function renderYard(
         const isSel=lot.id===selectedId;
         const isDragging=lot.id===draggingId;
         let fill:string, stroke:string;
-        if(lot.status==="가용"){ fill=h2r("#2a2a2a",0.9); stroke="#3a3a3a"; }
+        if(lot.status==="가용"){ fill=palette.lotEmpty; stroke=palette.lotEmptyStroke; }
         else if(lot.status==="점유"){ fill=h2r("#00912F",0.35); stroke="#00912F"; }
         else if(lot.status==="만재"){ fill=h2r("#f59e0b",0.35); stroke="#f59e0b"; }
         else if(lot.status==="정비"){ fill=h2r("#ef4444",0.25); stroke="#ef4444"; }
@@ -174,7 +208,7 @@ function renderYard(
         if(isHL){ ctx.strokeStyle="#fff"; ctx.lineWidth=2/zoom; ctx.beginPath(); ctx.roundRect(lot.x-1/zoom,lot.y-1/zoom,lot.w+2/zoom,lot.h+2/zoom,2); ctx.stroke(); }
         if(lot.w*zoom>18){
           const lfs=Math.min(7/zoom,lot.h*0.38);
-          ctx.fillStyle=lot.status==="가용"?"rgba(255,255,255,0.25)":"rgba(255,255,255,0.85)";
+          ctx.fillStyle=lot.status==="가용"?palette.lotText:palette.lotTextOcc;
           ctx.font=`${lfs}px sans-serif`;
           const n=String(lot.num);
           ctx.fillText(n,lot.x+lot.w/2-ctx.measureText(n).width/2,lot.y+lot.h/2+lfs*0.35);
@@ -203,8 +237,8 @@ function renderYard(
   ctx.fillStyle="#3a2a0a"; ctx.font=`bold ${8/zoom}px sans-serif`; ctx.fillText("MAIN GATE",192,22/zoom);
   // 나침반
   const[ncx,ncy,nr]=[W-40,50,18];
-  ctx.fillStyle="rgba(30,30,30,0.85)"; ctx.beginPath(); ctx.arc(ncx,ncy,nr,0,Math.PI*2); ctx.fill();
-  ctx.strokeStyle="#555"; ctx.lineWidth=1/zoom; ctx.beginPath(); ctx.arc(ncx,ncy,nr,0,Math.PI*2); ctx.stroke();
+  ctx.fillStyle=palette.compassBg; ctx.beginPath(); ctx.arc(ncx,ncy,nr,0,Math.PI*2); ctx.fill();
+  ctx.strokeStyle=palette.compassBorder; ctx.lineWidth=1/zoom; ctx.beginPath(); ctx.arc(ncx,ncy,nr,0,Math.PI*2); ctx.stroke();
   ctx.fillStyle="#f97316"; ctx.font=`bold ${9/zoom}px sans-serif`; ctx.fillText("N",ncx-3/zoom,ncy-5/zoom);
   ctx.strokeStyle="#f97316"; ctx.lineWidth=1.5/zoom;
   ctx.beginPath(); ctx.moveTo(ncx,ncy-14); ctx.lineTo(ncx,ncy+14); ctx.stroke();
@@ -265,6 +299,8 @@ interface PackingInfo {
 export default function YardMapViewPage() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const wrapRef   = useRef<HTMLDivElement>(null);
+  const { theme } = useTheme();
+  const paletteRef = useRef<Palette>(DARK_PALETTE);
   const [zoom, setZoom]     = useState(0.52);
   const [pan,  setPan]      = useState({x:0,y:0});
   const [selected, setSelected] = useState<Lot|null>(null);
@@ -306,10 +342,12 @@ export default function YardMapViewPage() {
       highlight,agingTick,selected?.id??"",
       sectorsRef.current,
       dragLotRef.current?.lot.id,
-      dragGhostRef.current
+      dragGhostRef.current,
+      paletteRef.current
     );
   },[highlight,agingTick,selected]);
 
+  useEffect(()=>{ paletteRef.current = theme === "light" ? LIGHT_PALETTE : DARK_PALETTE; render(); },[theme]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(()=>{render();},[zoom,pan,render,dragTick]);
   useEffect(()=>{window.addEventListener("resize",render);return()=>window.removeEventListener("resize",render);},[render]);
 
@@ -495,11 +533,11 @@ export default function YardMapViewPage() {
           value={search}
           onChange={e=>doSearch(e.target.value)}
           placeholder="위치ID / Lot / 자재 검색..."
-          className="bg-[#131313] border border-white/10 px-3 py-2 text-xs text-white focus:outline-none focus:border-[#00912F] w-64"
+          className="bg-surface border border-outline/20 px-3 py-2 text-xs text-on-surface focus:outline-none focus:border-[#00912F] w-64"
         />
         <button
           onClick={()=>fileRef.current?.click()}
-          className="bg-[#1a1a1a] border border-white/10 text-white/60 font-label uppercase tracking-widest px-4 py-2 text-xs hover:border-[#00912F]/50 transition-colors"
+          className="bg-surface-elevated border border-outline/20 text-on-surface/60 font-label uppercase tracking-widest px-4 py-2 text-xs hover:border-[#00912F]/50 transition-colors"
         >
           📷 바코드 스캔
         </button>
@@ -507,11 +545,11 @@ export default function YardMapViewPage() {
         {scanMsg && <span className="text-xs font-label text-[#00912F]">{scanMsg}</span>}
 
         <div className="flex items-center gap-2 ml-auto">
-          <button onClick={()=>setZoom(z=>Math.max(0.2,z-0.15))} className="bg-[#1a1a1a] border border-white/10 text-white/60 px-3 py-2 text-sm hover:border-white/30">−</button>
+          <button onClick={()=>setZoom(z=>Math.max(0.2,z-0.15))} className="bg-surface-elevated border border-outline/20 text-on-surface/60 px-3 py-2 text-sm hover:border-outline/50">−</button>
           <input type="range" min={20} max={300} value={pct} onChange={e=>setZoom(Number(e.target.value)/100)} className="w-28" />
-          <button onClick={()=>setZoom(z=>Math.min(3,z+0.15))} className="bg-[#1a1a1a] border border-white/10 text-white/60 px-3 py-2 text-sm hover:border-white/30">+</button>
-          <span className="text-xs font-label text-white/40 w-10">{pct}%</span>
-          <button onClick={()=>{setZoom(0.52);setPan({x:0,y:0});}} className="bg-[#1a1a1a] border border-white/10 text-white/50 font-label uppercase tracking-widest px-3 py-2 text-xs hover:border-white/30">초기화</button>
+          <button onClick={()=>setZoom(z=>Math.min(3,z+0.15))} className="bg-surface-elevated border border-outline/20 text-on-surface/60 px-3 py-2 text-sm hover:border-outline/50">+</button>
+          <span className="text-xs font-label text-on-surface/40 w-10">{pct}%</span>
+          <button onClick={()=>{setZoom(0.52);setPan({x:0,y:0});}} className="bg-surface-elevated border border-outline/20 text-on-surface/50 font-label uppercase tracking-widest px-3 py-2 text-xs hover:border-outline/50">초기화</button>
           <span className="text-xs font-label px-3 py-1 rounded" style={{background:h2r(LOD_COLORS[lod],0.15),color:LOD_COLORS[lod],border:`1px solid ${h2r(LOD_COLORS[lod],0.35)}`}}>
             {LOD_LABELS[lod]}
           </span>
@@ -521,15 +559,15 @@ export default function YardMapViewPage() {
       {/* 본문 */}
       <div className="flex gap-4">
         {/* 캔버스 */}
-        <div ref={wrapRef} className="flex-1 border border-white/10 rounded-sm overflow-hidden" style={{height:520,cursor:wrapCursor,position:"relative"}}>
+        <div ref={wrapRef} className="flex-1 border border-outline/20 rounded-sm overflow-hidden" style={{height:520,cursor:wrapCursor,position:"relative"}}>
           <canvas ref={canvasRef} style={{display:"block"}} />
           {lod<2 && (
-            <div className="absolute bottom-3 left-3 text-[10px] font-label text-white/30 pointer-events-none">
+            <div className="absolute bottom-3 left-3 text-[10px] font-label text-on-surface/30 pointer-events-none">
               줌인하면 Zone → Lot 상세 표시
             </div>
           )}
           {lod===2 && !isDraggingLot && (
-            <div className="absolute bottom-3 left-3 text-[10px] font-label text-white/30 pointer-events-none">
+            <div className="absolute bottom-3 left-3 text-[10px] font-label text-on-surface/30 pointer-events-none">
               점유 Lot을 드래그해 빈 슬롯으로 이동
             </div>
           )}
@@ -537,36 +575,36 @@ export default function YardMapViewPage() {
 
         {/* 사이드바 */}
         <div className="w-52 shrink-0 space-y-4">
-          <div className="bg-[#1a1a1a] border border-white/10 p-4">
-            <p className="font-label text-[10px] uppercase tracking-widest text-white/40 mb-3">범례</p>
+          <div className="bg-surface-elevated border border-outline/20 p-4">
+            <p className="font-label text-[10px] uppercase tracking-widest text-on-surface/40 mb-3">범례</p>
             {([["가용","#2a2a2a"],["점유","#00912F"],["만재","#f59e0b"],["정비","#ef4444"],["이동대기중","#f97316"]] as [string,string][]).map(([s,c])=>(
               <div key={s} className="flex items-center gap-2 mb-1.5">
-                <div className="w-4 h-4 rounded-sm border border-white/20" style={{background:c+"44"}}/>
-                <span className="text-[10px] font-label text-white/50">{s}</span>
+                <div className="w-4 h-4 rounded-sm border border-outline/30" style={{background:c+"44"}}/>
+                <span className="text-[10px] font-label text-on-surface/50">{s}</span>
               </div>
             ))}
           </div>
 
           {selected ? (
-            <div className="bg-[#1a1a1a] border border-white/10 p-4">
+            <div className="bg-surface-elevated border border-outline/20 p-4">
               <p className="font-label text-[10px] uppercase tracking-widest mb-2" style={{color:STATUS_COLOR[selected.status]}}>{selected.status}</p>
-              <p className="text-white text-xs font-bold font-label mb-3 break-all">{selected.id}</p>
+              <p className="text-on-surface text-xs font-bold font-label mb-3 break-all">{selected.id}</p>
               {selected.material && (
-                <div className="space-y-2 text-[10px] font-label text-white/50">
-                  <div><span className="text-white/30">자재</span><p className="text-white/80 mt-0.5">{selected.material}</p></div>
-                  <div><span className="text-white/30">Lot</span><p className="text-white/80 mt-0.5">{selected.lot}</p></div>
-                  <div><span className="text-white/30">수량</span><p className="text-white/80 mt-0.5">{selected.qty?.toLocaleString()} m</p></div>
+                <div className="space-y-2 text-[10px] font-label text-on-surface/50">
+                  <div><span className="text-on-surface/30">자재</span><p className="text-on-surface/80 mt-0.5">{selected.material}</p></div>
+                  <div><span className="text-on-surface/30">Lot</span><p className="text-on-surface/80 mt-0.5">{selected.lot}</p></div>
+                  <div><span className="text-on-surface/30">수량</span><p className="text-on-surface/80 mt-0.5">{selected.qty?.toLocaleString()} m</p></div>
                 </div>
               )}
-              {!selected.material && <p className="text-white/30 text-[10px] font-label">{selected.status==="가용"?"비어있음":"점검 중"}</p>}
+              {!selected.material && <p className="text-on-surface/30 text-[10px] font-label">{selected.status==="가용"?"비어있음":"점검 중"}</p>}
             </div>
           ) : (
-            <div className="bg-[#1a1a1a] border border-white/10 p-4">
-              <p className="text-white/20 text-[10px] font-label">Lot을 클릭하면{"\n"}상세 표시</p>
+            <div className="bg-surface-elevated border border-outline/20 p-4">
+              <p className="text-on-surface/20 text-[10px] font-label">Lot을 클릭하면{"\n"}상세 표시</p>
             </div>
           )}
 
-          <a href="/loc/yard-map/edit" className="block text-center bg-[#1a1a1a] border border-white/10 text-white/40 font-label uppercase tracking-widest px-4 py-2 text-[10px] hover:border-[#00912F]/50 transition-colors">
+          <a href="/loc/yard-map/edit" className="block text-center bg-surface-elevated border border-outline/20 text-on-surface/40 font-label uppercase tracking-widest px-4 py-2 text-[10px] hover:border-[#00912F]/50 transition-colors">
             [편집 모드 ▶]
           </a>
         </div>
@@ -575,51 +613,51 @@ export default function YardMapViewPage() {
       {/* 패킹리스트 모달 */}
       {packingInfo && (
         <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50" onClick={()=>{dragLotRef.current=null;setIsDraggingLot(false);setPackingInfo(null);}}>
-          <div className="bg-[#1a1a1a] border border-white/20 w-80 shadow-2xl" onClick={e=>e.stopPropagation()}>
+          <div className="bg-surface-elevated border border-outline/30 w-80 shadow-2xl" onClick={e=>e.stopPropagation()}>
             {/* 헤더 */}
-            <div className="flex items-center justify-between px-5 py-4 border-b border-white/10">
+            <div className="flex items-center justify-between px-5 py-4 border-b border-outline/20">
               <p className="font-label text-[11px] uppercase tracking-widest text-[#00912F]">패킹리스트 발행</p>
-              <button onClick={()=>{dragLotRef.current=null;setIsDraggingLot(false);setPackingInfo(null);}} className="text-white/30 hover:text-white text-lg leading-none">×</button>
+              <button onClick={()=>{dragLotRef.current=null;setIsDraggingLot(false);setPackingInfo(null);}} className="text-on-surface/30 hover:text-on-surface text-lg leading-none">×</button>
             </div>
             {/* 이동 정보 */}
-            <div className="px-5 py-4 border-b border-white/10">
-              <p className="font-label text-[9px] uppercase tracking-widest text-white/30 mb-3">이동 정보</p>
+            <div className="px-5 py-4 border-b border-outline/20">
+              <p className="font-label text-[9px] uppercase tracking-widest text-on-surface/30 mb-3">이동 정보</p>
               <div className="space-y-2 text-[10px] font-label">
                 <div className="flex items-start gap-2">
-                  <span className="text-white/30 w-10 shrink-0">From</span>
+                  <span className="text-on-surface/30 w-10 shrink-0">From</span>
                   <div>
-                    <p className="text-white/80 break-all">{packingInfo.fromId}</p>
-                    <p className="text-white/40">{packingInfo.fromSec} › {packingInfo.fromZone}</p>
+                    <p className="text-on-surface/80 break-all">{packingInfo.fromId}</p>
+                    <p className="text-on-surface/40">{packingInfo.fromSec} › {packingInfo.fromZone}</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-2 text-white/30">
+                <div className="flex items-center gap-2 text-on-surface/30">
                   <span className="w-10 shrink-0"/>
                   <span>↓</span>
                 </div>
                 <div className="flex items-start gap-2">
-                  <span className="text-white/30 w-10 shrink-0">To</span>
+                  <span className="text-on-surface/30 w-10 shrink-0">To</span>
                   <div>
-                    <p className="text-white/80 break-all">{packingInfo.toId}</p>
-                    <p className="text-white/40">{packingInfo.toSec} › {packingInfo.toZone}</p>
+                    <p className="text-on-surface/80 break-all">{packingInfo.toId}</p>
+                    <p className="text-on-surface/40">{packingInfo.toSec} › {packingInfo.toZone}</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-2 mt-1">
-                  <span className="text-white/30 w-10 shrink-0">일시</span>
-                  <span className="text-white/60">{packingInfo.movedAt}</span>
+                  <span className="text-on-surface/30 w-10 shrink-0">일시</span>
+                  <span className="text-on-surface/60">{packingInfo.movedAt}</span>
                 </div>
               </div>
             </div>
             {/* Lot 정보 */}
-            <div className="px-5 py-4 border-b border-white/10">
-              <p className="font-label text-[9px] uppercase tracking-widest text-white/30 mb-3">Lot 정보</p>
+            <div className="px-5 py-4 border-b border-outline/20">
+              <p className="font-label text-[9px] uppercase tracking-widest text-on-surface/30 mb-3">Lot 정보</p>
               {packingInfo.lotNo ? (
                 <div className="space-y-2 text-[10px] font-label">
-                  <div className="flex gap-2"><span className="text-white/30 w-14 shrink-0">Lot 번호</span><span className="text-white/80">{packingInfo.lotNo}</span></div>
-                  <div className="flex gap-2"><span className="text-white/30 w-14 shrink-0">자재</span><span className="text-white/80">{packingInfo.material}</span></div>
-                  <div className="flex gap-2"><span className="text-white/30 w-14 shrink-0">수량</span><span className="text-white/80">{packingInfo.qty?.toLocaleString()} m</span></div>
+                  <div className="flex gap-2"><span className="text-on-surface/30 w-14 shrink-0">Lot 번호</span><span className="text-on-surface/80">{packingInfo.lotNo}</span></div>
+                  <div className="flex gap-2"><span className="text-on-surface/30 w-14 shrink-0">자재</span><span className="text-on-surface/80">{packingInfo.material}</span></div>
+                  <div className="flex gap-2"><span className="text-on-surface/30 w-14 shrink-0">수량</span><span className="text-on-surface/80">{packingInfo.qty?.toLocaleString()} m</span></div>
                 </div>
               ) : (
-                <p className="text-[10px] font-label text-white/30">Lot 정보 없음</p>
+                <p className="text-[10px] font-label text-on-surface/30">Lot 정보 없음</p>
               )}
             </div>
             {/* 버튼 */}
@@ -627,7 +665,7 @@ export default function YardMapViewPage() {
               <button onClick={confirmMove} className="flex-1 bg-[#00912F] text-black font-label font-bold uppercase tracking-widest py-3 text-xs hover:opacity-90">
                 확인·이동
               </button>
-              <button onClick={()=>{dragLotRef.current=null;setIsDraggingLot(false);setPackingInfo(null);}} className="flex-1 bg-[#131313] border border-white/10 text-white/50 font-label uppercase tracking-widest py-3 text-xs hover:border-white/30">
+              <button onClick={()=>{dragLotRef.current=null;setIsDraggingLot(false);setPackingInfo(null);}} className="flex-1 bg-surface border border-outline/20 text-on-surface/50 font-label uppercase tracking-widest py-3 text-xs hover:border-outline/50">
                 취소
               </button>
             </div>

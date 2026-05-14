@@ -1,0 +1,162 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "성지그룹 Logo" [ref=e5] [cursor=pointer]:
+          - /url: /ops/
+          - img "성지그룹 Logo" [ref=e6]
+        - generic [ref=e7]:
+          - link "대시보드" [ref=e8] [cursor=pointer]:
+            - /url: /ops/
+          - link "이력추적" [ref=e9] [cursor=pointer]:
+            - /url: /trace/
+          - link "알람" [ref=e10] [cursor=pointer]:
+            - /url: /alarm/
+      - generic [ref=e11]:
+        - button "book_2" [ref=e12] [cursor=pointer]
+        - generic [ref=e13] [cursor=pointer]: notifications
+        - generic [ref=e14] [cursor=pointer]: settings
+        - generic [ref=e16]: person
+    - complementary [ref=e17]:
+      - generic [ref=e19]:
+        - generic [ref=e20]: search
+        - textbox "메뉴 검색... (/)" [ref=e21]
+      - navigation [ref=e22]:
+        - list [ref=e23]:
+          - listitem [ref=e24]:
+            - button "inventory_2 기준정보 expand_more" [ref=e25]:
+              - generic [ref=e26]: inventory_2
+              - generic [ref=e27]: 기준정보
+              - generic [ref=e28]: expand_more
+          - listitem [ref=e29]:
+            - button "request_quote 수주·생산계획·MRP expand_more" [ref=e30]:
+              - generic [ref=e31]: request_quote
+              - generic [ref=e32]: 수주·생산계획·MRP
+              - generic [ref=e33]: expand_more
+          - listitem [ref=e34]:
+            - button "assignment 작업지시·부재·패킹 expand_more" [ref=e35]:
+              - generic [ref=e36]: assignment
+              - generic [ref=e37]: 작업지시·부재·패킹
+              - generic [ref=e38]: expand_more
+          - listitem [ref=e39]:
+            - button "precision_manufacturing 생산실행·추적성 expand_more" [ref=e40]:
+              - generic [ref=e41]: precision_manufacturing
+              - generic [ref=e42]: 생산실행·추적성
+              - generic [ref=e43]: expand_more
+          - listitem [ref=e44]:
+            - button "warehouse 위치·재고 expand_more" [ref=e45]:
+              - generic [ref=e46]: warehouse
+              - generic [ref=e47]: 위치·재고
+              - generic [ref=e48]: expand_more
+          - listitem [ref=e49]:
+            - button "verified 품질·SPC·불량 expand_more" [ref=e50]:
+              - generic [ref=e51]: verified
+              - generic [ref=e52]: 품질·SPC·불량
+              - generic [ref=e53]: expand_more
+          - listitem [ref=e54]:
+            - button "engineering 설비관리 expand_more" [ref=e55]:
+              - generic [ref=e56]: engineering
+              - generic [ref=e57]: 설비관리
+              - generic [ref=e58]: expand_more
+          - listitem [ref=e59]:
+            - button "shopping_cart 구매·발주 expand_more" [ref=e60]:
+              - generic [ref=e61]: shopping_cart
+              - generic [ref=e62]: 구매·발주
+              - generic [ref=e63]: expand_more
+          - listitem [ref=e64]:
+            - button "local_shipping 출하 expand_more" [ref=e65]:
+              - generic [ref=e66]: local_shipping
+              - generic [ref=e67]: 출하
+              - generic [ref=e68]: expand_more
+            - list [ref=e69]:
+              - listitem [ref=e70]:
+                - button "출하 일정·차량 배차 expand_more" [ref=e71]:
+                  - generic [ref=e72]: 출하 일정·차량 배차
+                  - generic [ref=e73]: expand_more
+              - listitem [ref=e74]:
+                - button "패킹 묶음 작업 (포장 PDA) expand_more" [ref=e75]:
+                  - generic [ref=e76]: 패킹 묶음 작업 (포장 PDA)
+                  - generic [ref=e77]: expand_more
+              - listitem [ref=e78]:
+                - button "STORED·야적 위치 관리 expand_more" [ref=e79]:
+                  - generic [ref=e80]: STORED·야적 위치 관리
+                  - generic [ref=e81]: expand_more
+              - listitem [ref=e82]:
+                - button "패킹 라벨·문서 (PDF·라벨) expand_more" [ref=e83]:
+                  - generic [ref=e84]: 패킹 라벨·문서 (PDF·라벨)
+                  - generic [ref=e85]: expand_more
+              - listitem [ref=e86]:
+                - button "차량 적재 LOADED (운전자 PDA) expand_more" [ref=e87]:
+                  - generic [ref=e88]: 차량 적재 LOADED (운전자 PDA)
+                  - generic [ref=e89]: expand_more
+              - listitem [ref=e90]:
+                - button "게이트 RFID·SHIPPED expand_more" [ref=e91]:
+                  - generic [ref=e92]: 게이트 RFID·SHIPPED
+                  - generic [ref=e93]: expand_more
+                - list [ref=e94]:
+                  - listitem [ref=e95]:
+                    - link "— RFID 모니터링·LED" [ref=e96] [cursor=pointer]:
+                      - /url: /shp/gate/monitor/
+                      - generic [ref=e97]: —
+                      - generic [ref=e98]: RFID 모니터링·LED
+                  - listitem [ref=e99]:
+                    - link "— L3 수동 폴백" [ref=e100] [cursor=pointer]:
+                      - /url: /shp/gate/fallback/
+                      - generic [ref=e101]: —
+                      - generic [ref=e102]: L3 수동 폴백
+              - listitem [ref=e103]:
+                - button "현장 검수·RECEIVED (모바일 앱) expand_more" [ref=e104]:
+                  - generic [ref=e105]: 현장 검수·RECEIVED (모바일 앱)
+                  - generic [ref=e106]: expand_more
+              - listitem [ref=e107]:
+                - button "출하 알림 (4채널) expand_more" [ref=e108]:
+                  - generic [ref=e109]: 출하 알림 (4채널)
+                  - generic [ref=e110]: expand_more
+          - listitem [ref=e111]:
+            - button "groups 사용자·권한 expand_more" [ref=e112]:
+              - generic [ref=e113]: groups
+              - generic [ref=e114]: 사용자·권한
+              - generic [ref=e115]: expand_more
+          - listitem [ref=e116]:
+            - button "dashboard 운영현황·대시보드 expand_more" [ref=e117]:
+              - generic [ref=e118]: dashboard
+              - generic [ref=e119]: 운영현황·대시보드
+              - generic [ref=e120]: expand_more
+          - listitem [ref=e121]:
+            - button "settings 시스템관리 expand_more" [ref=e122]:
+              - generic [ref=e123]: settings
+              - generic [ref=e124]: 시스템관리
+              - generic [ref=e125]: expand_more
+    - main [ref=e126]:
+      - generic [ref=e127]:
+        - generic [ref=e128]:
+          - generic [ref=e129]: ETO MES|GATE TERMINAL
+          - generic [ref=e130]: SCR-SHP-006
+        - generic [ref=e131]:
+          - generic [ref=e132]:
+            - paragraph [ref=e133]: GATE ID
+            - paragraph [ref=e134]: GATE-01
+            - paragraph [ref=e135]: 제3 이천공장 출하 게이트
+          - generic [ref=e136]:
+            - generic [ref=e137]: CLOSED
+            - generic [ref=e138]: 차단바 폐쇄
+          - button "수동 인식" [ref=e139]
+          - generic [ref=e140]:
+            - paragraph [ref=e141]: 최근 통과 차량
+            - generic [ref=e142]:
+              - generic [ref=e143]:
+                - generic [ref=e144]: VH-25TON-003
+                - generic [ref=e145]: 08:05
+                - generic [ref=e146]: RFID
+              - generic [ref=e147]:
+                - generic [ref=e148]: VH-15TON-007
+                - generic [ref=e149]: 06:40
+                - generic [ref=e150]: RFID
+              - generic [ref=e151]:
+                - generic [ref=e152]: VH-25TON-001
+                - generic [ref=e153]: 05:20
+                - generic [ref=e154]: MANUAL
+    - generic [ref=e156]: System Active | Port 8080 | Secure Link
+  - button "Open Next.js Dev Tools" [ref=e162] [cursor=pointer]:
+    - img [ref=e163]
+  - alert [ref=e166]

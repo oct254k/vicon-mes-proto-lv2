@@ -33,7 +33,7 @@ export default function QCDefectReportPdaPage() {
             </label>
           ))}
         </div>
-        <p className="text-xs text-[#f59e0b] mt-2">* 시점이 늦을수록 손실 가중치·통보 범위 자동 가중 (FR-QC-050)</p>
+        <p className="text-xs text-warning mt-2">* 시점이 늦을수록 손실 가중치·통보 범위 자동 가중 (FR-QC-050)</p>
       </div>
 
       <div className="bg-surface-container-low border-l-4 border-primary-accent p-4 mb-4">

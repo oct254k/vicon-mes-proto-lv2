@@ -33,7 +33,7 @@ export default function QCSpcRuleMapPage() {
         description="Western Electric 8 Rules × WC × Material 액션 매핑 마스터 (FNC-QC-043)"
       />
 
-      <div className="bg-surface-container border-l-4 border-[#f59e0b] p-4 mb-6">
+      <div className="bg-surface-container border-l-4 border-warning p-4 mb-6">
         <p className="text-sm font-body opacity-70">
           Western Electric 8 Rules — 관리도 이상 패턴 자동 감지 기준. Rule×WC×Material 조합별 처리 액션·우선순위를 정의합니다. CRITICAL 위반 시 라인 정지 알림 자동 발령 (FR-QC-031).
         </p>

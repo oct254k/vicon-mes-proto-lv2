@@ -31,7 +31,7 @@ export default function CountSheetPage() {
     setSaved(false);
   };
 
-  const inputCls = "bg-[#131313] border border-white/10 px-2 py-1 text-sm text-white focus:outline-none focus:border-[#00912F] w-24";
+  const inputCls = "bg-surface border border-outline/20 px-2 py-1 text-sm text-on-surface focus:outline-none focus:border-[#00912F] w-24";
 
   return (
     <div>
@@ -47,22 +47,22 @@ export default function CountSheetPage() {
       <div className="overflow-x-auto">
         <table className="w-full text-sm border-collapse">
           <thead>
-            <tr className="bg-[#1a1a1a] border-b border-white/10">
+            <tr className="bg-surface-elevated border-b border-outline/20">
               {["위치 ID","자재","시스템 수량","실측 수량","차이","비고"].map(h => (
-                <th key={h} className="px-4 py-2 text-left text-xs font-label uppercase tracking-widest text-white/40">{h}</th>
+                <th key={h} className="px-4 py-2 text-left text-xs font-label uppercase tracking-widest text-on-surface/40">{h}</th>
               ))}
             </tr>
           </thead>
           <tbody className="font-headline">
             {rows.map((r, i) => (
-              <tr key={r.locId} className="border-b border-white/5 hover:bg-white/5">
+              <tr key={r.locId} className="border-b border-outline/10 hover:bg-white/5">
                 <td className="px-4 py-2 text-[#00912F] text-xs">{r.locId}</td>
-                <td className="px-4 py-2 text-white/70 text-xs">{r.material}</td>
-                <td className="px-4 py-2 tabular-nums text-white/30">{"****"}</td>
+                <td className="px-4 py-2 text-on-surface/70 text-xs">{r.material}</td>
+                <td className="px-4 py-2 tabular-nums text-on-surface/30">{"****"}</td>
                 <td className="px-4 py-2">
                   <input className={inputCls} type="number" value={r.countQty} onChange={e=>update(i,"countQty",e.target.value)} placeholder="—" />
                 </td>
-                <td className={`px-4 py-2 tabular-nums font-bold ${r.diff.startsWith("+") ? "text-[#00912F]" : r.diff.startsWith("-") ? "text-[#ef4444]" : "text-white/30"}`}>
+                <td className={`px-4 py-2 tabular-nums font-bold ${r.diff.startsWith("+") ? "text-[#00912F]" : r.diff.startsWith("-") ? "text-danger" : "text-on-surface/30"}`}>
                   {r.diff || "—"}
                 </td>
                 <td className="px-4 py-2">
@@ -78,7 +78,7 @@ export default function CountSheetPage() {
         <button onClick={() => setSaved(true)} className="bg-[#00912F] text-black font-label font-bold uppercase tracking-widest px-6 py-3 text-sm hover:opacity-90">
           시트 저장 ▶
         </button>
-        <button className="bg-[#1a1a1a] border border-white/10 text-white/50 font-label uppercase tracking-widest px-6 py-3 text-sm">취소</button>
+        <button className="bg-surface-elevated border border-outline/20 text-on-surface/50 font-label uppercase tracking-widest px-6 py-3 text-sm">취소</button>
         {saved && <span className="self-center text-[#00912F] text-xs font-label uppercase tracking-widest">저장 완료 — 차이 자동 ADJUST 처리됨</span>}
       </div>
     </div>

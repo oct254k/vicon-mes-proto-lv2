@@ -42,7 +42,7 @@ export default function MultiPlantComparePage() {
             </div>
             <div className="h-5 bg-surface-container-highest/30">
               <div
-                className={`h-5 ${OEE_VALUES[i]>=80?"bg-primary-accent":OEE_VALUES[i]>=70?"bg-[#f59e0b]":"bg-error"}`}
+                className={`h-5 ${OEE_VALUES[i]>=80?"bg-primary-accent":OEE_VALUES[i]>=70?"bg-warning":"bg-error"}`}
                 style={{width:`${OEE_VALUES[i]}%`}}
               />
             </div>

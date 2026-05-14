@@ -1,0 +1,209 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "성지그룹 Logo" [ref=e5] [cursor=pointer]:
+          - /url: /ops/
+          - img "성지그룹 Logo" [ref=e6]
+        - generic [ref=e7]:
+          - link "대시보드" [ref=e8] [cursor=pointer]:
+            - /url: /ops/
+          - link "이력추적" [ref=e9] [cursor=pointer]:
+            - /url: /trace/
+          - link "알람" [ref=e10] [cursor=pointer]:
+            - /url: /alarm/
+      - generic [ref=e11]:
+        - button "book_2" [ref=e12] [cursor=pointer]
+        - generic [ref=e13] [cursor=pointer]: notifications
+        - generic [ref=e14] [cursor=pointer]: settings
+        - generic [ref=e16]: person
+    - complementary [ref=e17]:
+      - generic [ref=e19]:
+        - generic [ref=e20]: search
+        - textbox "메뉴 검색... (/)" [ref=e21]
+      - navigation [ref=e22]:
+        - list [ref=e23]:
+          - listitem [ref=e24]:
+            - button "inventory_2 기준정보 expand_more" [ref=e25]:
+              - generic [ref=e26]: inventory_2
+              - generic [ref=e27]: 기준정보
+              - generic [ref=e28]: expand_more
+          - listitem [ref=e29]:
+            - button "request_quote 수주·생산계획·MRP expand_more" [ref=e30]:
+              - generic [ref=e31]: request_quote
+              - generic [ref=e32]: 수주·생산계획·MRP
+              - generic [ref=e33]: expand_more
+          - listitem [ref=e34]:
+            - button "assignment 작업지시·부재·패킹 expand_more" [ref=e35]:
+              - generic [ref=e36]: assignment
+              - generic [ref=e37]: 작업지시·부재·패킹
+              - generic [ref=e38]: expand_more
+          - listitem [ref=e39]:
+            - button "precision_manufacturing 생산실행·추적성 expand_more" [ref=e40]:
+              - generic [ref=e41]: precision_manufacturing
+              - generic [ref=e42]: 생산실행·추적성
+              - generic [ref=e43]: expand_more
+          - listitem [ref=e44]:
+            - button "warehouse 위치·재고 expand_more" [ref=e45]:
+              - generic [ref=e46]: warehouse
+              - generic [ref=e47]: 위치·재고
+              - generic [ref=e48]: expand_more
+            - list [ref=e49]:
+              - listitem [ref=e50]:
+                - button "위치 체계·yard 마스터 expand_more" [ref=e51]:
+                  - generic [ref=e52]: 위치 체계·yard 마스터
+                  - generic [ref=e53]: expand_more
+              - listitem [ref=e54]:
+                - button "야적장 도면 시각화 expand_more" [ref=e55]:
+                  - generic [ref=e56]: 야적장 도면 시각화
+                  - generic [ref=e57]: expand_more
+              - listitem [ref=e58]:
+                - button "입고 (RECEIVE) expand_more" [ref=e59]:
+                  - generic [ref=e60]: 입고 (RECEIVE)
+                  - generic [ref=e61]: expand_more
+              - listitem [ref=e62]:
+                - button "공장 간 이동 (TRANSFER) expand_more" [ref=e63]:
+                  - generic [ref=e64]: 공장 간 이동 (TRANSFER)
+                  - generic [ref=e65]: expand_more
+              - listitem [ref=e66]:
+                - button "재고 보정 (ADJUST) expand_more" [ref=e67]:
+                  - generic [ref=e68]: 재고 보정 (ADJUST)
+                  - generic [ref=e69]: expand_more
+              - listitem [ref=e70]:
+                - button "SCRAP·자투리 expand_more" [ref=e71]:
+                  - generic [ref=e72]: SCRAP·자투리
+                  - generic [ref=e73]: expand_more
+              - listitem [ref=e74]:
+                - button "정기 실사 (Cycle Count) expand_more" [ref=e75]:
+                  - generic [ref=e76]: 정기 실사 (Cycle Count)
+                  - generic [ref=e77]: expand_more
+                - list [ref=e78]:
+                  - listitem [ref=e79]:
+                    - link "— 실사 주기·계획" [ref=e80] [cursor=pointer]:
+                      - /url: /loc/count/plan/
+                      - generic [ref=e81]: —
+                      - generic [ref=e82]: 실사 주기·계획
+                  - listitem [ref=e83]:
+                    - link "— 카운트 시트 PDA" [ref=e84] [cursor=pointer]:
+                      - /url: /loc/count/sheet/
+                      - generic [ref=e85]: —
+                      - generic [ref=e86]: 카운트 시트 PDA
+                  - listitem [ref=e87]:
+                    - link "— 차이·정합률 리포트" [ref=e88] [cursor=pointer]:
+                      - /url: /loc/count/report/
+                      - generic [ref=e89]: —
+                      - generic [ref=e90]: 차이·정합률 리포트
+              - listitem [ref=e91]:
+                - button "재고 조회·이력·View expand_more" [ref=e92]:
+                  - generic [ref=e93]: 재고 조회·이력·View
+                  - generic [ref=e94]: expand_more
+          - listitem [ref=e95]:
+            - button "verified 품질·SPC·불량 expand_more" [ref=e96]:
+              - generic [ref=e97]: verified
+              - generic [ref=e98]: 품질·SPC·불량
+              - generic [ref=e99]: expand_more
+          - listitem [ref=e100]:
+            - button "engineering 설비관리 expand_more" [ref=e101]:
+              - generic [ref=e102]: engineering
+              - generic [ref=e103]: 설비관리
+              - generic [ref=e104]: expand_more
+          - listitem [ref=e105]:
+            - button "shopping_cart 구매·발주 expand_more" [ref=e106]:
+              - generic [ref=e107]: shopping_cart
+              - generic [ref=e108]: 구매·발주
+              - generic [ref=e109]: expand_more
+          - listitem [ref=e110]:
+            - button "local_shipping 출하 expand_more" [ref=e111]:
+              - generic [ref=e112]: local_shipping
+              - generic [ref=e113]: 출하
+              - generic [ref=e114]: expand_more
+          - listitem [ref=e115]:
+            - button "groups 사용자·권한 expand_more" [ref=e116]:
+              - generic [ref=e117]: groups
+              - generic [ref=e118]: 사용자·권한
+              - generic [ref=e119]: expand_more
+          - listitem [ref=e120]:
+            - button "dashboard 운영현황·대시보드 expand_more" [ref=e121]:
+              - generic [ref=e122]: dashboard
+              - generic [ref=e123]: 운영현황·대시보드
+              - generic [ref=e124]: expand_more
+          - listitem [ref=e125]:
+            - button "settings 시스템관리 expand_more" [ref=e126]:
+              - generic [ref=e127]: settings
+              - generic [ref=e128]: 시스템관리
+              - generic [ref=e129]: expand_more
+    - main [ref=e130]:
+      - generic [ref=e131]:
+        - generic [ref=e132]:
+          - heading "실사 보고서 COUNT-REPORT" [level=1] [ref=e134]
+          - generic [ref=e135]:
+            - generic [ref=e136]: "Node: SCR-LOC-052"
+            - generic [ref=e137]: "System Status: PROTOTYPE"
+          - paragraph [ref=e138]: 실사 정합률·차이 Top N 보고서. 차이 건에 대한 자동 ADJUST 처리 결과 포함.
+        - generic [ref=e139]: "실사 ID: CNT-20260501 | 기간: 2026-05-01 | 대상: Y-RAW 전체"
+        - generic [ref=e140]:
+          - generic [ref=e141]:
+            - paragraph [ref=e142]: 대상 위치
+            - paragraph [ref=e143]: 38개
+          - generic [ref=e144]:
+            - paragraph [ref=e145]: 정합 위치
+            - paragraph [ref=e146]: 35개
+          - generic [ref=e147]:
+            - paragraph [ref=e148]: 차이 위치
+            - paragraph [ref=e149]: 3개
+          - generic [ref=e150]:
+            - paragraph [ref=e151]: 정합률
+            - paragraph [ref=e152]: 99.2%
+        - generic [ref=e153]:
+          - paragraph [ref=e154]: 정합률 게이지
+          - generic [ref=e158]: 99.2%
+        - generic [ref=e159]:
+          - heading "차이 상세 (Top N)" [level=3] [ref=e160]
+          - generic [ref=e161]: FNC-LOC-084
+        - generic [ref=e162]:
+          - generic [ref=e163]:
+            - 'heading "차이 목록 | Buffer: 003 Entries" [level=3] [ref=e164]':
+              - text: 차이 목록
+              - generic [ref=e165]: "| Buffer: 003 Entries"
+            - generic [ref=e166] [cursor=pointer]: refresh
+          - table [ref=e168]:
+            - rowgroup [ref=e169]:
+              - row "위치 ID 자재 시스템 수량 실측 수량 차이 차이율 자동 ADJUST" [ref=e170]:
+                - columnheader "위치 ID" [ref=e171]
+                - columnheader "자재" [ref=e172]
+                - columnheader "시스템 수량" [ref=e173]
+                - columnheader "실측 수량" [ref=e174]
+                - columnheader "차이" [ref=e175]
+                - columnheader "차이율" [ref=e176]
+                - columnheader "자동 ADJUST" [ref=e177]
+            - rowgroup [ref=e178]:
+              - row "Y-P3000-A-01-02 M-COIL-A P3000 900m 950m 900m -50m -5.3% 완료" [ref=e179]:
+                - cell "Y-P3000-A-01-02" [ref=e180]
+                - cell "M-COIL-A P3000 900m" [ref=e181]
+                - cell "950m" [ref=e182]
+                - cell "900m" [ref=e183]
+                - cell "-50m" [ref=e184]
+                - cell "-5.3%" [ref=e185]
+                - cell "완료" [ref=e186]
+              - row "Y-P3000-A-02-01 M-COIL-C 4,200m 4,180m -20m -0.5% 완료" [ref=e187]:
+                - cell "Y-P3000-A-02-01" [ref=e188]
+                - cell "M-COIL-C" [ref=e189]
+                - cell "4,200m" [ref=e190]
+                - cell "4,180m" [ref=e191]
+                - cell "-20m" [ref=e192]
+                - cell "-0.5%" [ref=e193]
+                - cell "완료" [ref=e194]
+              - row "Y-P3000-B-01-01 M-COIL-B 1,800m 1,810m +10m +0.6% 완료" [ref=e195]:
+                - cell "Y-P3000-B-01-01" [ref=e196]
+                - cell "M-COIL-B" [ref=e197]
+                - cell "1,800m" [ref=e198]
+                - cell "1,810m" [ref=e199]
+                - cell "+10m" [ref=e200]
+                - cell "+0.6%" [ref=e201]
+                - cell "완료" [ref=e202]
+        - generic [ref=e203]:
+          - button "[PDF 출력 ▶]" [ref=e204]
+          - button "[엑셀 다운]" [ref=e205]
+    - generic [ref=e207]: System Active | Port 8080 | Secure Link
+  - button "Open Next.js Dev Tools" [ref=e213] [cursor=pointer]:
+    - img [ref=e214]

@@ -12,7 +12,7 @@ const INV_DATA = [
 
 const STATUS_COLOR: Record<string, string> = {
   정상: "text-tertiary bg-tertiary/20",
-  주의: "text-[#f59e0b] bg-[#f59e0b]/20",
+  주의: "text-warning bg-warning/20",
   부족: "text-error bg-error/20",
 };
 
@@ -52,9 +52,9 @@ export default function OPSInventoryPage() {
           <p className="text-3xl font-black tabular-nums text-primary-accent">37<span className="text-lg">t+</span></p>
           <p className="text-xs text-on-surface-variant mt-1">코일 기준</p>
         </div>
-        <div className="bg-surface-container border-l-4 border-[#f59e0b] p-4">
+        <div className="bg-surface-container border-l-4 border-warning p-4">
           <p className="text-xs font-label uppercase tracking-widest text-on-surface-variant mb-1">이동 중</p>
-          <p className="text-3xl font-black tabular-nums text-[#f59e0b]">2</p>
+          <p className="text-3xl font-black tabular-nums text-warning">2</p>
           <p className="text-xs text-on-surface-variant mt-1">건 입출고 처리중</p>
         </div>
         <div className="bg-surface-container border-l-4 border-error p-4">
@@ -70,7 +70,7 @@ export default function OPSInventoryPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse text-sm font-headline">
             <thead>
-              <tr className="bg-surface-container border-b border-outline-variant/10">
+              <tr className="bg-surface-container border-b border-outline">
                 <th className="px-4 py-2 font-label text-xs uppercase opacity-50">Material</th>
                 <th className="px-4 py-2 font-label text-xs uppercase opacity-50">P1000</th>
                 <th className="px-4 py-2 font-label text-xs uppercase opacity-50">P2000</th>
@@ -87,7 +87,7 @@ export default function OPSInventoryPage() {
                 { mat: "PLATE", p1: "8 장", p2: "25 장", p3: "2 장", total: "35 장", alert: true },
                 { mat: "FASTENER", p1: "5,000", p2: "3,000", p3: "4,500", total: "12,500", alert: false },
               ].map((row) => (
-                <tr key={row.mat} className={`border-b border-outline-variant/5 hover:bg-surface-container-highest/20 ${row.alert ? "bg-error/5" : ""}`}>
+                <tr key={row.mat} className={`border-b border-outline-variant hover:bg-surface-container-highest/20 ${row.alert ? "bg-error/5" : ""}`}>
                   <td className="px-4 py-2 font-black text-on-surface">{row.mat}</td>
                   <td className="px-4 py-2 tabular-nums">{row.p1}</td>
                   <td className={`px-4 py-2 tabular-nums ${row.alert ? "text-error font-black" : ""}`}>{row.p2}</td>

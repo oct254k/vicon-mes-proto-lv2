@@ -22,7 +22,7 @@ export default function WODocumentsPage() {
       />
 
       <FieldHeader title="문서 목록" moduleRef="SCR-WO-040" />
-      <section className="bg-[#1a1a1a] mt-4">
+      <section className="bg-surface-elevated mt-4">
         <div className="p-4 bg-white/5 flex justify-between items-center border-l-4 border-[#00912F]">
           <h3 className="font-headline font-black text-sm uppercase tracking-widest">
             문서 목록{" "}
@@ -33,29 +33,29 @@ export default function WODocumentsPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="border-b border-white/5">
-                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-white/40">문서 유형</th>
-                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-white/40">WO / 패킹 ID</th>
-                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-white/40">생성일시</th>
-                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-white/40">다운로드</th>
+              <tr className="border-b border-outline/10">
+                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-on-surface/40">문서 유형</th>
+                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-on-surface/40">WO / 패킹 ID</th>
+                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-on-surface/40">생성일시</th>
+                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-on-surface/40">다운로드</th>
               </tr>
             </thead>
             <tbody className="font-headline text-sm">
               {docData.map((row, i) => (
-                <tr key={i} className="border-b border-white/5 hover:bg-white/5 transition-colors">
+                <tr key={i} className="border-b border-outline/10 hover:bg-white/5 transition-colors">
                   <td className="px-4 py-3">
                     <span className={`px-2 py-1 text-xs font-label uppercase tracking-wider font-bold ${
                       row.docType === "작업지시서"
                         ? "bg-[#00912F]/20 text-[#00912F]"
-                        : "bg-white/10 text-white/60"
+                        : "bg-white/10 text-on-surface/60"
                     }`}>
                       {row.docType}
                     </span>
                   </td>
                   <td className="px-4 py-3 text-[#00912F]">{row.refId}</td>
-                  <td className="px-4 py-3 tabular-nums text-white/70">{row.created}</td>
+                  <td className="px-4 py-3 tabular-nums text-on-surface/70">{row.created}</td>
                   <td className="px-4 py-3">
-                    <button className="border border-white/20 text-white/60 font-label uppercase tracking-widest text-xs px-3 py-1 hover:border-[#00912F] hover:text-[#00912F] transition-colors">
+                    <button className="border border-outline/30 text-on-surface/60 font-label uppercase tracking-widest text-xs px-3 py-1 hover:border-[#00912F] hover:text-[#00912F] transition-colors">
                       PDF 다운로드
                     </button>
                   </td>

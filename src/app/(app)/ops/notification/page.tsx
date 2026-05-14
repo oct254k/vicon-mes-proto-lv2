@@ -4,9 +4,9 @@ import { PageHeader } from "@/components/ui/PageHeader";
 
 const KPI = [
   { label: "미해결",    value: "12건", color: "text-error" },
-  { label: "발송 실패", value: "2건",  color: "text-[#f59e0b]" },
+  { label: "발송 실패", value: "2건",  color: "text-warning" },
   { label: "오늘 수신", value: "47건", color: "text-on-surface" },
-  { label: "회신 대기", value: "3건",  color: "text-[#f59e0b]" },
+  { label: "회신 대기", value: "3건",  color: "text-warning" },
 ];
 
 const LINKS = [
@@ -21,7 +21,7 @@ const RECENT = [
   { id: "N-0045", channel: "KAKAOTALK",type: "설비 DOWN",   msg: "EQ-L03-001 비계획 DOWN",  time: "13:50", status: "IN_PROGRESS" },
 ];
 
-const STATUS_COLOR: Record<string, string> = { UNRESOLVED: "text-error", READ: "text-on-surface-variant", IN_PROGRESS: "text-[#f59e0b]", RESOLVED: "text-primary-accent" };
+const STATUS_COLOR: Record<string, string> = { UNRESOLVED: "text-error", READ: "text-on-surface-variant", IN_PROGRESS: "text-warning", RESOLVED: "text-primary-accent" };
 
 export default function NotificationPage() {
   return (

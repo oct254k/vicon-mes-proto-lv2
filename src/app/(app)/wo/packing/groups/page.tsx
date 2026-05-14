@@ -55,12 +55,12 @@ function GroupDetail({ group, onClose, onToggleStatus }: {
 
   return (
     <div className="mt-4 border border-outline-variant/20 bg-surface-container-lowest">
-      <div className="flex items-center justify-between px-5 py-3 bg-surface-container border-b border-outline-variant/10 border-l-4 border-primary-accent">
+      <div className="flex items-center justify-between px-5 py-3 bg-surface-container border-b border-outline border-l-4 border-primary-accent">
         <div>
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-0.5">패킹 그룹 상세·편집</p>
           <p className="font-headline font-black text-base">{group.groupId}</p>
         </div>
-        <button onClick={onClose} className="font-label text-xs uppercase tracking-widest opacity-40 hover:opacity-80 px-3 py-1 border border-outline-variant/20 hover:border-white/30 transition-colors">
+        <button onClick={onClose} className="font-label text-xs uppercase tracking-widest opacity-40 hover:opacity-80 px-3 py-1 border border-outline-variant/20 hover:border-outline/50 transition-colors">
           닫기 ✕
         </button>
       </div>
@@ -137,7 +137,7 @@ function GroupDetail({ group, onClose, onToggleStatus }: {
             </ul>
           )}
 
-          <div className="mt-4 pt-4 border-t border-outline-variant/10">
+          <div className="mt-4 pt-4 border-t border-outline">
             <FieldHeader title="그룹 현황" />
             <dl className="mt-2 grid grid-cols-2 gap-2 text-xs">
               <div>
@@ -213,7 +213,7 @@ export default function PackingGroupsPage() {
         </div>
         <table className="w-full text-left border-collapse text-sm">
           <thead>
-            <tr className="bg-surface-container border-b border-outline-variant/10">
+            <tr className="bg-surface-container border-b border-outline">
               {["그룹 ID","그룹명","부재 패턴","최대 수량","상태"].map(h => (
                 <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50">{h}</th>
               ))}
@@ -226,7 +226,7 @@ export default function PackingGroupsPage() {
               return (
                 <tr key={r.groupId}
                   onClick={() => setSelected(isSelected ? null : r)}
-                  className={`border-b border-outline-variant/5 cursor-pointer transition-colors ${
+                  className={`border-b border-outline-variant cursor-pointer transition-colors ${
                     isSelected
                       ? "bg-primary-accent/10 border-l-2 border-primary-accent"
                       : "hover:bg-surface-container-highest/20"

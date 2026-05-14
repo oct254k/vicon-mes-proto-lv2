@@ -1,0 +1,218 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "성지그룹 Logo" [ref=e5] [cursor=pointer]:
+          - /url: /ops/
+          - img "성지그룹 Logo" [ref=e6]
+        - generic [ref=e7]:
+          - link "대시보드" [ref=e8] [cursor=pointer]:
+            - /url: /ops/
+          - link "이력추적" [ref=e9] [cursor=pointer]:
+            - /url: /trace/
+          - link "알람" [ref=e10] [cursor=pointer]:
+            - /url: /alarm/
+      - generic [ref=e11]:
+        - button "book_2" [ref=e12] [cursor=pointer]
+        - generic [ref=e13] [cursor=pointer]: notifications
+        - generic [ref=e14] [cursor=pointer]: settings
+        - generic [ref=e16]: person
+    - complementary [ref=e17]:
+      - generic [ref=e19]:
+        - generic [ref=e20]: search
+        - textbox "메뉴 검색... (/)" [ref=e21]
+      - navigation [ref=e22]:
+        - list [ref=e23]:
+          - listitem [ref=e24]:
+            - button "inventory_2 기준정보 expand_more" [ref=e25]:
+              - generic [ref=e26]: inventory_2
+              - generic [ref=e27]: 기준정보
+              - generic [ref=e28]: expand_more
+          - listitem [ref=e29]:
+            - button "request_quote 수주·생산계획·MRP expand_more" [ref=e30]:
+              - generic [ref=e31]: request_quote
+              - generic [ref=e32]: 수주·생산계획·MRP
+              - generic [ref=e33]: expand_more
+          - listitem [ref=e34]:
+            - button "assignment 작업지시·부재·패킹 expand_more" [ref=e35]:
+              - generic [ref=e36]: assignment
+              - generic [ref=e37]: 작업지시·부재·패킹
+              - generic [ref=e38]: expand_more
+          - listitem [ref=e39]:
+            - button "precision_manufacturing 생산실행·추적성 expand_more" [ref=e40]:
+              - generic [ref=e41]: precision_manufacturing
+              - generic [ref=e42]: 생산실행·추적성
+              - generic [ref=e43]: expand_more
+          - listitem [ref=e44]:
+            - button "warehouse 위치·재고 expand_more" [ref=e45]:
+              - generic [ref=e46]: warehouse
+              - generic [ref=e47]: 위치·재고
+              - generic [ref=e48]: expand_more
+          - listitem [ref=e49]:
+            - button "verified 품질·SPC·불량 expand_more" [ref=e50]:
+              - generic [ref=e51]: verified
+              - generic [ref=e52]: 품질·SPC·불량
+              - generic [ref=e53]: expand_more
+            - list [ref=e54]:
+              - listitem [ref=e55]:
+                - button "품질 KPI 대시보드 expand_more" [ref=e56]:
+                  - generic [ref=e57]: 품질 KPI 대시보드
+                  - generic [ref=e58]: expand_more
+              - listitem [ref=e59]:
+                - button "SPC 측정·관리도 expand_more" [ref=e60]:
+                  - generic [ref=e61]: SPC 측정·관리도
+                  - generic [ref=e62]: expand_more
+              - listitem [ref=e63]:
+                - button "불량 신고·트랜잭션 expand_more" [ref=e64]:
+                  - generic [ref=e65]: 불량 신고·트랜잭션
+                  - generic [ref=e66]: expand_more
+                - list [ref=e67]:
+                  - listitem [ref=e68]:
+                    - link "— 불량 신고 (PDA)" [ref=e69] [cursor=pointer]:
+                      - /url: /qc/defect/report-pda/
+                      - generic [ref=e70]: —
+                      - generic [ref=e71]: 불량 신고 (PDA)
+                  - listitem [ref=e72]:
+                    - link "— QC 검사자 결재 큐" [ref=e73] [cursor=pointer]:
+                      - /url: /qc/defect/inspect-queue/
+                      - generic [ref=e74]: —
+                      - generic [ref=e75]: QC 검사자 결재 큐
+                  - listitem [ref=e76]:
+                    - link "— QC 관리자 결재 보드" [ref=e77] [cursor=pointer]:
+                      - /url: /qc/defect/manager-board/
+                      - generic [ref=e78]: —
+                      - generic [ref=e79]: QC 관리자 결재 보드
+                  - listitem [ref=e80]:
+                    - link "— 공장장 SCRAP 최종 결재" [ref=e81] [cursor=pointer]:
+                      - /url: /qc/defect/scrap-approval/
+                      - generic [ref=e82]: —
+                      - generic [ref=e83]: 공장장 SCRAP 최종 결재
+                  - listitem [ref=e84]:
+                    - link "— 불량 트랜잭션 조회" [ref=e85] [cursor=pointer]:
+                      - /url: /qc/defect/list/
+                      - generic [ref=e86]: —
+                      - generic [ref=e87]: 불량 트랜잭션 조회
+                  - listitem [ref=e88]:
+                    - link "— WO 동적 보충 라인" [ref=e89] [cursor=pointer]:
+                      - /url: /qc/defect/wo-replenishment/
+                      - generic [ref=e90]: —
+                      - generic [ref=e91]: WO 동적 보충 라인
+              - listitem [ref=e92]:
+                - button "위험 확산 평가·회수 expand_more" [ref=e93]:
+                  - generic [ref=e94]: 위험 확산 평가·회수
+                  - generic [ref=e95]: expand_more
+              - listitem [ref=e96]:
+                - button "손실 환산·회계 expand_more" [ref=e97]:
+                  - generic [ref=e98]: 손실 환산·회계
+                  - generic [ref=e99]: expand_more
+              - listitem [ref=e100]:
+                - button "품질 성적서 expand_more" [ref=e101]:
+                  - generic [ref=e102]: 품질 성적서
+                  - generic [ref=e103]: expand_more
+              - listitem [ref=e104]:
+                - button "QC 마스터 관리 expand_more" [ref=e105]:
+                  - generic [ref=e106]: QC 마스터 관리
+                  - generic [ref=e107]: expand_more
+          - listitem [ref=e108]:
+            - button "engineering 설비관리 expand_more" [ref=e109]:
+              - generic [ref=e110]: engineering
+              - generic [ref=e111]: 설비관리
+              - generic [ref=e112]: expand_more
+          - listitem [ref=e113]:
+            - button "shopping_cart 구매·발주 expand_more" [ref=e114]:
+              - generic [ref=e115]: shopping_cart
+              - generic [ref=e116]: 구매·발주
+              - generic [ref=e117]: expand_more
+          - listitem [ref=e118]:
+            - button "local_shipping 출하 expand_more" [ref=e119]:
+              - generic [ref=e120]: local_shipping
+              - generic [ref=e121]: 출하
+              - generic [ref=e122]: expand_more
+          - listitem [ref=e123]:
+            - button "groups 사용자·권한 expand_more" [ref=e124]:
+              - generic [ref=e125]: groups
+              - generic [ref=e126]: 사용자·권한
+              - generic [ref=e127]: expand_more
+          - listitem [ref=e128]:
+            - button "dashboard 운영현황·대시보드 expand_more" [ref=e129]:
+              - generic [ref=e130]: dashboard
+              - generic [ref=e131]: 운영현황·대시보드
+              - generic [ref=e132]: expand_more
+          - listitem [ref=e133]:
+            - button "settings 시스템관리 expand_more" [ref=e134]:
+              - generic [ref=e135]: settings
+              - generic [ref=e136]: 시스템관리
+              - generic [ref=e137]: expand_more
+    - main [ref=e138]:
+      - generic [ref=e139]:
+        - generic [ref=e140]:
+          - heading "검사 대기 큐 INSPECT" [level=1] [ref=e142]
+          - generic [ref=e143]:
+            - generic [ref=e144]: "Node: SCR-QC-040"
+            - generic [ref=e145]: "System Status: PROTOTYPE"
+          - paragraph [ref=e146]: QC 검사자 결재 큐 REPORTED→CONFIRMED (FNC-QC-050~052, 064, 071)
+        - generic [ref=e147]:
+          - generic [ref=e148]:
+            - paragraph [ref=e149]: 대기 중
+            - paragraph [ref=e150]: "3"
+          - generic [ref=e151]:
+            - paragraph [ref=e152]: 처리 완료 (오늘)
+            - paragraph [ref=e153]: "7"
+          - generic [ref=e154]:
+            - paragraph [ref=e155]: 평균 대기 시간
+            - paragraph [ref=e156]: 8.2h
+        - generic [ref=e157]:
+          - heading "REPORTED 대기 목록" [level=3] [ref=e158]
+          - generic [ref=e159]: FNC-QC-050
+        - generic [ref=e160]:
+          - 'heading "결재 대기 | Buffer: 003 Entries" [level=3] [ref=e162]'
+          - table [ref=e164]:
+            - rowgroup [ref=e165]:
+              - row "신고번호 부재코드 불량유형 시점 수량 신고자 신고시각 경과 처리" [ref=e166]:
+                - columnheader "신고번호" [ref=e167]
+                - columnheader "부재코드" [ref=e168]
+                - columnheader "불량유형" [ref=e169]
+                - columnheader "시점" [ref=e170]
+                - columnheader "수량" [ref=e171]
+                - columnheader "신고자" [ref=e172]
+                - columnheader "신고시각" [ref=e173]
+                - columnheader "경과" [ref=e174]
+                - columnheader "처리" [ref=e175]
+            - rowgroup [ref=e176]:
+              - row "D-2026-0044 B01-1-G22C-C-172 외관 ⑥ 최종검사 1 insp.park 2026-05-05 11:20 2h CONFIRM" [ref=e177]:
+                - cell "D-2026-0044" [ref=e178]
+                - cell "B01-1-G22C-C-172" [ref=e179]
+                - cell "외관" [ref=e180]
+                - cell "⑥ 최종검사" [ref=e181]
+                - cell "1" [ref=e182]
+                - cell "insp.park" [ref=e183]
+                - cell "2026-05-05 11:20" [ref=e184]
+                - cell "2h" [ref=e185]
+                - cell "CONFIRM" [ref=e186]:
+                  - button "CONFIRM" [ref=e187]
+              - row "D-2026-0043 B01-2-G15A-S-040 규격 ⑨ 현장도착 2 cs.lee 2026-05-05 09:45 3h CONFIRM" [ref=e188]:
+                - cell "D-2026-0043" [ref=e189]
+                - cell "B01-2-G15A-S-040" [ref=e190]
+                - cell "규격" [ref=e191]
+                - cell "⑨ 현장도착" [ref=e192]
+                - cell "2" [ref=e193]
+                - cell "cs.lee" [ref=e194]
+                - cell "2026-05-05 09:45" [ref=e195]
+                - cell "3h" [ref=e196]
+                - cell "CONFIRM" [ref=e197]:
+                  - button "CONFIRM" [ref=e198]
+              - row "D-2026-0038 M-COIL-A-...011 표면 ① 입고검사 4 insp.choi 2026-05-04 16:30 19h CONFIRM" [ref=e199]:
+                - cell "D-2026-0038" [ref=e200]
+                - cell "M-COIL-A-...011" [ref=e201]
+                - cell "표면" [ref=e202]
+                - cell "① 입고검사" [ref=e203]
+                - cell "4" [ref=e204]
+                - cell "insp.choi" [ref=e205]
+                - cell "2026-05-04 16:30" [ref=e206]
+                - cell "19h" [ref=e207]
+                - cell "CONFIRM" [ref=e208]:
+                  - button "CONFIRM" [ref=e209]
+        - paragraph [ref=e210]: "CONFIRM 클릭 → REPORTED→CONFIRMED 상태 전환 (FNC-QC-064) | 4계층 결재: QC 검사자 1단계"
+    - generic [ref=e212]: System Active | Port 8080 | Secure Link
+  - button "Open Next.js Dev Tools" [ref=e218] [cursor=pointer]:
+    - img [ref=e219]

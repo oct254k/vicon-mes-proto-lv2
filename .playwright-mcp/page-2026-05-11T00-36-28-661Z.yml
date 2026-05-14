@@ -1,0 +1,451 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - img "KEPCO ES" [ref=e4]
+    - generic [ref=e5]:
+      - button "3" [ref=e6] [cursor=pointer]:
+        - img [ref=e7]
+        - generic [ref=e10]: "3"
+      - generic [ref=e11]:
+        - img [ref=e12]
+        - generic [ref=e15]: 김민준 (사업개발팀)
+      - button [ref=e16] [cursor=pointer]:
+        - img [ref=e17]
+  - generic [ref=e20]:
+    - navigation [ref=e21]:
+      - generic [ref=e22]:
+        - searchbox "메뉴 검색" [ref=e23]
+        - img [ref=e24]
+      - generic [ref=e27]:
+        - generic [ref=e28]:
+          - generic [ref=e29] [cursor=pointer]:
+            - img [ref=e31]
+            - generic [ref=e36]: 대시보드
+          - generic [ref=e37]:
+            - link "경영실적" [ref=e38] [cursor=pointer]:
+              - /url: /dashboard/
+            - link "자금회수율" [ref=e39] [cursor=pointer]:
+              - /url: /cashflow/
+        - generic [ref=e40]:
+          - generic [ref=e41] [cursor=pointer]:
+            - img [ref=e43]
+            - generic [ref=e46]: 사업접수
+          - generic [ref=e47]:
+            - link "신규프로젝트 생성" [ref=e48] [cursor=pointer]:
+              - /url: /opportunity/new/
+            - link "사업접수 현황" [ref=e49] [cursor=pointer]:
+              - /url: /pipeline/
+        - generic [ref=e50]:
+          - generic [ref=e51] [cursor=pointer]:
+            - img [ref=e53]
+            - generic [ref=e55]: 프로젝트 관리
+          - link "프로젝트별 진행 정보" [ref=e57] [cursor=pointer]:
+            - /url: /projects/
+        - generic [ref=e58]:
+          - generic [ref=e59] [cursor=pointer]:
+            - img [ref=e61]
+            - generic [ref=e64]: 계약
+          - generic [ref=e65]:
+            - link "수주계약현황" [ref=e66] [cursor=pointer]:
+              - /url: /contracts/?tab=award
+            - link "발주계약현황" [ref=e67] [cursor=pointer]:
+              - /url: /contracts/?tab=order
+        - generic [ref=e68]:
+          - generic [ref=e69] [cursor=pointer]:
+            - img [ref=e71]
+            - generic [ref=e74]: 자금관리
+          - generic [ref=e75]:
+            - link "투자비 지급현황" [ref=e76] [cursor=pointer]:
+              - /url: /funds/investment/
+            - link "세금계산서 발행회차" [ref=e77] [cursor=pointer]:
+              - /url: /funds/tax-invoice/
+            - link "상환현황" [ref=e78] [cursor=pointer]:
+              - /url: /funds/repayment/
+            - link "미회수 사업현황" [ref=e79] [cursor=pointer]:
+              - /url: /funds/uncollected/
+        - generic [ref=e80]:
+          - generic [ref=e81] [cursor=pointer]:
+            - img [ref=e83]
+            - generic [ref=e86]: 사업결산
+          - link "사업결산현황" [ref=e88] [cursor=pointer]:
+            - /url: /settlement/
+        - generic [ref=e90]:
+          - generic [ref=e91] [cursor=pointer]:
+            - img [ref=e93]
+            - generic [ref=e97]: 마이페이지
+          - generic [ref=e98]:
+            - link "나의 사업현황" [ref=e99] [cursor=pointer]:
+              - /url: /mypage/?tab=projects
+            - link "사용자정보 변경" [ref=e100] [cursor=pointer]:
+              - /url: /mypage/?tab=profile
+            - link "데이터수정 요청" [ref=e101] [cursor=pointer]:
+              - /url: /mypage/?tab=request
+        - generic [ref=e103]:
+          - generic [ref=e104] [cursor=pointer]:
+            - img [ref=e106]
+            - generic [ref=e109]: 관리자
+          - generic [ref=e110]:
+            - link "사용자 관리" [ref=e111] [cursor=pointer]:
+              - /url: /admin/users/
+            - link "프로젝트 정보관리" [ref=e112] [cursor=pointer]:
+              - /url: /admin/projects/
+            - link "경영실적 목표" [ref=e113] [cursor=pointer]:
+              - /url: /admin/targets/
+            - link "협력업체·신용평가" [ref=e114] [cursor=pointer]:
+              - /url: /admin/contractors/
+            - link "시스템 환경" [ref=e115] [cursor=pointer]:
+              - /url: /admin/system/
+    - main [ref=e116]:
+      - generic [ref=e117]:
+        - generic [ref=e118]:
+          - generic [ref=e119]:
+            - generic [ref=e120]: 신규사업
+            - generic [ref=e121]: 3건
+            - generic [ref=e122]: 심의대기 12
+          - generic [ref=e123]:
+            - generic [ref=e124]: 수주 계약
+            - generic [ref=e125]: 218건
+            - generic [ref=e126]: 투자 205 물약·공사 120
+          - generic [ref=e127]:
+            - generic [ref=e128]: 공고평가
+            - generic [ref=e129]: 7건
+            - generic [ref=e130]: 공고 7 평가 2
+          - generic [ref=e131]:
+            - generic [ref=e132]: 발주 계약
+            - generic [ref=e133]: 17건
+          - generic [ref=e134]:
+            - generic [ref=e135]: 상환 완료율
+            - generic [ref=e136]: 87.1%
+            - generic [ref=e137]: 전월대비 5.5% ↑ / 4.6 억원
+          - generic [ref=e138]:
+            - generic [ref=e139]: 미상환
+            - generic [ref=e140]: 3건
+          - generic [ref=e141]:
+            - generic [ref=e142]: 가상계좌 연결
+            - generic [ref=e143]: 75.2%
+            - generic [ref=e144]: 미연결 12
+          - generic [ref=e145]:
+            - generic [ref=e146]: 세금계산서
+            - generic [ref=e147]: 104건
+            - generic [ref=e148]: 오늘발행 26건 납부
+        - generic [ref=e150]:
+          - generic [ref=e151]:
+            - generic [ref=e152]:
+              - generic [ref=e153]:
+                - heading "사업 현황" [level=3] [ref=e154]
+                - generic [ref=e155]:
+                  - combobox [ref=e156]:
+                    - option "2022년"
+                    - option "2023년"
+                    - option "2024년"
+                    - option "2025년"
+                    - option "2026년" [selected]
+                    - option "2027년"
+                  - combobox [ref=e157]:
+                    - option "1월"
+                    - option "2월"
+                    - option "3월"
+                    - option "4월"
+                    - option "5월" [selected]
+                    - option "6월"
+                    - option "7월"
+                    - option "8월"
+                    - option "9월"
+                    - option "10월"
+                    - option "11월"
+                    - option "12월"
+              - generic [ref=e158]:
+                - generic [ref=e159]:
+                  - generic [ref=e161]:
+                    - generic [ref=e162]: 상환완료
+                    - generic [ref=e163]: 14건 19.8억
+                  - generic [ref=e167]:
+                    - generic [ref=e168]: 상환예정
+                    - generic [ref=e169]: 18건 11.8억
+                  - generic [ref=e173]:
+                    - generic [ref=e174]: 미상환
+                    - generic [ref=e175]: 2건 2.1억
+                - generic [ref=e178]:
+                  - generic [ref=e179]:
+                    - generic [ref=e180]: 사업비 실적
+                    - generic [ref=e181]:
+                      - generic [ref=e182]: 908억
+                      - generic [ref=e183]: ▲ 달성률 97.5%
+                  - generic [ref=e184]:
+                    - generic [ref=e185]: 에너지 절감량
+                    - generic [ref=e186]:
+                      - generic [ref=e187]: 1,302 toe
+                      - generic [ref=e188]: ▼ 전월대비 2.4%
+                  - generic [ref=e189]:
+                    - generic [ref=e190]: EERS 절감량
+                    - generic [ref=e191]:
+                      - generic [ref=e192]: 2,092 MWh
+                      - generic [ref=e193]: ▲ 전월대비 4.7%
+              - generic [ref=e194]:
+                - generic [ref=e195]:
+                  - generic [ref=e196]: 2026년 5월
+                  - generic [ref=e197]:
+                    - generic [ref=e198]: 일
+                    - generic [ref=e199]: 월
+                    - generic [ref=e200]: 화
+                    - generic [ref=e201]: 수
+                    - generic [ref=e202]: 목
+                    - generic [ref=e203]: 금
+                    - generic [ref=e204]: 토
+                    - generic [ref=e209]: "1"
+                    - generic [ref=e211]: "2"
+                    - generic [ref=e213]: "3"
+                    - generic [ref=e215]: "4"
+                    - generic [ref=e217]: "5"
+                    - generic [ref=e219]: "6"
+                    - generic [ref=e221]: "7"
+                    - generic [ref=e223]: "8"
+                    - generic [ref=e225]: "9"
+                    - generic [ref=e227]: "10"
+                    - generic [ref=e229]: "11"
+                    - generic [ref=e231]: "12"
+                    - generic [ref=e233]: "13"
+                    - generic [ref=e235]: "14"
+                    - generic [ref=e237]: "15"
+                    - generic [ref=e239]: "16"
+                    - generic [ref=e241]: "17"
+                    - generic [ref=e243]: "18"
+                    - generic [ref=e245]: "19"
+                    - generic [ref=e247]: "20"
+                    - generic [ref=e249]: "21"
+                    - generic [ref=e251]: "22"
+                    - generic [ref=e253]: "23"
+                    - generic [ref=e255]: "24"
+                    - generic [ref=e257]: "25"
+                    - generic [ref=e259]: "26"
+                    - generic [ref=e261]: "27"
+                    - generic [ref=e263]: "28"
+                    - generic [ref=e265]: "29"
+                    - generic [ref=e267]: "30"
+                - generic [ref=e268]:
+                  - generic [ref=e269]:
+                    - button "전체 98" [ref=e270] [cursor=pointer]
+                    - button "상환완료 7" [ref=e271] [cursor=pointer]
+                    - button "상환예정 55" [ref=e272] [cursor=pointer]
+                    - button "미상환 12" [ref=e273] [cursor=pointer]
+                  - table [ref=e274]:
+                    - rowgroup [ref=e275]:
+                      - row "상태 프로젝트명 금액 회차" [ref=e276]:
+                        - columnheader "상태" [ref=e277]
+                        - columnheader "프로젝트명" [ref=e278]
+                        - columnheader "금액" [ref=e279]
+                        - columnheader "회차" [ref=e280]
+                    - rowgroup [ref=e281]:
+                      - row "상환완료 송암시스콤 LED 138,904,030 45회차" [ref=e282]:
+                        - cell "상환완료" [ref=e283]:
+                          - generic [ref=e284]: 상환완료
+                        - cell "송암시스콤 LED" [ref=e285]
+                        - cell "138,904,030" [ref=e286]
+                        - cell "45회차" [ref=e287]
+                      - row "상환완료 가양 ENT 보일러 346,000 98회차" [ref=e288]:
+                        - cell "상환완료" [ref=e289]:
+                          - generic [ref=e290]: 상환완료
+                        - cell "가양 ENT 보일러" [ref=e291]
+                        - cell "346,000" [ref=e292]
+                        - cell "98회차" [ref=e293]
+                      - row "상환완료 마스턴172 성수 오피스 연료전지 구매 8,904,030 5회차" [ref=e294]:
+                        - cell "상환완료" [ref=e295]:
+                          - generic [ref=e296]: 상환완료
+                        - cell "마스턴172 성수 오피스 연료전지 구매" [ref=e297]
+                        - cell "8,904,030" [ref=e298]
+                        - cell "5회차" [ref=e299]
+                      - row "상환완료 송암시스콤 LED 8,904,030 18회차" [ref=e300]:
+                        - cell "상환완료" [ref=e301]:
+                          - generic [ref=e302]: 상환완료
+                        - cell "송암시스콤 LED" [ref=e303]
+                        - cell "8,904,030" [ref=e304]
+                        - cell "18회차" [ref=e305]
+                      - row "상환예정 에너지엑스 빌딩 정보통신공사 56,904,543 28회차" [ref=e306]:
+                        - cell "상환예정" [ref=e307]:
+                          - generic [ref=e308]: 상환예정
+                        - cell "에너지엑스 빌딩 정보통신공사" [ref=e309]
+                        - cell "56,904,543" [ref=e310]
+                        - cell "28회차" [ref=e311]
+                      - row "상환완료 송암시스콤 LED 338,346,65 45회차" [ref=e312]:
+                        - cell "상환완료" [ref=e313]:
+                          - generic [ref=e314]: 상환완료
+                        - cell "송암시스콤 LED" [ref=e315]
+                        - cell "338,346,65" [ref=e316]
+                        - cell "45회차" [ref=e317]
+                  - generic [ref=e318]:
+                    - generic [ref=e319]: 상환완료
+                    - generic [ref=e321]: 상환예정
+                    - generic [ref=e323]: 미상환
+                    - generic [ref=e325]: 입찰
+            - generic [ref=e327]:
+              - generic [ref=e328]:
+                - generic [ref=e329]: 사업비 (억원)
+                - generic [ref=e330]:
+                  - generic [ref=e331]: "72.0"
+                  - generic [ref=e332]: 억
+                - generic [ref=e333]: 목표 85.0억 달성률 85%
+              - generic [ref=e336]:
+                - generic [ref=e337]: 투자비 (억원)
+                - generic [ref=e338]:
+                  - generic [ref=e339]: "58.0"
+                  - generic [ref=e340]: 억
+                - generic [ref=e341]: 목표 62.0억 달성률 94%
+              - generic [ref=e344]:
+                - generic [ref=e345]: EEPS 절감량 (TOE)
+                - generic [ref=e346]:
+                  - generic [ref=e347]: "98"
+                  - generic [ref=e348]: TOE
+                - generic [ref=e349]: 목표 120TOE 달성률 50%
+            - generic [ref=e352]:
+              - heading "월별 사업비 · 투자비 추이" [level=3] [ref=e354]
+              - generic [ref=e356]:
+                - list [ref=e358]:
+                  - listitem [ref=e359]:
+                    - img "달성률 legend icon" [ref=e360]
+                    - text: 달성률
+                  - listitem [ref=e362]:
+                    - img "사업비 legend icon" [ref=e363]
+                    - text: 사업비
+                  - listitem [ref=e365]:
+                    - img "투자비 legend icon" [ref=e366]
+                    - text: 투자비
+                - application [ref=e368]:
+                  - generic [ref=e466]:
+                    - generic [ref=e467]:
+                      - generic [ref=e469]: 1월
+                      - generic [ref=e471]: 2월
+                      - generic [ref=e473]: 3월
+                      - generic [ref=e475]: 4월
+                      - generic [ref=e477]: 5월
+                      - generic [ref=e479]: 6월
+                      - generic [ref=e481]: 7월
+                      - generic [ref=e483]: 8월
+                      - generic [ref=e485]: 9월
+                      - generic [ref=e487]: 10월
+                      - generic [ref=e489]: 11월
+                      - generic [ref=e491]: 12월
+                    - generic [ref=e492]:
+                      - generic [ref=e494]: 0억
+                      - generic [ref=e496]: 3억
+                      - generic [ref=e498]: 6억
+                      - generic [ref=e500]: 9억
+                      - generic [ref=e502]: 12억
+                    - generic [ref=e503]:
+                      - generic [ref=e505]: 0%
+                      - generic [ref=e507]: 25%
+                      - generic [ref=e509]: 50%
+                      - generic [ref=e511]: 75%
+                      - generic [ref=e513]: 100%
+          - generic [ref=e514]:
+            - generic [ref=e515]:
+              - heading "내 업무" [level=3] [ref=e517]
+              - generic [ref=e518]:
+                - generic [ref=e519]:
+                  - generic [ref=e520]: "7"
+                  - generic [ref=e521]: 접수
+                - generic [ref=e522]:
+                  - generic [ref=e523]: "28"
+                  - generic [ref=e524]: 입찰평가
+                - generic [ref=e525]:
+                  - generic [ref=e526]: "3"
+                  - generic [ref=e527]: 검수
+                - generic [ref=e528]:
+                  - generic [ref=e529]: "3"
+                  - generic [ref=e530]: 상환
+            - generic [ref=e531]:
+              - generic [ref=e532]:
+                - heading "바로가기" [level=3] [ref=e533]
+                - button "더보기" [ref=e534] [cursor=pointer]:
+                  - img [ref=e535]
+              - generic [ref=e540]:
+                - button "사업접수" [ref=e541] [cursor=pointer]:
+                  - img [ref=e542]
+                  - generic [ref=e545]: 사업접수
+                - button "계약" [ref=e546] [cursor=pointer]:
+                  - img [ref=e547]
+                  - generic [ref=e550]: 계약
+                - button "자금관리" [ref=e551] [cursor=pointer]:
+                  - img [ref=e552]
+                  - generic [ref=e554]: 자금관리
+                - button "프로젝트관리" [ref=e555] [cursor=pointer]:
+                  - img [ref=e556]
+                  - generic [ref=e558]: 프로젝트관리
+                - button "사업결산" [ref=e559] [cursor=pointer]:
+                  - img [ref=e560]
+                  - generic [ref=e562]: 사업결산
+                - button "마이페이지" [ref=e563] [cursor=pointer]:
+                  - img [ref=e564]
+                  - generic [ref=e567]: 마이페이지
+            - generic [ref=e568]:
+              - heading "공지사항" [level=3] [ref=e570]
+              - generic [ref=e571]:
+                - generic [ref=e572]:
+                  - generic [ref=e573]: "N"
+                  - generic [ref=e574]: PMS·SRM 통합시스템 오픈 안내 인내트됩니다.
+                  - generic [ref=e575]: 26.05.02
+                - generic [ref=e576]:
+                  - generic [ref=e577]: "N"
+                  - generic [ref=e578]: 2026년 1분기 경영실적 보고서 제출안내드립니다.
+                  - generic [ref=e579]: 26.05.02
+                - generic [ref=e580]:
+                  - generic [ref=e581]: EERS 제도 변경 사항 공유 (산업부 고시)
+                  - generic [ref=e582]: 26.04.30
+                - generic [ref=e583]:
+                  - generic [ref=e584]: 협력업체 신용평가 갱신 요청 (3월 만료 업체)
+                  - generic [ref=e585]: 26.04.30
+              - button "더보기" [ref=e587] [cursor=pointer]
+            - generic [ref=e588]:
+              - heading "진행중 입찰공고" [level=3] [ref=e590]
+              - generic [ref=e591]:
+                - generic [ref=e592]:
+                  - generic [ref=e593]:
+                    - generic [ref=e594]: "4"
+                    - generic [ref=e595]: 공고중
+                  - generic [ref=e596]: ›
+                - generic [ref=e597]:
+                  - generic [ref=e598]:
+                    - generic [ref=e599]: "18"
+                    - generic [ref=e600]: 투찰접수
+                  - generic [ref=e601]: ›
+                - generic [ref=e602]:
+                  - generic [ref=e603]:
+                    - generic [ref=e604]: "2"
+                    - generic [ref=e605]: 평가중
+                  - generic [ref=e606]: ›
+                - generic [ref=e607]:
+                  - generic [ref=e608]:
+                    - generic [ref=e609]: "8"
+                    - generic [ref=e610]: 낙찰
+                  - generic [ref=e611]: ›
+                - generic [ref=e613]:
+                  - generic [ref=e614]: "1"
+                  - generic [ref=e615]: 검수
+              - generic [ref=e616]:
+                - generic [ref=e617]:
+                  - generic [ref=e618]: 마감D-2
+                  - generic [ref=e619]: 가양 ENT 보일러
+                  - generic [ref=e620]: 138,909,003원
+                - generic [ref=e621]: 2026.05.12 오후 4:00
+              - generic [ref=e622]:
+                - generic [ref=e623]:
+                  - generic [ref=e624]: 잔기자일
+                  - generic [ref=e625]: 에너지엑스 빌딩 정보통신공사
+                  - generic [ref=e626]: 76,909,003원
+                - generic [ref=e627]: 우수점 2029.05.06
+            - generic [ref=e628]:
+              - heading "미상환 현황" [level=3] [ref=e630]
+              - generic [ref=e631]:
+                - generic [ref=e632]: 마이에일
+                - generic [ref=e633]: 가양 ENT 보일러
+                - generic [ref=e634]: 138,909,003원
+                - generic [ref=e635]: 이상환 3회
+              - generic [ref=e636]:
+                - generic [ref=e637]: 인계
+                - generic [ref=e638]: 에너지엑스 빌딩 정보통신공사
+                - generic [ref=e639]: 76,909,003원
+                - generic [ref=e640]: 이상환 1회
+              - generic [ref=e641]:
+                - generic [ref=e642]: 보증서
+                - generic [ref=e643]: 에너지엑스 빌딩 정보통신공사
+                - generic [ref=e644]: 이행보증
+  - alert [ref=e645]
+  - generic [ref=e646]: "25"

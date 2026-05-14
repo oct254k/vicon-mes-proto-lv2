@@ -29,19 +29,19 @@ export default function ScheduleCalendarPage() {
       <FieldHeader title="간트 뷰 (2026-05-06 ~ 05-12)" moduleRef="SCR-SHP-001" />
       <div className="bg-surface-container-lowest overflow-x-auto">
         <div className="grid p-0" style={{gridTemplateColumns:`200px repeat(${DAYS.length}, 1fr)`}}>
-          <div className="bg-surface-container px-3 py-2 text-xs font-label opacity-50 uppercase border-b border-outline-variant/10">출하 ID / 고객</div>
+          <div className="bg-surface-container px-3 py-2 text-xs font-label opacity-50 uppercase border-b border-outline">출하 ID / 고객</div>
           {DAYS.map(d=>(
-            <div key={d} className="bg-surface-container px-2 py-2 text-center text-xs font-label opacity-50 uppercase border-b border-outline-variant/10">05-{d}</div>
+            <div key={d} className="bg-surface-container px-2 py-2 text-center text-xs font-label opacity-50 uppercase border-b border-outline">05-{d}</div>
           ))}
           {SHIPMENTS.map(s=>(
             <>
-              <div key={s.id+"l"} className="px-3 py-3 border-b border-outline-variant/5">
+              <div key={s.id+"l"} className="px-3 py-3 border-b border-outline-variant">
                 <p className="text-xs font-mono text-primary-accent">{s.id}</p>
                 <p className="text-xs opacity-70">{s.customer}</p>
                 <p className="text-xs opacity-40">{s.dest}</p>
               </div>
               {DAYS.map(d=>(
-                <div key={d} className={`border-b border-outline-variant/5 px-1 py-3 flex items-center justify-center ${s.days.includes(d)?"bg-primary-accent/20":""}`}>
+                <div key={d} className={`border-b border-outline-variant px-1 py-3 flex items-center justify-center ${s.days.includes(d)?"bg-primary-accent/20":""}`}>
                   {s.days.includes(d) && s.days[0]===d && <StatusBadge type={SM[s.status]} label={s.status} />}
                 </div>
               ))}

@@ -42,7 +42,7 @@ export default function QCCertificateTemplatePage() {
         description="KS / CE / 3S 거래처별 성적서 양식 마스터 (FNC-QC-123)"
       />
 
-      <div className="flex gap-0 mb-6 border-b border-outline-variant/10">
+      <div className="flex gap-0 mb-6 border-b border-outline">
         {TABS.map((t, i) => (
           <div key={t.label} className={`px-5 py-2.5 font-label uppercase tracking-widest text-xs cursor-pointer ${i === 0 ? "border-b-2 border-primary-accent text-primary-accent" : "text-on-surface/50 hover:text-on-surface"}`}>
             {t.label} <span className="ml-1 opacity-60">({t.count})</span>

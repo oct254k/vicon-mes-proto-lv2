@@ -17,7 +17,7 @@ export default function EQOeeTargetPage() {
       <div className="overflow-x-auto">
         <table className="w-full text-sm font-headline border-collapse">
           <thead>
-            <tr className="bg-surface-container border-b border-outline-variant/10">
+            <tr className="bg-surface-container border-b border-outline">
               {["설비 코드","가용성 목표(%)","성능 목표(%)","품질 목표(%)","OEE 목표(%)"].map((h) => (
                 <th key={h} className="px-4 py-2 font-label text-xs uppercase tracking-widest opacity-50 text-left">{h}</th>
               ))}
@@ -25,7 +25,7 @@ export default function EQOeeTargetPage() {
           </thead>
           <tbody>
             {rows.map((r) => (
-              <tr key={r.eqCode} className="border-b border-outline-variant/5">
+              <tr key={r.eqCode} className="border-b border-outline-variant">
                 <td className="px-4 py-2 font-bold">{r.eqCode}</td>
                 {([r.availTarget, r.perfTarget, r.qualTarget] as string[]).map((v, i) => (
                   <td key={i} className="px-4 py-2">

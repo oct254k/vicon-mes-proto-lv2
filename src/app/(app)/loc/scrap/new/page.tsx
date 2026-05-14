@@ -4,8 +4,8 @@ import { useState } from "react";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { FieldHeader } from "@/components/ui/FieldHeader";
 
-const inputCls = "w-full bg-[#131313] border border-white/10 px-4 py-2 text-sm text-white focus:outline-none focus:border-[#00912F]";
-const labelCls = "block text-xs font-label uppercase tracking-widest text-white/50 mb-2";
+const inputCls = "w-full bg-surface border border-outline/20 px-4 py-2 text-sm text-on-surface focus:outline-none focus:border-[#00912F]";
+const labelCls = "block text-xs font-label uppercase tracking-widest text-on-surface/50 mb-2";
 const REASONS  = ["표면 결함", "치수 불량", "녹 발생", "가공 불량", "기타"];
 const TYPES    = ["SCRAP", "OFFCUT"];
 
@@ -32,7 +32,7 @@ export default function ScrapNewPage() {
       {done ? (
         <div className="bg-[#00912F]/20 border-l-4 border-[#00912F] p-6 max-w-lg">
           <p className="font-label font-bold uppercase tracking-widest text-[#00912F] mb-1">SCRAP 등록 완료</p>
-          <button onClick={() => setDone(false)} className="mt-4 border border-white/20 text-white/60 font-label uppercase text-xs px-4 py-2">새 등록</button>
+          <button onClick={() => setDone(false)} className="mt-4 border border-outline/30 text-on-surface/60 font-label uppercase text-xs px-4 py-2">새 등록</button>
         </div>
       ) : (
         <div className="max-w-lg space-y-5">
@@ -41,7 +41,7 @@ export default function ScrapNewPage() {
             {TYPES.map(t => (
               <button key={t} onClick={() => setType(t)}
                 className={`px-5 py-2 text-xs font-label uppercase tracking-widest border transition-colors ${
-                  type === t ? "border-[#00912F] bg-[#00912F]/20 text-[#00912F]" : "border-white/10 text-white/50 hover:border-white/30"}`}>
+                  type === t ? "border-[#00912F] bg-[#00912F]/20 text-[#00912F]" : "border-outline/20 text-on-surface/50 hover:border-outline/40"}`}>
                 {t}
               </button>
             ))}
@@ -52,7 +52,7 @@ export default function ScrapNewPage() {
             {REASONS.map(r => (
               <button key={r} onClick={() => setReason(r)}
                 className={`px-4 py-1.5 text-xs font-label uppercase tracking-widest border transition-colors ${
-                  reason === r ? "border-[#ef4444] bg-[#ef4444]/20 text-[#ef4444]" : "border-white/10 text-white/40 hover:border-white/30"}`}>
+                  reason === r ? "border-danger bg-danger/20 text-danger" : "border-outline/20 text-on-surface/40 hover:border-outline/40"}`}>
                 {r}
               </button>
             ))}
@@ -70,7 +70,7 @@ export default function ScrapNewPage() {
               className="bg-[#00912F] text-black font-label font-bold uppercase tracking-widest px-6 py-3 text-sm hover:opacity-90 disabled:opacity-30">
               등록 확정 ▶
             </button>
-            <button className="bg-[#1a1a1a] border border-white/10 text-white/50 font-label uppercase tracking-widest px-6 py-3 text-sm">취소</button>
+            <button className="bg-surface-elevated border border-outline/20 text-on-surface/50 font-label uppercase tracking-widest px-6 py-3 text-sm">취소</button>
           </div>
         </div>
       )}

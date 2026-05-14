@@ -42,7 +42,7 @@ export default function LabelHistoryPage() {
         </div>
         <table className="w-full text-left border-collapse text-sm">
           <thead>
-            <tr className="bg-surface-container border-b border-outline-variant/10">
+            <tr className="bg-surface-container border-b border-outline">
               {["이력 ID", "대상", "유형", "작업", "프린터", "발행일시", "담당자", "결과"].map((h) => (
                 <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
               ))}
@@ -52,7 +52,7 @@ export default function LabelHistoryPage() {
             {ROWS.map((r) => {
               const s = STATUS_MAP[r.status];
               return (
-                <tr key={r.histId} className={`border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors ${r.status === "BLOCKED" ? "bg-error/5" : ""}`}>
+                <tr key={r.histId} className={`border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors ${r.status === "BLOCKED" ? "bg-error/5" : ""}`}>
                   <td className="px-4 py-2 font-mono text-xs text-primary-accent">{r.histId}</td>
                   <td className="px-4 py-2 font-mono text-xs opacity-70 max-w-xs truncate">{r.target}</td>
                   <td className="px-4 py-2 text-xs">{r.type}</td>

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { GlossaryModal } from "@/components/ui/GlossaryModal";
 import { SitemapModal } from "@/components/ui/SitemapModal";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 
 interface TopNavProps {
   onMenuClick?: () => void;
@@ -15,7 +16,7 @@ export function TopNav({ onMenuClick }: TopNavProps) {
   const [sitemapOpen, setSitemapOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 flex justify-between items-center w-full px-4 lg:px-10 h-16 z-50 bg-surface border-b border-surface-container-highest/20">
+    <nav className="fixed top-0 flex justify-between items-center w-full px-4 lg:px-10 h-16 z-50 bg-surface-bright border-b border-outline">
       <div className="flex items-center gap-4 lg:gap-8">
         {/* 모바일 햄버거 */}
         <button
@@ -31,7 +32,7 @@ export function TopNav({ onMenuClick }: TopNavProps) {
             alt="성지그룹 Logo"
             width={106}
             height={26}
-            className="h-8 w-auto brightness-0 invert"
+            className="h-8 w-auto logo-adaptive"
             priority
           />
         </Link>
@@ -65,6 +66,7 @@ export function TopNav({ onMenuClick }: TopNavProps) {
         <span className="material-symbols-outlined text-on-surface cursor-pointer hover:text-primary-accent">
           notifications
         </span>
+        <ThemeToggle />
         <span className="material-symbols-outlined text-on-surface cursor-pointer hover:text-primary-accent">
           settings
         </span>

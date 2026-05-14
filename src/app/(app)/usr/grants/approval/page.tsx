@@ -41,7 +41,7 @@ export default function GrantApprovalPage() {
         </div>
         <table className="w-full text-left border-collapse text-sm">
           <thead>
-            <tr className="bg-surface-container border-b border-outline-variant/10">
+            <tr className="bg-surface-container border-b border-outline">
               {["신청 ID", "신청자", "대상", "신청 내용", "신청 시각", "우선순위", "상태", "액션"].map((h) => (
                 <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
               ))}
@@ -49,7 +49,7 @@ export default function GrantApprovalPage() {
           </thead>
           <tbody className="font-headline">
             {INBOX.map((r, i) => (
-              <tr key={i} className={`border-b border-outline-variant/5 hover:bg-surface-container-highest/20 ${r.status === "PENDING" ? "bg-[#f59e0b]/5" : ""}`}>
+              <tr key={i} className={`border-b border-outline-variant hover:bg-surface-container-highest/20 ${r.status === "PENDING" ? "bg-warning/5" : ""}`}>
                 <td className="px-4 py-2 tabular-nums text-xs opacity-70">{r.reqId}</td>
                 <td className="px-4 py-2 text-xs">{r.requester}</td>
                 <td className="px-4 py-2 text-xs">{r.target}</td>

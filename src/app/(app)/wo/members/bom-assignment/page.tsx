@@ -33,7 +33,7 @@ export default function BomAssignmentPage() {
         </div>
         <table className="w-full text-left border-collapse text-sm">
           <thead>
-            <tr className="bg-surface-container border-b border-outline-variant/10">
+            <tr className="bg-surface-container border-b border-outline">
               {["BOM ID", "레벨", "구성품", "단위", "단위당 소요", "연결 부재", "할당", ""].map((h) => (
                 <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
               ))}
@@ -41,7 +41,7 @@ export default function BomAssignmentPage() {
           </thead>
           <tbody className="font-headline">
             {ROWS.map((r) => (
-              <tr key={r.bomId} className={`border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors ${!r.assigned ? "bg-[#f59e0b]/5" : ""}`}>
+              <tr key={r.bomId} className={`border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors ${!r.assigned ? "bg-warning/5" : ""}`}>
                 <td className="px-4 py-2 font-mono text-xs text-primary-accent">{r.bomId}</td>
                 <td className="px-4 py-2 tabular-nums text-xs">
                   <span className={`px-2 py-0.5 text-xs font-bold font-label ${r.level === 1 ? "bg-primary-accent/20 text-primary-accent" : "bg-surface-container text-on-surface/60"}`}>

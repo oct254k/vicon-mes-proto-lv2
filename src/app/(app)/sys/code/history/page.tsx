@@ -24,11 +24,11 @@ const MOCK = [
 
 export default function CodeHistoryPage() {
   return (
-    <div className="p-8 bg-[#131313] min-h-screen text-on-surface">
+    <div className="p-8 bg-surface min-h-screen text-on-surface">
       <PageHeader title="코드 변경 이력" accent="HISTORY" nodeRef="SCR-SYS-032" status="PROTOTYPE"
         description="A7 시점 스냅샷, 시스템 예약 코드 변경 거부 로그 포함 (FNC-SYS-031·034)" />
-      <div className="bg-surface-container border-l-4 border-[#f59e0b] p-4 mb-6">
-        <p className="text-xs font-label uppercase tracking-widest text-[#f59e0b] mb-1">ATTEMPT — 변경 거부됨</p>
+      <div className="bg-surface-container border-l-4 border-warning p-4 mb-6">
+        <p className="text-xs font-label uppercase tracking-widest text-warning mb-1">ATTEMPT — 변경 거부됨</p>
         <p className="text-sm text-on-surface-variant">시스템 예약 코드(WO_STATUS·QC_STATUS 등)에 대한 변경 시도는 거부되며 이력에 ATTEMPT로 기록됩니다.</p>
       </div>
       <DataTable title="코드 변경 이력 (append-only)" columns={COLS} data={MOCK} bufferCount={MOCK.length} />

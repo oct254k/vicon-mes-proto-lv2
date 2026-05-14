@@ -36,7 +36,7 @@ export default function QCSpcInputPage() {
 
   const feedbackStyle: Record<NonNullable<FeedbackType>, string> = {
     ok: "border-primary-accent text-primary-accent",
-    warning: "border-[#f59e0b] text-[#f59e0b]",
+    warning: "border-warning text-warning",
     violation: "border-error text-error",
   };
   const feedbackLabel: Record<NonNullable<FeedbackType>, string> = {
@@ -82,7 +82,7 @@ export default function QCSpcInputPage() {
           <div className="bg-surface-container-lowest overflow-x-auto">
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="bg-surface-container border-b border-outline-variant/10">
+                <tr className="bg-surface-container border-b border-outline">
                   {["샘플", "I-003 강판 두께 (mm)", "I-007 두께 편차 (mm)"].map((h) => (
                     <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50">{h}</th>
                   ))}
@@ -90,7 +90,7 @@ export default function QCSpcInputPage() {
               </thead>
               <tbody className="font-headline text-sm">
                 {PC_SAMPLES.map((s) => (
-                  <tr key={s.no} className="border-b border-outline-variant/5">
+                  <tr key={s.no} className="border-b border-outline-variant">
                     <td className="px-4 py-2 tabular-nums">#{s.no}</td>
                     <td className="px-4 py-2">
                       <input defaultValue={s.thickness} className="bg-surface-container border border-outline-variant/30 px-2 py-1 w-24 text-sm tabular-nums" />

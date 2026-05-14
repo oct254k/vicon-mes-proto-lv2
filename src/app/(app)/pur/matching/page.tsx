@@ -30,9 +30,9 @@ export default function PURMatchingPage() {
           <p className="text-xs font-label uppercase tracking-widest opacity-50 mb-1">MATCHED</p>
           <p className="text-2xl font-headline font-black text-primary-accent">{matched}</p>
         </div>
-        <div className="bg-surface-container-low p-4 border-l-4 border-[#f59e0b]">
+        <div className="bg-surface-container-low p-4 border-l-4 border-warning">
           <p className="text-xs font-label uppercase tracking-widest opacity-50 mb-1">EXCEPTION</p>
-          <p className="text-2xl font-headline font-black text-[#f59e0b]">{exception}</p>
+          <p className="text-2xl font-headline font-black text-warning">{exception}</p>
         </div>
         <div className="bg-surface-container-low p-4">
           <p className="text-xs font-label uppercase tracking-widest opacity-50 mb-1">TOTAL</p>
@@ -57,7 +57,7 @@ export default function PURMatchingPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="bg-surface-container border-b border-outline-variant/10">
+              <tr className="bg-surface-container border-b border-outline">
                 <th className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">PO 번호</th>
                 <th className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">Invoice 번호</th>
                 <th className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">Receipt 번호</th>
@@ -69,9 +69,9 @@ export default function PURMatchingPage() {
               {MATCHING_DATA.map((row, i) => (
                 <tr
                   key={i}
-                  className={`border-b border-outline-variant/5 transition-colors ${
+                  className={`border-b border-outline-variant transition-colors ${
                     row.matchStatus === "EXCEPTION"
-                      ? "bg-[#f59e0b]/5 hover:bg-[#f59e0b]/10"
+                      ? "bg-warning/5 hover:bg-warning/10"
                       : "hover:bg-surface-container-highest/20"
                   }`}
                 >
@@ -84,7 +84,7 @@ export default function PURMatchingPage() {
                       label={row.matchStatus}
                     />
                   </td>
-                  <td className={`px-4 py-2 text-xs ${row.matchStatus === "EXCEPTION" ? "text-[#f59e0b]" : "opacity-30"}`}>
+                  <td className={`px-4 py-2 text-xs ${row.matchStatus === "EXCEPTION" ? "text-warning" : "opacity-30"}`}>
                     {row.exceptionReason || "—"}
                   </td>
                 </tr>

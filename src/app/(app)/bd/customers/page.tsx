@@ -68,7 +68,7 @@ export default function BDCustomersPage() {
       <PageHeader title="기준정보 /" accent="거래처 마스터" nodeRef="SCR-BD-060" description="거래처 › 현장 › 동 3단계 계층 관리" />
       <div className="grid grid-cols-12 gap-6">
         {/* 트리 패널 */}
-        <aside className="col-span-4 bg-surface-container-lowest border border-outline-variant/10 p-4 min-h-[400px]">
+        <aside className="col-span-4 bg-surface-container-lowest border border-outline p-4 min-h-[400px]">
           <FieldHeader title="거래처 트리" moduleRef="3단계" />
           {CUSTOMERS.map((c) => (
             <div key={c.id} className="mb-1">
@@ -106,7 +106,7 @@ export default function BDCustomersPage() {
         </aside>
 
         {/* 상세 패널 */}
-        <div className="col-span-8 bg-surface-container-lowest border border-outline-variant/10 p-6 min-h-[400px]">
+        <div className="col-span-8 bg-surface-container-lowest border border-outline p-6 min-h-[400px]">
           {!selected ? (
             <div className="flex items-center justify-center h-full text-on-surface/30 text-sm font-label uppercase tracking-widest">
               좌측 트리에서 노드를 선택하세요

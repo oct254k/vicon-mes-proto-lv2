@@ -45,7 +45,7 @@ export default function MemberLandingPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="bg-surface-container border-b border-outline-variant/10">
+              <tr className="bg-surface-container border-b border-outline">
                 {["수주 ID", "거래처", "현장", "총 부재", "확정", "대기", "검증실패", "상태"].map((h) => (
                   <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
                 ))}
@@ -55,7 +55,7 @@ export default function MemberLandingPage() {
               {ROWS.map((r) => {
                 const s = STATUS_MAP[r.status];
                 return (
-                  <tr key={r.soId} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors cursor-pointer">
+                  <tr key={r.soId} className="border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors cursor-pointer">
                     <td className="px-4 py-2 text-primary-accent font-mono text-xs">{r.soId}</td>
                     <td className="px-4 py-2">{r.client}</td>
                     <td className="px-4 py-2 opacity-70">{r.site}</td>

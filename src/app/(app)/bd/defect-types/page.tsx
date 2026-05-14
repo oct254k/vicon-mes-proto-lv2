@@ -65,7 +65,7 @@ export default function BDDefectTypesPage() {
 
       <div className="grid grid-cols-12 gap-6">
         {/* 카테고리 목록 */}
-        <aside className="col-span-3 bg-surface-container-lowest border border-outline-variant/10">
+        <aside className="col-span-3 bg-surface-container-lowest border border-outline">
           <FieldHeader title="카테고리" moduleRef="6개" />
           <ul>
             {CATEGORIES.map((cat) => (
@@ -97,7 +97,7 @@ export default function BDDefectTypesPage() {
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="bg-surface-container border-b border-outline-variant/10">
+                <tr className="bg-surface-container border-b border-outline">
                   {["코드", "불량명", "심각도", "적용 공정"].map((h) => (
                     <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
                   ))}
@@ -105,7 +105,7 @@ export default function BDDefectTypesPage() {
               </thead>
               <tbody className="font-headline text-sm">
                 {items.map((item, i) => (
-                  <tr key={i} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors">
+                  <tr key={i} className="border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors">
                     <td className="px-4 py-2 text-xs tabular-nums text-on-surface/60">{item.code}</td>
                     <td className="px-4 py-2 font-bold">{item.name}</td>
                     <td className="px-4 py-2">

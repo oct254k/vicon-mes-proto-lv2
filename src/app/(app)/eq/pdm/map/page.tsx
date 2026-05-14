@@ -3,8 +3,8 @@ import { FieldHeader } from "@/components/ui/FieldHeader";
 
 const cells = [
   { eq: "EQ-P3-CUT-01",   risk: "H", score: 92, color: "bg-error/70 text-white" },
-  { eq: "EQ-P3-CUT-02",   risk: "M", score: 64, color: "bg-[#f59e0b]/70 text-black" },
-  { eq: "EQ-P3-PRESS-01", risk: "M", score: 58, color: "bg-[#f59e0b]/70 text-black" },
+  { eq: "EQ-P3-CUT-02",   risk: "M", score: 64, color: "bg-warning/70 text-black" },
+  { eq: "EQ-P3-PRESS-01", risk: "M", score: 58, color: "bg-warning/70 text-black" },
   { eq: "EQ-P3-WELD-01",  risk: "L", score: 22, color: "bg-primary-accent/70 text-black" },
   { eq: "EQ-P4-ASM-01",   risk: "L", score: 30, color: "bg-primary-accent/70 text-black" },
   { eq: "EQ-P4-ASM-02",   risk: "H", score: 88, color: "bg-error/70 text-white" },
@@ -26,7 +26,7 @@ export default function EQPdmMapPage() {
       </div>
       <div className="flex gap-6">
         <div className="flex items-center gap-2"><div className="w-3 h-3 bg-error/70" /><span className="font-label text-xs">HIGH (80+)</span></div>
-        <div className="flex items-center gap-2"><div className="w-3 h-3 bg-[#f59e0b]/70" /><span className="font-label text-xs">MED (50~79)</span></div>
+        <div className="flex items-center gap-2"><div className="w-3 h-3 bg-warning/70" /><span className="font-label text-xs">MED (50~79)</span></div>
         <div className="flex items-center gap-2"><div className="w-3 h-3 bg-primary-accent/70" /><span className="font-label text-xs">LOW (~49)</span></div>
       </div>
     </div>

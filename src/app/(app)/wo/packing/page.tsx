@@ -28,7 +28,7 @@ function stageColor(stage: PackingState): string {
     IN_PRODUCTION:"border-tertiary",
     COMPLETED:    "border-primary-accent",
     STORED:       "border-primary-accent",
-    READY:        "border-[#f59e0b]",
+    READY:        "border-warning",
     HOLD:         "border-error",
     LOADED:       "border-tertiary",
     SHIPPED:      "border-on-surface/30",
@@ -97,7 +97,7 @@ export default function WOPackingPage() {
           </div>
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="bg-surface-container border-b border-outline-variant/10">
+              <tr className="bg-surface-container border-b border-outline">
                 {["패킹 ID", "부재 수", "WO번호", "위치", "업데이트"].map(h => (
                   <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50">{h}</th>
                 ))}
@@ -105,7 +105,7 @@ export default function WOPackingPage() {
             </thead>
             <tbody className="font-headline text-sm">
               {rows.map(row => (
-                <tr key={row.id} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors cursor-pointer">
+                <tr key={row.id} className="border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors cursor-pointer">
                   <td className="px-4 py-2 font-mono text-xs text-primary-accent">{row.id}</td>
                   <td className="px-4 py-2 tabular-nums text-xs">{row.memberCount}</td>
                   <td className="px-4 py-2 text-xs opacity-70">{row.woNo}</td>

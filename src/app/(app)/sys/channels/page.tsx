@@ -10,7 +10,7 @@ const CHANNELS = [
 
 export default function SYSChannelsPage() {
   return (
-    <div className="p-8 bg-[#131313] min-h-screen text-on-surface">
+    <div className="p-8 bg-surface min-h-screen text-on-surface">
       <PageHeader title="알림 채널" accent="·구독" nodeRef="SCR-SYS-040" description="5채널 발송 설정 및 구독 관리 (재시도: 1/5/30분 × 3회)" />
 
       <section className="bg-surface-container-lowest">
@@ -20,7 +20,7 @@ export default function SYSChannelsPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="bg-surface-container border-b border-outline-variant/10">
+              <tr className="bg-surface-container border-b border-outline">
                 {["채널 ID", "채널", "설명", "활성화", "설정"].map(h => (
                   <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
                 ))}
@@ -28,7 +28,7 @@ export default function SYSChannelsPage() {
             </thead>
             <tbody className="font-headline text-sm">
               {CHANNELS.map(row => (
-                <tr key={row.id} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors">
+                <tr key={row.id} className="border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors">
                   <td className="px-4 py-2 text-xs text-on-surface-variant opacity-50">{row.id}</td>
                   <td className="px-4 py-2">
                     <span className={`px-3 py-1 text-xs font-label uppercase tracking-wider font-bold ${row.color}`}>
@@ -51,9 +51,9 @@ export default function SYSChannelsPage() {
         </div>
       </section>
 
-      <div className="mt-6 p-4 bg-surface-container border border-outline-variant/10">
+      <div className="mt-6 p-4 bg-surface-container border border-outline">
         <p className="text-xs font-label uppercase tracking-widest text-on-surface-variant opacity-60 mb-1">발송 실패 정책</p>
-        <p className="text-sm text-on-surface-variant">재시도: <span className="text-[#f59e0b]">1분 → 5분 → 30분</span> (최대 3회). 3회 초과 시 수동 재발송 전환 (사유 코드 필수).</p>
+        <p className="text-sm text-on-surface-variant">재시도: <span className="text-warning">1분 → 5분 → 30분</span> (최대 3회). 3회 초과 시 수동 재발송 전환 (사유 코드 필수).</p>
       </div>
     </div>
   );

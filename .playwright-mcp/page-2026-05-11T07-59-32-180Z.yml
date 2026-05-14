@@ -1,0 +1,208 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "성지그룹 Logo" [ref=e5] [cursor=pointer]:
+          - /url: /ops/
+          - img "성지그룹 Logo" [ref=e6]
+        - generic [ref=e7]:
+          - link "대시보드" [ref=e8] [cursor=pointer]:
+            - /url: /ops/
+          - link "이력추적" [ref=e9] [cursor=pointer]:
+            - /url: /trace/
+          - link "알람" [ref=e10] [cursor=pointer]:
+            - /url: /alarm/
+      - generic [ref=e11]:
+        - button "account_tree" [ref=e12] [cursor=pointer]
+        - button "book_2" [ref=e13] [cursor=pointer]
+        - generic [ref=e14] [cursor=pointer]: notifications
+        - generic [ref=e15] [cursor=pointer]: settings
+        - generic [ref=e17]: person
+    - complementary [ref=e18]:
+      - generic [ref=e20]:
+        - generic [ref=e21]: search
+        - textbox "메뉴 검색... (/)" [ref=e22]
+      - navigation [ref=e23]:
+        - list [ref=e24]:
+          - listitem [ref=e25]:
+            - button "inventory_2 기준정보 expand_more" [ref=e26]:
+              - generic [ref=e27]: inventory_2
+              - generic [ref=e28]: 기준정보
+              - generic [ref=e29]: expand_more
+          - listitem [ref=e30]:
+            - button "request_quote 수주·생산계획·MRP expand_more" [ref=e31]:
+              - generic [ref=e32]: request_quote
+              - generic [ref=e33]: 수주·생산계획·MRP
+              - generic [ref=e34]: expand_more
+          - listitem [ref=e35]:
+            - button "assignment 작업지시·부재·패킹 expand_more" [ref=e36]:
+              - generic [ref=e37]: assignment
+              - generic [ref=e38]: 작업지시·부재·패킹
+              - generic [ref=e39]: expand_more
+            - list [ref=e269]:
+              - listitem [ref=e270]:
+                - button "작업지시 발행·조회 expand_more" [ref=e271]:
+                  - generic [ref=e272]: 작업지시 발행·조회
+                  - generic [ref=e273]: expand_more
+                - list [ref=e274]:
+                  - listitem [ref=e275]:
+                    - link "— WO 목록·필터" [ref=e276] [cursor=pointer]:
+                      - /url: /wo/orders/
+                      - generic [ref=e277]: —
+                      - generic [ref=e278]: WO 목록·필터
+                  - listitem [ref=e279]:
+                    - link "— 발행·검증·강제발행" [ref=e280] [cursor=pointer]:
+                      - /url: /wo/orders/release/
+                      - generic [ref=e281]: —
+                      - generic [ref=e282]: 발행·검증·강제발행
+                  - listitem [ref=e283]:
+                    - link "— WO 상세·취소·재발행" [ref=e284] [cursor=pointer]:
+                      - /url: "/wo/orders/{wo_id}/"
+                      - generic [ref=e285]: —
+                      - generic [ref=e286]: WO 상세·취소·재발행
+                  - listitem [ref=e287]:
+                    - link "— 우선순위 정렬" [ref=e288] [cursor=pointer]:
+                      - /url: /wo/orders/priority/
+                      - generic [ref=e289]: —
+                      - generic [ref=e290]: 우선순위 정렬
+                  - listitem [ref=e291]:
+                    - link "— 외주 Plant 발행" [ref=e292] [cursor=pointer]:
+                      - /url: /wo/orders/external/
+                      - generic [ref=e293]: —
+                      - generic [ref=e294]: 외주 Plant 발행
+              - listitem [ref=e295]:
+                - button "부재(Member) 코드·도면 expand_more" [ref=e296]:
+                  - generic [ref=e297]: 부재(Member) 코드·도면
+                  - generic [ref=e298]: expand_more
+              - listitem [ref=e299]:
+                - button "패킹 그룹·라이프사이클 expand_more" [ref=e300]:
+                  - generic [ref=e301]: 패킹 그룹·라이프사이클
+                  - generic [ref=e302]: expand_more
+              - listitem [ref=e303]:
+                - button "라벨 발행·재인쇄·이력 expand_more" [ref=e304]:
+                  - generic [ref=e305]: 라벨 발행·재인쇄·이력
+                  - generic [ref=e306]: expand_more
+              - listitem [ref=e307]:
+                - link "작업지시서·패킹리스트 PDF" [ref=e308] [cursor=pointer]:
+                  - /url: /wo/documents/
+                  - generic [ref=e309]: 작업지시서·패킹리스트 PDF
+              - listitem [ref=e310]:
+                - link "WO·패킹 진척 보드" [ref=e311] [cursor=pointer]:
+                  - /url: /wo/dashboard/
+                  - generic [ref=e312]: WO·패킹 진척 보드
+          - listitem [ref=e40]:
+            - button "precision_manufacturing 생산실행·추적성 expand_more" [ref=e41]:
+              - generic [ref=e42]: precision_manufacturing
+              - generic [ref=e43]: 생산실행·추적성
+              - generic [ref=e44]: expand_more
+          - listitem [ref=e45]:
+            - button "warehouse 위치·재고 expand_more" [ref=e46]:
+              - generic [ref=e47]: warehouse
+              - generic [ref=e48]: 위치·재고
+              - generic [ref=e49]: expand_more
+          - listitem [ref=e50]:
+            - button "verified 품질·SPC·불량 expand_more" [ref=e51]:
+              - generic [ref=e52]: verified
+              - generic [ref=e53]: 품질·SPC·불량
+              - generic [ref=e54]: expand_more
+          - listitem [ref=e55]:
+            - button "engineering 설비관리 expand_more" [ref=e56]:
+              - generic [ref=e57]: engineering
+              - generic [ref=e58]: 설비관리
+              - generic [ref=e59]: expand_more
+          - listitem [ref=e60]:
+            - button "shopping_cart 구매·발주 expand_more" [ref=e61]:
+              - generic [ref=e62]: shopping_cart
+              - generic [ref=e63]: 구매·발주
+              - generic [ref=e64]: expand_more
+          - listitem [ref=e65]:
+            - button "local_shipping 출하 expand_more" [ref=e66]:
+              - generic [ref=e67]: local_shipping
+              - generic [ref=e68]: 출하
+              - generic [ref=e69]: expand_more
+          - listitem [ref=e70]:
+            - button "groups 사용자·권한 expand_more" [ref=e71]:
+              - generic [ref=e72]: groups
+              - generic [ref=e73]: 사용자·권한
+              - generic [ref=e74]: expand_more
+          - listitem [ref=e75]:
+            - button "dashboard 운영현황·대시보드 expand_more" [ref=e76]:
+              - generic [ref=e77]: dashboard
+              - generic [ref=e78]: 운영현황·대시보드
+              - generic [ref=e79]: expand_more
+          - listitem [ref=e80]:
+            - button "settings 시스템관리 expand_more" [ref=e81]:
+              - generic [ref=e82]: settings
+              - generic [ref=e83]: 시스템관리
+              - generic [ref=e84]: expand_more
+    - main [ref=e85]:
+      - generic [ref=e313]:
+        - generic [ref=e314]:
+          - heading "WO 발행 결과" [level=1] [ref=e316]
+          - generic [ref=e318]: "System Status: PROTOTYPE"
+        - generic [ref=e319]:
+          - generic [ref=e320]:
+            - heading "A. 일일 계획 부재 묶음" [level=3] [ref=e322]
+            - generic [ref=e323]:
+              - combobox [ref=e324]:
+                - option "P1100 — 이천1-1 (보데크)"
+                - option "P1200 — 이천1-2 (알루미늄폼)"
+                - option "P2000 — 이천2 (알루미늄폼)"
+                - option "P3000 — 이천3 (데크)" [selected]
+                - option "P4000 — 안성4 (가설재)"
+              - textbox [ref=e325]: 2026-05-06
+              - button "재조회" [ref=e326]
+            - generic [ref=e327]:
+              - generic [ref=e328]:
+                - text: 부재 목록
+                - generic [ref=e329]: 선택 2건 / 부족 1건
+              - table [ref=e330]:
+                - rowgroup [ref=e331]:
+                  - row "부재코드 타입 길이(mm) 납기 재고 Pkg#" [ref=e332]:
+                    - columnheader [ref=e333]
+                    - columnheader "부재코드" [ref=e334]
+                    - columnheader "타입" [ref=e335]
+                    - columnheader "길이(mm)" [ref=e336]
+                    - columnheader "납기" [ref=e337]
+                    - columnheader "재고" [ref=e338]
+                    - columnheader "Pkg#" [ref=e339]
+                - rowgroup [ref=e340]:
+                  - row "B01-1-G22C-C-171 C형 6,000 2026-05-08 OK 1" [ref=e341] [cursor=pointer]:
+                    - cell [ref=e342]:
+                      - checkbox [checked] [ref=e343]
+                    - cell "B01-1-G22C-C-171" [ref=e344]
+                    - cell "C형" [ref=e345]
+                    - cell "6,000" [ref=e346]
+                    - cell "2026-05-08" [ref=e347]
+                    - cell "OK" [ref=e348]
+                    - cell "1" [ref=e349]
+                  - row "B01-1-G22C-C-172 C형 6,000 2026-05-08 부족 ⚠ 1" [ref=e350] [cursor=pointer]:
+                    - cell [ref=e351]:
+                      - checkbox [checked] [ref=e352]
+                    - cell "B01-1-G22C-C-172" [ref=e353]
+                    - cell "C형" [ref=e354]
+                    - cell "6,000" [ref=e355]
+                    - cell "2026-05-08" [ref=e356]
+                    - cell "부족 ⚠" [ref=e357]
+                    - cell "1" [ref=e358]
+                  - row "B01-2-G15A-S-040 S형 12,000 2026-05-09 OK 2" [ref=e359] [cursor=pointer]:
+                    - cell [ref=e360]:
+                      - checkbox [ref=e361]
+                    - cell "B01-2-G15A-S-040" [ref=e362]
+                    - cell "S형" [ref=e363]
+                    - cell "12,000" [ref=e364]
+                    - cell "2026-05-09" [ref=e365]
+                    - cell "OK" [ref=e366]
+                    - cell "2" [ref=e367]
+            - generic [ref=e368]:
+              - button "발행 ▶" [ref=e369]
+              - button "강제발행" [ref=e370]
+              - button "엑셀" [ref=e371]
+          - generic [ref=e372]:
+            - heading "B. 발행 결과 패널" [level=3] [ref=e374]
+            - generic [ref=e375]: 부재를 선택 후 [발행 ▶] 을 클릭하세요
+        - generic [ref=e376]: ⓘ 강제발행 시 자재팀 자동 통보 + 사유코드 필수 (FNC-WO-003 / PRC-WO-001 §9 E1)
+    - generic [ref=e135]: System Active | Port 8080 | Secure Link
+  - button "Open Next.js Dev Tools" [ref=e141] [cursor=pointer]:
+    - img [ref=e142]
+  - alert [ref=e145]

@@ -25,11 +25,11 @@ const ST_MAP: Record<string,"running"|"error"|"idle"> = { ACTIVE:"running", REVO
 export default function ExternTokenPage() {
   const data = MOCK.map(r => ({ ...r, status: <StatusBadge type={ST_MAP[r.statusK] ?? "idle"} label={r.statusK} /> as unknown as string }));
   return (
-    <div className="p-8 bg-[#131313] min-h-screen text-on-surface">
+    <div className="p-8 bg-surface min-h-screen text-on-surface">
       <PageHeader title="API Token 관리" accent="TOKEN" nodeRef="SCR-SYS-071" status="PROTOTYPE"
         description="API Token 발급·회수 — 발급 시 1회 평문 노출, 이후 영구 마스킹 (FNC-SYS-072·074)" />
-      <div className="bg-surface-container border-l-4 border-[#f59e0b] p-4 mb-6">
-        <p className="text-xs font-label uppercase tracking-widest text-[#f59e0b] mb-1">NOTICE</p>
+      <div className="bg-surface-container border-l-4 border-warning p-4 mb-6">
+        <p className="text-xs font-label uppercase tracking-widest text-warning mb-1">NOTICE</p>
         <p className="text-sm text-on-surface-variant">토큰은 발급 직후 1회만 평문 표시됩니다. 이후 재조회 불가 — 분실 시 재발급 필요.</p>
       </div>
       <div className="flex gap-3 mb-4">

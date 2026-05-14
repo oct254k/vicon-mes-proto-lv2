@@ -37,7 +37,7 @@ const STATUS_LABEL: Record<string, string> = {
 
 function ProgressBar({ rate }: { rate: number }) {
   const capped = Math.min(rate, 100);
-  const color = rate >= 80 ? "bg-primary-accent/60" : rate >= 50 ? "bg-[#f59e0b]/60" : "bg-error/60";
+  const color = rate >= 80 ? "bg-primary-accent/60" : rate >= 50 ? "bg-warning/60" : "bg-error/60";
   return (
     <div className="flex items-center gap-2 min-w-[120px]">
       <div className="flex-1 h-2 bg-surface-container-highest">
@@ -93,7 +93,7 @@ export default function OPSWoProgressPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="bg-surface-container border-b border-outline-variant/10">
+              <tr className="bg-surface-container border-b border-outline">
                 {["WO ID", "수주번호", "총 부재", "완료", "잔여", "진척률", "예상 납기", "상태"].map((h) => (
                   <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold whitespace-nowrap">{h}</th>
                 ))}
@@ -101,7 +101,7 @@ export default function OPSWoProgressPage() {
             </thead>
             <tbody className="font-headline text-sm">
               {filtered.map((row) => (
-                <tr key={row.woId} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors">
+                <tr key={row.woId} className="border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors">
                   <td className="px-4 py-2 text-primary-accent font-black tabular-nums">{row.woId}</td>
                   <td className="px-4 py-2 tabular-nums">{row.soId}</td>
                   <td className="px-4 py-2 tabular-nums">{row.totalMembers}</td>

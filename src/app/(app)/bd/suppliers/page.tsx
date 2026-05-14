@@ -22,7 +22,7 @@ const SUPPLIERS: Supplier[] = [
 const GRADE_CLASS: Record<Grade, string> = {
   A: "text-primary-accent font-bold",
   B: "text-tertiary font-bold",
-  C: "text-[#f59e0b] font-bold",
+  C: "text-warning font-bold",
 };
 
 export default function BDSuppliersPage() {
@@ -52,7 +52,7 @@ export default function BDSuppliersPage() {
           <span className="text-on-surface/60">B — 보통</span>
         </div>
         <div className="flex items-center gap-2 text-xs font-label uppercase tracking-widest">
-          <span className="w-3 h-3 bg-[#f59e0b]" />
+          <span className="w-3 h-3 bg-warning" />
           <span className="text-on-surface/60">C — 관리 필요</span>
         </div>
       </div>
@@ -90,7 +90,7 @@ export default function BDSuppliersPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="bg-surface-container border-b border-outline-variant/10">
+              <tr className="bg-surface-container border-b border-outline">
                 {["공급사 코드", "이름", "등급", "납기 평균(일)", "불량률(%)", "상태"].map((h) => (
                   <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
                 ))}
@@ -98,12 +98,12 @@ export default function BDSuppliersPage() {
             </thead>
             <tbody className="font-headline text-sm">
               {filtered.map((s, i) => (
-                <tr key={i} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors">
+                <tr key={i} className="border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors">
                   <td className="px-4 py-2 text-xs tabular-nums text-on-surface/60">{s.code}</td>
                   <td className="px-4 py-2 font-bold">{s.name}</td>
                   <td className={`px-4 py-2 text-sm ${GRADE_CLASS[s.grade]}`}>{s.grade}</td>
                   <td className="px-4 py-2 tabular-nums">{s.leadtime}</td>
-                  <td className={`px-4 py-2 tabular-nums ${s.defectRate >= 0.5 ? "text-error" : s.defectRate >= 0.3 ? "text-[#f59e0b]" : "text-on-surface/80"}`}>
+                  <td className={`px-4 py-2 tabular-nums ${s.defectRate >= 0.5 ? "text-error" : s.defectRate >= 0.3 ? "text-warning" : "text-on-surface/80"}`}>
                     {s.defectRate.toFixed(2)}
                   </td>
                   <td className="px-4 py-2">

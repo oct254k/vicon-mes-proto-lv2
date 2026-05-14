@@ -45,7 +45,7 @@ export default function ReceiveScanPage() {
         <button onClick={handleScan} className="w-full bg-primary-accent text-black py-4 text-base font-headline font-black uppercase tracking-widest mb-3">
           스캔 · 검수
         </button>
-        <a href="/shp/receive/mismatch" className="w-full block text-center py-3 bg-[#f59e0b]/20 border border-[#f59e0b]/40 text-[#f59e0b] text-sm font-label uppercase">
+        <a href="/shp/receive/mismatch" className="w-full block text-center py-3 bg-warning/20 border border-warning/40 text-warning text-sm font-label uppercase">
           불일치 보고 →
         </a>
       </div>

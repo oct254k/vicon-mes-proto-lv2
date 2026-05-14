@@ -21,7 +21,7 @@ const MOCK = [
 
 export default function NoticeInboxPage() {
   return (
-    <div className="p-8 bg-[#131313] min-h-screen text-on-surface">
+    <div className="p-8 bg-surface min-h-screen text-on-surface">
       <PageHeader title="공지 수신함" accent="INBOX" nodeRef="SCR-SYS-014" status="PROTOTYPE"
         description="로그인 사용자 공지 수신함 — PC 헤더 위젯 + 모바일 진입 (FNC-SYS-012·013·016)" />
       <div className="bg-surface-container border-l-4 border-error p-4 mb-6 flex items-start gap-3">

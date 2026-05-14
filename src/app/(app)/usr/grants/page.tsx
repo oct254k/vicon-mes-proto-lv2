@@ -33,7 +33,7 @@ export default function GrantsPage() {
       <div className="mt-6 bg-surface-container-low border-l-4 border-[#6b7280] p-4">
         <FieldHeader title="활성 대기 현황" moduleRef="FNC-USR-051" />
         <div className="flex gap-8 text-sm font-body">
-          <div><p className="text-xs opacity-50 font-label uppercase tracking-widest mb-1">대기 중</p><p className="text-[#f59e0b] font-bold text-lg">3건</p></div>
+          <div><p className="text-xs opacity-50 font-label uppercase tracking-widest mb-1">대기 중</p><p className="text-warning font-bold text-lg">3건</p></div>
           <div><p className="text-xs opacity-50 font-label uppercase tracking-widest mb-1">오늘 승인</p><p className="text-primary-accent font-bold text-lg">7건</p></div>
           <div><p className="text-xs opacity-50 font-label uppercase tracking-widest mb-1">오늘 반려</p><p className="text-error font-bold text-lg">1건</p></div>
         </div>

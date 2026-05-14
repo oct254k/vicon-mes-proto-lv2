@@ -73,23 +73,23 @@ export default function QCChartsPage() {
 
       <FieldHeader title="X-bar 관리도" moduleRef="SCR-QC-020" />
 
-      <div className="relative h-56 bg-surface-container-lowest border border-outline-variant/10 mb-1" style={{ overflow: "hidden" }}>
+      <div className="relative h-56 bg-surface-container-lowest border border-outline mb-1" style={{ overflow: "hidden" }}>
         {/* Zone ±2σ ~ ±3σ */}
-        <div className="absolute bg-[#f59e0b]/5" style={{ top: lineTop(LIMITS.ucl), bottom: `calc(100% - ${lineTop(LIMITS.sigma2Upper)})`, left: 0, right: 0 }} />
-        <div className="absolute bg-[#f59e0b]/5" style={{ top: lineTop(LIMITS.sigma2Lower), bottom: `calc(100% - ${lineTop(LIMITS.lcl)})`, left: 0, right: 0 }} />
+        <div className="absolute bg-warning/5" style={{ top: lineTop(LIMITS.ucl), bottom: `calc(100% - ${lineTop(LIMITS.sigma2Upper)})`, left: 0, right: 0 }} />
+        <div className="absolute bg-warning/5" style={{ top: lineTop(LIMITS.sigma2Lower), bottom: `calc(100% - ${lineTop(LIMITS.lcl)})`, left: 0, right: 0 }} />
 
         {/* UCL line */}
         <div className="absolute border-t border-error/60 w-full" style={{ top: lineTop(LIMITS.ucl) }}>
           <span className="absolute right-2 -top-4 text-[10px] text-error/70 font-label">UCL {LIMITS.ucl}</span>
         </div>
         {/* sigma2 upper */}
-        <div className="absolute border-t border-dashed border-[#f59e0b]/40 w-full" style={{ top: lineTop(LIMITS.sigma2Upper) }} />
+        <div className="absolute border-t border-dashed border-warning/40 w-full" style={{ top: lineTop(LIMITS.sigma2Upper) }} />
         {/* CL line */}
         <div className="absolute border-t border-primary-accent w-full" style={{ top: lineTop(LIMITS.cl) }}>
           <span className="absolute right-2 -top-4 text-[10px] text-primary-accent font-label">CL {LIMITS.cl}</span>
         </div>
         {/* sigma2 lower */}
-        <div className="absolute border-t border-dashed border-[#f59e0b]/40 w-full" style={{ top: lineTop(LIMITS.sigma2Lower) }} />
+        <div className="absolute border-t border-dashed border-warning/40 w-full" style={{ top: lineTop(LIMITS.sigma2Lower) }} />
         {/* LCL line */}
         <div className="absolute border-t border-error/60 w-full" style={{ top: lineTop(LIMITS.lcl) }}>
           <span className="absolute right-2 -top-4 text-[10px] text-error/70 font-label">LCL {LIMITS.lcl}</span>
@@ -119,7 +119,7 @@ export default function QCChartsPage() {
       <div className="flex gap-4 mb-6 text-xs font-label">
         <span className="flex items-center gap-1"><span className="w-2.5 h-2.5 bg-primary-accent inline-block" /> 정상</span>
         <span className="flex items-center gap-1"><span className="w-2.5 h-2.5 bg-error inline-block" /> Rule 위반</span>
-        <span className="flex items-center gap-1"><span className="w-8 h-0 border-t border-dashed border-[#f59e0b] inline-block" /> ±2σ zone</span>
+        <span className="flex items-center gap-1"><span className="w-8 h-0 border-t border-dashed border-warning inline-block" /> ±2σ zone</span>
         <span className="flex items-center gap-1"><span className="w-8 h-0 border-t border-error/60 inline-block" /> UCL/LCL</span>
       </div>
 
@@ -137,7 +137,7 @@ export default function QCChartsPage() {
       <div className="bg-surface-container-lowest overflow-x-auto mb-6">
         <table className="w-full text-left border-collapse">
           <thead>
-            <tr className="bg-surface-container border-b border-outline-variant/10">
+            <tr className="bg-surface-container border-b border-outline">
               {["측정 ID", "측정 시각", "측정값 (°)", "Rule 위반", "상태"].map((h) => (
                 <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50">{h}</th>
               ))}
@@ -145,7 +145,7 @@ export default function QCChartsPage() {
           </thead>
           <tbody className="font-headline text-sm">
             {POINTS.map((p) => (
-              <tr key={p.id} className={`border-b border-outline-variant/5 ${p.rule ? "bg-error/5" : "hover:bg-surface-container-highest/20"}`}>
+              <tr key={p.id} className={`border-b border-outline-variant ${p.rule ? "bg-error/5" : "hover:bg-surface-container-highest/20"}`}>
                 <td className="px-4 py-2 tabular-nums text-xs text-on-surface-variant/60">{p.id}</td>
                 <td className="px-4 py-2 tabular-nums">{p.at}</td>
                 <td className={`px-4 py-2 tabular-nums font-bold ${p.rule ? "text-error" : ""}`}>{p.value}</td>

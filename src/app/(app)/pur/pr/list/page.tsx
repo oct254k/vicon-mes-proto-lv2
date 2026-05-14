@@ -45,13 +45,13 @@ export default function PRListPage() {
           <span className="text-xs opacity-40 font-label">{rows.length}건</span>
         </div>
         <table className="w-full text-left border-collapse">
-          <thead><tr className="bg-surface-container border-b border-outline-variant/10">
+          <thead><tr className="bg-surface-container border-b border-outline">
             {["PR 번호","자재코드","수량","요청자","상태","생성일"].map(h=>(
               <th key={h} className="px-4 py-2 font-label text-xs uppercase tracking-widest opacity-50">{h}</th>
             ))}</tr></thead>
           <tbody className="font-headline text-sm">
             {rows.map(r=>(
-              <tr key={r.id} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20 cursor-pointer">
+              <tr key={r.id} className="border-b border-outline-variant hover:bg-surface-container-highest/20 cursor-pointer">
                 <td className="px-4 py-2 text-primary-accent font-bold font-mono text-xs">{r.id}</td>
                 <td className="px-4 py-2">{r.material}</td>
                 <td className="px-4 py-2 tabular-nums">{r.qty}</td>

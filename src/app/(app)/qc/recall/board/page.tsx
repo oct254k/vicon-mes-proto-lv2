@@ -57,7 +57,7 @@ export default function QCRecallBoardPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse text-sm">
             <thead>
-              <tr className="bg-surface-container border-b border-outline-variant/10">
+              <tr className="bg-surface-container border-b border-outline">
                 {["회수ID","LOT","부재코드","거래처","수량","현재 단계","등록일","최근 변경"].map((h) => (
                   <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
                 ))}
@@ -65,7 +65,7 @@ export default function QCRecallBoardPage() {
             </thead>
             <tbody className="font-headline">
               {RECALLS.map((r, i) => (
-                <tr key={i} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors">
+                <tr key={i} className="border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors">
                   <td className="px-4 py-2 tabular-nums text-primary-accent">{r.id}</td>
                   <td className="px-4 py-2 font-mono text-xs">{r.lot}</td>
                   <td className="px-4 py-2 font-mono text-xs">{r.partCode}</td>

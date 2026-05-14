@@ -31,7 +31,7 @@ export default function PRNewPage() {
             className="bg-surface-container-high text-sm px-3 py-2 border border-outline-variant/20 font-label resize-none" />
         </div>
       </div>
-      <div className="bg-[#f59e0b]/10 border border-[#f59e0b]/40 px-4 py-3 mb-6 text-xs font-label text-[#f59e0b]">
+      <div className="bg-warning/10 border border-warning/40 px-4 py-3 mb-6 text-xs font-label text-warning">
         ⚠ FR-PUR-003 MUST: PR 저장 후 구매팀 결재 승인 필수. 시스템 자동 PO 발행 불가.
       </div>
       {saved ? (

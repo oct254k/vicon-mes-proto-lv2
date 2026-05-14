@@ -51,7 +51,7 @@ export default function PURAsnPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="bg-surface-container border-b border-outline-variant/10">
+              <tr className="bg-surface-container border-b border-outline">
                 <th className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">ASN 번호</th>
                 <th className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">PO</th>
                 <th className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">공급사</th>
@@ -66,9 +66,9 @@ export default function PURAsnPage() {
                 return (
                   <tr
                     key={i}
-                    className={`border-b border-outline-variant/5 transition-colors ${
+                    className={`border-b border-outline-variant transition-colors ${
                       urgent
-                        ? "bg-[#f59e0b]/5 hover:bg-[#f59e0b]/10"
+                        ? "bg-warning/5 hover:bg-warning/10"
                         : "hover:bg-surface-container-highest/20"
                     }`}
                   >
@@ -76,7 +76,7 @@ export default function PURAsnPage() {
                     <td className="px-4 py-2 font-mono text-xs opacity-70">{row.po}</td>
                     <td className="px-4 py-2">{row.supplier}</td>
                     <td className="px-4 py-2 tabular-nums text-xs">{row.shipDate}</td>
-                    <td className={`px-4 py-2 tabular-nums text-xs font-bold ${urgent ? "text-[#f59e0b]" : ""}`}>
+                    <td className={`px-4 py-2 tabular-nums text-xs font-bold ${urgent ? "text-warning" : ""}`}>
                       {row.eta}
                       {urgent && <span className="ml-1 text-[10px]">⚠</span>}
                     </td>

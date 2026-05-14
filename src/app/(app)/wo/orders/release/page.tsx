@@ -73,7 +73,7 @@ export default function WOReleaseResultPage() {
             </div>
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="bg-surface-container border-b border-outline-variant/10">
+                <tr className="bg-surface-container border-b border-outline">
                   <th className="px-3 py-2 text-xs font-label opacity-50 uppercase"></th>
                   <th className="px-3 py-2 text-xs font-label opacity-50 uppercase">부재코드</th>
                   <th className="px-3 py-2 text-xs font-label opacity-50 uppercase">타입</th>
@@ -86,8 +86,8 @@ export default function WOReleaseResultPage() {
               <tbody className="font-headline text-sm">
                 {CANDIDATES.map(c => (
                   <tr key={c.memberId}
-                    className={`border-b border-outline-variant/5 transition-colors cursor-pointer
-                      ${!c.stockOk ? "bg-[#f59e0b]/10" : "hover:bg-surface-container-highest/20"}`}
+                    className={`border-b border-outline-variant transition-colors cursor-pointer
+                      ${!c.stockOk ? "bg-warning/10" : "hover:bg-surface-container-highest/20"}`}
                     onClick={() => toggleCheck(c.memberId)}
                   >
                     <td className="px-3 py-2">
@@ -100,7 +100,7 @@ export default function WOReleaseResultPage() {
                     <td className="px-3 py-2">
                       {c.stockOk
                         ? <span className="text-primary-accent text-xs font-label">OK</span>
-                        : <span className="text-[#f59e0b] text-xs font-label font-bold">부족 ⚠</span>}
+                        : <span className="text-warning text-xs font-label font-bold">부족 ⚠</span>}
                     </td>
                     <td className="px-3 py-2 text-xs tabular-nums">{c.pkgNo}</td>
                   </tr>
@@ -120,7 +120,7 @@ export default function WOReleaseResultPage() {
             <button
               onClick={() => setShowForce(true)}
               disabled={!hasShortage}
-              className="px-4 py-2 bg-[#f59e0b]/80 text-black text-xs font-label uppercase tracking-widest disabled:opacity-30"
+              className="px-4 py-2 bg-warning/80 text-black text-xs font-label uppercase tracking-widest disabled:opacity-30"
             >
               강제발행
             </button>
@@ -136,7 +136,7 @@ export default function WOReleaseResultPage() {
               <div className="bg-surface-container p-4 mb-4">
                 <p className="text-xs font-label uppercase tracking-widest opacity-50 mb-3">WO 발행 결과</p>
                 {RESULT.wo.map(w => (
-                  <div key={w.id} className="flex items-center justify-between mb-2 border-b border-outline-variant/10 pb-2">
+                  <div key={w.id} className="flex items-center justify-between mb-2 border-b border-outline pb-2">
                     <div>
                       <span className="text-xs opacity-40 font-label mr-2">{w.kind === "SEMI" ? "반제품 WO" : "완제품 WO"}</span>
                       <span className="font-headline font-bold text-sm text-primary-accent">{w.id}</span>
@@ -150,7 +150,7 @@ export default function WOReleaseResultPage() {
               <div className="bg-surface-container-lowest overflow-x-auto mb-4">
                 <table className="w-full text-left border-collapse">
                   <thead>
-                    <tr className="bg-surface-container border-b border-outline-variant/10">
+                    <tr className="bg-surface-container border-b border-outline">
                       {["Material", "소요(m)", "재고(m)", "부족(m)"].map(h => (
                         <th key={h} className="px-3 py-2 text-xs font-label opacity-50 uppercase">{h}</th>
                       ))}
@@ -159,13 +159,13 @@ export default function WOReleaseResultPage() {
                   <tbody className="font-headline text-sm">
                     {RESULT.materialReq.map(r => (
                       <tr key={r.material}
-                        className={`border-b border-outline-variant/5 ${r.shortM > 0 ? "bg-[#f59e0b]/10" : ""}`}>
+                        className={`border-b border-outline-variant ${r.shortM > 0 ? "bg-warning/10" : ""}`}>
                         <td className="px-3 py-2 font-mono text-xs">{r.material}</td>
                         <td className="px-3 py-2 tabular-nums text-xs">{r.neededM}</td>
                         <td className="px-3 py-2 tabular-nums text-xs">{r.availableM}</td>
                         <td className="px-3 py-2 tabular-nums text-xs">
                           {r.shortM > 0
-                            ? <span className="text-[#f59e0b] font-bold">{r.shortM} ⚠</span>
+                            ? <span className="text-warning font-bold">{r.shortM} ⚠</span>
                             : <span className="opacity-30">—</span>}
                         </td>
                       </tr>
@@ -194,7 +194,7 @@ export default function WOReleaseResultPage() {
       {showForce && (
         <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
           <div className="bg-surface-container-lowest border border-outline-variant/20 p-6 w-96 max-w-full">
-            <h3 className="font-headline font-black text-sm uppercase tracking-widest mb-4 text-[#f59e0b]">강제발행 — 사유 입력</h3>
+            <h3 className="font-headline font-black text-sm uppercase tracking-widest mb-4 text-warning">강제발행 — 사유 입력</h3>
             <p className="text-xs opacity-60 mb-4">재고 부족 {shortageRows.length}건이 감지되었습니다. 강제발행 시 자재팀에 자동 통보됩니다.</p>
             <select className="w-full bg-surface-container-high text-on-surface text-sm px-3 py-2 border border-outline-variant/20 font-label mb-3">
               <option>MATERIAL_SHORTAGE — 자재 부족</option>
@@ -206,7 +206,7 @@ export default function WOReleaseResultPage() {
               className="w-full bg-surface-container-high text-on-surface text-sm px-3 py-2 border border-outline-variant/20 font-label mb-4 resize-none" />
             <div className="flex gap-2 justify-end">
               <button onClick={() => setShowForce(false)} className="px-4 py-2 text-xs font-label uppercase border border-outline-variant/20">취소</button>
-              <button onClick={handleForceRelease} className="px-4 py-2 bg-[#f59e0b] text-black text-xs font-label uppercase tracking-widest">강제발행 확인</button>
+              <button onClick={handleForceRelease} className="px-4 py-2 bg-warning text-black text-xs font-label uppercase tracking-widest">강제발행 확인</button>
             </div>
           </div>
         </div>

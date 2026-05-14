@@ -33,7 +33,7 @@ const MOCK = [
 export default function DeviceLifecyclePage() {
   const data = MOCK.map(r => ({ ...r }));
   return (
-    <div className="p-8 bg-[#131313] min-h-screen text-on-surface">
+    <div className="p-8 bg-surface min-h-screen text-on-surface">
       <PageHeader title="단말 라이프사이클" accent="LIFECYCLE" nodeRef="SCR-SYS-101" status="PROTOTYPE"
         description="분실 무효화(5분 SLA)·재발급·영구 폐기·USR INACTIVE 연동 (PRC-SYS-002 §6 [A]~[F])" />
       <div className="bg-surface-container border-l-4 border-error p-4 mb-6 flex items-center gap-4">

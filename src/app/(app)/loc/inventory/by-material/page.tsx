@@ -42,9 +42,9 @@ export default function InventoryByMaterialPage() {
 
       <div className="flex gap-4 mb-8">
         {KPI.map(k => (
-          <div key={k.label} className="bg-[#1a1a1a] border-l-4 border-[#00912F] px-6 py-4">
-            <p className="text-xs font-label uppercase tracking-widest text-white/40 mb-1">{k.label}</p>
-            <p className="text-2xl font-black font-headline text-white">{k.value}</p>
+          <div key={k.label} className="bg-surface-elevated border-l-4 border-[#00912F] px-6 py-4">
+            <p className="text-xs font-label uppercase tracking-widest text-on-surface/40 mb-1">{k.label}</p>
+            <p className="text-2xl font-black font-headline text-on-surface">{k.value}</p>
           </div>
         ))}
       </div>
@@ -52,8 +52,8 @@ export default function InventoryByMaterialPage() {
       <div className="flex gap-3 mb-6">
         {[["Plant","P3000"],["카테고리","COIL"]].map(([lbl, val]) => (
           <div key={lbl} className="flex items-center gap-2">
-            <label className="text-xs font-label uppercase tracking-widest text-white/40">{lbl}</label>
-            <select defaultValue={val} className="bg-[#131313] border border-white/10 px-3 py-2 text-xs font-label text-white focus:outline-none focus:border-[#00912F]">
+            <label className="text-xs font-label uppercase tracking-widest text-on-surface/40">{lbl}</label>
+            <select defaultValue={val} className="bg-surface border border-outline/20 px-3 py-2 text-xs font-label text-on-surface focus:outline-none focus:border-[#00912F]">
               <option>전체</option><option>{val}</option>
             </select>
           </div>

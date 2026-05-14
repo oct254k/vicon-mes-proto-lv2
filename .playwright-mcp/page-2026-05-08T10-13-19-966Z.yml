@@ -1,0 +1,240 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "성지그룹 Logo" [ref=e5] [cursor=pointer]:
+          - /url: /ops/
+          - img "성지그룹 Logo" [ref=e6]
+        - generic [ref=e7]:
+          - link "대시보드" [ref=e8] [cursor=pointer]:
+            - /url: /ops/
+          - link "이력추적" [ref=e9] [cursor=pointer]:
+            - /url: /trace/
+          - link "알람" [ref=e10] [cursor=pointer]:
+            - /url: /alarm/
+      - generic [ref=e11]:
+        - button "book_2" [ref=e12] [cursor=pointer]
+        - generic [ref=e13] [cursor=pointer]: notifications
+        - generic [ref=e14] [cursor=pointer]: settings
+        - generic [ref=e16]: person
+    - complementary [ref=e17]:
+      - generic [ref=e19]:
+        - generic [ref=e20]: search
+        - textbox "메뉴 검색... (/)" [ref=e21]
+      - navigation [ref=e22]:
+        - list [ref=e23]:
+          - listitem [ref=e24]:
+            - button "inventory_2 기준정보 expand_more" [ref=e25]:
+              - generic [ref=e26]: inventory_2
+              - generic [ref=e27]: 기준정보
+              - generic [ref=e28]: expand_more
+          - listitem [ref=e29]:
+            - button "request_quote 수주·생산계획·MRP expand_more" [ref=e30]:
+              - generic [ref=e31]: request_quote
+              - generic [ref=e32]: 수주·생산계획·MRP
+              - generic [ref=e33]: expand_more
+          - listitem [ref=e34]:
+            - button "assignment 작업지시·부재·패킹 expand_more" [ref=e35]:
+              - generic [ref=e36]: assignment
+              - generic [ref=e37]: 작업지시·부재·패킹
+              - generic [ref=e38]: expand_more
+          - listitem [ref=e39]:
+            - button "precision_manufacturing 생산실행·추적성 expand_more" [ref=e40]:
+              - generic [ref=e41]: precision_manufacturing
+              - generic [ref=e42]: 생산실행·추적성
+              - generic [ref=e43]: expand_more
+          - listitem [ref=e44]:
+            - button "warehouse 위치·재고 expand_more" [ref=e45]:
+              - generic [ref=e46]: warehouse
+              - generic [ref=e47]: 위치·재고
+              - generic [ref=e48]: expand_more
+            - list [ref=e49]:
+              - listitem [ref=e50]:
+                - button "위치 체계·yard 마스터 expand_more" [ref=e51]:
+                  - generic [ref=e52]: 위치 체계·yard 마스터
+                  - generic [ref=e53]: expand_more
+              - listitem [ref=e54]:
+                - button "야적장 도면 시각화 expand_more" [ref=e55]:
+                  - generic [ref=e56]: 야적장 도면 시각화
+                  - generic [ref=e57]: expand_more
+              - listitem [ref=e58]:
+                - button "입고 (RECEIVE) expand_more" [ref=e59]:
+                  - generic [ref=e60]: 입고 (RECEIVE)
+                  - generic [ref=e61]: expand_more
+              - listitem [ref=e62]:
+                - button "공장 간 이동 (TRANSFER) expand_more" [ref=e63]:
+                  - generic [ref=e64]: 공장 간 이동 (TRANSFER)
+                  - generic [ref=e65]: expand_more
+              - listitem [ref=e66]:
+                - button "재고 보정 (ADJUST) expand_more" [ref=e67]:
+                  - generic [ref=e68]: 재고 보정 (ADJUST)
+                  - generic [ref=e69]: expand_more
+              - listitem [ref=e70]:
+                - button "SCRAP·자투리 expand_more" [ref=e71]:
+                  - generic [ref=e72]: SCRAP·자투리
+                  - generic [ref=e73]: expand_more
+              - listitem [ref=e74]:
+                - button "정기 실사 (Cycle Count) expand_more" [ref=e75]:
+                  - generic [ref=e76]: 정기 실사 (Cycle Count)
+                  - generic [ref=e77]: expand_more
+              - listitem [ref=e78]:
+                - button "재고 조회·이력·View expand_more" [ref=e79]:
+                  - generic [ref=e80]: 재고 조회·이력·View
+                  - generic [ref=e81]: expand_more
+                - list [ref=e82]:
+                  - listitem [ref=e83]:
+                    - link "— 위치별 재고" [ref=e84] [cursor=pointer]:
+                      - /url: /loc/inventory/by-location/
+                      - generic [ref=e85]: —
+                      - generic [ref=e86]: 위치별 재고
+                  - listitem [ref=e87]:
+                    - link "— (Material × Plant) 가용" [ref=e88] [cursor=pointer]:
+                      - /url: /loc/inventory/by-material/
+                      - generic [ref=e89]: —
+                      - generic [ref=e90]: (Material × Plant) 가용
+                  - listitem [ref=e91]:
+                    - link "— 트랜잭션 이력" [ref=e92] [cursor=pointer]:
+                      - /url: /loc/inventory/history/
+                      - generic [ref=e93]: —
+                      - generic [ref=e94]: 트랜잭션 이력
+                  - listitem [ref=e95]:
+                    - link "— MOVE (동일 Plant 내 이동)" [ref=e96] [cursor=pointer]:
+                      - /url: /loc/inventory/move/
+                      - generic [ref=e97]: —
+                      - generic [ref=e98]: MOVE (동일 Plant 내 이동)
+                  - listitem [ref=e99]:
+                    - link "— Lot·부재 추적" [ref=e100] [cursor=pointer]:
+                      - /url: /loc/inventory/trace/
+                      - generic [ref=e101]: —
+                      - generic [ref=e102]: Lot·부재 추적
+          - listitem [ref=e103]:
+            - button "verified 품질·SPC·불량 expand_more" [ref=e104]:
+              - generic [ref=e105]: verified
+              - generic [ref=e106]: 품질·SPC·불량
+              - generic [ref=e107]: expand_more
+          - listitem [ref=e108]:
+            - button "engineering 설비관리 expand_more" [ref=e109]:
+              - generic [ref=e110]: engineering
+              - generic [ref=e111]: 설비관리
+              - generic [ref=e112]: expand_more
+          - listitem [ref=e113]:
+            - button "shopping_cart 구매·발주 expand_more" [ref=e114]:
+              - generic [ref=e115]: shopping_cart
+              - generic [ref=e116]: 구매·발주
+              - generic [ref=e117]: expand_more
+          - listitem [ref=e118]:
+            - button "local_shipping 출하 expand_more" [ref=e119]:
+              - generic [ref=e120]: local_shipping
+              - generic [ref=e121]: 출하
+              - generic [ref=e122]: expand_more
+          - listitem [ref=e123]:
+            - button "groups 사용자·권한 expand_more" [ref=e124]:
+              - generic [ref=e125]: groups
+              - generic [ref=e126]: 사용자·권한
+              - generic [ref=e127]: expand_more
+          - listitem [ref=e128]:
+            - button "dashboard 운영현황·대시보드 expand_more" [ref=e129]:
+              - generic [ref=e130]: dashboard
+              - generic [ref=e131]: 운영현황·대시보드
+              - generic [ref=e132]: expand_more
+          - listitem [ref=e133]:
+            - button "settings 시스템관리 expand_more" [ref=e134]:
+              - generic [ref=e135]: settings
+              - generic [ref=e136]: 시스템관리
+              - generic [ref=e137]: expand_more
+    - main [ref=e138]:
+      - generic [ref=e139]:
+        - generic [ref=e140]:
+          - heading "재고 트랜잭션 이력 HISTORY" [level=1] [ref=e142]
+          - generic [ref=e143]:
+            - generic [ref=e144]: "Node: SCR-LOC-062"
+            - generic [ref=e145]: "System Status: PROTOTYPE"
+          - paragraph [ref=e146]: inventory_transaction 전체 이력 조회 (감사 영구 보존). TX 유형별 색상 구분.
+        - generic [ref=e147]:
+          - button "전체" [ref=e148]
+          - button "RECEIVE" [ref=e149]
+          - button "TRANSFER" [ref=e150]
+          - button "ADJUST" [ref=e151]
+          - button "SCRAP" [ref=e152]
+          - button "MOVE" [ref=e153]
+          - generic [ref=e154]:
+            - textbox [ref=e155]: 2026-05-01
+            - generic [ref=e156]: ~
+            - textbox [ref=e157]: 2026-05-05
+        - generic [ref=e158]:
+          - heading "트랜잭션 이력" [level=3] [ref=e159]
+          - generic [ref=e160]: FNC-LOC-092
+        - generic [ref=e161]:
+          - generic [ref=e162]:
+            - 'heading "TX 이력 | Buffer: 005 Entries" [level=3] [ref=e163]':
+              - text: TX 이력
+              - generic [ref=e164]: "| Buffer: 005 Entries"
+            - generic [ref=e165] [cursor=pointer]: refresh
+          - table [ref=e167]:
+            - rowgroup [ref=e168]:
+              - row "TX ID TX 유형 Lot No 자재 수량 이전 위치 이후 위치 처리자 일시" [ref=e169]:
+                - columnheader "TX ID" [ref=e170]
+                - columnheader "TX 유형" [ref=e171]
+                - columnheader "Lot No" [ref=e172]
+                - columnheader "자재" [ref=e173]
+                - columnheader "수량" [ref=e174]
+                - columnheader "이전 위치" [ref=e175]
+                - columnheader "이후 위치" [ref=e176]
+                - columnheader "처리자" [ref=e177]
+                - columnheader "일시" [ref=e178]
+            - rowgroup [ref=e179]:
+              - row "TX-20260505-0041 RECEIVE RCV-20260501-0017 M-COIL-A P3000 900m +900m — Y-P3000-A-01-02 박창고 2026-05-05 08:12" [ref=e180]:
+                - cell "TX-20260505-0041" [ref=e181]
+                - cell "RECEIVE" [ref=e182]
+                - cell "RCV-20260501-0017" [ref=e183]
+                - cell "M-COIL-A P3000 900m" [ref=e184]
+                - cell "+900m" [ref=e185]
+                - cell "—" [ref=e186]
+                - cell "Y-P3000-A-01-02" [ref=e187]
+                - cell "박창고" [ref=e188]
+                - cell "2026-05-05 08:12" [ref=e189]
+              - row "TX-20260505-0038 TRANSFER RCV-20260501-0017 M-COIL-A P3000 900m 900m Y-P3000-A-01-03 IN-TRANSIT 김창고 2026-05-05 07:50" [ref=e190]:
+                - cell "TX-20260505-0038" [ref=e191]
+                - cell "TRANSFER" [ref=e192]
+                - cell "RCV-20260501-0017" [ref=e193]
+                - cell "M-COIL-A P3000 900m" [ref=e194]
+                - cell "900m" [ref=e195]
+                - cell "Y-P3000-A-01-03" [ref=e196]
+                - cell "IN-TRANSIT" [ref=e197]
+                - cell "김창고" [ref=e198]
+                - cell "2026-05-05 07:50" [ref=e199]
+              - row "TX-20260504-0035 ADJUST RCV-20260501-0017 M-COIL-A P3000 900m -50m Y-P3000-A-01-03 Y-P3000-A-01-03 이매니저 2026-05-04 14:22" [ref=e200]:
+                - cell "TX-20260504-0035" [ref=e201]
+                - cell "ADJUST" [ref=e202]
+                - cell "RCV-20260501-0017" [ref=e203]
+                - cell "M-COIL-A P3000 900m" [ref=e204]
+                - cell "-50m" [ref=e205]
+                - cell "Y-P3000-A-01-03" [ref=e206]
+                - cell "Y-P3000-A-01-03" [ref=e207]
+                - cell "이매니저" [ref=e208]
+                - cell "2026-05-04 14:22" [ref=e209]
+              - row "TX-20260503-0029 MOVE RCV-20260503-0011 M-COIL-C 4,200m Y-P3000-A-01-04 Y-P3000-A-02-01 박창고 2026-05-03 10:05" [ref=e210]:
+                - cell "TX-20260503-0029" [ref=e211]
+                - cell "MOVE" [ref=e212]
+                - cell "RCV-20260503-0011" [ref=e213]
+                - cell "M-COIL-C" [ref=e214]
+                - cell "4,200m" [ref=e215]
+                - cell "Y-P3000-A-01-04" [ref=e216]
+                - cell "Y-P3000-A-02-01" [ref=e217]
+                - cell "박창고" [ref=e218]
+                - cell "2026-05-03 10:05" [ref=e219]
+              - row "TX-20260502-0022 SCRAP LOT-20260410-011 M-PLATE-01 -200kg Y-P3000-C-02-01 Y-P3000-DEFECT 김검수 2026-05-02 16:40" [ref=e220]:
+                - cell "TX-20260502-0022" [ref=e221]
+                - cell "SCRAP" [ref=e222]
+                - cell "LOT-20260410-011" [ref=e223]
+                - cell "M-PLATE-01" [ref=e224]
+                - cell "-200kg" [ref=e225]
+                - cell "Y-P3000-C-02-01" [ref=e226]
+                - cell "Y-P3000-DEFECT" [ref=e227]
+                - cell "김검수" [ref=e228]
+                - cell "2026-05-02 16:40" [ref=e229]
+        - button "[엑셀 다운]" [ref=e231]
+    - generic [ref=e233]: System Active | Port 8080 | Secure Link
+  - button "Open Next.js Dev Tools" [ref=e239] [cursor=pointer]:
+    - img [ref=e240]
+  - alert [ref=e243]

@@ -32,7 +32,7 @@ type Node = { kind: string; id: string; name: string; status?: string; oee7d?: n
 
 function compColor(pct: number) {
   if (pct >= 100) return "text-error";
-  if (pct >= 80) return "text-[#f59e0b]";
+  if (pct >= 80) return "text-warning";
   return "text-tertiary";
 }
 
@@ -51,7 +51,7 @@ function TreeNode({ node, depth, selected, onSelect }: { node: Node; depth: numb
         <span className="text-xs font-label uppercase opacity-60">{node.kind === "PLANT" ? "🏭" : node.kind === "WC" ? "🏗" : "⚙"}</span>
         <span className="text-xs font-label">{node.id}</span>
         <span className="text-xs opacity-50 ml-1">{node.name}</span>
-        {node.status === "MAINTENANCE" && <span className="text-xs text-[#f59e0b] ml-auto">🛠</span>}
+        {node.status === "MAINTENANCE" && <span className="text-xs text-warning ml-auto">🛠</span>}
         {node.status === "ACTIVE" && <span className="text-xs text-tertiary ml-auto">🟢</span>}
       </div>
       {open && hasChildren && node.children!.map(child => (
@@ -69,15 +69,15 @@ export default function EQHierarchyPage() {
       <PageHeader title="설비 계층" accent="트리뷰" nodeRef="SCR-EQ-001" description="Plant → Process Line → Work Center → Equipment 4단계 계층" />
       <div className="grid grid-cols-12 gap-4">
         {/* Left: Tree */}
-        <div className="col-span-4 bg-surface-container-lowest border border-outline-variant/10">
-          <div className="p-3 bg-surface-container-highest/20 border-b border-outline-variant/10 border-l-4 border-primary-accent">
+        <div className="col-span-4 bg-surface-container-lowest border border-outline">
+          <div className="p-3 bg-surface-container-highest/20 border-b border-outline border-l-4 border-primary-accent">
             <span className="font-label text-xs uppercase tracking-widest">계층 트리 — P3000</span>
           </div>
           <TreeNode node={treeData as Node} depth={0} selected={selected?.id ?? null} onSelect={setSelected} />
         </div>
 
         {/* Right: Detail */}
-        <div className="col-span-8 bg-surface-container-lowest border border-outline-variant/10 p-4">
+        <div className="col-span-8 bg-surface-container-lowest border border-outline p-4">
           {!selected && (
             <p className="text-on-surface-variant/40 text-sm font-label uppercase tracking-widest py-16 text-center">
               좌측 트리에서 노드를 선택하세요
@@ -85,7 +85,7 @@ export default function EQHierarchyPage() {
           )}
           {selected && (
             <div className="space-y-4">
-              <div className="flex items-center gap-3 border-b border-outline-variant/10 pb-3">
+              <div className="flex items-center gap-3 border-b border-outline pb-3">
                 <span className="font-headline font-black text-lg">{selected.id}</span>
                 <span className="text-sm text-on-surface-variant">{selected.name}</span>
                 {selected.status && (

@@ -1,0 +1,256 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "성지그룹 Logo" [ref=e5] [cursor=pointer]:
+          - /url: /ops/
+          - img "성지그룹 Logo" [ref=e6]
+        - generic [ref=e7]:
+          - link "대시보드" [ref=e8] [cursor=pointer]:
+            - /url: /ops/
+          - link "이력추적" [ref=e9] [cursor=pointer]:
+            - /url: /trace/
+          - link "알람" [ref=e10] [cursor=pointer]:
+            - /url: /alarm/
+      - generic [ref=e11]:
+        - button "book_2" [ref=e12] [cursor=pointer]
+        - generic [ref=e13] [cursor=pointer]: notifications
+        - generic [ref=e14] [cursor=pointer]: settings
+        - generic [ref=e16]: person
+    - complementary [ref=e17]:
+      - generic [ref=e19]:
+        - generic [ref=e20]: search
+        - textbox "메뉴 검색... (/)" [ref=e21]
+      - navigation [ref=e22]:
+        - list [ref=e23]:
+          - listitem [ref=e24]:
+            - button "inventory_2 기준정보 expand_more" [ref=e25]:
+              - generic [ref=e26]: inventory_2
+              - generic [ref=e27]: 기준정보
+              - generic [ref=e28]: expand_more
+          - listitem [ref=e29]:
+            - button "request_quote 수주·생산계획·MRP expand_more" [ref=e30]:
+              - generic [ref=e31]: request_quote
+              - generic [ref=e32]: 수주·생산계획·MRP
+              - generic [ref=e33]: expand_more
+          - listitem [ref=e34]:
+            - button "assignment 작업지시·부재·패킹 expand_more" [ref=e35]:
+              - generic [ref=e36]: assignment
+              - generic [ref=e37]: 작업지시·부재·패킹
+              - generic [ref=e38]: expand_more
+          - listitem [ref=e39]:
+            - button "precision_manufacturing 생산실행·추적성 expand_more" [ref=e40]:
+              - generic [ref=e41]: precision_manufacturing
+              - generic [ref=e42]: 생산실행·추적성
+              - generic [ref=e43]: expand_more
+          - listitem [ref=e44]:
+            - button "warehouse 위치·재고 expand_more" [ref=e45]:
+              - generic [ref=e46]: warehouse
+              - generic [ref=e47]: 위치·재고
+              - generic [ref=e48]: expand_more
+          - listitem [ref=e49]:
+            - button "verified 품질·SPC·불량 expand_more" [ref=e50]:
+              - generic [ref=e51]: verified
+              - generic [ref=e52]: 품질·SPC·불량
+              - generic [ref=e53]: expand_more
+          - listitem [ref=e54]:
+            - button "engineering 설비관리 expand_more" [ref=e55]:
+              - generic [ref=e56]: engineering
+              - generic [ref=e57]: 설비관리
+              - generic [ref=e58]: expand_more
+          - listitem [ref=e59]:
+            - button "shopping_cart 구매·발주 expand_more" [ref=e60]:
+              - generic [ref=e61]: shopping_cart
+              - generic [ref=e62]: 구매·발주
+              - generic [ref=e63]: expand_more
+          - listitem [ref=e64]:
+            - button "local_shipping 출하 expand_more" [ref=e65]:
+              - generic [ref=e66]: local_shipping
+              - generic [ref=e67]: 출하
+              - generic [ref=e68]: expand_more
+          - listitem [ref=e69]:
+            - button "groups 사용자·권한 expand_more" [ref=e70]:
+              - generic [ref=e71]: groups
+              - generic [ref=e72]: 사용자·권한
+              - generic [ref=e73]: expand_more
+          - listitem [ref=e74]:
+            - button "dashboard 운영현황·대시보드 expand_more" [ref=e75]:
+              - generic [ref=e76]: dashboard
+              - generic [ref=e77]: 운영현황·대시보드
+              - generic [ref=e78]: expand_more
+            - list [ref=e79]:
+              - listitem [ref=e80]:
+                - link "개인 홈·즐겨찾기" [ref=e81] [cursor=pointer]:
+                  - /url: /ops/home/
+                  - generic [ref=e82]: 개인 홈·즐겨찾기
+              - listitem [ref=e83]:
+                - button "라인 상황판 expand_more" [ref=e84]:
+                  - generic [ref=e85]: 라인 상황판
+                  - generic [ref=e86]: expand_more
+              - listitem [ref=e87]:
+                - button "Plant 종합 대시보드 expand_more" [ref=e88]:
+                  - generic [ref=e89]: Plant 종합 대시보드
+                  - generic [ref=e90]: expand_more
+              - listitem [ref=e91]:
+                - button "다공장 종합 expand_more" [ref=e92]:
+                  - generic [ref=e93]: 다공장 종합
+                  - generic [ref=e94]: expand_more
+              - listitem [ref=e95]:
+                - button "수주별 진척 expand_more" [ref=e96]:
+                  - generic [ref=e97]: 수주별 진척
+                  - generic [ref=e98]: expand_more
+              - listitem [ref=e99]:
+                - button "WO·부재 진척 보드 expand_more" [ref=e100]:
+                  - generic [ref=e101]: WO·부재 진척 보드
+                  - generic [ref=e102]: expand_more
+              - listitem [ref=e103]:
+                - button "생산·불량·가동 통합 expand_more" [ref=e104]:
+                  - generic [ref=e105]: 생산·불량·가동 통합
+                  - generic [ref=e106]: expand_more
+              - listitem [ref=e107]:
+                - button "재고 종합 시각화 expand_more" [ref=e108]:
+                  - generic [ref=e109]: 재고 종합 시각화
+                  - generic [ref=e110]: expand_more
+                - list [ref=e111]:
+                  - listitem [ref=e112]:
+                    - link "— Plant × Material 매트릭스" [ref=e113] [cursor=pointer]:
+                      - /url: /ops/inventory/matrix/
+                      - generic [ref=e114]: —
+                      - generic [ref=e115]: Plant × Material 매트릭스
+                  - listitem [ref=e116]:
+                    - link "— 야적장 점유율 통합 표시" [ref=e117] [cursor=pointer]:
+                      - /url: /ops/inventory/yard/
+                      - generic [ref=e118]: —
+                      - generic [ref=e119]: 야적장 점유율 통합 표시
+                  - listitem [ref=e120]:
+                    - link "— 자투리 풀 가시화" [ref=e121] [cursor=pointer]:
+                      - /url: /ops/inventory/scrap-pool/
+                      - generic [ref=e122]: —
+                      - generic [ref=e123]: 자투리 풀 가시화
+              - listitem [ref=e124]:
+                - button "알림 센터 expand_more" [ref=e125]:
+                  - generic [ref=e126]: 알림 센터
+                  - generic [ref=e127]: expand_more
+          - listitem [ref=e128]:
+            - button "settings 시스템관리 expand_more" [ref=e129]:
+              - generic [ref=e130]: settings
+              - generic [ref=e131]: 시스템관리
+              - generic [ref=e132]: expand_more
+    - main [ref=e133]:
+      - generic [ref=e134]:
+        - generic [ref=e135]:
+          - heading "야적장 현황 SCR-OPS-071" [level=1] [ref=e137]
+          - generic [ref=e138]:
+            - generic [ref=e139]: "Node: FNC-OPS-082"
+            - generic [ref=e140]: "System Status: CALIBRATED"
+          - paragraph [ref=e141]: 야적장 점유율 통합 표시 · 5분 갱신
+        - generic [ref=e142]:
+          - generic [ref=e143]:
+            - paragraph [ref=e144]: 전체 구역
+            - paragraph [ref=e145]: 6개
+          - generic [ref=e146]:
+            - paragraph [ref=e147]: 평균 점유율
+            - paragraph [ref=e148]: 67%
+          - generic [ref=e149]:
+            - paragraph [ref=e150]: 만재 구역
+            - paragraph [ref=e151]: 1개
+        - generic [ref=e152]:
+          - paragraph [ref=e153]: 구역별 점유율
+          - generic [ref=e154]:
+            - generic [ref=e155]:
+              - generic [ref=e156]:
+                - generic [ref=e157]: A-01
+                - generic [ref=e158]: 정상
+              - paragraph [ref=e159]: H형강
+              - paragraph [ref=e162]: 24/30 (80%)
+            - generic [ref=e163]:
+              - generic [ref=e164]:
+                - generic [ref=e165]: A-02
+                - generic [ref=e166]: 만재
+              - paragraph [ref=e167]: H형강
+              - paragraph [ref=e170]: 30/30 (100%)
+            - generic [ref=e171]:
+              - generic [ref=e172]:
+                - generic [ref=e173]: B-01
+                - generic [ref=e174]: 정상
+              - paragraph [ref=e175]: 강판
+              - paragraph [ref=e178]: 12/20 (60%)
+            - generic [ref=e179]:
+              - generic [ref=e180]:
+                - generic [ref=e181]: B-02
+                - generic [ref=e182]: 공석
+              - paragraph [ref=e183]: 강판
+              - paragraph [ref=e185]: 0/20 (0%)
+            - generic [ref=e186]:
+              - generic [ref=e187]:
+                - generic [ref=e188]: C-01
+                - generic [ref=e189]: 정상
+              - paragraph [ref=e190]: 앵커볼트
+              - paragraph [ref=e193]: 18/25 (72%)
+            - generic [ref=e194]:
+              - generic [ref=e195]:
+                - generic [ref=e196]: C-02
+                - generic [ref=e197]: 주의
+              - paragraph [ref=e198]: 기타
+              - paragraph [ref=e201]: 22/25 (88%)
+        - generic [ref=e202]:
+          - generic [ref=e203]:
+            - 'heading "야적장 구역별 DataTable | Buffer: 006 Entries" [level=3] [ref=e204]':
+              - text: 야적장 구역별 DataTable
+              - generic [ref=e205]: "| Buffer: 006 Entries"
+            - generic [ref=e206] [cursor=pointer]: refresh
+          - table [ref=e208]:
+            - rowgroup [ref=e209]:
+              - row "구역 자재 유형 현재 수량 용량 점유율 상태" [ref=e210]:
+                - columnheader "구역" [ref=e211]
+                - columnheader "자재 유형" [ref=e212]
+                - columnheader "현재 수량" [ref=e213]
+                - columnheader "용량" [ref=e214]
+                - columnheader "점유율" [ref=e215]
+                - columnheader "상태" [ref=e216]
+            - rowgroup [ref=e217]:
+              - row "A-01 H형강 24 30 80% 정상" [ref=e218]:
+                - cell "A-01" [ref=e219]
+                - cell "H형강" [ref=e220]
+                - cell "24" [ref=e221]
+                - cell "30" [ref=e222]
+                - cell "80%" [ref=e223]
+                - cell "정상" [ref=e224]
+              - row "A-02 H형강 30 30 100% 만재" [ref=e225]:
+                - cell "A-02" [ref=e226]
+                - cell "H형강" [ref=e227]
+                - cell "30" [ref=e228]
+                - cell "30" [ref=e229]
+                - cell "100%" [ref=e230]
+                - cell "만재" [ref=e231]
+              - row "B-01 강판 12 20 60% 정상" [ref=e232]:
+                - cell "B-01" [ref=e233]
+                - cell "강판" [ref=e234]
+                - cell "12" [ref=e235]
+                - cell "20" [ref=e236]
+                - cell "60%" [ref=e237]
+                - cell "정상" [ref=e238]
+              - row "B-02 강판 0 20 0% 공석" [ref=e239]:
+                - cell "B-02" [ref=e240]
+                - cell "강판" [ref=e241]
+                - cell "0" [ref=e242]
+                - cell "20" [ref=e243]
+                - cell "0%" [ref=e244]
+                - cell "공석" [ref=e245]
+              - row "C-01 앵커볼트 18 25 72% 정상" [ref=e246]:
+                - cell "C-01" [ref=e247]
+                - cell "앵커볼트" [ref=e248]
+                - cell "18" [ref=e249]
+                - cell "25" [ref=e250]
+                - cell "72%" [ref=e251]
+                - cell "정상" [ref=e252]
+              - row "C-02 기타 22 25 88% 주의" [ref=e253]:
+                - cell "C-02" [ref=e254]
+                - cell "기타" [ref=e255]
+                - cell "22" [ref=e256]
+                - cell "25" [ref=e257]
+                - cell "88%" [ref=e258]
+                - cell "주의" [ref=e259]
+    - generic [ref=e261]: System Active | Port 8080 | Secure Link
+  - button "Open Next.js Dev Tools" [ref=e267] [cursor=pointer]:
+    - img [ref=e268]

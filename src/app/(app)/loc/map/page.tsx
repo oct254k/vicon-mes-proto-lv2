@@ -52,18 +52,18 @@ const LOTS: Lot[] = [
 ];
 
 const CELL_STYLE: Record<SlotStatus, string> = {
-  EMPTY:       "bg-surface-container-high text-on-surface/30 border border-outline-variant/10",
+  EMPTY:       "bg-surface-container-high text-on-surface/30 border border-outline",
   OCCUPIED:    "bg-primary-accent/20 border border-primary-accent/40 text-primary-accent",
-  FULL:        "bg-[#f59e0b]/20 border border-[#f59e0b]/40 text-[#f59e0b]",
-  MAINTENANCE: "bg-[#ef4444]/20 border border-[#ef4444]/40 text-[#ef4444]",
+  FULL:        "bg-warning/20 border border-warning/40 text-warning",
+  MAINTENANCE: "bg-danger/20 border border-danger/40 text-danger",
   AGING:       "bg-[#f97316]/20 border border-[#f97316]/40 text-[#f97316] animate-pulse",
 };
 
 const LEGEND: { status: SlotStatus; label: string; color: string }[] = [
   { status: "EMPTY",       label: "EMPTY — 비어있음",      color: "bg-surface-container-highest border border-outline-variant/20" },
   { status: "OCCUPIED",    label: "OCCUPIED — 적재중",     color: "bg-primary-accent/30 border border-primary-accent/50" },
-  { status: "FULL",        label: "FULL — 가득 참",        color: "bg-[#f59e0b]/30 border border-[#f59e0b]/50" },
-  { status: "MAINTENANCE", label: "MAINTENANCE — 점검중",  color: "bg-[#ef4444]/30 border border-[#ef4444]/50" },
+  { status: "FULL",        label: "FULL — 가득 참",        color: "bg-warning/30 border border-warning/50" },
+  { status: "MAINTENANCE", label: "MAINTENANCE — 점검중",  color: "bg-danger/30 border border-danger/50" },
   { status: "AGING",       label: "AGING — 보관 초과",     color: "bg-[#f97316]/30 border border-[#f97316]/50" },
 ];
 
@@ -123,7 +123,7 @@ export default function LOCMapPage() {
 
       <div className="flex gap-4">
         {/* 도면 캔버스 */}
-        <div className="flex-1 bg-surface-container border border-outline-variant/10 p-4">
+        <div className="flex-1 bg-surface-container border border-outline p-4">
           <p className="font-label text-xs uppercase tracking-widest text-on-surface/40 mb-3">
             {yard} — 5×6 격자 (총 {LOTS.length}위치)
           </p>
@@ -148,7 +148,7 @@ export default function LOCMapPage() {
         {/* 우측 사이드바 */}
         <div className="w-52 shrink-0 space-y-4">
           {/* 범례 */}
-          <div className="bg-surface-container border border-outline-variant/10 p-4">
+          <div className="bg-surface-container border border-outline p-4">
             <FieldHeader title="범례" />
             <div className="space-y-2">
               {LEGEND.map(l => (
@@ -161,7 +161,7 @@ export default function LOCMapPage() {
           </div>
 
           {/* 통계 */}
-          <div className="bg-surface-container border border-outline-variant/10 p-4">
+          <div className="bg-surface-container border border-outline p-4">
             <FieldHeader title="현황" moduleRef="FNC-LOC-096" />
             <div className="space-y-2 text-xs font-label">
               {[
@@ -182,7 +182,7 @@ export default function LOCMapPage() {
 
       {/* 하단 상세 패널 */}
       {selectedLot && (
-        <div className="mt-4 bg-surface-container border border-outline-variant/10 border-l-4 border-l-primary-accent p-5">
+        <div className="mt-4 bg-surface-container border border-outline border-l-4 border-l-primary-accent p-5">
           <div className="flex items-center justify-between mb-3">
             <p className="font-label text-xs uppercase tracking-widest text-primary-accent">
               선택된 위치 — {selectedLot.id}

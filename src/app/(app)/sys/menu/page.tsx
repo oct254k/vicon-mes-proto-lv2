@@ -9,7 +9,7 @@ const CARDS = [
 
 export default function MenuIndexPage() {
   return (
-    <div className="p-8 bg-[#131313] min-h-screen text-on-surface">
+    <div className="p-8 bg-surface min-h-screen text-on-surface">
       <PageHeader title="메뉴 관리" accent="MENU" nodeRef="SCR-SYS-02x" status="PROTOTYPE"
         description="3단계 메뉴 트리, 권한 매트릭스(Level×부서), 즐겨찾기 동기화 (FNC-SYS-020~025)" />
       <FieldHeader title="하위 화면" moduleRef="FNC-SYS-020~025" />

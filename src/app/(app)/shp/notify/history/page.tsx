@@ -43,13 +43,13 @@ export default function NotifyHistoryPage() {
       <FieldHeader title="발송 이력" moduleRef={`${rows.length}건`} />
       <div className="bg-surface-container-lowest overflow-x-auto">
         <table className="w-full text-left border-collapse">
-          <thead><tr className="bg-surface-container border-b border-outline-variant/10">
+          <thead><tr className="bg-surface-container border-b border-outline">
             {["알림 ID","유형","채널","출하 ID","거래처","발송 시각","결과"].map(h=>(
               <th key={h} className="px-4 py-2 font-label text-xs uppercase tracking-widest opacity-50">{h}</th>
             ))}</tr></thead>
           <tbody className="font-headline text-sm">
             {rows.map(r=>(
-              <tr key={r.id} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20">
+              <tr key={r.id} className="border-b border-outline-variant hover:bg-surface-container-highest/20">
                 <td className="px-4 py-2 text-primary-accent font-mono text-xs">{r.id}</td>
                 <td className="px-4 py-2"><span className="text-xs font-label text-on-surface/70">{r.type}</span></td>
                 <td className="px-4 py-2"><span className="px-2 py-0.5 bg-surface-container text-xs font-label">{r.ch}</span></td>

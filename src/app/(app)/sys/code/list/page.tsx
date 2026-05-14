@@ -26,7 +26,7 @@ const MOCK = [
 
 export default function CodeListPage() {
   return (
-    <div className="p-8 bg-[#131313] min-h-screen text-on-surface">
+    <div className="p-8 bg-surface min-h-screen text-on-surface">
       <PageHeader title="코드 목록" accent="LIST" nodeRef="SCR-SYS-030" status="PROTOTYPE"
         description="공통 코드 마스터 — 4 DB 카테고리 필터, 시스템 예약 잠금 표시 (FNC-SYS-030·031·033)" />
       <div className="flex gap-2 mb-4 flex-wrap">

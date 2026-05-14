@@ -36,26 +36,26 @@ export default function InventoryTracePage() {
       <div className="bg-[#f97316]/10 border border-[#f97316]/30 px-5 py-3 mb-6 flex items-center justify-between">
         <div>
           <p className="font-label text-xs uppercase tracking-widest text-[#f97316] mb-1">⚠ AGING 경보</p>
-          <p className="text-white/60 text-sm">LOT-20260420-007 / M-COIL-A — 16일 보관 초과 (임계: 14일)</p>
+          <p className="text-on-surface/60 text-sm">LOT-20260420-007 / M-COIL-A — 16일 보관 초과 (임계: 14일)</p>
         </div>
         <StatusBadge type="warning" label="AGING" />
       </div>
 
       <div className="flex gap-3 mb-6">
-        <input defaultValue="M-COIL-A" className="bg-[#131313] border border-white/10 px-3 py-2 text-xs text-white focus:outline-none focus:border-[#00912F] w-48" placeholder="자재 코드" />
-        <select className="bg-[#131313] border border-white/10 px-3 py-2 text-xs text-white focus:outline-none focus:border-[#00912F]">
+        <input defaultValue="M-COIL-A" className="bg-surface border border-outline/20 px-3 py-2 text-xs text-on-surface focus:outline-none focus:border-[#00912F] w-48" placeholder="자재 코드" />
+        <select className="bg-surface border border-outline/20 px-3 py-2 text-xs text-on-surface focus:outline-none focus:border-[#00912F]">
           <option>P3000</option><option>P1000</option><option>P2000</option>
         </select>
         <button className="bg-[#00912F] text-black font-label font-bold uppercase tracking-widest px-4 py-2 text-xs hover:opacity-90">조회</button>
       </div>
 
       <FieldHeader title="FIFO 순서 목록 — M-COIL-A / P3000" moduleRef="FNC-LOC-035" />
-      <p className="text-xs font-label text-white/40 mb-3 uppercase tracking-widest">출고 권장 순서: ① fifo_seq 4300 → ② 4450 → ③ 4500 → ...</p>
+      <p className="text-xs font-label text-on-surface/40 mb-3 uppercase tracking-widest">출고 권장 순서: ① fifo_seq 4300 → ② 4450 → ③ 4500 → ...</p>
       <DataTable title="FIFO 추적" columns={FIFO_COLS} data={FIFO_DATA} bufferCount={FIFO_DATA.length} />
 
-      <div className="bg-[#1a1a1a] border-l-4 border-[#00912F] p-4 mt-4 text-xs font-label">
-        <p className="uppercase tracking-widest text-white/40 mb-2">출고 권장 — 다음 소모 Lot</p>
-        <p className="text-white"><span className="text-[#00912F] font-bold">①</span> LOT-20260420-007 (seq 4300) — 2,800m @ Y-P3000-A-02-03 <span className="text-[#f97316]">AGING ⚠</span></p>
+      <div className="bg-surface-elevated border-l-4 border-[#00912F] p-4 mt-4 text-xs font-label">
+        <p className="uppercase tracking-widest text-on-surface/40 mb-2">출고 권장 — 다음 소모 Lot</p>
+        <p className="text-on-surface"><span className="text-[#00912F] font-bold">①</span> LOT-20260420-007 (seq 4300) — 2,800m @ Y-P3000-A-02-03 <span className="text-[#f97316]">AGING ⚠</span></p>
       </div>
     </div>
   );

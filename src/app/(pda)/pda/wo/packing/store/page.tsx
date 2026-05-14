@@ -87,14 +87,14 @@ export default function PdaYardStorePage() {
   const toastColors = {
     success: "bg-tertiary/20 border-tertiary text-tertiary",
     error:   "bg-error-container/30 border-error text-error",
-    warning: "bg-[#f59e0b]/20 border-[#f59e0b] text-[#f59e0b]",
+    warning: "bg-warning/20 border-warning text-warning",
   };
 
   return (
     <div className="min-h-screen bg-surface flex flex-col max-w-md mx-auto">
 
       {/* PDA 헤더 */}
-      <div className="bg-surface-container-lowest border-b border-outline-variant/10 px-4 py-3 flex items-center justify-between sticky top-0 z-10">
+      <div className="bg-surface-container-lowest border-b border-outline px-4 py-3 flex items-center justify-between sticky top-0 z-10">
         <div className="flex items-center gap-3">
           <span className="material-symbols-outlined text-primary-accent text-lg">menu</span>
           <div>
@@ -132,7 +132,7 @@ export default function PdaYardStorePage() {
         {/* ① 패킹 라벨 스캔 */}
         <section className="bg-surface-container">
           <div className="px-4 py-3 bg-surface-container-highest/30 border-l-4 border-primary-accent flex items-center gap-2">
-            <span className="text-xs font-label uppercase tracking-widest text-white font-bold">① 패킹 라벨 스캔</span>
+            <span className="text-xs font-label uppercase tracking-widest text-on-surface font-bold">① 패킹 라벨 스캔</span>
           </div>
           <div className="p-4 space-y-3">
             <div className="flex gap-2">
@@ -173,7 +173,7 @@ export default function PdaYardStorePage() {
         {/* ② 야적장 위치 스캔 */}
         <section className="bg-surface-container">
           <div className="px-4 py-3 bg-surface-container-highest/30 border-l-4 border-primary-accent flex items-center gap-2">
-            <span className="text-xs font-label uppercase tracking-widest text-white font-bold">② 야적장 위치 스캔</span>
+            <span className="text-xs font-label uppercase tracking-widest text-on-surface font-bold">② 야적장 위치 스캔</span>
           </div>
           <div className="p-4 space-y-3">
             <div className="flex gap-2">
@@ -195,10 +195,10 @@ export default function PdaYardStorePage() {
             </div>
 
             {yard && (
-              <div className={`px-3 py-2 border-l-2 ${yardOk ? "border-tertiary bg-tertiary/10" : "border-[#f59e0b] bg-[#f59e0b]/10"}`}>
+              <div className={`px-3 py-2 border-l-2 ${yardOk ? "border-tertiary bg-tertiary/10" : "border-warning bg-warning/10"}`}>
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-headline text-on-surface font-bold">{yard.name}</span>
-                  <span className={`text-xs font-label uppercase tracking-wider px-2 py-0.5 font-bold ${yardOk ? "text-tertiary bg-tertiary/20" : "text-[#f59e0b] bg-[#f59e0b]/20"}`}>
+                  <span className={`text-xs font-label uppercase tracking-wider px-2 py-0.5 font-bold ${yardOk ? "text-tertiary bg-tertiary/20" : "text-warning bg-warning/20"}`}>
                     {yard.occupied ? "점유 중" : "사용 가능"}
                   </span>
                 </div>
@@ -240,7 +240,7 @@ export default function PdaYardStorePage() {
               <p className="px-4 py-3 text-xs font-label text-on-surface-variant opacity-40">없음</p>
             ) : (
               recent.map((r, i) => (
-                <div key={i} className="px-4 py-2.5 border-b border-outline-variant/5 flex items-center justify-between">
+                <div key={i} className="px-4 py-2.5 border-b border-outline-variant flex items-center justify-between">
                   <div>
                     <p className="text-xs font-headline text-on-surface truncate max-w-[180px]">{r.packingId}</p>
                     <p className="text-[10px] font-label text-on-surface-variant opacity-50 mt-0.5">

@@ -29,7 +29,7 @@ export default function MatrixApprovalPage() {
         <FieldHeader title="B. 변경 Diff" moduleRef="FNC-USR-091" />
         <table className="w-full text-left text-sm">
           <thead>
-            <tr className="border-b border-outline-variant/10">
+            <tr className="border-b border-outline">
               {["셀 (레벨/부서/액션)", "변경 전", "변경 후", "영향 범위"].map((h) => (
                 <th key={h} className="pb-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold pr-4">{h}</th>
               ))}
@@ -37,7 +37,7 @@ export default function MatrixApprovalPage() {
           </thead>
           <tbody className="font-headline">
             {DIFF.map((d, i) => (
-              <tr key={i} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20">
+              <tr key={i} className="border-b border-outline-variant hover:bg-surface-container-highest/20">
                 <td className="py-2 pr-4 font-bold">{d.cell}</td>
                 <td className="py-2 pr-4 text-error tabular-nums font-bold">{d.before}</td>
                 <td className="py-2 pr-4 text-primary-accent tabular-nums font-bold">{d.after}</td>

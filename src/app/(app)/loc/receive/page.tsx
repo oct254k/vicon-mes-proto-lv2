@@ -69,7 +69,7 @@ export default function LOCReceivePage() {
             공급사: <span className="text-on-surface font-bold">포스코</span>
             &ensp;|&ensp;3-Way Matching: PO <span className="text-tertiary">✔</span>
             &ensp;qty <span className="text-tertiary">✔</span>
-            &ensp;단가 <span className="text-[#f59e0b]">PENDING</span>
+            &ensp;단가 <span className="text-warning">PENDING</span>
           </div>
 
           <FieldHeader title="B. 라인별 자재" moduleRef="FNC-LOC-038" />
@@ -140,10 +140,10 @@ export default function LOCReceivePage() {
           </div>
           <button className="w-full py-3 bg-primary-accent text-black text-sm font-bold uppercase tracking-widest hover:opacity-90">입고 확정 ▶</button>
           <button className="w-full py-2 bg-surface-container text-on-surface-variant text-sm uppercase tracking-widest">취소</button>
-          <div className="border-t border-outline-variant/10 pt-3">
+          <div className="border-t border-outline pt-3">
             <p className="text-xs uppercase tracking-widest text-on-surface-variant mb-2">최근 5건</p>
             {["RCV-20260501-0016", "RCV-20260430-0022", "RCV-20260429-0019"].map((l) => (
-              <p key={l} className="text-xs text-on-surface/50 py-1 border-b border-outline-variant/5">{l}</p>
+              <p key={l} className="text-xs text-on-surface/50 py-1 border-b border-outline-variant">{l}</p>
             ))}
           </div>
         </div>

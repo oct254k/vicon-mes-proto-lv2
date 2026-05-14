@@ -66,7 +66,7 @@ export default function PURSupplierPage() {
             <select
               value={material}
               onChange={(e) => { setMaterial(e.target.value); setSearched(false); }}
-              className="w-full bg-surface-container text-white text-sm px-4 py-3 border border-outline-variant/20 outline-none"
+              className="w-full bg-surface-container text-on-surface text-sm px-4 py-3 border border-outline-variant/20 outline-none"
             >
               {MATERIALS.map((m) => (
                 <option key={m} value={m}>{m}</option>
@@ -79,7 +79,7 @@ export default function PURSupplierPage() {
               type="number"
               value={qty}
               onChange={(e) => setQty(e.target.value)}
-              className="w-full bg-surface-container text-white text-sm px-4 py-3 border border-outline-variant/20 outline-none"
+              className="w-full bg-surface-container text-on-surface text-sm px-4 py-3 border border-outline-variant/20 outline-none"
             />
           </div>
           <button

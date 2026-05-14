@@ -10,7 +10,7 @@ export default function GateFallbackPage() {
     <div>
       <PageHeader title="수동 게이트 인식" nodeRef="IA-SHP-GATE-FALLBACK" status="PROTOTYPE"
         description="RFID 미인식 시 게이트 직원 수동 인식 폼 (FNC-SHP-060/061/062/063) — KIOSK/PC" />
-      <div className="bg-[#f59e0b]/10 border border-[#f59e0b]/40 px-4 py-3 mb-4 text-sm font-label text-[#f59e0b]">
+      <div className="bg-warning/10 border border-warning/40 px-4 py-3 mb-4 text-sm font-label text-warning">
         ⚠ RFID 인식 실패 — 수동 입력 필요
       </div>
       <FieldHeader title="수동 인식 입력" moduleRef="FNC-SHP-062" />

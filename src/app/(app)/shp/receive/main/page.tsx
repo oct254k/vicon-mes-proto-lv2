@@ -14,7 +14,7 @@ export default function ReceiveMainPage() {
     <div>
       <PageHeader title="현장 검수 랜딩" nodeRef="IA-SHP-RECEIVE-MAIN" status="PROTOTYPE"
         description="현장 검수자(EXTERNAL 토큰) 모바일 앱 메인 — 도착 알림 인박스 (FNC-SHP-070/081)" />
-      <div className="bg-[#f59e0b]/10 border border-[#f59e0b]/40 px-4 py-3 mb-4 text-sm font-label text-[#f59e0b]">
+      <div className="bg-warning/10 border border-warning/40 px-4 py-3 mb-4 text-sm font-label text-warning">
         EXTERNAL 토큰 — 현장 검수자 단일 출하 범위 액션만 허용
       </div>
       <FieldHeader title="도착 예정 출하" moduleRef={`${PENDING.length}건`} />
@@ -34,7 +34,7 @@ export default function ReceiveMainPage() {
         <a href="/shp/receive/scan" className="px-6 py-4 bg-primary-accent text-black text-base font-headline font-black uppercase tracking-widest text-center block">
           QR 스캔 검수 시작 ▶
         </a>
-        <a href="/shp/receive/mismatch" className="px-6 py-3 bg-[#f59e0b]/20 border border-[#f59e0b]/40 text-[#f59e0b] text-sm font-label uppercase text-center block">
+        <a href="/shp/receive/mismatch" className="px-6 py-3 bg-warning/20 border border-warning/40 text-warning text-sm font-label uppercase text-center block">
           불일치 보고 →
         </a>
       </div>

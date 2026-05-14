@@ -37,7 +37,7 @@ export default function DeviceLostPage() {
             <textarea className={INPUT} rows={3} placeholder="분실 경위 기술 (선택)"></textarea>
           </div>
         </div>
-        <button className="mt-4 px-6 py-2 bg-error text-white text-xs font-label uppercase tracking-widest font-bold">분실 신고 접수</button>
+        <button className="mt-4 px-6 py-2 bg-error text-on-surface text-xs font-label uppercase tracking-widest font-bold">분실 신고 접수</button>
       </div>
 
       <div className="bg-surface-container-lowest">
@@ -47,7 +47,7 @@ export default function DeviceLostPage() {
         </div>
         <table className="w-full text-left border-collapse text-sm">
           <thead>
-            <tr className="bg-surface-container border-b border-outline-variant/10">
+            <tr className="bg-surface-container border-b border-outline">
               {["신고 ID", "단말", "신고자", "신고 시각", "SLA 마감", "처리 상태"].map((h) => (
                 <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
               ))}
@@ -55,12 +55,12 @@ export default function DeviceLostPage() {
           </thead>
           <tbody className="font-headline">
             {QUEUE.map((q, i) => (
-              <tr key={i} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20">
+              <tr key={i} className="border-b border-outline-variant hover:bg-surface-container-highest/20">
                 <td className="px-4 py-2 tabular-nums text-xs opacity-70">{q.reqId}</td>
                 <td className="px-4 py-2">{q.device}</td>
                 <td className="px-4 py-2 text-xs opacity-70">{q.reporter}</td>
                 <td className="px-4 py-2 tabular-nums text-xs">{q.reportedAt}</td>
-                <td className="px-4 py-2 tabular-nums text-xs text-[#f59e0b]">{q.sla}</td>
+                <td className="px-4 py-2 tabular-nums text-xs text-warning">{q.sla}</td>
                 <td className="px-4 py-2"><StatusBadge type={q.status} label={q.progress} /></td>
               </tr>
             ))}

@@ -1,0 +1,217 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "성지그룹 Logo" [ref=e5] [cursor=pointer]:
+          - /url: /ops/
+          - img "성지그룹 Logo" [ref=e6]
+        - generic [ref=e7]:
+          - link "대시보드" [ref=e8] [cursor=pointer]:
+            - /url: /ops/
+          - link "이력추적" [ref=e9] [cursor=pointer]:
+            - /url: /trace/
+          - link "알람" [ref=e10] [cursor=pointer]:
+            - /url: /alarm/
+      - generic [ref=e11]:
+        - button "account_tree" [ref=e12] [cursor=pointer]
+        - button "book_2" [ref=e13] [cursor=pointer]
+        - generic [ref=e14] [cursor=pointer]: notifications
+        - button "라이트 모드로 전환" [ref=e15] [cursor=pointer]: light_mode
+        - generic [ref=e16] [cursor=pointer]: settings
+        - generic [ref=e18]: person
+    - complementary [ref=e19]:
+      - generic [ref=e21]:
+        - generic [ref=e22]: search
+        - textbox "메뉴 검색... (/)" [ref=e23]
+      - navigation [ref=e24]:
+        - list [ref=e25]:
+          - listitem [ref=e26]:
+            - button "inventory_2 기준정보 expand_more" [ref=e27]:
+              - generic [ref=e28]: inventory_2
+              - generic [ref=e29]: 기준정보
+              - generic [ref=e30]: expand_more
+          - listitem [ref=e31]:
+            - button "request_quote 수주·생산계획·MRP expand_more" [ref=e32]:
+              - generic [ref=e33]: request_quote
+              - generic [ref=e34]: 수주·생산계획·MRP
+              - generic [ref=e35]: expand_more
+            - list [ref=e36]:
+              - listitem [ref=e37]:
+                - button "수주 입력·관리 expand_more" [ref=e38]:
+                  - generic [ref=e39]: 수주 입력·관리
+                  - generic [ref=e40]: expand_more
+                - list [ref=e41]:
+                  - listitem [ref=e42]:
+                    - link "— 수주 등록 폼" [ref=e43] [cursor=pointer]:
+                      - /url: /sp/so/new/
+                      - generic [ref=e44]: —
+                      - generic [ref=e45]: 수주 등록 폼
+                  - listitem [ref=e46]:
+                    - link "— 수주 목록·검색" [ref=e47] [cursor=pointer]:
+                      - /url: /sp/so/
+                      - generic [ref=e48]: —
+                      - generic [ref=e49]: 수주 목록·검색
+                  - listitem [ref=e50]:
+                    - link "— 수주 상세·승인·반려·취소" [ref=e51] [cursor=pointer]:
+                      - /url: "/sp/so/{so_id}/"
+                      - generic [ref=e52]: —
+                      - generic [ref=e53]: 수주 상세·승인·반려·취소
+                  - listitem [ref=e54]:
+                    - link "— 출하 가능 조회" [ref=e55] [cursor=pointer]:
+                      - /url: /sp/so/shippable/
+                      - generic [ref=e56]: —
+                      - generic [ref=e57]: 출하 가능 조회
+              - listitem [ref=e58]:
+                - button "부재 리스트(수주 분해) expand_more" [ref=e59]:
+                  - generic [ref=e60]: 부재 리스트(수주 분해)
+                  - generic [ref=e61]: expand_more
+              - listitem [ref=e62]:
+                - button "생산계획(장기·중기·일일) expand_more" [ref=e63]:
+                  - generic [ref=e64]: 생산계획(장기·중기·일일)
+                  - generic [ref=e65]: expand_more
+              - listitem [ref=e66]:
+                - button "MRP 실행·결과 조회 expand_more" [ref=e67]:
+                  - generic [ref=e68]: MRP 실행·결과 조회
+                  - generic [ref=e69]: expand_more
+              - listitem [ref=e70]:
+                - button "SP 알림 expand_more" [ref=e71]:
+                  - generic [ref=e72]: SP 알림
+                  - generic [ref=e73]: expand_more
+          - listitem [ref=e74]:
+            - button "assignment 작업지시·부재·패킹 expand_more" [ref=e75]:
+              - generic [ref=e76]: assignment
+              - generic [ref=e77]: 작업지시·부재·패킹
+              - generic [ref=e78]: expand_more
+          - listitem [ref=e79]:
+            - button "precision_manufacturing 생산실행·추적성 expand_more" [ref=e80]:
+              - generic [ref=e81]: precision_manufacturing
+              - generic [ref=e82]: 생산실행·추적성
+              - generic [ref=e83]: expand_more
+          - listitem [ref=e84]:
+            - button "warehouse 위치·재고 expand_more" [ref=e85]:
+              - generic [ref=e86]: warehouse
+              - generic [ref=e87]: 위치·재고
+              - generic [ref=e88]: expand_more
+          - listitem [ref=e89]:
+            - button "verified 품질·SPC·불량 expand_more" [ref=e90]:
+              - generic [ref=e91]: verified
+              - generic [ref=e92]: 품질·SPC·불량
+              - generic [ref=e93]: expand_more
+          - listitem [ref=e94]:
+            - button "engineering 설비관리 expand_more" [ref=e95]:
+              - generic [ref=e96]: engineering
+              - generic [ref=e97]: 설비관리
+              - generic [ref=e98]: expand_more
+          - listitem [ref=e99]:
+            - button "shopping_cart 구매·발주 expand_more" [ref=e100]:
+              - generic [ref=e101]: shopping_cart
+              - generic [ref=e102]: 구매·발주
+              - generic [ref=e103]: expand_more
+          - listitem [ref=e104]:
+            - button "local_shipping 출하 expand_more" [ref=e105]:
+              - generic [ref=e106]: local_shipping
+              - generic [ref=e107]: 출하
+              - generic [ref=e108]: expand_more
+          - listitem [ref=e109]:
+            - button "groups 사용자·권한 expand_more" [ref=e110]:
+              - generic [ref=e111]: groups
+              - generic [ref=e112]: 사용자·권한
+              - generic [ref=e113]: expand_more
+          - listitem [ref=e114]:
+            - button "dashboard 운영현황·대시보드 expand_more" [ref=e115]:
+              - generic [ref=e116]: dashboard
+              - generic [ref=e117]: 운영현황·대시보드
+              - generic [ref=e118]: expand_more
+          - listitem [ref=e119]:
+            - button "settings 시스템관리 expand_more" [ref=e120]:
+              - generic [ref=e121]: settings
+              - generic [ref=e122]: 시스템관리
+              - generic [ref=e123]: expand_more
+    - main [ref=e124]:
+      - main [ref=e125]:
+        - generic [ref=e126]:
+          - heading "수주목록" [level=1] [ref=e128]
+          - generic [ref=e130]: "System Status: CALIBRATED"
+        - generic [ref=e131]:
+          - generic [ref=e132]:
+            - generic [ref=e133]: 거래처
+            - textbox "거래처명" [ref=e134]
+          - generic [ref=e135]:
+            - generic [ref=e136]: 납기 시작
+            - textbox [ref=e137]
+          - generic [ref=e138]:
+            - generic [ref=e139]: 납기 종료
+            - textbox [ref=e140]
+          - generic [ref=e141]:
+            - generic [ref=e142]: 상태
+            - combobox [ref=e143]:
+              - option "전체" [selected]
+              - option "DRAFT"
+              - option "CONFIRMED"
+              - option "IN_PRODUCTION"
+              - option "READY"
+              - option "SHIPPED"
+              - option "CLOSED"
+          - link "+ 신규 수주" [ref=e144] [cursor=pointer]:
+            - /url: /sp/so/new
+            - button "+ 신규 수주" [ref=e145]
+        - generic [ref=e146]:
+          - generic [ref=e147]:
+            - 'heading "수주 목록 | Buffer: 005 Entries" [level=3] [ref=e148]':
+              - text: 수주 목록
+              - generic [ref=e149]: "| Buffer: 005 Entries"
+            - generic [ref=e150] [cursor=pointer]: refresh
+          - table [ref=e152]:
+            - rowgroup [ref=e153]:
+              - row "수주번호 거래처 현장명 부재 수 금액 납기 상태" [ref=e154]:
+                - columnheader "수주번호" [ref=e155]
+                - columnheader "거래처" [ref=e156]
+                - columnheader "현장명" [ref=e157]
+                - columnheader "부재 수" [ref=e158]
+                - columnheader "금액" [ref=e159]
+                - columnheader "납기" [ref=e160]
+                - columnheader "상태" [ref=e161]
+            - rowgroup [ref=e162]:
+              - row "SO-2026-0042 포스코건설 송도 IFC 640 ₩12,544,000 2026-05-08 확정" [ref=e163]:
+                - cell "SO-2026-0042" [ref=e164]
+                - cell "포스코건설" [ref=e165]
+                - cell "송도 IFC" [ref=e166]
+                - cell "640" [ref=e167]
+                - cell "₩12,544,000" [ref=e168]
+                - cell "2026-05-08" [ref=e169]
+                - cell "확정" [ref=e170]
+              - row "SO-2026-0041 현대건설 판교 테크노밸리 320 ₩8,230,000 2026-05-12 생산 중" [ref=e171]:
+                - cell "SO-2026-0041" [ref=e172]
+                - cell "현대건설" [ref=e173]
+                - cell "판교 테크노밸리" [ref=e174]
+                - cell "320" [ref=e175]
+                - cell "₩8,230,000" [ref=e176]
+                - cell "2026-05-12" [ref=e177]
+                - cell "생산 중" [ref=e178]
+              - row "SO-2026-0040 삼성물산 용산 드래곤시티 180 ₩5,670,000 2026-05-20 출하 준비" [ref=e179]:
+                - cell "SO-2026-0040" [ref=e180]
+                - cell "삼성물산" [ref=e181]
+                - cell "용산 드래곤시티" [ref=e182]
+                - cell "180" [ref=e183]
+                - cell "₩5,670,000" [ref=e184]
+                - cell "2026-05-20" [ref=e185]
+                - cell "출하 준비" [ref=e186]
+              - row "SO-2026-0039 GS건설 마곡 R&D 센터 95 ₩3,140,000 2026-05-25 초안" [ref=e187]:
+                - cell "SO-2026-0039" [ref=e188]
+                - cell "GS건설" [ref=e189]
+                - cell "마곡 R&D 센터" [ref=e190]
+                - cell "95" [ref=e191]
+                - cell "₩3,140,000" [ref=e192]
+                - cell "2026-05-25" [ref=e193]
+                - cell "초안" [ref=e194]
+              - row "SO-2026-0038 대우건설 인천 스마트시티 512 ₩16,800,000 2026-04-30 출하됨" [ref=e195]:
+                - cell "SO-2026-0038" [ref=e196]
+                - cell "대우건설" [ref=e197]
+                - cell "인천 스마트시티" [ref=e198]
+                - cell "512" [ref=e199]
+                - cell "₩16,800,000" [ref=e200]
+                - cell "2026-04-30" [ref=e201]
+                - cell "출하됨" [ref=e202]
+    - generic [ref=e204]: System Active | Port 8080 | Secure Link
+  - button "Open Next.js Dev Tools" [ref=e210] [cursor=pointer]:
+    - img [ref=e211]

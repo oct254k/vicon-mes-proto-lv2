@@ -17,7 +17,7 @@ const HEALTH: HealthItem[] = [
 
 const STATE_STYLE: Record<string, { bar: string; text: string; badge: string }> = {
   ok:    { bar: "bg-[#00912F]", text: "text-[#00912F]", badge: "bg-[#00912F]/20 text-[#00912F]" },
-  warn:  { bar: "bg-[#f59e0b]", text: "text-[#f59e0b]", badge: "bg-[#f59e0b]/20 text-[#f59e0b]" },
+  warn:  { bar: "bg-warning", text: "text-warning", badge: "bg-warning/20 text-warning" },
   error: { bar: "bg-error",     text: "text-error",     badge: "bg-error/20 text-error" },
 };
 
@@ -32,7 +32,7 @@ const SERVICES = [
 
 export default function SYSHealthPage() {
   return (
-    <div className="p-8 bg-[#131313] min-h-screen text-on-surface">
+    <div className="p-8 bg-surface min-h-screen text-on-surface">
       <PageHeader title="시스템" accent="헬스 대시보드" nodeRef="SCR-SYS-090" description="6종 헬스 지표 실시간 모니터링 (5분 신선도)" />
 
       <div className="grid grid-cols-2 gap-4 mb-8">

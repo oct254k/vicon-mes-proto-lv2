@@ -39,7 +39,7 @@ export default function SHPDocumentsPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="bg-surface-container border-b border-outline-variant/10">
+              <tr className="bg-surface-container border-b border-outline">
                 <th className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">패킹 ID</th>
                 <th className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">문서 유형</th>
                 <th className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">생성일시</th>
@@ -49,7 +49,7 @@ export default function SHPDocumentsPage() {
             </thead>
             <tbody className="font-headline text-sm">
               {DOC_DATA.map((row, i) => (
-                <tr key={i} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors">
+                <tr key={i} className="border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors">
                   <td className="px-4 py-2 font-mono text-xs">{row.packId}</td>
                   <td className="px-4 py-2">{row.docType}</td>
                   <td className="px-4 py-2 tabular-nums text-xs opacity-70">{row.createdAt}</td>
@@ -61,7 +61,7 @@ export default function SHPDocumentsPage() {
                       <button className="px-3 py-1 text-xs font-label uppercase tracking-widest bg-surface-container hover:bg-primary-accent hover:text-white transition-colors border border-outline-variant/20">
                         PDF
                       </button>
-                      <button className="px-3 py-1 text-xs font-label uppercase tracking-widest bg-surface-container hover:bg-[#f59e0b]/20 transition-colors border border-outline-variant/20">
+                      <button className="px-3 py-1 text-xs font-label uppercase tracking-widest bg-surface-container hover:bg-warning/20 transition-colors border border-outline-variant/20">
                         라벨 재인쇄
                       </button>
                     </div>

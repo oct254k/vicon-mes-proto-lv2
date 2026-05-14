@@ -22,7 +22,7 @@ export default function IssueCancelPage() {
   };
 
   return (
-    <div className="max-w-sm mx-auto p-4 min-h-screen bg-[#131313]">
+    <div className="max-w-sm mx-auto p-4 min-h-screen bg-surface">
       <PageHeader title="ISSUE /" accent="투입 취소" nodeRef="SCR-MFG-012" status="PROTOTYPE" />
 
       <p className="text-xs font-label uppercase tracking-widest text-on-surface/40 mb-4">취소할 투입 LOT 선택</p>
@@ -37,7 +37,7 @@ export default function IssueCancelPage() {
               onClick={() => !isCancelled && setSelected(isSelected ? null : item.lot)}
               className={`w-full text-left px-4 py-3 border transition-colors ${
                 isCancelled
-                  ? "border-outline-variant/10 opacity-30 cursor-not-allowed"
+                  ? "border-outline opacity-30 cursor-not-allowed"
                   : isSelected
                   ? "border-primary-accent bg-primary-accent/10"
                   : "border-outline-variant/20 bg-surface-container hover:border-primary-accent/50"

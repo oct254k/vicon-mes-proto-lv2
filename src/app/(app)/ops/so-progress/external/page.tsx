@@ -10,7 +10,7 @@ const MEMBERS = [
 ];
 
 const PROG_LABEL: Record<string, string> = { DONE: "완료", IN_PROGRESS: "진행중", PENDING: "대기" };
-const PROG_COLOR: Record<string, string> = { DONE: "text-primary-accent", IN_PROGRESS: "text-[#f59e0b]", PENDING: "text-on-surface-variant" };
+const PROG_COLOR: Record<string, string> = { DONE: "text-primary-accent", IN_PROGRESS: "text-warning", PENDING: "text-on-surface-variant" };
 
 export default function SOProgressExternalPage() {
   return (
@@ -50,7 +50,7 @@ export default function SOProgressExternalPage() {
         </div>
         <table className="w-full text-left border-collapse">
           <thead>
-            <tr className="bg-surface-container border-b border-outline-variant/10">
+            <tr className="bg-surface-container border-b border-outline">
               {["부재ID","현공정","상태","진척"].map(h=>(
                 <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
               ))}
@@ -58,7 +58,7 @@ export default function SOProgressExternalPage() {
           </thead>
           <tbody className="font-headline text-sm">
             {MEMBERS.map(m=>(
-              <tr key={m.id} className="border-b border-outline-variant/5">
+              <tr key={m.id} className="border-b border-outline-variant">
                 <td className="px-4 py-2 font-label text-on-surface-variant">{m.id}</td>
                 <td className="px-4 py-2">{m.step}</td>
                 <td className={`px-4 py-2 font-label text-xs ${PROG_COLOR[m.progress]}`}>{PROG_LABEL[m.progress]}</td>

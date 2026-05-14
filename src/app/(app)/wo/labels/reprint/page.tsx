@@ -187,7 +187,7 @@ const LOCATION_COLOR: Record<ItemLocation, string> = {
   "재고":    "bg-surface-container-highest text-on-surface-variant",
   "공정 중": "bg-tertiary/20 text-tertiary",
   "야적장":  "bg-primary-accent/20 text-primary-accent",
-  "출하 대기": "bg-[#f59e0b]/20 text-[#f59e0b]",
+  "출하 대기": "bg-warning/20 text-warning",
   "출하 완료": "bg-[#3b82f6]/20 text-[#3b82f6]",
   "수신 완료": "bg-primary/20 text-primary",
 };
@@ -339,7 +339,7 @@ export default function LabelReprintPage() {
         ) : (
           <table className="w-full text-left border-collapse text-sm">
             <thead>
-              <tr className="bg-surface-container border-b border-outline-variant/10">
+              <tr className="bg-surface-container border-b border-outline">
                 {["ID", "대상 (부재코드 / PKG ID)", "현재 위치", "유형", "작업", "사유", "프린터", "발행일시", "담당자", "시도", "상태", ""].map(h => (
                   <th key={h} className="px-3 py-2 font-label uppercase tracking-widest text-xs opacity-50 whitespace-nowrap">{h}</th>
                 ))}
@@ -351,7 +351,7 @@ export default function LabelReprintPage() {
                 const isMaxed = r.attempts >= r.maxAttempts;
                 return (
                   <tr key={r.id}
-                    className={`border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors ${s.bg}`}>
+                    className={`border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors ${s.bg}`}>
                     <td className="px-3 py-2 font-mono text-xs text-primary-accent whitespace-nowrap">{r.id}</td>
                     <td className="px-3 py-2 font-mono text-xs opacity-80 max-w-[180px] truncate" title={r.target}>{r.target}</td>
                     <td className="px-3 py-2 text-xs whitespace-nowrap">
@@ -368,7 +368,7 @@ export default function LabelReprintPage() {
                       <span className={`px-2 py-0.5 text-[10px] font-label uppercase tracking-wider font-bold
                         ${r.type === "MEMBER" ? "bg-primary-accent/20 text-primary-accent" :
                           r.type === "PACKING" ? "bg-tertiary/20 text-tertiary" :
-                          "bg-[#f59e0b]/20 text-[#f59e0b]"}`}>
+                          "bg-warning/20 text-warning"}`}>
                         {TYPE_LABELS[r.type]}
                       </span>
                     </td>
@@ -402,7 +402,7 @@ export default function LabelReprintPage() {
                         {/* 재발행 — FAILED/BLOCKED: 시도 초기화 */}
                         {(r.status === "FAILED" || r.status === "BLOCKED") && (
                           <button onClick={() => handleReissue(r.id)}
-                            className="px-2 py-1 bg-[#f59e0b]/80 text-black text-[10px] font-label uppercase tracking-wider hover:opacity-90 whitespace-nowrap">
+                            className="px-2 py-1 bg-warning/80 text-black text-[10px] font-label uppercase tracking-wider hover:opacity-90 whitespace-nowrap">
                             재발행
                           </button>
                         )}
@@ -456,7 +456,7 @@ export default function LabelReprintPage() {
               )}
               {(previewRow.status === "FAILED" || previewRow.status === "BLOCKED") && (
                 <button onClick={() => { handleReissue(previewRow.id); setPreviewRow(null); }}
-                  className="px-4 py-2 bg-[#f59e0b]/80 text-black text-xs font-label uppercase tracking-wider font-bold hover:opacity-90">
+                  className="px-4 py-2 bg-warning/80 text-black text-xs font-label uppercase tracking-wider font-bold hover:opacity-90">
                   재발행
                 </button>
               )}

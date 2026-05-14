@@ -29,8 +29,8 @@ export default function CountPlanPage() {
   const [date,    setDate]     = useState("2026-05-07");
   const [saved,   setSaved]    = useState(false);
 
-  const inputCls = "w-full bg-[#131313] border border-white/10 px-4 py-2 text-sm text-white focus:outline-none focus:border-[#00912F]";
-  const labelCls = "block text-xs font-label uppercase tracking-widest text-white/50 mb-2";
+  const inputCls = "w-full bg-surface border border-outline/20 px-4 py-2 text-sm text-on-surface focus:outline-none focus:border-[#00912F]";
+  const labelCls = "block text-xs font-label uppercase tracking-widest text-on-surface/50 mb-2";
 
   return (
     <div>
@@ -51,7 +51,7 @@ export default function CountPlanPage() {
       </div>
 
       {showForm && (
-        <div className="bg-[#1a1a1a] border border-white/10 p-6 mb-6 max-w-lg space-y-4">
+        <div className="bg-surface-elevated border border-outline/20 p-6 mb-6 max-w-lg space-y-4">
           <FieldHeader title="신규 실사 계획" moduleRef="FNC-LOC-080" />
           <div>
             <label className={labelCls}>대상 Yard</label>
@@ -72,7 +72,7 @@ export default function CountPlanPage() {
               생성 ▶
             </button>
             <button onClick={() => setShowForm(false)}
-              className="bg-[#131313] border border-white/10 text-white/50 font-label uppercase tracking-widest px-6 py-2 text-sm">
+              className="bg-surface border border-outline/20 text-on-surface/50 font-label uppercase tracking-widest px-6 py-2 text-sm">
               취소
             </button>
           </div>

@@ -23,12 +23,12 @@ export default function DelegationsPage() {
         </p>
       </div>
 
-      <div className="bg-surface-container-low border-l-4 border-[#f59e0b] p-5 mb-6">
+      <div className="bg-surface-container-low border-l-4 border-warning p-5 mb-6">
         <FieldHeader title="활성 위임 현황" moduleRef="FNC-USR-062/063" />
         {ACTIVE_DELEG.length > 0 ? (
           <table className="w-full text-left text-sm">
             <thead>
-              <tr className="border-b border-outline-variant/10">
+              <tr className="border-b border-outline">
                 {["위임 ID", "위임자", "수임자", "기간", "범위", "상태"].map((h) => (
                   <th key={h} className="pb-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold pr-4">{h}</th>
                 ))}

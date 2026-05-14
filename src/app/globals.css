@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@theme inline {
+@theme {
   --color-surface: #131313;
   --color-surface-dim: #131313;
   --color-surface-bright: #393939;
@@ -39,6 +39,10 @@
   --color-inverse-primary: #006b1f;
   --color-surface-tint: #90EE90;
 
+  --color-surface-elevated: #1a1a1a;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+
   --font-headline: "Inter", sans-serif;
   --font-body: "Inter", sans-serif;
   --font-label: "Space Grotesk", sans-serif;
@@ -50,6 +54,57 @@
   --radius-3xl: 0rem;
 }
 
+:root[data-theme="light"] {
+  --color-surface: #f5f8f5;
+  --color-surface-dim: #eef2ee;
+  --color-surface-bright: #ffffff;
+  --color-surface-container: #f0f4f0;
+  --color-surface-container-low: #f5f8f5;
+  --color-surface-container-high: #eaeeea;
+  --color-surface-container-highest: #dde5dd;
+  --color-surface-container-lowest: #fafcfa;
+  --color-surface-variant: #ebefeb;
+  --color-surface-elevated: #eef2ee;
+
+  --color-on-surface: #1a1a1a;
+  --color-on-surface-variant: #4a6b4a;
+  --color-on-background: #1a1a1a;
+  --color-background: #f5f8f5;
+
+  --color-primary: #00912F;
+  --color-primary-accent: #00912F;
+  --color-primary-container: #00912F;
+  --color-primary-fixed: #006b1f;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #ffffff;
+
+  --color-secondary: #006b1f;
+  --color-secondary-container: #c8f7c8;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #003300;
+
+  --color-tertiary: #0e7c80;
+  --color-tertiary-container: #b8e8eb;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-container: #003738;
+
+  --color-error: #b91c1c;
+  --color-error-container: #fee2e2;
+  --color-on-error: #ffffff;
+  --color-on-error-container: #7f1d1d;
+
+  --color-outline: #b8ccb8;
+  --color-outline-variant: #d0dcd0;
+
+  --color-inverse-surface: #1a1a1a;
+  --color-inverse-on-surface: #e5e2e1;
+  --color-inverse-primary: #90EE90;
+  --color-surface-tint: #00912F;
+
+  --color-warning: #b45309;
+  --color-danger: #b91c1c;
+}
+
 * {
   border-radius: 0 !important;
 }
@@ -58,7 +113,13 @@
 ::-webkit-scrollbar-track { background: #0e0e0e; }
 ::-webkit-scrollbar-thumb { background: #353534; }
 
+:root[data-theme="light"] ::-webkit-scrollbar-track { background: #eef2ee; }
+:root[data-theme="light"] ::-webkit-scrollbar-thumb { background: #b0c4b0; }
+
 .tabular-nums { font-variant-numeric: tabular-nums; }
+
+.logo-adaptive { filter: brightness(0) invert(1); }
+:root[data-theme="light"] .logo-adaptive { filter: none; }
 
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;

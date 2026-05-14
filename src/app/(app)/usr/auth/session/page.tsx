@@ -21,7 +21,7 @@ export default function SessionPage() {
           <div><p className="text-xs opacity-50 font-label uppercase tracking-widest mb-1">사용자</p><p>kim.kj@vicon.local</p></div>
           <div><p className="text-xs opacity-50 font-label uppercase tracking-widest mb-1">권한 레벨</p><p>L2 STAFF</p></div>
           <div><p className="text-xs opacity-50 font-label uppercase tracking-widest mb-1">부서</p><p>PRD, SHP</p></div>
-          <div><p className="text-xs opacity-50 font-label uppercase tracking-widest mb-1">세션 만료</p><p className="text-[#f59e0b]">2026-05-06 17:02</p></div>
+          <div><p className="text-xs opacity-50 font-label uppercase tracking-widest mb-1">세션 만료</p><p className="text-warning">2026-05-06 17:02</p></div>
         </div>
       </div>
 
@@ -32,7 +32,7 @@ export default function SessionPage() {
         </div>
         <table className="w-full text-left border-collapse text-sm">
           <thead>
-            <tr className="bg-surface-container border-b border-outline-variant/10">
+            <tr className="bg-surface-container border-b border-outline">
               {["세션 ID", "단말", "인증수단", "로그인", "만료", "교대", "상태", "액션"].map((h) => (
                 <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
               ))}
@@ -40,7 +40,7 @@ export default function SessionPage() {
           </thead>
           <tbody className="font-headline">
             {SESSIONS.map((s, i) => (
-              <tr key={i} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20">
+              <tr key={i} className="border-b border-outline-variant hover:bg-surface-container-highest/20">
                 <td className="px-4 py-2 tabular-nums text-xs opacity-70">{s.sessionId}</td>
                 <td className="px-4 py-2">{s.device}</td>
                 <td className="px-4 py-2 text-xs opacity-70">{s.authMethod}</td>

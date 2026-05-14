@@ -27,18 +27,18 @@ export default function ASNListPage() {
         </div>
         <button className="px-4 py-1.5 bg-primary-accent text-black text-xs font-label uppercase tracking-widest self-end">조회</button>
         <a href="/pur/asn/new" className="px-4 py-1.5 ml-auto bg-surface-container-high border border-outline-variant/20 text-xs font-label uppercase self-end">+ 수동 ASN 등록</a>
-        <a href="/pur/asn/delay" className="px-4 py-1.5 bg-[#f59e0b]/20 border border-[#f59e0b]/40 text-[#f59e0b] text-xs font-label uppercase self-end">지연 알림 →</a>
+        <a href="/pur/asn/delay" className="px-4 py-1.5 bg-warning/20 border border-warning/40 text-warning text-xs font-label uppercase self-end">지연 알림 →</a>
       </div>
       <FieldHeader title="ASN 목록" moduleRef={`${rows.length}건`} />
       <div className="bg-surface-container-lowest overflow-x-auto">
         <table className="w-full text-left border-collapse">
-          <thead><tr className="bg-surface-container border-b border-outline-variant/10">
+          <thead><tr className="bg-surface-container border-b border-outline">
             {["ASN ID","PO 번호","공급사","자재","수량","ETA","상태"].map(h=>(
               <th key={h} className="px-4 py-2 font-label text-xs uppercase tracking-widest opacity-50">{h}</th>
             ))}</tr></thead>
           <tbody className="font-headline text-sm">
             {rows.map(r=>(
-              <tr key={r.id} className={`border-b border-outline-variant/5 hover:bg-surface-container-highest/20 ${r.status==="DELAYED"?"bg-[#f59e0b]/5":""}`}>
+              <tr key={r.id} className={`border-b border-outline-variant hover:bg-surface-container-highest/20 ${r.status==="DELAYED"?"bg-warning/5":""}`}>
                 <td className="px-4 py-2 text-primary-accent font-mono text-xs">{r.id}</td>
                 <td className="px-4 py-2 font-mono text-xs opacity-70">{r.po}</td>
                 <td className="px-4 py-2">{r.supplier}</td>

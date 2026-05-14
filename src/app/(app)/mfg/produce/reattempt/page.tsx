@@ -10,7 +10,7 @@ export default function ProduceReattemptPage() {
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <div className="max-w-sm mx-auto p-4 min-h-screen bg-[#131313]">
+    <div className="max-w-sm mx-auto p-4 min-h-screen bg-surface">
       <PageHeader title="PRODUCE /" accent="재생산 등록" nodeRef="SCR-MFG-025" status="PROTOTYPE" />
 
       <div className="bg-surface-container border-l-4 border-primary-accent p-4 mb-6">

@@ -42,8 +42,8 @@ export default function LOCInventoryPage() {
 
       <div className="flex gap-4 mb-6 flex-wrap">
         <div className="flex gap-2 items-center">
-          <label className="text-xs font-label uppercase tracking-widest text-white/50 whitespace-nowrap">Plant</label>
-          <select className="bg-[#1a1a1a] border border-white/10 px-3 py-2 text-sm text-white focus:outline-none focus:border-[#00912F]">
+          <label className="text-xs font-label uppercase tracking-widest text-on-surface/50 whitespace-nowrap">Plant</label>
+          <select className="bg-surface-elevated border border-outline/20 px-3 py-2 text-sm text-on-surface focus:outline-none focus:border-[#00912F]">
             <option value="">전체</option>
             <option>P1000</option>
             <option>P2000</option>
@@ -51,8 +51,8 @@ export default function LOCInventoryPage() {
           </select>
         </div>
         <div className="flex gap-2 items-center">
-          <label className="text-xs font-label uppercase tracking-widest text-white/50 whitespace-nowrap">카테고리</label>
-          <select className="bg-[#1a1a1a] border border-white/10 px-3 py-2 text-sm text-white focus:outline-none focus:border-[#00912F]">
+          <label className="text-xs font-label uppercase tracking-widest text-on-surface/50 whitespace-nowrap">카테고리</label>
+          <select className="bg-surface-elevated border border-outline/20 px-3 py-2 text-sm text-on-surface focus:outline-none focus:border-[#00912F]">
             <option value="">전체</option>
             <option>COIL</option>
             <option>PLATE</option>
@@ -64,10 +64,10 @@ export default function LOCInventoryPage() {
 
       <div className="grid grid-cols-3 gap-4 mb-8">
         {kpis.map((k) => (
-          <div key={k.label} className="bg-[#1a1a1a] border-l-4 border-[#00912F] p-5">
-            <p className="text-xs font-label uppercase tracking-widest text-white/40 mb-2">{k.label}</p>
-            <p className="text-2xl font-black font-headline text-white">
-              {k.value} <span className="text-sm font-normal text-white/50">{k.unit}</span>
+          <div key={k.label} className="bg-surface-elevated border-l-4 border-[#00912F] p-5">
+            <p className="text-xs font-label uppercase tracking-widest text-on-surface/40 mb-2">{k.label}</p>
+            <p className="text-2xl font-black font-headline text-on-surface">
+              {k.value} <span className="text-sm font-normal text-on-surface/50">{k.unit}</span>
             </p>
           </div>
         ))}

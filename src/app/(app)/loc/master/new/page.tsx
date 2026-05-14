@@ -4,8 +4,8 @@ import { useEffect, useRef, useState, useCallback } from "react";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { FieldHeader } from "@/components/ui/FieldHeader";
 
-const inputCls = "w-full bg-[#131313] border border-white/10 px-4 py-2 text-sm text-white focus:outline-none focus:border-[#00912F]";
-const labelCls = "block text-xs font-label uppercase tracking-widest text-white/50 mb-2";
+const inputCls = "w-full bg-surface border border-outline/20 px-4 py-2 text-sm text-on-surface focus:outline-none focus:border-[#00912F]";
+const labelCls = "block text-xs font-label uppercase tracking-widest text-on-surface/50 mb-2";
 
 type Mode = "PLANT_YARD" | "ZONE" | "LOT_BULK";
 
@@ -117,7 +117,7 @@ export default function LocMasterNewPage() {
 
   const modeBtn=(m:Mode, label:string)=>(
     <button onClick={()=>{setMode(m);setSaved(false);}}
-      className={`px-5 py-2 text-xs font-label uppercase tracking-widest transition-colors ${mode===m?"bg-[#00912F] text-black":"bg-[#1a1a1a] border border-white/10 text-white/50 hover:border-white/30"}`}>
+      className={`px-5 py-2 text-xs font-label uppercase tracking-widest transition-colors ${mode===m?"bg-[#00912F] text-black":"bg-surface-elevated border border-outline/20 text-on-surface/50 hover:border-outline/40"}`}>
       {label}
     </button>
   );
@@ -191,7 +191,7 @@ export default function LocMasterNewPage() {
                 {([["poly","폴리곤 (비정형)"],["rect","직사각형"]] as const).map(([v,lbl])=>(
                   <label key={v} className="flex items-center gap-2 cursor-pointer">
                     <input type="radio" value={v} checked={coordType===v} onChange={()=>{setCoordType(v);setSaved(false);}} className="accent-[#00912F]"/>
-                    <span className="text-xs font-label text-white/60">{lbl}</span>
+                    <span className="text-xs font-label text-on-surface/60">{lbl}</span>
                   </label>
                 ))}
               </div>
@@ -204,9 +204,9 @@ export default function LocMasterNewPage() {
                   value={ptsText}
                   onChange={e=>{setPtsText(e.target.value);setSaved(false);}}
                   rows={4}
-                  className="w-full bg-[#131313] border border-white/10 px-3 py-2 text-[10px] text-white/80 font-mono focus:outline-none focus:border-[#00912F] resize-none"
+                  className="w-full bg-surface border border-outline/20 px-3 py-2 text-[10px] text-on-surface/80 font-mono focus:outline-none focus:border-[#00912F] resize-none"
                 />
-                <p className="text-[9px] font-label text-white/25 mt-1">최소 3점. 미리보기에서 보라색 폴리곤으로 확인.</p>
+                <p className="text-[9px] font-label text-on-surface/25 mt-1">최소 3점. 미리보기에서 보라색 폴리곤으로 확인.</p>
               </div>
             ):(
               <div>
@@ -215,11 +215,11 @@ export default function LocMasterNewPage() {
                   {([["x",rectX,setRectX],["y",rectY,setRectY],["w",rectW,setRectW],["h",rectH,setRectH]] as const).map(([f,v,fn])=>(
                     <div key={f}>
                       <label className={labelCls}>{f}</label>
-                      <input type="number" value={v} onChange={e=>{fn(e.target.value);setSaved(false);}} className="w-full bg-[#131313] border border-white/10 px-2 py-2 text-sm text-white focus:outline-none focus:border-[#00912F]"/>
+                      <input type="number" value={v} onChange={e=>{fn(e.target.value);setSaved(false);}} className="w-full bg-surface border border-outline/20 px-2 py-2 text-sm text-on-surface focus:outline-none focus:border-[#00912F]"/>
                     </div>
                   ))}
                 </div>
-                <p className="text-[9px] font-label text-white/25 mt-1">저장 시 pts [[x,y],[x+w,y],[x+w,y+h],[x,y+h]]로 변환.</p>
+                <p className="text-[9px] font-label text-on-surface/25 mt-1">저장 시 pts [[x,y],[x+w,y],[x+w,y+h],[x,y+h]]로 변환.</p>
               </div>
             )}
 
@@ -233,14 +233,14 @@ export default function LocMasterNewPage() {
 
           {/* 우: Canvas 미리보기 */}
           <div className="flex-1">
-            <p className="font-label text-[10px] uppercase tracking-widest text-white/30 mb-2">B. 도면 미리보기 (pts 변경 시 자동 갱신)</p>
-            <div ref={wrapRef} className="border border-white/10 bg-[#111] w-full" style={{height:460,position:"relative"}}>
+            <p className="font-label text-[10px] uppercase tracking-widest text-on-surface/30 mb-2">B. 도면 미리보기 (pts 변경 시 자동 갱신)</p>
+            <div ref={wrapRef} className="border border-outline/20 bg-[#111] w-full" style={{height:460,position:"relative"}}>
               <canvas ref={canvasRef} style={{display:"block"}}/>
               {getZonePts().length<3 && (
-                <p className="absolute inset-0 flex items-center justify-center text-[10px] font-label text-white/20">pts 3점 이상 입력하면 미리보기 표시</p>
+                <p className="absolute inset-0 flex items-center justify-center text-[10px] font-label text-on-surface/20">pts 3점 이상 입력하면 미리보기 표시</p>
               )}
             </div>
-            <div className="mt-2 flex gap-4 text-[10px] font-label text-white/30">
+            <div className="mt-2 flex gap-4 text-[10px] font-label text-on-surface/30">
               <span>꼭짓점 수: {getZonePts().length}</span>
               {getZonePts().length>=3 && <span className="text-[#7F77DD]">▣ 보라색 = 등록 중인 Zone</span>}
             </div>
@@ -268,10 +268,10 @@ export default function LocMasterNewPage() {
           </div>
           <div><label className={labelCls}>기본 Capacity (m/kg)</label>
             <input type="number" value={cap} onChange={e=>setCap(e.target.value)} className={inputCls}/></div>
-          <div className="bg-[#1a1a1a] p-4 border-l-2 border-[#00912F]/40 text-xs font-label">
-            <p className="uppercase tracking-widest text-white/40 mb-2">자동생성 미리보기 ({lotCount}개)</p>
+          <div className="bg-surface-elevated p-4 border-l-2 border-[#00912F]/40 text-xs font-label">
+            <p className="uppercase tracking-widest text-on-surface/40 mb-2">자동생성 미리보기 ({lotCount}개)</p>
             {previewIds.map(id=><p key={id} className="text-[#00912F] py-0.5">{id}</p>)}
-            {lotCount>4&&<p className="text-white/30">... +{lotCount-4}개</p>}
+            {lotCount>4&&<p className="text-on-surface/30">... +{lotCount-4}개</p>}
           </div>
           <div className="flex gap-3 pt-2">
             <button onClick={()=>setSaved(true)} className="bg-[#00912F] text-black font-label font-bold uppercase tracking-widest px-6 py-3 text-sm hover:opacity-90">

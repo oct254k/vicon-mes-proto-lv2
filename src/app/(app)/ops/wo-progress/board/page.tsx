@@ -62,7 +62,7 @@ export default function WOProgressBoardPage() {
               <span className={r.status==="지연"?"text-error":r.status==="완료"?"text-primary-accent":"text-on-surface"}>{r.status}</span>
             </div>
             <div className="h-3 bg-surface-container-highest/30 mb-1">
-              <div className={`h-3 ${r.rate>=80?"bg-primary-accent":r.rate>=60?"bg-[#f59e0b]":"bg-error"}`} style={{width:`${r.rate}%`}} />
+              <div className={`h-3 ${r.rate>=80?"bg-primary-accent":r.rate>=60?"bg-warning":"bg-error"}`} style={{width:`${r.rate}%`}} />
             </div>
             <div className="flex justify-between text-xs font-label text-on-surface-variant">
               <span>{r.dong} · {r.done}/{r.plan}건</span><span>D-{r.dday}</span>

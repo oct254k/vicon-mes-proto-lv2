@@ -14,7 +14,7 @@ export default function MatchLandingPage() {
       <FieldHeader title="매칭 예외 사유 5종" moduleRef="FNC-PUR-083" />
       <div className="flex gap-2 mb-8 flex-wrap text-xs font-label">
         {["QTY_DIFF","PRICE_DIFF","MATERIAL_DIFF","OVER_DELIVERY","SHORT_DELIVERY"].map(s=>(
-          <span key={s} className="px-3 py-1 bg-surface-container border border-[#f59e0b]/40 text-[#f59e0b]">{s}</span>
+          <span key={s} className="px-3 py-1 bg-surface-container border border-warning/40 text-warning">{s}</span>
         ))}
       </div>
       <FieldHeader title="화면 목록" moduleRef="3 SCR" />

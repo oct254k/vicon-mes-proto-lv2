@@ -56,7 +56,7 @@ export default function PURClaimsPage() {
           <p className="text-xs font-label uppercase tracking-widest opacity-50 mb-1">OPEN</p>
           <p className="text-2xl font-headline font-black">{open}</p>
         </div>
-        <div className="bg-surface-container-low p-4 border-l-4 border-[#f59e0b]">
+        <div className="bg-surface-container-low p-4 border-l-4 border-warning">
           <p className="text-xs font-label uppercase tracking-widest opacity-50 mb-1">IN REVIEW</p>
           <p className="text-2xl font-headline font-black">{inReview}</p>
         </div>
@@ -84,7 +84,7 @@ export default function PURClaimsPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="bg-surface-container border-b border-outline-variant/10">
+              <tr className="bg-surface-container border-b border-outline">
                 {COLS.map((col) => (
                   <th key={col.key} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">
                     {col.label}
@@ -94,7 +94,7 @@ export default function PURClaimsPage() {
             </thead>
             <tbody className="font-headline text-sm">
               {CLAIMS_DATA.map((row, i) => (
-                <tr key={i} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors">
+                <tr key={i} className="border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors">
                   <td className="px-4 py-2 font-mono text-xs">{row.claimId}</td>
                   <td className="px-4 py-2 font-mono text-xs opacity-70">{row.po}</td>
                   <td className="px-4 py-2">{row.supplier}</td>

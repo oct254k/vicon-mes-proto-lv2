@@ -16,7 +16,7 @@ export default function OutsourceSendPage() {
   };
 
   return (
-    <div className="max-w-sm mx-auto p-4 min-h-screen bg-[#131313]">
+    <div className="max-w-sm mx-auto p-4 min-h-screen bg-surface">
       <PageHeader title="OUTSOURCE /" accent="외주 출고" nodeRef="SCR-MFG-050" status="PROTOTYPE" />
 
       <div className="bg-surface-container border-l-4 border-primary-accent p-4 mb-6">

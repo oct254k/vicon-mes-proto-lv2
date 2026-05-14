@@ -172,14 +172,14 @@ export function SitemapModal({ isOpen, onClose }: SitemapModalProps) {
                       return (
                         <td
                           key={i}
-                          className="px-2 py-2 border-r border-outline-variant/10 last:border-r-0"
+                          className="px-2 py-2 border-r border-outline last:border-r-0"
                         />
                       );
                     }
                     return (
                       <td
                         key={i}
-                        className="px-2 py-2 border-r border-outline-variant/10 last:border-r-0"
+                        className="px-2 py-2 border-r border-outline last:border-r-0"
                       >
                         <Link
                           href={item.url}

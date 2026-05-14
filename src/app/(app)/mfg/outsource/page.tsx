@@ -16,7 +16,7 @@ interface OutsourceRow {
 }
 
 const STATUS_STYLE: Record<OutsourceStatus, string> = {
-  SENT: "bg-[#f59e0b]/20 text-[#f59e0b]",
+  SENT: "bg-warning/20 text-warning",
   IN_PROCESS: "bg-[#3b82f6]/20 text-[#3b82f6]",
   RECEIVED: "bg-primary-accent/20 text-primary-accent",
 };
@@ -55,8 +55,8 @@ export default function MFGOutsourcePage() {
       />
 
       <div className="grid grid-cols-3 gap-4 mb-8">
-        <div className="bg-surface-container-low p-4 border-l-4 border-[#f59e0b]">
-          <p className="font-label text-xs uppercase tracking-widest text-[#f59e0b] mb-1">SENT</p>
+        <div className="bg-surface-container-low p-4 border-l-4 border-warning">
+          <p className="font-label text-xs uppercase tracking-widest text-warning mb-1">SENT</p>
           <p className="font-headline font-black text-2xl">{sentCount}</p>
         </div>
         <div className="bg-surface-container-low p-4 border-l-4 border-[#3b82f6]">
@@ -80,7 +80,7 @@ export default function MFGOutsourcePage() {
         </div>
         <table className="w-full text-left border-collapse">
           <thead>
-            <tr className="bg-surface-container border-b border-outline-variant/10">
+            <tr className="bg-surface-container border-b border-outline">
               {COLUMNS.map((col) => (
                 <th key={col.key} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold whitespace-nowrap">
                   {col.label}
@@ -90,7 +90,7 @@ export default function MFGOutsourcePage() {
           </thead>
           <tbody className="font-headline text-sm">
             {MOCK_DATA.map((row, i) => (
-              <tr key={i} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors">
+              <tr key={i} className="border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors">
                 <td className="px-4 py-2 font-bold">{row.vendor}</td>
                 <td className="px-4 py-2 tabular-nums">{row.woId}</td>
                 <td className="px-4 py-2 tabular-nums">{row.count}</td>
@@ -110,7 +110,7 @@ export default function MFGOutsourcePage() {
       <FieldHeader title="외주 처리" moduleRef="SCR-MFG-052" />
       <div className="flex gap-3">
         <button
-          className="flex-1 py-4 bg-surface-container border border-[#f59e0b] text-[#f59e0b] font-headline font-black uppercase tracking-widest text-sm"
+          className="flex-1 py-4 bg-surface-container border border-warning text-warning font-headline font-black uppercase tracking-widest text-sm"
           onClick={() => setModal("out")}
         >
           외주 출고

@@ -5,7 +5,7 @@ import { PageHeader } from "@/components/ui/PageHeader";
 type EquipStatus = "RUNNING" | "IDLE" | "DOWN" | "MAINTENANCE";
 const STATUS_STYLE: Record<EquipStatus, string> = {
   RUNNING:     "text-primary-accent border-primary-accent bg-primary-accent/10",
-  IDLE:        "text-[#f59e0b] border-[#f59e0b] bg-[#f59e0b]/10",
+  IDLE:        "text-warning border-warning bg-warning/10",
   DOWN:        "text-error border-error bg-error/10",
   MAINTENANCE: "text-[#3b82f6] border-[#3b82f6] bg-[#3b82f6]/10",
 };
@@ -21,7 +21,7 @@ const status: EquipStatus = "RUNNING";
 const rate = 78.3;
 
 export default function OPSLineBoardPage() {
-  const rateColor = rate >= 80 ? "bg-primary-accent" : rate >= 60 ? "bg-[#f59e0b]" : "bg-error";
+  const rateColor = rate >= 80 ? "bg-primary-accent" : rate >= 60 ? "bg-warning" : "bg-error";
 
   return (
     <div className="p-6 bg-surface min-h-screen">
@@ -69,7 +69,7 @@ export default function OPSLineBoardPage() {
         <p className="text-xs font-label uppercase tracking-widest text-on-surface-variant mb-3">WO 라인 미니 보드 — WO-P3000-20260506-0007</p>
         <div className="flex flex-wrap gap-3">
           {MEMBERS.map(m=>(
-            <div key={m.id} className="bg-surface border border-outline-variant/10 px-3 py-2 text-xs font-label">
+            <div key={m.id} className="bg-surface border border-outline px-3 py-2 text-xs font-label">
               <p className="text-on-surface-variant mb-1">{m.id}</p>
               <p>{m.steps.map(s=>`${s.n}${STEP_ICON[s.s]}`).join(" ")}</p>
             </div>
@@ -79,7 +79,7 @@ export default function OPSLineBoardPage() {
 
       <div className="flex gap-4 text-xs font-label mt-4">
         <span className="text-primary-accent">● RUNNING</span>
-        <span className="text-[#f59e0b]">● IDLE</span>
+        <span className="text-warning">● IDLE</span>
         <span className="text-error">● DOWN</span>
         <span className="text-[#3b82f6]">● MAINTENANCE</span>
         <span className="ml-auto text-on-surface-variant">[Excel] [PDF] [★ 즐겨찾기] [← Plant 종합]</span>

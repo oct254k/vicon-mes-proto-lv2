@@ -39,7 +39,7 @@ export default function SYSPlantPage() {
   };
 
   return (
-    <div className="p-8 bg-[#131313] min-h-screen text-on-surface">
+    <div className="p-8 bg-surface min-h-screen text-on-surface">
       <PageHeader title="Plant" accent="정책 설정" nodeRef="SCR-SYS-080" description="공장별 운영 옵션 토글 및 일자·통화·교대 정책 관리" />
 
       <div className="flex justify-end mb-4">
@@ -51,7 +51,7 @@ export default function SYSPlantPage() {
 
       <div className="grid grid-cols-1 gap-4">
         {plants.map(plant => (
-          <section key={plant.id} className="bg-surface-container-lowest border border-outline-variant/10">
+          <section key={plant.id} className="bg-surface-container-lowest border border-outline">
             <div className="p-4 bg-surface-container-highest/30 border-l-4 border-[#00912F] flex items-center gap-4">
               <span className="font-headline font-black text-base uppercase tracking-widest text-[#00912F]">{plant.id}</span>
               <span className="font-headline text-sm text-on-surface">{plant.name}</span>

@@ -21,7 +21,7 @@ const MOCK = [
 
 export default function MenuFavoritePage() {
   return (
-    <div className="p-8 bg-[#131313] min-h-screen text-on-surface">
+    <div className="p-8 bg-surface min-h-screen text-on-surface">
       <PageHeader title="즐겨찾기 관리" accent="FAVORITE" nodeRef="SCR-SYS-022" status="PROTOTYPE"
         description="사용자 즐겨찾기 ≤20건, PC↔MOBILE 동기화 (FNC-SYS-023·024)" />
       <div className="flex justify-between items-center mb-4">

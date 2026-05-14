@@ -28,7 +28,7 @@ export default function SPNotificationsPage() {
       </div>
 
       <FieldHeader title="알림 채널 목록" moduleRef="SCR-SP-023" />
-      <section className="bg-[#1a1a1a] mt-4">
+      <section className="bg-surface-elevated mt-4">
         <div className="p-4 bg-white/5 flex justify-between items-center border-l-4 border-[#00912F]">
           <h3 className="font-headline font-black text-sm uppercase tracking-widest">
             알림 설정{" "}
@@ -40,18 +40,18 @@ export default function SPNotificationsPage() {
           <table className="w-full text-left border-collapse">
             <thead>
               <tr className="border-b border-white/5">
-                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-white/40">알림 유형</th>
-                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-white/40">채널</th>
-                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-white/40">수신자</th>
-                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-white/40">활성화</th>
+                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-on-surface/40">알림 유형</th>
+                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-on-surface/40">채널</th>
+                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-on-surface/40">수신자</th>
+                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-on-surface/40">활성화</th>
               </tr>
             </thead>
             <tbody className="font-headline text-sm">
               {notifData.map((row, i) => (
                 <tr key={i} className="border-b border-white/5 hover:bg-white/5 transition-colors">
-                  <td className="px-4 py-3 text-white/80">{row.type}</td>
-                  <td className="px-4 py-3 text-white/70">{row.channel}</td>
-                  <td className="px-4 py-3 text-white/60">{row.receivers}</td>
+                  <td className="px-4 py-3 text-on-surface/80">{row.type}</td>
+                  <td className="px-4 py-3 text-on-surface/70">{row.channel}</td>
+                  <td className="px-4 py-3 text-on-surface/60">{row.receivers}</td>
                   <td className="px-4 py-3">
                     <StatusBadge
                       type={row.active ? "running" : "stopped"}

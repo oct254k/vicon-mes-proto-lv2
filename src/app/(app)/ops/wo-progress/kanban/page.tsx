@@ -24,7 +24,7 @@ const LANES = [
     ],
   },
   {
-    label: "완료",   color: "border-[#f59e0b]",
+    label: "완료",   color: "border-warning",
     cards: [
       { wo: "WO-P3000-20260506-0008", dong: "102동", members: 85, attempt: 1 },
       { wo: "WO-P3000-20260503-0015", dong: "B동",   members: 32, attempt: 1 },
@@ -40,13 +40,13 @@ export default function WOKanbanPage() {
       <div className="grid grid-cols-4 gap-4 mt-4">
         {LANES.map(lane => (
           <div key={lane.label} className={`border-t-4 ${lane.color} bg-surface-container`}>
-            <div className="p-3 bg-surface-container-highest/20 border-b border-outline-variant/10">
+            <div className="p-3 bg-surface-container-highest/20 border-b border-outline">
               <p className="text-xs font-label uppercase tracking-widest font-bold">{lane.label}</p>
               <p className="text-lg font-black tabular-nums">{lane.cards.length}건</p>
             </div>
             <div className="p-3 flex flex-col gap-3">
               {lane.cards.map(c => (
-                <div key={c.wo} className="bg-surface border border-outline-variant/10 p-3">
+                <div key={c.wo} className="bg-surface border border-outline p-3">
                   <div className="flex justify-between items-start mb-1">
                     <p className="text-xs font-label text-on-surface-variant">{c.wo}</p>
                     {c.attempt > 1 && (

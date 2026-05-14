@@ -26,7 +26,7 @@ const MOCK: Record<Stage, { id: string; woNo: string; member: string; updatedAt:
 
 const STAGE_COLOR: Record<Stage, string> = {
   CREATED: "border-on-surface/20", IN_PRODUCTION: "border-tertiary", COMPLETED: "border-primary-accent",
-  STORED: "border-primary-accent", READY: "border-[#f59e0b]", HOLD: "border-error", LOADED: "border-tertiary", SHIPPED: "border-on-surface/30",
+  STORED: "border-primary-accent", READY: "border-warning", HOLD: "border-error", LOADED: "border-tertiary", SHIPPED: "border-on-surface/30",
 };
 
 const BADGE_TYPE: Record<Stage, "running" | "warning" | "idle" | "stopped" | "error"> = {
@@ -72,7 +72,7 @@ export default function PackingLifecyclePage() {
           </div>
           <table className="w-full text-left border-collapse text-sm">
             <thead>
-              <tr className="bg-surface-container border-b border-outline-variant/10">
+              <tr className="bg-surface-container border-b border-outline">
                 {["패킹 ID", "WO번호", "부재 코드", "업데이트"].map((h) => (
                   <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50">{h}</th>
                 ))}
@@ -80,7 +80,7 @@ export default function PackingLifecyclePage() {
             </thead>
             <tbody className="font-headline">
               {rows.map((r) => (
-                <tr key={r.id} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors cursor-pointer">
+                <tr key={r.id} className="border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors cursor-pointer">
                   <td className="px-4 py-2 font-mono text-xs text-primary-accent">{r.id}</td>
                   <td className="px-4 py-2 text-xs opacity-70">{r.woNo}</td>
                   <td className="px-4 py-2 font-mono text-xs">{r.member}</td>

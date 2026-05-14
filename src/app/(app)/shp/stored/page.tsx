@@ -49,13 +49,13 @@ export default function SHPStoredPage() {
           <p className="text-xs font-label uppercase tracking-widest opacity-50 mb-1">대기 패킹 수</p>
           <p className="text-3xl font-headline font-black">{totalPacks}</p>
         </div>
-        <div className="bg-surface-container-low p-4 border-l-4 border-[#f59e0b]">
+        <div className="bg-surface-container-low p-4 border-l-4 border-warning">
           <p className="text-xs font-label uppercase tracking-widest opacity-50 mb-1">평균 AGING (일)</p>
           <p className="text-3xl font-headline font-black">{avgAging}</p>
         </div>
         <div className="bg-surface-container-low p-4 border-l-4 border-error">
           <p className="text-xs font-label uppercase tracking-widest opacity-50 mb-1">7일 초과 패킹</p>
-          <p className="text-3xl font-headline font-black text-[#f59e0b]">{overdue}</p>
+          <p className="text-3xl font-headline font-black text-warning">{overdue}</p>
         </div>
       </div>
 

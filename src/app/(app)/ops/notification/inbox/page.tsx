@@ -7,7 +7,7 @@ import { DataTable } from "@/components/ui/DataTable";
 type NotiStatus = "UNRESOLVED" | "READ" | "IN_PROGRESS" | "RESOLVED" | "IGNORED";
 const STATUS_COLOR: Record<NotiStatus, string> = {
   UNRESOLVED: "text-error", READ: "text-on-surface-variant",
-  IN_PROGRESS: "text-[#f59e0b]", RESOLVED: "text-primary-accent", IGNORED: "text-on-surface-variant",
+  IN_PROGRESS: "text-warning", RESOLVED: "text-primary-accent", IGNORED: "text-on-surface-variant",
 };
 const CHANNELS = ["전체", "INAPP", "EMAIL", "SMS", "KAKAOTALK", "LINEBOARD"];
 
@@ -55,7 +55,7 @@ export default function NotificationInboxPage() {
       {/* 알림 목록 (액션 포함) */}
       <div className="bg-surface-container mb-4">
         {filtered.map(n => (
-          <div key={n.id} className="border-b border-outline-variant/5 p-4 flex items-start gap-3 hover:bg-surface-container-highest/10">
+          <div key={n.id} className="border-b border-outline-variant p-4 flex items-start gap-3 hover:bg-surface-container-highest/10">
             <div className="flex-1">
               <div className="flex gap-2 text-xs font-label mb-1">
                 <span className="text-on-surface-variant">{n.channel}</span>

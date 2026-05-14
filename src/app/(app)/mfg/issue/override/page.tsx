@@ -9,7 +9,7 @@ export default function IssueOverridePage() {
   const [approved, setApproved] = useState(false);
 
   return (
-    <div className="max-w-sm mx-auto p-4 min-h-screen bg-[#131313]">
+    <div className="max-w-sm mx-auto p-4 min-h-screen bg-surface">
       <PageHeader title="ISSUE /" accent="FIFO 우회 승인" nodeRef="SCR-MFG-011" status="PROTOTYPE" />
 
       <div className="bg-error/10 border border-error/40 p-4 mb-6">

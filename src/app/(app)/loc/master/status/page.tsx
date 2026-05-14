@@ -39,9 +39,9 @@ export default function LocMasterStatusPage() {
 
       <div className="grid grid-cols-4 gap-4 mb-8">
         {KPI.map(k => (
-          <div key={k.label} className="bg-[#1a1a1a] border-l-4 border-[#00912F] p-5 flex flex-col gap-2">
-            <p className="text-xs font-label uppercase tracking-widest text-white/40">{k.label}</p>
-            <p className="text-3xl font-black font-headline text-white">{k.value}</p>
+          <div key={k.label} className="bg-surface-elevated border-l-4 border-[#00912F] p-5 flex flex-col gap-2">
+            <p className="text-xs font-label uppercase tracking-widest text-on-surface/40">{k.label}</p>
+            <p className="text-3xl font-black font-headline text-on-surface">{k.value}</p>
             <StatusBadge type={k.badge} label={k.label} />
           </div>
         ))}
@@ -54,7 +54,7 @@ export default function LocMasterStatusPage() {
         <button className="bg-[#00912F] text-black font-label font-bold uppercase tracking-widest px-5 py-2 text-xs hover:opacity-90">
           [상태 변경 ▶]
         </button>
-        <button className="bg-[#ef4444]/10 border border-[#ef4444]/30 text-[#ef4444] font-label uppercase tracking-widest px-5 py-2 text-xs hover:bg-[#ef4444]/20">
+        <button className="bg-danger/10 border border-danger/30 text-danger font-label uppercase tracking-widest px-5 py-2 text-xs hover:bg-danger/20">
           [폐기 결재]
         </button>
       </div>

@@ -42,7 +42,7 @@ export default function GrantRevokePage() {
         </div>
         <table className="w-full text-left border-collapse text-sm">
           <thead>
-            <tr className="bg-surface-container border-b border-outline-variant/10">
+            <tr className="bg-surface-container border-b border-outline">
               {["Grant ID", "대상", "권한 내용", "부여 일시", "부여자", "부서", "상태", "회수"].map((h) => (
                 <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
               ))}
@@ -50,7 +50,7 @@ export default function GrantRevokePage() {
           </thead>
           <tbody className="font-headline">
             {GRANTS.map((g, i) => (
-              <tr key={i} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20">
+              <tr key={i} className="border-b border-outline-variant hover:bg-surface-container-highest/20">
                 <td className="px-4 py-2 tabular-nums text-xs opacity-70">{g.grantId}</td>
                 <td className="px-4 py-2 text-xs">{g.target}</td>
                 <td className="px-4 py-2 text-xs">{g.type}</td>

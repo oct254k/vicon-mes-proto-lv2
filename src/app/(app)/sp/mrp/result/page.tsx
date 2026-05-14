@@ -23,7 +23,7 @@ const columns = [
   { key: "material", label: "Material" },
   { key: "required", label: "소요량" },
   { key: "stock",    label: "재고" },
-  { key: "shortage", label: "부족량",  className: "text-[#f59e0b] font-bold" },
+  { key: "shortage", label: "부족량",  className: "text-warning font-bold" },
   { key: "unit",     label: "단위" },
 ];
 

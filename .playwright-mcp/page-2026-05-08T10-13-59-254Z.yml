@@ -1,0 +1,212 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "성지그룹 Logo" [ref=e5] [cursor=pointer]:
+          - /url: /ops/
+          - img "성지그룹 Logo" [ref=e6]
+        - generic [ref=e7]:
+          - link "대시보드" [ref=e8] [cursor=pointer]:
+            - /url: /ops/
+          - link "이력추적" [ref=e9] [cursor=pointer]:
+            - /url: /trace/
+          - link "알람" [ref=e10] [cursor=pointer]:
+            - /url: /alarm/
+      - generic [ref=e11]:
+        - button "book_2" [ref=e12] [cursor=pointer]
+        - generic [ref=e13] [cursor=pointer]: notifications
+        - generic [ref=e14] [cursor=pointer]: settings
+        - generic [ref=e16]: person
+    - complementary [ref=e17]:
+      - generic [ref=e19]:
+        - generic [ref=e20]: search
+        - textbox "메뉴 검색... (/)" [ref=e21]
+      - navigation [ref=e22]:
+        - list [ref=e23]:
+          - listitem [ref=e24]:
+            - button "inventory_2 기준정보 expand_more" [ref=e25]:
+              - generic [ref=e26]: inventory_2
+              - generic [ref=e27]: 기준정보
+              - generic [ref=e28]: expand_more
+          - listitem [ref=e29]:
+            - button "request_quote 수주·생산계획·MRP expand_more" [ref=e30]:
+              - generic [ref=e31]: request_quote
+              - generic [ref=e32]: 수주·생산계획·MRP
+              - generic [ref=e33]: expand_more
+          - listitem [ref=e34]:
+            - button "assignment 작업지시·부재·패킹 expand_more" [ref=e35]:
+              - generic [ref=e36]: assignment
+              - generic [ref=e37]: 작업지시·부재·패킹
+              - generic [ref=e38]: expand_more
+          - listitem [ref=e39]:
+            - button "precision_manufacturing 생산실행·추적성 expand_more" [ref=e40]:
+              - generic [ref=e41]: precision_manufacturing
+              - generic [ref=e42]: 생산실행·추적성
+              - generic [ref=e43]: expand_more
+          - listitem [ref=e44]:
+            - button "warehouse 위치·재고 expand_more" [ref=e45]:
+              - generic [ref=e46]: warehouse
+              - generic [ref=e47]: 위치·재고
+              - generic [ref=e48]: expand_more
+          - listitem [ref=e49]:
+            - button "verified 품질·SPC·불량 expand_more" [ref=e50]:
+              - generic [ref=e51]: verified
+              - generic [ref=e52]: 품질·SPC·불량
+              - generic [ref=e53]: expand_more
+            - list [ref=e54]:
+              - listitem [ref=e55]:
+                - button "품질 KPI 대시보드 expand_more" [ref=e56]:
+                  - generic [ref=e57]: 품질 KPI 대시보드
+                  - generic [ref=e58]: expand_more
+              - listitem [ref=e59]:
+                - button "SPC 측정·관리도 expand_more" [ref=e60]:
+                  - generic [ref=e61]: SPC 측정·관리도
+                  - generic [ref=e62]: expand_more
+              - listitem [ref=e63]:
+                - button "불량 신고·트랜잭션 expand_more" [ref=e64]:
+                  - generic [ref=e65]: 불량 신고·트랜잭션
+                  - generic [ref=e66]: expand_more
+              - listitem [ref=e67]:
+                - button "위험 확산 평가·회수 expand_more" [ref=e68]:
+                  - generic [ref=e69]: 위험 확산 평가·회수
+                  - generic [ref=e70]: expand_more
+              - listitem [ref=e71]:
+                - button "손실 환산·회계 expand_more" [ref=e72]:
+                  - generic [ref=e73]: 손실 환산·회계
+                  - generic [ref=e74]: expand_more
+                - list [ref=e75]:
+                  - listitem [ref=e76]:
+                    - link "— 손실 환산 산출·조회" [ref=e77] [cursor=pointer]:
+                      - /url: /qc/loss/calc/
+                      - generic [ref=e78]: —
+                      - generic [ref=e79]: 손실 환산 산출·조회
+                  - listitem [ref=e80]:
+                    - link "— 시점 가중치 정책 마스터" [ref=e81] [cursor=pointer]:
+                      - /url: /qc/loss/weight-master/
+                      - generic [ref=e82]: —
+                      - generic [ref=e83]: 시점 가중치 정책 마스터
+                  - listitem [ref=e84]:
+                    - link "— 회계 ERP 전송 큐" [ref=e85] [cursor=pointer]:
+                      - /url: /qc/loss/accounting-queue/
+                      - generic [ref=e86]: —
+                      - generic [ref=e87]: 회계 ERP 전송 큐
+              - listitem [ref=e88]:
+                - button "품질 성적서 expand_more" [ref=e89]:
+                  - generic [ref=e90]: 품질 성적서
+                  - generic [ref=e91]: expand_more
+              - listitem [ref=e92]:
+                - button "QC 마스터 관리 expand_more" [ref=e93]:
+                  - generic [ref=e94]: QC 마스터 관리
+                  - generic [ref=e95]: expand_more
+          - listitem [ref=e96]:
+            - button "engineering 설비관리 expand_more" [ref=e97]:
+              - generic [ref=e98]: engineering
+              - generic [ref=e99]: 설비관리
+              - generic [ref=e100]: expand_more
+          - listitem [ref=e101]:
+            - button "shopping_cart 구매·발주 expand_more" [ref=e102]:
+              - generic [ref=e103]: shopping_cart
+              - generic [ref=e104]: 구매·발주
+              - generic [ref=e105]: expand_more
+          - listitem [ref=e106]:
+            - button "local_shipping 출하 expand_more" [ref=e107]:
+              - generic [ref=e108]: local_shipping
+              - generic [ref=e109]: 출하
+              - generic [ref=e110]: expand_more
+          - listitem [ref=e111]:
+            - button "groups 사용자·권한 expand_more" [ref=e112]:
+              - generic [ref=e113]: groups
+              - generic [ref=e114]: 사용자·권한
+              - generic [ref=e115]: expand_more
+          - listitem [ref=e116]:
+            - button "dashboard 운영현황·대시보드 expand_more" [ref=e117]:
+              - generic [ref=e118]: dashboard
+              - generic [ref=e119]: 운영현황·대시보드
+              - generic [ref=e120]: expand_more
+          - listitem [ref=e121]:
+            - button "settings 시스템관리 expand_more" [ref=e122]:
+              - generic [ref=e123]: settings
+              - generic [ref=e124]: 시스템관리
+              - generic [ref=e125]: expand_more
+    - main [ref=e126]:
+      - generic [ref=e127]:
+        - generic [ref=e128]:
+          - heading "손실 환산 계산" [level=1] [ref=e130]
+          - generic [ref=e131]:
+            - generic [ref=e132]: "Node: SCR-QC-070"
+            - generic [ref=e133]: "System Status: PROTOTYPE"
+          - paragraph [ref=e134]: 자재×BOM×시점 가중치 손실 환산 입력·산출 (FNC-QC-100~102)
+        - paragraph [ref=e136]:
+          - text: "손실 환산식:"
+          - code [ref=e137]: loss_amount = 자재단가 × BOM_소요량 × 시점_가중치 + 인건비/공수
+          - text: (FR-QC-090)
+        - generic [ref=e138]:
+          - generic [ref=e139]:
+            - generic [ref=e140]:
+              - heading "입력 정보" [level=3] [ref=e141]
+              - generic [ref=e142]: FNC-QC-100
+            - generic [ref=e143]:
+              - generic [ref=e144]:
+                - generic [ref=e145]: 불량 번호
+                - combobox [ref=e146]:
+                  - option "D-2026-0042 — B01-1-G22C-C-171" [selected]
+                  - option "D-2026-0043 — B01-2-G15A-S-040"
+                  - option "D-2026-0044 — B01-1-G22C-C-172"
+              - generic [ref=e147]:
+                - generic [ref=e148]: 발생 시점
+                - combobox [ref=e149]:
+                  - option "② 생산공정 (가중치 1.5×)" [selected]
+                  - option "① 입고검사 (가중치 1.0×)"
+                  - option "⑥ 최종검사 (가중치 2.0×)"
+                  - option "⑨ 현장도착 (가중치 3.0×)"
+              - generic [ref=e150]:
+                - generic [ref=e151]:
+                  - generic [ref=e152]: 자재 단가 (원/kg)
+                  - spinbutton [ref=e153]: "850000"
+                - generic [ref=e154]:
+                  - generic [ref=e155]: BOM 소요량 (kg)
+                  - spinbutton [ref=e156]: "1.46"
+              - generic [ref=e157]:
+                - generic [ref=e158]:
+                  - generic [ref=e159]: 인건비/공수 (원)
+                  - spinbutton [ref=e160]: "45000"
+                - generic [ref=e161]:
+                  - generic [ref=e162]: 불량 수량
+                  - spinbutton [ref=e163]: "1"
+              - button "손실 산출" [ref=e164]
+          - generic [ref=e165]:
+            - generic [ref=e166]:
+              - heading "산출 결과" [level=3] [ref=e167]
+              - generic [ref=e168]: FNC-QC-101~102
+            - generic [ref=e169]:
+              - generic [ref=e170]:
+                - generic [ref=e171]:
+                  - paragraph [ref=e172]: 자재 손실
+                  - paragraph [ref=e173]: 850,000 × 1.46kg × 1
+                - paragraph [ref=e174]: ₩ 1,241,000
+              - generic [ref=e175]:
+                - generic [ref=e176]:
+                  - paragraph [ref=e177]: 시점 가중치 적용
+                  - paragraph [ref=e178]: ② 생산공정
+                - paragraph [ref=e179]: ×1.5
+              - generic [ref=e180]:
+                - generic [ref=e181]:
+                  - paragraph [ref=e182]: 가중 자재 손실
+                  - paragraph [ref=e183]: 자재손실 × 1.5
+                - paragraph [ref=e184]: ₩ 1,861,500
+              - generic [ref=e185]:
+                - generic [ref=e186]:
+                  - paragraph [ref=e187]: 인건비/공수
+                  - paragraph [ref=e188]: 작업 공수 환산
+                - paragraph [ref=e189]: ₩ 45,000
+              - generic [ref=e190]:
+                - generic [ref=e191]:
+                  - paragraph [ref=e192]: 총 손실 환산액
+                  - paragraph [ref=e193]: 가중자재 + 인건비
+                - paragraph [ref=e194]: ₩ 1,906,500
+              - generic [ref=e195]:
+                - button "회계 큐 전송" [ref=e196]
+                - button "저장" [ref=e197]
+    - generic [ref=e199]: System Active | Port 8080 | Secure Link
+  - button "Open Next.js Dev Tools" [ref=e205] [cursor=pointer]:
+    - img [ref=e206]

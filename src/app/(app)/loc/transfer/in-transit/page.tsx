@@ -44,9 +44,9 @@ export default function InTransitPage() {
 
       <div className="flex gap-4 mb-8">
         {KPI.map(k => (
-          <div key={k.label} className="bg-[#1a1a1a] border-l-4 border-[#00912F] px-6 py-4">
-            <p className="text-xs font-label uppercase tracking-widest text-white/40 mb-1">{k.label}</p>
-            <p className="text-2xl font-black font-headline text-white">{k.value}</p>
+          <div key={k.label} className="bg-surface-elevated border-l-4 border-[#00912F] px-6 py-4">
+            <p className="text-xs font-label uppercase tracking-widest text-on-surface/40 mb-1">{k.label}</p>
+            <p className="text-2xl font-black font-headline text-on-surface">{k.value}</p>
             <StatusBadge type={k.badge} label={k.badge.toUpperCase()} />
           </div>
         ))}
@@ -60,7 +60,7 @@ export default function InTransitPage() {
               <div key={r.txId} className="bg-[#f97316]/10 border border-[#f97316]/30 px-5 py-3 flex items-center justify-between animate-pulse">
                 <div>
                   <p className="font-label text-xs uppercase tracking-widest text-[#f97316]">⚠ AGING — {r.lot}</p>
-                  <p className="text-white/50 text-xs">{r.material} / {r.from} → {r.to} / {r.elapsed}h 경과</p>
+                  <p className="text-on-surface/50 text-xs">{r.material} / {r.from} → {r.to} / {r.elapsed}h 경과</p>
                 </div>
                 <StatusBadge type="warning" label={r.status} />
               </div>

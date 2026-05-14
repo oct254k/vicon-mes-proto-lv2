@@ -24,7 +24,7 @@ const DATA = [
 const KPI = [
   { label: "발송 총계",  value: `${DATA.length}건` },
   { label: "회신 완료",  value: `${DATA.filter(d=>d.replyStatus==="회신 확인").length}건`, color: "text-primary-accent" },
-  { label: "회신 대기",  value: `${DATA.filter(d=>d.replyStatus==="대기중").length}건`,    color: "text-[#f59e0b]" },
+  { label: "회신 대기",  value: `${DATA.filter(d=>d.replyStatus==="대기중").length}건`,    color: "text-warning" },
 ];
 
 export default function CustomerReplyPage() {
@@ -43,13 +43,13 @@ export default function CustomerReplyPage() {
 
       {/* 대기 중 회신 강조 */}
       {DATA.filter(d => d.replyStatus === "대기중").map(d => (
-        <div key={d.id} className="bg-surface-container border-l-4 border-[#f59e0b] p-4 mb-2 flex items-center gap-3">
+        <div key={d.id} className="bg-surface-container border-l-4 border-warning p-4 mb-2 flex items-center gap-3">
           <div className="flex-1">
-            <p className="text-xs font-label text-[#f59e0b] font-bold mb-0.5">회신 대기 — {d.customer}</p>
+            <p className="text-xs font-label text-warning font-bold mb-0.5">회신 대기 — {d.customer}</p>
             <p className="text-sm font-headline text-on-surface">{d.so} · {d.notiType}</p>
             <p className="text-xs font-label text-on-surface-variant">발송 {d.sentAt}</p>
           </div>
-          <button className="bg-surface-container border border-[#f59e0b]/40 text-[#f59e0b] text-xs font-label px-3 py-1.5">독촉 발송</button>
+          <button className="bg-surface-container border border-warning/40 text-warning text-xs font-label px-3 py-1.5">독촉 발송</button>
         </div>
       ))}
 

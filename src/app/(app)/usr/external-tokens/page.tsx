@@ -23,11 +23,11 @@ export default function ExternalTokensPage() {
         </p>
       </div>
 
-      <div className="bg-surface-container-low border-l-4 border-[#f59e0b] p-5 mb-6">
+      <div className="bg-surface-container-low border-l-4 border-warning p-5 mb-6">
         <FieldHeader title="활성 토큰 현황" moduleRef="FNC-USR-082/083" />
         <table className="w-full text-left text-sm">
           <thead>
-            <tr className="border-b border-outline-variant/10">
+            <tr className="border-b border-outline">
               {["토큰 ID", "외부 사용자", "Scope", "발급자", "발급 시각", "만료 시각", "상태"].map((h) => (
                 <th key={h} className="pb-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold pr-4">{h}</th>
               ))}

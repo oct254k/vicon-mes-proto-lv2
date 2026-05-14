@@ -1,0 +1,182 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "성지그룹 Logo" [ref=e5] [cursor=pointer]:
+          - /url: /ops/
+          - img "성지그룹 Logo" [ref=e6]
+        - generic [ref=e7]:
+          - link "대시보드" [ref=e8] [cursor=pointer]:
+            - /url: /ops/
+          - link "이력추적" [ref=e9] [cursor=pointer]:
+            - /url: /trace/
+          - link "알람" [ref=e10] [cursor=pointer]:
+            - /url: /alarm/
+      - generic [ref=e11]:
+        - button "book_2" [ref=e12] [cursor=pointer]
+        - generic [ref=e13] [cursor=pointer]: notifications
+        - generic [ref=e14] [cursor=pointer]: settings
+        - generic [ref=e16]: person
+    - complementary [ref=e17]:
+      - generic [ref=e19]:
+        - generic [ref=e20]: search
+        - textbox "메뉴 검색... (/)" [ref=e21]
+      - navigation [ref=e22]:
+        - list [ref=e188]:
+          - listitem [ref=e189]:
+            - button "inventory_2 기준정보 expand_more" [ref=e190]:
+              - generic [ref=e191]: inventory_2
+              - generic [ref=e192]: 기준정보
+              - generic [ref=e193]: expand_more
+          - listitem [ref=e194]:
+            - button "request_quote 수주·생산계획·MRP expand_more" [ref=e195]:
+              - generic [ref=e196]: request_quote
+              - generic [ref=e197]: 수주·생산계획·MRP
+              - generic [ref=e198]: expand_more
+          - listitem [ref=e199]:
+            - button "assignment 작업지시·부재·패킹 expand_more" [ref=e200]:
+              - generic [ref=e201]: assignment
+              - generic [ref=e202]: 작업지시·부재·패킹
+              - generic [ref=e203]: expand_more
+          - listitem [ref=e204]:
+            - button "precision_manufacturing 생산실행·추적성 expand_more" [ref=e205]:
+              - generic [ref=e206]: precision_manufacturing
+              - generic [ref=e207]: 생산실행·추적성
+              - generic [ref=e208]: expand_more
+          - listitem [ref=e209]:
+            - button "warehouse 위치·재고 expand_more" [ref=e210]:
+              - generic [ref=e211]: warehouse
+              - generic [ref=e212]: 위치·재고
+              - generic [ref=e213]: expand_more
+            - list [ref=e214]:
+              - listitem [ref=e215]:
+                - button "위치 체계·yard 마스터 expand_more" [ref=e216]:
+                  - generic [ref=e217]: 위치 체계·yard 마스터
+                  - generic [ref=e218]: expand_more
+              - listitem [ref=e219]:
+                - button "야적장 도면 시각화 expand_more" [ref=e220]:
+                  - generic [ref=e221]: 야적장 도면 시각화
+                  - generic [ref=e222]: expand_more
+                - list [ref=e223]:
+                  - listitem [ref=e224]:
+                    - link "— 실시간 도면 시각화" [ref=e225] [cursor=pointer]:
+                      - /url: /loc/yard-map/view/
+                      - generic [ref=e226]: —
+                      - generic [ref=e227]: 실시간 도면 시각화
+                  - listitem [ref=e228]:
+                    - link "— 도면 등록·Drag-and-Drop" [ref=e229] [cursor=pointer]:
+                      - /url: /loc/yard-map/edit/
+                      - generic [ref=e230]: —
+                      - generic [ref=e231]: 도면 등록·Drag-and-Drop
+                  - listitem [ref=e232]:
+                    - link "— 점유 현황 보드" [ref=e233] [cursor=pointer]:
+                      - /url: /loc/yard-map/occupancy/
+                      - generic [ref=e234]: —
+                      - generic [ref=e235]: 점유 현황 보드
+              - listitem [ref=e236]:
+                - button "입고 (RECEIVE) expand_more" [ref=e237]:
+                  - generic [ref=e238]: 입고 (RECEIVE)
+                  - generic [ref=e239]: expand_more
+              - listitem [ref=e240]:
+                - button "공장 간 이동 (TRANSFER) expand_more" [ref=e241]:
+                  - generic [ref=e242]: 공장 간 이동 (TRANSFER)
+                  - generic [ref=e243]: expand_more
+              - listitem [ref=e244]:
+                - button "재고 보정 (ADJUST) expand_more" [ref=e245]:
+                  - generic [ref=e246]: 재고 보정 (ADJUST)
+                  - generic [ref=e247]: expand_more
+              - listitem [ref=e248]:
+                - button "SCRAP·자투리 expand_more" [ref=e249]:
+                  - generic [ref=e250]: SCRAP·자투리
+                  - generic [ref=e251]: expand_more
+              - listitem [ref=e252]:
+                - button "정기 실사 (Cycle Count) expand_more" [ref=e253]:
+                  - generic [ref=e254]: 정기 실사 (Cycle Count)
+                  - generic [ref=e255]: expand_more
+              - listitem [ref=e256]:
+                - button "재고 조회·이력·View expand_more" [ref=e257]:
+                  - generic [ref=e258]: 재고 조회·이력·View
+                  - generic [ref=e259]: expand_more
+          - listitem [ref=e260]:
+            - button "verified 품질·SPC·불량 expand_more" [ref=e261]:
+              - generic [ref=e262]: verified
+              - generic [ref=e263]: 품질·SPC·불량
+              - generic [ref=e264]: expand_more
+          - listitem [ref=e265]:
+            - button "engineering 설비관리 expand_more" [ref=e266]:
+              - generic [ref=e267]: engineering
+              - generic [ref=e268]: 설비관리
+              - generic [ref=e269]: expand_more
+          - listitem [ref=e270]:
+            - button "shopping_cart 구매·발주 expand_more" [ref=e271]:
+              - generic [ref=e272]: shopping_cart
+              - generic [ref=e273]: 구매·발주
+              - generic [ref=e274]: expand_more
+          - listitem [ref=e275]:
+            - button "local_shipping 출하 expand_more" [ref=e276]:
+              - generic [ref=e277]: local_shipping
+              - generic [ref=e278]: 출하
+              - generic [ref=e279]: expand_more
+          - listitem [ref=e280]:
+            - button "groups 사용자·권한 expand_more" [ref=e281]:
+              - generic [ref=e282]: groups
+              - generic [ref=e283]: 사용자·권한
+              - generic [ref=e284]: expand_more
+          - listitem [ref=e285]:
+            - button "dashboard 운영현황·대시보드 expand_more" [ref=e286]:
+              - generic [ref=e287]: dashboard
+              - generic [ref=e288]: 운영현황·대시보드
+              - generic [ref=e289]: expand_more
+          - listitem [ref=e290]:
+            - button "settings 시스템관리 expand_more" [ref=e291]:
+              - generic [ref=e292]: settings
+              - generic [ref=e293]: 시스템관리
+              - generic [ref=e294]: expand_more
+    - main [ref=e130]:
+      - generic [ref=e131]:
+        - generic [ref=e132]:
+          - heading "야적장 도면 LOC-010" [level=1] [ref=e134]
+          - generic [ref=e135]:
+            - generic [ref=e136]: "Node: SCR-LOC-010"
+            - generic [ref=e137]: "System Status: PROTOTYPE"
+          - paragraph [ref=e138]: Canvas LOD 렌더러 — zoom 레벨에 따라 구역→Zone→Lot 자동 전환. 드래그 Pan / 휠 Zoom. Lot 클릭 상세.
+        - generic [ref=e139]:
+          - textbox "위치ID / Lot / 자재 검색..." [ref=e140]
+          - button "📷 바코드 스캔" [ref=e141]
+          - generic [ref=e142]:
+            - button "−" [ref=e143]
+            - slider [ref=e144]: "60"
+            - button "+" [ref=e145]
+            - generic [ref=e146]: 60%
+            - button "초기화" [ref=e147]
+            - generic [ref=e148]: 📦 Zone 레벨
+        - generic [ref=e149]:
+          - generic [ref=e150]:
+            - generic: 줌인하면 Zone → Lot 상세 표시
+          - generic [ref=e152]:
+            - generic [ref=e153]:
+              - paragraph [ref=e154]: 범례
+              - generic [ref=e157]: EMPTY
+              - generic [ref=e160]: OCCUPIED
+              - generic [ref=e163]: FULL
+              - generic [ref=e166]: MAINTENANCE
+              - generic [ref=e169]: AGING
+            - generic [ref=e170]:
+              - paragraph [ref=e171]: OCCUPIED
+              - paragraph [ref=e295]: Y-P3000-A-1-03-03
+              - generic [ref=e296]:
+                - generic [ref=e297]:
+                  - text: 자재
+                  - paragraph [ref=e298]: M-COIL-A
+                - generic [ref=e299]:
+                  - text: Lot
+                  - paragraph [ref=e300]: LOT-20260507-051
+                - generic [ref=e301]:
+                  - text: 수량
+                  - paragraph [ref=e302]: 4,000 m
+            - link "[편집 모드 ▶]" [ref=e172] [cursor=pointer]:
+              - /url: /loc/yard-map/edit
+    - generic [ref=e174]: System Active | Port 8080 | Secure Link
+  - button "Open Next.js Dev Tools" [ref=e180] [cursor=pointer]:
+    - img [ref=e181]
+  - alert [ref=e184]

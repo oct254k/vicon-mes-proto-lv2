@@ -36,9 +36,9 @@ export default function PURReceiptPage() {
           <p className="text-xs font-label uppercase tracking-widest opacity-50 mb-1">PASS</p>
           <p className="text-2xl font-headline font-black text-primary-accent">{pass}</p>
         </div>
-        <div className="bg-surface-container-low p-4 border-l-4 border-[#f59e0b]">
+        <div className="bg-surface-container-low p-4 border-l-4 border-warning">
           <p className="text-xs font-label uppercase tracking-widest opacity-50 mb-1">PARTIAL</p>
-          <p className="text-2xl font-headline font-black text-[#f59e0b]">{partial}</p>
+          <p className="text-2xl font-headline font-black text-warning">{partial}</p>
         </div>
         <div className="bg-surface-container-low p-4 border-l-4 border-error">
           <p className="text-xs font-label uppercase tracking-widest opacity-50 mb-1">FAIL</p>
@@ -63,7 +63,7 @@ export default function PURReceiptPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="bg-surface-container border-b border-outline-variant/10">
+              <tr className="bg-surface-container border-b border-outline">
                 <th className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">ASN 번호</th>
                 <th className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">Material</th>
                 <th className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">수량</th>
@@ -74,7 +74,7 @@ export default function PURReceiptPage() {
             </thead>
             <tbody className="font-headline text-sm">
               {RECEIPT_DATA.map((row, i) => (
-                <tr key={i} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors">
+                <tr key={i} className="border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors">
                   <td className="px-4 py-2 font-mono text-xs">{row.asnNo}</td>
                   <td className="px-4 py-2">{row.material}</td>
                   <td className="px-4 py-2 tabular-nums">{row.qty}</td>

@@ -50,7 +50,7 @@ export default function QCRecallNotifyPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse text-sm">
             <thead>
-              <tr className="bg-surface-container border-b border-outline-variant/10">
+              <tr className="bg-surface-container border-b border-outline">
                 {["회수 ID","거래처","담당자","통보 방법","발송일시","회신 기한","회신 상태","액션"].map((h) => (
                   <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
                 ))}
@@ -58,7 +58,7 @@ export default function QCRecallNotifyPage() {
             </thead>
             <tbody className="font-headline">
               {NOTIFY_QUEUE.map((r, i) => (
-                <tr key={i} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20">
+                <tr key={i} className="border-b border-outline-variant hover:bg-surface-container-highest/20">
                   <td className="px-4 py-2 text-primary-accent tabular-nums">{r.recallId}</td>
                   <td className="px-4 py-2">{r.client}</td>
                   <td className="px-4 py-2 text-xs opacity-70">{r.contact}</td>

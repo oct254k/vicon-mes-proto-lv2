@@ -36,30 +36,30 @@ export default function CountReportPage() {
         description="실사 정합률·차이 Top N 보고서. 차이 건에 대한 자동 ADJUST 처리 결과 포함."
       />
 
-      <div className="bg-[#1a1a1a] border border-white/10 p-4 mb-6 text-xs font-label text-white/40">
+      <div className="bg-surface-elevated border border-outline/20 p-4 mb-6 text-xs font-label text-on-surface/40">
         <span className="uppercase tracking-widest">실사 ID: </span>
-        <span className="text-white">CNT-20260501</span>
+        <span className="text-on-surface">CNT-20260501</span>
         &ensp;|&ensp;
         <span className="uppercase tracking-widest">기간: </span>
-        <span className="text-white">2026-05-01</span>
+        <span className="text-on-surface">2026-05-01</span>
         &ensp;|&ensp;
         <span className="uppercase tracking-widest">대상: </span>
-        <span className="text-white">Y-RAW 전체</span>
+        <span className="text-on-surface">Y-RAW 전체</span>
       </div>
 
       <div className="grid grid-cols-4 gap-4 mb-8">
         {KPI.map((k, i) => (
-          <div key={k.label} className={`bg-[#1a1a1a] border-l-4 p-5 ${i === 3 ? "border-[#00912F]" : "border-white/20"}`}>
-            <p className="text-xs font-label uppercase tracking-widest text-white/40 mb-2">{k.label}</p>
-            <p className={`text-3xl font-black font-headline ${i === 3 ? "text-[#00912F]" : "text-white"}`}>{k.value}</p>
+          <div key={k.label} className={`bg-surface-elevated border-l-4 p-5 ${i === 3 ? "border-[#00912F]" : "border-outline/30"}`}>
+            <p className="text-xs font-label uppercase tracking-widest text-on-surface/40 mb-2">{k.label}</p>
+            <p className={`text-3xl font-black font-headline ${i === 3 ? "text-[#00912F]" : "text-on-surface"}`}>{k.value}</p>
           </div>
         ))}
       </div>
 
-      <div className="bg-[#1a1a1a] p-4 mb-6">
-        <p className="font-label text-xs uppercase tracking-widest text-white/40 mb-3">정합률 게이지</p>
+      <div className="bg-surface-elevated p-4 mb-6">
+        <p className="font-label text-xs uppercase tracking-widest text-on-surface/40 mb-3">정합률 게이지</p>
         <div className="flex items-center gap-4">
-          <div className="flex-1 h-4 bg-[#131313] border border-white/5">
+          <div className="flex-1 h-4 bg-surface border border-outline/10">
             <div className="h-full bg-[#00912F]" style={{ width: "99.2%" }} />
           </div>
           <span className="font-headline font-black text-[#00912F] tabular-nums">99.2%</span>
@@ -73,7 +73,7 @@ export default function CountReportPage() {
         <button className="bg-[#00912F] text-black font-label font-bold uppercase tracking-widest px-5 py-2 text-xs hover:opacity-90">
           [PDF 출력 ▶]
         </button>
-        <button className="bg-[#1a1a1a] border border-white/10 text-white/60 font-label uppercase tracking-widest px-5 py-2 text-xs hover:border-white/30">
+        <button className="bg-surface-elevated border border-outline/20 text-on-surface/60 font-label uppercase tracking-widest px-5 py-2 text-xs hover:border-outline/40">
           [엑셀 다운]
         </button>
       </div>

@@ -23,11 +23,11 @@ export default function DepartPage() {
         ))}
       </div>
       <FieldHeader title="적재 검증" moduleRef={`${SHP.loadedPkg}/${SHP.totalPkg} PKG`} />
-      <div className={`p-4 mb-6 border ${allLoaded?"bg-primary-accent/10 border-primary-accent/40":"bg-[#f59e0b]/10 border-[#f59e0b]/40"}`}>
+      <div className={`p-4 mb-6 border ${allLoaded?"bg-primary-accent/10 border-primary-accent/40":"bg-warning/10 border-warning/40"}`}>
         {allLoaded ? (
           <p className="text-sm font-label text-primary-accent">전체 {SHP.totalPkg}개 PKG 적재 완료 — 출발 가능</p>
         ) : (
-          <p className="text-sm font-label text-[#f59e0b]">⚠ {SHP.totalPkg-SHP.loadedPkg}개 PKG 미적재 — 출발 불가</p>
+          <p className="text-sm font-label text-warning">⚠ {SHP.totalPkg-SHP.loadedPkg}개 PKG 미적재 — 출발 불가</p>
         )}
       </div>
       {departed ? (

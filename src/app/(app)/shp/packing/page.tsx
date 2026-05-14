@@ -39,11 +39,11 @@ export default function SHPPackingPage() {
           onChange={(e) => setScanInput(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && handleScan()}
           placeholder="바코드 / QR 스캔 또는 입력"
-          className="w-full bg-surface-container text-white text-sm px-4 py-3 border border-outline-variant/20 outline-none mb-3 placeholder:opacity-40"
+          className="w-full bg-surface-container text-on-surface text-sm px-4 py-3 border border-outline-variant/20 outline-none mb-3 placeholder:opacity-40"
         />
         <button
           onClick={handleScan}
-          className="w-full bg-surface-container-high text-white py-4 text-sm font-label uppercase tracking-widest hover:bg-surface-container-highest transition-colors border border-outline-variant/20"
+          className="w-full bg-surface-container-high text-on-surface py-4 text-sm font-label uppercase tracking-widest hover:bg-surface-container-highest transition-colors border border-outline-variant/20"
         >
           스캔 추가
         </button>

@@ -1,0 +1,303 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "성지그룹 Logo" [ref=e5] [cursor=pointer]:
+          - /url: /ops/
+          - img "성지그룹 Logo" [ref=e6]
+        - generic [ref=e7]:
+          - link "대시보드" [ref=e8] [cursor=pointer]:
+            - /url: /ops/
+          - link "이력추적" [ref=e9] [cursor=pointer]:
+            - /url: /trace/
+          - link "알람" [ref=e10] [cursor=pointer]:
+            - /url: /alarm/
+      - generic [ref=e11]:
+        - button "account_tree" [active] [ref=e12] [cursor=pointer]
+        - button "book_2" [ref=e13] [cursor=pointer]
+        - generic [ref=e14] [cursor=pointer]: notifications
+        - generic [ref=e15] [cursor=pointer]: settings
+        - generic [ref=e17]: person
+      - generic [ref=e146]:
+        - generic [ref=e147]:
+          - generic [ref=e148]:
+            - generic [ref=e149]: account_tree
+            - generic [ref=e150]: MES 사이트맵
+          - button "닫기" [ref=e151]: close
+        - link "login 로그인" [ref=e153] [cursor=pointer]:
+          - /url: /login/
+          - generic [ref=e154]: login
+          - text: 로그인
+        - table [ref=e156]:
+          - rowgroup [ref=e157]:
+            - row "입고·재고 입고 등록 입고 목록 PDA 검수 위치별 재고 실사 계획 카운트시트 PDA 실사 보고서" [ref=e158]:
+              - cell "입고·재고" [ref=e159]
+              - cell "입고 등록" [ref=e160]:
+                - link "입고 등록" [ref=e161] [cursor=pointer]:
+                  - /url: /loc/receive/new/
+              - cell "입고 목록" [ref=e162]:
+                - link "입고 목록" [ref=e163] [cursor=pointer]:
+                  - /url: /loc/receive/list/
+              - cell "PDA 검수" [ref=e164]:
+                - link "PDA 검수" [ref=e165] [cursor=pointer]:
+                  - /url: /loc/receive/inspect/
+              - cell "위치별 재고" [ref=e166]:
+                - link "위치별 재고" [ref=e167] [cursor=pointer]:
+                  - /url: /loc/inventory/by-location/
+              - cell "실사 계획" [ref=e168]:
+                - link "실사 계획" [ref=e169] [cursor=pointer]:
+                  - /url: /loc/count/plan/
+              - cell "카운트시트 PDA" [ref=e170]:
+                - link "카운트시트 PDA" [ref=e171] [cursor=pointer]:
+                  - /url: /loc/count/sheet/
+              - cell "실사 보고서" [ref=e172]:
+                - link "실사 보고서" [ref=e173] [cursor=pointer]:
+                  - /url: /loc/count/report/
+            - row "작업지시 작업지시 목록 WO 발행 결과 패킹 그룹 라벨 발행 패킹리스트 PDF" [ref=e174]:
+              - cell "작업지시" [ref=e175]
+              - cell "작업지시 목록" [ref=e176]:
+                - link "작업지시 목록" [ref=e177] [cursor=pointer]:
+                  - /url: /wo/orders/
+              - cell "WO 발행 결과" [ref=e178]:
+                - link "WO 발행 결과" [ref=e179] [cursor=pointer]:
+                  - /url: /wo/orders/release/
+              - cell "패킹 그룹" [ref=e180]:
+                - link "패킹 그룹" [ref=e181] [cursor=pointer]:
+                  - /url: /wo/packing/groups/
+              - cell "라벨 발행" [ref=e182]:
+                - link "라벨 발행" [ref=e183] [cursor=pointer]:
+                  - /url: /wo/labels/print/
+              - cell "패킹리스트 PDF" [ref=e184]:
+                - link "패킹리스트 PDF" [ref=e185] [cursor=pointer]:
+                  - /url: /wo/documents/
+              - cell [ref=e186]
+              - cell [ref=e187]
+            - row "생산 오늘의 작업 자재 라벨 스캔 PDA 공정 진행 스캔 출고 스캔 역방향 추적" [ref=e188]:
+              - cell "생산" [ref=e189]
+              - cell "오늘의 작업" [ref=e190]:
+                - link "오늘의 작업" [ref=e191] [cursor=pointer]:
+                  - /url: /mfg/today/
+              - cell "자재 라벨 스캔 PDA" [ref=e192]:
+                - link "자재 라벨 스캔 PDA" [ref=e193] [cursor=pointer]:
+                  - /url: /mfg/issue/scan/
+              - cell "공정 진행 스캔" [ref=e194]:
+                - link "공정 진행 스캔" [ref=e195] [cursor=pointer]:
+                  - /url: /mfg/produce/
+              - cell "출고 스캔" [ref=e196]:
+                - link "출고 스캔" [ref=e197] [cursor=pointer]:
+                  - /url: /mfg/transfer/out/
+              - cell "역방향 추적" [ref=e198]:
+                - link "역방향 추적" [ref=e199] [cursor=pointer]:
+                  - /url: /mfg/recall/backward/
+              - cell [ref=e200]
+              - cell [ref=e201]
+            - row "품질 품질 KPI SPC 측정 입력 QC 결과 손실 환산 산출" [ref=e202]:
+              - cell "품질" [ref=e203]
+              - cell "품질 KPI" [ref=e204]:
+                - link "품질 KPI" [ref=e205] [cursor=pointer]:
+                  - /url: /qc/dashboard/main/
+              - cell "SPC 측정 입력" [ref=e206]:
+                - link "SPC 측정 입력" [ref=e207] [cursor=pointer]:
+                  - /url: /qc/spc/measure-pda/
+              - cell "QC 결과" [ref=e208]:
+                - link "QC 결과" [ref=e209] [cursor=pointer]:
+                  - /url: /qc/defect/inspect-queue/
+              - cell "손실 환산 산출" [ref=e210]:
+                - link "손실 환산 산출" [ref=e211] [cursor=pointer]:
+                  - /url: /qc/loss/calc/
+              - cell [ref=e212]
+              - cell [ref=e213]
+              - cell [ref=e214]
+            - row "출하 출하 일정 캘린더 패킹 현황 보드 패킹 리스트 RFID 모니터링" [ref=e215]:
+              - cell "출하" [ref=e216]
+              - cell "출하 일정 캘린더" [ref=e217]:
+                - link "출하 일정 캘린더" [ref=e218] [cursor=pointer]:
+                  - /url: /shp/schedule/
+              - cell "패킹 현황 보드" [ref=e219]:
+                - link "패킹 현황 보드" [ref=e220] [cursor=pointer]:
+                  - /url: /shp/stored/board/
+              - cell "패킹 리스트" [ref=e221]:
+                - link "패킹 리스트" [ref=e222] [cursor=pointer]:
+                  - /url: /shp/packing/board/
+              - cell "RFID 모니터링" [ref=e223]:
+                - link "RFID 모니터링" [ref=e224] [cursor=pointer]:
+                  - /url: /shp/gate/monitor/
+              - cell [ref=e225]
+              - cell [ref=e226]
+              - cell [ref=e227]
+            - row "위치재고 야적장 도면 도면 편집 점유현황 보드 공장 간 이동 재고 보정 스크랩 등록 불량 처리" [ref=e228]:
+              - cell "위치재고" [ref=e229]
+              - cell "야적장 도면" [ref=e230]:
+                - link "야적장 도면" [ref=e231] [cursor=pointer]:
+                  - /url: /loc/yard-map/view/
+              - cell "도면 편집" [ref=e232]:
+                - link "도면 편집" [ref=e233] [cursor=pointer]:
+                  - /url: /loc/yard-map/edit/
+              - cell "점유현황 보드" [ref=e234]:
+                - link "점유현황 보드" [ref=e235] [cursor=pointer]:
+                  - /url: /loc/yard-map/occupancy/
+              - cell "공장 간 이동" [ref=e236]:
+                - link "공장 간 이동" [ref=e237] [cursor=pointer]:
+                  - /url: /loc/transfer/out/
+              - cell "재고 보정" [ref=e238]:
+                - link "재고 보정" [ref=e239] [cursor=pointer]:
+                  - /url: /loc/adjust/new/
+              - cell "스크랩 등록" [ref=e240]:
+                - link "스크랩 등록" [ref=e241] [cursor=pointer]:
+                  - /url: /loc/scrap/new/
+              - cell "불량 처리" [ref=e242]:
+                - link "불량 처리" [ref=e243] [cursor=pointer]:
+                  - /url: /loc/scrap/defect/
+            - row "재고조회 위치별 재고 트랜잭션 이력 FIFO 추적 MOVE 이동" [ref=e244]:
+              - cell "재고조회" [ref=e245]
+              - cell "위치별 재고" [ref=e246]:
+                - link "위치별 재고" [ref=e247] [cursor=pointer]:
+                  - /url: /loc/inventory/by-location/
+              - cell "트랜잭션 이력" [ref=e248]:
+                - link "트랜잭션 이력" [ref=e249] [cursor=pointer]:
+                  - /url: /loc/inventory/history/
+              - cell "FIFO 추적" [ref=e250]:
+                - link "FIFO 추적" [ref=e251] [cursor=pointer]:
+                  - /url: /loc/inventory/trace/
+              - cell "MOVE 이동" [ref=e252]:
+                - link "MOVE 이동" [ref=e253] [cursor=pointer]:
+                  - /url: /loc/inventory/move/
+              - cell [ref=e254]
+              - cell [ref=e255]
+              - cell [ref=e256]
+            - row "운영현황 OPS 운영 현황 WC 상황판 WO 진척 보드 야적장 현황" [ref=e257]:
+              - cell "운영현황" [ref=e258]
+              - cell "OPS 운영 현황" [ref=e259]:
+                - link "OPS 운영 현황" [ref=e260] [cursor=pointer]:
+                  - /url: /ops/plant/
+              - cell "WC 상황판" [ref=e261]:
+                - link "WC 상황판" [ref=e262] [cursor=pointer]:
+                  - /url: /ops/line/board/
+              - cell "WO 진척 보드" [ref=e263]:
+                - link "WO 진척 보드" [ref=e264] [cursor=pointer]:
+                  - /url: /wo/dashboard/
+              - cell "야적장 현황" [ref=e265]:
+                - link "야적장 현황" [ref=e266] [cursor=pointer]:
+                  - /url: /loc/yard-map/occupancy/
+              - cell [ref=e267]
+              - cell [ref=e268]
+              - cell [ref=e269]
+    - complementary [ref=e18]:
+      - generic [ref=e20]:
+        - generic [ref=e21]: search
+        - textbox "메뉴 검색... (/)" [ref=e22]
+      - navigation [ref=e23]:
+        - list [ref=e24]:
+          - listitem [ref=e25]:
+            - button "inventory_2 기준정보 expand_more" [ref=e26]:
+              - generic [ref=e27]: inventory_2
+              - generic [ref=e28]: 기준정보
+              - generic [ref=e29]: expand_more
+          - listitem [ref=e30]:
+            - button "request_quote 수주·생산계획·MRP expand_more" [ref=e31]:
+              - generic [ref=e32]: request_quote
+              - generic [ref=e33]: 수주·생산계획·MRP
+              - generic [ref=e34]: expand_more
+          - listitem [ref=e35]:
+            - button "assignment 작업지시·부재·패킹 expand_more" [ref=e36]:
+              - generic [ref=e37]: assignment
+              - generic [ref=e38]: 작업지시·부재·패킹
+              - generic [ref=e39]: expand_more
+          - listitem [ref=e40]:
+            - button "precision_manufacturing 생산실행·추적성 expand_more" [ref=e41]:
+              - generic [ref=e42]: precision_manufacturing
+              - generic [ref=e43]: 생산실행·추적성
+              - generic [ref=e44]: expand_more
+          - listitem [ref=e45]:
+            - button "warehouse 위치·재고 expand_more" [ref=e46]:
+              - generic [ref=e47]: warehouse
+              - generic [ref=e48]: 위치·재고
+              - generic [ref=e49]: expand_more
+          - listitem [ref=e50]:
+            - button "verified 품질·SPC·불량 expand_more" [ref=e51]:
+              - generic [ref=e52]: verified
+              - generic [ref=e53]: 품질·SPC·불량
+              - generic [ref=e54]: expand_more
+          - listitem [ref=e55]:
+            - button "engineering 설비관리 expand_more" [ref=e56]:
+              - generic [ref=e57]: engineering
+              - generic [ref=e58]: 설비관리
+              - generic [ref=e59]: expand_more
+          - listitem [ref=e60]:
+            - button "shopping_cart 구매·발주 expand_more" [ref=e61]:
+              - generic [ref=e62]: shopping_cart
+              - generic [ref=e63]: 구매·발주
+              - generic [ref=e64]: expand_more
+          - listitem [ref=e65]:
+            - button "local_shipping 출하 expand_more" [ref=e66]:
+              - generic [ref=e67]: local_shipping
+              - generic [ref=e68]: 출하
+              - generic [ref=e69]: expand_more
+          - listitem [ref=e70]:
+            - button "groups 사용자·권한 expand_more" [ref=e71]:
+              - generic [ref=e72]: groups
+              - generic [ref=e73]: 사용자·권한
+              - generic [ref=e74]: expand_more
+          - listitem [ref=e75]:
+            - button "dashboard 운영현황·대시보드 expand_more" [ref=e76]:
+              - generic [ref=e77]: dashboard
+              - generic [ref=e78]: 운영현황·대시보드
+              - generic [ref=e79]: expand_more
+          - listitem [ref=e80]:
+            - button "settings 시스템관리 expand_more" [ref=e81]:
+              - generic [ref=e82]: settings
+              - generic [ref=e83]: 시스템관리
+              - generic [ref=e84]: expand_more
+    - main [ref=e85]:
+      - generic [ref=e86]:
+        - generic [ref=e87]:
+          - heading "운영현황·대시보드OPS" [level=1] [ref=e89]
+          - generic [ref=e91]: "System Status: PROTOTYPE"
+        - paragraph [ref=e93]: 라인 상황판·Plant 종합 현황·멀티사이트 뷰·주문·WO·생산·재고 진행률·알림센터까지 경영·운영 의사결정을 위한 실시간 대시보드를 제공합니다.
+        - heading "화면 인벤토리" [level=3] [ref=e95]
+        - generic [ref=e96]:
+          - generic [ref=e97]:
+            - paragraph [ref=e98]: LINE
+            - paragraph [ref=e99]: 라인 상황판
+          - generic [ref=e100]:
+            - paragraph [ref=e101]: PLANT
+            - paragraph [ref=e102]: Plant 종합 현황
+          - generic [ref=e103]:
+            - paragraph [ref=e104]: MULTISITE
+            - paragraph [ref=e105]: 멀티사이트 뷰
+          - generic [ref=e106]:
+            - paragraph [ref=e107]: ORDERS PROGRESS
+            - paragraph [ref=e108]: 수주 진행률
+          - generic [ref=e109]:
+            - paragraph [ref=e110]: WO PROGRESS
+            - paragraph [ref=e111]: WO 진행 현황
+          - generic [ref=e112]:
+            - paragraph [ref=e113]: PRODUCTION
+            - paragraph [ref=e114]: 생산 실적 요약
+          - generic [ref=e115]:
+            - paragraph [ref=e116]: INVENTORY
+            - paragraph [ref=e117]: 재고 현황 요약
+          - generic [ref=e118]:
+            - paragraph [ref=e119]: NOTIFICATIONS
+            - paragraph [ref=e120]: 알림 센터
+        - heading "주요 기능" [level=3] [ref=e122]
+        - list [ref=e123]:
+          - listitem [ref=e124]:
+            - generic [ref=e125]: —
+            - text: 라인별·공정별 실시간 가동 상태 상황판
+          - listitem [ref=e126]:
+            - generic [ref=e127]: —
+            - text: Plant 단위 KPI(생산량·품질률·OEE·납기달성률) 요약
+          - listitem [ref=e128]:
+            - generic [ref=e129]: —
+            - text: 멀티사이트 비교 뷰 및 드릴다운 분석
+          - listitem [ref=e130]:
+            - generic [ref=e131]: —
+            - text: 수주·WO·생산·재고 통합 진행률 시각화
+          - listitem [ref=e132]:
+            - generic [ref=e133]: —
+            - text: 긴급·경고 알림 집중 관리 및 담당자 에스컬레이션
+    - generic [ref=e135]: System Active | Port 8080 | Secure Link
+  - button "Open Next.js Dev Tools" [ref=e141] [cursor=pointer]:
+    - img [ref=e142]
+  - alert [ref=e270]

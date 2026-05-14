@@ -27,9 +27,9 @@ export default function QualificationsPage() {
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
         {STATS.map((s) => (
-          <div key={s.label} className={`bg-surface-container-low p-4 border-l-4 ${s.warn ? "border-[#f59e0b]" : "border-primary-accent"}`}>
+          <div key={s.label} className={`bg-surface-container-low p-4 border-l-4 ${s.warn ? "border-warning" : "border-primary-accent"}`}>
             <p className="text-xs opacity-50 font-label uppercase tracking-widest mb-1">{s.label}</p>
-            <p className={`font-headline font-bold text-2xl ${s.warn ? "text-[#f59e0b]" : ""}`}>{s.value}<span className="text-sm font-normal opacity-50 ml-1">{s.unit}</span></p>
+            <p className={`font-headline font-bold text-2xl ${s.warn ? "text-warning" : ""}`}>{s.value}<span className="text-sm font-normal opacity-50 ml-1">{s.unit}</span></p>
           </div>
         ))}
       </div>
@@ -45,7 +45,7 @@ export default function QualificationsPage() {
         ))}
       </div>
 
-      <div className="bg-surface-container-low border-l-4 border-[#f59e0b] p-4 flex items-center gap-3">
+      <div className="bg-surface-container-low border-l-4 border-warning p-4 flex items-center gap-3">
         <StatusBadge type="warning" label="EXPIRE SOON" />
         <span className="text-xs font-body text-on-surface/60">만료 임박 자격 5건 — 갱신 절차를 진행하십시오.</span>
         <a href="/usr/qualifications/expire" className="ml-auto text-xs text-primary-accent font-label uppercase tracking-widest underline">바로가기</a>

@@ -92,7 +92,7 @@ export default function QCRecallListPage() {
       <div className="bg-surface-container-lowest overflow-x-auto">
         <table className="w-full text-left border-collapse">
           <thead>
-            <tr className="bg-surface-container border-b border-outline-variant/10">
+            <tr className="bg-surface-container border-b border-outline">
               {columns.map(c => (
                 <th key={c} className="px-4 py-2 font-label text-xs uppercase tracking-widest opacity-50">{c}</th>
               ))}
@@ -102,7 +102,7 @@ export default function QCRecallListPage() {
             {filtered.map(r => {
               const b = stepStyle(r.step);
               return (
-                <tr key={r.id} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors cursor-pointer">
+                <tr key={r.id} className="border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors cursor-pointer">
                   <td className="px-4 py-2 text-primary-accent font-bold">{r.id}</td>
                   <td className="px-4 py-2">{r.defect}</td>
                   <td className="px-4 py-2 tabular-nums">{r.partCount}</td>

@@ -25,14 +25,14 @@ export default function EQPdaReplacePage() {
       <div className="overflow-x-auto mb-6">
         <table className="w-full text-sm font-headline border-collapse">
           <thead>
-            <tr className="bg-surface-container border-b border-outline-variant/10">
+            <tr className="bg-surface-container border-b border-outline">
               {["부품 번호","부품명","교체 전 S/N","교체 후 S/N","수량","비고"].map((h) => (
                 <th key={h} className="px-3 py-2 font-label text-xs uppercase tracking-widest opacity-50 text-left">{h}</th>
               ))}
             </tr>
           </thead>
           <tbody>
-            <tr className="border-b border-outline-variant/5">
+            <tr className="border-b border-outline-variant">
               <td className="px-3 py-2"><input defaultValue="BLD-5000-A" className="bg-surface-container border border-outline-variant/20 px-2 py-1 w-28 text-xs focus:outline-none focus:border-primary-accent" /></td>
               <td className="px-3 py-2"><input defaultValue="절단 칼날" className="bg-surface-container border border-outline-variant/20 px-2 py-1 w-24 text-xs focus:outline-none focus:border-primary-accent" /></td>
               <td className="px-3 py-2"><input defaultValue="SN-2021-0112" className="bg-surface-container border border-outline-variant/20 px-2 py-1 w-28 text-xs focus:outline-none focus:border-primary-accent" /></td>

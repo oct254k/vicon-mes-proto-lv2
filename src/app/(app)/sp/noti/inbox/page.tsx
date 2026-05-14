@@ -41,7 +41,7 @@ export default function NotiInboxPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse text-sm">
             <thead>
-              <tr className="bg-surface-container border-b border-outline-variant/10">
+              <tr className="bg-surface-container border-b border-outline">
                 {columns.map((h) => (
                   <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50">{h}</th>
                 ))}
@@ -49,7 +49,7 @@ export default function NotiInboxPage() {
             </thead>
             <tbody className="font-headline">
               {items.map((n) => (
-                <tr key={n.id} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20">
+                <tr key={n.id} className="border-b border-outline-variant hover:bg-surface-container-highest/20">
                   <td className="px-4 py-2 text-xs font-mono text-on-surface-variant">{n.type}</td>
                   <td className="px-4 py-2">{n.title}</td>
                   <td className="px-4 py-2 tabular-nums text-on-surface-variant">{n.ts}</td>

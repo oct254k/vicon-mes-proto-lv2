@@ -32,13 +32,13 @@ export default function CertMonitorPage() {
       />
       <FieldHeader title="만료 모니터링 대시보드" moduleRef="BD-CERT-MONITOR" />
       <div className="grid grid-cols-3 gap-3 mb-8">
-        <div className="bg-surface-container-lowest border border-[#f59e0b]/40 p-4">
-          <div className="text-xs font-label uppercase tracking-widest text-[#f59e0b] mb-1">D-7 이내</div>
-          <div className="text-2xl font-headline font-black text-[#f59e0b]">0</div>
+        <div className="bg-surface-container-lowest border border-warning/40 p-4">
+          <div className="text-xs font-label uppercase tracking-widest text-warning mb-1">D-7 이내</div>
+          <div className="text-2xl font-headline font-black text-warning">0</div>
         </div>
-        <div className="bg-surface-container-lowest border border-[#f59e0b]/20 p-4">
-          <div className="text-xs font-label uppercase tracking-widest text-[#f59e0b]/70 mb-1">D-30 이내</div>
-          <div className="text-2xl font-headline font-black text-[#f59e0b]/70">2</div>
+        <div className="bg-surface-container-lowest border border-warning/20 p-4">
+          <div className="text-xs font-label uppercase tracking-widest text-warning/70 mb-1">D-30 이내</div>
+          <div className="text-2xl font-headline font-black text-warning/70">2</div>
         </div>
         <div className="bg-surface-container-lowest border border-error/40 p-4">
           <div className="text-xs font-label uppercase tracking-widest text-error mb-1">만료</div>

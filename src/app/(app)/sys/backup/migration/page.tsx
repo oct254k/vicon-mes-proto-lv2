@@ -26,7 +26,7 @@ const ST_MAP: Record<string,"running"|"error"|"warning"> = { SUCCEEDED:"running"
 export default function BackupMigrationPage() {
   const data = MOCK.map(r => ({ ...r, status: <StatusBadge type={ST_MAP[r.statusK] ?? "idle"} label={r.statusK} /> as unknown as string }));
   return (
-    <div className="p-8 bg-[#131313] min-h-screen text-on-surface">
+    <div className="p-8 bg-surface min-h-screen text-on-surface">
       <PageHeader title="마이그레이션 작업" accent="MIGRATION" nodeRef="SCR-SYS-063b" status="PROTOTYPE"
         description="데이터 마이그레이션 마법사 — STG 검증 후 PROD 승격 (FNC-SYS-064·066)" />
       <div className="flex gap-3 mb-4">

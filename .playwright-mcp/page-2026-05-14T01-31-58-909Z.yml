@@ -1,0 +1,149 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "성지그룹 Logo" [ref=e5] [cursor=pointer]:
+          - /url: /ops/
+          - img "성지그룹 Logo" [ref=e6]
+        - generic [ref=e7]:
+          - link "대시보드" [ref=e8] [cursor=pointer]:
+            - /url: /ops/
+          - link "이력추적" [ref=e9] [cursor=pointer]:
+            - /url: /trace/
+          - link "알람" [ref=e10] [cursor=pointer]:
+            - /url: /alarm/
+      - generic [ref=e11]:
+        - button "account_tree" [ref=e12] [cursor=pointer]
+        - button "book_2" [ref=e13] [cursor=pointer]
+        - generic [ref=e14] [cursor=pointer]: notifications
+        - button "라이트 모드로 전환" [active] [ref=e157] [cursor=pointer]: light_mode
+        - generic [ref=e16] [cursor=pointer]: settings
+        - generic [ref=e18]: person
+    - complementary [ref=e19]:
+      - generic [ref=e21]:
+        - generic [ref=e22]: search
+        - textbox "메뉴 검색... (/)" [ref=e23]
+      - navigation [ref=e24]:
+        - list [ref=e25]:
+          - listitem [ref=e26]:
+            - button "inventory_2 기준정보 expand_more" [ref=e27]:
+              - generic [ref=e28]: inventory_2
+              - generic [ref=e29]: 기준정보
+              - generic [ref=e30]: expand_more
+          - listitem [ref=e31]:
+            - button "request_quote 수주·생산계획·MRP expand_more" [ref=e32]:
+              - generic [ref=e33]: request_quote
+              - generic [ref=e34]: 수주·생산계획·MRP
+              - generic [ref=e35]: expand_more
+          - listitem [ref=e36]:
+            - button "assignment 작업지시·부재·패킹 expand_more" [ref=e37]:
+              - generic [ref=e38]: assignment
+              - generic [ref=e39]: 작업지시·부재·패킹
+              - generic [ref=e40]: expand_more
+          - listitem [ref=e41]:
+            - button "precision_manufacturing 생산실행·추적성 expand_more" [ref=e42]:
+              - generic [ref=e43]: precision_manufacturing
+              - generic [ref=e44]: 생산실행·추적성
+              - generic [ref=e45]: expand_more
+          - listitem [ref=e46]:
+            - button "warehouse 위치·재고 expand_more" [ref=e47]:
+              - generic [ref=e48]: warehouse
+              - generic [ref=e49]: 위치·재고
+              - generic [ref=e50]: expand_more
+          - listitem [ref=e51]:
+            - button "verified 품질·SPC·불량 expand_more" [ref=e52]:
+              - generic [ref=e53]: verified
+              - generic [ref=e54]: 품질·SPC·불량
+              - generic [ref=e55]: expand_more
+          - listitem [ref=e56]:
+            - button "engineering 설비관리 expand_more" [ref=e57]:
+              - generic [ref=e58]: engineering
+              - generic [ref=e59]: 설비관리
+              - generic [ref=e60]: expand_more
+          - listitem [ref=e61]:
+            - button "shopping_cart 구매·발주 expand_more" [ref=e62]:
+              - generic [ref=e63]: shopping_cart
+              - generic [ref=e64]: 구매·발주
+              - generic [ref=e65]: expand_more
+          - listitem [ref=e66]:
+            - button "local_shipping 출하 expand_more" [ref=e67]:
+              - generic [ref=e68]: local_shipping
+              - generic [ref=e69]: 출하
+              - generic [ref=e70]: expand_more
+          - listitem [ref=e71]:
+            - button "groups 사용자·권한 expand_more" [ref=e72]:
+              - generic [ref=e73]: groups
+              - generic [ref=e74]: 사용자·권한
+              - generic [ref=e75]: expand_more
+          - listitem [ref=e76]:
+            - button "dashboard 운영현황·대시보드 expand_more" [ref=e77]:
+              - generic [ref=e78]: dashboard
+              - generic [ref=e79]: 운영현황·대시보드
+              - generic [ref=e80]: expand_more
+          - listitem [ref=e81]:
+            - button "settings 시스템관리 expand_more" [ref=e82]:
+              - generic [ref=e83]: settings
+              - generic [ref=e84]: 시스템관리
+              - generic [ref=e85]: expand_more
+    - main [ref=e86]:
+      - generic [ref=e87]:
+        - generic [ref=e88]:
+          - heading "운영현황·대시보드OPS" [level=1] [ref=e90]
+          - generic [ref=e92]: "System Status: PROTOTYPE"
+        - paragraph [ref=e94]: 라인 상황판·Plant 종합 현황·멀티사이트 뷰·주문·WO·생산·재고 진행률·알림센터까지 경영·운영 의사결정을 위한 실시간 대시보드를 제공합니다.
+        - heading "화면 인벤토리" [level=3] [ref=e96]
+        - generic [ref=e97]:
+          - generic [ref=e98]:
+            - paragraph [ref=e99]: LINE
+            - paragraph [ref=e100]: 라인 상황판
+          - generic [ref=e101]:
+            - paragraph [ref=e102]: PLANT
+            - paragraph [ref=e103]: Plant 종합 현황
+          - generic [ref=e104]:
+            - paragraph [ref=e105]: MULTISITE
+            - paragraph [ref=e106]: 멀티사이트 뷰
+          - generic [ref=e107]:
+            - paragraph [ref=e108]: ORDERS PROGRESS
+            - paragraph [ref=e109]: 수주 진행률
+          - generic [ref=e110]:
+            - paragraph [ref=e111]: WO PROGRESS
+            - paragraph [ref=e112]: WO 진행 현황
+          - generic [ref=e113]:
+            - paragraph [ref=e114]: PRODUCTION
+            - paragraph [ref=e115]: 생산 실적 요약
+          - generic [ref=e116]:
+            - paragraph [ref=e117]: INVENTORY
+            - paragraph [ref=e118]: 재고 현황 요약
+          - generic [ref=e119]:
+            - paragraph [ref=e120]: NOTIFICATIONS
+            - paragraph [ref=e121]: 알림 센터
+        - heading "주요 기능" [level=3] [ref=e123]
+        - list [ref=e124]:
+          - listitem [ref=e125]:
+            - generic [ref=e126]: —
+            - text: 라인별·공정별 실시간 가동 상태 상황판
+          - listitem [ref=e127]:
+            - generic [ref=e128]: —
+            - text: Plant 단위 KPI(생산량·품질률·OEE·납기달성률) 요약
+          - listitem [ref=e129]:
+            - generic [ref=e130]: —
+            - text: 멀티사이트 비교 뷰 및 드릴다운 분석
+          - listitem [ref=e131]:
+            - generic [ref=e132]: —
+            - text: 수주·WO·생산·재고 통합 진행률 시각화
+          - listitem [ref=e133]:
+            - generic [ref=e134]: —
+            - text: 긴급·경고 알림 집중 관리 및 담당자 에스컬레이션
+    - generic [ref=e136]: System Active | Port 8080 | Secure Link
+  - generic [ref=e141] [cursor=pointer]:
+    - button "Open Next.js Dev Tools" [ref=e142]:
+      - img [ref=e143]
+    - generic [ref=e147]:
+      - button "Open issues overlay" [ref=e148]:
+        - generic [ref=e149]:
+          - generic [ref=e150]: "0"
+          - generic [ref=e151]: "1"
+        - generic [ref=e152]: Issue
+      - button "Collapse issues badge" [ref=e153]:
+        - img [ref=e154]
+  - alert [ref=e156]

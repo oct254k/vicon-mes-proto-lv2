@@ -25,7 +25,7 @@ export default function SYSAuditPage() {
   );
 
   return (
-    <div className="p-8 bg-[#131313] min-h-screen text-on-surface">
+    <div className="p-8 bg-surface min-h-screen text-on-surface">
       <PageHeader title="감사" accent="·운영 로그" nodeRef="SCR-SYS-050" description="append-only 감사 로그 검색 및 다운로드 (최대 10만 행)" />
 
       <div className="flex flex-wrap gap-3 mb-6">
@@ -55,7 +55,7 @@ export default function SYSAuditPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="bg-surface-container border-b border-outline-variant/10">
+              <tr className="bg-surface-container border-b border-outline">
                 {["일시", "사용자", "이벤트", "도메인", "IP", "결과"].map(h => (
                   <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
                 ))}
@@ -63,7 +63,7 @@ export default function SYSAuditPage() {
             </thead>
             <tbody className="font-headline text-sm">
               {filtered.map((row, i) => (
-                <tr key={i} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors">
+                <tr key={i} className="border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors">
                   <td className="px-4 py-2 tabular-nums text-xs text-on-surface-variant">{row.ts}</td>
                   <td className="px-4 py-2">{row.user}</td>
                   <td className="px-4 py-2 text-xs font-label uppercase tracking-wider text-on-surface-variant">{row.event}</td>

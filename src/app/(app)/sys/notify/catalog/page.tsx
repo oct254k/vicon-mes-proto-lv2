@@ -12,7 +12,7 @@ const CATALOG = [
 
 export default function NotifyCatalogPage() {
   return (
-    <div className="p-8 bg-[#131313] min-h-screen text-on-surface">
+    <div className="p-8 bg-surface min-h-screen text-on-surface">
       <PageHeader title="알림 카탈로그" accent="CATALOG" nodeRef="SCR-SYS-040" status="PROTOTYPE"
         description="5채널 알림 마스터 — Vault 시크릿 마스킹 표시 (FNC-SYS-040·041)" />
       <FieldHeader title="채널 현황" moduleRef="FNC-SYS-040" />

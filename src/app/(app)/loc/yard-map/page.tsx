@@ -9,11 +9,11 @@ const YARDS = [
 ];
 
 const COLOR_MAP: Record<string, string> = {
-  EMPTY: "bg-[#2a2a2a] border border-white/5",
+  EMPTY: "bg-surface-container-high border border-outline/10",
   OCCUPIED: "bg-[#00912F]/30 border border-[#00912F]/40",
-  FULL: "bg-[#f59e0b]/30 border border-[#f59e0b]/40",
+  FULL: "bg-warning/30 border border-warning/40",
   AGING: "bg-[#f97316]/30 border border-[#f97316]/40",
-  MAINTENANCE: "bg-[#ef4444]/20 border border-[#ef4444]/30",
+  MAINTENANCE: "bg-danger/20 border border-danger/30",
 };
 
 function MiniMap({ yard }: { yard: typeof YARDS[0] }) {
@@ -48,19 +48,19 @@ export default function YardMapLandingPage() {
           const pct = Math.round(((y.full + y.occupied) / y.total) * 100);
           return (
             <a key={y.id} href={`/loc/yard-map/view?yard=${y.id}`}
-              className="bg-[#1a1a1a] border border-white/10 p-5 hover:border-[#00912F]/50 transition-colors block group">
+              className="bg-surface-elevated border border-outline/20 p-5 hover:border-[#00912F]/50 transition-colors block group">
               <div className="flex items-center justify-between mb-3">
                 <div>
                   <p className="font-label font-bold text-xs uppercase tracking-widest text-[#00912F]">{y.id}</p>
-                  <p className="text-white/60 text-sm">{y.label}</p>
+                  <p className="text-on-surface/60 text-sm">{y.label}</p>
                 </div>
-                <span className={`font-black text-2xl ${pct >= 90 ? "text-[#ef4444]" : pct >= 70 ? "text-[#f59e0b]" : "text-white"}`}>{pct}%</span>
+                <span className={`font-black text-2xl ${pct >= 90 ? "text-danger" : pct >= 70 ? "text-warning" : "text-on-surface"}`}>{pct}%</span>
               </div>
               <MiniMap yard={y} />
-              <div className="flex gap-3 mt-3 text-xs font-label text-white/40">
-                <span>FULL <span className="text-[#f59e0b]">{y.full}</span></span>
+              <div className="flex gap-3 mt-3 text-xs font-label text-on-surface/40">
+                <span>FULL <span className="text-warning">{y.full}</span></span>
                 <span>AGING <span className="text-[#f97316]">{y.aging}</span></span>
-                <span>MAINT <span className="text-[#ef4444]">{y.maint}</span></span>
+                <span>MAINT <span className="text-danger">{y.maint}</span></span>
               </div>
               <p className="text-xs text-[#00912F]/60 mt-3 group-hover:text-[#00912F] font-label uppercase tracking-widest">
                 격자 보기 ▶
@@ -71,10 +71,10 @@ export default function YardMapLandingPage() {
       </div>
 
       <div className="flex gap-2">
-        <a href="/loc/yard-map/edit" className="bg-[#1a1a1a] border border-white/10 text-white/60 font-label uppercase tracking-widest px-5 py-2 text-xs hover:border-[#00912F]/50 transition-colors">
+        <a href="/loc/yard-map/edit" className="bg-surface-elevated border border-outline/20 text-on-surface/60 font-label uppercase tracking-widest px-5 py-2 text-xs hover:border-[#00912F]/50 transition-colors">
           [편집 모드 ▶]
         </a>
-        <a href="/loc/yard-map/occupancy" className="bg-[#1a1a1a] border border-white/10 text-white/60 font-label uppercase tracking-widest px-5 py-2 text-xs hover:border-[#00912F]/50 transition-colors">
+        <a href="/loc/yard-map/occupancy" className="bg-surface-elevated border border-outline/20 text-on-surface/60 font-label uppercase tracking-widest px-5 py-2 text-xs hover:border-[#00912F]/50 transition-colors">
           [점유율 통계 ▶]
         </a>
       </div>

@@ -21,7 +21,7 @@ const STATUS_MAP: Record<PMStatus, { type: "running" | "idle" | "stopped"; label
 
 const SUMMARY = [
   { label: "전체",   count: PM_LIST.length,                                       color: "text-on-surface"    },
-  { label: "예정",   count: PM_LIST.filter((p) => p.status === "SCHEDULED").length,   color: "text-[#f59e0b]"  },
+  { label: "예정",   count: PM_LIST.filter((p) => p.status === "SCHEDULED").length,   color: "text-warning"  },
   { label: "진행 중", count: PM_LIST.filter((p) => p.status === "IN_PROGRESS").length, color: "text-primary-accent" },
   { label: "완료",   count: PM_LIST.filter((p) => p.status === "DONE").length,         color: "text-tertiary"   },
 ];
@@ -39,7 +39,7 @@ export default function EQPmPage() {
       {/* 요약 KPI */}
       <div className="grid grid-cols-4 gap-4 mb-6">
         {SUMMARY.map((s) => (
-          <div key={s.label} className="bg-surface-container-lowest border border-outline-variant/10 p-4 text-center">
+          <div key={s.label} className="bg-surface-container-lowest border border-outline p-4 text-center">
             <p className="text-xs font-label uppercase tracking-widest text-on-surface/40 mb-1">{s.label}</p>
             <p className={`font-headline font-black text-2xl tabular-nums ${s.color}`}>{s.count}</p>
           </div>
@@ -62,7 +62,7 @@ export default function EQPmPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="bg-surface-container border-b border-outline-variant/10">
+              <tr className="bg-surface-container border-b border-outline">
                 {["PM 번호", "설비", "PM 유형", "예정일", "담당자", "상태"].map((h) => (
                   <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
                 ))}
@@ -72,7 +72,7 @@ export default function EQPmPage() {
               {PM_LIST.map((pm, i) => {
                 const s = STATUS_MAP[pm.status];
                 return (
-                  <tr key={i} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors">
+                  <tr key={i} className="border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors">
                     <td className="px-4 py-2 text-xs tabular-nums text-primary-accent font-bold">{pm.no}</td>
                     <td className="px-4 py-2 text-xs">{pm.equip}</td>
                     <td className="px-4 py-2">

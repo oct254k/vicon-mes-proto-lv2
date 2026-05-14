@@ -48,7 +48,7 @@ export default function QCCertificateListPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse text-sm">
             <thead>
-              <tr className="bg-surface-container border-b border-outline-variant/10">
+              <tr className="bg-surface-container border-b border-outline">
                 {["성적서 ID","WO ID","부재코드","거래처","양식","발행일시","발행자","상태","액션"].map((h) => (
                   <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
                 ))}
@@ -56,7 +56,7 @@ export default function QCCertificateListPage() {
             </thead>
             <tbody className="font-headline">
               {CERTS.map((c, i) => (
-                <tr key={i} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors">
+                <tr key={i} className="border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors">
                   <td className="px-4 py-2 tabular-nums text-primary-accent">{c.id}</td>
                   <td className="px-4 py-2 tabular-nums text-xs">{c.woId}</td>
                   <td className="px-4 py-2 font-mono text-xs">{c.partCode}</td>
@@ -67,7 +67,7 @@ export default function QCCertificateListPage() {
                   <td className="px-4 py-2"><StatusBadge type={STAT[c.status].type} label={c.status} /></td>
                   <td className="px-4 py-2">
                     <button className="bg-surface-container-high border border-outline-variant/20 text-xs font-label uppercase px-2 py-1 hover:opacity-90 mr-1">PDF</button>
-                    {c.status !== "DRAFT" && <button className="bg-[#f59e0b]/20 text-[#f59e0b] text-xs font-label uppercase px-2 py-1 hover:opacity-90">재발행</button>}
+                    {c.status !== "DRAFT" && <button className="bg-warning/20 text-warning text-xs font-label uppercase px-2 py-1 hover:opacity-90">재발행</button>}
                     {c.status === "DRAFT" && <button className="bg-primary-accent text-black text-xs font-label uppercase px-2 py-1 hover:opacity-90">발행</button>}
                   </td>
                 </tr>

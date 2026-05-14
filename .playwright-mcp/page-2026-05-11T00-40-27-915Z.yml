@@ -1,0 +1,186 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "성지그룹 Logo" [ref=e5] [cursor=pointer]:
+          - /url: /ops/
+          - img "성지그룹 Logo" [ref=e6]
+        - generic [ref=e7]:
+          - link "대시보드" [ref=e8] [cursor=pointer]:
+            - /url: /ops/
+          - link "이력추적" [ref=e9] [cursor=pointer]:
+            - /url: /trace/
+          - link "알람" [ref=e10] [cursor=pointer]:
+            - /url: /alarm/
+      - generic [ref=e11]:
+        - button "book_2" [ref=e12] [cursor=pointer]
+        - generic [ref=e13] [cursor=pointer]: notifications
+        - generic [ref=e14] [cursor=pointer]: settings
+        - generic [ref=e16]: person
+    - complementary [ref=e17]:
+      - generic [ref=e19]:
+        - generic [ref=e20]: search
+        - textbox "메뉴 검색... (/)" [ref=e21]
+      - navigation [ref=e22]:
+        - list [ref=e23]:
+          - listitem [ref=e24]:
+            - button "inventory_2 기준정보 expand_more" [ref=e25]:
+              - generic [ref=e26]: inventory_2
+              - generic [ref=e27]: 기준정보
+              - generic [ref=e28]: expand_more
+          - listitem [ref=e29]:
+            - button "request_quote 수주·생산계획·MRP expand_more" [ref=e30]:
+              - generic [ref=e31]: request_quote
+              - generic [ref=e32]: 수주·생산계획·MRP
+              - generic [ref=e33]: expand_more
+          - listitem [ref=e34]:
+            - button "assignment 작업지시·부재·패킹 expand_more" [ref=e35]:
+              - generic [ref=e36]: assignment
+              - generic [ref=e37]: 작업지시·부재·패킹
+              - generic [ref=e38]: expand_more
+            - list [ref=e39]:
+              - listitem [ref=e40]:
+                - button "작업지시 발행·조회 expand_more" [ref=e41]:
+                  - generic [ref=e42]: 작업지시 발행·조회
+                  - generic [ref=e43]: expand_more
+              - listitem [ref=e44]:
+                - button "부재(Member) 코드·도면 expand_more" [ref=e45]:
+                  - generic [ref=e46]: 부재(Member) 코드·도면
+                  - generic [ref=e47]: expand_more
+              - listitem [ref=e48]:
+                - button "패킹 그룹·라이프사이클 expand_more" [ref=e49]:
+                  - generic [ref=e50]: 패킹 그룹·라이프사이클
+                  - generic [ref=e51]: expand_more
+                - list [ref=e52]:
+                  - listitem [ref=e53]:
+                    - link "— 패킹 그룹 사전 정의" [ref=e54] [cursor=pointer]:
+                      - /url: /wo/packing/groups/
+                      - generic [ref=e55]: —
+                      - generic [ref=e56]: 패킹 그룹 사전 정의
+                  - listitem [ref=e57]:
+                    - link "— 8단계 보드 (CREATED~SHIPPED)" [ref=e58] [cursor=pointer]:
+                      - /url: /wo/packing/lifecycle/
+                      - generic [ref=e59]: —
+                      - generic [ref=e60]: 8단계 보드 (CREATED~SHIPPED)
+                  - listitem [ref=e61]:
+                    - link "— 보류·해제·AGING 모니터" [ref=e62] [cursor=pointer]:
+                      - /url: /wo/packing/hold/
+                      - generic [ref=e63]: —
+                      - generic [ref=e64]: 보류·해제·AGING 모니터
+              - listitem [ref=e65]:
+                - button "라벨 발행·재인쇄·이력 expand_more" [ref=e66]:
+                  - generic [ref=e67]: 라벨 발행·재인쇄·이력
+                  - generic [ref=e68]: expand_more
+              - listitem [ref=e69]:
+                - button "작업지시서·패킹리스트 PDF expand_more" [ref=e70]:
+                  - generic [ref=e71]: 작업지시서·패킹리스트 PDF
+                  - generic [ref=e72]: expand_more
+              - listitem [ref=e73]:
+                - link "WO·패킹 진척 보드" [ref=e74] [cursor=pointer]:
+                  - /url: /wo/dashboard/
+                  - generic [ref=e75]: WO·패킹 진척 보드
+          - listitem [ref=e76]:
+            - button "precision_manufacturing 생산실행·추적성 expand_more" [ref=e77]:
+              - generic [ref=e78]: precision_manufacturing
+              - generic [ref=e79]: 생산실행·추적성
+              - generic [ref=e80]: expand_more
+          - listitem [ref=e81]:
+            - button "warehouse 위치·재고 expand_more" [ref=e82]:
+              - generic [ref=e83]: warehouse
+              - generic [ref=e84]: 위치·재고
+              - generic [ref=e85]: expand_more
+          - listitem [ref=e86]:
+            - button "verified 품질·SPC·불량 expand_more" [ref=e87]:
+              - generic [ref=e88]: verified
+              - generic [ref=e89]: 품질·SPC·불량
+              - generic [ref=e90]: expand_more
+          - listitem [ref=e91]:
+            - button "engineering 설비관리 expand_more" [ref=e92]:
+              - generic [ref=e93]: engineering
+              - generic [ref=e94]: 설비관리
+              - generic [ref=e95]: expand_more
+          - listitem [ref=e96]:
+            - button "shopping_cart 구매·발주 expand_more" [ref=e97]:
+              - generic [ref=e98]: shopping_cart
+              - generic [ref=e99]: 구매·발주
+              - generic [ref=e100]: expand_more
+          - listitem [ref=e101]:
+            - button "local_shipping 출하 expand_more" [ref=e102]:
+              - generic [ref=e103]: local_shipping
+              - generic [ref=e104]: 출하
+              - generic [ref=e105]: expand_more
+          - listitem [ref=e106]:
+            - button "groups 사용자·권한 expand_more" [ref=e107]:
+              - generic [ref=e108]: groups
+              - generic [ref=e109]: 사용자·권한
+              - generic [ref=e110]: expand_more
+          - listitem [ref=e111]:
+            - button "dashboard 운영현황·대시보드 expand_more" [ref=e112]:
+              - generic [ref=e113]: dashboard
+              - generic [ref=e114]: 운영현황·대시보드
+              - generic [ref=e115]: expand_more
+          - listitem [ref=e116]:
+            - button "settings 시스템관리 expand_more" [ref=e117]:
+              - generic [ref=e118]: settings
+              - generic [ref=e119]: 시스템관리
+              - generic [ref=e120]: expand_more
+    - main [ref=e121]:
+      - main [ref=e122]:
+        - generic [ref=e123]:
+          - heading "패킹 라이프사이클 8단계 보드" [level=1] [ref=e125]
+          - generic [ref=e126]:
+            - generic [ref=e127]: "Node: SCR-WO-021"
+            - generic [ref=e128]: "System Status: CALIBRATED"
+          - paragraph [ref=e129]: PRC-WO-003 §7 — CREATED → IN_PRODUCTION → COMPLETED → STORED → READY → HOLD → LOADED → SHIPPED
+        - generic [ref=e130]:
+          - button "CREATED 1" [ref=e131]:
+            - text: CREATED
+            - generic [ref=e132]: "1"
+          - button "IN_PRODUCTION 2" [ref=e133]:
+            - text: IN_PRODUCTION
+            - generic [ref=e134]: "2"
+          - button "COMPLETED 1" [ref=e135]:
+            - text: COMPLETED
+            - generic [ref=e136]: "1"
+          - button "STORED 2" [ref=e137]:
+            - text: STORED
+            - generic [ref=e138]: "2"
+          - button "READY 1" [ref=e139]:
+            - text: READY
+            - generic [ref=e140]: "1"
+          - button "HOLD 1" [ref=e141]:
+            - text: HOLD
+            - generic [ref=e142]: "1"
+          - button "LOADED 1" [ref=e143]:
+            - text: LOADED
+            - generic [ref=e144]: "1"
+          - button "SHIPPED 0" [ref=e145]:
+            - text: SHIPPED
+            - generic [ref=e146]: "0"
+        - generic [ref=e147]:
+          - generic [ref=e148]: IN_PRODUCTION
+          - generic [ref=e149]: 2건
+        - generic [ref=e150]:
+          - generic [ref=e152]: IN_PRODUCTION 패킹 그룹
+          - table [ref=e153]:
+            - rowgroup [ref=e154]:
+              - row "패킹 ID WO번호 부재 코드 업데이트" [ref=e155]:
+                - columnheader "패킹 ID" [ref=e156]
+                - columnheader "WO번호" [ref=e157]
+                - columnheader "부재 코드" [ref=e158]
+                - columnheader "업데이트" [ref=e159]
+            - rowgroup [ref=e160]:
+              - row "PKG-WO-P3000-20260506-0007-001 WO-P3000-20260506-0007 B01-1-G22C-C-171 2026-05-06 11:30" [ref=e161] [cursor=pointer]:
+                - cell "PKG-WO-P3000-20260506-0007-001" [ref=e162]
+                - cell "WO-P3000-20260506-0007" [ref=e163]
+                - cell "B01-1-G22C-C-171" [ref=e164]
+                - cell "2026-05-06 11:30" [ref=e165]
+              - row "PKG-WO-P3000-20260506-0008-001 WO-P3000-20260506-0008 B01-1-G22C-S-172 2026-05-06 12:00" [ref=e166] [cursor=pointer]:
+                - cell "PKG-WO-P3000-20260506-0008-001" [ref=e167]
+                - cell "WO-P3000-20260506-0008" [ref=e168]
+                - cell "B01-1-G22C-S-172" [ref=e169]
+                - cell "2026-05-06 12:00" [ref=e170]
+    - generic [ref=e172]: System Active | Port 8080 | Secure Link
+  - button "Open Next.js Dev Tools" [ref=e178] [cursor=pointer]:
+    - img [ref=e179]
+  - alert [ref=e182]

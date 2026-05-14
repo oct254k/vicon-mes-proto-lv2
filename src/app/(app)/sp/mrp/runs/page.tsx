@@ -45,7 +45,7 @@ export default function MrpRunsPage() {
         </div>
         <table className="w-full text-left border-collapse">
           <thead>
-            <tr className="bg-surface-container border-b border-outline-variant/10">
+            <tr className="bg-surface-container border-b border-outline">
               {["Run ID", "트리거", "Plant", "시작일시", "소요시간", "PR 후보", "결과"].map((h) => (
                 <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
               ))}
@@ -55,7 +55,7 @@ export default function MrpRunsPage() {
             {RUNS.map((r) => {
               const s = STATUS_MAP[r.status];
               return (
-                <tr key={r.runId} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors cursor-pointer">
+                <tr key={r.runId} className="border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors cursor-pointer">
                   <td className="px-4 py-2 font-mono text-xs text-primary-accent">{r.runId}</td>
                   <td className="px-4 py-2 text-xs">{r.trigger}</td>
                   <td className="px-4 py-2 text-xs opacity-70">{r.plant}</td>

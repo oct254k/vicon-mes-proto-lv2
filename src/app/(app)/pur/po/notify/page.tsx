@@ -33,19 +33,19 @@ export default function PONotifyPage() {
       <FieldHeader title="통보 이력" moduleRef={`${rows.length}건`} />
       <div className="bg-surface-container-lowest overflow-x-auto">
         <table className="w-full text-left border-collapse">
-          <thead><tr className="bg-surface-container border-b border-outline-variant/10">
+          <thead><tr className="bg-surface-container border-b border-outline">
             {["PO 번호","공급사","채널","상태","발송 시각","재시도"].map(h=>(
               <th key={h} className="px-4 py-2 font-label text-xs uppercase tracking-widest opacity-50">{h}</th>
             ))}</tr></thead>
           <tbody className="font-headline text-sm">
             {rows.map((r,i)=>(
-              <tr key={i} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20">
+              <tr key={i} className="border-b border-outline-variant hover:bg-surface-container-highest/20">
                 <td className="px-4 py-2 text-primary-accent font-mono text-xs">{r.po}</td>
                 <td className="px-4 py-2">{r.supplier}</td>
                 <td className="px-4 py-2"><span className="px-2 py-0.5 bg-surface-container text-xs font-label uppercase">{r.ch}</span></td>
                 <td className="px-4 py-2"><StatusBadge type={SM[r.status]} label={r.status} /></td>
                 <td className="px-4 py-2 tabular-nums text-xs opacity-70">{r.sentAt}</td>
-                <td className="px-4 py-2 tabular-nums text-xs">{r.retry > 0 ? <span className="text-[#f59e0b]">{r.retry}회</span> : "—"}</td>
+                <td className="px-4 py-2 tabular-nums text-xs">{r.retry > 0 ? <span className="text-warning">{r.retry}회</span> : "—"}</td>
               </tr>
             ))}
           </tbody>

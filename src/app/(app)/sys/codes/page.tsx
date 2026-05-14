@@ -40,7 +40,7 @@ export default function SYSCodesPage() {
   const [tab, setTab] = useState<Tab>("기준정보");
 
   return (
-    <div className="p-8 bg-[#131313] min-h-screen text-on-surface">
+    <div className="p-8 bg-surface min-h-screen text-on-surface">
       <PageHeader title="시스템 코드" accent="마스터" nodeRef="SCR-SYS-030" description="4 DB 카테고리별 공통 코드 관리 (시스템 예약 코드 보호)" />
 
       <div className="flex gap-0 mb-6">
@@ -65,7 +65,7 @@ export default function SYSCodesPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="bg-surface-container border-b border-outline-variant/10">
+              <tr className="bg-surface-container border-b border-outline">
                 {["코드 그룹", "코드 값", "코드 명", "정렬", "활성"].map(h => (
                   <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
                 ))}
@@ -75,7 +75,7 @@ export default function SYSCodesPage() {
               {CODE_DATA[tab].map((row, i) => {
                 const isReserved = RESERVED.includes(row.group);
                 return (
-                  <tr key={i} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors">
+                  <tr key={i} className="border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors">
                     <td className="px-4 py-2 flex items-center gap-2">
                       <span className="font-label text-xs text-[#00912F]">{row.group}</span>
                       {isReserved && <span className="text-[10px] text-on-surface-variant opacity-50 material-symbols-outlined" style={{ fontSize: 12 }}>lock</span>}

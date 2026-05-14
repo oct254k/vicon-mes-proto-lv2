@@ -16,7 +16,7 @@ const TREE = [
 
 export default function MenuTreePage() {
   return (
-    <div className="p-8 bg-[#131313] min-h-screen text-on-surface">
+    <div className="p-8 bg-surface min-h-screen text-on-surface">
       <PageHeader title="메뉴 트리 편집" accent="TREE" nodeRef="SCR-SYS-020" status="PROTOTYPE"
         description="3단계 계층 트리 구조, 신규 메뉴 자동 비노출, 단말 PC/MOBILE/BOTH 분기 (FNC-SYS-020·022·025)" />
       <div className="flex gap-2 mb-4">
@@ -30,7 +30,7 @@ export default function MenuTreePage() {
         </div>
         <table className="w-full text-left border-collapse">
           <thead>
-            <tr className="bg-surface-container border-b border-outline-variant/10">
+            <tr className="bg-surface-container border-b border-outline">
               {["메뉴 ID","레이블","LV","단말","노출","순서"].map(h => (
                 <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
               ))}
@@ -38,7 +38,7 @@ export default function MenuTreePage() {
           </thead>
           <tbody className="font-headline text-sm">
             {TREE.map(row => (
-              <tr key={row.id} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors">
+              <tr key={row.id} className="border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors">
                 <td className="px-4 py-2 text-xs font-label text-[#00912F]">{row.id}</td>
                 <td className="px-4 py-2" style={{ paddingLeft: `${(row.lv - 1) * 24 + 16}px` }}>{row.label}</td>
                 <td className="px-4 py-2 text-xs text-on-surface-variant">L{row.lv}</td>

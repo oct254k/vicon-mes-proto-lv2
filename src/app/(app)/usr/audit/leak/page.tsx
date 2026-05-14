@@ -32,13 +32,13 @@ export default function AuditLeakPage() {
     <div>
       <PageHeader title="권한 누수 정합성 보드" nodeRef="SCR-USR-081" status="PROTOTYPE" description="일 1회 배치 기반 권한-세션 정합성 검사 결과. AUDITOR·ADMIN read-only." />
 
-      <div className="bg-surface-container-low border-l-4 border-[#f59e0b] p-4 mb-4">
+      <div className="bg-surface-container-low border-l-4 border-warning p-4 mb-4">
         <FieldHeader title="A. 배치 실행 요약" moduleRef="FNC-USR-101/102" />
         <div className="flex flex-wrap gap-6">
           {SUMMARY.map((s) => (
             <div key={s.label}>
               <p className="text-xs opacity-50 font-label uppercase tracking-widest mb-1">{s.label}</p>
-              <p className={`font-bold text-lg ${s.warn ? "text-[#f59e0b]" : ""}`}>{s.value}</p>
+              <p className={`font-bold text-lg ${s.warn ? "text-warning" : ""}`}>{s.value}</p>
             </div>
           ))}
         </div>

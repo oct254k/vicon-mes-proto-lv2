@@ -27,7 +27,7 @@ export default function USRTokensPage() {
       </div>
 
       <FieldHeader title="토큰 목록" moduleRef="SCR-USR-080" />
-      <section className="bg-[#1a1a1a] mt-4">
+      <section className="bg-surface-elevated mt-4">
         <div className="p-4 bg-white/5 flex justify-between items-center border-l-4 border-[#00912F]">
           <h3 className="font-headline font-black text-sm uppercase tracking-widest">
             API 토큰{" "}
@@ -38,30 +38,30 @@ export default function USRTokensPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="border-b border-white/5">
-                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-white/40">토큰 ID</th>
-                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-white/40">사용자명</th>
-                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-white/40">Scope</th>
-                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-white/40">발급일</th>
-                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-white/40">만료일</th>
-                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-white/40">상태</th>
-                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-white/40">액션</th>
+              <tr className="border-b border-outline/10">
+                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-on-surface/40">토큰 ID</th>
+                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-on-surface/40">사용자명</th>
+                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-on-surface/40">Scope</th>
+                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-on-surface/40">발급일</th>
+                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-on-surface/40">만료일</th>
+                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-on-surface/40">상태</th>
+                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-on-surface/40">액션</th>
               </tr>
             </thead>
             <tbody className="font-headline text-sm">
               {tokenData.map((row, i) => (
-                <tr key={i} className="border-b border-white/5 hover:bg-white/5 transition-colors">
+                <tr key={i} className="border-b border-outline/10 hover:bg-white/5 transition-colors">
                   <td className="px-4 py-3 text-[#00912F]">{row.id}</td>
-                  <td className="px-4 py-3 text-white/80">{row.user}</td>
-                  <td className="px-4 py-3 text-white/50 text-xs font-mono">{row.scope}</td>
-                  <td className="px-4 py-3 tabular-nums text-white/60">{row.issued}</td>
-                  <td className="px-4 py-3 tabular-nums text-white/60">{row.expires}</td>
+                  <td className="px-4 py-3 text-on-surface/80">{row.user}</td>
+                  <td className="px-4 py-3 text-on-surface/50 text-xs font-mono">{row.scope}</td>
+                  <td className="px-4 py-3 tabular-nums text-on-surface/60">{row.issued}</td>
+                  <td className="px-4 py-3 tabular-nums text-on-surface/60">{row.expires}</td>
                   <td className="px-4 py-3">
                     <StatusBadge type={row.status} label={row.statusLabel} />
                   </td>
                   <td className="px-4 py-3">
                     {row.status === "running" && (
-                      <button className="border border-[#ef4444]/40 text-[#ef4444]/70 font-label uppercase tracking-widest text-xs px-3 py-1 hover:border-[#ef4444] hover:text-[#ef4444] transition-colors">
+                      <button className="border border-danger/40 text-danger/70 font-label uppercase tracking-widest text-xs px-3 py-1 hover:border-danger hover:text-danger transition-colors">
                         무효화
                       </button>
                     )}

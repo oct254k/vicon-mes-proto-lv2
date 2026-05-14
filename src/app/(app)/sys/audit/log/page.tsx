@@ -27,7 +27,7 @@ const R_MAP: Record<string,"running"|"error"|"warning"> = { SUCCESS:"running", A
 export default function AuditLogPage() {
   const data = MOCK.map(r => ({ ...r, result: <StatusBadge type={R_MAP[r.resultK] ?? "warning"} label={r.resultK} /> as unknown as string }));
   return (
-    <div className="p-8 bg-[#131313] min-h-screen text-on-surface">
+    <div className="p-8 bg-surface min-h-screen text-on-surface">
       <PageHeader title="운영 로그" accent="AUDIT LOG" nodeRef="SCR-SYS-050" status="PROTOTYPE"
         description="append-only 감사 로그 — UPDATE/DELETE 시도 BLOCKED 표시 (FNC-SYS-050·052·055)" />
       <div className="flex gap-2 mb-4 flex-wrap">

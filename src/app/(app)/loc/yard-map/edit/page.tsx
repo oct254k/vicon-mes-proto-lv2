@@ -83,10 +83,10 @@ interface Cell {
 }
 
 const CELL_STYLE: Record<SlotStatus,string> = {
-  "가용":   "bg-[#1a1a1a] border-2 border-dashed border-white/10 text-white/20",
+  "가용":   "bg-surface-elevated border-2 border-dashed border-outline/20 text-on-surface/20",
   "점유":   "bg-[#00912F]/20 border-2 border-[#00912F]/50 text-[#00912F]",
-  "정비":   "bg-[#ef4444]/20 border-2 border-[#ef4444]/30 text-[#ef4444]",
-  "비활성": "bg-[#131313] border-2 border-white/5 text-white/10 opacity-40",
+  "정비":   "bg-danger/20 border-2 border-danger/30 text-danger",
+  "비활성": "bg-surface border-2 border-outline/10 text-on-surface/10 opacity-40",
 };
 
 // 탭2 Zone 목록 (view/page.tsx의 SECTORS_INIT과 동일 구조)
@@ -121,8 +121,8 @@ function mkCells(zoneId:string, cols:number, rows:number): Cell[] {
   });
 }
 
-const inputCls="w-full bg-[#1a1a1a] border border-white/10 px-3 py-2 text-xs text-white focus:outline-none focus:border-[#00912F]";
-const labelCls="block text-[10px] font-label uppercase tracking-widest text-white/40 mb-1.5";
+const inputCls="w-full bg-surface-elevated border border-outline/20 px-3 py-2 text-xs text-on-surface focus:outline-none focus:border-[#00912F]";
+const labelCls="block text-[10px] font-label uppercase tracking-widest text-on-surface/40 mb-1.5";
 const STATUS_OPTIONS: SlotStatus[] = ["가용","점유","정비","비활성"];
 
 // ── 메인 컴포넌트 ──────────────────────────────────────
@@ -275,10 +275,10 @@ export default function YardMapEditPage() {
       />
 
       {/* 탭 헤더 */}
-      <div className="flex gap-0 mb-6 border-b border-white/10">
+      <div className="flex gap-0 mb-6 border-b border-outline/20">
         {[["탭 1: 벡터 도면 데이터",0],["탭 2: Zone·Lot 배치",1]].map(([lbl,idx])=>(
           <button key={idx} onClick={()=>setTab(idx as 0|1)}
-            className={`px-6 py-3 text-xs font-label uppercase tracking-widest transition-colors border-b-2 ${tab===idx?"border-[#00912F] text-[#00912F]":"border-transparent text-white/30 hover:text-white/50"}`}>
+            className={`px-6 py-3 text-xs font-label uppercase tracking-widest transition-colors border-b-2 ${tab===idx?"border-[#00912F] text-[#00912F]":"border-transparent text-on-surface/30 hover:text-on-surface/50"}`}>
             {lbl}
           </button>
         ))}
@@ -292,33 +292,33 @@ export default function YardMapEditPage() {
               <FieldHeader title="A. 부지 외곽 (BOUNDARY)" moduleRef="FNC-LOC-020"/>
               <label className={labelCls}>pts — JSON 배열 [[x,y],...]</label>
               <textarea value={boundaryText} onChange={e=>{setBoundaryText(e.target.value);setSaved1(false);}} rows={4}
-                className="w-full bg-[#131313] border border-white/10 px-3 py-2 text-[10px] text-white/80 font-mono focus:outline-none focus:border-[#00912F] resize-none"/>
-              <p className="text-[9px] font-label text-white/25 mt-1">최소 3점, 닫힌 폴리곤 권장</p>
+                className="w-full bg-surface border border-outline/20 px-3 py-2 text-[10px] text-on-surface/80 font-mono focus:outline-none focus:border-[#00912F] resize-none"/>
+              <p className="text-[9px] font-label text-on-surface/25 mt-1">최소 3점, 닫힌 폴리곤 권장</p>
             </div>
             <div>
               <FieldHeader title="B. 건물·구조물 (BUILDINGS)" moduleRef="FNC-LOC-020"/>
               <div className="space-y-2">
                 {buildings.map((b,i)=>(
-                  <div key={i} className="bg-[#131313] border border-white/10 p-3 text-[10px]">
+                  <div key={i} className="bg-surface border border-outline/20 p-3 text-[10px]">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="font-label text-white/40 uppercase tracking-widest">{(b as any).label||`건물 ${i+1}`}</span>
-                      <button onClick={()=>removeBuilding(i)} className="text-[#ef4444]/60 hover:text-[#ef4444] font-label text-[10px]">삭제</button>
+                      <span className="font-label text-on-surface/40 uppercase tracking-widest">{(b as any).label||`건물 ${i+1}`}</span>
+                      <button onClick={()=>removeBuilding(i)} className="text-danger/60 hover:text-danger font-label text-[10px]">삭제</button>
                     </div>
                     <div className="grid grid-cols-2 gap-1.5">
                       <div>
                         <label className={labelCls}>라벨</label>
-                        <input value={(b as any).label} onChange={e=>{const nb=[...buildings];(nb[i] as any).label=e.target.value;setBuildings(nb);setSaved1(false);}} className="bg-[#1a1a1a] border border-white/10 px-2 py-1 text-[10px] text-white w-full focus:outline-none"/>
+                        <input value={(b as any).label} onChange={e=>{const nb=[...buildings];(nb[i] as any).label=e.target.value;setBuildings(nb);setSaved1(false);}} className="bg-surface-elevated border border-outline/20 px-2 py-1 text-[10px] text-on-surface w-full focus:outline-none"/>
                       </div>
                       <div>
                         <label className={labelCls}>type</label>
-                        <select value={b.type} onChange={e=>{const nb=[...buildings];nb[i]={...nb[i],type:e.target.value};setBuildings(nb);setSaved1(false);}} className="bg-[#1a1a1a] border border-white/10 px-2 py-1 text-[10px] text-white w-full focus:outline-none">
+                        <select value={b.type} onChange={e=>{const nb=[...buildings];nb[i]={...nb[i],type:e.target.value};setBuildings(nb);setSaved1(false);}} className="bg-surface-elevated border border-outline/20 px-2 py-1 text-[10px] text-on-surface w-full focus:outline-none">
                           {["poly","rect","circle"].map(t=><option key={t}>{t}</option>)}
                         </select>
                       </div>
                     </div>
                   </div>
                 ))}
-                <button onClick={addBuilding} className="w-full py-2 text-[10px] font-label uppercase tracking-widest text-white/30 border border-dashed border-white/10 hover:border-white/30 hover:text-white/50 transition-colors">
+                <button onClick={addBuilding} className="w-full py-2 text-[10px] font-label uppercase tracking-widest text-on-surface/30 border border-dashed border-outline/20 hover:border-outline/40 hover:text-on-surface/50 transition-colors">
                   + 건물 추가
                 </button>
               </div>
@@ -327,16 +327,16 @@ export default function YardMapEditPage() {
               <FieldHeader title="C. 도로·통로 (ROADS)" moduleRef="FNC-LOC-020"/>
               <div className="space-y-2">
                 {roads.map((r,i)=>(
-                  <div key={i} className="bg-[#131313] border border-white/10 p-3">
+                  <div key={i} className="bg-surface border border-outline/20 p-3">
                     <div className="flex justify-between items-center mb-1.5">
-                      <span className="text-[10px] font-label text-white/40">도로 {i+1} — 선폭 {r.w}px</span>
-                      <button onClick={()=>setRoads(prev=>prev.filter((_,idx)=>idx!==i))} className="text-[#ef4444]/60 hover:text-[#ef4444] text-[10px]">삭제</button>
+                      <span className="text-[10px] font-label text-on-surface/40">도로 {i+1} — 선폭 {r.w}px</span>
+                      <button onClick={()=>setRoads(prev=>prev.filter((_,idx)=>idx!==i))} className="text-danger/60 hover:text-danger text-[10px]">삭제</button>
                     </div>
                     <label className={labelCls}>pts [[x,y],...]</label>
-                    <input value={r.ptsText} onChange={e=>{const nr=[...roads];nr[i]={...nr[i],ptsText:e.target.value};setRoads(nr);setSaved1(false);}} className="w-full bg-[#1a1a1a] border border-white/10 px-2 py-1 text-[10px] text-white font-mono focus:outline-none"/>
+                    <input value={r.ptsText} onChange={e=>{const nr=[...roads];nr[i]={...nr[i],ptsText:e.target.value};setRoads(nr);setSaved1(false);}} className="w-full bg-surface-elevated border border-outline/20 px-2 py-1 text-[10px] text-on-surface font-mono focus:outline-none"/>
                   </div>
                 ))}
-                <button onClick={()=>setRoads(prev=>[...prev,{pts:[[0,0],[100,100]],w:20,ptsText:"[[0,0],[100,100]]"}])} className="w-full py-2 text-[10px] font-label uppercase tracking-widest text-white/30 border border-dashed border-white/10 hover:border-white/30 hover:text-white/50 transition-colors">
+                <button onClick={()=>setRoads(prev=>[...prev,{pts:[[0,0],[100,100]],w:20,ptsText:"[[0,0],[100,100]]"}])} className="w-full py-2 text-[10px] font-label uppercase tracking-widest text-on-surface/30 border border-dashed border-outline/20 hover:border-outline/40 hover:text-on-surface/50 transition-colors">
                   + 도로 추가
                 </button>
               </div>
@@ -345,32 +345,32 @@ export default function YardMapEditPage() {
               <FieldHeader title="D. Zone 등록" moduleRef="FNC-LOC-021"/>
               <div className="space-y-2">
                 {zones.map((z,i)=>(
-                  <div key={i} className="bg-[#131313] border border-white/10 p-3">
+                  <div key={i} className="bg-surface border border-outline/20 p-3">
                     <div className="flex justify-between items-center mb-2">
                       <span className="text-[10px] font-label text-[#7F77DD]">Zone {z.code||i+1}</span>
-                      <button onClick={()=>removeZone(i)} className="text-[#ef4444]/60 hover:text-[#ef4444] text-[10px]">삭제</button>
+                      <button onClick={()=>removeZone(i)} className="text-danger/60 hover:text-danger text-[10px]">삭제</button>
                     </div>
                     <div className="grid grid-cols-2 gap-1.5 mb-1.5">
-                      <div><label className={labelCls}>코드</label><input value={z.code} onChange={e=>updateZone(i,"code",e.target.value)} className="w-full bg-[#1a1a1a] border border-white/10 px-2 py-1 text-[10px] text-white focus:outline-none"/></div>
+                      <div><label className={labelCls}>코드</label><input value={z.code} onChange={e=>updateZone(i,"code",e.target.value)} className="w-full bg-surface-elevated border border-outline/20 px-2 py-1 text-[10px] text-on-surface focus:outline-none"/></div>
                       <div>
                         <label className={labelCls}>좌표 유형</label>
-                        <select value={z.coordType} onChange={e=>updateZone(i,"coordType",e.target.value as "poly"|"rect")} className="w-full bg-[#1a1a1a] border border-white/10 px-2 py-1 text-[10px] text-white focus:outline-none">
+                        <select value={z.coordType} onChange={e=>updateZone(i,"coordType",e.target.value as "poly"|"rect")} className="w-full bg-surface-elevated border border-outline/20 px-2 py-1 text-[10px] text-on-surface focus:outline-none">
                           <option value="poly">폴리곤</option><option value="rect">직사각형</option>
                         </select>
                       </div>
                     </div>
                     {z.coordType==="poly"?(
-                      <div><label className={labelCls}>pts</label><input value={z.pts} onChange={e=>updateZone(i,"pts",e.target.value)} className="w-full bg-[#1a1a1a] border border-white/10 px-2 py-1 text-[10px] text-white font-mono focus:outline-none"/></div>
+                      <div><label className={labelCls}>pts</label><input value={z.pts} onChange={e=>updateZone(i,"pts",e.target.value)} className="w-full bg-surface-elevated border border-outline/20 px-2 py-1 text-[10px] text-on-surface font-mono focus:outline-none"/></div>
                     ):(
                       <div className="grid grid-cols-4 gap-1">
                         {(["x","y","w","h"] as const).map(f=>(
-                          <div key={f}><label className={labelCls}>{f}</label><input type="number" value={z[f]} onChange={e=>updateZone(i,f,e.target.value)} className="w-full bg-[#1a1a1a] border border-white/10 px-2 py-1 text-[10px] text-white focus:outline-none"/></div>
+                          <div key={f}><label className={labelCls}>{f}</label><input type="number" value={z[f]} onChange={e=>updateZone(i,f,e.target.value)} className="w-full bg-surface-elevated border border-outline/20 px-2 py-1 text-[10px] text-on-surface focus:outline-none"/></div>
                         ))}
                       </div>
                     )}
                   </div>
                 ))}
-                <button onClick={addZone} className="w-full py-2 text-[10px] font-label uppercase tracking-widest text-white/30 border border-dashed border-white/10 hover:border-[#7F77DD]/50 hover:text-white/50 transition-colors">
+                <button onClick={addZone} className="w-full py-2 text-[10px] font-label uppercase tracking-widest text-on-surface/30 border border-dashed border-outline/20 hover:border-[#7F77DD]/50 hover:text-on-surface/50 transition-colors">
                   + Zone 추가
                 </button>
               </div>
@@ -383,10 +383,10 @@ export default function YardMapEditPage() {
             </div>
           </div>
           <div className="flex-1">
-            <p className="font-label text-[10px] uppercase tracking-widest text-white/30 mb-2">D. Canvas 미리보기 (실시간)</p>
-            <div ref={wrapRef} className="border border-white/10 bg-[#111] w-full" style={{height:480,position:"relative"}}>
+            <p className="font-label text-[10px] uppercase tracking-widest text-on-surface/30 mb-2">D. Canvas 미리보기 (실시간)</p>
+            <div ref={wrapRef} className="border border-outline/20 bg-[#111] w-full" style={{height:480,position:"relative"}}>
               <canvas ref={canvasRef} style={{display:"block"}}/>
-              <p className="absolute bottom-2 left-2 text-[9px] font-label text-white/20">BOUNDARY 수정 후 미리보기 자동 갱신</p>
+              <p className="absolute bottom-2 left-2 text-[9px] font-label text-on-surface/20">BOUNDARY 수정 후 미리보기 자동 갱신</p>
             </div>
           </div>
         </div>
@@ -406,7 +406,7 @@ export default function YardMapEditPage() {
                 <select
                   value={selectedZoneId}
                   onChange={e=>handleZoneChange(e.target.value)}
-                  className="bg-[#131313] border border-white/10 px-3 py-2 text-xs text-white focus:outline-none focus:border-[#00912F]"
+                  className="bg-surface border border-outline/20 px-3 py-2 text-xs text-on-surface focus:outline-none focus:border-[#00912F]"
                 >
                   {ZONE_DEFS.map(z=>(
                     <option key={z.id} value={z.id}>{z.id} — {z.label}</option>
@@ -414,33 +414,33 @@ export default function YardMapEditPage() {
                 </select>
               </div>
               <div className="self-end pb-0.5">
-                <p className="text-[10px] font-label text-white/30">
+                <p className="text-[10px] font-label text-on-surface/30">
                   {zoneDef.rows}행 × {zoneDef.cols}열 = 총 {totalSlots}슬롯
                 </p>
               </div>
             </div>
 
             {/* KPI 요약 */}
-            <div className="flex items-center gap-4 mb-4 px-4 py-3 bg-[#131313] border border-white/10 text-[10px] font-label">
-              <span className="text-white/40">총 {totalSlots}슬롯</span>
-              <span className="text-white/10">│</span>
+            <div className="flex items-center gap-4 mb-4 px-4 py-3 bg-surface border border-outline/20 text-[10px] font-label">
+              <span className="text-on-surface/40">총 {totalSlots}슬롯</span>
+              <span className="text-on-surface/10">│</span>
               <span className="text-[#00912F]">점유 {occupiedOnly} ({occupancyPct}%)</span>
-              <span className="text-white/10">│</span>
-              <span className="text-white/40">빈칸 {emptySlots}</span>
-              <span className="text-white/10">│</span>
-              <span className="text-[#ef4444]">점검 {maintSlots}</span>
-              <div className="ml-auto w-32 h-1.5 bg-[#1a1a1a]">
+              <span className="text-on-surface/10">│</span>
+              <span className="text-on-surface/40">빈칸 {emptySlots}</span>
+              <span className="text-on-surface/10">│</span>
+              <span className="text-danger">점검 {maintSlots}</span>
+              <div className="ml-auto w-32 h-1.5 bg-surface-elevated">
                 <div className="h-full bg-[#00912F] transition-all" style={{width:`${occupancyPct}%`}}/>
               </div>
             </div>
 
             {/* 드래그 안내 */}
-            <p className="text-[9px] font-label text-white/25 mb-3 uppercase tracking-widest">
+            <p className="text-[9px] font-label text-on-surface/25 mb-3 uppercase tracking-widest">
               셀 드래그 → 슬롯 교환 &nbsp;|&nbsp; 셀 클릭 → 우측 상세 편집
             </p>
 
             {/* 슬롯 그리드 */}
-            <div className="bg-[#1a1a1a] border border-white/10 p-4">
+            <div className="bg-surface-elevated border border-outline/20 p-4">
               <div
                 className="grid gap-2"
                 style={{gridTemplateColumns:`repeat(${zoneDef.cols},minmax(0,1fr))`}}
@@ -470,10 +470,10 @@ export default function YardMapEditPage() {
                         <span className="text-[8px] text-[#00912F]/80 mt-0.5 truncate max-w-full px-1">{c.lotNo.slice(-8)}</span>
                       )}
                       {c.status==="정비" && (
-                        <span className="text-[8px] text-[#ef4444]/60 mt-0.5">정비</span>
+                        <span className="text-[8px] text-danger/60 mt-0.5">정비</span>
                       )}
                       {c.status==="비활성" && (
-                        <span className="text-[8px] text-white/20 mt-0.5">비활성</span>
+                        <span className="text-[8px] text-on-surface/20 mt-0.5">비활성</span>
                       )}
                     </div>
                   );
@@ -493,10 +493,10 @@ export default function YardMapEditPage() {
           <div className="w-60 shrink-0">
             <FieldHeader title="F. 슬롯 상세 편집" moduleRef="FNC-LOC-023"/>
             {selectedCell ? (
-              <div className="bg-[#131313] border border-white/10 p-4 space-y-4">
+              <div className="bg-surface border border-outline/20 p-4 space-y-4">
                 <div>
-                  <p className="font-label text-[9px] uppercase tracking-widest text-white/30 mb-1">위치 ID</p>
-                  <p className="text-white text-[11px] font-label font-bold break-all">{selectedCell.id}</p>
+                  <p className="font-label text-[9px] uppercase tracking-widest text-on-surface/30 mb-1">위치 ID</p>
+                  <p className="text-on-surface text-[11px] font-label font-bold break-all">{selectedCell.id}</p>
                 </div>
 
                 <div>
@@ -504,7 +504,7 @@ export default function YardMapEditPage() {
                   <select
                     value={editStatus}
                     onChange={e=>setEditStatus(e.target.value as SlotStatus)}
-                    className="w-full bg-[#1a1a1a] border border-white/10 px-3 py-2 text-xs text-white focus:outline-none focus:border-[#00912F]"
+                    className="w-full bg-surface-elevated border border-outline/20 px-3 py-2 text-xs text-on-surface focus:outline-none focus:border-[#00912F]"
                   >
                     {STATUS_OPTIONS.map(s=><option key={s} value={s}>{s}</option>)}
                   </select>
@@ -552,15 +552,15 @@ export default function YardMapEditPage() {
                   </button>
                   <button
                     onClick={clearCellEdit}
-                    className="flex-1 bg-[#131313] border border-white/10 text-white/40 font-label uppercase tracking-widest py-2 text-[10px] hover:border-white/30"
+                    className="flex-1 bg-surface border border-outline/20 text-on-surface/40 font-label uppercase tracking-widest py-2 text-[10px] hover:border-outline/40"
                   >
                     초기화
                   </button>
                 </div>
               </div>
             ) : (
-              <div className="bg-[#131313] border border-white/10 p-4">
-                <p className="text-white/20 text-[10px] font-label">슬롯을 클릭하면{"\n"}상세 편집 가능</p>
+              <div className="bg-surface border border-outline/20 p-4">
+                <p className="text-on-surface/20 text-[10px] font-label">슬롯을 클릭하면{"\n"}상세 편집 가능</p>
               </div>
             )}
           </div>

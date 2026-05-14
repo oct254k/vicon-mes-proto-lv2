@@ -1,0 +1,207 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "성지그룹 Logo" [ref=e5] [cursor=pointer]:
+          - /url: /ops/
+          - img "성지그룹 Logo" [ref=e6]
+        - generic [ref=e7]:
+          - link "대시보드" [ref=e8] [cursor=pointer]:
+            - /url: /ops/
+          - link "이력추적" [ref=e9] [cursor=pointer]:
+            - /url: /trace/
+          - link "알람" [ref=e10] [cursor=pointer]:
+            - /url: /alarm/
+      - generic [ref=e11]:
+        - button "book_2" [ref=e12] [cursor=pointer]
+        - generic [ref=e13] [cursor=pointer]: notifications
+        - generic [ref=e14] [cursor=pointer]: settings
+        - generic [ref=e16]: person
+    - complementary [ref=e17]:
+      - generic [ref=e19]:
+        - generic [ref=e20]: search
+        - textbox "메뉴 검색... (/)" [ref=e21]
+      - navigation [ref=e22]:
+        - list [ref=e23]:
+          - listitem [ref=e24]:
+            - button "inventory_2 기준정보 expand_more" [ref=e25]:
+              - generic [ref=e26]: inventory_2
+              - generic [ref=e27]: 기준정보
+              - generic [ref=e28]: expand_more
+          - listitem [ref=e29]:
+            - button "request_quote 수주·생산계획·MRP expand_more" [ref=e30]:
+              - generic [ref=e31]: request_quote
+              - generic [ref=e32]: 수주·생산계획·MRP
+              - generic [ref=e33]: expand_more
+          - listitem [ref=e34]:
+            - button "assignment 작업지시·부재·패킹 expand_more" [ref=e35]:
+              - generic [ref=e36]: assignment
+              - generic [ref=e37]: 작업지시·부재·패킹
+              - generic [ref=e38]: expand_more
+          - listitem [ref=e39]:
+            - button "precision_manufacturing 생산실행·추적성 expand_more" [ref=e40]:
+              - generic [ref=e41]: precision_manufacturing
+              - generic [ref=e42]: 생산실행·추적성
+              - generic [ref=e43]: expand_more
+          - listitem [ref=e44]:
+            - button "warehouse 위치·재고 expand_more" [ref=e45]:
+              - generic [ref=e46]: warehouse
+              - generic [ref=e47]: 위치·재고
+              - generic [ref=e48]: expand_more
+          - listitem [ref=e49]:
+            - button "verified 품질·SPC·불량 expand_more" [ref=e50]:
+              - generic [ref=e51]: verified
+              - generic [ref=e52]: 품질·SPC·불량
+              - generic [ref=e53]: expand_more
+            - list [ref=e54]:
+              - listitem [ref=e55]:
+                - button "품질 KPI 대시보드 expand_more" [ref=e56]:
+                  - generic [ref=e57]: 품질 KPI 대시보드
+                  - generic [ref=e58]: expand_more
+                - list [ref=e59]:
+                  - listitem [ref=e60]:
+                    - link "— 품질 KPI 메인" [ref=e61] [cursor=pointer]:
+                      - /url: /qc/dashboard/main/
+                      - generic [ref=e62]: —
+                      - generic [ref=e63]: 품질 KPI 메인
+                  - listitem [ref=e64]:
+                    - link "— 손실 요약 위젯" [ref=e65] [cursor=pointer]:
+                      - /url: /qc/dashboard/loss-summary/
+                      - generic [ref=e66]: —
+                      - generic [ref=e67]: 손실 요약 위젯
+              - listitem [ref=e68]:
+                - button "SPC 측정·관리도 expand_more" [ref=e69]:
+                  - generic [ref=e70]: SPC 측정·관리도
+                  - generic [ref=e71]: expand_more
+              - listitem [ref=e72]:
+                - button "불량 신고·트랜잭션 expand_more" [ref=e73]:
+                  - generic [ref=e74]: 불량 신고·트랜잭션
+                  - generic [ref=e75]: expand_more
+              - listitem [ref=e76]:
+                - button "위험 확산 평가·회수 expand_more" [ref=e77]:
+                  - generic [ref=e78]: 위험 확산 평가·회수
+                  - generic [ref=e79]: expand_more
+              - listitem [ref=e80]:
+                - button "손실 환산·회계 expand_more" [ref=e81]:
+                  - generic [ref=e82]: 손실 환산·회계
+                  - generic [ref=e83]: expand_more
+              - listitem [ref=e84]:
+                - button "품질 성적서 expand_more" [ref=e85]:
+                  - generic [ref=e86]: 품질 성적서
+                  - generic [ref=e87]: expand_more
+              - listitem [ref=e88]:
+                - button "QC 마스터 관리 expand_more" [ref=e89]:
+                  - generic [ref=e90]: QC 마스터 관리
+                  - generic [ref=e91]: expand_more
+          - listitem [ref=e92]:
+            - button "engineering 설비관리 expand_more" [ref=e93]:
+              - generic [ref=e94]: engineering
+              - generic [ref=e95]: 설비관리
+              - generic [ref=e96]: expand_more
+          - listitem [ref=e97]:
+            - button "shopping_cart 구매·발주 expand_more" [ref=e98]:
+              - generic [ref=e99]: shopping_cart
+              - generic [ref=e100]: 구매·발주
+              - generic [ref=e101]: expand_more
+          - listitem [ref=e102]:
+            - button "local_shipping 출하 expand_more" [ref=e103]:
+              - generic [ref=e104]: local_shipping
+              - generic [ref=e105]: 출하
+              - generic [ref=e106]: expand_more
+          - listitem [ref=e107]:
+            - button "groups 사용자·권한 expand_more" [ref=e108]:
+              - generic [ref=e109]: groups
+              - generic [ref=e110]: 사용자·권한
+              - generic [ref=e111]: expand_more
+          - listitem [ref=e112]:
+            - button "dashboard 운영현황·대시보드 expand_more" [ref=e113]:
+              - generic [ref=e114]: dashboard
+              - generic [ref=e115]: 운영현황·대시보드
+              - generic [ref=e116]: expand_more
+          - listitem [ref=e117]:
+            - button "settings 시스템관리 expand_more" [ref=e118]:
+              - generic [ref=e119]: settings
+              - generic [ref=e120]: 시스템관리
+              - generic [ref=e121]: expand_more
+    - main [ref=e122]:
+      - generic [ref=e123]:
+        - generic [ref=e124]:
+          - heading "품질 KPI 메인" [level=1] [ref=e126]
+          - generic [ref=e127]:
+            - generic [ref=e128]: "Node: SCR-QC-000"
+            - generic [ref=e129]: "System Status: PROTOTYPE"
+          - paragraph [ref=e130]: 불량률·SPC 위반·손실·위험 확산 종합 현황 (최근 30일)
+        - generic [ref=e131]:
+          - combobox [ref=e132]:
+            - 'option "공장: P3000" [selected]'
+            - option "P1000"
+            - option "P2000"
+          - combobox [ref=e133]:
+            - option "최근 30일" [selected]
+            - option "최근 7일"
+            - option "이번 달"
+        - generic [ref=e134]:
+          - heading "핵심 KPI" [level=3] [ref=e135]
+          - generic [ref=e136]: FNC-QC-004~007
+        - generic [ref=e137]:
+          - generic [ref=e138]:
+            - paragraph [ref=e139]: 합격률
+            - paragraph [ref=e140]: 98.7%
+            - paragraph [ref=e141]: +0.2% (전월)
+          - generic [ref=e142]:
+            - paragraph [ref=e143]: 부적합률
+            - paragraph [ref=e144]: 1.3%
+            - paragraph [ref=e145]: "-0.1% (전월)"
+          - generic [ref=e146]:
+            - paragraph [ref=e147]: SPC 빈도/일
+            - paragraph [ref=e148]: 6.4 회
+            - paragraph [ref=e149]: +0.8 (전월)
+          - generic [ref=e150]:
+            - paragraph [ref=e151]: MTTR
+            - paragraph [ref=e152]: 3.2 h
+            - paragraph [ref=e153]: +0.4h (전월)
+        - generic [ref=e154]:
+          - generic [ref=e155]:
+            - generic [ref=e156]:
+              - heading "SPC 알림 미해결" [level=3] [ref=e157]
+              - generic [ref=e158]: FNC-QC-034
+            - generic [ref=e159]:
+              - generic [ref=e160]:
+                - paragraph [ref=e161]: OPEN
+                - paragraph [ref=e162]: "8"
+              - generic [ref=e163]:
+                - paragraph [ref=e164]: INVESTIGATING
+                - paragraph [ref=e165]: "5"
+            - paragraph [ref=e166]: "Rule 1: 3건 / Rule 3: 4건 / 기타: 6건"
+            - link "→ SPC 알림 보드" [ref=e167] [cursor=pointer]:
+              - /url: /qc/spc/alert
+          - generic [ref=e168]:
+            - generic [ref=e169]:
+              - heading "손실 요약" [level=3] [ref=e170]
+              - generic [ref=e171]: FNC-QC-105
+            - paragraph [ref=e172]: ₩ 12,400,000
+            - paragraph [ref=e173]: 전월 대비 +8.4% ⚠
+            - link "→ 손실 차트" [ref=e174] [cursor=pointer]:
+              - /url: /qc/dashboard/loss-summary
+        - generic [ref=e175]:
+          - heading "불량 트랜잭션 분포" [level=3] [ref=e176]
+          - generic [ref=e177]: FNC-QC-073
+        - generic [ref=e178]:
+          - generic [ref=e179]:
+            - generic [ref=e180]: "12"
+            - paragraph [ref=e181]: DEFECT
+          - generic [ref=e182]:
+            - generic [ref=e183]: "8"
+            - paragraph [ref=e184]: SCRAP
+          - generic [ref=e185]:
+            - generic [ref=e186]: "3"
+            - paragraph [ref=e187]: CLAIM
+          - generic [ref=e188]:
+            - generic [ref=e189]: "2"
+            - paragraph [ref=e190]: RETURN
+        - generic [ref=e191]:
+          - generic [ref=e192]: MATCH
+          - paragraph [ref=e193]: 관리도·KPI 일치 검증 (FNC-QC-007) — 어제 기준 일치 확인
+    - generic [ref=e195]: System Active | Port 8080 | Secure Link
+  - button "Open Next.js Dev Tools" [ref=e201] [cursor=pointer]:
+    - img [ref=e202]

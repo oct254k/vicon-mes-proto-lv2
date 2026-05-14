@@ -40,7 +40,7 @@ export default function ClaimBoardPage() {
               <div key={c.id} className="bg-surface-container p-2 mb-2 cursor-pointer hover:bg-surface-container-high">
                 <p className="text-xs font-mono text-primary-accent">{c.id}</p>
                 <p className="text-xs opacity-60">{c.po}</p>
-                <p className="text-xs text-[#f59e0b] font-label mt-0.5">{c.type}</p>
+                <p className="text-xs text-warning font-label mt-0.5">{c.type}</p>
               </div>
             ))}
           </div>

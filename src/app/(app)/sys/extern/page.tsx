@@ -10,7 +10,7 @@ const CARDS = [
 
 export default function ExternIndexPage() {
   return (
-    <div className="p-8 bg-[#131313] min-h-screen text-on-surface">
+    <div className="p-8 bg-surface min-h-screen text-on-surface">
       <PageHeader title="외부 연동" accent="EXTERN" nodeRef="SCR-SYS-07x" status="PROTOTYPE"
         description="Vault 키·EDI 연결·API Token·Scope·만료 알림·5분 헬스 (FNC-SYS-070~075)" />
       <FieldHeader title="하위 화면" moduleRef="FNC-SYS-070~075" />

@@ -50,7 +50,7 @@ export default function PlantProcessStepPage() {
               <p className="text-2xl font-black tabular-nums text-on-surface mb-2">{items.length}건</p>
               <div className="space-y-1">
                 <p className="text-xs font-label text-primary-accent">완료 {done}</p>
-                <p className="text-xs font-label text-[#f59e0b]">진행 {inprog}</p>
+                <p className="text-xs font-label text-warning">진행 {inprog}</p>
                 <p className="text-xs font-label text-error">실패 {failed}</p>
               </div>
               {items.length > 0 && (

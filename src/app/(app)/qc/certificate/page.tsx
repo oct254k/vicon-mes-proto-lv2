@@ -16,7 +16,7 @@ const CERT_STATS = [
 const CERT_TYPES = [
   { type: "KS", name: "국가표준", color: "border-primary-accent", count: 22 },
   { type: "CE", name: "유럽 인증", color: "border-tertiary", count: 12 },
-  { type: "3S", name: "자체 규격", color: "border-[#f59e0b]", count: 7 },
+  { type: "3S", name: "자체 규격", color: "border-warning", count: 7 },
 ];
 
 export default function QCCertificateLanding() {

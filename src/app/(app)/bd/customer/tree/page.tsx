@@ -46,7 +46,7 @@ export default function CustomerTreePage() {
           <div key={cust.code} className="mb-2">
             <button
               onClick={() => toggle(cust.code)}
-              className="flex items-center gap-2 w-full text-left px-3 py-2 hover:bg-surface-container transition-colors border-b border-outline-variant/10"
+              className="flex items-center gap-2 w-full text-left px-3 py-2 hover:bg-surface-container transition-colors border-b border-outline"
             >
               <span className="text-primary-accent font-label text-xs tracking-widest uppercase">
                 {expanded.includes(cust.code) ? "▾" : "▸"}
@@ -60,7 +60,7 @@ export default function CustomerTreePage() {
                   <div key={site.code} className="mb-1">
                     <button
                       onClick={() => toggle(site.code)}
-                      className="flex items-center gap-2 w-full text-left px-3 py-2 hover:bg-surface-container transition-colors border-b border-outline-variant/5"
+                      className="flex items-center gap-2 w-full text-left px-3 py-2 hover:bg-surface-container transition-colors border-b border-outline-variant"
                     >
                       <span className="text-primary-accent font-label text-xs">
                         {expanded.includes(site.code) ? "▾" : "▸"}
@@ -71,7 +71,7 @@ export default function CustomerTreePage() {
                     {expanded.includes(site.code) && (
                       <ul className="pl-8">
                         {site.buildings.map((b) => (
-                          <li key={b} className="text-xs text-on-surface-variant/60 py-1 border-b border-outline-variant/5 flex items-center gap-2">
+                          <li key={b} className="text-xs text-on-surface-variant/60 py-1 border-b border-outline-variant flex items-center gap-2">
                             <span className="text-primary-accent">▪</span> {b}
                           </li>
                         ))}

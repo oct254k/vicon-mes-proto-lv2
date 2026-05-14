@@ -58,8 +58,8 @@ const TREE: PlantNode[] = [
 
 const statusColor: Record<LocStatus, string> = {
   ACTIVE:      "bg-primary-accent/20 text-primary-accent",
-  FULL:        "bg-[#f59e0b]/20 text-[#f59e0b]",
-  MAINTENANCE: "bg-[#ef4444]/20 text-[#ef4444]",
+  FULL:        "bg-warning/20 text-warning",
+  MAINTENANCE: "bg-danger/20 text-danger",
   RETIRED:     "bg-surface-container-highest text-on-surface/40",
 };
 
@@ -100,8 +100,8 @@ export default function LOCMasterPage() {
 
       <div className="flex gap-4 h-[calc(100vh-220px)] min-h-[500px]">
         {/* 좌측 트리 */}
-        <div className="w-72 shrink-0 bg-surface-container border border-outline-variant/10 overflow-y-auto">
-          <div className="p-3 border-b border-outline-variant/10">
+        <div className="w-72 shrink-0 bg-surface-container border border-outline overflow-y-auto">
+          <div className="p-3 border-b border-outline">
             <FieldHeader title="위치 트리" moduleRef="4단계" />
           </div>
           <div className="p-2 text-sm font-label">
@@ -154,7 +154,7 @@ export default function LOCMasterPage() {
         </div>
 
         {/* 우측 상세 */}
-        <div className="flex-1 bg-surface-container border border-outline-variant/10 overflow-y-auto p-6">
+        <div className="flex-1 bg-surface-container border border-outline overflow-y-auto p-6">
           {!selected ? (
             <div className="flex items-center justify-center h-full text-on-surface/30 text-sm font-label uppercase tracking-widest">
               좌측 트리에서 Lot 위치를 선택하세요
@@ -181,7 +181,7 @@ export default function LOCMasterPage() {
                   <p className="font-label text-xs uppercase tracking-widest text-on-surface/40 mb-1">적재 바</p>
                   <div className="w-full h-2 bg-surface-container-highest mt-1">
                     <div
-                      className={`h-full ${selected.loadPct >= 100 ? "bg-[#f59e0b]" : "bg-primary-accent"}`}
+                      className={`h-full ${selected.loadPct >= 100 ? "bg-warning" : "bg-primary-accent"}`}
                       style={{ width: `${selected.loadPct}%` }}
                     />
                   </div>
@@ -215,10 +215,10 @@ export default function LOCMasterPage() {
                   >
                     Capacity 수정
                   </button>
-                  <button className="bg-[#f59e0b]/10 border border-[#f59e0b]/30 px-4 py-2 text-xs font-label uppercase tracking-widest text-[#f59e0b] hover:bg-[#f59e0b]/20">
+                  <button className="bg-warning/10 border border-warning/30 px-4 py-2 text-xs font-label uppercase tracking-widest text-warning hover:bg-warning/20">
                     MAINTENANCE 등록
                   </button>
-                  <button className="bg-[#ef4444]/10 border border-[#ef4444]/30 px-4 py-2 text-xs font-label uppercase tracking-widest text-[#ef4444] hover:bg-[#ef4444]/20">
+                  <button className="bg-danger/10 border border-danger/30 px-4 py-2 text-xs font-label uppercase tracking-widest text-danger hover:bg-danger/20">
                     폐기 결재
                   </button>
                 </div>
@@ -240,7 +240,7 @@ export default function LOCMasterPage() {
                       { ts: "2026-05-04 14:22", tx: "RECEIVE", qty: "+2,000", lot: "RCV-20260504-0017", after: "5,000" },
                       { ts: "2026-05-03 10:11", tx: "RECEIVE", qty: "+3,000", lot: "RCV-20260503-0011", after: "3,000" },
                     ].map((r, i) => (
-                      <tr key={i} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20">
+                      <tr key={i} className="border-b border-outline-variant hover:bg-surface-container-highest/20">
                         <td className="px-3 py-2 tabular-nums text-on-surface/60">{r.ts}</td>
                         <td className="px-3 py-2"><span className="bg-primary-accent/20 text-primary-accent px-2 py-0.5 text-xs font-bold uppercase">{r.tx}</span></td>
                         <td className="px-3 py-2 tabular-nums text-primary-accent">{r.qty}</td>

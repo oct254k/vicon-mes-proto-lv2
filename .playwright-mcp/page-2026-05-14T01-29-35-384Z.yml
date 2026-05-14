@@ -1,0 +1,151 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e6] [cursor=pointer]:
+    - button "Open Next.js Dev Tools" [ref=e7]:
+      - img [ref=e8]
+    - generic [ref=e11]:
+      - button "Open issues overlay" [ref=e12]:
+        - generic [ref=e13]:
+          - generic [ref=e14]: "1"
+          - generic [ref=e15]: "2"
+        - generic [ref=e16]:
+          - text: Issue
+          - generic [ref=e17]: s
+      - button "Collapse issues badge" [ref=e18]:
+        - img [ref=e19]
+  - generic [ref=e21]:
+    - navigation [ref=e22]:
+      - generic [ref=e23]:
+        - link "성지그룹 Logo" [ref=e24] [cursor=pointer]:
+          - /url: /ops/
+          - img "성지그룹 Logo" [ref=e25]
+        - generic [ref=e26]:
+          - link "대시보드" [ref=e27] [cursor=pointer]:
+            - /url: /ops/
+          - link "이력추적" [ref=e28] [cursor=pointer]:
+            - /url: /trace/
+          - link "알람" [ref=e29] [cursor=pointer]:
+            - /url: /alarm/
+      - generic [ref=e30]:
+        - button "account_tree" [ref=e31] [cursor=pointer]
+        - button "book_2" [ref=e32] [cursor=pointer]
+        - generic [ref=e33] [cursor=pointer]: notifications
+        - button "다크 모드로 전환" [ref=e34] [cursor=pointer]: dark_mode
+        - generic [ref=e35] [cursor=pointer]: settings
+        - generic [ref=e37]: person
+    - complementary [ref=e38]:
+      - generic [ref=e40]:
+        - generic [ref=e41]: search
+        - textbox "메뉴 검색... (/)" [ref=e42]
+      - navigation [ref=e43]:
+        - list [ref=e44]:
+          - listitem [ref=e45]:
+            - button "inventory_2 기준정보 expand_more" [ref=e46]:
+              - generic [ref=e47]: inventory_2
+              - generic [ref=e48]: 기준정보
+              - generic [ref=e49]: expand_more
+          - listitem [ref=e50]:
+            - button "request_quote 수주·생산계획·MRP expand_more" [ref=e51]:
+              - generic [ref=e52]: request_quote
+              - generic [ref=e53]: 수주·생산계획·MRP
+              - generic [ref=e54]: expand_more
+          - listitem [ref=e55]:
+            - button "assignment 작업지시·부재·패킹 expand_more" [ref=e56]:
+              - generic [ref=e57]: assignment
+              - generic [ref=e58]: 작업지시·부재·패킹
+              - generic [ref=e59]: expand_more
+          - listitem [ref=e60]:
+            - button "precision_manufacturing 생산실행·추적성 expand_more" [ref=e61]:
+              - generic [ref=e62]: precision_manufacturing
+              - generic [ref=e63]: 생산실행·추적성
+              - generic [ref=e64]: expand_more
+          - listitem [ref=e65]:
+            - button "warehouse 위치·재고 expand_more" [ref=e66]:
+              - generic [ref=e67]: warehouse
+              - generic [ref=e68]: 위치·재고
+              - generic [ref=e69]: expand_more
+          - listitem [ref=e70]:
+            - button "verified 품질·SPC·불량 expand_more" [ref=e71]:
+              - generic [ref=e72]: verified
+              - generic [ref=e73]: 품질·SPC·불량
+              - generic [ref=e74]: expand_more
+          - listitem [ref=e75]:
+            - button "engineering 설비관리 expand_more" [ref=e76]:
+              - generic [ref=e77]: engineering
+              - generic [ref=e78]: 설비관리
+              - generic [ref=e79]: expand_more
+          - listitem [ref=e80]:
+            - button "shopping_cart 구매·발주 expand_more" [ref=e81]:
+              - generic [ref=e82]: shopping_cart
+              - generic [ref=e83]: 구매·발주
+              - generic [ref=e84]: expand_more
+          - listitem [ref=e85]:
+            - button "local_shipping 출하 expand_more" [ref=e86]:
+              - generic [ref=e87]: local_shipping
+              - generic [ref=e88]: 출하
+              - generic [ref=e89]: expand_more
+          - listitem [ref=e90]:
+            - button "groups 사용자·권한 expand_more" [ref=e91]:
+              - generic [ref=e92]: groups
+              - generic [ref=e93]: 사용자·권한
+              - generic [ref=e94]: expand_more
+          - listitem [ref=e95]:
+            - button "dashboard 운영현황·대시보드 expand_more" [ref=e96]:
+              - generic [ref=e97]: dashboard
+              - generic [ref=e98]: 운영현황·대시보드
+              - generic [ref=e99]: expand_more
+          - listitem [ref=e100]:
+            - button "settings 시스템관리 expand_more" [ref=e101]:
+              - generic [ref=e102]: settings
+              - generic [ref=e103]: 시스템관리
+              - generic [ref=e104]: expand_more
+    - main [ref=e105]:
+      - generic [ref=e106]:
+        - generic [ref=e107]:
+          - heading "운영현황·대시보드OPS" [level=1] [ref=e109]
+          - generic [ref=e111]: "System Status: PROTOTYPE"
+        - paragraph [ref=e113]: 라인 상황판·Plant 종합 현황·멀티사이트 뷰·주문·WO·생산·재고 진행률·알림센터까지 경영·운영 의사결정을 위한 실시간 대시보드를 제공합니다.
+        - heading "화면 인벤토리" [level=3] [ref=e115]
+        - generic [ref=e116]:
+          - generic [ref=e117]:
+            - paragraph [ref=e118]: LINE
+            - paragraph [ref=e119]: 라인 상황판
+          - generic [ref=e120]:
+            - paragraph [ref=e121]: PLANT
+            - paragraph [ref=e122]: Plant 종합 현황
+          - generic [ref=e123]:
+            - paragraph [ref=e124]: MULTISITE
+            - paragraph [ref=e125]: 멀티사이트 뷰
+          - generic [ref=e126]:
+            - paragraph [ref=e127]: ORDERS PROGRESS
+            - paragraph [ref=e128]: 수주 진행률
+          - generic [ref=e129]:
+            - paragraph [ref=e130]: WO PROGRESS
+            - paragraph [ref=e131]: WO 진행 현황
+          - generic [ref=e132]:
+            - paragraph [ref=e133]: PRODUCTION
+            - paragraph [ref=e134]: 생산 실적 요약
+          - generic [ref=e135]:
+            - paragraph [ref=e136]: INVENTORY
+            - paragraph [ref=e137]: 재고 현황 요약
+          - generic [ref=e138]:
+            - paragraph [ref=e139]: NOTIFICATIONS
+            - paragraph [ref=e140]: 알림 센터
+        - heading "주요 기능" [level=3] [ref=e142]
+        - list [ref=e143]:
+          - listitem [ref=e144]:
+            - generic [ref=e145]: —
+            - text: 라인별·공정별 실시간 가동 상태 상황판
+          - listitem [ref=e146]:
+            - generic [ref=e147]: —
+            - text: Plant 단위 KPI(생산량·품질률·OEE·납기달성률) 요약
+          - listitem [ref=e148]:
+            - generic [ref=e149]: —
+            - text: 멀티사이트 비교 뷰 및 드릴다운 분석
+          - listitem [ref=e150]:
+            - generic [ref=e151]: —
+            - text: 수주·WO·생산·재고 통합 진행률 시각화
+          - listitem [ref=e152]:
+            - generic [ref=e153]: —
+            - text: 긴급·경고 알림 집중 관리 및 담당자 에스컬레이션
+    - generic [ref=e155]: System Active | Port 8080 | Secure Link
+  - alert [ref=e156]

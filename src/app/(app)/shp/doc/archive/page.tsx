@@ -31,13 +31,13 @@ export default function DocArchivePage() {
       <FieldHeader title="문서 목록" moduleRef={`${rows.length}건`} />
       <div className="bg-surface-container-lowest overflow-x-auto">
         <table className="w-full text-left border-collapse">
-          <thead><tr className="bg-surface-container border-b border-outline-variant/10">
+          <thead><tr className="bg-surface-container border-b border-outline">
             {["문서 ID","유형","출하 ID","고객","발행 일시","발행자","부수","다운로드"].map(h=>(
               <th key={h} className="px-4 py-2 font-label text-xs uppercase tracking-widest opacity-50">{h}</th>
             ))}</tr></thead>
           <tbody className="font-headline text-sm">
             {rows.map(r=>(
-              <tr key={r.id} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20">
+              <tr key={r.id} className="border-b border-outline-variant hover:bg-surface-container-highest/20">
                 <td className="px-4 py-2 text-primary-accent font-mono text-xs">{r.id}</td>
                 <td className="px-4 py-2"><StatusBadge type={SM[r.type]} label={r.type} /></td>
                 <td className="px-4 py-2 font-mono text-xs opacity-70">{r.shp}</td>

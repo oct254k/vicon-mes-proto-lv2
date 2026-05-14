@@ -25,7 +25,7 @@ const MOCK = [
 export default function NotifySubscriptionPage() {
   const data = MOCK.map(r => ({ ...r, active: <StatusBadge type={r.active === "ACTIVE" ? "running" : "idle"} label={r.active} /> as unknown as string }));
   return (
-    <div className="p-8 bg-[#131313] min-h-screen text-on-surface">
+    <div className="p-8 bg-surface min-h-screen text-on-surface">
       <PageHeader title="구독 관리" accent="SUBSCRIPTION" nodeRef="SCR-SYS-041" status="PROTOTYPE"
         description="강제 구독(Y) + 사용자 우선순위 설정 — USR 도메인 cross (FNC-SYS-042)" />
       <div className="flex gap-2 mb-4">

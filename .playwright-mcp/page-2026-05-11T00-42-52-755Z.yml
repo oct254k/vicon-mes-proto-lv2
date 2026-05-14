@@ -1,0 +1,212 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "성지그룹 Logo" [ref=e5] [cursor=pointer]:
+          - /url: /ops/
+          - img "성지그룹 Logo" [ref=e6]
+        - generic [ref=e7]:
+          - link "대시보드" [ref=e8] [cursor=pointer]:
+            - /url: /ops/
+          - link "이력추적" [ref=e9] [cursor=pointer]:
+            - /url: /trace/
+          - link "알람" [ref=e10] [cursor=pointer]:
+            - /url: /alarm/
+      - generic [ref=e11]:
+        - button "book_2" [ref=e12] [cursor=pointer]
+        - generic [ref=e13] [cursor=pointer]: notifications
+        - generic [ref=e14] [cursor=pointer]: settings
+        - generic [ref=e16]: person
+    - complementary [ref=e17]:
+      - generic [ref=e19]:
+        - generic [ref=e20]: search
+        - textbox "메뉴 검색... (/)" [ref=e21]
+      - navigation [ref=e22]:
+        - list [ref=e23]:
+          - listitem [ref=e24]:
+            - button "inventory_2 기준정보 expand_more" [ref=e25]:
+              - generic [ref=e26]: inventory_2
+              - generic [ref=e27]: 기준정보
+              - generic [ref=e28]: expand_more
+          - listitem [ref=e29]:
+            - button "request_quote 수주·생산계획·MRP expand_more" [ref=e30]:
+              - generic [ref=e31]: request_quote
+              - generic [ref=e32]: 수주·생산계획·MRP
+              - generic [ref=e33]: expand_more
+          - listitem [ref=e34]:
+            - button "assignment 작업지시·부재·패킹 expand_more" [ref=e35]:
+              - generic [ref=e36]: assignment
+              - generic [ref=e37]: 작업지시·부재·패킹
+              - generic [ref=e38]: expand_more
+          - listitem [ref=e39]:
+            - button "precision_manufacturing 생산실행·추적성 expand_more" [ref=e40]:
+              - generic [ref=e41]: precision_manufacturing
+              - generic [ref=e42]: 생산실행·추적성
+              - generic [ref=e43]: expand_more
+          - listitem [ref=e44]:
+            - button "warehouse 위치·재고 expand_more" [ref=e45]:
+              - generic [ref=e46]: warehouse
+              - generic [ref=e47]: 위치·재고
+              - generic [ref=e48]: expand_more
+          - listitem [ref=e49]:
+            - button "verified 품질·SPC·불량 expand_more" [ref=e50]:
+              - generic [ref=e51]: verified
+              - generic [ref=e52]: 품질·SPC·불량
+              - generic [ref=e53]: expand_more
+          - listitem [ref=e54]:
+            - button "engineering 설비관리 expand_more" [ref=e55]:
+              - generic [ref=e56]: engineering
+              - generic [ref=e57]: 설비관리
+              - generic [ref=e58]: expand_more
+            - list [ref=e59]:
+              - listitem [ref=e60]:
+                - button "설비 마스터 expand_more" [ref=e61]:
+                  - generic [ref=e62]: 설비 마스터
+                  - generic [ref=e63]: expand_more
+              - listitem [ref=e64]:
+                - button "가동 데이터 expand_more" [ref=e65]:
+                  - generic [ref=e66]: 가동 데이터
+                  - generic [ref=e67]: expand_more
+              - listitem [ref=e68]:
+                - button "PM 일정 관리 expand_more" [ref=e69]:
+                  - generic [ref=e70]: PM 일정 관리
+                  - generic [ref=e71]: expand_more
+              - listitem [ref=e72]:
+                - button "정비지시 expand_more" [ref=e73]:
+                  - generic [ref=e74]: 정비지시
+                  - generic [ref=e75]: expand_more
+              - listitem [ref=e76]:
+                - button "부품 교체 이력 expand_more" [ref=e77]:
+                  - generic [ref=e78]: 부품 교체 이력
+                  - generic [ref=e79]: expand_more
+              - listitem [ref=e80]:
+                - button "OEE/MTBF 분석 expand_more" [ref=e81]:
+                  - generic [ref=e82]: OEE/MTBF 분석
+                  - generic [ref=e83]: expand_more
+                - list [ref=e84]:
+                  - listitem [ref=e85]:
+                    - link "— OEE 트렌드" [ref=e86] [cursor=pointer]:
+                      - /url: /eq/oee/trend/
+                      - generic [ref=e87]: —
+                      - generic [ref=e88]: OEE 트렌드
+                  - listitem [ref=e89]:
+                    - link "— Plant·라인 비교" [ref=e90] [cursor=pointer]:
+                      - /url: /eq/oee/compare/
+                      - generic [ref=e91]: —
+                      - generic [ref=e92]: Plant·라인 비교
+                  - listitem [ref=e93]:
+                    - link "— OEE 드릴다운" [ref=e94] [cursor=pointer]:
+                      - /url: /eq/oee/drill/
+                      - generic [ref=e95]: —
+                      - generic [ref=e96]: OEE 드릴다운
+                  - listitem [ref=e97]:
+                    - link "— MTBF KPI 카드" [ref=e98] [cursor=pointer]:
+                      - /url: /eq/oee/mtbf/
+                      - generic [ref=e99]: —
+                      - generic [ref=e100]: MTBF KPI 카드
+                  - listitem [ref=e101]:
+                    - link "— OEE 목표값·경보 마스터" [ref=e102] [cursor=pointer]:
+                      - /url: /eq/oee/target/
+                      - generic [ref=e103]: —
+                      - generic [ref=e104]: OEE 목표값·경보 마스터
+              - listitem [ref=e105]:
+                - button "PdM 예지정비 expand_more" [ref=e106]:
+                  - generic [ref=e107]: PdM 예지정비
+                  - generic [ref=e108]: expand_more
+              - listitem [ref=e109]:
+                - button "설비팀 PDA 워크벤치 expand_more" [ref=e110]:
+                  - generic [ref=e111]: 설비팀 PDA 워크벤치
+                  - generic [ref=e112]: expand_more
+          - listitem [ref=e113]:
+            - button "shopping_cart 구매·발주 expand_more" [ref=e114]:
+              - generic [ref=e115]: shopping_cart
+              - generic [ref=e116]: 구매·발주
+              - generic [ref=e117]: expand_more
+          - listitem [ref=e118]:
+            - button "local_shipping 출하 expand_more" [ref=e119]:
+              - generic [ref=e120]: local_shipping
+              - generic [ref=e121]: 출하
+              - generic [ref=e122]: expand_more
+          - listitem [ref=e123]:
+            - button "groups 사용자·권한 expand_more" [ref=e124]:
+              - generic [ref=e125]: groups
+              - generic [ref=e126]: 사용자·권한
+              - generic [ref=e127]: expand_more
+          - listitem [ref=e128]:
+            - button "dashboard 운영현황·대시보드 expand_more" [ref=e129]:
+              - generic [ref=e130]: dashboard
+              - generic [ref=e131]: 운영현황·대시보드
+              - generic [ref=e132]: expand_more
+          - listitem [ref=e133]:
+            - button "settings 시스템관리 expand_more" [ref=e134]:
+              - generic [ref=e135]: settings
+              - generic [ref=e136]: 시스템관리
+              - generic [ref=e137]: expand_more
+    - main [ref=e138]:
+      - generic [ref=e139]:
+        - generic [ref=e140]:
+          - heading "OEE 분석 대시보드" [level=1] [ref=e142]
+          - generic [ref=e143]:
+            - generic [ref=e144]: "Node: IA-EQ-OEE-TREND"
+            - generic [ref=e145]: "System Status: CALIBRATED"
+          - paragraph [ref=e146]: SCR-EQ-080 — 가용성 × 성능 × 품질 종합 OEE
+        - generic [ref=e147]:
+          - generic [ref=e148]:
+            - generic [ref=e152]: 87.3%
+            - generic [ref=e153]: 종합 OEE
+          - generic [ref=e154]:
+            - generic [ref=e158]: 92%
+            - generic [ref=e159]: 가용성
+          - generic [ref=e160]:
+            - generic [ref=e164]: 96%
+            - generic [ref=e165]: 성능
+          - generic [ref=e166]:
+            - generic [ref=e170]: 99%
+            - generic [ref=e171]: 품질
+        - generic [ref=e173]:
+          - generic [ref=e174]: MTBF (별도 KPI · FR-EQ-055)
+          - generic [ref=e175]: 320시간
+          - generic [ref=e176]: / 목표 480h
+          - generic [ref=e177]: "진본: 19,200분"
+        - generic [ref=e180]:
+          - generic [ref=e181]:
+            - 'heading "설비별 OEE (EQ-P3000) | Buffer: 004 Entries" [level=3] [ref=e182]':
+              - text: 설비별 OEE (EQ-P3000)
+              - generic [ref=e183]: "| Buffer: 004 Entries"
+            - generic [ref=e184] [cursor=pointer]: refresh
+          - table [ref=e186]:
+            - rowgroup [ref=e187]:
+              - row "설비 코드 가용성 성능 품질 종합 OEE" [ref=e188]:
+                - columnheader "설비 코드" [ref=e189]
+                - columnheader "가용성" [ref=e190]
+                - columnheader "성능" [ref=e191]
+                - columnheader "품질" [ref=e192]
+                - columnheader "종합 OEE" [ref=e193]
+            - rowgroup [ref=e194]:
+              - row "EQ-P3000-신선-01 94% 97% 99% 90.2%" [ref=e195]:
+                - cell "EQ-P3000-신선-01" [ref=e196]
+                - cell "94%" [ref=e197]
+                - cell "97%" [ref=e198]
+                - cell "99%" [ref=e199]
+                - cell "90.2%" [ref=e200]
+              - row "EQ-P3000-TG-01 91% 95% 99% 85.7%" [ref=e201]:
+                - cell "EQ-P3000-TG-01" [ref=e202]
+                - cell "91%" [ref=e203]
+                - cell "95%" [ref=e204]
+                - cell "99%" [ref=e205]
+                - cell "85.7%" [ref=e206]
+              - row "EQ-P3000-포밍-01 89% 93% 98% 81.1%" [ref=e207]:
+                - cell "EQ-P3000-포밍-01" [ref=e208]
+                - cell "89%" [ref=e209]
+                - cell "93%" [ref=e210]
+                - cell "98%" [ref=e211]
+                - cell "81.1%" [ref=e212]
+              - row "EQ-P3000-DP-01 76% 88% 97% 64.9%" [ref=e213]:
+                - cell "EQ-P3000-DP-01" [ref=e214]
+                - cell "76%" [ref=e215]
+                - cell "88%" [ref=e216]
+                - cell "97%" [ref=e217]
+                - cell "64.9%" [ref=e218]
+    - generic [ref=e220]: System Active | Port 8080 | Secure Link
+  - button "Open Next.js Dev Tools" [ref=e226] [cursor=pointer]:
+    - img [ref=e227]

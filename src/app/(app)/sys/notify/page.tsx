@@ -10,7 +10,7 @@ const CARDS = [
 
 export default function NotifyIndexPage() {
   return (
-    <div className="p-8 bg-[#131313] min-h-screen text-on-surface">
+    <div className="p-8 bg-surface min-h-screen text-on-surface">
       <PageHeader title="알림 채널" accent="NOTIFY" nodeRef="SCR-SYS-04x" status="PROTOTYPE"
         description="5채널 알림·카탈로그·우선순위·발송 큐·재시도(1/5/30분, 3회)·이력 (FNC-SYS-040~046)" />
       <FieldHeader title="지원 채널" moduleRef="FNC-SYS-040" />

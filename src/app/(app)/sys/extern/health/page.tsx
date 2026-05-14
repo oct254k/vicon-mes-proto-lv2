@@ -27,7 +27,7 @@ const ST_MAP: Record<string,"running"|"error"> = { UP:"running", DOWN:"error" };
 export default function ExternHealthPage() {
   const data = MOCK.map(r => ({ ...r, status: <StatusBadge type={ST_MAP[r.statusK]} label={r.statusK} /> as unknown as string }));
   return (
-    <div className="p-8 bg-[#131313] min-h-screen text-on-surface">
+    <div className="p-8 bg-surface min-h-screen text-on-surface">
       <PageHeader title="연동 헬스" accent="HEALTH" nodeRef="SCR-SYS-072" status="PROTOTYPE"
         description="외부 연동 서비스 5분 주기 헬스 체크 — UP/DOWN/latency (FNC-SYS-073)" />
       <div className="bg-surface-container border-l-4 border-error p-4 mb-6 flex items-center gap-4">

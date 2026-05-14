@@ -49,14 +49,14 @@ export default function SPMrpPage() {
         >
           {running ? "MRP 실행 중..." : "MRP 실행"}
         </button>
-        <span className="text-xs text-[#f59e0b] font-label uppercase tracking-widest border border-[#f59e0b]/30 px-3 py-2">
+        <span className="text-xs text-warning font-label uppercase tracking-widest border border-warning/30 px-3 py-2">
           주의 — 실행 시 전체 소요량이 재계산됩니다
         </span>
       </div>
 
       {showConfirm && (
-        <div className="bg-[#1a1a1a] border border-[#f59e0b]/40 p-5 mb-6 max-w-md">
-          <p className="text-sm text-white/80 mb-4">MRP를 실행하면 전체 수주의 자재 소요량이 재계산됩니다. 계속하시겠습니까?</p>
+        <div className="bg-surface-elevated border border-warning/40 p-5 mb-6 max-w-md">
+          <p className="text-sm text-on-surface/80 mb-4">MRP를 실행하면 전체 수주의 자재 소요량이 재계산됩니다. 계속하시겠습니까?</p>
           <div className="flex gap-3">
             <button
               onClick={handleRun}
@@ -66,7 +66,7 @@ export default function SPMrpPage() {
             </button>
             <button
               onClick={() => setShowConfirm(false)}
-              className="border border-white/20 text-white/60 font-label uppercase tracking-widest text-xs px-4 py-2 hover:border-white/40 transition-colors"
+              className="border border-outline/30 text-on-surface/60 font-label uppercase tracking-widest text-xs px-4 py-2 hover:border-outline/50 transition-colors"
             >
               취소
             </button>

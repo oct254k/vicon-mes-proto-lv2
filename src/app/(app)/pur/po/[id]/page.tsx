@@ -79,7 +79,7 @@ export default function PODetailPage({ params }: { params: { id: string } }) {
       <div className="overflow-x-auto bg-surface-container-lowest mb-6">
         <table className="w-full text-left border-collapse">
           <thead>
-            <tr className="bg-surface-container border-b border-outline-variant/10">
+            <tr className="bg-surface-container border-b border-outline">
               {["라인#", "Material", "품명", "수량", "단위", "단가(₩)", "소계(₩)", "납기일"].map((h) => (
                 <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
               ))}
@@ -87,7 +87,7 @@ export default function PODetailPage({ params }: { params: { id: string } }) {
           </thead>
           <tbody>
             {po.lines.map((line) => (
-              <tr key={line.lineNo} className="border-b border-outline-variant/5">
+              <tr key={line.lineNo} className="border-b border-outline-variant">
                 <td className="px-4 py-3 font-mono text-xs">{line.lineNo}</td>
                 <td className="px-4 py-3 font-mono text-xs text-primary-accent">{line.material}</td>
                 <td className="px-4 py-3 font-body text-sm">{line.desc}</td>

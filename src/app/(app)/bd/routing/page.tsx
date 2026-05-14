@@ -91,7 +91,7 @@ export default function BDRoutingPage() {
     label: l.label,
     line: l.line,
     outsourceTag: l.outsource
-      ? (<span className="text-xs font-label px-2 py-0.5 bg-[#f59e0b]/20 text-[#f59e0b]">협력A</span>) as unknown as string
+      ? (<span className="text-xs font-label px-2 py-0.5 bg-warning/20 text-warning">협력A</span>) as unknown as string
       : "-",
     condTag: l.conditional
       ? (<span className="text-xs font-label px-2 py-0.5 bg-primary-accent/10 text-primary-accent">두께&gt;3mm</span>) as unknown as string

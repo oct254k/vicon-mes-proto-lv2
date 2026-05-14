@@ -21,18 +21,18 @@ const PLANTS: PlantKPI[] = [
 
 const STATUS_ACCENT: Record<string, string> = {
   green: "border-primary-accent",
-  yellow: "border-[#f59e0b]",
+  yellow: "border-warning",
   red: "border-error",
 };
 
 const KPI_COLOR: Record<string, string> = {
   green: "text-primary-accent",
-  yellow: "text-[#f59e0b]",
+  yellow: "text-warning",
   red: "text-error",
 };
 
 function OeeBar({ value, color }: { value: number; color: string }) {
-  const barColor = color === "red" ? "bg-error/60" : color === "yellow" ? "bg-[#f59e0b]/60" : "bg-primary-accent/60";
+  const barColor = color === "red" ? "bg-error/60" : color === "yellow" ? "bg-warning/60" : "bg-primary-accent/60";
   return (
     <div className="flex items-center gap-2">
       <div className="flex-1 bg-surface-container-highest h-2">
@@ -79,7 +79,7 @@ export default function OPSMultisitePage() {
                 <p className="text-xs font-label text-on-surface-variant mb-1 uppercase tracking-wider">OEE</p>
                 <OeeBar value={p.oee} color={p.status} />
               </div>
-              <div className="grid grid-cols-2 gap-3 pt-2 border-t border-outline-variant/10">
+              <div className="grid grid-cols-2 gap-3 pt-2 border-t border-outline">
                 <div>
                   <p className="text-xs font-label text-on-surface-variant uppercase tracking-wider mb-1">불량률</p>
                   <p className={`text-2xl font-black tabular-nums ${p.defectRate > 3 ? "text-error" : "text-primary-accent"}`}>

@@ -11,7 +11,7 @@ const CARDS = [
 
 export default function CodeIndexPage() {
   return (
-    <div className="p-8 bg-[#131313] min-h-screen text-on-surface">
+    <div className="p-8 bg-surface min-h-screen text-on-surface">
       <PageHeader title="코드 마스터" accent="CODE" nodeRef="SCR-SYS-03x" status="PROTOTYPE"
         description="공통 코드·시스템 예약 보호·다국어·결재·import/export·시점 스냅샷 (FNC-SYS-030~035)" />
       <FieldHeader title="하위 화면" moduleRef="FNC-SYS-030~035" />

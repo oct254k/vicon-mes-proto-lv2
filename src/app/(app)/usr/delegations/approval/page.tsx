@@ -30,7 +30,7 @@ export default function DelegationApprovalPage() {
         </div>
         <table className="w-full text-left border-collapse text-sm">
           <thead>
-            <tr className="bg-surface-container border-b border-outline-variant/10">
+            <tr className="bg-surface-container border-b border-outline">
               {["신청 ID", "위임자", "수임자", "기간", "위임 범위", "사유", "신청 시각", "상태", "액션"].map((h) => (
                 <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
               ))}
@@ -38,7 +38,7 @@ export default function DelegationApprovalPage() {
           </thead>
           <tbody className="font-headline">
             {INBOX.map((r, i) => (
-              <tr key={i} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20 bg-[#f59e0b]/5">
+              <tr key={i} className="border-b border-outline-variant hover:bg-surface-container-highest/20 bg-warning/5">
                 <td className="px-4 py-2 tabular-nums text-xs opacity-70">{r.reqId}</td>
                 <td className="px-4 py-2 text-xs">{r.delegator}</td>
                 <td className="px-4 py-2 text-xs text-primary-accent font-bold">{r.delegatee}</td>

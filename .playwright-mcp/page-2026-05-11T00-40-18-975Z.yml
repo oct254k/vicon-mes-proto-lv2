@@ -1,0 +1,191 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "성지그룹 Logo" [ref=e5] [cursor=pointer]:
+          - /url: /ops/
+          - img "성지그룹 Logo" [ref=e6]
+        - generic [ref=e7]:
+          - link "대시보드" [ref=e8] [cursor=pointer]:
+            - /url: /ops/
+          - link "이력추적" [ref=e9] [cursor=pointer]:
+            - /url: /trace/
+          - link "알람" [ref=e10] [cursor=pointer]:
+            - /url: /alarm/
+      - generic [ref=e11]:
+        - button "book_2" [ref=e12] [cursor=pointer]
+        - generic [ref=e13] [cursor=pointer]: notifications
+        - generic [ref=e14] [cursor=pointer]: settings
+        - generic [ref=e16]: person
+    - complementary [ref=e17]:
+      - generic [ref=e19]:
+        - generic [ref=e20]: search
+        - textbox "메뉴 검색... (/)" [ref=e21]
+      - navigation [ref=e22]:
+        - list [ref=e23]:
+          - listitem [ref=e24]:
+            - button "inventory_2 기준정보 expand_more" [ref=e25]:
+              - generic [ref=e26]: inventory_2
+              - generic [ref=e27]: 기준정보
+              - generic [ref=e28]: expand_more
+          - listitem [ref=e29]:
+            - button "request_quote 수주·생산계획·MRP expand_more" [ref=e30]:
+              - generic [ref=e31]: request_quote
+              - generic [ref=e32]: 수주·생산계획·MRP
+              - generic [ref=e33]: expand_more
+          - listitem [ref=e34]:
+            - button "assignment 작업지시·부재·패킹 expand_more" [ref=e35]:
+              - generic [ref=e36]: assignment
+              - generic [ref=e37]: 작업지시·부재·패킹
+              - generic [ref=e38]: expand_more
+          - listitem [ref=e39]:
+            - button "precision_manufacturing 생산실행·추적성 expand_more" [ref=e40]:
+              - generic [ref=e41]: precision_manufacturing
+              - generic [ref=e42]: 생산실행·추적성
+              - generic [ref=e43]: expand_more
+            - list [ref=e44]:
+              - listitem [ref=e45]:
+                - link "오늘의 작업 (PDA 첫 화면)" [ref=e46] [cursor=pointer]:
+                  - /url: /mfg/today/
+                  - generic [ref=e47]: 오늘의 작업 (PDA 첫 화면)
+              - listitem [ref=e48]:
+                - button "자재 투입 (ISSUE) expand_more" [ref=e49]:
+                  - generic [ref=e50]: 자재 투입 (ISSUE)
+                  - generic [ref=e51]: expand_more
+              - listitem [ref=e52]:
+                - button "부재 완성 (PRODUCE) expand_more" [ref=e53]:
+                  - generic [ref=e54]: 부재 완성 (PRODUCE)
+                  - generic [ref=e55]: expand_more
+                - list [ref=e56]:
+                  - listitem [ref=e57]:
+                    - link "— 공정 진행 스캔 (PDA)" [ref=e58] [cursor=pointer]:
+                      - /url: /mfg/produce/progress/
+                      - generic [ref=e59]: —
+                      - generic [ref=e60]: 공정 진행 스캔 (PDA)
+                  - listitem [ref=e61]:
+                    - link "— LOT 게이트 Override" [ref=e62] [cursor=pointer]:
+                      - /url: /mfg/produce/override/
+                      - generic [ref=e63]: —
+                      - generic [ref=e64]: LOT 게이트 Override
+                  - listitem [ref=e65]:
+                    - link "— 설비 자동 PRODUCE 보정" [ref=e66] [cursor=pointer]:
+                      - /url: /mfg/produce/auto/
+                      - generic [ref=e67]: —
+                      - generic [ref=e68]: 설비 자동 PRODUCE 보정
+                  - listitem [ref=e69]:
+                    - link "— PRODUCE 취소·결재 (묶음 LOT)" [ref=e70] [cursor=pointer]:
+                      - /url: /mfg/produce/cancel/
+                      - generic [ref=e71]: —
+                      - generic [ref=e72]: PRODUCE 취소·결재 (묶음 LOT)
+                  - listitem [ref=e73]:
+                    - link "— 재생산 attempt" [ref=e74] [cursor=pointer]:
+                      - /url: /mfg/produce/reattempt/
+                      - generic [ref=e75]: —
+                      - generic [ref=e76]: 재생산 attempt
+                  - listitem [ref=e77]:
+                    - link "— PRODUCE 이력 조회" [ref=e78] [cursor=pointer]:
+                      - /url: /mfg/produce/history/
+                      - generic [ref=e79]: —
+                      - generic [ref=e80]: PRODUCE 이력 조회
+              - listitem [ref=e81]:
+                - button "공장 간 이동 (TRANSFER) expand_more" [ref=e82]:
+                  - generic [ref=e83]: 공장 간 이동 (TRANSFER)
+                  - generic [ref=e84]: expand_more
+              - listitem [ref=e85]:
+                - button "LOT 추적·회수 (RECALL) expand_more" [ref=e86]:
+                  - generic [ref=e87]: LOT 추적·회수 (RECALL)
+                  - generic [ref=e88]: expand_more
+              - listitem [ref=e89]:
+                - button "외주 공정 (Outsourcing) expand_more" [ref=e90]:
+                  - generic [ref=e91]: 외주 공정 (Outsourcing)
+                  - generic [ref=e92]: expand_more
+          - listitem [ref=e93]:
+            - button "warehouse 위치·재고 expand_more" [ref=e94]:
+              - generic [ref=e95]: warehouse
+              - generic [ref=e96]: 위치·재고
+              - generic [ref=e97]: expand_more
+          - listitem [ref=e98]:
+            - button "verified 품질·SPC·불량 expand_more" [ref=e99]:
+              - generic [ref=e100]: verified
+              - generic [ref=e101]: 품질·SPC·불량
+              - generic [ref=e102]: expand_more
+          - listitem [ref=e103]:
+            - button "engineering 설비관리 expand_more" [ref=e104]:
+              - generic [ref=e105]: engineering
+              - generic [ref=e106]: 설비관리
+              - generic [ref=e107]: expand_more
+          - listitem [ref=e108]:
+            - button "shopping_cart 구매·발주 expand_more" [ref=e109]:
+              - generic [ref=e110]: shopping_cart
+              - generic [ref=e111]: 구매·발주
+              - generic [ref=e112]: expand_more
+          - listitem [ref=e113]:
+            - button "local_shipping 출하 expand_more" [ref=e114]:
+              - generic [ref=e115]: local_shipping
+              - generic [ref=e116]: 출하
+              - generic [ref=e117]: expand_more
+          - listitem [ref=e118]:
+            - button "groups 사용자·권한 expand_more" [ref=e119]:
+              - generic [ref=e120]: groups
+              - generic [ref=e121]: 사용자·권한
+              - generic [ref=e122]: expand_more
+          - listitem [ref=e123]:
+            - button "dashboard 운영현황·대시보드 expand_more" [ref=e124]:
+              - generic [ref=e125]: dashboard
+              - generic [ref=e126]: 운영현황·대시보드
+              - generic [ref=e127]: expand_more
+          - listitem [ref=e128]:
+            - button "settings 시스템관리 expand_more" [ref=e129]:
+              - generic [ref=e130]: settings
+              - generic [ref=e131]: 시스템관리
+              - generic [ref=e132]: expand_more
+    - main [ref=e133]:
+      - generic [ref=e134]:
+        - generic [ref=e135]:
+          - generic [ref=e136]:
+            - generic [ref=e137]: 부재 완성 — PRODUCE
+            - generic [ref=e138]: SCR-MFG-020
+          - paragraph [ref=e139]: WO-P3000-20260506-0007
+          - paragraph [ref=e140]: B01-1-G22C-C-171 · C형 6000mm
+          - paragraph [ref=e141]: "공정: 신선공정"
+        - generic [ref=e142]:
+          - generic [ref=e143]:
+            - paragraph [ref=e144]: 이전 공정 게이트
+            - paragraph [ref=e145]: —
+          - generic [ref=e146]: 정상
+        - generic [ref=e147]:
+          - paragraph [ref=e148]: 부재 바코드 스캔
+          - textbox "B01-1-G22C-C-171" [ref=e149]
+        - generic [ref=e150]:
+          - generic [ref=e151]:
+            - paragraph [ref=e152]: 채번 Lot 미리보기
+            - paragraph [ref=e153]: 신선-20260506-001
+          - generic [ref=e154]: 자동 부여
+        - button "완료 확정" [disabled] [ref=e155]
+        - generic [ref=e156]:
+          - generic [ref=e157]:
+            - generic [ref=e158]: 오늘 완성 이력
+            - generic [ref=e159]: 3건
+          - table [ref=e161]:
+            - rowgroup [ref=e162]:
+              - row "부재코드 Lot 시각" [ref=e163]:
+                - columnheader "부재코드" [ref=e164]
+                - columnheader "Lot" [ref=e165]
+                - columnheader "시각" [ref=e166]
+            - rowgroup [ref=e167]:
+              - row "B01-1-G22C-C-168 신선-20260506-044 09:15" [ref=e168]:
+                - cell "B01-1-G22C-C-168" [ref=e169]
+                - cell "신선-20260506-044" [ref=e170]
+                - cell "09:15" [ref=e171]
+              - row "B01-1-G22C-C-169 신선-20260506-045 10:42" [ref=e172]:
+                - cell "B01-1-G22C-C-169" [ref=e173]
+                - cell "신선-20260506-045" [ref=e174]
+                - cell "10:42" [ref=e175]
+              - row "B01-1-G22C-C-170 신선-20260506-046 13:58" [ref=e176]:
+                - cell "B01-1-G22C-C-170" [ref=e177]
+                - cell "신선-20260506-046" [ref=e178]
+                - cell "13:58" [ref=e179]
+    - generic [ref=e181]: System Active | Port 8080 | Secure Link
+  - button "Open Next.js Dev Tools" [ref=e187] [cursor=pointer]:
+    - img [ref=e188]
+  - alert [ref=e191]

@@ -27,18 +27,18 @@ export default function LoadingDashboardPage() {
       <FieldHeader title="적재 현황" moduleRef={`${ROWS.length}건`} />
       <div className="bg-surface-container-lowest overflow-x-auto">
         <table className="w-full text-left border-collapse">
-          <thead><tr className="bg-surface-container border-b border-outline-variant/10">
+          <thead><tr className="bg-surface-container border-b border-outline">
             {["출하 ID","고객","PKG수","적재완료","총중량","출발 예정","상태"].map(h=>(
               <th key={h} className="px-4 py-2 font-label text-xs uppercase tracking-widest opacity-50">{h}</th>
             ))}</tr></thead>
           <tbody className="font-headline text-sm">
             {ROWS.map(r=>(
-              <tr key={r.id} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20">
+              <tr key={r.id} className="border-b border-outline-variant hover:bg-surface-container-highest/20">
                 <td className="px-4 py-2 text-primary-accent font-mono text-xs">{r.id}</td>
                 <td className="px-4 py-2">{r.customer}</td>
                 <td className="px-4 py-2 tabular-nums text-xs">{r.pkg}</td>
                 <td className="px-4 py-2">
-                  <span className={`tabular-nums text-xs font-bold ${r.loaded===r.pkg?"text-primary-accent":"text-[#f59e0b]"}`}>{r.loaded}/{r.pkg}</span>
+                  <span className={`tabular-nums text-xs font-bold ${r.loaded===r.pkg?"text-primary-accent":"text-warning"}`}>{r.loaded}/{r.pkg}</span>
                 </td>
                 <td className="px-4 py-2 tabular-nums text-xs">{r.weight}</td>
                 <td className="px-4 py-2 tabular-nums text-xs opacity-70">{r.dept}</td>

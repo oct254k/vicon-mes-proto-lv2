@@ -84,7 +84,7 @@ export default function LoginPage() {
               <p className="text-xs font-label uppercase tracking-[0.35em] text-primary-accent mb-3">
                 Manufacturing Execution System
               </p>
-              <h1 className="text-4xl font-headline font-black text-white leading-tight mb-4">
+              <h1 className="text-4xl font-headline font-black text-on-surface leading-tight mb-4">
                 생산관리시스템
               </h1>
               <div className="w-12 h-0.5 bg-primary-accent" />
@@ -94,14 +94,14 @@ export default function LoginPage() {
               {FEATURES.map((f) => (
                 <li key={f.label} className="flex items-center gap-3">
                   <span className="material-symbols-outlined text-primary-accent text-xl">{f.icon}</span>
-                  <span className="text-sm font-label text-white/80">{f.label}</span>
+                  <span className="text-sm font-label text-on-surface/80">{f.label}</span>
                 </li>
               ))}
             </ul>
           </div>
 
           {/* 하단: 버전 */}
-          <p className="text-xs font-label uppercase tracking-widest text-white/30">
+          <p className="text-xs font-label uppercase tracking-widest text-on-surface/30">
             v0.1 · 2026-05-06 · 점검 매주 일 02:00~04:00
           </p>
         </div>

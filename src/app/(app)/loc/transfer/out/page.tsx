@@ -4,7 +4,7 @@ import { useState } from "react";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { FieldHeader } from "@/components/ui/FieldHeader";
 
-const inputCls = "w-full bg-[#131313] border border-white/10 px-3 py-2 text-sm text-white focus:outline-none focus:border-[#00912F]";
+const inputCls = "w-full bg-surface border border-outline/20 px-3 py-2 text-sm text-on-surface focus:outline-none focus:border-[#00912F]";
 
 interface ScannedItem { lot: string; material: string; qty: string; fromLoc: string; }
 
@@ -34,37 +34,37 @@ export default function TransferOutPage() {
         {done ? (
           <div className="bg-[#00912F]/20 border-l-4 border-[#00912F] p-6">
             <p className="font-label font-bold uppercase tracking-widest text-[#00912F] mb-1">출발 확정 완료</p>
-            <p className="text-sm text-white/60">{items.length}건 → {toLoc} 이동 중</p>
-            <button onClick={() => { setDone(false); setItems([]); setToLoc(""); }} className="mt-4 border border-white/20 text-white/60 font-label uppercase text-xs px-4 py-2">
+            <p className="text-sm text-on-surface/60">{items.length}건 → {toLoc} 이동 중</p>
+            <button onClick={() => { setDone(false); setItems([]); setToLoc(""); }} className="mt-4 border border-outline/30 text-on-surface/60 font-label uppercase text-xs px-4 py-2">
               새 이동 시작
             </button>
           </div>
         ) : (
           <>
             <FieldHeader title="1. Lot 스캔" moduleRef="FNC-LOC-050" />
-            <div className="bg-[#1a1a1a] p-4 space-y-3">
+            <div className="bg-surface-elevated p-4 space-y-3">
               <input className={inputCls} placeholder="Lot No 스캔" value={scan} onChange={e=>setScan(e.target.value)} />
-              <button onClick={handleScan} className="w-full bg-[#1a1a1a] border border-white/20 text-white/60 font-label uppercase tracking-widest text-xs py-2 hover:border-[#00912F]">
+              <button onClick={handleScan} className="w-full bg-surface-elevated border border-outline/30 text-on-surface/60 font-label uppercase tracking-widest text-xs py-2 hover:border-[#00912F]">
                 추가
               </button>
             </div>
 
             {items.length > 0 && (
-              <div className="bg-[#1a1a1a]">
+              <div className="bg-surface-elevated">
                 <div className="p-3 border-l-4 border-[#00912F]">
-                  <span className="text-xs font-label uppercase tracking-widest text-white/50">스캔 목록 ({items.length}건)</span>
+                  <span className="text-xs font-label uppercase tracking-widest text-on-surface/50">스캔 목록 ({items.length}건)</span>
                 </div>
                 {items.map((it, i) => (
-                  <div key={i} className="px-4 py-2 border-b border-white/5 text-sm">
+                  <div key={i} className="px-4 py-2 border-b border-outline/10 text-sm">
                     <p className="text-[#00912F] font-headline">{it.lot}</p>
-                    <p className="text-white/50 text-xs">{it.material} / {it.qty} / {it.fromLoc}</p>
+                    <p className="text-on-surface/50 text-xs">{it.material} / {it.qty} / {it.fromLoc}</p>
                   </div>
                 ))}
               </div>
             )}
 
             <FieldHeader title="2. 도착 위치" moduleRef="FNC-LOC-051" />
-            <div className="bg-[#1a1a1a] p-4 space-y-3">
+            <div className="bg-surface-elevated p-4 space-y-3">
               <input className={inputCls} placeholder="도착 위치 스캔 — Y-P1000-..." value={toLoc} onChange={e=>setToLoc(e.target.value)} />
               {toLoc && <p className="text-xs font-label text-[#00912F]">✔ ACTIVE &nbsp;✔ 잔여 충분</p>}
             </div>

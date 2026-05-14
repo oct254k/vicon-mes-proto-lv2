@@ -24,13 +24,13 @@ export default function PONewPage() {
       <FieldHeader title="PR 연계 항목" moduleRef="FNC-PUR-030" />
       <div className="bg-surface-container-lowest overflow-x-auto mb-4">
         <table className="w-full text-left border-collapse">
-          <thead><tr className="bg-surface-container border-b border-outline-variant/10">
+          <thead><tr className="bg-surface-container border-b border-outline">
             {["PR 번호","자재코드","수량","추천 공급사","단가(₩)","소계(₩)"].map(h=>(
               <th key={h} className="px-4 py-2 font-label text-xs uppercase tracking-widest opacity-50">{h}</th>
             ))}</tr></thead>
           <tbody className="font-headline text-sm">
             {PR_CANDIDATES.map(r=>(
-              <tr key={r.id} className="border-b border-outline-variant/5">
+              <tr key={r.id} className="border-b border-outline-variant">
                 <td className="px-4 py-2 text-primary-accent font-mono text-xs">{r.id}</td>
                 <td className="px-4 py-2">{r.mat}</td>
                 <td className="px-4 py-2 tabular-nums">{r.qty}</td>
@@ -59,7 +59,7 @@ export default function PONewPage() {
         <input type="checkbox" id="overlimit" onChange={e=>setOverLimit(e.target.checked)} className="accent-primary-accent" />
         <label htmlFor="overlimit" className="text-xs font-label uppercase">한도 초과 — L3 공장장 추가 결재 요청</label>
       </div>
-      {overLimit && <div className="bg-[#f59e0b]/10 border border-[#f59e0b]/40 px-4 py-2 mb-4 text-xs font-label text-[#f59e0b]">
+      {overLimit && <div className="bg-warning/10 border border-warning/40 px-4 py-2 mb-4 text-xs font-label text-warning">
         ⚠ L3 공장장 결재 워크리스트로 이관됩니다.
       </div>}
       {approved ? (

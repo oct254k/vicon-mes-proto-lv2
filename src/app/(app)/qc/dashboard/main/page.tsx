@@ -10,7 +10,7 @@ const KPI = [
 ];
 
 const DEFECT_DIST = [
-  { type: "DEFECT", count: 12, color: "bg-[#f59e0b]" },
+  { type: "DEFECT", count: 12, color: "bg-warning" },
   { type: "SCRAP", count: 8, color: "bg-error" },
   { type: "CLAIM", count: 3, color: "bg-tertiary" },
   { type: "RETURN", count: 2, color: "bg-surface-container-highest" },
@@ -48,7 +48,7 @@ export default function QCDashboardMain() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-        <div className="bg-surface-container-low border-l-4 border-[#f59e0b] p-5">
+        <div className="bg-surface-container-low border-l-4 border-warning p-5">
           <FieldHeader title="SPC 알림 미해결" moduleRef="FNC-QC-034" />
           <div className="flex gap-6 mb-3">
             <div><p className="text-xs opacity-50 font-label uppercase">OPEN</p><p className="font-headline font-black text-2xl">8</p></div>

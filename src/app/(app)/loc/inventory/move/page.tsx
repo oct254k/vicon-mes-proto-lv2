@@ -42,9 +42,9 @@ export default function InventoryMovePage() {
 
       <div className="flex gap-4 mb-8">
         {KPI.map(k => (
-          <div key={k.label} className="bg-[#1a1a1a] border-l-4 border-[#00912F] px-6 py-4">
-            <p className="text-xs font-label uppercase tracking-widest text-white/40 mb-1">{k.label}</p>
-            <p className="text-2xl font-black font-headline text-white">{k.value}</p>
+          <div key={k.label} className="bg-surface-elevated border-l-4 border-[#00912F] px-6 py-4">
+            <p className="text-xs font-label uppercase tracking-widest text-on-surface/40 mb-1">{k.label}</p>
+            <p className="text-2xl font-black font-headline text-on-surface">{k.value}</p>
             <div className="mt-2"><StatusBadge type={k.badge} label={k.badge.toUpperCase()} /></div>
           </div>
         ))}
@@ -57,10 +57,10 @@ export default function InventoryMovePage() {
         <button className="bg-[#00912F] text-black font-label font-bold uppercase tracking-widest px-5 py-2 text-xs hover:opacity-90">
           [이동 요청 생성 ▶]
         </button>
-        <button className="bg-[#1a1a1a] border border-white/10 text-white/60 font-label uppercase tracking-widest px-5 py-2 text-xs hover:border-white/30">
+        <button className="bg-surface-elevated border border-outline/20 text-on-surface/60 font-label uppercase tracking-widest px-5 py-2 text-xs hover:border-outline/40">
           [PDA 스캔 모드 ▶]
         </button>
-        <button className="bg-[#1a1a1a] border border-white/10 text-white/60 font-label uppercase tracking-widest px-5 py-2 text-xs hover:border-white/30">
+        <button className="bg-surface-elevated border border-outline/20 text-on-surface/60 font-label uppercase tracking-widest px-5 py-2 text-xs hover:border-outline/40">
           [엑셀 다운]
         </button>
       </div>

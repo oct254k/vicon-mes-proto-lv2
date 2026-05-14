@@ -1,0 +1,42 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - img "성지그룹" [ref=e5]
+      - generic [ref=e6]: MES · 데크 3공장
+    - generic [ref=e7]:
+      - generic [ref=e8]: 로그인SCR-USR-020
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - generic [ref=e11]: 사번
+          - textbox "예) park.planner" [ref=e12]: park.planner
+        - generic [ref=e13]:
+          - generic [ref=e14]: 비밀번호 / PIN
+          - textbox "••••••••" [ref=e15]: Demo1234!
+        - generic [ref=e16]:
+          - generic [ref=e17]: 단말 ID (자동)
+          - textbox [ref=e18]: WS-PC-008
+        - generic [ref=e19]:
+          - generic [ref=e20]: 잔여 시도
+          - generic [ref=e21]: 5 / 5
+        - button "로그인 ▶" [ref=e22]
+        - button "SSO 로그인 (미정)" [ref=e23]
+      - paragraph [ref=e25]: 비밀번호 분실 → 시스템 관리자 문의
+    - generic [ref=e26]:
+      - paragraph [ref=e27]: 데모 계정
+      - generic [ref=e28]:
+        - button "park.planner박계획 · PLANNER · P3000 제3 이천공장 (데크)" [active] [ref=e29]:
+          - text: park.planner
+          - generic [ref=e30]: 박계획 · PLANNER · P3000 제3 이천공장 (데크)
+        - button "kim.worker김작업 · WORKER · P3000 제3 이천공장 (데크)" [ref=e31]:
+          - text: kim.worker
+          - generic [ref=e32]: 김작업 · WORKER · P3000 제3 이천공장 (데크)
+        - button "lee.pack이포장 · PACKAGER · P3000 제3 이천공장 (데크)" [ref=e33]:
+          - text: lee.pack
+          - generic [ref=e34]: 이포장 · PACKAGER · P3000 제3 이천공장 (데크)
+        - button "choi.ship최출하 · SHP-STAFF · P3000 제3 이천공장 (데크)" [ref=e35]:
+          - text: choi.ship
+          - generic [ref=e36]: 최출하 · SHP-STAFF · P3000 제3 이천공장 (데크)
+    - paragraph [ref=e37]: v0.1 · 2026-05-06 · 점검 매주 일 02:00~04:00
+  - button "Open Next.js Dev Tools" [ref=e44] [cursor=pointer]:
+    - img [ref=e45]
+  - alert [ref=e38]

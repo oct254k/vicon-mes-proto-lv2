@@ -39,7 +39,7 @@ export default function GrantRequestPage() {
             <textarea className={INPUT} rows={3} placeholder="신청 사유를 상세히 기술하십시오"></textarea>
           </div>
         </div>
-        <div className="mt-3 p-3 bg-surface-container border border-outline-variant/10 text-xs font-body text-on-surface/50">
+        <div className="mt-3 p-3 bg-surface-container border border-outline text-xs font-body text-on-surface/50">
           ⓘ 자기 한도 검증: 신청자(L2)는 L3 이하 레벨 상향만 신청 가능. L3 이상 신청 시 L4 ADMIN 결재 필요.
         </div>
       </div>

@@ -23,13 +23,13 @@ export default function ScheduleVehiclePage() {
           <button className="px-3 py-1 bg-primary-accent text-black text-xs font-label uppercase">+ 배차 등록</button>
         </div>
         <table className="w-full text-left border-collapse">
-          <thead><tr className="bg-surface-container border-b border-outline-variant/10">
+          <thead><tr className="bg-surface-container border-b border-outline">
             {["배차 ID","출하 ID","차량번호","운전자","출발 예정","목적지","적재 중량","상태"].map(h=>(
               <th key={h} className="px-4 py-2 font-label text-xs uppercase tracking-widest opacity-50">{h}</th>
             ))}</tr></thead>
           <tbody className="font-headline text-sm">
             {MOCK.map(r=>(
-              <tr key={r.id} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20">
+              <tr key={r.id} className="border-b border-outline-variant hover:bg-surface-container-highest/20">
                 <td className="px-4 py-2 text-primary-accent font-mono text-xs">{r.id}</td>
                 <td className="px-4 py-2 font-mono text-xs opacity-70">{r.shp}</td>
                 <td className="px-4 py-2 font-mono text-xs">{r.plate}</td>

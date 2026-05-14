@@ -5,7 +5,7 @@ import { PageHeader } from "@/components/ui/PageHeader";
 const KPI = [
   { label: "진행 수주",  value: "47건",  color: "text-primary-accent" },
   { label: "지연 위험",  value: "3건",   color: "text-error" },
-  { label: "D-3 이내",  value: "5동",   color: "text-[#f59e0b]" },
+  { label: "D-3 이내",  value: "5동",   color: "text-warning" },
   { label: "진척률 평균", value: "82%",  color: "text-primary-accent" },
 ];
 
@@ -41,7 +41,7 @@ export default function SOProgressPage() {
         </div>
         <table className="w-full text-left border-collapse">
           <thead>
-            <tr className="bg-surface-container border-b border-outline-variant/10">
+            <tr className="bg-surface-container border-b border-outline">
               {["수주번호","거래처","현장명","동","진척률","D-day","상태"].map(h=>(
                 <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
               ))}
@@ -49,7 +49,7 @@ export default function SOProgressPage() {
           </thead>
           <tbody className="font-headline text-sm">
             {ROWS.map(r=>(
-              <tr key={r.so} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20">
+              <tr key={r.so} className="border-b border-outline-variant hover:bg-surface-container-highest/20">
                 <td className="px-4 py-2 tabular-nums text-primary-accent">{r.so}</td>
                 <td className="px-4 py-2">{r.customer}</td>
                 <td className="px-4 py-2">{r.site}</td>
@@ -57,14 +57,14 @@ export default function SOProgressPage() {
                 <td className="px-4 py-2 tabular-nums">
                   <div className="flex items-center gap-2">
                     <div className="h-2 w-24 bg-surface-container-highest/30">
-                      <div className={`h-2 ${r.progress>=80?"bg-primary-accent":r.progress>=60?"bg-[#f59e0b]":"bg-error"}`} style={{width:`${r.progress}%`}} />
+                      <div className={`h-2 ${r.progress>=80?"bg-primary-accent":r.progress>=60?"bg-warning":"bg-error"}`} style={{width:`${r.progress}%`}} />
                     </div>
                     <span>{r.progress}%</span>
                   </div>
                 </td>
-                <td className={`px-4 py-2 tabular-nums ${r.dday<=3?"text-error":r.dday<=7?"text-[#f59e0b]":"text-on-surface"}`}>D-{r.dday}</td>
+                <td className={`px-4 py-2 tabular-nums ${r.dday<=3?"text-error":r.dday<=7?"text-warning":"text-on-surface"}`}>D-{r.dday}</td>
                 <td className="px-4 py-2">
-                  <span className={`text-xs px-2 py-0.5 font-label ${r.status==="지연위험"?"text-error":r.status==="출하임박"?"text-[#f59e0b]":"text-primary-accent"}`}>{r.status}</span>
+                  <span className={`text-xs px-2 py-0.5 font-label ${r.status==="지연위험"?"text-error":r.status==="출하임박"?"text-warning":"text-primary-accent"}`}>{r.status}</span>
                 </td>
               </tr>
             ))}

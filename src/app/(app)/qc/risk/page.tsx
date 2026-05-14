@@ -142,7 +142,7 @@ export default function QCRiskPage() {
             {MOCK_IMPACT.map(part => (
               <div key={part.part} className="mb-4">
                 {/* 부재 레벨 */}
-                <div className="flex items-center gap-3 py-2 border-b border-outline-variant/10">
+                <div className="flex items-center gap-3 py-2 border-b border-outline">
                   <span className="material-symbols-outlined text-primary-accent text-sm">inventory_2</span>
                   <span className="font-bold text-sm text-primary-accent">{part.part}</span>
                   <span className="text-xs text-on-surface/60">{part.desc}</span>
@@ -172,7 +172,7 @@ export default function QCRiskPage() {
                                   {wo.shipments.map(s => (
                                     <li key={s} className="py-0.5 flex items-center gap-2">
                                       <span className="text-xs opacity-40">출하</span>
-                                      <span className="text-xs text-[#f59e0b] font-label">{s}</span>
+                                      <span className="text-xs text-warning font-label">{s}</span>
                                       <StatusBadge type="warning" label="확산 위험" />
                                     </li>
                                   ))}

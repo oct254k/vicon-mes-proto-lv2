@@ -48,7 +48,7 @@ export default function PlantIntegratedProgressPage() {
 
       {/* 상태 요약 */}
       <div className="grid grid-cols-4 gap-3 mb-5">
-        {[["전체",filtered.length,"text-on-surface"],["지연",filtered.filter(r=>r.status==="지연").length,"text-error"],["출하임박",filtered.filter(r=>r.status==="출하임박").length,"text-[#f59e0b]"],["정상",filtered.filter(r=>r.status==="정상"||r.status==="진행").length,"text-primary-accent"]].map(([l,v,c])=>(
+        {[["전체",filtered.length,"text-on-surface"],["지연",filtered.filter(r=>r.status==="지연").length,"text-error"],["출하임박",filtered.filter(r=>r.status==="출하임박").length,"text-warning"],["정상",filtered.filter(r=>r.status==="정상"||r.status==="진행").length,"text-primary-accent"]].map(([l,v,c])=>(
           <div key={l as string} className="bg-surface-container border-l-4 border-primary-accent p-4">
             <p className="text-xs font-label uppercase tracking-widest text-on-surface-variant mb-1">{l}</p>
             <p className={`text-2xl font-black tabular-nums ${c}`}>{v}</p>

@@ -17,14 +17,14 @@ const MATRIX: Record<string, Record<string, string>> = {
 
 export default function MenuMatrixPage() {
   return (
-    <div className="p-8 bg-[#131313] min-h-screen text-on-surface">
+    <div className="p-8 bg-surface min-h-screen text-on-surface">
       <PageHeader title="메뉴 권한 매트릭스" accent="MATRIX" nodeRef="SCR-SYS-021" status="PROTOTYPE"
         description="메뉴 × 역할 권한 매트릭스 — R(읽기) RW(읽기·쓰기) — (FNC-SYS-021·025)" />
       <FieldHeader title="메뉴 × 역할 매트릭스" moduleRef="FNC-SYS-021" />
       <div className="overflow-x-auto">
         <table className="w-full text-left border-collapse bg-surface-container-lowest">
           <thead>
-            <tr className="bg-surface-container border-b border-outline-variant/10">
+            <tr className="bg-surface-container border-b border-outline">
               <th className="px-4 py-2 font-label uppercase text-xs opacity-50 font-semibold min-w-[140px]">메뉴</th>
               {ROLES.map(r => (
                 <th key={r} className="px-4 py-2 font-label uppercase text-xs opacity-50 font-semibold text-center">{r}</th>
@@ -33,7 +33,7 @@ export default function MenuMatrixPage() {
           </thead>
           <tbody className="font-headline text-sm">
             {MENUS.map(menu => (
-              <tr key={menu} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors">
+              <tr key={menu} className="border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors">
                 <td className="px-4 py-2 text-xs font-label">{menu}</td>
                 {ROLES.map(role => {
                   const val = MATRIX[menu]?.[role] ?? "—";

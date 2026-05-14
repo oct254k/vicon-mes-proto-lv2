@@ -20,7 +20,7 @@ const healthStyle = (h: string) =>
 
 export default function SYSIntegrationPage() {
   return (
-    <div className="p-8 bg-[#131313] min-h-screen text-on-surface">
+    <div className="p-8 bg-surface min-h-screen text-on-surface">
       <PageHeader title="외부 연동" accent="API Token" nodeRef="SCR-SYS-070" description="외부 시스템 API Token 발급·무효화 및 연동 헬스 모니터" />
 
       <div className="flex gap-3 mb-4">
@@ -39,7 +39,7 @@ export default function SYSIntegrationPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="bg-surface-container border-b border-outline-variant/10">
+              <tr className="bg-surface-container border-b border-outline">
                 {["Token ID", "시스템명", "상태", "발급일", "만료일", "헬스", "응답"].map(h => (
                   <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
                 ))}
@@ -49,7 +49,7 @@ export default function SYSIntegrationPage() {
               {TOKENS.map(row => {
                 const badge = TOKEN_STATUS[row.status] ?? { type: "idle" as const, label: row.status };
                 return (
-                  <tr key={row.id} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors">
+                  <tr key={row.id} className="border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors">
                     <td className="px-4 py-2 text-xs font-label text-[#00912F]">{row.id}</td>
                     <td className="px-4 py-2">{row.system}</td>
                     <td className="px-4 py-2"><StatusBadge type={badge.type} label={badge.label} /></td>
@@ -65,9 +65,9 @@ export default function SYSIntegrationPage() {
         </div>
       </section>
 
-      <div className="p-4 bg-surface-container border border-outline-variant/10">
+      <div className="p-4 bg-surface-container border border-outline">
         <p className="text-xs font-label uppercase tracking-widest text-on-surface-variant opacity-60 mb-1">헬스 신선도</p>
-        <p className="text-sm text-on-surface-variant">5분 주기 자동 갱신 — <span className="text-[#f59e0b]">EXPIRED/REVOKED 토큰 접속 시 감사 1행 기록</span></p>
+        <p className="text-sm text-on-surface-variant">5분 주기 자동 갱신 — <span className="text-warning">EXPIRED/REVOKED 토큰 접속 시 감사 1행 기록</span></p>
       </div>
     </div>
   );

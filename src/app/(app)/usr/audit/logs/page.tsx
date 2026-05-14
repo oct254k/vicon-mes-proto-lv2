@@ -57,7 +57,7 @@ export default function AuditLogsPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse text-sm whitespace-nowrap">
             <thead>
-              <tr className="bg-surface-container border-b border-outline-variant/10">
+              <tr className="bg-surface-container border-b border-outline">
                 {["로그 ID", "이벤트 유형", "사용자", "단말", "IP", "발생 시각", "결과", "상세"].map((h) => (
                   <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
                 ))}
@@ -65,7 +65,7 @@ export default function AuditLogsPage() {
             </thead>
             <tbody className="font-headline">
               {LOGS.map((l, i) => (
-                <tr key={i} className={`border-b border-outline-variant/5 hover:bg-surface-container-highest/20 ${l.result === "FAIL" ? "bg-error/5" : ""}`}>
+                <tr key={i} className={`border-b border-outline-variant hover:bg-surface-container-highest/20 ${l.result === "FAIL" ? "bg-error/5" : ""}`}>
                   <td className="px-4 py-2 tabular-nums text-xs opacity-70">{l.logId}</td>
                   <td className="px-4 py-2 text-xs font-bold">{l.eventType}</td>
                   <td className="px-4 py-2 text-xs">{l.userId}</td>

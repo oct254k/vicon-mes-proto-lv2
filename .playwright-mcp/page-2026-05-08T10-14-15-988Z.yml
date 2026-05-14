@@ -1,0 +1,211 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "성지그룹 Logo" [ref=e5] [cursor=pointer]:
+          - /url: /ops/
+          - img "성지그룹 Logo" [ref=e6]
+        - generic [ref=e7]:
+          - link "대시보드" [ref=e8] [cursor=pointer]:
+            - /url: /ops/
+          - link "이력추적" [ref=e9] [cursor=pointer]:
+            - /url: /trace/
+          - link "알람" [ref=e10] [cursor=pointer]:
+            - /url: /alarm/
+      - generic [ref=e11]:
+        - button "book_2" [ref=e12] [cursor=pointer]
+        - generic [ref=e13] [cursor=pointer]: notifications
+        - generic [ref=e14] [cursor=pointer]: settings
+        - generic [ref=e16]: person
+    - complementary [ref=e17]:
+      - generic [ref=e19]:
+        - generic [ref=e20]: search
+        - textbox "메뉴 검색... (/)" [ref=e21]
+      - navigation [ref=e22]:
+        - list [ref=e23]:
+          - listitem [ref=e24]:
+            - button "inventory_2 기준정보 expand_more" [ref=e25]:
+              - generic [ref=e26]: inventory_2
+              - generic [ref=e27]: 기준정보
+              - generic [ref=e28]: expand_more
+          - listitem [ref=e29]:
+            - button "request_quote 수주·생산계획·MRP expand_more" [ref=e30]:
+              - generic [ref=e31]: request_quote
+              - generic [ref=e32]: 수주·생산계획·MRP
+              - generic [ref=e33]: expand_more
+          - listitem [ref=e34]:
+            - button "assignment 작업지시·부재·패킹 expand_more" [ref=e35]:
+              - generic [ref=e36]: assignment
+              - generic [ref=e37]: 작업지시·부재·패킹
+              - generic [ref=e38]: expand_more
+          - listitem [ref=e39]:
+            - button "precision_manufacturing 생산실행·추적성 expand_more" [ref=e40]:
+              - generic [ref=e41]: precision_manufacturing
+              - generic [ref=e42]: 생산실행·추적성
+              - generic [ref=e43]: expand_more
+          - listitem [ref=e44]:
+            - button "warehouse 위치·재고 expand_more" [ref=e45]:
+              - generic [ref=e46]: warehouse
+              - generic [ref=e47]: 위치·재고
+              - generic [ref=e48]: expand_more
+          - listitem [ref=e49]:
+            - button "verified 품질·SPC·불량 expand_more" [ref=e50]:
+              - generic [ref=e51]: verified
+              - generic [ref=e52]: 품질·SPC·불량
+              - generic [ref=e53]: expand_more
+          - listitem [ref=e54]:
+            - button "engineering 설비관리 expand_more" [ref=e55]:
+              - generic [ref=e56]: engineering
+              - generic [ref=e57]: 설비관리
+              - generic [ref=e58]: expand_more
+          - listitem [ref=e59]:
+            - button "shopping_cart 구매·발주 expand_more" [ref=e60]:
+              - generic [ref=e61]: shopping_cart
+              - generic [ref=e62]: 구매·발주
+              - generic [ref=e63]: expand_more
+          - listitem [ref=e64]:
+            - button "local_shipping 출하 expand_more" [ref=e65]:
+              - generic [ref=e66]: local_shipping
+              - generic [ref=e67]: 출하
+              - generic [ref=e68]: expand_more
+          - listitem [ref=e69]:
+            - button "groups 사용자·권한 expand_more" [ref=e70]:
+              - generic [ref=e71]: groups
+              - generic [ref=e72]: 사용자·권한
+              - generic [ref=e73]: expand_more
+          - listitem [ref=e74]:
+            - button "dashboard 운영현황·대시보드 expand_more" [ref=e75]:
+              - generic [ref=e76]: dashboard
+              - generic [ref=e77]: 운영현황·대시보드
+              - generic [ref=e78]: expand_more
+            - list [ref=e79]:
+              - listitem [ref=e80]:
+                - link "개인 홈·즐겨찾기" [ref=e81] [cursor=pointer]:
+                  - /url: /ops/home/
+                  - generic [ref=e82]: 개인 홈·즐겨찾기
+              - listitem [ref=e83]:
+                - button "라인 상황판 expand_more" [ref=e84]:
+                  - generic [ref=e85]: 라인 상황판
+                  - generic [ref=e86]: expand_more
+              - listitem [ref=e87]:
+                - button "Plant 종합 대시보드 expand_more" [ref=e88]:
+                  - generic [ref=e89]: Plant 종합 대시보드
+                  - generic [ref=e90]: expand_more
+              - listitem [ref=e91]:
+                - button "다공장 종합 expand_more" [ref=e92]:
+                  - generic [ref=e93]: 다공장 종합
+                  - generic [ref=e94]: expand_more
+              - listitem [ref=e95]:
+                - button "수주별 진척 expand_more" [ref=e96]:
+                  - generic [ref=e97]: 수주별 진척
+                  - generic [ref=e98]: expand_more
+              - listitem [ref=e99]:
+                - button "WO·부재 진척 보드 expand_more" [ref=e100]:
+                  - generic [ref=e101]: WO·부재 진척 보드
+                  - generic [ref=e102]: expand_more
+              - listitem [ref=e103]:
+                - button "생산·불량·가동 통합 expand_more" [ref=e104]:
+                  - generic [ref=e105]: 생산·불량·가동 통합
+                  - generic [ref=e106]: expand_more
+              - listitem [ref=e107]:
+                - button "재고 종합 시각화 expand_more" [ref=e108]:
+                  - generic [ref=e109]: 재고 종합 시각화
+                  - generic [ref=e110]: expand_more
+              - listitem [ref=e111]:
+                - button "알림 센터 expand_more" [ref=e112]:
+                  - generic [ref=e113]: 알림 센터
+                  - generic [ref=e114]: expand_more
+          - listitem [ref=e115]:
+            - button "settings 시스템관리 expand_more" [ref=e116]:
+              - generic [ref=e117]: settings
+              - generic [ref=e118]: 시스템관리
+              - generic [ref=e119]: expand_more
+    - main [ref=e120]:
+      - generic [ref=e121]:
+        - generic [ref=e122]:
+          - heading "OPS 운영현황 SCR-OPS-000" [level=1] [ref=e124]
+          - generic [ref=e125]:
+            - generic [ref=e126]: "Node: FNC-OPS-001,007~009"
+            - generic [ref=e127]: "System Status: CALIBRATED"
+          - paragraph [ref=e128]: 역할별 KPI 통합 카드 + 즐겨찾기 · 60초 갱신
+        - generic [ref=e129]:
+          - generic [ref=e130]:
+            - paragraph [ref=e131]: OEE
+            - paragraph [ref=e132]: 78.4%
+            - paragraph [ref=e133]: "+2.1"
+          - generic [ref=e134]:
+            - paragraph [ref=e135]: 불량률
+            - paragraph [ref=e136]: 1.8%
+            - paragraph [ref=e137]: "-0.3"
+          - generic [ref=e138]:
+            - paragraph [ref=e139]: 진척률
+            - paragraph [ref=e140]: 92%
+          - generic [ref=e141]:
+            - paragraph [ref=e142]: 알림 적체
+            - paragraph [ref=e143]: 12건
+          - generic [ref=e144]:
+            - paragraph [ref=e145]: 가동 라인
+            - paragraph [ref=e146]: 12/15
+          - generic [ref=e147]:
+            - paragraph [ref=e148]: 출하 D-1
+            - paragraph [ref=e149]: 3동
+          - generic [ref=e150]:
+            - paragraph [ref=e151]: 재고 부족
+            - paragraph [ref=e152]: 4건
+          - generic [ref=e153]:
+            - paragraph [ref=e154]: 미해결 SPC
+            - paragraph [ref=e155]: 2건
+        - paragraph [ref=e156]: 즐겨찾기
+        - generic [ref=e157]:
+          - generic [ref=e158] [cursor=pointer]:
+            - paragraph [ref=e159]: SCR-OPS-020
+            - paragraph [ref=e160]: Plant 종합 P3000
+            - paragraph [ref=e161]: 마지막 진입 5분 전
+          - generic [ref=e162] [cursor=pointer]:
+            - paragraph [ref=e163]: SCR-OPS-010
+            - paragraph [ref=e164]: 라인 상황판 WC=L01
+            - paragraph [ref=e165]: 10초 갱신
+          - generic [ref=e166] [cursor=pointer]:
+            - paragraph [ref=e167]: SCR-OPS-080
+            - paragraph [ref=e168]: 알림 센터
+            - paragraph [ref=e169]: 미해결 12건
+          - generic [ref=e171] [cursor=pointer]: + 카드 추가
+        - paragraph [ref=e172]: 8 대시보드 바로가기
+        - generic [ref=e173]:
+          - link "SCR-OPS-010 라인 상황판" [ref=e174] [cursor=pointer]:
+            - /url: /ops/line
+            - paragraph [ref=e175]: SCR-OPS-010
+            - paragraph [ref=e176]: 라인 상황판
+          - link "SCR-OPS-020 Plant 종합" [ref=e177] [cursor=pointer]:
+            - /url: /ops/plant/4q
+            - paragraph [ref=e178]: SCR-OPS-020
+            - paragraph [ref=e179]: Plant 종합
+          - link "SCR-OPS-030 다공장" [ref=e180] [cursor=pointer]:
+            - /url: /ops/multi-plant
+            - paragraph [ref=e181]: SCR-OPS-030
+            - paragraph [ref=e182]: 다공장
+          - link "SCR-OPS-040 수주별 진척" [ref=e183] [cursor=pointer]:
+            - /url: /ops/so-progress
+            - paragraph [ref=e184]: SCR-OPS-040
+            - paragraph [ref=e185]: 수주별 진척
+          - link "SCR-OPS-050 WO 진척" [ref=e186] [cursor=pointer]:
+            - /url: /ops/wo-progress/board
+            - paragraph [ref=e187]: SCR-OPS-050
+            - paragraph [ref=e188]: WO 진척
+          - link "SCR-OPS-060 생산·불량·가동" [ref=e189] [cursor=pointer]:
+            - /url: /ops/combined
+            - paragraph [ref=e190]: SCR-OPS-060
+            - paragraph [ref=e191]: 생산·불량·가동
+          - link "SCR-OPS-070 재고 종합" [ref=e192] [cursor=pointer]:
+            - /url: /ops/inventory/matrix
+            - paragraph [ref=e193]: SCR-OPS-070
+            - paragraph [ref=e194]: 재고 종합
+          - link "SCR-OPS-080 알림 센터" [ref=e195] [cursor=pointer]:
+            - /url: /ops/notification/inbox
+            - paragraph [ref=e196]: SCR-OPS-080
+            - paragraph [ref=e197]: 알림 센터
+        - paragraph [ref=e198]: 마지막 갱신 2026-05-05 14:32:18
+    - generic [ref=e200]: System Active | Port 8080 | Secure Link
+  - button "Open Next.js Dev Tools" [ref=e206] [cursor=pointer]:
+    - img [ref=e207]
+  - alert [ref=e210]

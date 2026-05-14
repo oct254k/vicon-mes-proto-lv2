@@ -54,12 +54,12 @@ export default function LOCTransferPage() {
       {confirmed ? (
         <div className="bg-[#00912F]/20 border-l-4 border-[#00912F] p-6 mb-8">
           <p className="font-label font-bold uppercase tracking-widest text-[#00912F] mb-1">이동 확정 완료</p>
-          <p className="text-sm text-white/60">
+          <p className="text-sm text-on-surface/60">
             {fromLoc} → {toLoc} / {scanList.length}건 이동 완료
           </p>
           <button
             onClick={handleReset}
-            className="mt-4 border border-white/20 text-white/60 font-label uppercase tracking-widest text-xs px-4 py-2 hover:border-white/40 transition-colors"
+            className="mt-4 border border-outline/30 text-on-surface/60 font-label uppercase tracking-widest text-xs px-4 py-2 hover:border-outline/50 transition-colors"
           >
             새 이동 시작
           </button>
@@ -69,22 +69,22 @@ export default function LOCTransferPage() {
           <FieldHeader title="이동 정보" moduleRef="SCR-LOC-030" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6 max-w-lg">
             <div>
-              <label className="block text-xs font-label uppercase tracking-widest text-white/50 mb-2">출발 위치</label>
+              <label className="block text-xs font-label uppercase tracking-widest text-on-surface/50 mb-2">출발 위치</label>
               <select
                 value={fromLoc}
                 onChange={(e) => setFromLoc(e.target.value)}
-                className="w-full bg-[#1a1a1a] border border-white/10 px-4 py-2 text-sm text-white focus:outline-none focus:border-[#00912F]"
+                className="w-full bg-surface-elevated border border-outline/20 px-4 py-2 text-sm text-on-surface focus:outline-none focus:border-[#00912F]"
               >
                 <option value="">선택 또는 스캔</option>
                 {locationOptions.map((l) => <option key={l}>{l}</option>)}
               </select>
             </div>
             <div>
-              <label className="block text-xs font-label uppercase tracking-widest text-white/50 mb-2">도착 위치</label>
+              <label className="block text-xs font-label uppercase tracking-widest text-on-surface/50 mb-2">도착 위치</label>
               <select
                 value={toLoc}
                 onChange={(e) => setToLoc(e.target.value)}
-                className="w-full bg-[#1a1a1a] border border-white/10 px-4 py-2 text-sm text-white focus:outline-none focus:border-[#00912F]"
+                className="w-full bg-surface-elevated border border-outline/20 px-4 py-2 text-sm text-on-surface focus:outline-none focus:border-[#00912F]"
               >
                 <option value="">선택</option>
                 {locationOptions.filter((l) => l !== fromLoc).map((l) => <option key={l}>{l}</option>)}
@@ -97,36 +97,36 @@ export default function LOCTransferPage() {
             <input
               value={scanInput}
               onChange={(e) => setScanInput(e.target.value)}
-              className="flex-1 bg-[#1a1a1a] border border-white/10 px-4 py-2 text-sm text-white focus:outline-none focus:border-[#00912F]"
+              className="flex-1 bg-surface-elevated border border-outline/20 px-4 py-2 text-sm text-on-surface focus:outline-none focus:border-[#00912F]"
               placeholder="바코드 스캔 또는 자재 코드 입력"
             />
             <button
               type="submit"
-              className="bg-[#1a1a1a] border border-white/20 text-white/60 font-label uppercase tracking-widest text-xs px-4 py-2 hover:border-[#00912F] transition-colors"
+              className="bg-surface-elevated border border-outline/30 text-on-surface/60 font-label uppercase tracking-widest text-xs px-4 py-2 hover:border-[#00912F] transition-colors"
             >
               추가
             </button>
           </form>
 
           {scanList.length > 0 && (
-            <div className="bg-[#1a1a1a] mb-6 max-w-lg">
+            <div className="bg-surface-elevated mb-6 max-w-lg">
               <div className="p-3 border-l-4 border-[#00912F]">
-                <span className="text-xs font-label uppercase tracking-widest text-white/50">스캔 목록 ({scanList.length}건)</span>
+                <span className="text-xs font-label uppercase tracking-widest text-on-surface/50">스캔 목록 ({scanList.length}건)</span>
               </div>
               <table className="w-full text-left">
                 <thead>
-                  <tr className="border-b border-white/5">
-                    <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-white/40">코드</th>
-                    <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-white/40">자재명</th>
-                    <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-white/40">수량</th>
+                  <tr className="border-b border-outline/10">
+                    <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-on-surface/40">코드</th>
+                    <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-on-surface/40">자재명</th>
+                    <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-on-surface/40">수량</th>
                   </tr>
                 </thead>
                 <tbody>
                   {scanList.map((item, i) => (
-                    <tr key={i} className="border-b border-white/5">
+                    <tr key={i} className="border-b border-outline/10">
                       <td className="px-4 py-2 text-sm text-[#00912F] font-headline">{item.code}</td>
-                      <td className="px-4 py-2 text-sm text-white/70">{item.name}</td>
-                      <td className="px-4 py-2 text-sm text-white/70">{item.qty}</td>
+                      <td className="px-4 py-2 text-sm text-on-surface/70">{item.name}</td>
+                      <td className="px-4 py-2 text-sm text-on-surface/70">{item.qty}</td>
                     </tr>
                   ))}
                 </tbody>

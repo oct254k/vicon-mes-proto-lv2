@@ -53,12 +53,12 @@ function WODetail({ wo, onClose }: { wo: WO; onClose: () => void }) {
   return (
     <div className="mt-4 border border-outline-variant/20 bg-surface-container-lowest">
       {/* 헤더 */}
-      <div className="flex items-center justify-between px-5 py-3 bg-surface-container border-b border-outline-variant/10 border-l-4 border-primary-accent">
+      <div className="flex items-center justify-between px-5 py-3 bg-surface-container border-b border-outline border-l-4 border-primary-accent">
         <div>
           <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-0.5">WO 상세</p>
           <p className="font-headline font-black text-base">{wo.id}</p>
         </div>
-        <button onClick={onClose} className="font-label text-xs uppercase tracking-widest opacity-40 hover:opacity-80 px-3 py-1 border border-outline-variant/20 hover:border-white/30 transition-colors">
+        <button onClick={onClose} className="font-label text-xs uppercase tracking-widest opacity-40 hover:opacity-80 px-3 py-1 border border-outline-variant/20 hover:border-outline/50 transition-colors">
           닫기 ✕
         </button>
       </div>
@@ -97,7 +97,7 @@ function WODetail({ wo, onClose }: { wo: WO; onClose: () => void }) {
                 WO 취소
               </button>
             )}
-            <a href="/wo/orders/release" className="px-3 py-1.5 text-xs font-label uppercase tracking-widest border border-outline-variant/20 hover:border-white/30 transition-colors">
+            <a href="/wo/orders/release" className="px-3 py-1.5 text-xs font-label uppercase tracking-widest border border-outline-variant/20 hover:border-outline/50 transition-colors">
               재발행
             </a>
           </div>
@@ -111,7 +111,7 @@ function WODetail({ wo, onClose }: { wo: WO; onClose: () => void }) {
           ) : (
             <table className="w-full text-xs mt-2 border-collapse">
               <thead>
-                <tr className="border-b border-outline-variant/10">
+                <tr className="border-b border-outline">
                   {["부재코드", "타입", "길이", "자재", "진행"].map(h => (
                     <th key={h} className="px-2 py-1.5 font-label uppercase tracking-widest text-[10px] opacity-40 text-left">{h}</th>
                   ))}
@@ -119,7 +119,7 @@ function WODetail({ wo, onClose }: { wo: WO; onClose: () => void }) {
               </thead>
               <tbody>
                 {wo.lines.map((l, i) => (
-                  <tr key={i} className="border-b border-outline-variant/5 hover:bg-surface-container/50">
+                  <tr key={i} className="border-b border-outline-variant hover:bg-surface-container/50">
                     <td className="px-2 py-2 text-primary-accent font-bold font-headline">{l.memberCode}</td>
                     <td className="px-2 py-2 font-label">{l.type}</td>
                     <td className="px-2 py-2 tabular-nums font-label">{l.len}</td>
@@ -213,7 +213,7 @@ export default function WOOrdersPage() {
       <div className="overflow-x-auto">
         <table className="w-full text-left border-collapse bg-surface-container-lowest">
           <thead>
-            <tr className="bg-surface-container border-b border-outline-variant/10">
+            <tr className="bg-surface-container border-b border-outline">
               {["WO ID","유형","Plant","상태","우선순위","부재 수","발행일"].map(c => (
                 <th key={c} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50">{c}</th>
               ))}
@@ -226,7 +226,7 @@ export default function WOOrdersPage() {
               return (
                 <tr key={row.id}
                   onClick={() => setSelected(isSelected ? null : row)}
-                  className={`border-b border-outline-variant/5 cursor-pointer transition-colors ${
+                  className={`border-b border-outline-variant cursor-pointer transition-colors ${
                     isSelected
                       ? "bg-primary-accent/10 border-l-2 border-primary-accent"
                       : "hover:bg-surface-container-highest/20"

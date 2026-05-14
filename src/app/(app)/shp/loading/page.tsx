@@ -75,11 +75,11 @@ export default function SHPLoadingPage() {
           onChange={(e) => setScanInput(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && handleScan()}
           placeholder="패킹 ID 스캔"
-          className="w-full bg-surface-container text-white text-sm px-4 py-3 border border-outline-variant/20 outline-none mb-3 placeholder:opacity-40"
+          className="w-full bg-surface-container text-on-surface text-sm px-4 py-3 border border-outline-variant/20 outline-none mb-3 placeholder:opacity-40"
         />
         <button
           onClick={handleScan}
-          className="w-full py-4 bg-surface-container-high text-white text-sm font-label uppercase tracking-widest hover:bg-surface-container-highest transition-colors border border-outline-variant/20"
+          className="w-full py-4 bg-surface-container-high text-on-surface text-sm font-label uppercase tracking-widest hover:bg-surface-container-highest transition-colors border border-outline-variant/20"
         >
           스캔 추가
         </button>

@@ -69,9 +69,9 @@ export default function EQAlertsPage() {
           <p className="font-label text-xs uppercase opacity-60">60분 에스컬레이션</p>
           <p className="font-headline font-black text-3xl mt-1 text-error">{esc}<span className="text-base font-normal ml-1 opacity-60">건</span></p>
         </div>
-        <div className="bg-[#f59e0b]/10 border-l-4 border-[#f59e0b] p-4">
+        <div className="bg-warning/10 border-l-4 border-warning p-4">
           <p className="font-label text-xs uppercase opacity-60">미해소 알림</p>
-          <p className="font-headline font-black text-3xl mt-1 text-[#f59e0b]">{open}<span className="text-base font-normal ml-1 opacity-60">건</span></p>
+          <p className="font-headline font-black text-3xl mt-1 text-warning">{open}<span className="text-base font-normal ml-1 opacity-60">건</span></p>
         </div>
         <div className="bg-surface-container border-l-4 border-outline-variant/30 p-4">
           <p className="font-label text-xs uppercase opacity-60">총 알림</p>
@@ -86,7 +86,7 @@ export default function EQAlertsPage() {
         bufferCount={alerts.length}
       />
 
-      <div className="mt-4 bg-surface-container p-4 border-l-4 border-[#f59e0b]">
+      <div className="mt-4 bg-surface-container p-4 border-l-4 border-warning">
         <p className="font-label text-xs uppercase opacity-50 mb-1">임계값 (P3000 기준)</p>
         <div className="flex gap-6 text-sm">
           <span>1차 알림: <strong>30분</strong></span>

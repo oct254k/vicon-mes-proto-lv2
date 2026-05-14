@@ -67,7 +67,7 @@ export default function PlantInventorySummaryPage() {
         </div>
         <table className="w-full text-left border-collapse text-sm">
           <thead>
-            <tr className="bg-surface-container border-b border-outline-variant/10">
+            <tr className="bg-surface-container border-b border-outline">
               {["Material", "UOM", "P1000", "P2000", "P3000", "합계"].map((h) => (
                 <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">
                   {h}
@@ -79,7 +79,7 @@ export default function PlantInventorySummaryPage() {
             {SUMMARY.map((row) => (
               <tr
                 key={row.material}
-                className={`border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors ${row.shortage ? "text-[#f59e0b]" : ""}`}
+                className={`border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors ${row.shortage ? "text-warning" : ""}`}
               >
                 <td className="px-4 py-2 tabular-nums font-black">
                   {row.material} {row.shortage && "⚠"}

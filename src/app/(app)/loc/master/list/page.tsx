@@ -39,7 +39,7 @@ export default function LocMasterListPage() {
     (r.locId.includes(q) || q === "")
   );
 
-  const selCls = "bg-[#131313] border border-white/10 px-3 py-2 text-xs font-label text-white focus:outline-none focus:border-[#00912F]";
+  const selCls = "bg-surface border border-outline/20 px-3 py-2 text-xs font-label text-on-surface focus:outline-none focus:border-[#00912F]";
 
   return (
     <div>
@@ -74,10 +74,10 @@ export default function LocMasterListPage() {
         <button className="bg-[#00912F] text-black font-label font-bold uppercase tracking-widest px-5 py-2 text-xs hover:opacity-90">
           [신규 등록 ▶]
         </button>
-        <button className="bg-[#1a1a1a] border border-white/10 text-white/60 font-label uppercase tracking-widest px-5 py-2 text-xs hover:border-white/30">
+        <button className="bg-surface-elevated border border-outline/20 text-on-surface/60 font-label uppercase tracking-widest px-5 py-2 text-xs hover:border-outline/40">
           [상태 변경]
         </button>
-        <button className="bg-[#1a1a1a] border border-white/10 text-white/60 font-label uppercase tracking-widest px-5 py-2 text-xs hover:border-white/30">
+        <button className="bg-surface-elevated border border-outline/20 text-on-surface/60 font-label uppercase tracking-widest px-5 py-2 text-xs hover:border-outline/40">
           [엑셀 다운]
         </button>
       </div>

@@ -45,7 +45,7 @@ const STATE_LABEL: Record<NotiState, string> = {
 
 const PRIORITY_DOT: Record<NotiPriority, string> = {
   URGENT: "text-error",
-  HIGH: "text-[#f59e0b]",
+  HIGH: "text-warning",
   MEDIUM: "text-tertiary",
   LOW: "text-on-surface-variant",
 };
@@ -133,7 +133,7 @@ export default function OPSNotificationsPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="bg-surface-container border-b border-outline-variant/10">
+              <tr className="bg-surface-container border-b border-outline">
                 <th className="px-3 py-2 w-8" />
                 <th className="px-3 py-2 font-label text-xs uppercase opacity-50 w-8">P</th>
                 <th className="px-3 py-2 font-label text-xs uppercase opacity-50">시각</th>
@@ -150,7 +150,7 @@ export default function OPSNotificationsPage() {
                 return (
                   <tr
                     key={n.id}
-                    className={`border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors ${
+                    className={`border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors ${
                       n.state === "IGNORED" ? "opacity-50" : ""
                     }`}
                   >
@@ -191,7 +191,7 @@ export default function OPSNotificationsPage() {
                             <button className="text-[10px] bg-surface-container-highest text-on-surface-variant px-2 py-0.5 font-label uppercase hover:bg-primary-accent/20 hover:text-primary-accent">확인</button>
                           )}
                           {(n.state === "UNRESOLVED" || n.state === "READ") && (
-                            <button className="text-[10px] bg-surface-container-highest text-on-surface-variant px-2 py-0.5 font-label uppercase hover:bg-[#f59e0b]/20 hover:text-[#f59e0b]">위임</button>
+                            <button className="text-[10px] bg-surface-container-highest text-on-surface-variant px-2 py-0.5 font-label uppercase hover:bg-warning/20 hover:text-warning">위임</button>
                           )}
                           <button className="text-[10px] bg-primary-accent/20 text-primary-accent px-2 py-0.5 font-label uppercase hover:bg-primary-accent/40">해결</button>
                           <button className="text-[10px] bg-error/20 text-error px-2 py-0.5 font-label uppercase hover:bg-error/30">무시</button>

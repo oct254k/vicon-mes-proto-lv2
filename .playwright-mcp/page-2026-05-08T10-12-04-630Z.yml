@@ -1,0 +1,222 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "성지그룹 Logo" [ref=e5] [cursor=pointer]:
+          - /url: /ops/
+          - img "성지그룹 Logo" [ref=e6]
+        - generic [ref=e7]:
+          - link "대시보드" [ref=e8] [cursor=pointer]:
+            - /url: /ops/
+          - link "이력추적" [ref=e9] [cursor=pointer]:
+            - /url: /trace/
+          - link "알람" [ref=e10] [cursor=pointer]:
+            - /url: /alarm/
+      - generic [ref=e11]:
+        - button "book_2" [ref=e12] [cursor=pointer]
+        - generic [ref=e13] [cursor=pointer]: notifications
+        - generic [ref=e14] [cursor=pointer]: settings
+        - generic [ref=e16]: person
+    - complementary [ref=e17]:
+      - generic [ref=e19]:
+        - generic [ref=e20]: search
+        - textbox "메뉴 검색... (/)" [ref=e21]
+      - navigation [ref=e22]:
+        - list [ref=e23]:
+          - listitem [ref=e24]:
+            - button "inventory_2 기준정보 expand_more" [ref=e25]:
+              - generic [ref=e26]: inventory_2
+              - generic [ref=e27]: 기준정보
+              - generic [ref=e28]: expand_more
+          - listitem [ref=e29]:
+            - button "request_quote 수주·생산계획·MRP expand_more" [ref=e30]:
+              - generic [ref=e31]: request_quote
+              - generic [ref=e32]: 수주·생산계획·MRP
+              - generic [ref=e33]: expand_more
+          - listitem [ref=e34]:
+            - button "assignment 작업지시·부재·패킹 expand_more" [ref=e35]:
+              - generic [ref=e36]: assignment
+              - generic [ref=e37]: 작업지시·부재·패킹
+              - generic [ref=e38]: expand_more
+            - list [ref=e39]:
+              - listitem [ref=e40]:
+                - button "작업지시 발행·조회 expand_more" [ref=e41]:
+                  - generic [ref=e42]: 작업지시 발행·조회
+                  - generic [ref=e43]: expand_more
+                - list [ref=e44]:
+                  - listitem [ref=e45]:
+                    - link "— WO 목록·필터" [ref=e46] [cursor=pointer]:
+                      - /url: /wo/orders/
+                      - generic [ref=e47]: —
+                      - generic [ref=e48]: WO 목록·필터
+                  - listitem [ref=e49]:
+                    - link "— 발행·검증·강제발행" [ref=e50] [cursor=pointer]:
+                      - /url: /wo/orders/release/
+                      - generic [ref=e51]: —
+                      - generic [ref=e52]: 발행·검증·강제발행
+                  - listitem [ref=e53]:
+                    - link "— WO 상세·취소·재발행" [ref=e54] [cursor=pointer]:
+                      - /url: "/wo/orders/{wo_id}/"
+                      - generic [ref=e55]: —
+                      - generic [ref=e56]: WO 상세·취소·재발행
+                  - listitem [ref=e57]:
+                    - link "— 우선순위 정렬" [ref=e58] [cursor=pointer]:
+                      - /url: /wo/orders/priority/
+                      - generic [ref=e59]: —
+                      - generic [ref=e60]: 우선순위 정렬
+                  - listitem [ref=e61]:
+                    - link "— 외주 Plant 발행" [ref=e62] [cursor=pointer]:
+                      - /url: /wo/orders/external/
+                      - generic [ref=e63]: —
+                      - generic [ref=e64]: 외주 Plant 발행
+              - listitem [ref=e65]:
+                - button "부재(Member) 코드·도면 expand_more" [ref=e66]:
+                  - generic [ref=e67]: 부재(Member) 코드·도면
+                  - generic [ref=e68]: expand_more
+              - listitem [ref=e69]:
+                - button "패킹 그룹·라이프사이클 expand_more" [ref=e70]:
+                  - generic [ref=e71]: 패킹 그룹·라이프사이클
+                  - generic [ref=e72]: expand_more
+              - listitem [ref=e73]:
+                - button "라벨 발행·재인쇄·이력 expand_more" [ref=e74]:
+                  - generic [ref=e75]: 라벨 발행·재인쇄·이력
+                  - generic [ref=e76]: expand_more
+              - listitem [ref=e77]:
+                - button "작업지시서·패킹리스트 PDF expand_more" [ref=e78]:
+                  - generic [ref=e79]: 작업지시서·패킹리스트 PDF
+                  - generic [ref=e80]: expand_more
+              - listitem [ref=e81]:
+                - link "WO·패킹 진척 보드" [ref=e82] [cursor=pointer]:
+                  - /url: /wo/dashboard/
+                  - generic [ref=e83]: WO·패킹 진척 보드
+          - listitem [ref=e84]:
+            - button "precision_manufacturing 생산실행·추적성 expand_more" [ref=e85]:
+              - generic [ref=e86]: precision_manufacturing
+              - generic [ref=e87]: 생산실행·추적성
+              - generic [ref=e88]: expand_more
+          - listitem [ref=e89]:
+            - button "warehouse 위치·재고 expand_more" [ref=e90]:
+              - generic [ref=e91]: warehouse
+              - generic [ref=e92]: 위치·재고
+              - generic [ref=e93]: expand_more
+          - listitem [ref=e94]:
+            - button "verified 품질·SPC·불량 expand_more" [ref=e95]:
+              - generic [ref=e96]: verified
+              - generic [ref=e97]: 품질·SPC·불량
+              - generic [ref=e98]: expand_more
+          - listitem [ref=e99]:
+            - button "engineering 설비관리 expand_more" [ref=e100]:
+              - generic [ref=e101]: engineering
+              - generic [ref=e102]: 설비관리
+              - generic [ref=e103]: expand_more
+          - listitem [ref=e104]:
+            - button "shopping_cart 구매·발주 expand_more" [ref=e105]:
+              - generic [ref=e106]: shopping_cart
+              - generic [ref=e107]: 구매·발주
+              - generic [ref=e108]: expand_more
+          - listitem [ref=e109]:
+            - button "local_shipping 출하 expand_more" [ref=e110]:
+              - generic [ref=e111]: local_shipping
+              - generic [ref=e112]: 출하
+              - generic [ref=e113]: expand_more
+          - listitem [ref=e114]:
+            - button "groups 사용자·권한 expand_more" [ref=e115]:
+              - generic [ref=e116]: groups
+              - generic [ref=e117]: 사용자·권한
+              - generic [ref=e118]: expand_more
+          - listitem [ref=e119]:
+            - button "dashboard 운영현황·대시보드 expand_more" [ref=e120]:
+              - generic [ref=e121]: dashboard
+              - generic [ref=e122]: 운영현황·대시보드
+              - generic [ref=e123]: expand_more
+          - listitem [ref=e124]:
+            - button "settings 시스템관리 expand_more" [ref=e125]:
+              - generic [ref=e126]: settings
+              - generic [ref=e127]: 시스템관리
+              - generic [ref=e128]: expand_more
+    - main [ref=e129]:
+      - generic [ref=e130]:
+        - generic [ref=e131]:
+          - heading "작업지시 목록 SCR-WO-003" [level=1] [ref=e133]
+          - generic [ref=e134]:
+            - generic [ref=e135]: "Node: IA-WO-ORDERS-LIST"
+            - generic [ref=e136]: "System Status: PROTOTYPE"
+        - generic [ref=e137]:
+          - generic [ref=e138]:
+            - generic [ref=e139]: Plant
+            - combobox [ref=e140]:
+              - option "전체" [selected]
+              - option "P1000"
+              - option "P2000"
+              - option "P3000"
+          - generic [ref=e141]:
+            - generic [ref=e142]: 상태
+            - generic [ref=e143]:
+              - generic [ref=e144] [cursor=pointer]:
+                - checkbox "RELEASED" [checked] [ref=e145]
+                - text: RELEASED
+              - generic [ref=e146] [cursor=pointer]:
+                - checkbox "IN_PROGRESS" [checked] [ref=e147]
+                - text: IN_PROGRESS
+              - generic [ref=e148] [cursor=pointer]:
+                - checkbox "COMPLETED" [ref=e149]
+                - text: COMPLETED
+              - generic [ref=e150] [cursor=pointer]:
+                - checkbox "CANCELLED" [ref=e151]
+                - text: CANCELLED
+          - generic [ref=e152]:
+            - generic [ref=e153]: 발행일
+            - generic [ref=e154]:
+              - textbox [ref=e155]: 2026-05-01
+              - generic [ref=e156]: ~
+              - textbox [ref=e157]: 2026-05-06
+          - button "검색" [ref=e158]
+          - button "초기화" [ref=e159]
+        - generic [ref=e160]:
+          - heading "WO 목록" [level=3] [ref=e161]
+          - generic [ref=e162]: 3건
+        - generic [ref=e163]:
+          - generic [ref=e164]: RELEASED
+          - generic [ref=e165]: IN_PROGRESS
+          - generic [ref=e166]: COMPLETED
+          - generic [ref=e167]: CANCELLED
+        - table [ref=e169]:
+          - rowgroup [ref=e170]:
+            - row "WO ID 유형 Plant 상태 우선순위 부재 수 발행일" [ref=e171]:
+              - columnheader "WO ID" [ref=e172]
+              - columnheader "유형" [ref=e173]
+              - columnheader "Plant" [ref=e174]
+              - columnheader "상태" [ref=e175]
+              - columnheader "우선순위" [ref=e176]
+              - columnheader "부재 수" [ref=e177]
+              - columnheader "발행일" [ref=e178]
+          - rowgroup [ref=e179]:
+            - 'row "WO-P3000-20260506-0007 반제품 P3000 IN_PROGRESS #3 12 2026-05-06" [ref=e180] [cursor=pointer]':
+              - cell "WO-P3000-20260506-0007" [ref=e181]
+              - cell "반제품" [ref=e182]
+              - cell "P3000" [ref=e183]
+              - cell "IN_PROGRESS" [ref=e184]
+              - cell "#3" [ref=e185]
+              - cell "12" [ref=e186]
+              - cell "2026-05-06" [ref=e187]
+            - 'row "WO-P3000-20260506-0008 완제품 P3000 RELEASED #4 12 2026-05-06" [ref=e188] [cursor=pointer]':
+              - cell "WO-P3000-20260506-0008" [ref=e189]
+              - cell "완제품" [ref=e190]
+              - cell "P3000" [ref=e191]
+              - cell "RELEASED" [ref=e192]
+              - cell "#4" [ref=e193]
+              - cell "12" [ref=e194]
+              - cell "2026-05-06" [ref=e195]
+            - 'row "WO-P2000-20260506-0003 완제품 P2000 RELEASED #2 6 2026-05-06" [ref=e196] [cursor=pointer]':
+              - cell "WO-P2000-20260506-0003" [ref=e197]
+              - cell "완제품" [ref=e198]
+              - cell "P2000" [ref=e199]
+              - cell "RELEASED" [ref=e200]
+              - cell "#2" [ref=e201]
+              - cell "6" [ref=e202]
+              - cell "2026-05-06" [ref=e203]
+        - paragraph [ref=e204]: 합계 3건
+    - generic [ref=e206]: System Active | Port 8080 | Secure Link
+  - button "Open Next.js Dev Tools" [ref=e212] [cursor=pointer]:
+    - img [ref=e213]
+  - alert [ref=e216]

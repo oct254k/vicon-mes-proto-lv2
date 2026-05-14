@@ -25,7 +25,7 @@ export default function PacklistPage() {
       </div>
       <FieldHeader title="패킹리스트 미리보기 (일부)" moduleRef="24건 중 4건 표시" />
       <div className="border border-outline-variant/20 bg-white text-black mb-4">
-        <div className="bg-[#131313] text-white px-4 py-2 flex justify-between items-center">
+        <div className="bg-surface text-on-surface px-4 py-2 flex justify-between items-center">
           <span className="font-headline font-black text-xs uppercase tracking-widest">PACKING LIST — PDF PREVIEW</span>
           <StatusBadge type="idle" label="미리보기" />
         </div>

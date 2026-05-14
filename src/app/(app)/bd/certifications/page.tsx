@@ -19,7 +19,7 @@ const CERTS = [
 
 function getDDayClass(d: number) {
   if (d <= 7)  return "text-error font-bold";
-  if (d <= 30) return "text-[#f59e0b] font-bold";
+  if (d <= 30) return "text-warning font-bold";
   return "text-on-surface/60";
 }
 
@@ -36,10 +36,10 @@ export default function BDCertificationsPage() {
       />
 
       {imminent.length > 0 && (
-        <div className="mb-6 bg-[#f59e0b]/10 border border-[#f59e0b]/40 p-4 flex items-start gap-3">
-          <span className="text-[#f59e0b] font-bold text-lg leading-none">⚠</span>
+        <div className="mb-6 bg-warning/10 border border-warning/40 p-4 flex items-start gap-3">
+          <span className="text-warning font-bold text-lg leading-none">⚠</span>
           <div>
-            <p className="text-[#f59e0b] font-headline font-bold text-sm uppercase tracking-widest">만료 임박 경고</p>
+            <p className="text-warning font-headline font-bold text-sm uppercase tracking-widest">만료 임박 경고</p>
             <p className="text-sm text-on-surface/70 mt-1">
               {imminent.length}건의 인증이 30일 이내 만료 예정 —{" "}
               {imminent.map((c) => `${c.no} (D-${dDay(c.expiry)})`).join(", ")}
@@ -64,7 +64,7 @@ export default function BDCertificationsPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="bg-surface-container border-b border-outline-variant/10">
+              <tr className="bg-surface-container border-b border-outline">
                 {["인증번호", "인증명", "Material", "취득일", "만료일", "D-Day", "상태", "액션"].map((h) => (
                   <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
                 ))}
@@ -75,7 +75,7 @@ export default function BDCertificationsPage() {
                 const d = dDay(c.expiry);
                 const isImminent = d <= 30;
                 return (
-                  <tr key={i} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors">
+                  <tr key={i} className="border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors">
                     <td className="px-4 py-2 text-xs tabular-nums">{c.no}</td>
                     <td className="px-4 py-2">{c.name}</td>
                     <td className="px-4 py-2 text-xs text-on-surface/60">{c.material}</td>

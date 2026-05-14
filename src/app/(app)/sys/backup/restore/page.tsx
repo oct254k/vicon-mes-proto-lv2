@@ -26,11 +26,11 @@ const ST_MAP: Record<string,"running"|"error"|"warning"> = { SUCCEEDED:"running"
 export default function BackupRestorePage() {
   const data = MOCK.map(r => ({ ...r, status: <StatusBadge type={ST_MAP[r.statusK] ?? "idle"} label={r.statusK} /> as unknown as string }));
   return (
-    <div className="p-8 bg-[#131313] min-h-screen text-on-surface">
+    <div className="p-8 bg-surface min-h-screen text-on-surface">
       <PageHeader title="복구 워크플로" accent="RESTORE" nodeRef="SCR-SYS-063" status="PROTOTYPE"
         description="복구 및 DR 시뮬레이션 — env=PROD 직접 복구 게이트 차단 (FNC-SYS-062·064)" />
-      <div className="bg-surface-container border-l-4 border-[#f59e0b] p-4 mb-6">
-        <p className="text-xs font-label uppercase tracking-widest text-[#f59e0b] mb-1">GATE</p>
+      <div className="bg-surface-container border-l-4 border-warning p-4 mb-6">
+        <p className="text-xs font-label uppercase tracking-widest text-warning mb-1">GATE</p>
         <p className="text-sm text-on-surface-variant">PROD 환경 직접 복구는 차단됩니다. STG 또는 DR 환경에서만 DR 시뮬레이션 가능.</p>
       </div>
       <div className="flex gap-3 mb-4">

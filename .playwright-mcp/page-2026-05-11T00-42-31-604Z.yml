@@ -1,0 +1,186 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "성지그룹 Logo" [ref=e5] [cursor=pointer]:
+          - /url: /ops/
+          - img "성지그룹 Logo" [ref=e6]
+        - generic [ref=e7]:
+          - link "대시보드" [ref=e8] [cursor=pointer]:
+            - /url: /ops/
+          - link "이력추적" [ref=e9] [cursor=pointer]:
+            - /url: /trace/
+          - link "알람" [ref=e10] [cursor=pointer]:
+            - /url: /alarm/
+      - generic [ref=e11]:
+        - button "book_2" [ref=e12] [cursor=pointer]
+        - generic [ref=e13] [cursor=pointer]: notifications
+        - generic [ref=e14] [cursor=pointer]: settings
+        - generic [ref=e16]: person
+    - complementary [ref=e17]:
+      - generic [ref=e19]:
+        - generic [ref=e20]: search
+        - textbox "메뉴 검색... (/)" [ref=e21]
+      - navigation [ref=e22]:
+        - list [ref=e23]:
+          - listitem [ref=e24]:
+            - button "inventory_2 기준정보 expand_more" [ref=e25]:
+              - generic [ref=e26]: inventory_2
+              - generic [ref=e27]: 기준정보
+              - generic [ref=e28]: expand_more
+          - listitem [ref=e29]:
+            - button "request_quote 수주·생산계획·MRP expand_more" [ref=e30]:
+              - generic [ref=e31]: request_quote
+              - generic [ref=e32]: 수주·생산계획·MRP
+              - generic [ref=e33]: expand_more
+          - listitem [ref=e34]:
+            - button "assignment 작업지시·부재·패킹 expand_more" [ref=e35]:
+              - generic [ref=e36]: assignment
+              - generic [ref=e37]: 작업지시·부재·패킹
+              - generic [ref=e38]: expand_more
+            - list [ref=e39]:
+              - listitem [ref=e40]:
+                - button "작업지시 발행·조회 expand_more" [ref=e41]:
+                  - generic [ref=e42]: 작업지시 발행·조회
+                  - generic [ref=e43]: expand_more
+              - listitem [ref=e44]:
+                - button "부재(Member) 코드·도면 expand_more" [ref=e45]:
+                  - generic [ref=e46]: 부재(Member) 코드·도면
+                  - generic [ref=e47]: expand_more
+              - listitem [ref=e48]:
+                - button "패킹 그룹·라이프사이클 expand_more" [ref=e49]:
+                  - generic [ref=e50]: 패킹 그룹·라이프사이클
+                  - generic [ref=e51]: expand_more
+              - listitem [ref=e52]:
+                - button "라벨 발행·재인쇄·이력 expand_more" [ref=e53]:
+                  - generic [ref=e54]: 라벨 발행·재인쇄·이력
+                  - generic [ref=e55]: expand_more
+              - listitem [ref=e56]:
+                - button "작업지시서·패킹리스트 PDF expand_more" [ref=e57]:
+                  - generic [ref=e58]: 작업지시서·패킹리스트 PDF
+                  - generic [ref=e59]: expand_more
+              - listitem [ref=e60]:
+                - link "WO·패킹 진척 보드" [ref=e61] [cursor=pointer]:
+                  - /url: /wo/dashboard/
+                  - generic [ref=e62]: WO·패킹 진척 보드
+          - listitem [ref=e63]:
+            - button "precision_manufacturing 생산실행·추적성 expand_more" [ref=e64]:
+              - generic [ref=e65]: precision_manufacturing
+              - generic [ref=e66]: 생산실행·추적성
+              - generic [ref=e67]: expand_more
+          - listitem [ref=e68]:
+            - button "warehouse 위치·재고 expand_more" [ref=e69]:
+              - generic [ref=e70]: warehouse
+              - generic [ref=e71]: 위치·재고
+              - generic [ref=e72]: expand_more
+          - listitem [ref=e73]:
+            - button "verified 품질·SPC·불량 expand_more" [ref=e74]:
+              - generic [ref=e75]: verified
+              - generic [ref=e76]: 품질·SPC·불량
+              - generic [ref=e77]: expand_more
+          - listitem [ref=e78]:
+            - button "engineering 설비관리 expand_more" [ref=e79]:
+              - generic [ref=e80]: engineering
+              - generic [ref=e81]: 설비관리
+              - generic [ref=e82]: expand_more
+          - listitem [ref=e83]:
+            - button "shopping_cart 구매·발주 expand_more" [ref=e84]:
+              - generic [ref=e85]: shopping_cart
+              - generic [ref=e86]: 구매·발주
+              - generic [ref=e87]: expand_more
+          - listitem [ref=e88]:
+            - button "local_shipping 출하 expand_more" [ref=e89]:
+              - generic [ref=e90]: local_shipping
+              - generic [ref=e91]: 출하
+              - generic [ref=e92]: expand_more
+          - listitem [ref=e93]:
+            - button "groups 사용자·권한 expand_more" [ref=e94]:
+              - generic [ref=e95]: groups
+              - generic [ref=e96]: 사용자·권한
+              - generic [ref=e97]: expand_more
+          - listitem [ref=e98]:
+            - button "dashboard 운영현황·대시보드 expand_more" [ref=e99]:
+              - generic [ref=e100]: dashboard
+              - generic [ref=e101]: 운영현황·대시보드
+              - generic [ref=e102]: expand_more
+          - listitem [ref=e103]:
+            - button "settings 시스템관리 expand_more" [ref=e104]:
+              - generic [ref=e105]: settings
+              - generic [ref=e106]: 시스템관리
+              - generic [ref=e107]: expand_more
+    - main [ref=e108]:
+      - generic [ref=e109]:
+        - generic [ref=e110]:
+          - heading "WO·패킹 진척 DASHBOARD" [level=1] [ref=e112]
+          - generic [ref=e113]:
+            - generic [ref=e114]: "Node: SCR-WO-050"
+            - generic [ref=e115]: "System Status: PROTOTYPE"
+          - paragraph [ref=e116]: 작업지시 발행·진행·완료 현황 및 패킹 대기 수량을 한눈에 확인합니다.
+        - generic [ref=e117]:
+          - generic [ref=e118]:
+            - paragraph [ref=e119]: 오늘 발행 WO
+            - paragraph [ref=e120]: 12 건
+          - generic [ref=e121]:
+            - paragraph [ref=e122]: 진행 중 WO
+            - paragraph [ref=e123]: 7 건
+          - generic [ref=e124]:
+            - paragraph [ref=e125]: 완료 WO
+            - paragraph [ref=e126]: 38 건
+          - generic [ref=e127]:
+            - paragraph [ref=e128]: 패킹 대기
+            - paragraph [ref=e129]: 4 건
+        - generic [ref=e130]:
+          - heading "WO 진척 현황" [level=3] [ref=e131]
+          - generic [ref=e132]: SCR-WO-050
+        - generic [ref=e133]:
+          - generic [ref=e134]:
+            - heading "WO 목록" [level=3] [ref=e135]
+            - generic [ref=e136] [cursor=pointer]: refresh
+          - table [ref=e138]:
+            - rowgroup [ref=e139]:
+              - row "WO ID 완료/전체 진척률 납기 상태" [ref=e140]:
+                - columnheader "WO ID" [ref=e141]
+                - columnheader "완료/전체" [ref=e142]
+                - columnheader "진척률" [ref=e143]
+                - columnheader "납기" [ref=e144]
+                - columnheader "상태" [ref=e145]
+            - rowgroup [ref=e146]:
+              - row "WO-P3000-20260506-0007 9/12 75% 2026-05-08 진행중" [ref=e147]:
+                - cell "WO-P3000-20260506-0007" [ref=e148]
+                - cell "9/12" [ref=e149]
+                - cell "75%" [ref=e150]:
+                  - generic [ref=e154]: 75%
+                - cell "2026-05-08" [ref=e155]
+                - cell "진행중" [ref=e156]
+              - row "WO-P3000-20260506-0008 5/12 42% 2026-05-08 진행중" [ref=e157]:
+                - cell "WO-P3000-20260506-0008" [ref=e158]
+                - cell "5/12" [ref=e159]
+                - cell "42%" [ref=e160]:
+                  - generic [ref=e164]: 42%
+                - cell "2026-05-08" [ref=e165]
+                - cell "진행중" [ref=e166]
+              - row "WO-P3000-20260506-0005 6/20 30% 2026-05-09 미달" [ref=e167]:
+                - cell "WO-P3000-20260506-0005" [ref=e168]
+                - cell "6/20" [ref=e169]
+                - cell "30%" [ref=e170]:
+                  - generic [ref=e174]: 30%
+                - cell "2026-05-09" [ref=e175]
+                - cell "미달" [ref=e176]
+              - row "WO-P3000-20260506-0006 3/18 17% 2026-05-09 미달" [ref=e177]:
+                - cell "WO-P3000-20260506-0006" [ref=e178]
+                - cell "3/18" [ref=e179]
+                - cell "17%" [ref=e180]:
+                  - generic [ref=e184]: 17%
+                - cell "2026-05-09" [ref=e185]
+                - cell "미달" [ref=e186]
+              - row "WO-P3000-20260505-0002 8/8 100% 2026-05-07 완료" [ref=e187]:
+                - cell "WO-P3000-20260505-0002" [ref=e188]
+                - cell "8/8" [ref=e189]
+                - cell "100%" [ref=e190]:
+                  - generic [ref=e194]: 100%
+                - cell "2026-05-07" [ref=e195]
+                - cell "완료" [ref=e196]
+    - generic [ref=e198]: System Active | Port 8080 | Secure Link
+  - button "Open Next.js Dev Tools" [ref=e204] [cursor=pointer]:
+    - img [ref=e205]
+  - alert [ref=e208]

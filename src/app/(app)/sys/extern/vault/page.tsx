@@ -26,7 +26,7 @@ const ST_MAP: Record<string,"running"|"warning"> = { OK:"running", EXPIRING:"war
 export default function ExternVaultPage() {
   const data = MOCK.map(r => ({ ...r, status: <StatusBadge type={ST_MAP[r.statusK]} label={r.statusK} /> as unknown as string }));
   return (
-    <div className="p-8 bg-[#131313] min-h-screen text-on-surface">
+    <div className="p-8 bg-surface min-h-screen text-on-surface">
       <PageHeader title="Vault 시크릿 관리" accent="VAULT" nodeRef="SCR-SYS-070" status="PROTOTYPE"
         description="외부 연동 시크릿 — 마스킹 표시, 만료 임박 EXPIRING 배지 (FNC-SYS-070·071·072)" />
       <div className="flex gap-3 mb-4">

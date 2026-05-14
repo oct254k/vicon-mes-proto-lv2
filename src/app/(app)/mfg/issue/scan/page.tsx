@@ -117,7 +117,7 @@ export default function IssueScanPage() {
           <p className="text-center text-on-surface/30 text-xs py-6 font-label uppercase tracking-widest">스캔 대기 중</p>
         ) : (
           issued.map((r, i) => (
-            <div key={i} className="px-4 py-3 border-b border-outline-variant/5 flex justify-between items-center">
+            <div key={i} className="px-4 py-3 border-b border-outline-variant flex justify-between items-center">
               <div>
                 <p className="text-xs font-mono text-primary-accent">{r.lot}</p>
                 <p className="text-[10px] font-label text-on-surface/50">{r.material} · {r.qty}</p>

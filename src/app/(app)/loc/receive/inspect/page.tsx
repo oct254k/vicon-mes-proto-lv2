@@ -13,7 +13,7 @@ const INIT: InspectItem[] = [
   { lot: "RCV-20260504-0021", material: "M-COIL-B", qty: "300m", result: "PENDING", note: "" },
 ];
 
-const inputCls = "w-full bg-[#131313] border border-white/10 px-3 py-2 text-sm text-white focus:outline-none focus:border-[#00912F]";
+const inputCls = "w-full bg-surface border border-outline/20 px-3 py-2 text-sm text-on-surface focus:outline-none focus:border-[#00912F]";
 
 export default function ReceiveInspectPage() {
   const [scan,    setScan]    = useState("");
@@ -47,7 +47,7 @@ export default function ReceiveInspectPage() {
 
       <div className="max-w-sm mx-auto space-y-5">
         <FieldHeader title="1. Lot 스캔" moduleRef="FNC-LOC-041" />
-        <div className="bg-[#1a1a1a] p-4 space-y-3">
+        <div className="bg-surface-elevated p-4 space-y-3">
           <input
             className={inputCls}
             placeholder="Lot No 스캔 — RCV-20260504-0021"
@@ -61,11 +61,11 @@ export default function ReceiveInspectPage() {
 
         {current && (
           <>
-            <div className="bg-[#1a1a1a] p-4 space-y-2 text-sm">
-              <p className="text-xs font-label uppercase tracking-widest text-white/40 mb-2">스캔 결과</p>
+            <div className="bg-surface-elevated p-4 space-y-2 text-sm">
+              <p className="text-xs font-label uppercase tracking-widest text-on-surface/40 mb-2">스캔 결과</p>
               {[["Lot", current.lot], ["자재", current.material], ["수량", current.qty]].map(([k,v]) => (
                 <div key={k} className="flex justify-between">
-                  <span className="text-white/50 font-label text-xs uppercase tracking-widest">{k}</span>
+                  <span className="text-on-surface/50 font-label text-xs uppercase tracking-widest">{k}</span>
                   <span className="font-headline font-bold">{v}</span>
                 </div>
               ))}
@@ -78,19 +78,19 @@ export default function ReceiveInspectPage() {
             <div className="flex gap-3">
               <button
                 onClick={() => setResult(current.lot, "PASS")}
-                className={`flex-1 py-3 font-label font-bold uppercase tracking-widest text-sm transition-colors ${current.result === "PASS" ? "bg-[#00912F] text-black" : "bg-[#1a1a1a] border border-white/10 text-white/60 hover:border-[#00912F]"}`}
+                className={`flex-1 py-3 font-label font-bold uppercase tracking-widest text-sm transition-colors ${current.result === "PASS" ? "bg-[#00912F] text-black" : "bg-surface-elevated border border-outline/20 text-on-surface/60 hover:border-[#00912F]"}`}
               >PASS ✔</button>
               <button
                 onClick={() => setResult(current.lot, "FAIL")}
-                className={`flex-1 py-3 font-label font-bold uppercase tracking-widest text-sm transition-colors ${current.result === "FAIL" ? "bg-[#ef4444] text-white" : "bg-[#1a1a1a] border border-white/10 text-white/60 hover:border-[#ef4444]"}`}
+                className={`flex-1 py-3 font-label font-bold uppercase tracking-widest text-sm transition-colors ${current.result === "FAIL" ? "bg-danger text-white" : "bg-surface-elevated border border-outline/20 text-on-surface/60 hover:border-danger"}`}
               >FAIL ✗</button>
             </div>
 
             {current.result === "FAIL" && (
               <div className="space-y-2">
-                <label className="block text-xs font-label uppercase tracking-widest text-white/40">불량 사유</label>
+                <label className="block text-xs font-label uppercase tracking-widest text-on-surface/40">불량 사유</label>
                 <input className={inputCls} value={current.note} onChange={e=>setNote(current.lot, e.target.value)} placeholder="표면 결함, 치수 불량 등" />
-                <p className="text-xs font-label text-[#ef4444]">격리 위치: Y-P3000-DEFECT-01-01 자동 지정</p>
+                <p className="text-xs font-label text-danger">격리 위치: Y-P3000-DEFECT-01-01 자동 지정</p>
               </div>
             )}
 

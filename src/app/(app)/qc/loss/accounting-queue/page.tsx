@@ -28,7 +28,7 @@ export default function QCLossAccountingQueuePage() {
 
       <div className="grid grid-cols-3 gap-3 mb-6">
         {[{ l: "전송 대기", v: 1, bad: true }, { l: "전송 완료", v: 2, bad: false }, { l: "ERP 확인 완료", v: 2, bad: false }].map((k) => (
-          <div key={k.l} className={`p-4 border-l-4 ${k.bad ? "border-[#f59e0b]" : "border-primary-accent"}`}>
+          <div key={k.l} className={`p-4 border-l-4 ${k.bad ? "border-warning" : "border-primary-accent"}`}>
             <p className="font-label text-xs uppercase opacity-50 mb-1">{k.l}</p>
             <p className="font-headline font-black text-2xl">{k.v}</p>
           </div>
@@ -52,7 +52,7 @@ export default function QCLossAccountingQueuePage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse text-sm">
             <thead>
-              <tr className="bg-surface-container border-b border-outline-variant/10">
+              <tr className="bg-surface-container border-b border-outline">
                 {["큐 ID","불량 번호","유형","손실 환산액","산출일시","상태","ERP 참조번호","액션"].map((h) => (
                   <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
                 ))}
@@ -60,7 +60,7 @@ export default function QCLossAccountingQueuePage() {
             </thead>
             <tbody className="font-headline">
               {QUEUE.map((r, i) => (
-                <tr key={i} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors">
+                <tr key={i} className="border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors">
                   <td className="px-4 py-2 tabular-nums text-primary-accent">{r.id}</td>
                   <td className="px-4 py-2 tabular-nums text-xs">{r.defectId}</td>
                   <td className="px-4 py-2 text-xs">{r.type}</td>

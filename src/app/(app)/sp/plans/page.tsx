@@ -36,10 +36,10 @@ export default function SPPlansPage() {
 
       <div className="grid grid-cols-3 gap-4 mb-8">
         {kpis.map((k) => (
-          <div key={k.label} className="bg-[#1a1a1a] border-l-4 border-[#00912F] p-5">
-            <p className="text-xs font-label uppercase tracking-widest text-white/40 mb-2">{k.label}</p>
-            <p className="text-2xl font-black font-headline text-white">
-              {k.value} <span className="text-sm font-normal text-white/50">{k.unit}</span>
+          <div key={k.label} className="bg-surface-elevated border-l-4 border-[#00912F] p-5">
+            <p className="text-xs font-label uppercase tracking-widest text-on-surface/40 mb-2">{k.label}</p>
+            <p className="text-2xl font-black font-headline text-on-surface">
+              {k.value} <span className="text-sm font-normal text-on-surface/50">{k.unit}</span>
             </p>
           </div>
         ))}

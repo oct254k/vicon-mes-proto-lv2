@@ -40,7 +40,7 @@ export default function AuditRegressionPage() {
         </div>
         <table className="w-full text-left border-collapse text-sm">
           <thead>
-            <tr className="bg-surface-container border-b border-outline-variant/10">
+            <tr className="bg-surface-container border-b border-outline">
               {["케이스 ID", "테스트명", "시나리오", "예상 결과", "실제 결과", "통과/실패", "최근 실행"].map((h) => (
                 <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
               ))}
@@ -48,7 +48,7 @@ export default function AuditRegressionPage() {
           </thead>
           <tbody className="font-headline">
             {TEST_CASES.map((t, i) => (
-              <tr key={i} className={`border-b border-outline-variant/5 hover:bg-surface-container-highest/20 ${t.status === "error" ? "bg-error/5" : ""}`}>
+              <tr key={i} className={`border-b border-outline-variant hover:bg-surface-container-highest/20 ${t.status === "error" ? "bg-error/5" : ""}`}>
                 <td className="px-4 py-2 tabular-nums text-xs font-bold">{t.caseId}</td>
                 <td className="px-4 py-2 text-xs">{t.name}</td>
                 <td className="px-4 py-2 text-xs opacity-60">{t.scenario}</td>

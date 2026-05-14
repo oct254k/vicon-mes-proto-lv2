@@ -9,7 +9,7 @@ const PLANTS = [
   { id: "P4000", name: "제4 안성공장 (가설재)", oee: 68.0, defect: 3.5, progress: 61, eq: "9/12",  status: "위험" },
 ];
 
-const STATUS_COLOR: Record<string, string> = { 정상: "text-primary-accent", 주의: "text-[#f59e0b]", 위험: "text-error" };
+const STATUS_COLOR: Record<string, string> = { 정상: "text-primary-accent", 주의: "text-warning", 위험: "text-error" };
 
 export default function MultiPlantPage() {
   return (
@@ -42,7 +42,7 @@ export default function MultiPlantPage() {
             </div>
             {/* OEE 막대 */}
             <div className="h-2 bg-surface-container-highest/30 mt-3">
-              <div className={`h-2 ${p.oee>=80?"bg-primary-accent":p.oee>=70?"bg-[#f59e0b]":"bg-error"}`} style={{width:`${p.oee}%`}} />
+              <div className={`h-2 ${p.oee>=80?"bg-primary-accent":p.oee>=70?"bg-warning":"bg-error"}`} style={{width:`${p.oee}%`}} />
             </div>
           </div>
         ))}

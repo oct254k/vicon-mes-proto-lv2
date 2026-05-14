@@ -1,0 +1,101 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - img "KEPCO ES" [ref=e4]
+    - generic [ref=e5]:
+      - button "3" [ref=e6] [cursor=pointer]:
+        - img [ref=e7]
+        - generic [ref=e10]: "3"
+      - generic [ref=e11]:
+        - img [ref=e12]
+        - generic [ref=e15]: 김민준 (사업개발팀)
+      - button [ref=e16] [cursor=pointer]:
+        - img [ref=e17]
+  - generic [ref=e20]:
+    - navigation [ref=e21]:
+      - generic [ref=e22]:
+        - searchbox "메뉴 검색" [ref=e23]
+        - img [ref=e24]
+      - generic [ref=e27]:
+        - generic [ref=e28]:
+          - generic [ref=e29] [cursor=pointer]:
+            - img [ref=e31]
+            - generic [ref=e36]: 대시보드
+          - generic [ref=e37]:
+            - link "경영실적" [ref=e38] [cursor=pointer]:
+              - /url: /dashboard/
+            - link "자금회수율" [ref=e39] [cursor=pointer]:
+              - /url: /cashflow/
+        - generic [ref=e40]:
+          - generic [ref=e41] [cursor=pointer]:
+            - img [ref=e43]
+            - generic [ref=e46]: 사업접수
+          - generic [ref=e47]:
+            - link "신규프로젝트 생성" [ref=e48] [cursor=pointer]:
+              - /url: /opportunity/new/
+            - link "사업접수 현황" [ref=e49] [cursor=pointer]:
+              - /url: /pipeline/
+        - generic [ref=e50]:
+          - generic [ref=e51] [cursor=pointer]:
+            - img [ref=e53]
+            - generic [ref=e55]: 프로젝트 관리
+          - link "프로젝트별 진행 정보" [ref=e57] [cursor=pointer]:
+            - /url: /projects/
+        - generic [ref=e58]:
+          - generic [ref=e59] [cursor=pointer]:
+            - img [ref=e61]
+            - generic [ref=e64]: 계약
+          - generic [ref=e65]:
+            - link "수주계약현황" [ref=e66] [cursor=pointer]:
+              - /url: /contracts/?tab=award
+            - link "발주계약현황" [ref=e67] [cursor=pointer]:
+              - /url: /contracts/?tab=order
+        - generic [ref=e68]:
+          - generic [ref=e69] [cursor=pointer]:
+            - img [ref=e71]
+            - generic [ref=e74]: 자금관리
+          - generic [ref=e75]:
+            - link "투자비 지급현황" [ref=e76] [cursor=pointer]:
+              - /url: /funds/investment/
+            - link "세금계산서 발행회차" [ref=e77] [cursor=pointer]:
+              - /url: /funds/tax-invoice/
+            - link "상환현황" [ref=e78] [cursor=pointer]:
+              - /url: /funds/repayment/
+            - link "미회수 사업현황" [ref=e79] [cursor=pointer]:
+              - /url: /funds/uncollected/
+        - generic [ref=e80]:
+          - generic [ref=e81] [cursor=pointer]:
+            - img [ref=e83]
+            - generic [ref=e86]: 사업결산
+          - link "사업결산현황" [ref=e88] [cursor=pointer]:
+            - /url: /settlement/
+        - generic [ref=e90]:
+          - generic [ref=e91] [cursor=pointer]:
+            - img [ref=e93]
+            - generic [ref=e97]: 마이페이지
+          - generic [ref=e98]:
+            - link "나의 사업현황" [ref=e99] [cursor=pointer]:
+              - /url: /mypage/?tab=projects
+            - link "사용자정보 변경" [ref=e100] [cursor=pointer]:
+              - /url: /mypage/?tab=profile
+            - link "데이터수정 요청" [ref=e101] [cursor=pointer]:
+              - /url: /mypage/?tab=request
+        - generic [ref=e103]:
+          - generic [ref=e104] [cursor=pointer]:
+            - img [ref=e106]
+            - generic [ref=e109]: 관리자
+          - generic [ref=e110]:
+            - link "사용자 관리" [ref=e111] [cursor=pointer]:
+              - /url: /admin/users/
+            - link "프로젝트 정보관리" [ref=e112] [cursor=pointer]:
+              - /url: /admin/projects/
+            - link "경영실적 목표" [ref=e113] [cursor=pointer]:
+              - /url: /admin/targets/
+            - link "협력업체·신용평가" [ref=e114] [cursor=pointer]:
+              - /url: /admin/contractors/
+            - link "시스템 환경" [ref=e115] [cursor=pointer]:
+              - /url: /admin/system/
+    - main [ref=e116]:
+      - generic [ref=e118]:
+        - heading "404" [level=1] [ref=e119]
+        - heading "This page could not be found." [level=2] [ref=e121]
+  - alert [ref=e122]

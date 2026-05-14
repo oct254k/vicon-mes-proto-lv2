@@ -18,16 +18,16 @@ const MOCK = [
 const TYPE_COLOR: Record<string, string> = {
   T1: "bg-blue-500/20 text-blue-400",
   T2: "bg-purple-500/20 text-purple-400",
-  T3: "bg-[#f59e0b]/20 text-[#f59e0b]",
+  T3: "bg-warning/20 text-warning",
 };
 
 export default function SYSDevicesPage() {
   return (
-    <div className="p-8 bg-[#131313] min-h-screen text-on-surface">
+    <div className="p-8 bg-surface min-h-screen text-on-surface">
       <PageHeader title="단말" accent="라이프사이클" nodeRef="SCR-SYS-100" description="단말 사전 등록·분실 무효화(5분 SLA)·재발급·영구 폐기 관리" />
 
       <div className="flex gap-3 mb-4">
-        <button className="px-4 py-2 text-xs font-label uppercase tracking-widest bg-[#f59e0b] text-black hover:bg-[#f59e0b]/80 transition-colors font-bold">
+        <button className="px-4 py-2 text-xs font-label uppercase tracking-widest bg-warning text-black hover:bg-warning/80 transition-colors font-bold">
           분실 신고
         </button>
         <button className="px-4 py-2 text-xs font-label uppercase tracking-widest bg-surface-container-high text-on-surface-variant hover:bg-surface-container border border-outline-variant/20 transition-colors">
@@ -42,7 +42,7 @@ export default function SYSDevicesPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="bg-surface-container border-b border-outline-variant/10">
+              <tr className="bg-surface-container border-b border-outline">
                 {["단말 ID", "유형", "사용자", "상태", "등록일", "마지막 접속"].map(h => (
                   <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
                 ))}
@@ -52,7 +52,7 @@ export default function SYSDevicesPage() {
               {MOCK.map(row => {
                 const badge = DEVICE_STATUS[row.status] ?? { type: "idle" as const, label: row.status };
                 return (
-                  <tr key={row.id} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors">
+                  <tr key={row.id} className="border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors">
                     <td className="px-4 py-2 text-xs font-label text-on-surface-variant tabular-nums">{row.id}</td>
                     <td className="px-4 py-2">
                       <span className={`px-2 py-0.5 text-xs font-label uppercase font-bold ${TYPE_COLOR[row.type] || ""}`}>{row.type}</span>
@@ -69,9 +69,9 @@ export default function SYSDevicesPage() {
         </div>
       </section>
 
-      <div className="mt-4 p-3 bg-surface-container border border-outline-variant/10">
+      <div className="mt-4 p-3 bg-surface-container border border-outline">
         <p className="text-xs text-on-surface-variant font-label">
-          <span className="text-[#f59e0b]">LOST 무효화 SLA: 5분</span> — 분실 신고 시 토큰 즉시 폐기 및 감사 기록. RETIRED 상태는 영구 폐기(복구 불가).
+          <span className="text-warning">LOST 무효화 SLA: 5분</span> — 분실 신고 시 토큰 즉시 폐기 및 감사 기록. RETIRED 상태는 영구 폐기(복구 불가).
         </p>
       </div>
     </div>

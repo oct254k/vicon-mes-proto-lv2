@@ -59,7 +59,7 @@ export default function EQOrdersPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="bg-surface-container border-b border-outline-variant/10">
+              <tr className="bg-surface-container border-b border-outline">
                 {["MO 번호", "설비", "유형", "상태", "담당자", "발행일"].map((h) => (
                   <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
                 ))}
@@ -67,7 +67,7 @@ export default function EQOrdersPage() {
             </thead>
             <tbody className="font-headline text-sm">
               {MO_LIST.map((mo, i) => (
-                <tr key={i} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors">
+                <tr key={i} className="border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors">
                   <td className="px-4 py-2 text-xs tabular-nums text-primary-accent font-bold">{mo.no}</td>
                   <td className="px-4 py-2 text-xs">{mo.equip}</td>
                   <td className="px-4 py-2">

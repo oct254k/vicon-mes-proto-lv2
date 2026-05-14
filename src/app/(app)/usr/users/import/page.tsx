@@ -62,7 +62,7 @@ export default function UsersImportPage() {
         </div>
         <table className="w-full text-left border-collapse text-sm">
           <thead>
-            <tr className="bg-surface-container border-b border-outline-variant/10">
+            <tr className="bg-surface-container border-b border-outline">
               {["행", "사번", "이름", "결과", "비고"].map((h) => (
                 <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
               ))}
@@ -70,7 +70,7 @@ export default function UsersImportPage() {
           </thead>
           <tbody className="font-headline">
             {MOCK_RESULT.map((r, i) => (
-              <tr key={i} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20">
+              <tr key={i} className="border-b border-outline-variant hover:bg-surface-container-highest/20">
                 <td className="px-4 py-2 tabular-nums opacity-50">{r.row}</td>
                 <td className="px-4 py-2 tabular-nums">{r.userId}</td>
                 <td className="px-4 py-2">{r.name}</td>

@@ -26,7 +26,7 @@ const ST_MAP: Record<string, "warning"|"running"|"error"> = { PENDING:"warning",
 export default function CodeApprovalPage() {
   const data = MOCK.map(r => ({ ...r, status: <StatusBadge type={ST_MAP[r.status]} label={r.status} /> as unknown as string }));
   return (
-    <div className="p-8 bg-[#131313] min-h-screen text-on-surface">
+    <div className="p-8 bg-surface min-h-screen text-on-surface">
       <PageHeader title="코드 변경 결재" accent="APPROVAL" nodeRef="SCR-SYS-031" status="PROTOTYPE"
         description="L2 운영자 코드 변경 결재 큐 — L3 관리자 즉시 적용, L2 결재 대기 (FNC-SYS-030·032·035)" />
       <div className="flex gap-2 mb-4">

@@ -16,7 +16,7 @@ interface DataTableProps {
 export function DataTable({ title, columns, data, bufferCount }: DataTableProps) {
   return (
     <section className="col-span-12 bg-surface-container-lowest mt-4">
-      <div className="p-4 bg-surface-container-highest/30 flex justify-between items-center border-l-4 border-primary-accent">
+      <div className="p-4 bg-surface-bright flex justify-between items-center border-l-4 border-primary-accent border-b border-outline">
         <h3 className="font-headline font-black text-sm uppercase tracking-widest">
           {title}{" "}
           {bufferCount !== undefined && (
@@ -32,7 +32,7 @@ export function DataTable({ title, columns, data, bufferCount }: DataTableProps)
       <div className="overflow-x-auto">
         <table className="w-full text-left border-collapse">
           <thead>
-            <tr className="bg-surface-container border-b border-outline-variant/10">
+            <tr className="bg-surface-container border-b border-outline">
               {columns.map((col) => (
                 <th
                   key={col.key}
@@ -47,7 +47,7 @@ export function DataTable({ title, columns, data, bufferCount }: DataTableProps)
             {data.map((row, i) => (
               <tr
                 key={i}
-                className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors"
+                className="border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors"
               >
                 {columns.map((col) => (
                   <td

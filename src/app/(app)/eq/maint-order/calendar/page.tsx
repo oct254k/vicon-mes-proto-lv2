@@ -6,9 +6,9 @@ const days = Array.from({ length: 31 }, (_, i) => i + 1);
 const events: Record<number, { label: string; color: string }[]> = {
   6:  [{ label: "MO-001 CUT-01", color: "bg-error/70" }],
   10: [{ label: "PM-LINE-P3-01", color: "bg-primary-accent/70" }],
-  15: [{ label: "MO-002 PRESS-01", color: "bg-[#f59e0b]/70" }],
+  15: [{ label: "MO-002 PRESS-01", color: "bg-warning/70" }],
   20: [{ label: "PM-WELD-01", color: "bg-primary-accent/70" }],
-  25: [{ label: "MO-003 ASM-01", color: "bg-[#f59e0b]/70" }],
+  25: [{ label: "MO-003 ASM-01", color: "bg-warning/70" }],
   28: [{ label: "PM-LINE-P4-01", color: "bg-primary-accent/70" }],
 };
 
@@ -37,7 +37,7 @@ export default function EQMaintOrderCalendarPage() {
       <div className="flex gap-6 mt-4">
         <div className="flex items-center gap-2"><div className="w-3 h-3 bg-primary-accent/70" /><span className="font-label text-xs">PM 일정</span></div>
         <div className="flex items-center gap-2"><div className="w-3 h-3 bg-error/70" /><span className="font-label text-xs">BM 긴급</span></div>
-        <div className="flex items-center gap-2"><div className="w-3 h-3 bg-[#f59e0b]/70" /><span className="font-label text-xs">CM 계획</span></div>
+        <div className="flex items-center gap-2"><div className="w-3 h-3 bg-warning/70" /><span className="font-label text-xs">CM 계획</span></div>
       </div>
     </div>
   );

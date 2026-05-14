@@ -12,7 +12,7 @@ export default function QCLossCalcPage() {
         description="자재×BOM×시점 가중치 손실 환산 입력·산출 (FNC-QC-100~102)"
       />
 
-      <div className="bg-surface-container border-l-4 border-[#f59e0b] p-4 mb-6">
+      <div className="bg-surface-container border-l-4 border-warning p-4 mb-6">
         <p className="text-sm opacity-70">손실 환산식: <code className="font-mono text-xs bg-surface-container-highest px-2 py-1">loss_amount = 자재단가 × BOM_소요량 × 시점_가중치 + 인건비/공수</code> (FR-QC-090)</p>
       </div>
 
@@ -71,7 +71,7 @@ export default function QCLossCalcPage() {
               { label: "인건비/공수", value: "₩ 45,000", sub: "작업 공수 환산" },
               { label: "총 손실 환산액", value: "₩ 1,906,500", sub: "가중자재 + 인건비", highlight: true },
             ].map((r) => (
-              <div key={r.label} className={`flex justify-between items-center p-3 ${r.highlight ? "border-l-4 border-primary-accent bg-primary-accent/5" : "border-b border-outline-variant/10"}`}>
+              <div key={r.label} className={`flex justify-between items-center p-3 ${r.highlight ? "border-l-4 border-primary-accent bg-primary-accent/5" : "border-b border-outline"}`}>
                 <div>
                   <p className="font-label text-xs uppercase opacity-60">{r.label}</p>
                   <p className="text-xs opacity-40">{r.sub}</p>

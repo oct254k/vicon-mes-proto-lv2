@@ -46,7 +46,7 @@ export default function MemberBoardPage() {
               <div className="overflow-x-auto">
                 <table className="w-full text-left border-collapse text-sm">
                   <thead>
-                    <tr className="bg-surface-container border-b border-outline-variant/10">
+                    <tr className="bg-surface-container border-b border-outline">
                       {["부재코드", "타입", "길이(mm)", "수량", "상태"].map((h) => (
                         <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50">{h}</th>
                       ))}
@@ -54,7 +54,7 @@ export default function MemberBoardPage() {
                   </thead>
                   <tbody className="font-headline">
                     {rows.map((m) => (
-                      <tr key={m.code} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20">
+                      <tr key={m.code} className="border-b border-outline-variant hover:bg-surface-container-highest/20">
                         <td className="px-4 py-2 font-mono text-xs">{m.code}</td>
                         <td className="px-4 py-2">{m.type}</td>
                         <td className="px-4 py-2 tabular-nums">{m.lengthMm.toLocaleString()}</td>

@@ -45,7 +45,7 @@ export default function EQOeeTrendPage() {
       <div className="mt-6 overflow-x-auto">
         <table className="w-full text-sm font-headline border-collapse">
           <thead>
-            <tr className="bg-surface-container border-b border-outline-variant/10">
+            <tr className="bg-surface-container border-b border-outline">
               {["주차","가용성","성능","품질","OEE"].map((h) => (
                 <th key={h} className="px-4 py-2 font-label text-xs uppercase tracking-widest opacity-50 text-left">{h}</th>
               ))}
@@ -53,7 +53,7 @@ export default function EQOeeTrendPage() {
           </thead>
           <tbody>
             {weeks.map((w) => (
-              <tr key={w.label} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20">
+              <tr key={w.label} className="border-b border-outline-variant hover:bg-surface-container-highest/20">
                 <td className="px-4 py-2">{w.label}</td>
                 <td className="px-4 py-2 tabular-nums">{w.avail}%</td>
                 <td className="px-4 py-2 tabular-nums">{w.perf}%</td>

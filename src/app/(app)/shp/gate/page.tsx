@@ -22,9 +22,9 @@ export default function SHPGatePage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#131313] text-white flex flex-col">
+    <div className="min-h-screen bg-surface text-on-surface flex flex-col">
       {/* 헤더 */}
-      <div className="border-b border-outline-variant/10 px-8 py-4 flex items-center justify-between">
+      <div className="border-b border-outline px-8 py-4 flex items-center justify-between">
         <div>
           <span className="text-xs font-label uppercase tracking-[0.3em] opacity-50">ETO MES</span>
           <span className="mx-3 opacity-20">|</span>
@@ -79,7 +79,7 @@ export default function SHPGatePage() {
             {log.map((v, i) => (
               <div
                 key={i}
-                className="flex items-center justify-between px-6 py-3 bg-surface-container-lowest border border-outline-variant/10"
+                className="flex items-center justify-between px-6 py-3 bg-surface-container-lowest border border-outline"
               >
                 <span className="text-lg font-headline font-black">{v.plate}</span>
                 <span className="font-mono text-sm opacity-60">{v.passedAt}</span>

@@ -3,7 +3,7 @@ type StatusType = "running" | "stopped" | "warning" | "idle" | "error";
 const styles: Record<StatusType, string> = {
   running: "bg-tertiary/20 text-tertiary",
   stopped: "bg-error/20 text-error",
-  warning: "bg-[#f59e0b]/20 text-[#f59e0b]",
+  warning: "bg-warning/20 text-warning",
   idle: "bg-surface-container-highest text-on-surface-variant",
   error: "bg-error-container text-error",
 };

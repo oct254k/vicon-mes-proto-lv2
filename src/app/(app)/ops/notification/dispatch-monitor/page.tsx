@@ -27,7 +27,7 @@ const KPI = [
   { label: "오늘 발송",  value: `${DATA.length}건` },
   { label: "성공",       value: `${DATA.filter(d=>d.status==="성공").length}건`,   color: "text-primary-accent" },
   { label: "실패",       value: `${DATA.filter(d=>d.status==="실패").length}건`,   color: "text-error" },
-  { label: "재시도 중",  value: `${DATA.filter(d=>d.status==="재시도").length}건`, color: "text-[#f59e0b]" },
+  { label: "재시도 중",  value: `${DATA.filter(d=>d.status==="재시도").length}건`, color: "text-warning" },
 ];
 
 export default function DispatchMonitorPage() {

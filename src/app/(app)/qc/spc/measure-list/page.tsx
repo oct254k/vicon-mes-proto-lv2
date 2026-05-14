@@ -48,7 +48,7 @@ export default function QCSpcMeasureListPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse text-sm">
             <thead>
-              <tr className="bg-surface-container border-b border-outline-variant/10">
+              <tr className="bg-surface-container border-b border-outline">
                 {["측정ID","항목","LOT","측정값","UCL","LCL","위반","Rule","측정일시","측정자"].map((h) => (
                   <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
                 ))}
@@ -56,7 +56,7 @@ export default function QCSpcMeasureListPage() {
             </thead>
             <tbody className="font-headline">
               {MEASURES.map((m, i) => (
-                <tr key={i} className={`border-b border-outline-variant/5 transition-colors ${m.violate ? "bg-error/10 hover:bg-error/15" : "hover:bg-surface-container-highest/20"}`}>
+                <tr key={i} className={`border-b border-outline-variant transition-colors ${m.violate ? "bg-error/10 hover:bg-error/15" : "hover:bg-surface-container-highest/20"}`}>
                   <td className="px-4 py-2 tabular-nums text-primary-accent">{m.id}</td>
                   <td className="px-4 py-2 font-mono text-xs">{m.itemId}</td>
                   <td className="px-4 py-2 text-xs">{m.lot}</td>

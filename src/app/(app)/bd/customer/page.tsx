@@ -46,7 +46,7 @@ export default function CustomerLandingPage() {
       <FieldHeader title="최근 변경" moduleRef="" />
       <ul className="flex flex-col gap-2">
         {RECENT.map((r, i) => (
-          <li key={i} className="flex gap-4 text-sm border-b border-outline-variant/10 pb-2">
+          <li key={i} className="flex gap-4 text-sm border-b border-outline pb-2">
             <span className="text-primary-accent font-label uppercase tracking-wider w-28">{r.name}</span>
             <span className="text-on-surface-variant/70 flex-1">{r.site}</span>
             <span className="text-on-surface/40">{r.action}</span>

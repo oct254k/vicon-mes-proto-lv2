@@ -32,7 +32,7 @@ export default function SYSMenusPage() {
   };
 
   return (
-    <div className="p-8 bg-[#131313] min-h-screen text-on-surface">
+    <div className="p-8 bg-surface min-h-screen text-on-surface">
       <PageHeader title="메뉴" accent="관리" nodeRef="SCR-SYS-020" description="PC/MOBILE 단말별 도메인 메뉴 트리 활성화 관리" />
 
       <div className="flex gap-0 mb-6">
@@ -45,8 +45,8 @@ export default function SYSMenusPage() {
       </div>
 
       {tab === "MOBILE" && (
-        <div className="mb-4 px-4 py-2 bg-[#f59e0b]/10 border border-[#f59e0b]/20">
-          <span className="text-xs text-[#f59e0b] font-label">MOBILE: 공지 INBOX 및 즐겨찾기 메뉴만 노출됩니다.</span>
+        <div className="mb-4 px-4 py-2 bg-warning/10 border border-warning/20">
+          <span className="text-xs text-warning font-label">MOBILE: 공지 INBOX 및 즐겨찾기 메뉴만 노출됩니다.</span>
         </div>
       )}
 
@@ -76,7 +76,7 @@ export default function SYSMenusPage() {
               {states[menu.domain] && (
                 <div className="pl-20 pb-2 pt-1 flex flex-wrap gap-2 bg-surface-container-lowest/50">
                   {menu.children.map(child => (
-                    <span key={child} className="px-2 py-0.5 text-xs bg-surface-container text-on-surface-variant border border-outline-variant/10">{child}</span>
+                    <span key={child} className="px-2 py-0.5 text-xs bg-surface-container text-on-surface-variant border border-outline">{child}</span>
                   ))}
                 </div>
               )}

@@ -32,9 +32,9 @@ export default function CountLandingPage() {
 
       <div className="flex gap-4 mb-8">
         {KPI.map(k => (
-          <div key={k.label} className="bg-[#1a1a1a] border-l-4 border-[#00912F] px-6 py-4">
-            <p className="text-xs font-label uppercase tracking-widest text-white/40 mb-1">{k.label}</p>
-            <p className="text-2xl font-black font-headline text-white">{k.value}</p>
+          <div key={k.label} className="bg-surface-elevated border-l-4 border-[#00912F] px-6 py-4">
+            <p className="text-xs font-label uppercase tracking-widest text-on-surface/40 mb-1">{k.label}</p>
+            <p className="text-2xl font-black font-headline text-on-surface">{k.value}</p>
             <div className="mt-2"><StatusBadge type={k.badge} label={k.badge.toUpperCase()} /></div>
           </div>
         ))}
@@ -44,35 +44,35 @@ export default function CountLandingPage() {
       <div className="grid grid-cols-3 gap-4 mb-8">
         {QUICK.map(q => (
           <a key={q.label} href={q.href}
-            className="bg-[#1a1a1a] border border-white/10 p-6 hover:border-[#00912F]/50 transition-colors block group">
+            className="bg-surface-elevated border border-outline/20 p-6 hover:border-[#00912F]/50 transition-colors block group">
             <p className="font-label font-bold uppercase tracking-widest text-xs text-[#00912F] mb-2">{q.label}</p>
-            <p className="text-white/50 text-sm">{q.desc}</p>
+            <p className="text-on-surface/50 text-sm">{q.desc}</p>
             <p className="text-xs text-[#00912F]/50 mt-4 group-hover:text-[#00912F] font-label uppercase tracking-widest">진입 ▶</p>
           </a>
         ))}
       </div>
 
       <FieldHeader title="실사 이력" moduleRef="FNC-LOC-083" />
-      <div className="bg-[#1a1a1a]">
+      <div className="bg-surface-elevated">
         <div className="p-3 border-l-4 border-[#00912F]">
-          <span className="text-xs font-label uppercase tracking-widest text-white/40">최근 실사 ({HISTORY.length}건)</span>
+          <span className="text-xs font-label uppercase tracking-widest text-on-surface/40">최근 실사 ({HISTORY.length}건)</span>
         </div>
         <table className="w-full text-sm">
-          <thead className="border-b border-white/5">
+          <thead className="border-b border-outline/10">
             <tr>
               {["ID","기간","위치 수","정합률","차이","상태"].map(h => (
-                <th key={h} className="px-4 py-2 text-left text-xs font-label uppercase tracking-widest text-white/30">{h}</th>
+                <th key={h} className="px-4 py-2 text-left text-xs font-label uppercase tracking-widest text-on-surface/30">{h}</th>
               ))}
             </tr>
           </thead>
           <tbody>
             {HISTORY.map(r => (
-              <tr key={r.id} className="border-b border-white/5 hover:bg-white/5">
+              <tr key={r.id} className="border-b border-outline/10 hover:bg-white/5">
                 <td className="px-4 py-2 text-[#00912F] font-headline">{r.id}</td>
-                <td className="px-4 py-2 text-white/60">{r.period}</td>
-                <td className="px-4 py-2 tabular-nums text-white/60">{r.locations}</td>
-                <td className="px-4 py-2 tabular-nums text-white font-bold">{r.accuracy}</td>
-                <td className="px-4 py-2 tabular-nums text-white/60">{r.diff}건</td>
+                <td className="px-4 py-2 text-on-surface/60">{r.period}</td>
+                <td className="px-4 py-2 tabular-nums text-on-surface/60">{r.locations}</td>
+                <td className="px-4 py-2 tabular-nums text-on-surface font-bold">{r.accuracy}</td>
+                <td className="px-4 py-2 tabular-nums text-on-surface/60">{r.diff}건</td>
                 <td className="px-4 py-2"><StatusBadge type="running" label={r.status} /></td>
               </tr>
             ))}

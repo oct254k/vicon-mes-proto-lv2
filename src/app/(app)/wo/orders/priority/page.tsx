@@ -53,7 +53,7 @@ export default function WoOrdersPriorityPage() {
         </div>
         <table className="w-full text-left border-collapse text-sm">
           <thead>
-            <tr className="bg-surface-container border-b border-outline-variant/10">
+            <tr className="bg-surface-container border-b border-outline">
               {["순위", "WO ID", "부재 코드", "수량", "납기일", "상태", "이동"].map((h) => (
                 <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50">{h}</th>
               ))}
@@ -63,7 +63,7 @@ export default function WoOrdersPriorityPage() {
             {rows.map((r, i) => {
               const s = STATUS_MAP[r.status];
               return (
-                <tr key={r.woId} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors">
+                <tr key={r.woId} className="border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors">
                   <td className="px-4 py-2 tabular-nums font-black text-primary-accent text-lg">{r.rank}</td>
                   <td className="px-4 py-2 font-mono text-xs">{r.woId}</td>
                   <td className="px-4 py-2 font-mono text-xs opacity-70">{r.member}</td>

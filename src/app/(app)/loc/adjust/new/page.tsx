@@ -5,8 +5,8 @@ import { PageHeader } from "@/components/ui/PageHeader";
 import { FieldHeader } from "@/components/ui/FieldHeader";
 import { StatusBadge } from "@/components/ui/StatusBadge";
 
-const inputCls = "w-full bg-[#131313] border border-white/10 px-4 py-2 text-sm text-white focus:outline-none focus:border-[#00912F]";
-const labelCls = "block text-xs font-label uppercase tracking-widest text-white/50 mb-2";
+const inputCls = "w-full bg-surface border border-outline/20 px-4 py-2 text-sm text-on-surface focus:outline-none focus:border-[#00912F]";
+const labelCls = "block text-xs font-label uppercase tracking-widest text-on-surface/50 mb-2";
 
 const REASONS = ["실사차이", "손상", "기타"];
 const LOCATIONS = ["Y-P3000-A-01-01","Y-P3000-A-01-02","Y-P3000-A-01-03","Y-P3000-A-02-01","W-01-01","W-02-01"];
@@ -41,7 +41,7 @@ export default function AdjustNewPage() {
           {REASONS.map(r => (
             <button key={r} onClick={() => setReason(r)}
               className={`px-4 py-2 text-xs font-label uppercase tracking-widest border transition-colors ${
-                reason === r ? "border-[#00912F] bg-[#00912F]/20 text-[#00912F]" : "border-white/10 text-white/50 hover:border-white/30"}`}>
+                reason === r ? "border-[#00912F] bg-[#00912F]/20 text-[#00912F]" : "border-outline/20 text-on-surface/50 hover:border-outline/40"}`}>
               {r}
             </button>
           ))}
@@ -57,8 +57,8 @@ export default function AdjustNewPage() {
         </div>
 
         {before && after && (
-          <div className="bg-[#1a1a1a] p-3 border-l-2 border-[#00912F]/40 text-xs font-label">
-            보정량: <span className={delta >= 0 ? "text-[#00912F]" : "text-[#ef4444]"}>{delta >= 0 ? "+" : ""}{delta}m</span>
+          <div className="bg-surface-elevated p-3 border-l-2 border-[#00912F]/40 text-xs font-label">
+            보정량: <span className={delta >= 0 ? "text-[#00912F]" : "text-danger"}>{delta >= 0 ? "+" : ""}{delta}m</span>
           </div>
         )}
 
@@ -88,7 +88,7 @@ export default function AdjustNewPage() {
         {submitted && (
           <div className="flex items-center gap-3">
             <StatusBadge type="warning" label="결재 대기" />
-            <span className="text-xs text-white/50 font-label">{approver}에게 결재 요청됨.</span>
+            <span className="text-xs text-on-surface/50 font-label">{approver}에게 결재 요청됨.</span>
           </div>
         )}
       </div>

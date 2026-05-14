@@ -10,7 +10,7 @@ const DISPATCH_LOG = [
   { id: "RPT-20260502", date: "2026-05-02", target: "공장장·생산관리자 (이메일)", time: "18:05", status: "재발송",   size: "1.1MB" },
 ];
 
-const STATUS_COLOR: Record<string, string> = { 발송완료: "text-primary-accent", 재발송: "text-[#f59e0b]", 실패: "text-error" };
+const STATUS_COLOR: Record<string, string> = { 발송완료: "text-primary-accent", 재발송: "text-warning", 실패: "text-error" };
 
 export default function PlantDailyReportPage() {
   const [date, setDate] = useState("2026-05-05");
@@ -49,7 +49,7 @@ export default function PlantDailyReportPage() {
         </div>
         <table className="w-full text-left border-collapse">
           <thead>
-            <tr className="bg-surface-container border-b border-outline-variant/10">
+            <tr className="bg-surface-container border-b border-outline">
               {["보고서ID","기준일","발송대상","발송시각","상태","파일크기"].map(h=>(
                 <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
               ))}
@@ -57,7 +57,7 @@ export default function PlantDailyReportPage() {
           </thead>
           <tbody className="font-headline text-sm">
             {DISPATCH_LOG.map(r=>(
-              <tr key={r.id} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20">
+              <tr key={r.id} className="border-b border-outline-variant hover:bg-surface-container-highest/20">
                 <td className="px-4 py-2 font-label text-on-surface-variant">{r.id}</td>
                 <td className="px-4 py-2 tabular-nums">{r.date}</td>
                 <td className="px-4 py-2">{r.target}</td>

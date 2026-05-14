@@ -6,7 +6,7 @@ const KPI = [
   { id: "OEE",       label: "OEE",       value: "78.4%", delta: "+2.1", color: "text-primary-accent" },
   { id: "DEFECT",    label: "불량률",     value: "1.8%",  delta: "-0.3", color: "text-primary-accent" },
   { id: "PROGRESS",  label: "진척률",     value: "92%",   delta: "",     color: "text-primary-accent" },
-  { id: "NOTI",      label: "알림 적체",  value: "12건",  delta: "",     color: "text-[#f59e0b]" },
+  { id: "NOTI",      label: "알림 적체",  value: "12건",  delta: "",     color: "text-warning" },
   { id: "EQ_RUN",    label: "가동 라인",  value: "12/15", delta: "",     color: "text-primary-accent" },
   { id: "SHIP_D1",   label: "출하 D-1",   value: "3동",   delta: "",     color: "text-primary-accent" },
   { id: "INV_SHORT", label: "재고 부족",  value: "4건",   delta: "",     color: "text-error" },

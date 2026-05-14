@@ -1,0 +1,193 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "성지그룹 Logo" [ref=e5] [cursor=pointer]:
+          - /url: /ops/
+          - img "성지그룹 Logo" [ref=e6]
+        - generic [ref=e7]:
+          - link "대시보드" [ref=e8] [cursor=pointer]:
+            - /url: /ops/
+          - link "이력추적" [ref=e9] [cursor=pointer]:
+            - /url: /trace/
+          - link "알람" [ref=e10] [cursor=pointer]:
+            - /url: /alarm/
+      - generic [ref=e11]:
+        - button "book_2" [ref=e12] [cursor=pointer]
+        - generic [ref=e13] [cursor=pointer]: notifications
+        - generic [ref=e14] [cursor=pointer]: settings
+        - generic [ref=e16]: person
+    - complementary [ref=e17]:
+      - generic [ref=e19]:
+        - generic [ref=e20]: search
+        - textbox "메뉴 검색... (/)" [ref=e21]
+      - navigation [ref=e22]:
+        - list [ref=e23]:
+          - listitem [ref=e24]:
+            - button "inventory_2 기준정보 expand_more" [ref=e25]:
+              - generic [ref=e26]: inventory_2
+              - generic [ref=e27]: 기준정보
+              - generic [ref=e28]: expand_more
+          - listitem [ref=e29]:
+            - button "request_quote 수주·생산계획·MRP expand_more" [ref=e30]:
+              - generic [ref=e31]: request_quote
+              - generic [ref=e32]: 수주·생산계획·MRP
+              - generic [ref=e33]: expand_more
+          - listitem [ref=e34]:
+            - button "assignment 작업지시·부재·패킹 expand_more" [ref=e35]:
+              - generic [ref=e36]: assignment
+              - generic [ref=e37]: 작업지시·부재·패킹
+              - generic [ref=e38]: expand_more
+            - list [ref=e39]:
+              - listitem [ref=e40]:
+                - button "작업지시 발행·조회 expand_more" [ref=e41]:
+                  - generic [ref=e42]: 작업지시 발행·조회
+                  - generic [ref=e43]: expand_more
+              - listitem [ref=e44]:
+                - button "부재(Member) 코드·도면 expand_more" [ref=e45]:
+                  - generic [ref=e46]: 부재(Member) 코드·도면
+                  - generic [ref=e47]: expand_more
+              - listitem [ref=e48]:
+                - button "패킹 그룹·라이프사이클 expand_more" [ref=e49]:
+                  - generic [ref=e50]: 패킹 그룹·라이프사이클
+                  - generic [ref=e51]: expand_more
+                - list [ref=e52]:
+                  - listitem [ref=e53]:
+                    - link "— 패킹 그룹 사전 정의" [ref=e54] [cursor=pointer]:
+                      - /url: /wo/packing/groups/
+                      - generic [ref=e55]: —
+                      - generic [ref=e56]: 패킹 그룹 사전 정의
+                  - listitem [ref=e57]:
+                    - link "— 8단계 보드 (CREATED~SHIPPED)" [ref=e58] [cursor=pointer]:
+                      - /url: /wo/packing/lifecycle/
+                      - generic [ref=e59]: —
+                      - generic [ref=e60]: 8단계 보드 (CREATED~SHIPPED)
+                  - listitem [ref=e61]:
+                    - link "— 보류·해제·AGING 모니터" [ref=e62] [cursor=pointer]:
+                      - /url: /wo/packing/hold/
+                      - generic [ref=e63]: —
+                      - generic [ref=e64]: 보류·해제·AGING 모니터
+              - listitem [ref=e65]:
+                - button "라벨 발행·재인쇄·이력 expand_more" [ref=e66]:
+                  - generic [ref=e67]: 라벨 발행·재인쇄·이력
+                  - generic [ref=e68]: expand_more
+              - listitem [ref=e69]:
+                - button "작업지시서·패킹리스트 PDF expand_more" [ref=e70]:
+                  - generic [ref=e71]: 작업지시서·패킹리스트 PDF
+                  - generic [ref=e72]: expand_more
+              - listitem [ref=e73]:
+                - link "WO·패킹 진척 보드" [ref=e74] [cursor=pointer]:
+                  - /url: /wo/dashboard/
+                  - generic [ref=e75]: WO·패킹 진척 보드
+          - listitem [ref=e76]:
+            - button "precision_manufacturing 생산실행·추적성 expand_more" [ref=e77]:
+              - generic [ref=e78]: precision_manufacturing
+              - generic [ref=e79]: 생산실행·추적성
+              - generic [ref=e80]: expand_more
+          - listitem [ref=e81]:
+            - button "warehouse 위치·재고 expand_more" [ref=e82]:
+              - generic [ref=e83]: warehouse
+              - generic [ref=e84]: 위치·재고
+              - generic [ref=e85]: expand_more
+          - listitem [ref=e86]:
+            - button "verified 품질·SPC·불량 expand_more" [ref=e87]:
+              - generic [ref=e88]: verified
+              - generic [ref=e89]: 품질·SPC·불량
+              - generic [ref=e90]: expand_more
+          - listitem [ref=e91]:
+            - button "engineering 설비관리 expand_more" [ref=e92]:
+              - generic [ref=e93]: engineering
+              - generic [ref=e94]: 설비관리
+              - generic [ref=e95]: expand_more
+          - listitem [ref=e96]:
+            - button "shopping_cart 구매·발주 expand_more" [ref=e97]:
+              - generic [ref=e98]: shopping_cart
+              - generic [ref=e99]: 구매·발주
+              - generic [ref=e100]: expand_more
+          - listitem [ref=e101]:
+            - button "local_shipping 출하 expand_more" [ref=e102]:
+              - generic [ref=e103]: local_shipping
+              - generic [ref=e104]: 출하
+              - generic [ref=e105]: expand_more
+          - listitem [ref=e106]:
+            - button "groups 사용자·권한 expand_more" [ref=e107]:
+              - generic [ref=e108]: groups
+              - generic [ref=e109]: 사용자·권한
+              - generic [ref=e110]: expand_more
+          - listitem [ref=e111]:
+            - button "dashboard 운영현황·대시보드 expand_more" [ref=e112]:
+              - generic [ref=e113]: dashboard
+              - generic [ref=e114]: 운영현황·대시보드
+              - generic [ref=e115]: expand_more
+          - listitem [ref=e116]:
+            - button "settings 시스템관리 expand_more" [ref=e117]:
+              - generic [ref=e118]: settings
+              - generic [ref=e119]: 시스템관리
+              - generic [ref=e120]: expand_more
+    - main [ref=e121]:
+      - main [ref=e122]:
+        - generic [ref=e123]:
+          - heading "패킹 그룹 사전 정의" [level=1] [ref=e125]
+          - generic [ref=e126]:
+            - generic [ref=e127]: "Node: SCR-WO-020"
+            - generic [ref=e128]: "System Status: CALIBRATED"
+          - paragraph [ref=e129]: 패킹 그룹 템플릿을 사전 정의합니다 — 양산형 묶음 거부 검증. FNC-WO-021
+        - button "+ 신규 그룹" [ref=e131]
+        - generic [ref=e132]:
+          - heading "패킹 그룹 목록 | 5 건" [level=3] [ref=e134]:
+            - text: 패킹 그룹 목록
+            - generic [ref=e135]: "| 5 건"
+          - table [ref=e136]:
+            - rowgroup [ref=e137]:
+              - row "그룹 ID 그룹명 부재 패턴 최대 수량 상태" [ref=e138]:
+                - columnheader "그룹 ID" [ref=e139]
+                - columnheader "그룹명" [ref=e140]
+                - columnheader "부재 패턴" [ref=e141]
+                - columnheader "최대 수량" [ref=e142]
+                - columnheader "상태" [ref=e143]
+                - columnheader [ref=e144]
+            - rowgroup [ref=e145]:
+              - row "PG-G22C-C-S G22C-C형 소묶음 B*-G22C-C-* 20 활성 편집" [ref=e146]:
+                - cell "PG-G22C-C-S" [ref=e147]
+                - cell "G22C-C형 소묶음" [ref=e148]
+                - cell "B*-G22C-C-*" [ref=e149]
+                - cell "20" [ref=e150]
+                - cell "활성" [ref=e151]
+                - cell "편집" [ref=e152]:
+                  - button "편집" [ref=e153]
+              - row "PG-G22C-S-M G22C-S형 중묶음 B*-G22C-S-* 15 활성 편집" [ref=e154]:
+                - cell "PG-G22C-S-M" [ref=e155]
+                - cell "G22C-S형 중묶음" [ref=e156]
+                - cell "B*-G22C-S-*" [ref=e157]
+                - cell "15" [ref=e158]
+                - cell "활성" [ref=e159]
+                - cell "편집" [ref=e160]:
+                  - button "편집" [ref=e161]
+              - row "PG-T18B-C-M T18B-C형 중묶음 B*-T18B-C-* 25 활성 편집" [ref=e162]:
+                - cell "PG-T18B-C-M" [ref=e163]
+                - cell "T18B-C형 중묶음" [ref=e164]
+                - cell "B*-T18B-C-*" [ref=e165]
+                - cell "25" [ref=e166]
+                - cell "활성" [ref=e167]
+                - cell "편집" [ref=e168]:
+                  - button "편집" [ref=e169]
+              - row "PG-H250-L H-BEAM 250 대묶음 B*-H250-* 8 비활성 편집" [ref=e170]:
+                - cell "PG-H250-L" [ref=e171]
+                - cell "H-BEAM 250 대묶음" [ref=e172]
+                - cell "B*-H250-*" [ref=e173]
+                - cell "8" [ref=e174]
+                - cell "비활성" [ref=e175]
+                - cell "편집" [ref=e176]:
+                  - button "편집" [ref=e177]
+              - row "PG-CUSTOM-01 송도 IFC 전용 B01-* 30 활성 편집" [ref=e178]:
+                - cell "PG-CUSTOM-01" [ref=e179]
+                - cell "송도 IFC 전용" [ref=e180]
+                - cell "B01-*" [ref=e181]
+                - cell "30" [ref=e182]
+                - cell "활성" [ref=e183]
+                - cell "편집" [ref=e184]:
+                  - button "편집" [ref=e185]
+    - generic [ref=e187]: System Active | Port 8080 | Secure Link
+  - button "Open Next.js Dev Tools" [ref=e193] [cursor=pointer]:
+    - img [ref=e194]
+  - alert [ref=e197]

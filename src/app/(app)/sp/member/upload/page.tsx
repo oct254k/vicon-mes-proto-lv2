@@ -54,7 +54,7 @@ export default function MemberUploadPage() {
             </div>
             <table className="w-full text-left border-collapse text-sm">
               <thead>
-                <tr className="bg-surface-container border-b border-outline-variant/10">
+                <tr className="bg-surface-container border-b border-outline">
                   {["부재코드", "타입", "길이(mm)", "수량", "검증"].map((h) => (
                     <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50">{h}</th>
                   ))}
@@ -62,7 +62,7 @@ export default function MemberUploadPage() {
               </thead>
               <tbody className="font-headline">
                 {PREVIEW.map((r, i) => (
-                  <tr key={i} className={`border-b border-outline-variant/5 ${!r.valid ? "bg-error/5" : ""}`}>
+                  <tr key={i} className={`border-b border-outline-variant ${!r.valid ? "bg-error/5" : ""}`}>
                     <td className="px-4 py-2 font-mono text-xs">{r.code}</td>
                     <td className="px-4 py-2">{r.type}</td>
                     <td className="px-4 py-2 tabular-nums">{r.len > 0 ? r.len.toLocaleString() : "—"}</td>

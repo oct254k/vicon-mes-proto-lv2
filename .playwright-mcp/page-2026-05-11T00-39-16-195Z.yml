@@ -1,0 +1,221 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "성지그룹 Logo" [ref=e5] [cursor=pointer]:
+          - /url: /ops/
+          - img "성지그룹 Logo" [ref=e6]
+        - generic [ref=e7]:
+          - link "대시보드" [ref=e8] [cursor=pointer]:
+            - /url: /ops/
+          - link "이력추적" [ref=e9] [cursor=pointer]:
+            - /url: /trace/
+          - link "알람" [ref=e10] [cursor=pointer]:
+            - /url: /alarm/
+      - generic [ref=e11]:
+        - button "book_2" [ref=e12] [cursor=pointer]
+        - generic [ref=e13] [cursor=pointer]: notifications
+        - generic [ref=e14] [cursor=pointer]: settings
+        - generic [ref=e16]: person
+    - complementary [ref=e17]:
+      - generic [ref=e19]:
+        - generic [ref=e20]: search
+        - textbox "메뉴 검색... (/)" [ref=e21]
+      - navigation [ref=e22]:
+        - list [ref=e23]:
+          - listitem [ref=e24]:
+            - button "inventory_2 기준정보 expand_more" [ref=e25]:
+              - generic [ref=e26]: inventory_2
+              - generic [ref=e27]: 기준정보
+              - generic [ref=e28]: expand_more
+          - listitem [ref=e29]:
+            - button "request_quote 수주·생산계획·MRP expand_more" [ref=e30]:
+              - generic [ref=e31]: request_quote
+              - generic [ref=e32]: 수주·생산계획·MRP
+              - generic [ref=e33]: expand_more
+            - list [ref=e34]:
+              - listitem [ref=e35]:
+                - button "수주 입력·관리 expand_more" [ref=e36]:
+                  - generic [ref=e37]: 수주 입력·관리
+                  - generic [ref=e38]: expand_more
+              - listitem [ref=e39]:
+                - button "부재 리스트(수주 분해) expand_more" [ref=e40]:
+                  - generic [ref=e41]: 부재 리스트(수주 분해)
+                  - generic [ref=e42]: expand_more
+              - listitem [ref=e43]:
+                - button "생산계획(장기·중기·일일) expand_more" [ref=e44]:
+                  - generic [ref=e45]: 생산계획(장기·중기·일일)
+                  - generic [ref=e46]: expand_more
+                - list [ref=e47]:
+                  - listitem [ref=e48]:
+                    - link "— 장기 계획 보드" [ref=e49] [cursor=pointer]:
+                      - /url: /sp/plan/long-term/
+                      - generic [ref=e50]: —
+                      - generic [ref=e51]: 장기 계획 보드
+                  - listitem [ref=e52]:
+                    - link "— 중기 계획 보드" [ref=e53] [cursor=pointer]:
+                      - /url: /sp/plan/mid-term/
+                      - generic [ref=e54]: —
+                      - generic [ref=e55]: 중기 계획 보드
+                  - listitem [ref=e56]:
+                    - link "— 일일 계획 보드" [ref=e57] [cursor=pointer]:
+                      - /url: /sp/plan/daily/
+                      - generic [ref=e58]: —
+                      - generic [ref=e59]: 일일 계획 보드
+                  - listitem [ref=e60]:
+                    - link "— 일일 계획 입력 폼" [ref=e61] [cursor=pointer]:
+                      - /url: /sp/plan/daily/new/
+                      - generic [ref=e62]: —
+                      - generic [ref=e63]: 일일 계획 입력 폼
+                  - listitem [ref=e64]:
+                    - link "— 강제 발행 다이얼로그" [ref=e65] [cursor=pointer]:
+                      - /url: "/sp/plan/daily/{plan_id}/force/"
+                      - generic [ref=e66]: —
+                      - generic [ref=e67]: 강제 발행 다이얼로그
+                  - listitem [ref=e68]:
+                    - link "— 계획 변경 이력" [ref=e69] [cursor=pointer]:
+                      - /url: "/sp/plan/{plan_id}/audit/"
+                      - generic [ref=e70]: —
+                      - generic [ref=e71]: 계획 변경 이력
+              - listitem [ref=e72]:
+                - button "MRP 실행·결과 조회 expand_more" [ref=e73]:
+                  - generic [ref=e74]: MRP 실행·결과 조회
+                  - generic [ref=e75]: expand_more
+              - listitem [ref=e76]:
+                - button "SP 알림 expand_more" [ref=e77]:
+                  - generic [ref=e78]: SP 알림
+                  - generic [ref=e79]: expand_more
+          - listitem [ref=e80]:
+            - button "assignment 작업지시·부재·패킹 expand_more" [ref=e81]:
+              - generic [ref=e82]: assignment
+              - generic [ref=e83]: 작업지시·부재·패킹
+              - generic [ref=e84]: expand_more
+          - listitem [ref=e85]:
+            - button "precision_manufacturing 생산실행·추적성 expand_more" [ref=e86]:
+              - generic [ref=e87]: precision_manufacturing
+              - generic [ref=e88]: 생산실행·추적성
+              - generic [ref=e89]: expand_more
+          - listitem [ref=e90]:
+            - button "warehouse 위치·재고 expand_more" [ref=e91]:
+              - generic [ref=e92]: warehouse
+              - generic [ref=e93]: 위치·재고
+              - generic [ref=e94]: expand_more
+          - listitem [ref=e95]:
+            - button "verified 품질·SPC·불량 expand_more" [ref=e96]:
+              - generic [ref=e97]: verified
+              - generic [ref=e98]: 품질·SPC·불량
+              - generic [ref=e99]: expand_more
+          - listitem [ref=e100]:
+            - button "engineering 설비관리 expand_more" [ref=e101]:
+              - generic [ref=e102]: engineering
+              - generic [ref=e103]: 설비관리
+              - generic [ref=e104]: expand_more
+          - listitem [ref=e105]:
+            - button "shopping_cart 구매·발주 expand_more" [ref=e106]:
+              - generic [ref=e107]: shopping_cart
+              - generic [ref=e108]: 구매·발주
+              - generic [ref=e109]: expand_more
+          - listitem [ref=e110]:
+            - button "local_shipping 출하 expand_more" [ref=e111]:
+              - generic [ref=e112]: local_shipping
+              - generic [ref=e113]: 출하
+              - generic [ref=e114]: expand_more
+          - listitem [ref=e115]:
+            - button "groups 사용자·권한 expand_more" [ref=e116]:
+              - generic [ref=e117]: groups
+              - generic [ref=e118]: 사용자·권한
+              - generic [ref=e119]: expand_more
+          - listitem [ref=e120]:
+            - button "dashboard 운영현황·대시보드 expand_more" [ref=e121]:
+              - generic [ref=e122]: dashboard
+              - generic [ref=e123]: 운영현황·대시보드
+              - generic [ref=e124]: expand_more
+          - listitem [ref=e125]:
+            - button "settings 시스템관리 expand_more" [ref=e126]:
+              - generic [ref=e127]: settings
+              - generic [ref=e128]: 시스템관리
+              - generic [ref=e129]: expand_more
+    - main [ref=e130]:
+      - main [ref=e131]:
+        - generic [ref=e132]:
+          - heading "일일 계획 보드" [level=1] [ref=e134]
+          - generic [ref=e135]:
+            - generic [ref=e136]: "Node: SCR-SP-022"
+            - generic [ref=e137]: "System Status: DRAFT"
+        - generic [ref=e138]:
+          - generic [ref=e139]:
+            - generic [ref=e140]: Plant
+            - combobox [ref=e141]:
+              - option "P1100 — 이천1-1 (보데크)"
+              - option "P1200 — 이천1-2 (알루미늄폼)"
+              - option "P2000 — 이천2 (알루미늄폼)"
+              - option "P3000 — 이천3 (데크)" [selected]
+              - option "P4000 — 안성4 (가설재)"
+          - generic [ref=e142]:
+            - generic [ref=e143]: 날짜
+            - textbox [ref=e144]: 2026-05-06
+          - button "계획 확정" [ref=e145]
+        - generic [ref=e146]:
+          - generic [ref=e147]:
+            - heading "계획 항목 | P3000 / 2026-05-06" [level=3] [ref=e148]:
+              - text: 계획 항목
+              - generic [ref=e149]: "| P3000 / 2026-05-06"
+            - generic [ref=e150]: 6 항목
+          - table [ref=e152]:
+            - rowgroup [ref=e153]:
+              - row "부재묶음 타입 수량 납기 재고 상태 우선순위" [ref=e154]:
+                - columnheader "부재묶음" [ref=e155]
+                - columnheader "타입" [ref=e156]
+                - columnheader "수량" [ref=e157]
+                - columnheader "납기" [ref=e158]
+                - columnheader "재고 상태" [ref=e159]
+                - columnheader "우선순위" [ref=e160]
+            - rowgroup [ref=e161]:
+              - row "B01-1 C형 240 2026-05-08 OK 1" [ref=e162]:
+                - cell "B01-1" [ref=e163]
+                - cell "C형" [ref=e164]
+                - cell "240" [ref=e165]
+                - cell "2026-05-08" [ref=e166]
+                - cell "OK" [ref=e167]
+                - cell "1" [ref=e168]
+              - row "B01-2 S형 80 2026-05-08 부족 2" [ref=e169]:
+                - cell "B01-2" [ref=e170]
+                - cell "S형" [ref=e171]
+                - cell "80" [ref=e172]
+                - cell "2026-05-08" [ref=e173]
+                - cell "부족" [ref=e174]
+                - cell "2" [ref=e175]
+              - row "B02-1 H형 60 2026-05-12 OK 3" [ref=e176]:
+                - cell "B02-1" [ref=e177]
+                - cell "H형" [ref=e178]
+                - cell "60" [ref=e179]
+                - cell "2026-05-12" [ref=e180]
+                - cell "OK" [ref=e181]
+                - cell "3" [ref=e182]
+              - row "B02-2 C형 160 2026-05-12 부족 4" [ref=e183]:
+                - cell "B02-2" [ref=e184]
+                - cell "C형" [ref=e185]
+                - cell "160" [ref=e186]
+                - cell "2026-05-12" [ref=e187]
+                - cell "부족" [ref=e188]
+                - cell "4" [ref=e189]
+              - row "B03-1 C형 320 2026-05-20 OK 5" [ref=e190]:
+                - cell "B03-1" [ref=e191]
+                - cell "C형" [ref=e192]
+                - cell "320" [ref=e193]
+                - cell "2026-05-20" [ref=e194]
+                - cell "OK" [ref=e195]
+                - cell "5" [ref=e196]
+              - row "B03-2 S형 40 2026-05-20 OK 6" [ref=e197]:
+                - cell "B03-2" [ref=e198]
+                - cell "S형" [ref=e199]
+                - cell "40" [ref=e200]
+                - cell "2026-05-20" [ref=e201]
+                - cell "OK" [ref=e202]
+                - cell "6" [ref=e203]
+        - link "WO 발행 →" [ref=e205] [cursor=pointer]:
+          - /url: /wo/orders/release
+          - button "WO 발행 →" [ref=e206]
+    - generic [ref=e208]: System Active | Port 8080 | Secure Link
+  - button "Open Next.js Dev Tools" [ref=e214] [cursor=pointer]:
+    - img [ref=e215]

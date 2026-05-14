@@ -18,13 +18,13 @@ export default function ChannelPage() {
       <FieldHeader title="거래처 채널 설정" moduleRef={`${CUSTOMERS.length}개 거래처`} />
       <div className="bg-surface-container-lowest overflow-x-auto mb-4">
         <table className="w-full text-left border-collapse">
-          <thead><tr className="bg-surface-container border-b border-outline-variant/10">
+          <thead><tr className="bg-surface-container border-b border-outline">
             {["거래처","EMAIL","SMS","카카오톡","INAPP","편집"].map(h=>(
               <th key={h} className="px-4 py-2 font-label text-xs uppercase tracking-widest opacity-50">{h}</th>
             ))}</tr></thead>
           <tbody className="font-headline text-sm">
             {CUSTOMERS.map(c=>(
-              <tr key={c.customer} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20">
+              <tr key={c.customer} className="border-b border-outline-variant hover:bg-surface-container-highest/20">
                 <td className="px-4 py-2 font-bold">{c.customer}</td>
                 <td className="px-4 py-2 text-xs font-mono opacity-70">{c.email}</td>
                 <td className="px-4 py-2 text-xs tabular-nums">{c.sms}</td>

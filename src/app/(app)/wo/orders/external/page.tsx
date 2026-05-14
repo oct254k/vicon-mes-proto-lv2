@@ -68,7 +68,7 @@ export default function ExternalWoPage() {
               className="w-full bg-surface-container px-3 py-2 text-sm font-headline font-mono border border-outline-variant/20 focus:border-primary-accent focus:outline-none" />
           </div>
 
-          <div className="bg-surface-container p-3 border-l-2 border-[#f59e0b]">
+          <div className="bg-surface-container p-3 border-l-2 border-warning">
             <p className="text-xs font-label opacity-60 uppercase tracking-widest">EAI 통보: 발행 즉시 외주처에 자동 전송됩니다.</p>
           </div>
 

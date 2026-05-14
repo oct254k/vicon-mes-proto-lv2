@@ -56,10 +56,10 @@ export default function YardMapOccupancyPage() {
 
       <div className="grid grid-cols-4 gap-4 mb-8">
         {KPI.map(k => (
-          <div key={k.label} className="bg-[#1a1a1a] border-l-4 border-[#00912F] p-5">
-            <p className="text-xs font-label uppercase tracking-widest text-white/40 mb-2">{k.label}</p>
-            <p className="text-3xl font-black font-headline text-white">{k.value}</p>
-            <p className="text-xs text-white/30 font-label mt-1">{k.sub}</p>
+          <div key={k.label} className="bg-surface-elevated border-l-4 border-[#00912F] p-5">
+            <p className="text-xs font-label uppercase tracking-widest text-on-surface/50 mb-2">{k.label}</p>
+            <p className="text-3xl font-black font-headline text-on-surface">{k.value}</p>
+            <p className="text-xs text-on-surface/40 font-label mt-1">{k.sub}</p>
           </div>
         ))}
       </div>
@@ -70,9 +70,9 @@ export default function YardMapOccupancyPage() {
           const pct = parseInt(y.pct);
           return (
             <div key={y.yard} className="flex items-center gap-4 mb-3">
-              <span className="font-label text-xs uppercase tracking-widest text-white/60 w-16">{y.yard}</span>
-              <div className="flex-1 h-5 bg-[#1a1a1a] border border-white/5">
-                <div className={`h-full ${pct >= 85 ? "bg-[#ef4444]" : pct >= 70 ? "bg-[#f59e0b]" : "bg-[#00912F]"}`}
+              <span className="font-label text-xs uppercase tracking-widest text-on-surface/60 w-16">{y.yard}</span>
+              <div className="flex-1 h-5 bg-surface-elevated border border-outline/10">
+                <div className={`h-full ${pct >= 85 ? "bg-danger" : pct >= 70 ? "bg-warning" : "bg-[#00912F]"}`}
                   style={{ width: y.pct }} />
               </div>
               <span className="font-headline font-bold text-sm tabular-nums w-12 text-right">{y.pct}</span>

@@ -10,7 +10,7 @@ const POLICIES = [
 
 export default function BackupPolicyPage() {
   return (
-    <div className="p-8 bg-[#131313] min-h-screen text-on-surface">
+    <div className="p-8 bg-surface min-h-screen text-on-surface">
       <PageHeader title="백업 정책 설정" accent="POLICY" nodeRef="SCR-SYS-060" status="PROTOTYPE"
         description="4 DB 카테고리 × RTO/RPO 정책 — 즉시 백업 시 사유 코드 필수 (FNC-SYS-060·063·065)" />
       <div className="flex gap-3 mb-6">

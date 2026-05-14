@@ -58,7 +58,7 @@ export default function SoNewPage() {
         <div className="overflow-x-auto bg-surface-container-lowest">
           <table className="w-full text-left border-collapse text-sm">
             <thead>
-              <tr className="bg-surface-container border-b border-outline-variant/10">
+              <tr className="bg-surface-container border-b border-outline">
                 {["#", "동", "부재 타입", "길이(mm)", "수량", "단가", "비고"].map((h) => (
                   <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50">{h}</th>
                 ))}
@@ -66,7 +66,7 @@ export default function SoNewPage() {
             </thead>
             <tbody className="font-headline">
               {lines.map((l) => (
-                <tr key={l.no} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20">
+                <tr key={l.no} className="border-b border-outline-variant hover:bg-surface-container-highest/20">
                   <td className="px-4 py-2 tabular-nums opacity-40">{l.no}</td>
                   <td className="px-4 py-2">{l.building}</td>
                   <td className="px-4 py-2">{l.memberType}</td>

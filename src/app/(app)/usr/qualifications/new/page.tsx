@@ -23,7 +23,7 @@ export default function QualificationNewPage() {
         <FieldHeader title="A. 자격 대상 사용자 선택" moduleRef="FNC-USR-070/073" />
         <table className="w-full text-left text-sm mb-2">
           <thead>
-            <tr className="border-b border-outline-variant/10">
+            <tr className="border-b border-outline">
               <th className="pb-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold pr-4">선택</th>
               <th className="pb-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold pr-4">사번</th>
               <th className="pb-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold pr-4">이름</th>
@@ -33,7 +33,7 @@ export default function QualificationNewPage() {
           </thead>
           <tbody className="font-headline">
             {USERS.map((u) => (
-              <tr key={u.id} className="border-b border-outline-variant/5">
+              <tr key={u.id} className="border-b border-outline-variant">
                 <td className="py-2 pr-4"><input type="checkbox" className="accent-[#00912F]" /></td>
                 <td className="py-2 pr-4 tabular-nums text-primary-accent font-bold">{u.id}</td>
                 <td className="py-2 pr-4">{u.name}</td>

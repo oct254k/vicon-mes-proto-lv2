@@ -60,7 +60,7 @@ export default function USRUsersPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="bg-surface-container border-b border-outline-variant/10">
+              <tr className="bg-surface-container border-b border-outline">
                 {["사용자 ID", "이름", "권한 레벨", "부서", "인증수단", "상태", "고용형태", "최근 로그인"].map((h) => (
                   <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
                 ))}
@@ -68,7 +68,7 @@ export default function USRUsersPage() {
             </thead>
             <tbody className="font-headline text-sm">
               {MOCK_USERS.map((u, i) => (
-                <tr key={i} className={`border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors cursor-pointer ${u.status === "LOCKED" ? "bg-[#f59e0b]/5" : ""}`}>
+                <tr key={i} className={`border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors cursor-pointer ${u.status === "LOCKED" ? "bg-warning/5" : ""}`}>
                   <td className="px-4 py-2 text-primary-accent font-bold tabular-nums">{u.userId}</td>
                   <td className="px-4 py-2">{u.name}</td>
                   <td className="px-4 py-2 tabular-nums">{u.level}</td>
@@ -76,7 +76,7 @@ export default function USRUsersPage() {
                   <td className="px-4 py-2 text-xs opacity-70">{u.authMethods}</td>
                   <td className="px-4 py-2">
                     <StatusBadge type={STATUS_MAP[u.status]} label={u.status} />
-                    {u.status === "LOCKED" && <span className="ml-1 text-[#f59e0b]">🔒</span>}
+                    {u.status === "LOCKED" && <span className="ml-1 text-warning">🔒</span>}
                   </td>
                   <td className="px-4 py-2 text-xs opacity-70">{u.empType}</td>
                   <td className="px-4 py-2 text-xs tabular-nums opacity-60">{u.lastLogin}</td>
@@ -85,7 +85,7 @@ export default function USRUsersPage() {
             </tbody>
           </table>
         </div>
-        <div className="p-3 flex items-center gap-2 text-xs font-label opacity-40 border-t border-outline-variant/5">
+        <div className="p-3 flex items-center gap-2 text-xs font-label opacity-40 border-t border-outline-variant">
           <span>137건 / 페이지 1 of 7</span>
           {["<","1","2","3","...","7",">"].map((p, i) => (
             <button key={i} className="px-2 py-0.5 hover:text-primary-accent">{p}</button>

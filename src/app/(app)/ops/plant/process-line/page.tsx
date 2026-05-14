@@ -38,10 +38,10 @@ export default function PlantProcessLinePage() {
           <div key={b.line} className="mb-3">
             <div className="flex justify-between text-xs font-label mb-1">
               <span className="text-on-surface-variant w-20">{b.line}</span>
-              <span className={`tabular-nums ${b.rate>=80?"text-primary-accent":b.rate>=70?"text-[#f59e0b]":"text-error"}`}>{b.rate}%</span>
+              <span className={`tabular-nums ${b.rate>=80?"text-primary-accent":b.rate>=70?"text-warning":"text-error"}`}>{b.rate}%</span>
             </div>
             <div className="h-3 bg-surface-container-highest/30">
-              <div className={`h-3 ${b.rate>=80?"bg-primary-accent":b.rate>=70?"bg-[#f59e0b]":"bg-error"}`} style={{width:`${b.rate}%`}} />
+              <div className={`h-3 ${b.rate>=80?"bg-primary-accent":b.rate>=70?"bg-warning":"bg-error"}`} style={{width:`${b.rate}%`}} />
             </div>
           </div>
         ))}

@@ -11,7 +11,7 @@ const CONFIRMED = [
 const ACTIONS = ["SCRAP", "CLAIM", "RETURN", "REWORK"];
 const ACTION_STYLE: Record<string, string> = {
   SCRAP: "bg-error text-white",
-  CLAIM: "bg-[#f59e0b] text-black",
+  CLAIM: "bg-warning text-black",
   RETURN: "bg-tertiary text-black",
   REWORK: "bg-surface-container-highest text-on-surface",
 };
@@ -27,7 +27,7 @@ export default function QCDefectManagerBoardPage() {
         description="QC 관리자 CONFIRMED→DISPOSED 4종 분기 발행 (FNC-QC-054, 065~072)"
       />
 
-      <div className="bg-surface-container border-l-4 border-[#f59e0b] p-4 mb-6 flex items-start gap-3">
+      <div className="bg-surface-container border-l-4 border-warning p-4 mb-6 flex items-start gap-3">
         <StatusBadge type="warning" label="4계층 결재 2단계" />
         <p className="text-sm opacity-70">CONFIRMED 건을 SCRAP / CLAIM / RETURN / REWORK 4종으로 분기 발행. 발행 시 재고 차감·거래처 통보·격리 입고 자동 실행.</p>
       </div>
@@ -52,7 +52,7 @@ export default function QCDefectManagerBoardPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse text-sm">
             <thead>
-              <tr className="bg-surface-container border-b border-outline-variant/10">
+              <tr className="bg-surface-container border-b border-outline">
                 {["신고번호","부재코드","불량유형","시점","수량","확인일시","4종 발행"].map((h) => (
                   <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
                 ))}
@@ -60,7 +60,7 @@ export default function QCDefectManagerBoardPage() {
             </thead>
             <tbody className="font-headline">
               {CONFIRMED.map((r, i) => (
-                <tr key={i} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors">
+                <tr key={i} className="border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors">
                   <td className="px-4 py-2 tabular-nums text-primary-accent">{r.id}</td>
                   <td className="px-4 py-2 font-mono text-xs">{r.partCode}</td>
                   <td className="px-4 py-2">{r.type}</td>

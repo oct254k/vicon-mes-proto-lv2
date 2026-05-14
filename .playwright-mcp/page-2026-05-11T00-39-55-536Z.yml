@@ -1,0 +1,192 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "성지그룹 Logo" [ref=e5] [cursor=pointer]:
+          - /url: /ops/
+          - img "성지그룹 Logo" [ref=e6]
+        - generic [ref=e7]:
+          - link "대시보드" [ref=e8] [cursor=pointer]:
+            - /url: /ops/
+          - link "이력추적" [ref=e9] [cursor=pointer]:
+            - /url: /trace/
+          - link "알람" [ref=e10] [cursor=pointer]:
+            - /url: /alarm/
+      - generic [ref=e11]:
+        - button "book_2" [ref=e12] [cursor=pointer]
+        - generic [ref=e13] [cursor=pointer]: notifications
+        - generic [ref=e14] [cursor=pointer]: settings
+        - generic [ref=e16]: person
+    - complementary [ref=e17]:
+      - generic [ref=e19]:
+        - generic [ref=e20]: search
+        - textbox "메뉴 검색... (/)" [ref=e21]
+      - navigation [ref=e22]:
+        - list [ref=e23]:
+          - listitem [ref=e24]:
+            - button "inventory_2 기준정보 expand_more" [ref=e25]:
+              - generic [ref=e26]: inventory_2
+              - generic [ref=e27]: 기준정보
+              - generic [ref=e28]: expand_more
+          - listitem [ref=e29]:
+            - button "request_quote 수주·생산계획·MRP expand_more" [ref=e30]:
+              - generic [ref=e31]: request_quote
+              - generic [ref=e32]: 수주·생산계획·MRP
+              - generic [ref=e33]: expand_more
+          - listitem [ref=e34]:
+            - button "assignment 작업지시·부재·패킹 expand_more" [ref=e35]:
+              - generic [ref=e36]: assignment
+              - generic [ref=e37]: 작업지시·부재·패킹
+              - generic [ref=e38]: expand_more
+            - list [ref=e39]:
+              - listitem [ref=e40]:
+                - button "작업지시 발행·조회 expand_more" [ref=e41]:
+                  - generic [ref=e42]: 작업지시 발행·조회
+                  - generic [ref=e43]: expand_more
+              - listitem [ref=e44]:
+                - button "부재(Member) 코드·도면 expand_more" [ref=e45]:
+                  - generic [ref=e46]: 부재(Member) 코드·도면
+                  - generic [ref=e47]: expand_more
+              - listitem [ref=e48]:
+                - button "패킹 그룹·라이프사이클 expand_more" [ref=e49]:
+                  - generic [ref=e50]: 패킹 그룹·라이프사이클
+                  - generic [ref=e51]: expand_more
+              - listitem [ref=e52]:
+                - button "라벨 발행·재인쇄·이력 expand_more" [ref=e53]:
+                  - generic [ref=e54]: 라벨 발행·재인쇄·이력
+                  - generic [ref=e55]: expand_more
+              - listitem [ref=e56]:
+                - button "작업지시서·패킹리스트 PDF expand_more" [ref=e57]:
+                  - generic [ref=e58]: 작업지시서·패킹리스트 PDF
+                  - generic [ref=e59]: expand_more
+                - list [ref=e60]:
+                  - listitem [ref=e61]:
+                    - link "— 작업지시서 PDF" [ref=e62] [cursor=pointer]:
+                      - /url: "/wo/documents/work-order/{wo_id}/"
+                      - generic [ref=e63]: —
+                      - generic [ref=e64]: 작업지시서 PDF
+                  - listitem [ref=e65]:
+                    - link "— 패킹리스트 PDF" [ref=e66] [cursor=pointer]:
+                      - /url: "/wo/documents/packing-list/{packing_id}/"
+                      - generic [ref=e67]: —
+                      - generic [ref=e68]: 패킹리스트 PDF
+              - listitem [ref=e69]:
+                - link "WO·패킹 진척 보드" [ref=e70] [cursor=pointer]:
+                  - /url: /wo/dashboard/
+                  - generic [ref=e71]: WO·패킹 진척 보드
+          - listitem [ref=e72]:
+            - button "precision_manufacturing 생산실행·추적성 expand_more" [ref=e73]:
+              - generic [ref=e74]: precision_manufacturing
+              - generic [ref=e75]: 생산실행·추적성
+              - generic [ref=e76]: expand_more
+          - listitem [ref=e77]:
+            - button "warehouse 위치·재고 expand_more" [ref=e78]:
+              - generic [ref=e79]: warehouse
+              - generic [ref=e80]: 위치·재고
+              - generic [ref=e81]: expand_more
+          - listitem [ref=e82]:
+            - button "verified 품질·SPC·불량 expand_more" [ref=e83]:
+              - generic [ref=e84]: verified
+              - generic [ref=e85]: 품질·SPC·불량
+              - generic [ref=e86]: expand_more
+          - listitem [ref=e87]:
+            - button "engineering 설비관리 expand_more" [ref=e88]:
+              - generic [ref=e89]: engineering
+              - generic [ref=e90]: 설비관리
+              - generic [ref=e91]: expand_more
+          - listitem [ref=e92]:
+            - button "shopping_cart 구매·발주 expand_more" [ref=e93]:
+              - generic [ref=e94]: shopping_cart
+              - generic [ref=e95]: 구매·발주
+              - generic [ref=e96]: expand_more
+          - listitem [ref=e97]:
+            - button "local_shipping 출하 expand_more" [ref=e98]:
+              - generic [ref=e99]: local_shipping
+              - generic [ref=e100]: 출하
+              - generic [ref=e101]: expand_more
+          - listitem [ref=e102]:
+            - button "groups 사용자·권한 expand_more" [ref=e103]:
+              - generic [ref=e104]: groups
+              - generic [ref=e105]: 사용자·권한
+              - generic [ref=e106]: expand_more
+          - listitem [ref=e107]:
+            - button "dashboard 운영현황·대시보드 expand_more" [ref=e108]:
+              - generic [ref=e109]: dashboard
+              - generic [ref=e110]: 운영현황·대시보드
+              - generic [ref=e111]: expand_more
+          - listitem [ref=e112]:
+            - button "settings 시스템관리 expand_more" [ref=e113]:
+              - generic [ref=e114]: settings
+              - generic [ref=e115]: 시스템관리
+              - generic [ref=e116]: expand_more
+    - main [ref=e117]:
+      - generic [ref=e118]:
+        - generic [ref=e119]:
+          - heading "출력 문서 DOCUMENTS" [level=1] [ref=e121]
+          - generic [ref=e122]:
+            - generic [ref=e123]: "Node: SCR-WO-040"
+            - generic [ref=e124]: "System Status: PROTOTYPE"
+          - paragraph [ref=e125]: 작업지시서·패킹리스트 생성 이력 및 PDF 다운로드.
+        - generic [ref=e126]:
+          - heading "문서 목록" [level=3] [ref=e127]
+          - generic [ref=e128]: SCR-WO-040
+        - generic [ref=e129]:
+          - generic [ref=e130]:
+            - 'heading "문서 목록 | Buffer: 007 Entries" [level=3] [ref=e131]':
+              - text: 문서 목록
+              - generic [ref=e132]: "| Buffer: 007 Entries"
+            - generic [ref=e133] [cursor=pointer]: refresh
+          - table [ref=e135]:
+            - rowgroup [ref=e136]:
+              - row "문서 유형 WO / 패킹 ID 생성일시 다운로드" [ref=e137]:
+                - columnheader "문서 유형" [ref=e138]
+                - columnheader "WO / 패킹 ID" [ref=e139]
+                - columnheader "생성일시" [ref=e140]
+                - columnheader "다운로드" [ref=e141]
+            - rowgroup [ref=e142]:
+              - row "패킹리스트 PL-P3000-20260506-001 2026-05-06 09:45 PDF 다운로드" [ref=e143]:
+                - cell "패킹리스트" [ref=e144]
+                - cell "PL-P3000-20260506-001" [ref=e145]
+                - cell "2026-05-06 09:45" [ref=e146]
+                - cell "PDF 다운로드" [ref=e147]:
+                  - button "PDF 다운로드" [ref=e148]
+              - row "작업지시서 WO-P3000-20260506-0007 2026-05-06 09:10 PDF 다운로드" [ref=e149]:
+                - cell "작업지시서" [ref=e150]
+                - cell "WO-P3000-20260506-0007" [ref=e151]
+                - cell "2026-05-06 09:10" [ref=e152]
+                - cell "PDF 다운로드" [ref=e153]:
+                  - button "PDF 다운로드" [ref=e154]
+              - row "작업지시서 WO-P3000-20260506-0008 2026-05-06 09:10 PDF 다운로드" [ref=e155]:
+                - cell "작업지시서" [ref=e156]
+                - cell "WO-P3000-20260506-0008" [ref=e157]
+                - cell "2026-05-06 09:10" [ref=e158]
+                - cell "PDF 다운로드" [ref=e159]:
+                  - button "PDF 다운로드" [ref=e160]
+              - row "패킹리스트 PL-P3000-20260505-003 2026-05-05 16:50 PDF 다운로드" [ref=e161]:
+                - cell "패킹리스트" [ref=e162]
+                - cell "PL-P3000-20260505-003" [ref=e163]
+                - cell "2026-05-05 16:50" [ref=e164]
+                - cell "PDF 다운로드" [ref=e165]:
+                  - button "PDF 다운로드" [ref=e166]
+              - row "작업지시서 WO-P3000-20260505-0002 2026-05-05 08:00 PDF 다운로드" [ref=e167]:
+                - cell "작업지시서" [ref=e168]
+                - cell "WO-P3000-20260505-0002" [ref=e169]
+                - cell "2026-05-05 08:00" [ref=e170]
+                - cell "PDF 다운로드" [ref=e171]:
+                  - button "PDF 다운로드" [ref=e172]
+              - row "패킹리스트 PL-P3000-20260504-002 2026-05-04 09:20 PDF 다운로드" [ref=e173]:
+                - cell "패킹리스트" [ref=e174]
+                - cell "PL-P3000-20260504-002" [ref=e175]
+                - cell "2026-05-04 09:20" [ref=e176]
+                - cell "PDF 다운로드" [ref=e177]:
+                  - button "PDF 다운로드" [ref=e178]
+              - row "작업지시서 WO-P3000-20260504-0001 2026-05-04 09:15 PDF 다운로드" [ref=e179]:
+                - cell "작업지시서" [ref=e180]
+                - cell "WO-P3000-20260504-0001" [ref=e181]
+                - cell "2026-05-04 09:15" [ref=e182]
+                - cell "PDF 다운로드" [ref=e183]:
+                  - button "PDF 다운로드" [ref=e184]
+    - generic [ref=e186]: System Active | Port 8080 | Secure Link
+  - button "Open Next.js Dev Tools" [ref=e192] [cursor=pointer]:
+    - img [ref=e193]
+  - alert [ref=e196]

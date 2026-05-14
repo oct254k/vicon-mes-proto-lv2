@@ -17,19 +17,19 @@ export default function UnlockPage() {
     <div>
       <PageHeader title="PIN 잠금 수동 해제" nodeRef="SCR-USR-024" status="PROTOTYPE" description="PIN 5회 오류로 잠긴 사용자 수동 해제. L2+ 자기 부서원 한정." />
 
-      <div className="bg-surface-container-low border-l-4 border-[#f59e0b] p-4 mb-4 flex items-center gap-3">
-        <span className="text-[#f59e0b] font-bold text-sm font-label uppercase tracking-widest">경고</span>
+      <div className="bg-surface-container-low border-l-4 border-warning p-4 mb-4 flex items-center gap-3">
+        <span className="text-warning font-bold text-sm font-label uppercase tracking-widest">경고</span>
         <span className="text-xs font-body text-on-surface/60">잠금 해제는 L2 이상 부서장 권한 필요. 자기 부서원만 해제 가능. 해제 사유 필수 입력.</span>
       </div>
 
       <div className="bg-surface-container-lowest mb-4">
-        <div className="p-4 bg-surface-container-highest/30 flex justify-between items-center border-l-4 border-[#f59e0b]">
+        <div className="p-4 bg-surface-container-highest/30 flex justify-between items-center border-l-4 border-warning">
           <h3 className="font-headline font-black text-sm uppercase tracking-widest">A. 잠금 사용자 목록 <span className="opacity-30 font-light ml-2">| {LOCKED_USERS.length}명</span></h3>
           <StatusBadge type="warning" label="잠김" />
         </div>
         <table className="w-full text-left border-collapse text-sm">
           <thead>
-            <tr className="bg-surface-container border-b border-outline-variant/10">
+            <tr className="bg-surface-container border-b border-outline">
               {["사번", "이름", "부서", "잠금 시각", "시도 횟수", "사유", "해제"].map((h) => (
                 <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
               ))}
@@ -37,12 +37,12 @@ export default function UnlockPage() {
           </thead>
           <tbody className="font-headline">
             {LOCKED_USERS.map((u, i) => (
-              <tr key={i} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20 bg-[#f59e0b]/5">
+              <tr key={i} className="border-b border-outline-variant hover:bg-surface-container-highest/20 bg-warning/5">
                 <td className="px-4 py-2 tabular-nums text-primary-accent font-bold">{u.userId}</td>
                 <td className="px-4 py-2">{u.name}</td>
                 <td className="px-4 py-2">{u.dept}</td>
                 <td className="px-4 py-2 tabular-nums text-xs">{u.lockedAt}</td>
-                <td className="px-4 py-2 tabular-nums text-[#f59e0b] font-bold">{u.attempts}</td>
+                <td className="px-4 py-2 tabular-nums text-warning font-bold">{u.attempts}</td>
                 <td className="px-4 py-2 text-xs opacity-60">{u.reason}</td>
                 <td className="px-4 py-2">
                   <button className="px-3 py-1 bg-primary-accent text-black text-xs font-label uppercase tracking-widest font-bold">해제</button>

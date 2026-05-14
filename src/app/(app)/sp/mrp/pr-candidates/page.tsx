@@ -48,7 +48,7 @@ export default function PrCandidatesPage() {
         </div>
         <table className="w-full text-left border-collapse">
           <thead>
-            <tr className="bg-surface-container border-b border-outline-variant/10">
+            <tr className="bg-surface-container border-b border-outline">
               {["선택", "PR ID", "자재명", "단위", "부족수량", "리드타임", "공급사", "상태"].map((h) => (
                 <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
               ))}
@@ -59,7 +59,7 @@ export default function PrCandidatesPage() {
               const s = STATUS_MAP[r.status];
               const chk = selected.has(r.prId);
               return (
-                <tr key={r.prId} className={`border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors ${chk ? "bg-primary-accent/5" : ""}`}>
+                <tr key={r.prId} className={`border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors ${chk ? "bg-primary-accent/5" : ""}`}>
                   <td className="px-4 py-2">
                     <input type="checkbox" checked={chk} onChange={() => toggle(r.prId)} className="accent-primary-accent" />
                   </td>

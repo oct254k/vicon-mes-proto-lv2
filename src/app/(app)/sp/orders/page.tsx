@@ -29,10 +29,10 @@ export default function SPOrdersPage() {
 
       <div className="grid grid-cols-3 gap-4 mb-8">
         {kpis.map((k) => (
-          <div key={k.label} className="bg-[#1a1a1a] border-l-4 border-[#00912F] p-5">
-            <p className="text-xs font-label uppercase tracking-widest text-white/40 mb-2">{k.label}</p>
-            <p className="text-2xl font-black font-headline text-white">
-              {k.value} <span className="text-sm font-normal text-white/50">{k.unit}</span>
+          <div key={k.label} className="bg-surface-elevated border-l-4 border-[#00912F] p-5">
+            <p className="text-xs font-label uppercase tracking-widest text-on-surface/40 mb-2">{k.label}</p>
+            <p className="text-2xl font-black font-headline text-on-surface">
+              {k.value} <span className="text-sm font-normal text-on-surface/50">{k.unit}</span>
             </p>
           </div>
         ))}
@@ -45,7 +45,7 @@ export default function SPOrdersPage() {
       </div>
 
       <FieldHeader title="최근 수주" moduleRef="SCR-SP-001" />
-      <section className="bg-[#1a1a1a] mt-4">
+      <section className="bg-surface-elevated mt-4">
         <div className="p-4 bg-white/5 flex justify-between items-center border-l-4 border-[#00912F]">
           <h3 className="font-headline font-black text-sm uppercase tracking-widest">최근 수주 5건</h3>
           <span className="material-symbols-outlined text-sm cursor-pointer hover:text-[#00912F]">refresh</span>
@@ -54,20 +54,20 @@ export default function SPOrdersPage() {
           <table className="w-full text-left border-collapse">
             <thead>
               <tr className="border-b border-white/5">
-                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-white/40">수주번호</th>
-                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-white/40">거래처</th>
-                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-white/40">납기</th>
-                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-white/40">금액</th>
-                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-white/40">상태</th>
+                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-on-surface/40">수주번호</th>
+                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-on-surface/40">거래처</th>
+                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-on-surface/40">납기</th>
+                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-on-surface/40">금액</th>
+                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-on-surface/40">상태</th>
               </tr>
             </thead>
             <tbody className="font-headline text-sm">
               {recentOrders.map((row, i) => (
                 <tr key={i} className="border-b border-white/5 hover:bg-white/5 transition-colors">
                   <td className="px-4 py-3 text-[#00912F]">{row.soNo}</td>
-                  <td className="px-4 py-3 text-white/80">{row.customer}</td>
-                  <td className="px-4 py-3 tabular-nums text-white/70">{row.due}</td>
-                  <td className="px-4 py-3 tabular-nums text-white/70">{row.amount}</td>
+                  <td className="px-4 py-3 text-on-surface/80">{row.customer}</td>
+                  <td className="px-4 py-3 tabular-nums text-on-surface/70">{row.due}</td>
+                  <td className="px-4 py-3 tabular-nums text-on-surface/70">{row.amount}</td>
                   <td className="px-4 py-3">
                     <StatusBadge type={row.status} label={row.statusLabel} />
                   </td>

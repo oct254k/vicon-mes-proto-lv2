@@ -29,7 +29,7 @@ const levelIndent = ["", "  ├─ ", "    └─ "];
 
 const typeColor: Record<BomRow["type"], string> = {
   완제품: "text-primary-accent font-bold",
-  반제품: "text-[#f59e0b]",
+  반제품: "text-warning",
   원자재: "text-on-surface/70",
 };
 
@@ -83,7 +83,7 @@ export default function BomDetailPage({ params }: { params: { id: string } }) {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="bg-surface-container border-b border-outline-variant/10">
+              <tr className="bg-surface-container border-b border-outline">
                 <th className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">자재코드</th>
                 <th className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">이름</th>
                 <th className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold text-right">qty/m</th>
@@ -96,7 +96,7 @@ export default function BomDetailPage({ params }: { params: { id: string } }) {
               {BOM_TREE.map((row, i) => (
                 <tr
                   key={i}
-                  className={`border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors ${row.level === 0 ? "bg-surface-container-high/40" : ""}`}
+                  className={`border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors ${row.level === 0 ? "bg-surface-container-high/40" : ""}`}
                 >
                   <td className="px-4 py-2 tabular-nums font-mono text-xs">
                     <span className="text-on-surface/30">{levelIndent[row.level]}</span>
@@ -109,7 +109,7 @@ export default function BomDetailPage({ params }: { params: { id: string } }) {
                   <td className="px-4 py-2">
                     <span className={`text-xs font-label uppercase tracking-wider px-2 py-0.5 ${
                       row.type === "완제품" ? "bg-primary-accent/20 text-primary-accent" :
-                      row.type === "반제품" ? "bg-[#f59e0b]/20 text-[#f59e0b]" :
+                      row.type === "반제품" ? "bg-warning/20 text-warning" :
                       "bg-surface-container-highest text-on-surface/50"
                     }`}>
                       {row.type}

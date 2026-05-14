@@ -60,7 +60,7 @@ export default function PURPrPage() {
         </div>
         <table className="w-full text-left border-collapse">
           <thead>
-            <tr className="bg-surface-container border-b border-outline-variant/10">
+            <tr className="bg-surface-container border-b border-outline">
               {COLUMNS.map((col) => (
                 <th key={col.key} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">
                   {col.label}
@@ -70,7 +70,7 @@ export default function PURPrPage() {
           </thead>
           <tbody>
             {PR_DATA.map((row) => (
-              <tr key={row.id} className="border-b border-outline-variant/5 hover:bg-surface-container/40 cursor-pointer">
+              <tr key={row.id} className="border-b border-outline-variant hover:bg-surface-container/40 cursor-pointer">
                 <td className="px-4 py-3 font-mono text-xs text-primary-accent">{row.id}</td>
                 <td className="px-4 py-3 font-body text-sm">{row.material}</td>
                 <td className="px-4 py-3 font-body text-sm">{row.qty}</td>

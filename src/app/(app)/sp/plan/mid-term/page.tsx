@@ -45,7 +45,7 @@ export default function MidTermPlanPage() {
         </div>
         <table className="w-full text-left border-collapse text-sm">
           <thead>
-            <tr className="bg-surface-container border-b border-outline-variant/10">
+            <tr className="bg-surface-container border-b border-outline">
               <th className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50">수주</th>
               <th className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50">부재 코드</th>
               <th className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50">총계</th>
@@ -56,7 +56,7 @@ export default function MidTermPlanPage() {
           </thead>
           <tbody className="font-headline">
             {ROWS.map((r, i) => (
-              <tr key={i} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors">
+              <tr key={i} className="border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors">
                 <td className="px-4 py-2 font-mono text-xs text-primary-accent">{r.soId}</td>
                 <td className="px-4 py-2 font-mono text-xs">{r.member}</td>
                 <td className="px-4 py-2 tabular-nums text-xs font-bold">{r.total}</td>

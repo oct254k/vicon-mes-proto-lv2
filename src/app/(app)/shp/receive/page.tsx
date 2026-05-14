@@ -53,7 +53,7 @@ export default function SHPReceivePage() {
           value={deliveryNo}
           onChange={(e) => setDeliveryNo(e.target.value)}
           placeholder="배송 번호 입력"
-          className="w-full bg-surface-container text-white text-sm px-4 py-3 border border-outline-variant/20 outline-none placeholder:opacity-40"
+          className="w-full bg-surface-container text-on-surface text-sm px-4 py-3 border border-outline-variant/20 outline-none placeholder:opacity-40"
         />
       </div>
 

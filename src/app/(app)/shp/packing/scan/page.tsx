@@ -30,7 +30,7 @@ export default function PackingScanPage() {
         </div>
         <div className="bg-surface-container p-4 text-center">
           <p className="text-xs font-label uppercase opacity-50 mb-1">잔여</p>
-          <p className="font-headline font-black text-2xl text-[#f59e0b] tabular-nums">{total-done}</p>
+          <p className="font-headline font-black text-2xl text-warning tabular-nums">{total-done}</p>
         </div>
       </div>
       <div className="mb-4">

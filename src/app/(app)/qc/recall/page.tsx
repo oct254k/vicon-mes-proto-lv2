@@ -73,7 +73,7 @@ export default function QCRecallPage() {
           <div className="bg-surface-container-lowest mb-6">
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="bg-surface-container border-b border-outline-variant/10">
+                <tr className="bg-surface-container border-b border-outline">
                   {["부재 코드", "품명", "수량(개)", "불량 사유"].map(h => (
                     <th key={h} className="px-4 py-2 font-label text-xs uppercase tracking-widest opacity-50">{h}</th>
                   ))}
@@ -81,7 +81,7 @@ export default function QCRecallPage() {
               </thead>
               <tbody className="font-headline text-sm">
                 {MOCK_PARTS.map(p => (
-                  <tr key={p.code} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20">
+                  <tr key={p.code} className="border-b border-outline-variant hover:bg-surface-container-highest/20">
                     <td className="px-4 py-2 text-primary-accent font-bold">{p.code}</td>
                     <td className="px-4 py-2">{p.desc}</td>
                     <td className="px-4 py-2 tabular-nums">{p.qty}</td>
@@ -129,7 +129,7 @@ export default function QCRecallPage() {
           <FieldHeader title="최종 확정 및 통보 대상" moduleRef="담당 팀장 확정" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
             {["생산팀 팀장", "품질보증팀", "자재관리팀", "고객사 QC 담당"].map(t => (
-              <div key={t} className="bg-surface-container flex items-center justify-between p-3 border border-outline-variant/10">
+              <div key={t} className="bg-surface-container flex items-center justify-between p-3 border border-outline">
                 <span className="text-sm font-label">{t}</span>
                 <StatusBadge type="running" label="통보 대상" />
               </div>
@@ -157,7 +157,7 @@ export default function QCRecallPage() {
               ))}
             </div>
             <p className="text-xs font-label uppercase tracking-widest opacity-50 mb-2">발송 메시지 미리보기</p>
-            <div className="bg-surface-container-high text-sm font-body p-3 border border-outline-variant/10 text-on-surface/70 leading-relaxed">
+            <div className="bg-surface-container-high text-sm font-body p-3 border border-outline text-on-surface/70 leading-relaxed">
               [RECALL-2026-0003] 불량 부재 회수 통보<br />
               대상: BM-2026-0441 외 16건 / 총 17개 부재<br />
               사유: 용접부 균열 치수 불량<br />

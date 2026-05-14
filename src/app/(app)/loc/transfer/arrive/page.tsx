@@ -5,7 +5,7 @@ import { PageHeader } from "@/components/ui/PageHeader";
 import { FieldHeader } from "@/components/ui/FieldHeader";
 import { StatusBadge } from "@/components/ui/StatusBadge";
 
-const inputCls = "w-full bg-[#131313] border border-white/10 px-3 py-2 text-sm text-white focus:outline-none focus:border-[#00912F]";
+const inputCls = "w-full bg-surface border border-outline/20 px-3 py-2 text-sm text-on-surface focus:outline-none focus:border-[#00912F]";
 
 type ArrivalResult = "MATCH" | "DISCREPANCY" | null;
 
@@ -37,35 +37,35 @@ export default function TransferArrivePage() {
 
       <div className="max-w-sm mx-auto space-y-5">
         {done ? (
-          <div className={`border-l-4 p-6 ${result === "MATCH" ? "bg-[#00912F]/20 border-[#00912F]" : "bg-[#ef4444]/20 border-[#ef4444]"}`}>
-            <p className={`font-label font-bold uppercase tracking-widest mb-2 ${result === "MATCH" ? "text-[#00912F]" : "text-[#ef4444]"}`}>
+          <div className={`border-l-4 p-6 ${result === "MATCH" ? "bg-[#00912F]/20 border-[#00912F]" : "bg-danger/20 border-danger"}`}>
+            <p className={`font-label font-bold uppercase tracking-widest mb-2 ${result === "MATCH" ? "text-[#00912F]" : "text-danger"}`}>
               {result === "MATCH" ? "도착 확정 완료" : "불일치 — 결재 필요"}
             </p>
             {result === "DISCREPANCY" && (
-              <p className="text-sm text-white/60">예상 {expectedQty}m / 실제 {qtyActual}m — LOC-MANAGER 결재 요청됨</p>
+              <p className="text-sm text-on-surface/60">예상 {expectedQty}m / 실제 {qtyActual}m — LOC-MANAGER 결재 요청됨</p>
             )}
             <button onClick={() => { setDone(false); setScanned(false); setScan(""); setResult(null); }}
-              className="mt-4 border border-white/20 text-white/60 font-label uppercase text-xs px-4 py-2">
+              className="mt-4 border border-outline/30 text-on-surface/60 font-label uppercase text-xs px-4 py-2">
               새 도착 확인
             </button>
           </div>
         ) : (
           <>
             <FieldHeader title="1. Lot 스캔" moduleRef="FNC-LOC-054" />
-            <div className="bg-[#1a1a1a] p-4 space-y-3">
+            <div className="bg-surface-elevated p-4 space-y-3">
               <input className={inputCls} placeholder="Lot No 스캔" value={scan} onChange={e=>setScan(e.target.value)} />
-              <button onClick={handleScan} className="w-full bg-[#1a1a1a] border border-white/20 text-white/60 font-label uppercase tracking-widest text-xs py-2 hover:border-[#00912F]">
+              <button onClick={handleScan} className="w-full bg-surface-elevated border border-outline/30 text-on-surface/60 font-label uppercase tracking-widest text-xs py-2 hover:border-[#00912F]">
                 조회
               </button>
             </div>
 
             {scanned && (
               <>
-                <div className="bg-[#1a1a1a] p-4 space-y-2 text-sm">
-                  <p className="text-xs font-label uppercase tracking-widest text-white/40 mb-2">이동 정보</p>
+                <div className="bg-surface-elevated p-4 space-y-2 text-sm">
+                  <p className="text-xs font-label uppercase tracking-widest text-on-surface/40 mb-2">이동 정보</p>
                   {[["Lot", lot], ["자재", "M-COIL-A P3000 900m"], ["예상 수량", expectedQty + "m"], ["출발", "Y-P3000-A-01-03"], ["목표 도착", "Y-P1000-A-01-02"]].map(([k,v]) => (
                     <div key={k} className="flex justify-between">
-                      <span className="text-white/50 font-label text-xs uppercase tracking-widest">{k}</span>
+                      <span className="text-on-surface/50 font-label text-xs uppercase tracking-widest">{k}</span>
                       <span className="font-headline font-bold text-xs">{v}</span>
                     </div>
                   ))}
@@ -73,10 +73,10 @@ export default function TransferArrivePage() {
                 </div>
 
                 <FieldHeader title="2. 실 수량 확인" moduleRef="FNC-LOC-054" />
-                <div className="bg-[#1a1a1a] p-4 space-y-3">
+                <div className="bg-surface-elevated p-4 space-y-3">
                   <input type="number" className={inputCls} value={qtyActual} onChange={e=>setQtyActual(e.target.value)} />
                   {qtyActual !== expectedQty && (
-                    <p className="text-[#ef4444] text-xs font-label">⚠ 수량 불일치 — 불일치 결재가 생성됩니다.</p>
+                    <p className="text-danger text-xs font-label">⚠ 수량 불일치 — 불일치 결재가 생성됩니다.</p>
                   )}
                 </div>
 

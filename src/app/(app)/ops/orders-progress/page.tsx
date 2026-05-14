@@ -22,7 +22,7 @@ const ORDERS: Order[] = [
 ];
 
 function ProgressBar({ rate }: { rate: number }) {
-  const color = rate >= 80 ? "bg-primary-accent/60" : rate >= 50 ? "bg-[#f59e0b]/60" : "bg-error/60";
+  const color = rate >= 80 ? "bg-primary-accent/60" : rate >= 50 ? "bg-warning/60" : "bg-error/60";
   return (
     <div className="flex items-center gap-2 min-w-[120px]">
       <div className="flex-1 h-2 bg-surface-container-highest">
@@ -64,7 +64,7 @@ export default function OPSOrdersProgressPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="bg-surface-container border-b border-outline-variant/10">
+              <tr className="bg-surface-container border-b border-outline">
                 {["수주번호", "거래처", "현장", "총 부재", "WO발행", "생산완료", "패킹완료", "출하", "진척률"].map((h) => (
                   <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold whitespace-nowrap">{h}</th>
                 ))}
@@ -72,7 +72,7 @@ export default function OPSOrdersProgressPage() {
             </thead>
             <tbody className="font-headline text-sm">
               {ORDERS.map((o) => (
-                <tr key={o.soId} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors">
+                <tr key={o.soId} className="border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors">
                   <td className="px-4 py-2 text-primary-accent font-black tabular-nums">{o.soId}</td>
                   <td className="px-4 py-2 tabular-nums">{o.customer}</td>
                   <td className="px-4 py-2 tabular-nums">{o.site}</td>

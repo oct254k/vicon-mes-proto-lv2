@@ -33,7 +33,7 @@ export default function MultiPlantDigestPage() {
                 </div>
               ))}
             </div>
-            <p className="text-xs font-label text-on-surface-variant border-t border-outline-variant/10 pt-2">{p.highlight}</p>
+            <p className="text-xs font-label text-on-surface-variant border-t border-outline pt-2">{p.highlight}</p>
           </div>
         ))}
       </div>
@@ -42,7 +42,7 @@ export default function MultiPlantDigestPage() {
       <div className="bg-surface-container p-4">
         <p className="text-xs font-label uppercase tracking-widest text-on-surface-variant mb-3">다이제스트 발송 이력</p>
         {DISPATCH_LOG.map((d, i) => (
-          <div key={i} className="flex gap-4 text-xs font-label mb-2 py-2 border-b border-outline-variant/5">
+          <div key={i} className="flex gap-4 text-xs font-label mb-2 py-2 border-b border-outline-variant">
             <span className="text-on-surface-variant w-20">{d.time}</span>
             <span className="text-on-surface">{d.target}</span>
             <span className="text-primary-accent ml-auto">{d.status}</span>

@@ -24,7 +24,7 @@ const MOCK = [
 
 export default function SYSBackupPage() {
   return (
-    <div className="p-8 bg-[#131313] min-h-screen text-on-surface">
+    <div className="p-8 bg-surface min-h-screen text-on-surface">
       <PageHeader title="백업" accent="·복구" nodeRef="SCR-SYS-060" description="백업 작업 현황, KPI 카드, 수동 백업 및 복구 테스트" />
 
       <div className="grid grid-cols-2 gap-4 mb-8">
@@ -53,7 +53,7 @@ export default function SYSBackupPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="bg-surface-container border-b border-outline-variant/10">
+              <tr className="bg-surface-container border-b border-outline">
                 {["백업 ID", "유형", "상태", "파일 크기", "시작", "종료"].map(h => (
                   <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
                 ))}
@@ -63,7 +63,7 @@ export default function SYSBackupPage() {
               {MOCK.map(row => {
                 const badge = BACKUP_STATUS_MAP[row.status] ?? { type: "idle" as const, label: row.status };
                 return (
-                  <tr key={row.id} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors">
+                  <tr key={row.id} className="border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors">
                     <td className="px-4 py-2 tabular-nums text-xs font-label text-[#00912F]">{row.id}</td>
                     <td className="px-4 py-2 text-on-surface-variant text-xs uppercase">{row.type}</td>
                     <td className="px-4 py-2"><StatusBadge type={badge.type} label={badge.label} /></td>

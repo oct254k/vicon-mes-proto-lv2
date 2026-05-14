@@ -1,0 +1,276 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "성지그룹 Logo" [ref=e5] [cursor=pointer]:
+          - /url: /ops/
+          - img "성지그룹 Logo" [ref=e6]
+        - generic [ref=e7]:
+          - link "대시보드" [ref=e8] [cursor=pointer]:
+            - /url: /ops/
+          - link "이력추적" [ref=e9] [cursor=pointer]:
+            - /url: /trace/
+          - link "알람" [ref=e10] [cursor=pointer]:
+            - /url: /alarm/
+      - generic [ref=e11]:
+        - button "book_2" [ref=e12] [cursor=pointer]
+        - generic [ref=e13] [cursor=pointer]: notifications
+        - generic [ref=e14] [cursor=pointer]: settings
+        - generic [ref=e16]: person
+    - complementary [ref=e17]:
+      - generic [ref=e19]:
+        - generic [ref=e20]: search
+        - textbox "메뉴 검색... (/)" [ref=e21]
+      - navigation [ref=e22]:
+        - list [ref=e23]:
+          - listitem [ref=e24]:
+            - button "inventory_2 기준정보 expand_more" [ref=e25]:
+              - generic [ref=e26]: inventory_2
+              - generic [ref=e27]: 기준정보
+              - generic [ref=e28]: expand_more
+          - listitem [ref=e29]:
+            - button "request_quote 수주·생산계획·MRP expand_more" [ref=e30]:
+              - generic [ref=e31]: request_quote
+              - generic [ref=e32]: 수주·생산계획·MRP
+              - generic [ref=e33]: expand_more
+          - listitem [ref=e34]:
+            - button "assignment 작업지시·부재·패킹 expand_more" [ref=e35]:
+              - generic [ref=e36]: assignment
+              - generic [ref=e37]: 작업지시·부재·패킹
+              - generic [ref=e38]: expand_more
+          - listitem [ref=e39]:
+            - button "precision_manufacturing 생산실행·추적성 expand_more" [ref=e40]:
+              - generic [ref=e41]: precision_manufacturing
+              - generic [ref=e42]: 생산실행·추적성
+              - generic [ref=e43]: expand_more
+          - listitem [ref=e44]:
+            - button "warehouse 위치·재고 expand_more" [ref=e45]:
+              - generic [ref=e46]: warehouse
+              - generic [ref=e47]: 위치·재고
+              - generic [ref=e48]: expand_more
+            - list [ref=e49]:
+              - listitem [ref=e50]:
+                - button "위치 체계·yard 마스터 expand_more" [ref=e51]:
+                  - generic [ref=e52]: 위치 체계·yard 마스터
+                  - generic [ref=e53]: expand_more
+              - listitem [ref=e54]:
+                - button "야적장 도면 시각화 expand_more" [ref=e55]:
+                  - generic [ref=e56]: 야적장 도면 시각화
+                  - generic [ref=e57]: expand_more
+                - list [ref=e58]:
+                  - listitem [ref=e59]:
+                    - link "— 실시간 도면 시각화" [ref=e60] [cursor=pointer]:
+                      - /url: /loc/yard-map/view/
+                      - generic [ref=e61]: —
+                      - generic [ref=e62]: 실시간 도면 시각화
+                  - listitem [ref=e63]:
+                    - link "— 도면 등록·Drag-and-Drop" [ref=e64] [cursor=pointer]:
+                      - /url: /loc/yard-map/edit/
+                      - generic [ref=e65]: —
+                      - generic [ref=e66]: 도면 등록·Drag-and-Drop
+                  - listitem [ref=e67]:
+                    - link "— 점유 현황 보드" [ref=e68] [cursor=pointer]:
+                      - /url: /loc/yard-map/occupancy/
+                      - generic [ref=e69]: —
+                      - generic [ref=e70]: 점유 현황 보드
+              - listitem [ref=e71]:
+                - button "입고 (RECEIVE) expand_more" [ref=e72]:
+                  - generic [ref=e73]: 입고 (RECEIVE)
+                  - generic [ref=e74]: expand_more
+              - listitem [ref=e75]:
+                - button "공장 간 이동 (TRANSFER) expand_more" [ref=e76]:
+                  - generic [ref=e77]: 공장 간 이동 (TRANSFER)
+                  - generic [ref=e78]: expand_more
+              - listitem [ref=e79]:
+                - button "재고 보정 (ADJUST) expand_more" [ref=e80]:
+                  - generic [ref=e81]: 재고 보정 (ADJUST)
+                  - generic [ref=e82]: expand_more
+              - listitem [ref=e83]:
+                - button "SCRAP·자투리 expand_more" [ref=e84]:
+                  - generic [ref=e85]: SCRAP·자투리
+                  - generic [ref=e86]: expand_more
+              - listitem [ref=e87]:
+                - button "정기 실사 (Cycle Count) expand_more" [ref=e88]:
+                  - generic [ref=e89]: 정기 실사 (Cycle Count)
+                  - generic [ref=e90]: expand_more
+              - listitem [ref=e91]:
+                - button "재고 조회·이력·View expand_more" [ref=e92]:
+                  - generic [ref=e93]: 재고 조회·이력·View
+                  - generic [ref=e94]: expand_more
+          - listitem [ref=e95]:
+            - button "verified 품질·SPC·불량 expand_more" [ref=e96]:
+              - generic [ref=e97]: verified
+              - generic [ref=e98]: 품질·SPC·불량
+              - generic [ref=e99]: expand_more
+          - listitem [ref=e100]:
+            - button "engineering 설비관리 expand_more" [ref=e101]:
+              - generic [ref=e102]: engineering
+              - generic [ref=e103]: 설비관리
+              - generic [ref=e104]: expand_more
+          - listitem [ref=e105]:
+            - button "shopping_cart 구매·발주 expand_more" [ref=e106]:
+              - generic [ref=e107]: shopping_cart
+              - generic [ref=e108]: 구매·발주
+              - generic [ref=e109]: expand_more
+          - listitem [ref=e110]:
+            - button "local_shipping 출하 expand_more" [ref=e111]:
+              - generic [ref=e112]: local_shipping
+              - generic [ref=e113]: 출하
+              - generic [ref=e114]: expand_more
+          - listitem [ref=e115]:
+            - button "groups 사용자·권한 expand_more" [ref=e116]:
+              - generic [ref=e117]: groups
+              - generic [ref=e118]: 사용자·권한
+              - generic [ref=e119]: expand_more
+          - listitem [ref=e120]:
+            - button "dashboard 운영현황·대시보드 expand_more" [ref=e121]:
+              - generic [ref=e122]: dashboard
+              - generic [ref=e123]: 운영현황·대시보드
+              - generic [ref=e124]: expand_more
+          - listitem [ref=e125]:
+            - button "settings 시스템관리 expand_more" [ref=e126]:
+              - generic [ref=e127]: settings
+              - generic [ref=e128]: 시스템관리
+              - generic [ref=e129]: expand_more
+    - main [ref=e130]:
+      - generic [ref=e131]:
+        - generic [ref=e132]:
+          - heading "도면 편집 LOC-011" [level=1] [ref=e134]
+          - generic [ref=e135]:
+            - generic [ref=e136]: "Node: SCR-LOC-011"
+            - generic [ref=e137]: "System Status: PROTOTYPE"
+          - paragraph [ref=e138]: "탭1: 벡터 도면 데이터(BOUNDARY·BUILDINGS·ROADS) 등록 + Canvas 미리보기. 탭2: Zone·Lot 격자 배치."
+        - generic [ref=e139]:
+          - 'button "탭 1: 벡터 도면 데이터" [ref=e140]'
+          - 'button "탭 2: Zone·Lot 배치" [ref=e141]'
+        - generic [ref=e142]:
+          - generic [ref=e143]:
+            - generic [ref=e144]:
+              - generic [ref=e145]:
+                - heading "A. 부지 외곽 (BOUNDARY)" [level=3] [ref=e146]
+                - generic [ref=e147]: FNC-LOC-020
+              - generic [ref=e148]: pts — JSON 배열 [[x,y],...]
+              - textbox [ref=e149]: "[[30,60],[200,20],[480,10],[700,30],[900,15],[1060,80],[1080,200],[1070,420],[1050,600],[980,720],[800,760],[550,770],[300,750],[120,720],[40,580],[20,350],[30,60]]"
+              - paragraph [ref=e150]: 최소 3점, 닫힌 폴리곤 권장 (첫 점 = 마지막 점)
+            - generic [ref=e151]:
+              - generic [ref=e152]:
+                - heading "B. 건물·구조물 (BUILDINGS)" [level=3] [ref=e153]
+                - generic [ref=e154]: FNC-LOC-020
+              - generic [ref=e155]:
+                - generic [ref=e156]:
+                  - generic [ref=e157]:
+                    - generic [ref=e158]: 제1공장
+                    - button "삭제" [ref=e159]
+                  - generic [ref=e160]:
+                    - generic [ref=e161]:
+                      - generic [ref=e162]: 라벨
+                      - textbox [ref=e163]: 제1공장
+                    - generic [ref=e164]:
+                      - generic [ref=e165]: type
+                      - combobox [ref=e166]:
+                        - option "poly" [selected]
+                        - option "rect"
+                        - option "circle"
+                - generic [ref=e167]:
+                  - generic [ref=e168]:
+                    - generic [ref=e169]: 제2공장
+                    - button "삭제" [ref=e170]
+                  - generic [ref=e171]:
+                    - generic [ref=e172]:
+                      - generic [ref=e173]: 라벨
+                      - textbox [ref=e174]: 제2공장
+                    - generic [ref=e175]:
+                      - generic [ref=e176]: type
+                      - combobox [ref=e177]:
+                        - option "poly" [selected]
+                        - option "rect"
+                        - option "circle"
+                - generic [ref=e178]:
+                  - generic [ref=e179]:
+                    - generic [ref=e180]: 물류창고
+                    - button "삭제" [ref=e181]
+                  - generic [ref=e182]:
+                    - generic [ref=e183]:
+                      - generic [ref=e184]: 라벨
+                      - textbox [ref=e185]: 물류창고
+                    - generic [ref=e186]:
+                      - generic [ref=e187]: type
+                      - combobox [ref=e188]:
+                        - option "poly"
+                        - option "rect" [selected]
+                        - option "circle"
+                - generic [ref=e189]:
+                  - generic [ref=e190]:
+                    - generic [ref=e191]: 저장탱크
+                    - button "삭제" [ref=e192]
+                  - generic [ref=e193]:
+                    - generic [ref=e194]:
+                      - generic [ref=e195]: 라벨
+                      - textbox [ref=e196]: 저장탱크
+                    - generic [ref=e197]:
+                      - generic [ref=e198]: type
+                      - combobox [ref=e199]:
+                        - option "poly"
+                        - option "rect"
+                        - option "circle" [selected]
+                - button "+ 건물 추가" [ref=e200]
+            - generic [ref=e201]:
+              - generic [ref=e202]:
+                - heading "C. 도로·통로 (ROADS)" [level=3] [ref=e203]
+                - generic [ref=e204]: FNC-LOC-020
+              - generic [ref=e205]:
+                - generic [ref=e206]:
+                  - generic [ref=e207]:
+                    - generic [ref=e208]: 도로 1 — 선폭 28px
+                    - button "삭제" [ref=e209]
+                  - generic [ref=e210]: pts [[x,y],...]
+                  - textbox [ref=e211]: "[[200,20],[220,80],[350,80]]"
+                  - generic [ref=e212]: 선폭 (px)
+                  - spinbutton [ref=e213]: "28"
+                - generic [ref=e214]:
+                  - generic [ref=e215]:
+                    - generic [ref=e216]: 도로 2 — 선폭 24px
+                    - button "삭제" [ref=e217]
+                  - generic [ref=e218]: pts [[x,y],...]
+                  - textbox [ref=e219]: "[[350,80],[430,80],[430,310]]"
+                  - generic [ref=e220]: 선폭 (px)
+                  - spinbutton [ref=e221]: "24"
+                - generic [ref=e222]:
+                  - generic [ref=e223]:
+                    - generic [ref=e224]: 도로 3 — 선폭 24px
+                    - button "삭제" [ref=e225]
+                  - generic [ref=e226]: pts [[x,y],...]
+                  - textbox [ref=e227]: "[[880,150],[880,410],[820,430]]"
+                  - generic [ref=e228]: 선폭 (px)
+                  - spinbutton [ref=e229]: "24"
+                - button "+ 도로 추가" [ref=e230]
+            - generic [ref=e231]:
+              - generic [ref=e232]:
+                - heading "D. Zone 등록" [level=3] [ref=e233]
+                - generic [ref=e234]: FNC-LOC-021
+              - generic [ref=e235]:
+                - generic [ref=e236]:
+                  - generic [ref=e237]:
+                    - generic [ref=e238]: Zone A
+                    - button "삭제" [ref=e239]
+                  - generic [ref=e240]:
+                    - generic [ref=e241]:
+                      - generic [ref=e242]: 코드
+                      - textbox [ref=e243]: A
+                    - generic [ref=e244]:
+                      - generic [ref=e245]: 좌표 유형
+                      - combobox [ref=e246]:
+                        - option "폴리곤" [selected]
+                        - option "직사각형"
+                  - generic [ref=e247]:
+                    - generic [ref=e248]: pts
+                    - textbox [ref=e249]: "[[160,210],[420,210],[420,590],[160,560]]"
+                - button "+ Zone 추가" [ref=e250]
+            - button "저장 ▶" [ref=e252]
+          - generic [ref=e253]:
+            - paragraph [ref=e254]: D. Canvas 미리보기 (실시간)
+            - paragraph [ref=e257]: BOUNDARY 수정 후 미리보기 자동 갱신
+    - generic [ref=e259]: System Active | Port 8080 | Secure Link
+  - button "Open Next.js Dev Tools" [ref=e265] [cursor=pointer]:
+    - img [ref=e266]
+  - alert [ref=e269]

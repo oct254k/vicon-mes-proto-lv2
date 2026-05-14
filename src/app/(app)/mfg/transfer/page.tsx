@@ -100,13 +100,13 @@ export default function MFGTransferPage() {
             </button>
           </div>
 
-          <div className="bg-surface-container-lowest border border-outline-variant/10 mb-6">
-            <div className="px-4 py-2 bg-surface-container-highest/20 border-b border-outline-variant/10 flex justify-between">
+          <div className="bg-surface-container-lowest border border-outline mb-6">
+            <div className="px-4 py-2 bg-surface-container-highest/20 border-b border-outline flex justify-between">
               <span className="font-label text-xs uppercase tracking-widest">스캔된 부재</span>
               <span className="font-label text-xs text-primary-accent">{scanned.length}개</span>
             </div>
             {scanned.map((item, i) => (
-              <div key={i} className="px-4 py-3 border-b border-outline-variant/5 flex justify-between items-center">
+              <div key={i} className="px-4 py-3 border-b border-outline-variant flex justify-between items-center">
                 <div>
                   <p className="font-headline text-sm font-bold">{item.code}</p>
                   <p className="text-xs text-on-surface/50">{item.name}</p>

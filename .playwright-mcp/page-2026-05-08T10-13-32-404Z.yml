@@ -1,0 +1,238 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "성지그룹 Logo" [ref=e5] [cursor=pointer]:
+          - /url: /ops/
+          - img "성지그룹 Logo" [ref=e6]
+        - generic [ref=e7]:
+          - link "대시보드" [ref=e8] [cursor=pointer]:
+            - /url: /ops/
+          - link "이력추적" [ref=e9] [cursor=pointer]:
+            - /url: /trace/
+          - link "알람" [ref=e10] [cursor=pointer]:
+            - /url: /alarm/
+      - generic [ref=e11]:
+        - button "book_2" [ref=e12] [cursor=pointer]
+        - generic [ref=e13] [cursor=pointer]: notifications
+        - generic [ref=e14] [cursor=pointer]: settings
+        - generic [ref=e16]: person
+    - complementary [ref=e17]:
+      - generic [ref=e19]:
+        - generic [ref=e20]: search
+        - textbox "메뉴 검색... (/)" [ref=e21]
+      - navigation [ref=e22]:
+        - list [ref=e23]:
+          - listitem [ref=e24]:
+            - button "inventory_2 기준정보 expand_more" [ref=e25]:
+              - generic [ref=e26]: inventory_2
+              - generic [ref=e27]: 기준정보
+              - generic [ref=e28]: expand_more
+          - listitem [ref=e29]:
+            - button "request_quote 수주·생산계획·MRP expand_more" [ref=e30]:
+              - generic [ref=e31]: request_quote
+              - generic [ref=e32]: 수주·생산계획·MRP
+              - generic [ref=e33]: expand_more
+          - listitem [ref=e34]:
+            - button "assignment 작업지시·부재·패킹 expand_more" [ref=e35]:
+              - generic [ref=e36]: assignment
+              - generic [ref=e37]: 작업지시·부재·패킹
+              - generic [ref=e38]: expand_more
+          - listitem [ref=e39]:
+            - button "precision_manufacturing 생산실행·추적성 expand_more" [ref=e40]:
+              - generic [ref=e41]: precision_manufacturing
+              - generic [ref=e42]: 생산실행·추적성
+              - generic [ref=e43]: expand_more
+          - listitem [ref=e44]:
+            - button "warehouse 위치·재고 expand_more" [ref=e45]:
+              - generic [ref=e46]: warehouse
+              - generic [ref=e47]: 위치·재고
+              - generic [ref=e48]: expand_more
+            - list [ref=e49]:
+              - listitem [ref=e50]:
+                - button "위치 체계·yard 마스터 expand_more" [ref=e51]:
+                  - generic [ref=e52]: 위치 체계·yard 마스터
+                  - generic [ref=e53]: expand_more
+              - listitem [ref=e54]:
+                - button "야적장 도면 시각화 expand_more" [ref=e55]:
+                  - generic [ref=e56]: 야적장 도면 시각화
+                  - generic [ref=e57]: expand_more
+              - listitem [ref=e58]:
+                - button "입고 (RECEIVE) expand_more" [ref=e59]:
+                  - generic [ref=e60]: 입고 (RECEIVE)
+                  - generic [ref=e61]: expand_more
+              - listitem [ref=e62]:
+                - button "공장 간 이동 (TRANSFER) expand_more" [ref=e63]:
+                  - generic [ref=e64]: 공장 간 이동 (TRANSFER)
+                  - generic [ref=e65]: expand_more
+              - listitem [ref=e66]:
+                - button "재고 보정 (ADJUST) expand_more" [ref=e67]:
+                  - generic [ref=e68]: 재고 보정 (ADJUST)
+                  - generic [ref=e69]: expand_more
+              - listitem [ref=e70]:
+                - button "SCRAP·자투리 expand_more" [ref=e71]:
+                  - generic [ref=e72]: SCRAP·자투리
+                  - generic [ref=e73]: expand_more
+              - listitem [ref=e74]:
+                - button "정기 실사 (Cycle Count) expand_more" [ref=e75]:
+                  - generic [ref=e76]: 정기 실사 (Cycle Count)
+                  - generic [ref=e77]: expand_more
+              - listitem [ref=e78]:
+                - button "재고 조회·이력·View expand_more" [ref=e79]:
+                  - generic [ref=e80]: 재고 조회·이력·View
+                  - generic [ref=e81]: expand_more
+                - list [ref=e82]:
+                  - listitem [ref=e83]:
+                    - link "— 위치별 재고" [ref=e84] [cursor=pointer]:
+                      - /url: /loc/inventory/by-location/
+                      - generic [ref=e85]: —
+                      - generic [ref=e86]: 위치별 재고
+                  - listitem [ref=e87]:
+                    - link "— (Material × Plant) 가용" [ref=e88] [cursor=pointer]:
+                      - /url: /loc/inventory/by-material/
+                      - generic [ref=e89]: —
+                      - generic [ref=e90]: (Material × Plant) 가용
+                  - listitem [ref=e91]:
+                    - link "— 트랜잭션 이력" [ref=e92] [cursor=pointer]:
+                      - /url: /loc/inventory/history/
+                      - generic [ref=e93]: —
+                      - generic [ref=e94]: 트랜잭션 이력
+                  - listitem [ref=e95]:
+                    - link "— MOVE (동일 Plant 내 이동)" [ref=e96] [cursor=pointer]:
+                      - /url: /loc/inventory/move/
+                      - generic [ref=e97]: —
+                      - generic [ref=e98]: MOVE (동일 Plant 내 이동)
+                  - listitem [ref=e99]:
+                    - link "— Lot·부재 추적" [ref=e100] [cursor=pointer]:
+                      - /url: /loc/inventory/trace/
+                      - generic [ref=e101]: —
+                      - generic [ref=e102]: Lot·부재 추적
+          - listitem [ref=e103]:
+            - button "verified 품질·SPC·불량 expand_more" [ref=e104]:
+              - generic [ref=e105]: verified
+              - generic [ref=e106]: 품질·SPC·불량
+              - generic [ref=e107]: expand_more
+          - listitem [ref=e108]:
+            - button "engineering 설비관리 expand_more" [ref=e109]:
+              - generic [ref=e110]: engineering
+              - generic [ref=e111]: 설비관리
+              - generic [ref=e112]: expand_more
+          - listitem [ref=e113]:
+            - button "shopping_cart 구매·발주 expand_more" [ref=e114]:
+              - generic [ref=e115]: shopping_cart
+              - generic [ref=e116]: 구매·발주
+              - generic [ref=e117]: expand_more
+          - listitem [ref=e118]:
+            - button "local_shipping 출하 expand_more" [ref=e119]:
+              - generic [ref=e120]: local_shipping
+              - generic [ref=e121]: 출하
+              - generic [ref=e122]: expand_more
+          - listitem [ref=e123]:
+            - button "groups 사용자·권한 expand_more" [ref=e124]:
+              - generic [ref=e125]: groups
+              - generic [ref=e126]: 사용자·권한
+              - generic [ref=e127]: expand_more
+          - listitem [ref=e128]:
+            - button "dashboard 운영현황·대시보드 expand_more" [ref=e129]:
+              - generic [ref=e130]: dashboard
+              - generic [ref=e131]: 운영현황·대시보드
+              - generic [ref=e132]: expand_more
+          - listitem [ref=e133]:
+            - button "settings 시스템관리 expand_more" [ref=e134]:
+              - generic [ref=e135]: settings
+              - generic [ref=e136]: 시스템관리
+              - generic [ref=e137]: expand_more
+    - main [ref=e138]:
+      - generic [ref=e139]:
+        - generic [ref=e140]:
+          - heading "FIFO 추적 TRACE" [level=1] [ref=e142]
+          - generic [ref=e143]:
+            - generic [ref=e144]: "Node: SCR-LOC-061"
+            - generic [ref=e145]: "System Status: PROTOTYPE"
+          - paragraph [ref=e146]: FIFO 강제 — fifo_seq 기준 오래된 자재 우선 출고 추적. AGING 위치 경보.
+        - generic [ref=e147]:
+          - generic [ref=e148]:
+            - paragraph [ref=e149]: ⚠ AGING 경보
+            - paragraph [ref=e150]: "LOT-20260420-007 / M-COIL-A — 16일 보관 초과 (임계: 14일)"
+          - generic [ref=e151]: AGING
+        - generic [ref=e152]:
+          - textbox "자재 코드" [ref=e153]: M-COIL-A
+          - combobox [ref=e154]:
+            - option "P3000" [selected]
+            - option "P1000"
+            - option "P2000"
+          - button "조회" [ref=e155]
+        - generic [ref=e156]:
+          - heading "FIFO 순서 목록 — M-COIL-A / P3000" [level=3] [ref=e157]
+          - generic [ref=e158]: FNC-LOC-035
+        - paragraph [ref=e159]: "출고 권장 순서: ① fifo_seq 4300 → ② 4450 → ③ 4500 → ..."
+        - generic [ref=e160]:
+          - generic [ref=e161]:
+            - 'heading "FIFO 추적 | Buffer: 005 Entries" [level=3] [ref=e162]':
+              - text: FIFO 추적
+              - generic [ref=e163]: "| Buffer: 005 Entries"
+            - generic [ref=e164] [cursor=pointer]: refresh
+          - table [ref=e166]:
+            - rowgroup [ref=e167]:
+              - row "FIFO 순번 Lot No 자재 입고일 잔량(m) 현재 위치 보관일 상태" [ref=e168]:
+                - columnheader "FIFO 순번" [ref=e169]
+                - columnheader "Lot No" [ref=e170]
+                - columnheader "자재" [ref=e171]
+                - columnheader "입고일" [ref=e172]
+                - columnheader "잔량(m)" [ref=e173]
+                - columnheader "현재 위치" [ref=e174]
+                - columnheader "보관일" [ref=e175]
+                - columnheader "상태" [ref=e176]
+            - rowgroup [ref=e177]:
+              - row "4300 LOT-20260420-007 M-COIL-A 2026-04-20 2,800 Y-P3000-A-02-03 16일 AGING" [ref=e178]:
+                - cell "4300" [ref=e179]
+                - cell "LOT-20260420-007" [ref=e180]
+                - cell "M-COIL-A" [ref=e181]
+                - cell "2026-04-20" [ref=e182]
+                - cell "2,800" [ref=e183]
+                - cell "Y-P3000-A-02-03" [ref=e184]
+                - cell "16일" [ref=e185]
+                - cell "AGING" [ref=e186]
+              - row "4450 RCV-20260430-0033 M-COIL-A 2026-04-30 5,000 Y-P3000-A-02-02 6일 FULL" [ref=e187]:
+                - cell "4450" [ref=e188]
+                - cell "RCV-20260430-0033" [ref=e189]
+                - cell "M-COIL-A" [ref=e190]
+                - cell "2026-04-30" [ref=e191]
+                - cell "5,000" [ref=e192]
+                - cell "Y-P3000-A-02-02" [ref=e193]
+                - cell "6일" [ref=e194]
+                - cell "FULL" [ref=e195]
+              - row "4500 RCV-20260503-0011 M-COIL-A 2026-05-03 5,000 Y-P3000-A-01-03 3일 FULL" [ref=e196]:
+                - cell "4500" [ref=e197]
+                - cell "RCV-20260503-0011" [ref=e198]
+                - cell "M-COIL-A" [ref=e199]
+                - cell "2026-05-03" [ref=e200]
+                - cell "5,000" [ref=e201]
+                - cell "Y-P3000-A-01-03" [ref=e202]
+                - cell "3일" [ref=e203]
+                - cell "FULL" [ref=e204]
+              - row "4521 RCV-20260501-0017 M-COIL-A P3000 900m 2026-05-01 900 Y-P3000-A-01-02 5일 OCCUPIED" [ref=e205]:
+                - cell "4521" [ref=e206]
+                - cell "RCV-20260501-0017" [ref=e207]
+                - cell "M-COIL-A P3000 900m" [ref=e208]
+                - cell "2026-05-01" [ref=e209]
+                - cell "900" [ref=e210]
+                - cell "Y-P3000-A-01-02" [ref=e211]
+                - cell "5일" [ref=e212]
+                - cell "OCCUPIED" [ref=e213]
+              - row "4522 RCV-20260501-0018 M-COIL-A P3000 900m 2026-05-01 820 Y-P3000-A-01-05 5일 OCCUPIED" [ref=e214]:
+                - cell "4522" [ref=e215]
+                - cell "RCV-20260501-0018" [ref=e216]
+                - cell "M-COIL-A P3000 900m" [ref=e217]
+                - cell "2026-05-01" [ref=e218]
+                - cell "820" [ref=e219]
+                - cell "Y-P3000-A-01-05" [ref=e220]
+                - cell "5일" [ref=e221]
+                - cell "OCCUPIED" [ref=e222]
+        - generic [ref=e223]:
+          - paragraph [ref=e224]: 출고 권장 — 다음 소모 Lot
+          - paragraph [ref=e225]: ① LOT-20260420-007 (seq 4300) — 2,800m @ Y-P3000-A-02-03 AGING ⚠
+    - generic [ref=e227]: System Active | Port 8080 | Secure Link
+  - button "Open Next.js Dev Tools" [ref=e233] [cursor=pointer]:
+    - img [ref=e234]
+  - alert [ref=e237]

@@ -20,8 +20,8 @@ export default function LabelPage() {
         description="묶음 라벨 발행·재인쇄 큐 (FNC-SHP-030) — 라벨 훼손 예외 처리 포함" />
       <FieldHeader title="라벨 큐" moduleRef={`${QUEUE.length}건`} />
       {reprinting && (
-        <div className="bg-[#f59e0b]/10 border border-[#f59e0b]/40 px-4 py-3 mb-4 flex items-center justify-between">
-          <span className="text-sm font-label text-[#f59e0b]">재인쇄 큐 등록: {reprinting}</span>
+        <div className="bg-warning/10 border border-warning/40 px-4 py-3 mb-4 flex items-center justify-between">
+          <span className="text-sm font-label text-warning">재인쇄 큐 등록: {reprinting}</span>
           <button onClick={()=>setReprinting(null)} className="text-xs font-label uppercase opacity-60">닫기</button>
         </div>
       )}
@@ -31,13 +31,13 @@ export default function LabelPage() {
           <button className="px-3 py-1 bg-primary-accent text-black text-xs font-label uppercase">전체 출력</button>
         </div>
         <table className="w-full text-left border-collapse">
-          <thead><tr className="bg-surface-container border-b border-outline-variant/10">
+          <thead><tr className="bg-surface-container border-b border-outline">
             {["라벨 ID","PKG","부재 ID","상태","발행 시각","액션"].map(h=>(
               <th key={h} className="px-4 py-2 font-label text-xs uppercase tracking-widest opacity-50">{h}</th>
             ))}</tr></thead>
           <tbody className="font-headline text-sm">
             {QUEUE.map(r=>(
-              <tr key={r.id} className={`border-b border-outline-variant/5 hover:bg-surface-container-highest/20 ${r.status==="DAMAGED"?"bg-error/5":""}`}>
+              <tr key={r.id} className={`border-b border-outline-variant hover:bg-surface-container-highest/20 ${r.status==="DAMAGED"?"bg-error/5":""}`}>
                 <td className="px-4 py-2 text-primary-accent font-mono text-xs">{r.id}</td>
                 <td className="px-4 py-2 font-mono text-xs opacity-70">{r.pkg}</td>
                 <td className="px-4 py-2 font-mono text-xs">{r.member}</td>

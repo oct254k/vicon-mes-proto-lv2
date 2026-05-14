@@ -115,7 +115,7 @@ export default function QCLossPage() {
       <div className="bg-surface-container-lowest overflow-x-auto">
         <table className="w-full text-left border-collapse">
           <thead>
-            <tr className="bg-surface-container border-b border-outline-variant/10">
+            <tr className="bg-surface-container border-b border-outline">
               {["기간", "불량 유형", "수량(개)", "단가(원)", "손실 금액"].map(h => (
                 <th key={h} className="px-4 py-2 font-label text-xs uppercase tracking-widest opacity-50">{h}</th>
               ))}
@@ -123,7 +123,7 @@ export default function QCLossPage() {
           </thead>
           <tbody className="font-headline text-sm">
             {filtered.map((r, i) => (
-              <tr key={i} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors">
+              <tr key={i} className="border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors">
                 <td className="px-4 py-2 tabular-nums opacity-70">{r.period}</td>
                 <td className="px-4 py-2">{r.defectType}</td>
                 <td className="px-4 py-2 tabular-nums">{r.qty}</td>

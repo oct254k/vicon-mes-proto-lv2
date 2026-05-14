@@ -68,7 +68,7 @@ export default function DailyPlanPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse text-sm">
             <thead>
-              <tr className="bg-surface-container border-b border-outline-variant/10">
+              <tr className="bg-surface-container border-b border-outline">
                 {["부재묶음", "타입", "수량", "납기", "재고 상태", "우선순위"].map((h) => (
                   <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50">{h}</th>
                 ))}
@@ -78,7 +78,7 @@ export default function DailyPlanPage() {
               {MOCK_ITEMS.map((item) => (
                 <tr
                   key={item.bundle}
-                  className={`border-b border-outline-variant/5 transition-colors ${item.stockStatus === "부족" ? "bg-[#f59e0b]/10" : "hover:bg-surface-container-highest/20"}`}
+                  className={`border-b border-outline-variant transition-colors ${item.stockStatus === "부족" ? "bg-warning/10" : "hover:bg-surface-container-highest/20"}`}
                 >
                   <td className="px-4 py-2 font-mono text-xs">{item.bundle}</td>
                   <td className="px-4 py-2">{item.type}</td>

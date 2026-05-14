@@ -13,7 +13,7 @@ const KPI_CARDS = [
 
 export default function HealthDashboardPage() {
   return (
-    <div className="p-8 bg-[#131313] min-h-screen text-on-surface">
+    <div className="p-8 bg-surface min-h-screen text-on-surface">
       <PageHeader title="헬스 대시보드" accent="HEALTH" nodeRef="SCR-SYS-090" status="PROTOTYPE"
         description="6종 헬스 카드 (서버·DB·큐·연동·단말·라이선스) — 5분 신선도 (FNC-SYS-090·096)" />
       <div className="flex items-center gap-2 mb-6">
@@ -23,7 +23,7 @@ export default function HealthDashboardPage() {
       <FieldHeader title="6종 헬스 카드" moduleRef="FNC-SYS-090" />
       <div className="grid grid-cols-3 gap-4 mb-8">
         {KPI_CARDS.map(c => (
-          <div key={c.key} className={`bg-surface-container p-5 border-l-4 ${c.state === "running" ? "border-[#00912F]" : "border-[#f59e0b]"}`}>
+          <div key={c.key} className={`bg-surface-container p-5 border-l-4 ${c.state === "running" ? "border-[#00912F]" : "border-warning"}`}>
             <div className="flex justify-between items-start mb-2">
               <p className="text-xs font-label uppercase tracking-widest text-on-surface-variant opacity-60">{c.key}</p>
               <StatusBadge type={c.state} label={c.state === "running" ? "OK" : "WARN"} />

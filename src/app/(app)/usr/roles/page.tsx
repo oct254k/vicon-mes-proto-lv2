@@ -3,11 +3,11 @@ import { FieldHeader } from "@/components/ui/FieldHeader";
 import { DataTable } from "@/components/ui/DataTable";
 
 const roleLevels = [
-  { level: "L1", code: "WORKER", color: "text-white/60", desc: "현장 작업자 — 자신에게 배정된 작업 조회 및 실적 입력만 가능" },
+  { level: "L1", code: "WORKER", color: "text-on-surface/60", desc: "현장 작업자 — 자신에게 배정된 작업 조회 및 실적 입력만 가능" },
   { level: "L2", code: "SUPERVISOR", color: "text-[#00912F]", desc: "현장 감독자 — 팀 내 작업 배정·조회, 품질 검사 기록" },
-  { level: "L3", code: "MANAGER", color: "text-[#f59e0b]", desc: "부서장 — 부서 데이터 전체 조회, 계획 승인, 보고서 출력" },
-  { level: "L4", code: "ADMIN", color: "text-[#ef4444]", desc: "시스템 관리자 — 마스터 데이터 편집, 권한 관리, 로그 조회" },
-  { level: "EXT", code: "EXTERNAL", color: "text-white/40", desc: "외부 연계 토큰 — API 전용 접근, UI 로그인 불가" },
+  { level: "L3", code: "MANAGER", color: "text-warning", desc: "부서장 — 부서 데이터 전체 조회, 계획 승인, 보고서 출력" },
+  { level: "L4", code: "ADMIN", color: "text-danger", desc: "시스템 관리자 — 마스터 데이터 편집, 권한 관리, 로그 조회" },
+  { level: "EXT", code: "EXTERNAL", color: "text-on-surface/40", desc: "외부 연계 토큰 — API 전용 접근, UI 로그인 불가" },
 ];
 
 const deptColumns = [
@@ -40,12 +40,12 @@ export default function USRRolesPage() {
       <FieldHeader title="권한 레벨" moduleRef="SCR-USR-020" />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
         {roleLevels.map((r) => (
-          <div key={r.level} className="bg-[#1a1a1a] border-l-4 border-white/10 p-5">
+          <div key={r.level} className="bg-surface-elevated border-l-4 border-outline/20 p-5">
             <div className="flex items-baseline gap-3 mb-2">
-              <span className="text-xs font-label uppercase tracking-widest text-white/30">{r.level}</span>
+              <span className="text-xs font-label uppercase tracking-widest text-on-surface/30">{r.level}</span>
               <span className={`font-headline font-black text-sm uppercase ${r.color}`}>{r.code}</span>
             </div>
-            <p className="text-xs text-white/50 leading-relaxed">{r.desc}</p>
+            <p className="text-xs text-on-surface/50 leading-relaxed">{r.desc}</p>
           </div>
         ))}
       </div>

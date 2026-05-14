@@ -111,7 +111,7 @@ export function GlossaryModal({ isOpen, onClose }: GlossaryModalProps) {
             filtered.map(({ term, korean, definition }) => (
               <div
                 key={term}
-                className="px-4 py-3 border-b border-outline-variant/10 last:border-b-0 hover:bg-surface-container/50 transition-colors"
+                className="px-4 py-3 border-b border-outline last:border-b-0 hover:bg-surface-container/50 transition-colors"
               >
                 <div className="flex items-baseline gap-2 mb-0.5">
                   <span className="font-headline font-bold text-sm text-on-surface">{term}</span>

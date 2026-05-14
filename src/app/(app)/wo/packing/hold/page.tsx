@@ -26,9 +26,9 @@ export default function PackingHoldPage() {
           <p className="text-xs font-label uppercase tracking-widest opacity-50 mb-1">현재 HOLD</p>
           <p className="font-headline font-black text-2xl text-error">{ROWS.filter((r) => r.status === "HOLD").length}</p>
         </div>
-        <div className="bg-surface-container p-4 border-l-2 border-[#f59e0b]">
+        <div className="bg-surface-container p-4 border-l-2 border-warning">
           <p className="text-xs font-label uppercase tracking-widest opacity-50 mb-1">AGING 초과 (30일↑)</p>
-          <p className="font-headline font-black text-2xl text-[#f59e0b]">{aging.length}</p>
+          <p className="font-headline font-black text-2xl text-warning">{aging.length}</p>
         </div>
         <div className="bg-surface-container p-4 border-l-2 border-primary-accent">
           <p className="text-xs font-label uppercase tracking-widest opacity-50 mb-1">이번 달 해제</p>
@@ -51,7 +51,7 @@ export default function PackingHoldPage() {
         </div>
         <table className="w-full text-left border-collapse text-sm">
           <thead>
-            <tr className="bg-surface-container border-b border-outline-variant/10">
+            <tr className="bg-surface-container border-b border-outline">
               {["패킹 ID", "WO번호", "사유", "보류 일수", "위치", "승인자", "상태", ""].map((h) => (
                 <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50">{h}</th>
               ))}
@@ -62,11 +62,11 @@ export default function PackingHoldPage() {
               const s = STATUS_MAP[r.status];
               const isAging = r.holdDays >= 30;
               return (
-                <tr key={r.pkgId} className={`border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors ${isAging ? "bg-[#f59e0b]/5" : ""}`}>
+                <tr key={r.pkgId} className={`border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors ${isAging ? "bg-warning/5" : ""}`}>
                   <td className="px-4 py-2 font-mono text-xs text-error">{r.pkgId}</td>
                   <td className="px-4 py-2 font-mono text-xs opacity-70">{r.woId}</td>
                   <td className="px-4 py-2 text-xs">{r.reasonLabel}</td>
-                  <td className={`px-4 py-2 tabular-nums text-xs font-bold ${isAging ? "text-[#f59e0b]" : ""}`}>{r.holdDays}일{isAging ? " ⚠" : ""}</td>
+                  <td className={`px-4 py-2 tabular-nums text-xs font-bold ${isAging ? "text-warning" : ""}`}>{r.holdDays}일{isAging ? " ⚠" : ""}</td>
                   <td className="px-4 py-2 text-xs">{r.location}</td>
                   <td className="px-4 py-2 text-xs opacity-70">{r.approver}</td>
                   <td className="px-4 py-2"><StatusBadge type={s.type} label={s.label} /></td>

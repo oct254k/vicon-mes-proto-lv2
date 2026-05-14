@@ -38,30 +38,30 @@ export default function SHPSchedulePage() {
   }));
 
   return (
-    <div className="min-h-screen bg-[#131313] text-white p-8">
+    <div className="min-h-screen bg-surface text-on-surface p-8">
       <PageHeader title="출하 일정" accent="캘린더" nodeRef="IA-SHP-SCHEDULE-CALENDAR" description="출하 일정 관리 · 차량 배차 · SCHEDULED → COMPLETED" />
 
       {/* Filter Bar */}
-      <div className="flex flex-wrap gap-3 mb-6 p-4 bg-surface-container-lowest border border-outline-variant/10">
-        <select className="bg-surface-container text-white text-xs px-3 py-2 border border-outline-variant/20 outline-none">
+      <div className="flex flex-wrap gap-3 mb-6 p-4 bg-surface-container-lowest border border-outline">
+        <select className="bg-surface-container text-on-surface text-xs px-3 py-2 border border-outline-variant/20 outline-none">
           <option>P3000 제3공장</option>
         </select>
-        <input type="text" defaultValue="2026-05-01 ~ 2026-05-31" className="bg-surface-container text-white text-xs px-3 py-2 border border-outline-variant/20 w-52 outline-none" readOnly />
-        <select className="bg-surface-container text-white text-xs px-3 py-2 border border-outline-variant/20 outline-none">
+        <input type="text" defaultValue="2026-05-01 ~ 2026-05-31" className="bg-surface-container text-on-surface text-xs px-3 py-2 border border-outline-variant/20 w-52 outline-none" readOnly />
+        <select className="bg-surface-container text-on-surface text-xs px-3 py-2 border border-outline-variant/20 outline-none">
           <option>거래처 전체</option>
         </select>
-        <select className="bg-surface-container text-white text-xs px-3 py-2 border border-outline-variant/20 outline-none">
+        <select className="bg-surface-container text-on-surface text-xs px-3 py-2 border border-outline-variant/20 outline-none">
           <option>상태 전체</option>
         </select>
         <button className="bg-[#00912F] text-white text-xs px-4 py-2 font-bold uppercase tracking-wider">재조회</button>
-        <button className="bg-surface-container text-white text-xs px-4 py-2 border border-outline-variant/20 font-bold uppercase tracking-wider">엑셀</button>
+        <button className="bg-surface-container text-on-surface text-xs px-4 py-2 border border-outline-variant/20 font-bold uppercase tracking-wider">엑셀</button>
       </div>
 
       {/* View Tabs */}
       <div className="flex gap-2 mb-4">
         {(["calendar", "gantt"] as const).map((t) => (
           <button key={t} onClick={() => setView(t)}
-            className={`text-xs px-4 py-2 font-bold uppercase tracking-wider border ${view === t ? "border-[#00912F] text-[#00912F]" : "border-outline-variant/20 text-white/50"}`}>
+            className={`text-xs px-4 py-2 font-bold uppercase tracking-wider border ${view === t ? "border-[#00912F] text-[#00912F]" : "border-outline-variant/20 text-on-surface/50"}`}>
             {t === "calendar" ? "캘린더" : "간트"}
           </button>
         ))}
@@ -70,8 +70,8 @@ export default function SHPSchedulePage() {
       {/* Calendar Grid */}
       <div className="grid grid-cols-5 gap-2 mb-6">
         {DAYS.map((day) => (
-          <div key={day} className="bg-surface-container-lowest border border-outline-variant/10">
-            <div className="text-xs font-label uppercase tracking-widest opacity-50 px-3 py-2 border-b border-outline-variant/10">{day}</div>
+          <div key={day} className="bg-surface-container-lowest border border-outline">
+            <div className="text-xs font-label uppercase tracking-widest opacity-50 px-3 py-2 border-b border-outline">{day}</div>
             <div className="p-2 space-y-2 min-h-[120px]">
               {SHIPMENTS.filter((s) => s.date === `2026-05-0${day.split("/")[1]}`).map((s) => (
                 <button key={s.id} onClick={() => setSelected(s)}
@@ -97,8 +97,8 @@ export default function SHPSchedulePage() {
           </div>
           <div className="flex gap-2">
             <button className="bg-[#00912F] text-white text-xs px-4 py-2 font-bold uppercase tracking-wider">신규 SHIPMENT</button>
-            <button className="bg-surface-container text-white text-xs px-4 py-2 border border-outline-variant/20 font-bold uppercase tracking-wider">배차</button>
-            <button className="bg-surface-container text-white text-xs px-4 py-2 border border-outline-variant/20 font-bold uppercase tracking-wider">변경 / 취소</button>
+            <button className="bg-surface-container text-on-surface text-xs px-4 py-2 border border-outline-variant/20 font-bold uppercase tracking-wider">배차</button>
+            <button className="bg-surface-container text-on-surface text-xs px-4 py-2 border border-outline-variant/20 font-bold uppercase tracking-wider">변경 / 취소</button>
           </div>
         </div>
       )}

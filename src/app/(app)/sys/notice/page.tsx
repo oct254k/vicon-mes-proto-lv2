@@ -8,7 +8,7 @@ const CARDS = [
 
 export default function NoticeIndexPage() {
   return (
-    <div className="p-8 bg-[#131313] min-h-screen text-on-surface">
+    <div className="p-8 bg-surface min-h-screen text-on-surface">
       <PageHeader title="공지사항" accent="NOTICE" nodeRef="SCR-SYS-01x" status="PROTOTYPE"
         description="전사·공장·부서·역할 대상 게시, 긴급 모달, 읽음 동기화" />
       <FieldHeader title="하위 화면" moduleRef="FNC-SYS-010~016" />

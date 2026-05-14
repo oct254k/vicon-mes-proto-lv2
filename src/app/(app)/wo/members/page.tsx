@@ -12,7 +12,7 @@ const MOCK_MEMBERS = [
 
 function stateColor(state: string) {
   if (state === "RELEASED")    return "text-primary-accent";
-  if (state === "IN_PROGRESS") return "text-[#f59e0b]";
+  if (state === "IN_PROGRESS") return "text-warning";
   if (state === "COMPLETED")   return "text-tertiary";
   return "text-on-surface/40";
 }
@@ -46,7 +46,7 @@ export default function WOMembersPage() {
           </select>
         </div>
         <button className="px-4 py-1.5 bg-primary-accent text-black text-xs font-label uppercase tracking-widest self-end">검색</button>
-        <button className="px-4 py-1.5 bg-[#f59e0b]/80 text-black text-xs font-label uppercase self-end">정규식 검증 ▶</button>
+        <button className="px-4 py-1.5 bg-warning/80 text-black text-xs font-label uppercase self-end">정규식 검증 ▶</button>
         <button className="px-4 py-1.5 bg-surface-container-high text-xs font-label uppercase border border-outline-variant/20 self-end">신규 부재</button>
       </div>
 
@@ -59,7 +59,7 @@ export default function WOMembersPage() {
         </div>
         <table className="w-full text-left border-collapse">
           <thead>
-            <tr className="bg-surface-container border-b border-outline-variant/10">
+            <tr className="bg-surface-container border-b border-outline">
               {["부재코드", "수주번호(WO)", "타입", "길이(mm)", "도면번호", "attempt", "상태"].map(h => (
                 <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50">{h}</th>
               ))}
@@ -68,8 +68,8 @@ export default function WOMembersPage() {
           <tbody className="font-headline text-sm">
             {MOCK_MEMBERS.map(m => (
               <tr key={m.id}
-                className={`border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors cursor-pointer
-                  ${m.attemptNo >= 2 ? "bg-[#f59e0b]/5" : ""}`}
+                className={`border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors cursor-pointer
+                  ${m.attemptNo >= 2 ? "bg-warning/5" : ""}`}
               >
                 <td className="px-4 py-2 font-mono text-xs">{m.id}</td>
                 <td className="px-4 py-2 text-xs opacity-70">{m.woNo}</td>
@@ -78,7 +78,7 @@ export default function WOMembersPage() {
                 <td className="px-4 py-2 text-xs opacity-70">{m.drawingNo}</td>
                 <td className="px-4 py-2 tabular-nums text-xs">
                   {m.attemptNo >= 2
-                    ? <span className="text-[#f59e0b] font-bold">{m.attemptNo} ⚠ 재생산</span>
+                    ? <span className="text-warning font-bold">{m.attemptNo} ⚠ 재생산</span>
                     : <span>{m.attemptNo}</span>}
                 </td>
                 <td className={`px-4 py-2 text-xs font-label font-bold uppercase ${stateColor(m.state)}`}>{m.state}</td>

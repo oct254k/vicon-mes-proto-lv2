@@ -29,7 +29,7 @@ export default function NotiRecipientsPage() {
         </div>
         <table className="w-full text-left border-collapse text-sm">
           <thead>
-            <tr className="bg-surface-container border-b border-outline-variant/10">
+            <tr className="bg-surface-container border-b border-outline">
               {["사용자 ID", "이름", "부서", "이메일", "알림 유형", "채널", "활성"].map((h) => (
                 <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
               ))}
@@ -37,7 +37,7 @@ export default function NotiRecipientsPage() {
           </thead>
           <tbody className="font-headline">
             {ROWS.map((r) => (
-              <tr key={r.userId} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors cursor-pointer">
+              <tr key={r.userId} className="border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors cursor-pointer">
                 <td className="px-4 py-2 font-mono text-xs text-primary-accent">{r.userId}</td>
                 <td className="px-4 py-2 text-xs font-bold">{r.name}</td>
                 <td className="px-4 py-2 text-xs opacity-70">{r.dept}</td>

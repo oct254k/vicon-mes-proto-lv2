@@ -47,10 +47,10 @@ export default function BDEquipmentPage() {
         {[
           { label: "전체",   value: counts.total,   color: "text-on-surface" },
           { label: "가동 중", value: counts.running,  color: "text-primary-accent" },
-          { label: "점검 중", value: counts.idle,     color: "text-[#f59e0b]" },
+          { label: "점검 중", value: counts.idle,     color: "text-warning" },
           { label: "정지",   value: counts.stopped + counts.error, color: "text-error" },
         ].map((kpi) => (
-          <div key={kpi.label} className="bg-surface-container-lowest border border-outline-variant/10 p-5">
+          <div key={kpi.label} className="bg-surface-container-lowest border border-outline p-5">
             <p className="font-label text-xs uppercase tracking-widest text-on-surface/40 mb-2">{kpi.label}</p>
             <p className={`font-headline font-black text-3xl tabular-nums ${kpi.color}`}>{kpi.value}</p>
           </div>
@@ -73,7 +73,7 @@ export default function BDEquipmentPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="bg-surface-container border-b border-outline-variant/10">
+              <tr className="bg-surface-container border-b border-outline">
                 {["설비 코드", "이름", "WC", "Plant", "제조사", "설치일", "상태"].map((h) => (
                   <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
                 ))}
@@ -81,7 +81,7 @@ export default function BDEquipmentPage() {
             </thead>
             <tbody className="font-headline text-sm">
               {EQUIPMENT.map((e, i) => (
-                <tr key={i} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors">
+                <tr key={i} className="border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors">
                   <td className="px-4 py-2 text-xs tabular-nums font-bold text-primary-accent">{e.code}</td>
                   <td className="px-4 py-2">{e.name}</td>
                   <td className="px-4 py-2 text-xs text-on-surface/60">{e.wc}</td>

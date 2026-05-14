@@ -55,7 +55,7 @@ export default function QCSpcChartDetailPage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse text-sm">
             <thead>
-              <tr className="bg-surface-container border-b border-outline-variant/10">
+              <tr className="bg-surface-container border-b border-outline">
                 {["순번","측정값","Zone","위반","Rule","처리"].map((h) => (
                   <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50 font-semibold">{h}</th>
                 ))}
@@ -63,7 +63,7 @@ export default function QCSpcChartDetailPage() {
             </thead>
             <tbody className="font-headline">
               {POINTS.map((p, i) => (
-                <tr key={i} className={`border-b border-outline-variant/5 ${p.violate ? "bg-error/10" : ""}`}>
+                <tr key={i} className={`border-b border-outline-variant ${p.violate ? "bg-error/10" : ""}`}>
                   <td className="px-4 py-2 tabular-nums">{p.seq}</td>
                   <td className={`px-4 py-2 tabular-nums font-bold ${p.violate ? "text-error" : ""}`}>{p.value}</td>
                   <td className="px-4 py-2 text-xs">{p.zone}</td>

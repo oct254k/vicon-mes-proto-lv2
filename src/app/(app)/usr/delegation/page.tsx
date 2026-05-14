@@ -34,51 +34,51 @@ export default function USRDelegationPage() {
       />
 
       <FieldHeader title="위임 등록" moduleRef="SCR-USR-050" />
-      <form onSubmit={handleSubmit} className="bg-[#1a1a1a] p-6 mb-8 max-w-xl">
+      <form onSubmit={handleSubmit} className="bg-surface-elevated p-6 mb-8 max-w-xl">
         <div className="grid grid-cols-2 gap-4 mb-4">
           <div>
-            <label className="block text-xs font-label uppercase tracking-widest text-white/50 mb-2">위임자</label>
+            <label className="block text-xs font-label uppercase tracking-widest text-on-surface/50 mb-2">위임자</label>
             <input
               value={delegator}
               onChange={(e) => setDelegator(e.target.value)}
-              className="w-full bg-[#131313] border border-white/10 px-4 py-2 text-sm text-white focus:outline-none focus:border-[#00912F]"
+              className="w-full bg-surface border border-outline/20 px-4 py-2 text-sm text-on-surface focus:outline-none focus:border-[#00912F]"
               placeholder="사용자 검색"
             />
           </div>
           <div>
-            <label className="block text-xs font-label uppercase tracking-widest text-white/50 mb-2">수임자</label>
+            <label className="block text-xs font-label uppercase tracking-widest text-on-surface/50 mb-2">수임자</label>
             <input
               value={delegatee}
               onChange={(e) => setDelegatee(e.target.value)}
-              className="w-full bg-[#131313] border border-white/10 px-4 py-2 text-sm text-white focus:outline-none focus:border-[#00912F]"
+              className="w-full bg-surface border border-outline/20 px-4 py-2 text-sm text-on-surface focus:outline-none focus:border-[#00912F]"
               placeholder="사용자 검색"
             />
           </div>
           <div>
-            <label className="block text-xs font-label uppercase tracking-widest text-white/50 mb-2">시작일</label>
+            <label className="block text-xs font-label uppercase tracking-widest text-on-surface/50 mb-2">시작일</label>
             <input
               type="date"
               value={from}
               onChange={(e) => setFrom(e.target.value)}
-              className="w-full bg-[#131313] border border-white/10 px-4 py-2 text-sm text-white focus:outline-none focus:border-[#00912F]"
+              className="w-full bg-surface border border-outline/20 px-4 py-2 text-sm text-on-surface focus:outline-none focus:border-[#00912F]"
             />
           </div>
           <div>
-            <label className="block text-xs font-label uppercase tracking-widest text-white/50 mb-2">종료일</label>
+            <label className="block text-xs font-label uppercase tracking-widest text-on-surface/50 mb-2">종료일</label>
             <input
               type="date"
               value={to}
               onChange={(e) => setTo(e.target.value)}
-              className="w-full bg-[#131313] border border-white/10 px-4 py-2 text-sm text-white focus:outline-none focus:border-[#00912F]"
+              className="w-full bg-surface border border-outline/20 px-4 py-2 text-sm text-on-surface focus:outline-none focus:border-[#00912F]"
             />
           </div>
         </div>
         <div className="mb-4">
-          <label className="block text-xs font-label uppercase tracking-widest text-white/50 mb-2">위임 범위</label>
+          <label className="block text-xs font-label uppercase tracking-widest text-on-surface/50 mb-2">위임 범위</label>
           <input
             value={scope}
             onChange={(e) => setScope(e.target.value)}
-            className="w-full bg-[#131313] border border-white/10 px-4 py-2 text-sm text-white focus:outline-none focus:border-[#00912F]"
+            className="w-full bg-surface border border-outline/20 px-4 py-2 text-sm text-on-surface focus:outline-none focus:border-[#00912F]"
             placeholder="예: WO 승인, 계획 확정"
           />
         </div>
@@ -88,28 +88,28 @@ export default function USRDelegationPage() {
       </form>
 
       <FieldHeader title="위임 이력" moduleRef="SCR-USR-050" />
-      <section className="bg-[#1a1a1a] mt-4">
+      <section className="bg-surface-elevated mt-4">
         <div className="p-4 bg-white/5 border-l-4 border-[#00912F]">
           <h3 className="font-headline font-black text-sm uppercase tracking-widest">위임 목록</h3>
         </div>
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse">
             <thead>
-              <tr className="border-b border-white/5">
-                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-white/40">위임자</th>
-                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-white/40">수임자</th>
-                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-white/40">기간</th>
-                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-white/40">범위</th>
-                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-white/40">상태</th>
+              <tr className="border-b border-outline/10">
+                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-on-surface/40">위임자</th>
+                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-on-surface/40">수임자</th>
+                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-on-surface/40">기간</th>
+                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-on-surface/40">범위</th>
+                <th className="px-4 py-2 text-xs font-label uppercase tracking-widest text-on-surface/40">상태</th>
               </tr>
             </thead>
             <tbody className="font-headline text-sm">
               {delegations.map((row, i) => (
-                <tr key={i} className="border-b border-white/5 hover:bg-white/5 transition-colors">
-                  <td className="px-4 py-3 text-white/80">{row.delegator}</td>
-                  <td className="px-4 py-3 text-white/80">{row.delegatee}</td>
-                  <td className="px-4 py-3 text-white/60 tabular-nums text-xs">{row.period}</td>
-                  <td className="px-4 py-3 text-white/60">{row.scope}</td>
+                <tr key={i} className="border-b border-outline/10 hover:bg-white/5 transition-colors">
+                  <td className="px-4 py-3 text-on-surface/80">{row.delegator}</td>
+                  <td className="px-4 py-3 text-on-surface/80">{row.delegatee}</td>
+                  <td className="px-4 py-3 text-on-surface/60 tabular-nums text-xs">{row.period}</td>
+                  <td className="px-4 py-3 text-on-surface/60">{row.scope}</td>
                   <td className="px-4 py-3"><StatusBadge type={row.status} label={row.statusLabel} /></td>
                 </tr>
               ))}

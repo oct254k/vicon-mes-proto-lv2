@@ -57,7 +57,7 @@ export default function MFGProducePage() {
           value={scan}
           onChange={e => setScan(e.target.value)}
           placeholder="B01-1-G22C-C-171"
-          className="w-full bg-[#131313] border border-outline-variant/30 px-3 py-3 text-2xl font-mono text-on-surface placeholder:text-on-surface/20 focus:outline-none focus:border-primary-accent"
+          className="w-full bg-surface border border-outline-variant/30 px-3 py-3 text-2xl font-mono text-on-surface placeholder:text-on-surface/20 focus:outline-none focus:border-primary-accent"
         />
       </div>
 
@@ -95,7 +95,7 @@ export default function MFGProducePage() {
         <div className="overflow-x-auto">
           <table className="w-full text-left">
             <thead>
-              <tr className="bg-surface-container border-b border-outline-variant/10">
+              <tr className="bg-surface-container border-b border-outline">
                 {["부재코드", "Lot", "시각"].map(h => (
                   <th key={h} className="px-3 py-2 text-xs font-label uppercase tracking-widest opacity-50">{h}</th>
                 ))}
@@ -103,7 +103,7 @@ export default function MFGProducePage() {
             </thead>
             <tbody className="text-xs font-headline">
               {completed.map((r, i) => (
-                <tr key={i} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20">
+                <tr key={i} className="border-b border-outline-variant hover:bg-surface-container-highest/20">
                   <td className="px-3 py-2 font-mono">{r.memberId}</td>
                   <td className="px-3 py-2 text-primary-accent font-mono">{r.lot}</td>
                   <td className="px-3 py-2 tabular-nums text-on-surface/50">{r.time}</td>

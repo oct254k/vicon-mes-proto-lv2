@@ -22,8 +22,8 @@ const POOL_DATA = [
   { offcutId:"OFC-20260501-005", material:"M-PLATE-01",          origLot:"RCV-20260430-0033", length:"0.5", width:"1800", location:"W-01-02",         status:"소비됨", date:"2026-05-01" },
 ];
 
-const inputCls = "w-full bg-[#131313] border border-white/10 px-4 py-2 text-sm text-white focus:outline-none focus:border-[#00912F]";
-const labelCls = "block text-xs font-label uppercase tracking-widest text-white/50 mb-2";
+const inputCls = "w-full bg-surface border border-outline/20 px-4 py-2 text-sm text-on-surface focus:outline-none focus:border-[#00912F]";
+const labelCls = "block text-xs font-label uppercase tracking-widest text-on-surface/50 mb-2";
 
 export default function ScrapOffcutPage() {
   const [origLot, setOrigLot] = useState("RCV-20260501-0017");
@@ -61,13 +61,13 @@ export default function ScrapOffcutPage() {
         <div>
           <FieldHeader title="Offcut Pool 현황" moduleRef="FNC-LOC-071" />
           <div className="flex gap-4 mb-4">
-            <div className="bg-[#1a1a1a] border-l-4 border-[#00912F] px-4 py-3 flex-1">
-              <p className="text-xs font-label uppercase tracking-widest text-white/40 mb-1">가용 자투리</p>
-              <p className="text-2xl font-black text-white">2건</p>
+            <div className="bg-surface-elevated border-l-4 border-[#00912F] px-4 py-3 flex-1">
+              <p className="text-xs font-label uppercase tracking-widest text-on-surface/40 mb-1">가용 자투리</p>
+              <p className="text-2xl font-black text-on-surface">2건</p>
             </div>
-            <div className="bg-[#1a1a1a] border-l-4 border-white/20 px-4 py-3 flex-1">
-              <p className="text-xs font-label uppercase tracking-widest text-white/40 mb-1">소비됨</p>
-              <p className="text-2xl font-black text-white">1건</p>
+            <div className="bg-surface-elevated border-l-4 border-outline/30 px-4 py-3 flex-1">
+              <p className="text-xs font-label uppercase tracking-widest text-on-surface/40 mb-1">소비됨</p>
+              <p className="text-2xl font-black text-on-surface">1건</p>
             </div>
           </div>
         </div>

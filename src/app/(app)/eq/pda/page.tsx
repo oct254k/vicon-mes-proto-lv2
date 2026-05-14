@@ -26,7 +26,7 @@ export default function EQPdaPage() {
 
       <div className="max-w-sm mx-auto mt-8">
         {/* KPI */}
-        <div className="bg-surface-container-lowest border border-outline-variant/10 p-6 mb-4 text-center">
+        <div className="bg-surface-container-lowest border border-outline p-6 mb-4 text-center">
           <p className="font-label text-xs uppercase tracking-widest text-on-surface/40 mb-2">오늘 점검 설비</p>
           <p className="font-headline font-black text-5xl tabular-nums text-primary-accent">{TODAY_INSPECTIONS}</p>
           <p className="text-xs text-on-surface/40 mt-1 font-label uppercase tracking-wider">Units to Inspect</p>
@@ -34,13 +34,13 @@ export default function EQPdaPage() {
 
         {/* 진행 요약 */}
         <div className="grid grid-cols-2 gap-3 mb-6">
-          <div className="bg-surface-container-lowest border border-outline-variant/10 p-4 text-center">
+          <div className="bg-surface-container-lowest border border-outline p-4 text-center">
             <p className="text-xs font-label uppercase tracking-widest text-on-surface/40 mb-1">완료</p>
             <p className="font-headline font-black text-2xl tabular-nums text-primary-accent">{COMPLETED}</p>
           </div>
-          <div className="bg-surface-container-lowest border border-outline-variant/10 p-4 text-center">
+          <div className="bg-surface-container-lowest border border-outline p-4 text-center">
             <p className="text-xs font-label uppercase tracking-widest text-on-surface/40 mb-1">미완료</p>
-            <p className="font-headline font-black text-2xl tabular-nums text-[#f59e0b]">{PENDING}</p>
+            <p className="font-headline font-black text-2xl tabular-nums text-warning">{PENDING}</p>
           </div>
         </div>
 
@@ -51,7 +51,7 @@ export default function EQPdaPage() {
             일일 점검
           </button>
 
-          <button className="w-full bg-[#f59e0b]/20 border border-[#f59e0b]/40 text-[#f59e0b] py-5 text-base font-headline font-black uppercase tracking-widest hover:bg-[#f59e0b]/30 transition-colors flex items-center justify-center gap-3">
+          <button className="w-full bg-warning/20 border border-warning/40 text-warning py-5 text-base font-headline font-black uppercase tracking-widest hover:bg-warning/30 transition-colors flex items-center justify-center gap-3">
             <span className="material-symbols-outlined text-xl">warning</span>
             이상 보고
           </button>
@@ -63,19 +63,19 @@ export default function EQPdaPage() {
         </div>
 
         {/* 오늘 점검 목록 */}
-        <div className="bg-surface-container-lowest border border-outline-variant/10">
-          <div className="px-4 py-3 border-b border-outline-variant/10">
+        <div className="bg-surface-container-lowest border border-outline">
+          <div className="px-4 py-3 border-b border-outline">
             <p className="text-xs font-label uppercase tracking-widest text-on-surface/50">오늘 점검 목록</p>
           </div>
           {RECENT.map((r, i) => (
-            <div key={i} className="px-4 py-3 flex items-center justify-between border-b border-outline-variant/5 last:border-0">
+            <div key={i} className="px-4 py-3 flex items-center justify-between border-b border-outline-variant last:border-0">
               <div>
                 <p className="text-xs font-headline font-bold">{r.equip}</p>
                 <p className="text-xs text-on-surface/40">{r.action}</p>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-xs tabular-nums text-on-surface/40">{r.time}</span>
-                <span className={`w-2 h-2 rounded-full ${r.done ? "bg-primary-accent" : "bg-[#f59e0b]"}`} />
+                <span className={`w-2 h-2 rounded-full ${r.done ? "bg-primary-accent" : "bg-warning"}`} />
               </div>
             </div>
           ))}

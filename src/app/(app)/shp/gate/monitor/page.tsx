@@ -33,13 +33,13 @@ export default function GateMonitorPage() {
           <a href="/shp/gate/fallback" className="text-xs font-label text-primary-accent uppercase">수동 인식 →</a>
         </div>
         <table className="w-full text-left border-collapse">
-          <thead><tr className="bg-surface-container border-b border-outline-variant/10">
+          <thead><tr className="bg-surface-container border-b border-outline">
             {["이벤트 ID","출하 ID","차량번호","인식 모드","통과 일시","결과"].map(h=>(
               <th key={h} className="px-4 py-2 font-label text-xs uppercase tracking-widest opacity-50">{h}</th>
             ))}</tr></thead>
           <tbody className="font-headline text-sm">
             {MOCK.map(r=>(
-              <tr key={r.id} className={`border-b border-outline-variant/5 hover:bg-surface-container-highest/20 ${r.result==="FALLBACK"?"bg-[#f59e0b]/5":""}`}>
+              <tr key={r.id} className={`border-b border-outline-variant hover:bg-surface-container-highest/20 ${r.result==="FALLBACK"?"bg-warning/5":""}`}>
                 <td className="px-4 py-2 text-primary-accent font-mono text-xs">{r.id}</td>
                 <td className="px-4 py-2 font-mono text-xs opacity-70">{r.shp}</td>
                 <td className="px-4 py-2 font-mono text-xs">{r.plate}</td>

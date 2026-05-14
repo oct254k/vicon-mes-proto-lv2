@@ -27,7 +27,7 @@ const ST_MAP: Record<string,"running"|"error"> = { SENT:"running", FAILED:"error
 export default function NotifyHistoryPage() {
   const data = MOCK.map(r => ({ ...r, status: <StatusBadge type={ST_MAP[r.statusK]} label={r.statusK} /> as unknown as string }));
   return (
-    <div className="p-8 bg-[#131313] min-h-screen text-on-surface">
+    <div className="p-8 bg-surface min-h-screen text-on-surface">
       <PageHeader title="발송 이력" accent="HISTORY" nodeRef="SCR-SYS-042" status="PROTOTYPE"
         description="1년 보존 · 3회 실패 시 수동 재발송(사유 코드 필수) (FNC-SYS-043~046)" />
       <div className="flex gap-2 mb-4">

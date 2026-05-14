@@ -38,10 +38,10 @@ export default function MatrixImpactPage() {
     <div>
       <PageHeader title="매트릭스 변경 영향 평가" nodeRef="SCR-USR-072" status="PROTOTYPE" description="권한 매트릭스 변경 초안의 영향 사용자·메뉴·트랜잭션 자동 분석 결과." />
 
-      <div className="bg-surface-container-low border-l-4 border-[#f59e0b] p-4 mb-4">
+      <div className="bg-surface-container-low border-l-4 border-warning p-4 mb-4">
         <FieldHeader title="A. 영향 요약" moduleRef="FNC-USR-093/103" />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm font-body">
-          <div><p className="text-xs opacity-50 font-label uppercase tracking-widest mb-1">영향 사용자</p><p className="text-[#f59e0b] font-bold text-2xl">117<span className="text-sm font-normal opacity-50 ml-1">명</span></p></div>
+          <div><p className="text-xs opacity-50 font-label uppercase tracking-widest mb-1">영향 사용자</p><p className="text-warning font-bold text-2xl">117<span className="text-sm font-normal opacity-50 ml-1">명</span></p></div>
           <div><p className="text-xs opacity-50 font-label uppercase tracking-widest mb-1">영향 메뉴</p><p className="font-bold text-2xl">3<span className="text-sm font-normal opacity-50 ml-1">개</span></p></div>
           <div><p className="text-xs opacity-50 font-label uppercase tracking-widest mb-1">영향 트랜잭션</p><p className="font-bold text-2xl">3<span className="text-sm font-normal opacity-50 ml-1">종</span></p></div>
           <div><p className="text-xs opacity-50 font-label uppercase tracking-widest mb-1">회귀 테스트</p><p className="text-primary-accent font-bold text-2xl">0<span className="text-sm font-normal opacity-50 ml-1">건 실패</span></p></div>

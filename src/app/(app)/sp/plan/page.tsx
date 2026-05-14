@@ -19,7 +19,7 @@ const CARDS = [
     title: "일일 계획 보드",
     desc: "당일 작업 WO 발행 진입점 — Draft/Recalculating/Confirmed/Released/Superseded",
     href: "/sp/plan/daily",
-    accent: "border-[#f59e0b]",
+    accent: "border-warning",
     tag: "SCR-SP-022 (핵심)",
   },
   {

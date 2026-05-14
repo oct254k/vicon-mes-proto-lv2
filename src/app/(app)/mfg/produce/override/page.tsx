@@ -9,7 +9,7 @@ export default function ProduceOverridePage() {
   const [approved, setApproved] = useState(false);
 
   return (
-    <div className="max-w-sm mx-auto p-4 min-h-screen bg-[#131313]">
+    <div className="max-w-sm mx-auto p-4 min-h-screen bg-surface">
       <PageHeader title="PRODUCE /" accent="공정 게이트 Override" nodeRef="SCR-MFG-021" status="PROTOTYPE" />
 
       <div className="bg-error/10 border border-error/40 p-4 mb-6">

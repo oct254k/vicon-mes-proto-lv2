@@ -26,11 +26,11 @@ export default function USRQualificationPage() {
       />
 
       <FieldHeader title="자격 현황" moduleRef="SCR-USR-060" />
-      <div className="overflow-x-auto bg-[#1a1a1a]">
+      <div className="overflow-x-auto bg-surface-elevated">
         <table className="w-full text-left border-collapse min-w-[700px]">
           <thead>
-            <tr className="border-b border-white/5">
-              <th className="px-4 py-3 text-xs font-label uppercase tracking-widest text-white/40 w-32">사용자</th>
+            <tr className="border-b border-outline/10">
+              <th className="px-4 py-3 text-xs font-label uppercase tracking-widest text-on-surface/40 w-32">사용자</th>
               {processes.map((p) => (
                 <th key={p} className="px-4 py-3 text-xs font-label uppercase tracking-widest text-[#00912F] text-center">{p}</th>
               ))}
@@ -38,14 +38,14 @@ export default function USRQualificationPage() {
           </thead>
           <tbody className="font-headline text-sm">
             {users.map((user) => (
-              <tr key={user} className="border-b border-white/5 hover:bg-white/5 transition-colors">
-                <td className="px-4 py-3 text-white/80 font-bold">{user}</td>
+              <tr key={user} className="border-b border-outline/10 hover:bg-white/5 transition-colors">
+                <td className="px-4 py-3 text-on-surface/80 font-bold">{user}</td>
                 {qualMatrix[user].map((has, pi) => (
                   <td key={pi} className="px-4 py-3 text-center">
                     {has ? (
                       <span className="inline-block w-5 h-5 bg-[#00912F]/20 text-[#00912F] text-xs font-bold leading-5">✓</span>
                     ) : (
-                      <span className="inline-block w-5 h-5 text-white/15 text-xs leading-5">—</span>
+                      <span className="inline-block w-5 h-5 text-on-surface/15 text-xs leading-5">—</span>
                     )}
                   </td>
                 ))}
@@ -56,12 +56,12 @@ export default function USRQualificationPage() {
       </div>
 
       <div className="mt-4 flex gap-4 text-xs font-label">
-        <span className="flex items-center gap-2 text-white/40">
+        <span className="flex items-center gap-2 text-on-surface/40">
           <span className="inline-block w-4 h-4 bg-[#00912F]/20 text-[#00912F] text-xs font-bold leading-4 text-center">✓</span>
           자격 보유
         </span>
-        <span className="flex items-center gap-2 text-white/40">
-          <span className="inline-block w-4 h-4 text-white/15 text-xs leading-4 text-center">—</span>
+        <span className="flex items-center gap-2 text-on-surface/40">
+          <span className="inline-block w-4 h-4 text-on-surface/15 text-xs leading-4 text-center">—</span>
           미보유
         </span>
       </div>

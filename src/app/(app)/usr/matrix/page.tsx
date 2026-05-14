@@ -39,7 +39,7 @@ export default function USRMatrixPage() {
       />
 
       <div className="flex items-center gap-3 mb-6">
-        <label className="text-xs font-label uppercase tracking-widest text-white/50">도메인 필터</label>
+        <label className="text-xs font-label uppercase tracking-widest text-on-surface/50">도메인 필터</label>
         <div className="flex gap-2 flex-wrap">
           {domains.map((d) => (
             <button
@@ -48,7 +48,7 @@ export default function USRMatrixPage() {
               className={`px-3 py-1 text-xs font-label uppercase tracking-widest border transition-colors ${
                 domain === d
                   ? "border-[#00912F] bg-[#00912F]/20 text-[#00912F]"
-                  : "border-white/10 text-white/40 hover:border-white/30"
+                  : "border-outline/20 text-on-surface/40 hover:border-outline/40"
               }`}
             >
               {d}
@@ -58,11 +58,11 @@ export default function USRMatrixPage() {
       </div>
 
       <FieldHeader title="매트릭스" moduleRef="SCR-USR-040" />
-      <div className="overflow-x-auto bg-[#1a1a1a]">
+      <div className="overflow-x-auto bg-surface-elevated">
         <table className="w-full text-left border-collapse min-w-[600px]">
           <thead>
-            <tr className="border-b border-white/5">
-              <th className="px-4 py-3 text-xs font-label uppercase tracking-widest text-white/40 w-64">화면 / 기능</th>
+            <tr className="border-b border-outline/10">
+              <th className="px-4 py-3 text-xs font-label uppercase tracking-widest text-on-surface/40 w-64">화면 / 기능</th>
               {roles.map((r) => (
                 <th key={r} className="px-4 py-3 text-xs font-label uppercase tracking-widest text-[#00912F]">{r}</th>
               ))}
@@ -70,12 +70,12 @@ export default function USRMatrixPage() {
           </thead>
           <tbody className="font-headline text-sm">
             {screenKeys.map((screen) => (
-              <tr key={screen} className="border-b border-white/5 hover:bg-white/5 transition-colors">
-                <td className="px-4 py-3 text-white/70 text-xs">{screen}</td>
+              <tr key={screen} className="border-b border-outline/10 hover:bg-white/5 transition-colors">
+                <td className="px-4 py-3 text-on-surface/70 text-xs">{screen}</td>
                 {roles.map((r) => {
                   const perm = matrixData[screen][r] ?? "-";
                   return (
-                    <td key={r} className={`px-4 py-3 text-xs tabular-nums font-bold ${perm === "-" ? "text-white/20" : "text-[#00912F]"}`}>
+                    <td key={r} className={`px-4 py-3 text-xs tabular-nums font-bold ${perm === "-" ? "text-on-surface/20" : "text-[#00912F]"}`}>
                       {perm}
                     </td>
                   );

@@ -1,0 +1,233 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "성지그룹 Logo" [ref=e5] [cursor=pointer]:
+          - /url: /ops/
+          - img "성지그룹 Logo" [ref=e6]
+        - generic [ref=e7]:
+          - link "대시보드" [ref=e8] [cursor=pointer]:
+            - /url: /ops/
+          - link "이력추적" [ref=e9] [cursor=pointer]:
+            - /url: /trace/
+          - link "알람" [ref=e10] [cursor=pointer]:
+            - /url: /alarm/
+      - generic [ref=e11]:
+        - button "book_2" [ref=e12] [cursor=pointer]
+        - generic [ref=e13] [cursor=pointer]: notifications
+        - generic [ref=e14] [cursor=pointer]: settings
+        - generic [ref=e16]: person
+    - complementary [ref=e17]:
+      - generic [ref=e19]:
+        - generic [ref=e20]: search
+        - textbox "메뉴 검색... (/)" [ref=e21]
+      - navigation [ref=e22]:
+        - list [ref=e23]:
+          - listitem [ref=e24]:
+            - button "inventory_2 기준정보 expand_more" [ref=e25]:
+              - generic [ref=e26]: inventory_2
+              - generic [ref=e27]: 기준정보
+              - generic [ref=e28]: expand_more
+          - listitem [ref=e29]:
+            - button "request_quote 수주·생산계획·MRP expand_more" [ref=e30]:
+              - generic [ref=e31]: request_quote
+              - generic [ref=e32]: 수주·생산계획·MRP
+              - generic [ref=e33]: expand_more
+          - listitem [ref=e34]:
+            - button "assignment 작업지시·부재·패킹 expand_more" [ref=e35]:
+              - generic [ref=e36]: assignment
+              - generic [ref=e37]: 작업지시·부재·패킹
+              - generic [ref=e38]: expand_more
+          - listitem [ref=e39]:
+            - button "precision_manufacturing 생산실행·추적성 expand_more" [ref=e40]:
+              - generic [ref=e41]: precision_manufacturing
+              - generic [ref=e42]: 생산실행·추적성
+              - generic [ref=e43]: expand_more
+          - listitem [ref=e44]:
+            - button "warehouse 위치·재고 expand_more" [ref=e45]:
+              - generic [ref=e46]: warehouse
+              - generic [ref=e47]: 위치·재고
+              - generic [ref=e48]: expand_more
+          - listitem [ref=e49]:
+            - button "verified 품질·SPC·불량 expand_more" [ref=e50]:
+              - generic [ref=e51]: verified
+              - generic [ref=e52]: 품질·SPC·불량
+              - generic [ref=e53]: expand_more
+          - listitem [ref=e54]:
+            - button "engineering 설비관리 expand_more" [ref=e55]:
+              - generic [ref=e56]: engineering
+              - generic [ref=e57]: 설비관리
+              - generic [ref=e58]: expand_more
+          - listitem [ref=e59]:
+            - button "shopping_cart 구매·발주 expand_more" [ref=e60]:
+              - generic [ref=e61]: shopping_cart
+              - generic [ref=e62]: 구매·발주
+              - generic [ref=e63]: expand_more
+          - listitem [ref=e64]:
+            - button "local_shipping 출하 expand_more" [ref=e65]:
+              - generic [ref=e66]: local_shipping
+              - generic [ref=e67]: 출하
+              - generic [ref=e68]: expand_more
+            - list [ref=e69]:
+              - listitem [ref=e70]:
+                - button "출하 일정·차량 배차 expand_more" [ref=e71]:
+                  - generic [ref=e72]: 출하 일정·차량 배차
+                  - generic [ref=e73]: expand_more
+                - list [ref=e74]:
+                  - listitem [ref=e75]:
+                    - link "— 출하 일정 캘린더·간트" [ref=e76] [cursor=pointer]:
+                      - /url: /shp/schedule/calendar/
+                      - generic [ref=e77]: —
+                      - generic [ref=e78]: 출하 일정 캘린더·간트
+                  - listitem [ref=e79]:
+                    - link "— shipment 신규 등록" [ref=e80] [cursor=pointer]:
+                      - /url: /shp/schedule/new/
+                      - generic [ref=e81]: —
+                      - generic [ref=e82]: shipment 신규 등록
+                  - listitem [ref=e83]:
+                    - link "— 차량 배차·분할 적재" [ref=e84] [cursor=pointer]:
+                      - /url: /shp/schedule/vehicle/
+                      - generic [ref=e85]: —
+                      - generic [ref=e86]: 차량 배차·분할 적재
+                  - listitem [ref=e87]:
+                    - link "— 일정 변경·취소 (L3)" [ref=e88] [cursor=pointer]:
+                      - /url: /shp/schedule/change/
+                      - generic [ref=e89]: —
+                      - generic [ref=e90]: 일정 변경·취소 (L3)
+              - listitem [ref=e91]:
+                - button "패킹 묶음 작업 (포장 PDA) expand_more" [ref=e92]:
+                  - generic [ref=e93]: 패킹 묶음 작업 (포장 PDA)
+                  - generic [ref=e94]: expand_more
+              - listitem [ref=e95]:
+                - button "STORED·야적 위치 관리 expand_more" [ref=e96]:
+                  - generic [ref=e97]: STORED·야적 위치 관리
+                  - generic [ref=e98]: expand_more
+              - listitem [ref=e99]:
+                - button "패킹 라벨·문서 (PDF·라벨) expand_more" [ref=e100]:
+                  - generic [ref=e101]: 패킹 라벨·문서 (PDF·라벨)
+                  - generic [ref=e102]: expand_more
+              - listitem [ref=e103]:
+                - button "차량 적재 LOADED (운전자 PDA) expand_more" [ref=e104]:
+                  - generic [ref=e105]: 차량 적재 LOADED (운전자 PDA)
+                  - generic [ref=e106]: expand_more
+              - listitem [ref=e107]:
+                - button "게이트 RFID·SHIPPED expand_more" [ref=e108]:
+                  - generic [ref=e109]: 게이트 RFID·SHIPPED
+                  - generic [ref=e110]: expand_more
+              - listitem [ref=e111]:
+                - button "현장 검수·RECEIVED (모바일 앱) expand_more" [ref=e112]:
+                  - generic [ref=e113]: 현장 검수·RECEIVED (모바일 앱)
+                  - generic [ref=e114]: expand_more
+              - listitem [ref=e115]:
+                - button "출하 알림 (4채널) expand_more" [ref=e116]:
+                  - generic [ref=e117]: 출하 알림 (4채널)
+                  - generic [ref=e118]: expand_more
+          - listitem [ref=e119]:
+            - button "groups 사용자·권한 expand_more" [ref=e120]:
+              - generic [ref=e121]: groups
+              - generic [ref=e122]: 사용자·권한
+              - generic [ref=e123]: expand_more
+          - listitem [ref=e124]:
+            - button "dashboard 운영현황·대시보드 expand_more" [ref=e125]:
+              - generic [ref=e126]: dashboard
+              - generic [ref=e127]: 운영현황·대시보드
+              - generic [ref=e128]: expand_more
+          - listitem [ref=e129]:
+            - button "settings 시스템관리 expand_more" [ref=e130]:
+              - generic [ref=e131]: settings
+              - generic [ref=e132]: 시스템관리
+              - generic [ref=e133]: expand_more
+    - main [ref=e134]:
+      - generic [ref=e135]:
+        - generic [ref=e136]:
+          - heading "출하 일정 캘린더" [level=1] [ref=e138]
+          - generic [ref=e139]:
+            - generic [ref=e140]: "Node: IA-SHP-SCHEDULE-CALENDAR"
+            - generic [ref=e141]: "System Status: CALIBRATED"
+          - paragraph [ref=e142]: 출하 일정 관리 · 차량 배차 · SCHEDULED → COMPLETED
+        - generic [ref=e143]:
+          - combobox [ref=e144]:
+            - option "P3000 제3공장" [selected]
+          - textbox [ref=e145]: 2026-05-01 ~ 2026-05-31
+          - combobox [ref=e146]:
+            - option "거래처 전체" [selected]
+          - combobox [ref=e147]:
+            - option "상태 전체" [selected]
+          - button "재조회" [ref=e148]
+          - button "엑셀" [ref=e149]
+        - generic [ref=e150]:
+          - button "캘린더" [ref=e151]
+          - button "간트" [ref=e152]
+        - generic [ref=e153]:
+          - generic [ref=e154]:
+            - generic [ref=e155]: MON 5/4
+            - button "-001 VH-15TON-007 완료" [ref=e157]:
+              - generic [ref=e158]: "-001"
+              - generic [ref=e159]: VH-15TON-007
+              - text: 완료
+          - generic [ref=e160]:
+            - generic [ref=e161]: TUE 5/5
+            - button "-001 VH-25TON-001 완료" [ref=e163]:
+              - generic [ref=e164]: "-001"
+              - generic [ref=e165]: VH-25TON-001
+              - text: 완료
+          - generic [ref=e166]:
+            - generic [ref=e167]: WED 5/6
+            - button "-001 VH-25TON-002 진행 중" [ref=e169]:
+              - generic [ref=e170]: "-001"
+              - generic [ref=e171]: VH-25TON-002
+              - text: 진행 중
+          - generic [ref=e172]:
+            - generic [ref=e173]: THU 5/7
+            - button "-001 VH-25TON-003 예정" [ref=e175]:
+              - generic [ref=e176]: "-001"
+              - generic [ref=e177]: VH-25TON-003
+              - text: 예정
+          - generic [ref=e178]:
+            - generic [ref=e179]: FRI 5/8
+            - button "-001 VH-15TON-007 예정" [ref=e181]:
+              - generic [ref=e182]: "-001"
+              - generic [ref=e183]: VH-15TON-007
+              - text: 예정
+        - generic [ref=e184]:
+          - generic [ref=e185]:
+            - 'heading "차량 배차 현황 | Buffer: 003 Entries" [level=3] [ref=e186]':
+              - text: 차량 배차 현황
+              - generic [ref=e187]: "| Buffer: 003 Entries"
+            - generic [ref=e188] [cursor=pointer]: refresh
+          - table [ref=e190]:
+            - rowgroup [ref=e191]:
+              - row "차량 번호 운전자 출발지 목적지 적재량 상태" [ref=e192]:
+                - columnheader "차량 번호" [ref=e193]
+                - columnheader "운전자" [ref=e194]
+                - columnheader "출발지" [ref=e195]
+                - columnheader "목적지" [ref=e196]
+                - columnheader "적재량" [ref=e197]
+                - columnheader "상태" [ref=e198]
+            - rowgroup [ref=e199]:
+              - row "VH-25TON-003 외부운전자 (EXTERNAL) P3000 제3 이천공장 P1000 제1 이천공장 4,250kg / 25t 예정" [ref=e200]:
+                - cell "VH-25TON-003" [ref=e201]
+                - cell "외부운전자 (EXTERNAL)" [ref=e202]
+                - cell "P3000 제3 이천공장" [ref=e203]
+                - cell "P1000 제1 이천공장" [ref=e204]
+                - cell "4,250kg / 25t" [ref=e205]
+                - cell "예정" [ref=e206]
+              - row "VH-25TON-002 외부운전자 (EXTERNAL) P3000 제3 이천공장 P2000 제2 이천공장 6,800kg / 25t 진행 중" [ref=e207]:
+                - cell "VH-25TON-002" [ref=e208]
+                - cell "외부운전자 (EXTERNAL)" [ref=e209]
+                - cell "P3000 제3 이천공장" [ref=e210]
+                - cell "P2000 제2 이천공장" [ref=e211]
+                - cell "6,800kg / 25t" [ref=e212]
+                - cell "진행 중" [ref=e213]
+              - row "VH-25TON-001 외부운전자 (EXTERNAL) P3000 제3 이천공장 P1000 제1 이천공장 5,200kg / 25t 완료" [ref=e214]:
+                - cell "VH-25TON-001" [ref=e215]
+                - cell "외부운전자 (EXTERNAL)" [ref=e216]
+                - cell "P3000 제3 이천공장" [ref=e217]
+                - cell "P1000 제1 이천공장" [ref=e218]
+                - cell "5,200kg / 25t" [ref=e219]
+                - cell "완료" [ref=e220]
+        - button "일정 등록" [ref=e222]
+    - generic [ref=e224]: System Active | Port 8080 | Secure Link
+  - button "Open Next.js Dev Tools" [ref=e230] [cursor=pointer]:
+    - img [ref=e231]
+  - alert [ref=e234]

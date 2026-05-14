@@ -40,9 +40,9 @@ export default function ScrapDefectPage() {
 
       <div className="flex gap-4 mb-8">
         {KPI.map(k => (
-          <div key={k.label} className="bg-[#1a1a1a] border-l-4 border-[#ef4444] px-6 py-4">
-            <p className="text-xs font-label uppercase tracking-widest text-white/40 mb-1">{k.label}</p>
-            <p className="text-2xl font-black font-headline text-white">{k.value}</p>
+          <div key={k.label} className="bg-surface-elevated border-l-4 border-danger px-6 py-4">
+            <p className="text-xs font-label uppercase tracking-widest text-on-surface/40 mb-1">{k.label}</p>
+            <p className="text-2xl font-black font-headline text-on-surface">{k.value}</p>
             <div className="mt-2"><StatusBadge type={k.badge} label={k.badge.toUpperCase()} /></div>
           </div>
         ))}
@@ -52,10 +52,10 @@ export default function ScrapDefectPage() {
       <DataTable title="SCRAP 불량 처리" columns={COLS} data={DATA} bufferCount={DATA.length} />
 
       <div className="flex gap-2 mt-4">
-        <button className="bg-[#ef4444] text-white font-label font-bold uppercase tracking-widest px-5 py-2 text-xs hover:opacity-90">
+        <button className="bg-danger text-white font-label font-bold uppercase tracking-widest px-5 py-2 text-xs hover:opacity-90">
           [폐기 결재 요청 ▶]
         </button>
-        <button className="bg-[#1a1a1a] border border-white/10 text-white/60 font-label uppercase tracking-widest px-5 py-2 text-xs hover:border-white/30">
+        <button className="bg-surface-elevated border border-outline/20 text-on-surface/60 font-label uppercase tracking-widest px-5 py-2 text-xs hover:border-outline/40">
           [엑셀 다운]
         </button>
       </div>

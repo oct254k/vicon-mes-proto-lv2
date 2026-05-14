@@ -59,7 +59,7 @@ export default function DrawingsPage() {
         </div>
         <table className="w-full text-left border-collapse text-sm">
           <thead>
-            <tr className="bg-surface-container border-b border-outline-variant/10">
+            <tr className="bg-surface-container border-b border-outline">
               {["도면 ID", "파일명", "연결 부재", "Rev", "등록일시", "등록자", "상태"].map((h) => (
                 <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50">{h}</th>
               ))}
@@ -69,7 +69,7 @@ export default function DrawingsPage() {
             {ROWS.map((r) => {
               const s = STATUS_MAP[r.status];
               return (
-                <tr key={r.drawingId} className="border-b border-outline-variant/5 hover:bg-surface-container-highest/20 transition-colors cursor-pointer">
+                <tr key={r.drawingId} className="border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors cursor-pointer">
                   <td className="px-4 py-2 font-mono text-xs text-primary-accent">{r.drawingId}</td>
                   <td className="px-4 py-2 text-xs opacity-70">{r.fileName}</td>
                   <td className="px-4 py-2 font-mono text-xs">{r.member}</td>
