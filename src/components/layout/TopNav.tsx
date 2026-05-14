@@ -28,11 +28,19 @@ export function TopNav({ onMenuClick }: TopNavProps) {
         </button>
         <Link href="/ops" className="flex items-center gap-3">
           <Image
-            src="/sungigroup_logo.png"
-            alt="성지그룹 Logo"
+            src="/logo-dark.png"
+            alt="성지그룹"
             width={106}
             height={26}
-            className="h-8 w-auto logo-adaptive"
+            className="h-12 w-auto logo-dark"
+            priority
+          />
+          <Image
+            src="/logo-light.png"
+            alt="성지그룹"
+            width={106}
+            height={26}
+            className="h-12 w-auto logo-light"
             priority
           />
         </Link>

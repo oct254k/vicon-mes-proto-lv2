@@ -121,6 +121,11 @@
 .logo-adaptive { filter: brightness(0) invert(1); }
 :root[data-theme="light"] .logo-adaptive { filter: none; }
 
+.logo-dark  { display: block; }
+.logo-light { display: none; }
+:root[data-theme="light"] .logo-dark  { display: none; }
+:root[data-theme="light"] .logo-light { display: block; }
+
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
