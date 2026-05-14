@@ -329,6 +329,7 @@ export default function YardMapViewPage() {
   const sectorsRef = useRef<Sector[]>(sectors);
   const dragLotRef = useRef<{lot:Lot}|null>(null);
   const dragGhostRef = useRef<{mapX:number;mapY:number;w:number;h:number;status:SlotStatus}|null>(null);
+  const snapTargetRef = useRef<Lot|null>(null);
   const [dragTick, setDragTick] = useState(0);
 
   useEffect(()=>{ stateRef.current={zoom,pan}; },[zoom,pan]);
@@ -384,6 +385,7 @@ export default function YardMapViewPage() {
         const lot=dragLotRef.current.lot;
         // 가장 가까운 빈 슬롯에 snap — 없으면 커서 중심
         const snap=nearestEmptySlot(mx,my,lot.id,sectorsRef.current);
+        snapTargetRef.current=snap;
         if(snap){
           dragGhostRef.current={mapX:snap.x+snap.w/2,mapY:snap.y+snap.h/2,w:snap.w,h:snap.h,status:lot.status};
         } else {
@@ -407,8 +409,10 @@ export default function YardMapViewPage() {
         const cw=wrap.clientWidth, ch=wrap.clientHeight;
         const [mx,my]=canvasToMap(cx,cy,cw,ch,z,p.x,p.y);
         const fromLot=dragLotRef.current.lot;
-        const emptyTarget=nearestEmptySlot(mx,my,fromLot.id,sectorsRef.current);
+        // onMove에서 저장한 snap target 사용 (재계산 없이 정확한 대상)
+        const emptyTarget=snapTargetRef.current;
         dragGhostRef.current=null;
+        snapTargetRef.current=null;
         setDragTick(t=>t+1);
         if(emptyTarget){
           const fromInfo=findZoneForLot(fromLot.id,sectorsRef.current);
@@ -452,6 +456,7 @@ export default function YardMapViewPage() {
       if(e.key==="Escape" && dragLotRef.current){
         dragLotRef.current=null;
         dragGhostRef.current=null;
+        snapTargetRef.current=null;
         setIsDraggingLot(false);
         setDragTick(t=>t+1);
       }
@@ -530,6 +535,7 @@ export default function YardMapViewPage() {
     });
     setSelected(null);
     setPackingInfo(null);
+    setDragTick(t=>t+1);
   },[packingInfo]);
 
   const lod=getLOD(zoom);
