@@ -312,7 +312,7 @@ export default function YardMapViewPage() {
   const [packingInfo, setPackingInfo] = useState<PackingInfo|null>(null);
   const [isDraggingLot, setIsDraggingLot] = useState(false);
 
-  const panDragRef  = useRef({active:false,lx:0,ly:0});
+  const panDragRef  = useRef({active:false,lx:0,ly:0,sx:0,sy:0});
   const stateRef = useRef({zoom:0.52,pan:{x:0,y:0}});
   const sectorsRef = useRef<Sector[]>(sectors);
   const dragLotRef = useRef<{lot:Lot}|null>(null);
@@ -351,33 +351,19 @@ export default function YardMapViewPage() {
   useEffect(()=>{render();},[zoom,pan,render,dragTick]);
   useEffect(()=>{window.addEventListener("resize",render);return()=>window.removeEventListener("resize",render);},[render]);
 
-  // 마우스 이벤트
+  // 이벤트 (클릭으로 집기 → 마우스 따라다님 → 클릭으로 내려놓기)
   useEffect(()=>{
     const wrap=wrapRef.current; if(!wrap) return;
 
-    const onDown=(e:MouseEvent)=>{
-      const rect=wrap.getBoundingClientRect();
-      const cx=e.clientX-rect.left, cy=e.clientY-rect.top;
-      const {zoom:z,pan:p}=stateRef.current;
-      const cw=wrap.clientWidth, ch=wrap.clientHeight;
-
-      // LOD2에서만 lot drag 가능
-      if(getLOD(z)===2){
-        const [mx,my]=canvasToMap(cx,cy,cw,ch,z,p.x,p.y);
-        const hit=hitTest(mx,my,sectorsRef.current);
-        if(hit && hit.status!=="가용" && hit.status!=="정비"){
-          dragLotRef.current={lot:hit};
-          dragGhostRef.current={mapX:mx,mapY:my,w:hit.w,h:hit.h,status:hit.status};
-          setIsDraggingLot(true);
-          return;
-        }
-      }
-      panDragRef.current={active:true,lx:e.clientX,ly:e.clientY};
+    // carrying 중이면 pan 시작 차단, 아니면 pan 시작 기록
+    const onDown=(e:PointerEvent)=>{
+      if(dragLotRef.current) return;
+      panDragRef.current={active:true,lx:e.clientX,ly:e.clientY,sx:e.clientX,sy:e.clientY};
     };
 
-    const onMove=(e:MouseEvent)=>{
+    // carrying 중이면 ghost 위치 갱신(버튼 누를 필요 없음), 아니면 pan
+    const onMove=(e:PointerEvent)=>{
       if(dragLotRef.current){
-        const wrap=wrapRef.current; if(!wrap) return;
         const rect=wrap.getBoundingClientRect();
         const cx=e.clientX-rect.left, cy=e.clientY-rect.top;
         const {zoom:z,pan:p}=stateRef.current;
@@ -394,10 +380,9 @@ export default function YardMapViewPage() {
       setPan(p=>({x:p.x+dx,y:p.y+dy}));
     };
 
-    const onUp=(e:MouseEvent)=>{
-      // lot drag 종료
+    // carrying 중이면 내려놓기/취소, 아니면 pan 종료 + 클릭 감지 → 집기
+    const onUp=(e:PointerEvent)=>{
       if(dragLotRef.current){
-        const wrap=wrapRef.current; if(!wrap) return;
         const rect=wrap.getBoundingClientRect();
         const cx=e.clientX-rect.left, cy=e.clientY-rect.top;
         const {zoom:z,pan:p}=stateRef.current;
@@ -405,10 +390,8 @@ export default function YardMapViewPage() {
         const [mx,my]=canvasToMap(cx,cy,cw,ch,z,p.x,p.y);
         const fromLot=dragLotRef.current.lot;
         const emptyTarget=hitTestEmptySlot(mx,my,fromLot.id,sectorsRef.current);
-
         dragGhostRef.current=null;
         setDragTick(t=>t+1);
-
         if(emptyTarget){
           const fromInfo=findZoneForLot(fromLot.id,sectorsRef.current);
           const toInfo=findZoneForLot(emptyTarget.id,sectorsRef.current);
@@ -424,32 +407,49 @@ export default function YardMapViewPage() {
         return;
       }
 
-      // pan 종료 + 클릭 판별
       if(!panDragRef.current.active) return;
-      const moved=Math.abs(e.clientX-panDragRef.current.lx)+Math.abs(e.clientY-panDragRef.current.ly)<3;
+      const totalMove=Math.abs(e.clientX-panDragRef.current.sx)+Math.abs(e.clientY-panDragRef.current.sy);
       panDragRef.current.active=false;
-      if(!moved){
+      if(totalMove<5 && getLOD(stateRef.current.zoom)===2){
         const rect=wrap.getBoundingClientRect();
         const cx=e.clientX-rect.left, cy=e.clientY-rect.top;
         const {zoom:z,pan:p}=stateRef.current;
         const cw=wrap.clientWidth, ch=wrap.clientHeight;
         const [mx,my]=canvasToMap(cx,cy,cw,ch,z,p.x,p.y);
-        if(getLOD(z)===2){
-          const hit=hitTest(mx,my,sectorsRef.current);
+        const hit=hitTest(mx,my,sectorsRef.current);
+        if(hit && hit.status!=="가용" && hit.status!=="정비"){
+          // 집기 시작
+          dragLotRef.current={lot:hit};
+          dragGhostRef.current={mapX:mx,mapY:my,w:hit.w,h:hit.h,status:hit.status};
+          setIsDraggingLot(true);
+          setDragTick(t=>t+1);
+        } else {
           setSelected(hit);
         }
       }
     };
 
+    // Escape: carrying 취소
+    const onKey=(e:KeyboardEvent)=>{
+      if(e.key==="Escape" && dragLotRef.current){
+        dragLotRef.current=null;
+        dragGhostRef.current=null;
+        setIsDraggingLot(false);
+        setDragTick(t=>t+1);
+      }
+    };
+
     const onWheel=(e:WheelEvent)=>{e.preventDefault();setZoom(z=>Math.max(0.2,Math.min(3,z-e.deltaY*0.001)));};
-    wrap.addEventListener("mousedown",onDown);
-    window.addEventListener("mousemove",onMove);
-    window.addEventListener("mouseup",onUp);
+    wrap.addEventListener("pointerdown",onDown);
+    window.addEventListener("pointermove",onMove);
+    window.addEventListener("pointerup",onUp);
+    window.addEventListener("keydown",onKey);
     wrap.addEventListener("wheel",onWheel,{passive:false});
     return()=>{
-      wrap.removeEventListener("mousedown",onDown);
-      window.removeEventListener("mousemove",onMove);
-      window.removeEventListener("mouseup",onUp);
+      wrap.removeEventListener("pointerdown",onDown);
+      window.removeEventListener("pointermove",onMove);
+      window.removeEventListener("pointerup",onUp);
+      window.removeEventListener("keydown",onKey);
       wrap.removeEventListener("wheel",onWheel);
     };
   },[]);
@@ -568,7 +568,12 @@ export default function YardMapViewPage() {
           )}
           {lod===2 && !isDraggingLot && (
             <div className="absolute bottom-3 left-3 text-[10px] font-label text-on-surface/30 pointer-events-none">
-              점유 Lot을 드래그해 빈 슬롯으로 이동
+              점유 Lot을 클릭해 선택 → 빈 슬롯 클릭으로 이동 (ESC 취소)
+            </div>
+          )}
+          {isDraggingLot && (
+            <div className="absolute bottom-3 left-3 text-[10px] font-label text-on-surface/60 pointer-events-none bg-surface-elevated/80 px-2 py-1 rounded">
+              빈 슬롯을 클릭해 이동 · ESC 취소
             </div>
           )}
         </div>
