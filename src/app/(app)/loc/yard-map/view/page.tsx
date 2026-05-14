@@ -368,9 +368,27 @@ export default function YardMapViewPage() {
   useEffect(()=>{
     const wrap=wrapRef.current; if(!wrap) return;
 
-    // carrying 중이면 pan 시작 차단, 아니면 pan 시작 기록
+    // carrying 중: 누른 위치로 snap target 갱신(터치 시뮬레이션 대응 — hover pointermove 없음)
+    // not carrying: pan 시작 기록
     const onDown=(e:PointerEvent)=>{
-      if(dragLotRef.current) return;
+      e.preventDefault(); // 터치 이후 mouse compat 이벤트 방지
+      if(dragLotRef.current){
+        const rect=wrap.getBoundingClientRect();
+        const cx=e.clientX-rect.left, cy=e.clientY-rect.top;
+        const {zoom:z,pan:p}=stateRef.current;
+        const cw=wrap.clientWidth, ch=wrap.clientHeight;
+        const [mx,my]=canvasToMap(cx,cy,cw,ch,z,p.x,p.y);
+        const lot=dragLotRef.current.lot;
+        const snap=nearestEmptySlot(mx,my,lot.id,sectorsRef.current);
+        snapTargetRef.current=snap;
+        if(snap){
+          dragGhostRef.current={mapX:snap.x+snap.w/2,mapY:snap.y+snap.h/2,w:snap.w,h:snap.h,status:lot.status};
+        } else {
+          dragGhostRef.current={mapX:mx,mapY:my,w:lot.w,h:lot.h,status:lot.status};
+        }
+        setDragTick(t=>t+1);
+        return;
+      }
       panDragRef.current={active:true,lx:e.clientX,ly:e.clientY,sx:e.clientX,sy:e.clientY};
     };
 
