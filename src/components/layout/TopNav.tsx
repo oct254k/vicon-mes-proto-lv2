@@ -16,7 +16,7 @@ export function TopNav({ onMenuClick }: TopNavProps) {
   const [sitemapOpen, setSitemapOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 flex justify-between items-center w-full px-4 lg:px-10 h-16 z-50 bg-[#323232] border-b border-outline">
+    <nav className="fixed top-0 flex justify-between items-center w-full px-4 lg:px-10 h-16 z-50 topnav-bg border-b border-outline">
       <div className="flex items-center gap-4 lg:gap-8">
         {/* 모바일 햄버거 */}
         <button

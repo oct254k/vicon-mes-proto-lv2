@@ -123,6 +123,9 @@
 
 .logo-dark  { display: block; }
 .logo-light { display: none; }
+
+.topnav-bg { background-color: #323232; }
+:root[data-theme="light"] .topnav-bg { background-color: var(--color-surface-bright); }
 :root[data-theme="light"] .logo-dark  { display: none; }
 :root[data-theme="light"] .logo-light { display: block; }
 
