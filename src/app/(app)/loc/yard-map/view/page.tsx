@@ -330,6 +330,7 @@ export default function YardMapViewPage() {
   const dragLotRef = useRef<{lot:Lot}|null>(null);
   const dragGhostRef = useRef<{mapX:number;mapY:number;w:number;h:number;status:SlotStatus}|null>(null);
   const snapTargetRef = useRef<Lot|null>(null);
+  const packingOpenedAtRef = useRef(0);
   const [dragTick, setDragTick] = useState(0);
 
   useEffect(()=>{ stateRef.current={zoom,pan}; },[zoom,pan]);
@@ -435,6 +436,7 @@ export default function YardMapViewPage() {
         if(emptyTarget){
           const fromInfo=findZoneForLot(fromLot.id,sectorsRef.current);
           const toInfo=findZoneForLot(emptyTarget.id,sectorsRef.current);
+          packingOpenedAtRef.current=Date.now();
           setPackingInfo({
             fromId:fromLot.id, fromZone:fromInfo?.zone.id??"", fromSec:fromInfo?.sec.label??"",
             toId:emptyTarget.id, toZone:toInfo?.zone.id??"", toSec:toInfo?.sec.label??"",
@@ -659,7 +661,7 @@ export default function YardMapViewPage() {
 
       {/* 패킹리스트 모달 */}
       {packingInfo && (
-        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50" onClick={()=>{dragLotRef.current=null;setIsDraggingLot(false);setPackingInfo(null);}}>
+        <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50" onClick={()=>{if(Date.now()-packingOpenedAtRef.current>300){dragLotRef.current=null;setIsDraggingLot(false);setPackingInfo(null);}}}>
           <div className="bg-surface-elevated border border-outline/30 w-80 shadow-2xl" onClick={e=>e.stopPropagation()}>
             {/* 헤더 */}
             <div className="flex items-center justify-between px-5 py-4 border-b border-outline/20">
