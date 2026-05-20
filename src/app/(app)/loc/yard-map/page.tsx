@@ -12,7 +12,7 @@ const COLOR_MAP: Record<string, string> = {
   EMPTY: "bg-surface-container-high border border-outline/10",
   OCCUPIED: "bg-[#00912F]/30 border border-[#00912F]/40",
   FULL: "bg-warning/30 border border-warning/40",
-  AGING: "bg-[#f97316]/30 border border-[#f97316]/40",
+  AGING: "bg-warning/30 border border-warning/40",
   MAINTENANCE: "bg-danger/20 border border-danger/30",
 };
 
@@ -59,7 +59,7 @@ export default function YardMapLandingPage() {
               <MiniMap yard={y} />
               <div className="flex gap-3 mt-3 text-xs font-label text-on-surface/40">
                 <span>FULL <span className="text-warning">{y.full}</span></span>
-                <span>AGING <span className="text-[#f97316]">{y.aging}</span></span>
+                <span>AGING <span className="text-warning">{y.aging}</span></span>
                 <span>MAINT <span className="text-danger">{y.maint}</span></span>
               </div>
               <p className="text-xs text-[#00912F]/60 mt-3 group-hover:text-[#00912F] font-label uppercase tracking-widest">

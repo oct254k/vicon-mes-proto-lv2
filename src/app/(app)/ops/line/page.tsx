@@ -9,7 +9,7 @@ const STATUS_COLOR: Record<EquipStatus, string> = {
   RUNNING: "text-primary-accent border-primary-accent bg-primary-accent/10",
   IDLE: "text-warning border-warning bg-warning/10",
   DOWN: "text-error border-error bg-error/10",
-  MAINTENANCE: "text-[#3b82f6] border-[#3b82f6] bg-[#3b82f6]/10",
+  MAINTENANCE: "text-[#22c55e] border-[#22c55e] bg-[#22c55e]/10",
 };
 const STATUS_BADGE_TYPE: Record<EquipStatus, "running" | "idle" | "stopped" | "warning"> = {
   RUNNING: "running", IDLE: "idle", DOWN: "stopped", MAINTENANCE: "warning",
@@ -156,7 +156,7 @@ export default function OPSLinePage() {
         <span className="text-primary-accent">● RUNNING</span>
         <span className="text-warning">● IDLE</span>
         <span className="text-error">● DOWN</span>
-        <span className="text-[#3b82f6]">● MAINTENANCE</span>
+        <span className="text-[#22c55e]">● MAINTENANCE</span>
       </div>
     </div>
   );

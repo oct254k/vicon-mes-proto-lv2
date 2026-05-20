@@ -112,7 +112,7 @@ function GroupDetail({ group, onClose, onToggleStatus }: {
               onClick={() => onToggleStatus(group.groupId)}
               className={`px-4 py-2 text-xs font-label uppercase tracking-widest border transition-colors ${
                 group.status === "ACTIVE"
-                  ? "border-red-500/30 text-red-400 hover:border-red-500"
+                  ? "border-danger/30 text-danger hover:border-danger"
                   : "border-primary-accent/40 text-primary-accent hover:border-primary-accent"
               }`}
             >

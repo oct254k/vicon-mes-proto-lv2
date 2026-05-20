@@ -33,9 +33,9 @@ export default function InventoryTracePage() {
         description="FIFO 강제 — fifo_seq 기준 오래된 자재 우선 출고 추적. AGING 위치 경보."
       />
 
-      <div className="bg-[#f97316]/10 border border-[#f97316]/30 px-5 py-3 mb-6 flex items-center justify-between">
+      <div className="bg-[#166534]/10 border border-[#166534]/30 px-5 py-3 mb-6 flex items-center justify-between">
         <div>
-          <p className="font-label text-xs uppercase tracking-widest text-[#f97316] mb-1">⚠ AGING 경보</p>
+          <p className="font-label text-xs uppercase tracking-widest text-[#166534] mb-1">⚠ AGING 경보</p>
           <p className="text-on-surface/60 text-sm">LOT-20260420-007 / M-COIL-A — 16일 보관 초과 (임계: 14일)</p>
         </div>
         <StatusBadge type="warning" label="AGING" />
@@ -55,7 +55,7 @@ export default function InventoryTracePage() {
 
       <div className="bg-surface-elevated border-l-4 border-[#00912F] p-4 mt-4 text-xs font-label">
         <p className="uppercase tracking-widest text-on-surface/40 mb-2">출고 권장 — 다음 소모 Lot</p>
-        <p className="text-on-surface"><span className="text-[#00912F] font-bold">①</span> LOT-20260420-007 (seq 4300) — 2,800m @ Y-P3000-A-02-03 <span className="text-[#f97316]">AGING ⚠</span></p>
+        <p className="text-on-surface"><span className="text-[#00912F] font-bold">①</span> LOT-20260420-007 (seq 4300) — 2,800m @ Y-P3000-A-02-03 <span className="text-[#166534]">AGING ⚠</span></p>
       </div>
     </div>
   );

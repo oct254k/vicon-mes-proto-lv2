@@ -3,10 +3,10 @@ import { FieldHeader } from "@/components/ui/FieldHeader";
 
 const LEVEL_CARDS = [
   { code: "L1", name: "WORKER", desc: "현장 작업자. 자기 WO 조회·실적 입력.", color: "border-l-4 border-[#6b7280]" },
-  { code: "L2", name: "STAFF", desc: "반장·조장급. 자기 부서 사용자 PIN 해제·권한 신청.", color: "border-l-4 border-[#3b82f6]" },
+  { code: "L2", name: "STAFF", desc: "반장·조장급. 자기 부서 사용자 PIN 해제·권한 신청.", color: "border-l-4 border-[#22c55e]" },
   { code: "L3", name: "MANAGER", desc: "팀장급. 권한 부여·위임·EXTERNAL 결재.", color: "border-l-4 border-warning" },
   { code: "L4", name: "ADMIN", desc: "시스템 관리자. 매트릭스 변경 최종 결재.", color: "border-l-4 border-primary-accent" },
-  { code: "EXT", name: "EXTERNAL", desc: "외부 운전자·검수자. PDA Token 인증 전용. 메뉴 진입 불가.", color: "border-l-4 border-[#8b5cf6]" },
+  { code: "EXT", name: "EXTERNAL", desc: "외부 운전자·검수자. PDA Token 인증 전용. 메뉴 진입 불가.", color: "border-l-4 border-[#4ade80]" },
 ];
 
 export default function LevelsPage() {

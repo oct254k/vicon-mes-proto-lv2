@@ -16,7 +16,7 @@ const BASE: Record<string, Record<string, Record<string, string>>> = {
   EXT: { PRD: { LIST:"-",VIEW:"-",CREATE:"-",EDIT:"-",DELETE:"-",APPROVE:"-",EXPORT:"-" }, QC: { LIST:"-",VIEW:"-",CREATE:"-",EDIT:"-",DELETE:"-",APPROVE:"-",EXPORT:"-" }, WHS: { LIST:"-",VIEW:"-",CREATE:"-",EDIT:"-",DELETE:"-",APPROVE:"-",EXPORT:"-" }, MNT: { LIST:"-",VIEW:"-",CREATE:"-",EDIT:"-",DELETE:"-",APPROVE:"-",EXPORT:"-" }, SHP: { LIST:"R",VIEW:"R",CREATE:"-",EDIT:"-",DELETE:"-",APPROVE:"-",EXPORT:"-" }, SLS: { LIST:"-",VIEW:"-",CREATE:"-",EDIT:"-",DELETE:"-",APPROVE:"-",EXPORT:"-" }, SYS: { LIST:"-",VIEW:"-",CREATE:"-",EDIT:"-",DELETE:"-",APPROVE:"-",EXPORT:"-" } },
 };
 
-const CELL_CLR: Record<string, string> = { R: "text-[#3b82f6]", W: "text-warning", A: "text-primary-accent font-bold", "-": "text-on-surface/20" };
+const CELL_CLR: Record<string, string> = { R: "text-[#22c55e]", W: "text-warning", A: "text-primary-accent font-bold", "-": "text-on-surface/20" };
 
 export default function MatrixEditPage() {
   return (
@@ -31,7 +31,7 @@ export default function MatrixEditPage() {
       <div className="flex gap-3 mb-4">
         <FieldHeader title="범례" moduleRef="R=read W=write A=approve -=none" />
         <div className="flex gap-4 text-xs font-body ml-auto items-center">
-          <span className="text-[#3b82f6] font-bold">R 읽기</span>
+          <span className="text-[#22c55e] font-bold">R 읽기</span>
           <span className="text-warning font-bold">W 쓰기</span>
           <span className="text-primary-accent font-bold">A 결재</span>
           <span className="text-on-surface/20">- 없음</span>

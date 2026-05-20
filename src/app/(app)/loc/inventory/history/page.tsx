@@ -16,10 +16,10 @@ const COLS = [
 
 const TX_TYPES: Record<string, string> = {
   RECEIVE:   "bg-[#00912F]/20 text-[#00912F]",
-  TRANSFER:  "bg-[#3b82f6]/20 text-[#3b82f6]",
+  TRANSFER:  "bg-[#22c55e]/20 text-[#22c55e]",
   ADJUST:    "bg-warning/20 text-warning",
   SCRAP:     "bg-danger/20 text-danger",
-  MOVE:      "bg-[#8b5cf6]/20 text-[#8b5cf6]",
+  MOVE:      "bg-[#4ade80]/20 text-[#4ade80]",
 };
 
 const DATA = [

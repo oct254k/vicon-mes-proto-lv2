@@ -16,8 +16,8 @@ const MOCK = [
 ];
 
 const TYPE_COLOR: Record<string, string> = {
-  T1: "bg-blue-500/20 text-blue-400",
-  T2: "bg-purple-500/20 text-purple-400",
+  T1: "bg-primary/20 text-primary",
+  T2: "bg-secondary/20 text-secondary",
   T3: "bg-warning/20 text-warning",
 };
 

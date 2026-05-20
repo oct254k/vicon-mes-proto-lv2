@@ -16,7 +16,7 @@ interface TransitRow {
 }
 
 const STATUS_STYLE: Record<TransitStatus, string> = {
-  IN_TRANSIT: "bg-[#3b82f6]/20 text-[#3b82f6]",
+  IN_TRANSIT: "bg-[#22c55e]/20 text-[#22c55e]",
   ARRIVED: "bg-primary-accent/20 text-primary-accent",
   OVERDUE: "bg-error/20 text-error",
 };
@@ -45,8 +45,8 @@ export default function MFGTransferMonitorPage() {
       />
 
       <div className="grid grid-cols-3 gap-4 mb-8">
-        <div className="bg-surface-container-low p-4 border-l-4 border-[#3b82f6]">
-          <p className="font-label text-xs uppercase tracking-widest text-[#3b82f6] mb-1">IN TRANSIT</p>
+        <div className="bg-surface-container-low p-4 border-l-4 border-[#22c55e]">
+          <p className="font-label text-xs uppercase tracking-widest text-[#22c55e] mb-1">IN TRANSIT</p>
           <p className="font-headline font-black text-2xl">{inTransitCount}</p>
         </div>
         <div className="bg-surface-container-low p-4 border-l-4 border-primary-accent">

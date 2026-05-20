@@ -271,11 +271,11 @@ export default function OPSDashboardPage() {
           </span>
           <span className="text-sm font-label text-on-surface-variant ml-1">EA</span>
         </div>
-        <div className="bg-surface-container-lowest p-6 border-l-4 border-[#f59e0b]">
+        <div className="bg-surface-container-lowest p-6 border-l-4 border-[#4ade80]">
           <span className="font-label text-xs uppercase tracking-widest text-on-surface-variant block mb-1">
             달성률
           </span>
-          <span className="text-4xl font-black font-headline tabular-nums text-[#f59e0b]">
+          <span className="text-4xl font-black font-headline tabular-nums text-[#4ade80]">
             {achievement}
           </span>
           <span className="text-sm font-label text-on-surface-variant ml-1">%</span>
@@ -317,7 +317,7 @@ export default function OPSDashboardPage() {
                     proc.util >= 90
                       ? "bg-primary-accent"
                       : proc.util >= 80
-                      ? "bg-[#f59e0b]"
+                      ? "bg-[#4ade80]"
                       : "bg-error"
                   }`}
                   style={{ width: `${proc.util}%` }}

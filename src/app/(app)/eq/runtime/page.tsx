@@ -19,8 +19,8 @@ const equipments: { id: string; name: string; status: EqStatus; duration: string
 const statusBorderColor: Record<EqStatus, string> = {
   RUNNING: "#00912F",
   IDLE: "#6b7280",
-  DOWN: "#ef4444",
-  MAINTENANCE: "#f59e0b",
+  DOWN: "#14532d",
+  MAINTENANCE: "#4ade80",
 };
 
 function mapStatus(s: EqStatus): "running" | "idle" | "stopped" | "warning" {

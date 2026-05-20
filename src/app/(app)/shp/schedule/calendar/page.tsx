@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { StatusBadge } from "@/components/ui/StatusBadge";
 import { FieldHeader } from "@/components/ui/FieldHeader";
@@ -34,8 +35,8 @@ export default function ScheduleCalendarPage() {
             <div key={d} className="bg-surface-container px-2 py-2 text-center text-xs font-label opacity-50 uppercase border-b border-outline">05-{d}</div>
           ))}
           {SHIPMENTS.map(s=>(
-            <>
-              <div key={s.id+"l"} className="px-3 py-3 border-b border-outline-variant">
+            <React.Fragment key={s.id}>
+              <div className="px-3 py-3 border-b border-outline-variant">
                 <p className="text-xs font-mono text-primary-accent">{s.id}</p>
                 <p className="text-xs opacity-70">{s.customer}</p>
                 <p className="text-xs opacity-40">{s.dest}</p>
@@ -45,7 +46,7 @@ export default function ScheduleCalendarPage() {
                   {s.days.includes(d) && s.days[0]===d && <StatusBadge type={SM[s.status]} label={s.status} />}
                 </div>
               ))}
-            </>
+            </React.Fragment>
           ))}
         </div>
       </div>

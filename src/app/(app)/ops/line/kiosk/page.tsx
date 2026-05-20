@@ -7,7 +7,7 @@ const STATUS_STYLE: Record<EquipStatus, string> = {
   RUNNING:     "text-primary-accent border-primary-accent bg-primary-accent/10",
   IDLE:        "text-warning border-warning bg-warning/10",
   DOWN:        "text-error border-error bg-error/10",
-  MAINTENANCE: "text-[#3b82f6] border-[#3b82f6] bg-[#3b82f6]/10",
+  MAINTENANCE: "text-[#22c55e] border-[#22c55e] bg-[#22c55e]/10",
 };
 const STEP_ICON: Record<string, string> = { DONE: "✅", IN_PROGRESS: "🟡", FAILED: "🔴", PENDING: "🔘" };
 
@@ -25,8 +25,8 @@ export default function OPSLineKioskPage() {
   return (
     <div className="p-6 bg-surface min-h-screen">
       {/* KIOSK 헤더 바 */}
-      <div className="flex items-center gap-4 mb-4 bg-surface-container px-4 py-2 border-l-4 border-[#3b82f6]">
-        <span className="text-xs font-label text-[#3b82f6] uppercase tracking-widest font-bold">KIOSK MODE</span>
+      <div className="flex items-center gap-4 mb-4 bg-surface-container px-4 py-2 border-l-4 border-[#22c55e]">
+        <span className="text-xs font-label text-[#22c55e] uppercase tracking-widest font-bold">KIOSK MODE</span>
         <span className="text-xs font-label text-on-surface-variant">WC=L01 / Device=KIOSK-P3000-N12 / 토큰 만료 D-29</span>
         <span className="ml-auto text-xs font-label text-on-surface-variant">사용자 인증 비활성 · Read-only</span>
       </div>

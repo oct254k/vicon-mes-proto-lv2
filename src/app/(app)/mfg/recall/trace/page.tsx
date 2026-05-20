@@ -66,7 +66,7 @@ const MOCK_TRACE: TraceNode = {
 
 const TYPE_COLOR: Record<string, string> = {
   "완제품 부재": "border-primary-accent text-primary-accent",
-  "반제품 LOT": "border-[#3b82f6] text-[#3b82f6]",
+  "반제품 LOT": "border-[#22c55e] text-[#22c55e]",
   "원자재 LOT": "border-warning text-warning",
   "입고 Receipt": "border-outline-variant/40 text-on-surface/50",
 };

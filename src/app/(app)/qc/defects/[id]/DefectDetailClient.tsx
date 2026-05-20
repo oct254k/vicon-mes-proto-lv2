@@ -24,7 +24,7 @@ const MOCK_DETAIL = {
 const TRANSACTIONS = [
   { code: "DEFECT", label: "DEFECT", subLabel: "격리 보관", desc: "불량품 격리 후 추가 조치 없음 (사유 필수)", color: "border-warning bg-warning" },
   { code: "SCRAP", label: "SCRAP", subLabel: "폐기", desc: "재고 차감·손실 환산 → 공장장 최종 결재", color: "border-error bg-error" },
-  { code: "CLAIM", label: "CLAIM", subLabel: "클레임", desc: "공급사·운송사 통보 발행", color: "border-[#3b82f6] bg-[#3b82f6]" },
+  { code: "CLAIM", label: "CLAIM", subLabel: "클레임", desc: "공급사·운송사 통보 발행", color: "border-[#22c55e] bg-[#22c55e]" },
   { code: "RETURN", label: "RETURN", subLabel: "반품", desc: "Y-DEFECT 격리 입고 처리", color: "border-primary-accent bg-primary-accent" },
 ];
 

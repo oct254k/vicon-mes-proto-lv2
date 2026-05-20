@@ -47,8 +47,8 @@ export default function EQOeePage() {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
         <GaugeCard label="종합 OEE" value={oeeKpi.oee} color="#00912F" />
         <GaugeCard label="가용성" value={oeeKpi.availability} color="#00912F" />
-        <GaugeCard label="성능" value={oeeKpi.performance} color="#0ea5e9" />
-        <GaugeCard label="품질" value={oeeKpi.quality} color="#8b5cf6" />
+        <GaugeCard label="성능" value={oeeKpi.performance} color="#86efac" />
+        <GaugeCard label="품질" value={oeeKpi.quality} color="#4ade80" />
       </div>
 
       {/* MTBF KPI 카드 */}

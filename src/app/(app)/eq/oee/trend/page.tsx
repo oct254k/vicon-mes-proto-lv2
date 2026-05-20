@@ -28,8 +28,8 @@ export default function EQOeeTrendPage() {
         {weeks.map((w) => (
           <div key={w.label} className="flex flex-col gap-1">
             <div className="grid grid-cols-3 gap-px h-24">
-              <Bar val={w.avail} color="bg-[#0ea5e9]" />
-              <Bar val={w.perf}  color="bg-[#8b5cf6]" />
+              <Bar val={w.avail} color="bg-[#86efac]" />
+              <Bar val={w.perf}  color="bg-[#4ade80]" />
               <Bar val={w.oee}   color="bg-primary-accent" />
             </div>
             <p className="text-center font-label text-xs opacity-50 mt-1">{w.label}</p>
@@ -38,8 +38,8 @@ export default function EQOeeTrendPage() {
         ))}
       </div>
       <div className="flex gap-6 mt-2">
-        <div className="flex items-center gap-2"><div className="w-3 h-3 bg-[#0ea5e9]" /><span className="font-label text-xs">가용성</span></div>
-        <div className="flex items-center gap-2"><div className="w-3 h-3 bg-[#8b5cf6]" /><span className="font-label text-xs">성능</span></div>
+        <div className="flex items-center gap-2"><div className="w-3 h-3 bg-[#86efac]" /><span className="font-label text-xs">가용성</span></div>
+        <div className="flex items-center gap-2"><div className="w-3 h-3 bg-[#4ade80]" /><span className="font-label text-xs">성능</span></div>
         <div className="flex items-center gap-2"><div className="w-3 h-3 bg-primary-accent" /><span className="font-label text-xs">OEE</span></div>
       </div>
       <div className="mt-6 overflow-x-auto">

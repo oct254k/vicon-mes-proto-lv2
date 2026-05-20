@@ -60,10 +60,10 @@ function renderPreview(
   zones.forEach(z=>{
     const pts=z.pts||(z.x!=null?[[z.x,z.y!],[z.x+z.w!,z.y!],[z.x+z.w!,z.y!+z.h!],[z.x,z.y!+z.h!]]:null);
     if(!pts) return;
-    ctx.fillStyle="rgba(127,119,221,0.2)"; ctx.strokeStyle="#7F77DD"; ctx.lineWidth=2/zoom;
+    ctx.fillStyle="rgba(21,128,61,0.2)"; ctx.strokeStyle="#15803d"; ctx.lineWidth=2/zoom;
     drawPoly(ctx,pts); ctx.fill(); ctx.stroke();
     const [cx,cy]=polyCenter(pts);
-    ctx.fillStyle="#a09ae0"; ctx.font=`500 ${10/zoom}px sans-serif`;
+    ctx.fillStyle="#86efac"; ctx.font=`500 ${10/zoom}px sans-serif`;
     ctx.fillText(z.code,cx-ctx.measureText(z.code).width/2,cy+4/zoom);
   });
   ctx.restore();
@@ -347,7 +347,7 @@ export default function YardMapEditPage() {
                 {zones.map((z,i)=>(
                   <div key={i} className="bg-surface border border-outline/20 p-3">
                     <div className="flex justify-between items-center mb-2">
-                      <span className="text-[10px] font-label text-[#7F77DD]">Zone {z.code||i+1}</span>
+                      <span className="text-[10px] font-label text-[#15803d]">Zone {z.code||i+1}</span>
                       <button onClick={()=>removeZone(i)} className="text-danger/60 hover:text-danger text-[10px]">삭제</button>
                     </div>
                     <div className="grid grid-cols-2 gap-1.5 mb-1.5">
@@ -370,7 +370,7 @@ export default function YardMapEditPage() {
                     )}
                   </div>
                 ))}
-                <button onClick={addZone} className="w-full py-2 text-[10px] font-label uppercase tracking-widest text-on-surface/30 border border-dashed border-outline/20 hover:border-[#7F77DD]/50 hover:text-on-surface/50 transition-colors">
+                <button onClick={addZone} className="w-full py-2 text-[10px] font-label uppercase tracking-widest text-on-surface/30 border border-dashed border-outline/20 hover:border-[#15803d]/50 hover:text-on-surface/50 transition-colors">
                   + Zone 추가
                 </button>
               </div>

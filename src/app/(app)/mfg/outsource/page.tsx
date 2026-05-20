@@ -17,7 +17,7 @@ interface OutsourceRow {
 
 const STATUS_STYLE: Record<OutsourceStatus, string> = {
   SENT: "bg-warning/20 text-warning",
-  IN_PROCESS: "bg-[#3b82f6]/20 text-[#3b82f6]",
+  IN_PROCESS: "bg-[#22c55e]/20 text-[#22c55e]",
   RECEIVED: "bg-primary-accent/20 text-primary-accent",
 };
 
@@ -59,8 +59,8 @@ export default function MFGOutsourcePage() {
           <p className="font-label text-xs uppercase tracking-widest text-warning mb-1">SENT</p>
           <p className="font-headline font-black text-2xl">{sentCount}</p>
         </div>
-        <div className="bg-surface-container-low p-4 border-l-4 border-[#3b82f6]">
-          <p className="font-label text-xs uppercase tracking-widest text-[#3b82f6] mb-1">IN PROCESS</p>
+        <div className="bg-surface-container-low p-4 border-l-4 border-[#22c55e]">
+          <p className="font-label text-xs uppercase tracking-widest text-[#22c55e] mb-1">IN PROCESS</p>
           <p className="font-headline font-black text-2xl">{inProcessCount}</p>
         </div>
         <div className="bg-surface-container-low p-4 border-l-4 border-primary-accent">

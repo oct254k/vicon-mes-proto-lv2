@@ -25,7 +25,7 @@ const LINES = [
 ];
 
 const STATUS_MAP: Record<string, { badge: "running" | "idle" | "warning" | "stopped"; label: string; dot: string }> = {
-  IN_PROGRESS: { badge: "running", label: "진행 중", dot: "bg-yellow-400" },
+  IN_PROGRESS: { badge: "running", label: "진행 중", dot: "bg-warning" },
   PENDING:     { badge: "idle",    label: "대기",    dot: "bg-gray-400" },
   COMPLETED:   { badge: "running", label: "완료",    dot: "bg-[#00912F]" },
 };

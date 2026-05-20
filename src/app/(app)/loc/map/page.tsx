@@ -56,7 +56,7 @@ const CELL_STYLE: Record<SlotStatus, string> = {
   OCCUPIED:    "bg-primary-accent/20 border border-primary-accent/40 text-primary-accent",
   FULL:        "bg-warning/20 border border-warning/40 text-warning",
   MAINTENANCE: "bg-danger/20 border border-danger/40 text-danger",
-  AGING:       "bg-[#f97316]/20 border border-[#f97316]/40 text-[#f97316] animate-pulse",
+  AGING:       "bg-warning/20 border border-warning/40 text-warning animate-pulse",
 };
 
 const LEGEND: { status: SlotStatus; label: string; color: string }[] = [
@@ -64,7 +64,7 @@ const LEGEND: { status: SlotStatus; label: string; color: string }[] = [
   { status: "OCCUPIED",    label: "OCCUPIED — 적재중",     color: "bg-primary-accent/30 border border-primary-accent/50" },
   { status: "FULL",        label: "FULL — 가득 참",        color: "bg-warning/30 border border-warning/50" },
   { status: "MAINTENANCE", label: "MAINTENANCE — 점검중",  color: "bg-danger/30 border border-danger/50" },
-  { status: "AGING",       label: "AGING — 보관 초과",     color: "bg-[#f97316]/30 border border-[#f97316]/50" },
+  { status: "AGING",       label: "AGING — 보관 초과",     color: "bg-warning/30 border border-warning/50" },
 ];
 
 const YARDS = ["YRD-A 원자재", "YRD-B 입고 대기", "YRD-C 공정 진행"];

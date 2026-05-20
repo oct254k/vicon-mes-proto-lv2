@@ -1,9 +1,9 @@
 import { PageHeader } from "@/components/ui/PageHeader";
 
 const CHANNELS = [
-  { id: "CH-001", channel: "EMAIL", description: "SMTP 이메일 발송", active: true, color: "bg-blue-500/20 text-blue-400" },
-  { id: "CH-002", channel: "SMS", description: "문자 메시지 (KT)", active: true, color: "bg-purple-500/20 text-purple-400" },
-  { id: "CH-003", channel: "KAKAOTALK", description: "카카오톡 알림 채널", active: true, color: "bg-yellow-400/20 text-yellow-400" },
+  { id: "CH-001", channel: "EMAIL", description: "SMTP 이메일 발송", active: true, color: "bg-primary/20 text-primary" },
+  { id: "CH-002", channel: "SMS", description: "문자 메시지 (KT)", active: true, color: "bg-secondary/20 text-secondary" },
+  { id: "CH-003", channel: "KAKAOTALK", description: "카카오톡 알림 채널", active: true, color: "bg-warning/20 text-warning" },
   { id: "CH-004", channel: "INAPP", description: "앱 내 알림 (토스트·배지)", active: true, color: "bg-[#00912F]/20 text-[#00912F]" },
   { id: "CH-005", channel: "LINEBOARD", description: "현장 라인 보드 표시", active: false, color: "bg-surface-container-high text-on-surface-variant" },
 ];

@@ -93,7 +93,7 @@ function WODetail({ wo, onClose }: { wo: WO; onClose: () => void }) {
               PDF 문서 ▶
             </a>
             {wo.state !== "CANCELLED" && wo.state !== "COMPLETED" && (
-              <button className="px-3 py-1.5 text-xs font-label uppercase tracking-widest border border-red-500/30 text-red-400 hover:border-red-500 transition-colors">
+              <button className="px-3 py-1.5 text-xs font-label uppercase tracking-widest border border-danger/30 text-danger hover:border-danger transition-colors">
                 WO 취소
               </button>
             )}
@@ -127,7 +127,7 @@ function WODetail({ wo, onClose }: { wo: WO; onClose: () => void }) {
                     <td className="px-2 py-2">
                       <span className={`font-label text-[10px] uppercase tracking-wider px-1.5 py-0.5 ${
                         l.state === "COMPLETED"  ? "bg-primary-accent/20 text-primary-accent" :
-                        l.state === "IN_PROGRESS"? "bg-yellow-500/20 text-yellow-400" :
+                        l.state === "IN_PROGRESS"? "bg-warning/20 text-warning" :
                         "opacity-30"
                       }`}>{l.progress}</span>
                     </td>

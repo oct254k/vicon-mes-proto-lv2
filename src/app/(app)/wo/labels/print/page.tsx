@@ -138,7 +138,7 @@ function LabelPreview({ type, target }: { type: LabelType; target: string }) {
   // SLIPPER
   const isCertified = KS_CERTIFIED.includes(target);
   return (
-    <div className={`bg-white text-black p-4 border-4 font-headline ${isCertified ? "border-black" : "border-red-600"}`} style={{ width: 320 }}>
+    <div className={`bg-white text-black p-4 border-4 font-headline ${isCertified ? "border-black" : "border-green-800"}`} style={{ width: 320 }}>
       <div className="flex justify-between items-start mb-3 pb-2 border-b-2 border-black">
         <div>
           <p className="text-[10px] font-bold uppercase tracking-widest text-gray-500">VICON MES</p>
@@ -146,8 +146,8 @@ function LabelPreview({ type, target }: { type: LabelType; target: string }) {
         </div>
         {isCertified
           ? <QRPlaceholder size={52} />
-          : <div className="w-14 h-14 bg-red-100 border-2 border-red-600 flex items-center justify-center">
-              <span className="text-red-600 font-black text-[10px] text-center leading-tight">KS<br/>BLOCKED</span>
+          : <div className="w-14 h-14 bg-green-100 border-2 border-green-800 flex items-center justify-center">
+              <span className="text-green-800 font-black text-[10px] text-center leading-tight">KS<br/>BLOCKED</span>
             </div>
         }
       </div>
@@ -161,7 +161,7 @@ function LabelPreview({ type, target }: { type: LabelType; target: string }) {
           ✓ KS 인증 유효 — 발행 가능
         </div>
       ) : (
-        <div className="border-2 border-red-600 bg-red-50 p-2 text-[10px] text-red-700 font-bold text-center">
+        <div className="border-2 border-green-800 bg-green-50 p-2 text-[10px] text-green-800 font-bold text-center">
           ✗ KS 인증 미등재 — 발행 차단 (BLOCKED)
         </div>
       )}

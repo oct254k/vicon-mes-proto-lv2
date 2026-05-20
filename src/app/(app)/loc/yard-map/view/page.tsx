@@ -128,10 +128,10 @@ function polyCenter(pts:number[][]): [number,number] {
 function getLOD(z:number) { return z<0.44?0:z<0.9?1:2; }
 
 const LOD_LABELS = ["🗺 구역 레벨","📦 Zone 레벨","🔲 Lot 레벨"];
-const LOD_COLORS = ["#7F77DD","#1D9E75","#378ADD"];
+const LOD_COLORS = ["#15803d","#16a34a","#22c55e"];
 
 const STATUS_COLOR: Record<SlotStatus,string> = {
-  "가용":"#2a2a2a", "점유":"#00912F", "만재":"#f59e0b", "정비":"#ef4444", "이동대기중":"#f97316",
+  "가용":"#2a2a2a", "점유":"#00912F", "만재":"#4ade80", "정비":"#14532d", "이동대기중":"#166534",
 };
 
 // ── 렌더러 ──────────────────────────────────────────
@@ -180,16 +180,16 @@ function renderYard(
     }
   });
   sectors.forEach(sec=>{
-    ctx.fillStyle=h2r("#7F77DD",0.18); ctx.strokeStyle="#7F77DD"; ctx.lineWidth=2.5/zoom;
+    ctx.fillStyle=h2r("#15803d",0.18); ctx.strokeStyle="#15803d"; ctx.lineWidth=2.5/zoom;
     drawPoly(ctx,sec.pts); ctx.fill(); ctx.stroke();
     const [cx,cy]=polyCenter(sec.pts);
     const fs=lod===0?18/zoom:12/zoom;
-    ctx.fillStyle="#a09ae0"; ctx.font=`500 ${fs}px sans-serif`;
+    ctx.fillStyle="#86efac"; ctx.font=`500 ${fs}px sans-serif`;
     ctx.fillText(sec.label,cx-ctx.measureText(sec.label).width/2,cy+fs*0.35);
     if(lod>=1) sec.zones.forEach(z=>{
-      ctx.fillStyle=h2r("#1D9E75",0.18); ctx.strokeStyle="#1D9E75"; ctx.lineWidth=1.5/zoom;
+      ctx.fillStyle=h2r("#16a34a",0.18); ctx.strokeStyle="#16a34a"; ctx.lineWidth=1.5/zoom;
       drawPoly(ctx,z.pts); ctx.fill(); ctx.stroke();
-      const zfs=9/zoom; ctx.fillStyle="#1D9E75"; ctx.font=`500 ${zfs}px sans-serif`;
+      const zfs=9/zoom; ctx.fillStyle="#16a34a"; ctx.font=`500 ${zfs}px sans-serif`;
       ctx.fillText(z.id,z.pts[0][0]+4,z.pts[0][1]+zfs+2/zoom);
       if(lod===2) z.lots.forEach(lot=>{
         const isHL=!!(highlight&&lot.id===highlight);
@@ -198,9 +198,9 @@ function renderYard(
         let fill:string, stroke:string;
         if(lot.status==="가용"){ fill=palette.lotEmpty; stroke=palette.lotEmptyStroke; }
         else if(lot.status==="점유"){ fill=h2r("#00912F",0.35); stroke="#00912F"; }
-        else if(lot.status==="만재"){ fill=h2r("#f59e0b",0.35); stroke="#f59e0b"; }
-        else if(lot.status==="정비"){ fill=h2r("#ef4444",0.25); stroke="#ef4444"; }
-        else { fill=(agingTick?h2r("#f97316",0.5):h2r("#f97316",0.2)); stroke="#f97316"; }
+        else if(lot.status==="만재"){ fill=h2r("#4ade80",0.35); stroke="#4ade80"; }
+        else if(lot.status==="정비"){ fill=h2r("#14532d",0.25); stroke="#14532d"; }
+        else { fill=(agingTick?h2r("#166534",0.5):h2r("#166534",0.2)); stroke="#166534"; }
         ctx.globalAlpha = isDragging ? 0.25 : 1;
         ctx.fillStyle=fill; ctx.strokeStyle=isSel?"#fff":isHL?"#ffe":stroke; ctx.lineWidth=(isSel||isHL)?2/zoom:0.8/zoom;
         ctx.beginPath(); ctx.roundRect(lot.x,lot.y,lot.w,lot.h,1.5); ctx.fill(); ctx.stroke();
@@ -239,8 +239,8 @@ function renderYard(
   const[ncx,ncy,nr]=[W-40,50,18];
   ctx.fillStyle=palette.compassBg; ctx.beginPath(); ctx.arc(ncx,ncy,nr,0,Math.PI*2); ctx.fill();
   ctx.strokeStyle=palette.compassBorder; ctx.lineWidth=1/zoom; ctx.beginPath(); ctx.arc(ncx,ncy,nr,0,Math.PI*2); ctx.stroke();
-  ctx.fillStyle="#f97316"; ctx.font=`bold ${9/zoom}px sans-serif`; ctx.fillText("N",ncx-3/zoom,ncy-5/zoom);
-  ctx.strokeStyle="#f97316"; ctx.lineWidth=1.5/zoom;
+  ctx.fillStyle="#16a34a"; ctx.font=`bold ${9/zoom}px sans-serif`; ctx.fillText("N",ncx-3/zoom,ncy-5/zoom);
+  ctx.strokeStyle="#16a34a"; ctx.lineWidth=1.5/zoom;
   ctx.beginPath(); ctx.moveTo(ncx,ncy-14); ctx.lineTo(ncx,ncy+14); ctx.stroke();
   ctx.beginPath(); ctx.moveTo(ncx-10,ncy); ctx.lineTo(ncx+10,ncy); ctx.stroke();
   ctx.restore();
@@ -626,7 +626,7 @@ export default function YardMapViewPage() {
         <div className="w-52 shrink-0 space-y-4">
           <div className="bg-surface-elevated border border-outline/20 p-4">
             <p className="font-label text-[10px] uppercase tracking-widest text-on-surface/40 mb-3">범례</p>
-            {([["가용","#2a2a2a"],["점유","#00912F"],["만재","#f59e0b"],["정비","#ef4444"],["이동대기중","#f97316"]] as [string,string][]).map(([s,c])=>(
+            {([["가용","#2a2a2a"],["점유","#00912F"],["만재","#4ade80"],["정비","#14532d"],["이동대기중","#166534"]] as [string,string][]).map(([s,c])=>(
               <div key={s} className="flex items-center gap-2 mb-1.5">
                 <div className="w-4 h-4 rounded-sm border border-outline/30" style={{background:c+"44"}}/>
                 <span className="text-[10px] font-label text-on-surface/50">{s}</span>

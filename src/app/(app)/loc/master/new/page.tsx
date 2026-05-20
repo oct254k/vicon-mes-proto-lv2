@@ -48,19 +48,19 @@ function renderZonePreview(
   ctx.restore();
   // Zone 하이라이트
   if(zonePts.length>=3){
-    ctx.fillStyle="rgba(127,119,221,0.25)"; ctx.strokeStyle="#7F77DD"; ctx.lineWidth=3/zoom;
+    ctx.fillStyle="rgba(21,128,61,0.25)"; ctx.strokeStyle="#15803d"; ctx.lineWidth=3/zoom;
     drawPoly(ctx,zonePts); ctx.fill(); ctx.stroke();
     // 영역 표시 점선 외곽
-    ctx.strokeStyle="rgba(127,119,221,0.5)"; ctx.lineWidth=1/zoom; ctx.setLineDash([8/zoom,4/zoom]);
+    ctx.strokeStyle="rgba(21,128,61,0.5)"; ctx.lineWidth=1/zoom; ctx.setLineDash([8/zoom,4/zoom]);
     drawPoly(ctx,zonePts); ctx.stroke(); ctx.setLineDash([]);
     // 꼭짓점 표시
     zonePts.forEach(([x,y])=>{
-      ctx.fillStyle="#7F77DD"; ctx.beginPath(); ctx.arc(x,y,4/zoom,0,Math.PI*2); ctx.fill();
+      ctx.fillStyle="#15803d"; ctx.beginPath(); ctx.arc(x,y,4/zoom,0,Math.PI*2); ctx.fill();
     });
     // 이름
     const[cx,cy]=polyCenter(zonePts);
     const fs=16/zoom;
-    ctx.fillStyle="#a09ae0"; ctx.font=`bold ${fs}px sans-serif`;
+    ctx.fillStyle="#86efac"; ctx.font=`bold ${fs}px sans-serif`;
     const tw=ctx.measureText(zoneName||"Zone").width;
     ctx.fillText(zoneName||"Zone",cx-tw/2,cy+fs*0.35);
   }
@@ -242,7 +242,7 @@ export default function LocMasterNewPage() {
             </div>
             <div className="mt-2 flex gap-4 text-[10px] font-label text-on-surface/30">
               <span>꼭짓점 수: {getZonePts().length}</span>
-              {getZonePts().length>=3 && <span className="text-[#7F77DD]">▣ 보라색 = 등록 중인 Zone</span>}
+              {getZonePts().length>=3 && <span className="text-[#15803d]">▣ 보라색 = 등록 중인 Zone</span>}
             </div>
           </div>
         </div>

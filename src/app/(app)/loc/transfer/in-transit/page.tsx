@@ -57,9 +57,9 @@ export default function InTransitPage() {
           <FieldHeader title="AGING 경보 — 24h 초과" moduleRef="FNC-LOC-053" />
           <div className="mb-6 space-y-2">
             {agingRows.map(r => (
-              <div key={r.txId} className="bg-[#f97316]/10 border border-[#f97316]/30 px-5 py-3 flex items-center justify-between animate-pulse">
+              <div key={r.txId} className="bg-warning/10 border border-warning/30 px-5 py-3 flex items-center justify-between animate-pulse">
                 <div>
-                  <p className="font-label text-xs uppercase tracking-widest text-[#f97316]">⚠ AGING — {r.lot}</p>
+                  <p className="font-label text-xs uppercase tracking-widest text-warning">⚠ AGING — {r.lot}</p>
                   <p className="text-on-surface/50 text-xs">{r.material} / {r.from} → {r.to} / {r.elapsed}h 경과</p>
                 </div>
                 <StatusBadge type="warning" label={r.status} />

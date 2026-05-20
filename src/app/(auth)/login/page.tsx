@@ -170,15 +170,15 @@ export default function LoginPage() {
                 <span className="text-xs font-label uppercase tracking-widest text-gray-400">
                   잔여 시도
                 </span>
-                <span className={`text-xs font-headline tabular-nums font-bold ${attempts <= 2 ? "text-red-500" : "text-gray-400"}`}>
+                <span className={`text-xs font-headline tabular-nums font-bold ${attempts <= 2 ? "text-danger" : "text-gray-400"}`}>
                   {attempts} / {MAX_ATTEMPTS}
                 </span>
               </div>
 
               {/* 에러 메시지 */}
               {error && (
-                <div className="bg-red-50 border-l-2 border-red-500 px-3 py-2">
-                  <p className="text-xs font-label text-red-600">{error}</p>
+                <div className="bg-danger/5 border-l-2 border-danger px-3 py-2">
+                  <p className="text-xs font-label text-danger">{error}</p>
                 </div>
               )}
 

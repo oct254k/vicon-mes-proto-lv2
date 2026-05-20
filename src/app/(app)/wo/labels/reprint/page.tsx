@@ -95,17 +95,17 @@ function LabelPreviewCard({ type, target }: { type: "MEMBER"|"PACKING"|"SLIPPER"
   // SLIPPER
   const ok = KS_CERTIFIED.includes(target);
   return (
-    <div className={`bg-white text-black p-4 border-4 font-headline ${ok ? "border-black" : "border-red-600"}`} style={{width:300}}>
+    <div className={`bg-white text-black p-4 border-4 font-headline ${ok ? "border-black" : "border-green-800"}`} style={{width:300}}>
       <div className="flex justify-between items-start mb-3 border-b-2 border-black pb-2">
         <div><p className="text-[10px] font-bold text-gray-400 uppercase">VICON MES</p><p className="text-xs font-black uppercase">슬리퍼 라벨</p></div>
-        {ok ? <QRBlock /> : <div className="w-14 h-14 bg-red-100 border-2 border-red-600 flex items-center justify-center"><span className="text-red-600 font-black text-[10px] text-center leading-tight">KS<br/>BLOCKED</span></div>}
+        {ok ? <QRBlock /> : <div className="w-14 h-14 bg-green-100 border-2 border-green-800 flex items-center justify-center"><span className="text-green-800 font-black text-[10px] text-center leading-tight">KS<br/>BLOCKED</span></div>}
       </div>
       <p className="text-[10px] text-gray-400 uppercase mb-0.5">슬리퍼 타입</p>
       <p className="text-sm font-black mb-2">{target}</p>
       <div className="mb-2"><Barcode value={target.slice(-4)} /></div>
       {ok
         ? <div className="border border-green-600 bg-green-50 p-2 text-[10px] text-green-800 font-bold text-center">✓ KS 인증 유효</div>
-        : <div className="border-2 border-red-600 bg-red-50 p-2 text-[10px] text-red-700 font-bold text-center">✗ KS 인증 미등재 — 발행 차단</div>}
+        : <div className="border-2 border-green-800 bg-green-50 p-2 text-[10px] text-green-800 font-bold text-center">✗ KS 인증 미등재 — 발행 차단</div>}
     </div>
   );
 }
@@ -188,7 +188,7 @@ const LOCATION_COLOR: Record<ItemLocation, string> = {
   "공정 중": "bg-tertiary/20 text-tertiary",
   "야적장":  "bg-primary-accent/20 text-primary-accent",
   "출하 대기": "bg-warning/20 text-warning",
-  "출하 완료": "bg-[#3b82f6]/20 text-[#3b82f6]",
+  "출하 완료": "bg-[#22c55e]/20 text-[#22c55e]",
   "수신 완료": "bg-primary/20 text-primary",
 };
 
