@@ -192,7 +192,6 @@ export function SideNav({ open = false, onClose }: SideNavProps) {
     <aside className={[
       "fixed left-0 top-16 z-40 w-72 h-[calc(100vh-64px)] bg-surface-container-lowest border-r border-surface-container-highest/10 flex flex-col",
       "transition-transform duration-300",
-      "theme-force-dark",
       // 모바일: open 상태에 따라 슬라이드, 데스크톱: 항상 표시
       "lg:translate-x-0",
       open ? "translate-x-0" : "-translate-x-full",
