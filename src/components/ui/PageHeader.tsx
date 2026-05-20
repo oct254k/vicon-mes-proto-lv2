@@ -14,7 +14,7 @@ export function PageHeader({ title, accent, status = "CALIBRATED", description }
         {title}{accent && <span className="ml-2 text-on-surface">{accent}</span>}
       </h1>
       <div className="flex items-center gap-4 flex-wrap mb-2">
-        <span className="font-label text-xs uppercase tracking-[0.2em] text-on-surface-variant opacity-40">
+        <span className="font-label text-sm uppercase tracking-[0.2em] text-on-surface-variant opacity-70">
           System Status: {status}
         </span>
       </div>
