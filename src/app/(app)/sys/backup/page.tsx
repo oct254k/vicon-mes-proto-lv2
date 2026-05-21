@@ -14,6 +14,8 @@ const BACKUP_STATUS_MAP: Record<string, { type: "running" | "idle" | "warning" |
   FAILED:    { type: "error", label: "실패" },
 };
 
+const TYPE_LABEL: Record<string, string> = { FULL: "전체 백업", INCREMENTAL: "증분 백업" };
+
 const MOCK = [
   { id: "BKUP-20260506-001", type: "FULL", status: "SUCCEEDED", size: "4.2 GB", start: "2026-05-06 02:00:03", end: "2026-05-06 02:43:21" },
   { id: "BKUP-20260505-002", type: "INCREMENTAL", status: "SUCCEEDED", size: "312 MB", start: "2026-05-05 14:00:00", end: "2026-05-05 14:08:45" },
@@ -65,7 +67,7 @@ export default function SYSBackupPage() {
                 return (
                   <tr key={row.id} className="border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors">
                     <td className="px-4 py-2 tabular-nums text-xs font-label text-[#00912F]">{row.id}</td>
-                    <td className="px-4 py-2 text-on-surface-variant text-xs uppercase">{row.type}</td>
+                    <td className="px-4 py-2 text-on-surface-variant text-xs uppercase">{TYPE_LABEL[row.type] ?? row.type}</td>
                     <td className="px-4 py-2"><StatusBadge type={badge.type} label={badge.label} /></td>
                     <td className="px-4 py-2 tabular-nums text-on-surface-variant">{row.size}</td>
                     <td className="px-4 py-2 tabular-nums text-xs text-on-surface-variant">{row.start}</td>

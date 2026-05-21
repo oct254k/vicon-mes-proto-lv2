@@ -18,7 +18,7 @@ export default function TransferOutPage() {
 
   return (
     <div className="max-w-sm mx-auto p-4 min-h-screen bg-surface">
-      <PageHeader title="TRANSFER /" accent="출고 스캔" nodeRef="SCR-MFG-030" status="PROTOTYPE" />
+      <PageHeader title="이동 /" accent="출고 스캔" nodeRef="SCR-MFG-030" status="PROTOTYPE" />
 
       <div className="bg-surface-container border-l-4 border-primary-accent p-4 mb-6">
         <div className="flex justify-between text-xs mb-1">

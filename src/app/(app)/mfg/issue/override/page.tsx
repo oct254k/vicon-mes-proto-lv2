@@ -10,7 +10,7 @@ export default function IssueOverridePage() {
 
   return (
     <div className="max-w-sm mx-auto p-4 min-h-screen bg-surface">
-      <PageHeader title="ISSUE /" accent="FIFO 우회 승인" nodeRef="SCR-MFG-011" status="PROTOTYPE" />
+      <PageHeader title="투입 /" accent="FIFO 우회 승인" nodeRef="SCR-MFG-011" status="PROTOTYPE" />
 
       <div className="bg-error/10 border border-error/40 p-4 mb-6">
         <p className="text-xs font-label uppercase tracking-widest text-error mb-2">FIFO 위반 감지</p>

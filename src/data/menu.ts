@@ -26,7 +26,7 @@ export const MENU: MenuNode[] = [
         url: "/bd/plant",
         children: [
           { id: "BD-PLANT-LIST", label: "Plant 마스터 조회·등록", url: "/bd/plant/list" },
-          { id: "BD-PLANT-INVENTORY", label: "전사 재고 집계 View", url: "/bd/plant/inventory-summary" },
+          { id: "BD-PLANT-INVENTORY", label: "전사 재고 집계", url: "/bd/plant/inventory-summary" },
         ],
       },
       {
@@ -205,7 +205,7 @@ export const MENU: MenuNode[] = [
       },
       {
         id: "WO-MEMBERS",
-        label: "부재(Member) 코드·도면",
+        label: "부재 코드·도면",
         url: "/wo/members",
         children: [
           { id: "WO-MEMBERS-LIST", label: "부재 코드 목록·정규식 검증", url: "/wo/members" },
@@ -247,26 +247,26 @@ export const MENU: MenuNode[] = [
       { id: "MFG-TODAY", label: "오늘의 작업 (PDA 첫 화면)", url: "/mfg/today" },
       {
         id: "MFG-ISSUE",
-        label: "자재 투입 (ISSUE)",
+        label: "자재 투입",
         url: "/mfg/issue",
         children: [
           { id: "MFG-ISSUE-SCAN", label: "자재 라벨 스캔 (PDA)", url: "/mfg/issue/scan" },
           { id: "MFG-ISSUE-OVERRIDE", label: "FIFO 우회 결재", url: "/mfg/issue/override" },
-          { id: "MFG-ISSUE-CANCEL", label: "ISSUE 취소", url: "/mfg/issue/cancel" },
-          { id: "MFG-ISSUE-HISTORY", label: "ISSUE 이력 조회", url: "/mfg/issue/history" },
+          { id: "MFG-ISSUE-CANCEL", label: "투입 취소", url: "/mfg/issue/cancel" },
+          { id: "MFG-ISSUE-HISTORY", label: "투입 이력 조회", url: "/mfg/issue/history" },
         ],
       },
       {
         id: "MFG-PRODUCE",
-        label: "부재 완성 (PRODUCE)",
+        label: "부재 완성",
         url: "/mfg/produce",
         children: [
           { id: "MFG-PRODUCE-PROGRESS", label: "공정 진행 스캔 (PDA)", url: "/mfg/produce/progress" },
           { id: "MFG-PRODUCE-OVERRIDE", label: "LOT 게이트 Override", url: "/mfg/produce/override" },
-          { id: "MFG-PRODUCE-AUTO", label: "설비 자동 PRODUCE 보정", url: "/mfg/produce/auto" },
-          { id: "MFG-PRODUCE-CANCEL", label: "PRODUCE 취소·결재 (묶음 LOT)", url: "/mfg/produce/cancel" },
+          { id: "MFG-PRODUCE-AUTO", label: "설비 자동 보정", url: "/mfg/produce/auto" },
+          { id: "MFG-PRODUCE-CANCEL", label: "완성 취소·결재 (묶음 LOT)", url: "/mfg/produce/cancel" },
           { id: "MFG-PRODUCE-REATTEMPT", label: "재생산 attempt", url: "/mfg/produce/reattempt" },
-          { id: "MFG-PRODUCE-HISTORY", label: "PRODUCE 이력 조회", url: "/mfg/produce/history" },
+          { id: "MFG-PRODUCE-HISTORY", label: "완성 이력 조회", url: "/mfg/produce/history" },
         ],
       },
       {
@@ -293,7 +293,7 @@ export const MENU: MenuNode[] = [
       },
       {
         id: "MFG-OUTSOURCE",
-        label: "외주 공정 (Outsourcing)",
+        label: "외주 공정",
         url: "/mfg/outsource",
         children: [
           { id: "MFG-OUTSOURCE-SEND", label: "외주 출고 스캔", url: "/mfg/outsource/send" },
@@ -332,7 +332,7 @@ export const MENU: MenuNode[] = [
       },
       {
         id: "LOC-RECEIVE",
-        label: "입고 (RECEIVE)",
+        label: "입고",
         url: "/loc/receive",
         children: [
           { id: "LOC-RECEIVE-NEW", label: "입고 등록 (PDA·웹)", url: "/loc/receive/new" },
@@ -352,11 +352,11 @@ export const MENU: MenuNode[] = [
       },
       {
         id: "LOC-ADJUST",
-        label: "재고 보정 (ADJUST)",
+        label: "재고 조정",
         url: "/loc/adjust",
         children: [
-          { id: "LOC-ADJUST-NEW", label: "ADJUST 등록 (권한 가드)", url: "/loc/adjust/new" },
-          { id: "LOC-ADJUST-LIST", label: "ADJUST 이력·감사", url: "/loc/adjust/list" },
+          { id: "LOC-ADJUST-NEW", label: "조정 등록 (권한 가드)", url: "/loc/adjust/new" },
+          { id: "LOC-ADJUST-LIST", label: "조정 이력·감사", url: "/loc/adjust/list" },
         ],
       },
       {
@@ -371,7 +371,7 @@ export const MENU: MenuNode[] = [
       },
       {
         id: "LOC-COUNT",
-        label: "정기 실사 (Cycle Count)",
+        label: "정기 실사",
         url: "/loc/count",
         children: [
           { id: "LOC-COUNT-PLAN", label: "실사 주기·계획", url: "/loc/count/plan" },
@@ -381,7 +381,7 @@ export const MENU: MenuNode[] = [
       },
       {
         id: "LOC-INVENTORY",
-        label: "재고 조회·이력·View",
+        label: "재고 조회·이력",
         url: "/loc/inventory",
         children: [
           { id: "LOC-INVENTORY-LOC", label: "위치별 재고", url: "/loc/inventory/by-location" },
@@ -734,7 +734,7 @@ export const MENU: MenuNode[] = [
       },
       {
         id: "SHP-RECEIVE",
-        label: "현장 검수·RECEIVED (모바일 앱)",
+        label: "현장 검수·입고 확인 (모바일 앱)",
         url: "/shp/receive",
         children: [
           { id: "SHP-RECEIVE-MAIN", label: "모바일 메인 — shipment 상세", url: "/shp/receive/main" },

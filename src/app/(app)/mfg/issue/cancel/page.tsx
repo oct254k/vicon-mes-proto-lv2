@@ -23,7 +23,7 @@ export default function IssueCancelPage() {
 
   return (
     <div className="max-w-sm mx-auto p-4 min-h-screen bg-surface">
-      <PageHeader title="ISSUE /" accent="투입 취소" nodeRef="SCR-MFG-012" status="PROTOTYPE" />
+      <PageHeader title="투입 /" accent="투입 취소" nodeRef="SCR-MFG-012" status="PROTOTYPE" />
 
       <p className="text-xs font-label uppercase tracking-widest text-on-surface/40 mb-4">취소할 투입 LOT 선택</p>
 

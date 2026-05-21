@@ -20,7 +20,7 @@ const DATA = [
 export default function TransferCancelPage() {
   return (
     <div className="p-8">
-      <PageHeader title="TRANSFER /" accent="이동 취소" nodeRef="SCR-MFG-033" status="PROTOTYPE" description="이송 중 TRANSFER 취소 — 관리자 권한 필요" />
+      <PageHeader title="이동 /" accent="이동 취소" nodeRef="SCR-MFG-033" status="PROTOTYPE" description="이송 중 TRANSFER 취소 — 관리자 권한 필요" />
 
       <div className="bg-error/10 border-l-4 border-error p-4 mb-6">
         <p className="text-xs font-label uppercase tracking-widest text-error">이송 완료 후에는 취소 불가 — 입고 완료 상태는 RETURN 처리 필요</p>

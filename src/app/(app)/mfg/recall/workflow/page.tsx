@@ -30,7 +30,7 @@ export default function RecallWorkflowPage() {
 
   return (
     <div className="p-8">
-      <PageHeader title="RECALL /" accent="회수 워크플로" nodeRef="SCR-MFG-044" status="PROTOTYPE" description="회수 5단계 상태머신 — DRAFT → REVIEWED → CONFIRMED → NOTIFIED → CLOSED" />
+      <PageHeader title="회수 /" accent="회수 워크플로" nodeRef="SCR-MFG-044" status="PROTOTYPE" description="회수 5단계 상태머신 — DRAFT → REVIEWED → CONFIRMED → NOTIFIED → CLOSED" />
 
       <div className="flex gap-0 mb-8">
         {STEP_ORDER.map((s, i) => (

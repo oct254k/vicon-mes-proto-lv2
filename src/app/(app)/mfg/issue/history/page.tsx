@@ -22,7 +22,7 @@ const DATA = [
 export default function IssueHistoryPage() {
   return (
     <div className="p-8">
-      <PageHeader title="ISSUE /" accent="투입 이력" nodeRef="SCR-MFG-013" status="PROTOTYPE" description="자재 투입 이력 조회 — Lot 단위 기록" />
+      <PageHeader title="투입 /" accent="투입 이력" nodeRef="SCR-MFG-013" status="PROTOTYPE" description="자재 투입 이력 조회 — Lot 단위 기록" />
 
       <div className="flex gap-3 mb-4">
         <input placeholder="WO 검색" className="bg-surface-container border border-outline-variant/30 px-3 py-2 text-sm font-mono w-56 focus:outline-none focus:border-primary-accent" />

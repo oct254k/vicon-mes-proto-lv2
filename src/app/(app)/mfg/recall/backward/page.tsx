@@ -53,7 +53,7 @@ export default function RecallBackwardPage() {
 
   return (
     <div className="p-8">
-      <PageHeader title="RECALL /" accent="역방향 추적" nodeRef="SCR-MFG-040" status="PROTOTYPE" description="부재 LOT → 원자재 역방향 추적 — LOT 계보 트리" />
+      <PageHeader title="회수 /" accent="역방향 추적" nodeRef="SCR-MFG-040" status="PROTOTYPE" description="부재 LOT → 원자재 역방향 추적 — LOT 계보 트리" />
 
       <div className="flex gap-3 mb-6">
         <input

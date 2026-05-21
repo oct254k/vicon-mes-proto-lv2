@@ -21,7 +21,7 @@ const DATA = [
 export default function ProduceCancelPage() {
   return (
     <div className="p-8">
-      <PageHeader title="PRODUCE /" accent="취소 결재" nodeRef="SCR-MFG-024" status="PROTOTYPE" description="PRODUCE 취소 결재 — 관리자 승인 후 라벨 무효화" />
+      <PageHeader title="완성 /" accent="취소 결재" nodeRef="SCR-MFG-024" status="PROTOTYPE" description="PRODUCE 취소 결재 — 관리자 승인 후 라벨 무효화" />
 
       <div className="bg-error/10 border-l-4 border-error p-4 mb-6">
         <p className="text-xs font-label uppercase tracking-widest text-error">PRODUCE_REVERSAL — 묶음 LOT 단위 취소 · 라벨 무효화</p>
@@ -29,7 +29,7 @@ export default function ProduceCancelPage() {
 
       <FieldHeader title="취소 결재 목록" moduleRef="FR-MFG-035a" />
 
-      <DataTable title="PRODUCE 취소 요청" columns={COLUMNS} data={DATA} bufferCount={DATA.length} />
+      <DataTable title="완성 취소 요청" columns={COLUMNS} data={DATA} bufferCount={DATA.length} />
 
       <div className="flex gap-3 mt-6 justify-end">
         <button className="bg-primary-accent text-white px-6 py-2 text-xs font-label uppercase tracking-wider">선택 승인</button>

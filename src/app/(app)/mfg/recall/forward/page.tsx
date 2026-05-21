@@ -57,7 +57,7 @@ export default function RecallForwardPage() {
 
   return (
     <div className="p-8">
-      <PageHeader title="RECALL /" accent="순방향 추적" nodeRef="SCR-MFG-041" status="PROTOTYPE" description="원자재 LOT → 완제품 순방향 추적 — LOT 계보 트리" />
+      <PageHeader title="회수 /" accent="순방향 추적" nodeRef="SCR-MFG-041" status="PROTOTYPE" description="원자재 LOT → 완제품 순방향 추적 — LOT 계보 트리" />
 
       <div className="flex gap-3 mb-6">
         <input

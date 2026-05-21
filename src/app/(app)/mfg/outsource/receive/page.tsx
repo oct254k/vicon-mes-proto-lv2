@@ -19,7 +19,7 @@ export default function OutsourceReceivePage() {
 
   return (
     <div className="max-w-sm mx-auto p-4 min-h-screen bg-surface">
-      <PageHeader title="OUTSOURCE /" accent="외주 입고" nodeRef="SCR-MFG-052" status="PROTOTYPE" />
+      <PageHeader title="외주 /" accent="외주 입고" nodeRef="SCR-MFG-052" status="PROTOTYPE" />
 
       <div className="bg-surface-container border-l-4 border-primary-accent p-4 mb-6">
         <div className="flex justify-between text-xs mb-1">

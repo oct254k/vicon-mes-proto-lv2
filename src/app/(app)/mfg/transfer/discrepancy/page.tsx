@@ -23,7 +23,7 @@ const DATA = [
 export default function TransferDiscrepancyPage() {
   return (
     <div className="p-8">
-      <PageHeader title="TRANSFER /" accent="도착 검수 불일치" nodeRef="SCR-MFG-032" status="PROTOTYPE" description="입고 검수 시 수량 불일치 결재 — 관리자 확인 필요" />
+      <PageHeader title="이동 /" accent="도착 검수 불일치" nodeRef="SCR-MFG-032" status="PROTOTYPE" description="입고 검수 시 수량 불일치 결재 — 관리자 확인 필요" />
 
       <div className="grid grid-cols-3 gap-4 mb-6">
         <div className="bg-surface-container-low p-4">

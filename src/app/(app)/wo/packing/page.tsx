@@ -9,6 +9,11 @@ type PackingState = "CREATED" | "IN_PRODUCTION" | "COMPLETED" | "STORED" | "READ
 
 const PACKING_STAGES: PackingState[] = ["CREATED", "IN_PRODUCTION", "COMPLETED", "STORED", "READY", "HOLD", "LOADED", "SHIPPED"];
 
+const STAGE_LABEL: Record<PackingState, string> = {
+  CREATED: "생성", IN_PRODUCTION: "생산중", COMPLETED: "완료",
+  STORED: "보관", READY: "준비", HOLD: "보류", LOADED: "적재", SHIPPED: "출하",
+};
+
 const MOCK: Record<PackingState, Array<{ id: string; memberCount: number; woNo: string; location: string; updatedAt: string }>> = {
   CREATED:      [{ id: "PKG-WO-P3000-20260507-0003-001", memberCount: 8,  woNo: "WO-P3000-20260507-0003", location: "—",    updatedAt: "2026-05-07 08:00" }],
   IN_PRODUCTION:[{ id: "PKG-WO-P3000-20260506-0007-001", memberCount: 12, woNo: "WO-P3000-20260506-0007", location: "공정중", updatedAt: "2026-05-06 11:30" },
@@ -66,7 +71,7 @@ export default function WOPackingPage() {
               className={`px-3 py-2 text-xs font-label uppercase tracking-widest flex items-center gap-2 border-b-2 transition-colors
                 ${isActive ? `${stageColor(stage)} text-on-surface bg-surface-container` : "border-transparent text-on-surface/40 hover:text-on-surface/70"}`}
             >
-              {stage}
+              {STAGE_LABEL[stage]}
               <span className={`px-1.5 py-0.5 text-xs font-bold font-headline
                 ${stage === "HOLD" ? "bg-error/20 text-error" :
                   count > 0 ? "bg-primary-accent/20 text-primary-accent" : "bg-surface-container-high text-on-surface/30"}`}>

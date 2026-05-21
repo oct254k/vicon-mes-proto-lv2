@@ -27,7 +27,7 @@ const STATUS_TYPE: Record<string, "running" | "idle" | "warning" | "stopped"> = 
 export default function OutsourceProcessPage() {
   return (
     <div className="p-8">
-      <PageHeader title="OUTSOURCE /" accent="외주 가공 현황" nodeRef="SCR-MFG-051" status="PROTOTYPE" description="외주 가공 PRODUCE 현황 — DIRECT/PROXY 분기" />
+      <PageHeader title="외주 /" accent="외주 가공 현황" nodeRef="SCR-MFG-051" status="PROTOTYPE" description="외주 가공 PRODUCE 현황 — DIRECT/PROXY 분기" />
 
       <div className="bg-surface-container border-l-4 border-outline-variant/30 p-4 mb-6">
         <p className="text-xs font-label uppercase tracking-widest text-on-surface/50 mb-2">외주 유형 분기 (FR-MFG-PRC-004)</p>

@@ -22,7 +22,7 @@ const DATA = [
 export default function TransferHistoryPage() {
   return (
     <div className="p-8">
-      <PageHeader title="TRANSFER /" accent="이동 이력" nodeRef="SCR-MFG-034" status="PROTOTYPE" description="LOT 이동 이력 조회 — 출발지·목적지·상태" />
+      <PageHeader title="이동 /" accent="이동 이력" nodeRef="SCR-MFG-034" status="PROTOTYPE" description="LOT 이동 이력 조회 — 출발지·목적지·상태" />
 
       <div className="flex gap-3 mb-4">
         <input placeholder="LOT 검색" className="bg-surface-container border border-outline-variant/30 px-3 py-2 text-sm font-mono w-48 focus:outline-none focus:border-primary-accent" />
