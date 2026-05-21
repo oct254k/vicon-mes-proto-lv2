@@ -71,7 +71,7 @@ export default function OPSLinePage() {
       <div className="grid grid-cols-3 gap-4 mb-5">
         {/* B */}
         <div className={`border-2 p-6 flex flex-col items-center justify-center gap-3 ${STATUS_COLOR[status]}`}>
-          <p className="text-4xl font-black tracking-widest">{status}</p>
+          <p className="text-4xl font-black tracking-widest">{SL[status]}</p>
           <p className="text-sm font-label uppercase tracking-widest opacity-70">가동 중 · 08:00 ~</p>
           <p className="text-xs font-label opacity-50">교대조 A: 김작업 · 이작업 · 박작업</p>
         </div>
@@ -154,10 +154,10 @@ export default function OPSLinePage() {
         ))}
       </div>
       <div className="mt-4 flex gap-4 text-xs font-label">
-        <span className="text-primary-accent">● RUNNING</span>
-        <span className="text-warning">● IDLE</span>
-        <span className="text-error">● DOWN</span>
-        <span className="text-[#22c55e]">● MAINTENANCE</span>
+        <span className="text-primary-accent">● 가동중</span>
+        <span className="text-warning">● 유휴</span>
+        <span className="text-error">● 중단</span>
+        <span className="text-[#22c55e]">● 점검중</span>
       </div>
     </div>
   );

@@ -14,6 +14,7 @@ const MOCK_USERS = [
 
 const STATUS_MAP = { ACTIVE: "running", LOCKED: "warning", INACTIVE: "idle" } as const;
 const SL: Record<string, string> = { ACTIVE:"활성", LOCKED:"잠금", INACTIVE:"비활성" };
+const DEPT: Record<string, string> = { PRD:"생산", QC:"품질", WHS:"창고", MNT:"정비", SHP:"출하", SLS:"영업", SYS:"시스템" };
 
 export default function USRUsersPage() {
   return (
@@ -31,19 +32,19 @@ export default function USRUsersPage() {
           <div className="flex flex-col gap-1">
             <label className="text-xs font-label uppercase tracking-widest opacity-50">권한 레벨</label>
             <select className="bg-surface-container border border-outline-variant/20 px-3 py-1.5 text-sm font-body text-on-surface outline-none focus:border-primary-accent">
-              <option>전체</option><option>L1</option><option>L2</option><option>L3</option><option>L4</option><option>EXTERNAL</option>
+              <option>전체</option><option>L1</option><option>L2</option><option>L3</option><option>L4</option><option value="EXTERNAL">외부</option>
             </select>
           </div>
           <div className="flex flex-col gap-1">
             <label className="text-xs font-label uppercase tracking-widest opacity-50">부서</label>
             <select className="bg-surface-container border border-outline-variant/20 px-3 py-1.5 text-sm font-body text-on-surface outline-none focus:border-primary-accent">
-              <option>전체</option><option>PRD</option><option>QC</option><option>WHS</option><option>MNT</option><option>SHP</option><option>SLS</option><option>SYS</option>
+              <option>전체</option><option value="PRD">생산</option><option value="QC">품질</option><option value="WHS">창고</option><option value="MNT">정비</option><option value="SHP">출하</option><option value="SLS">영업</option><option value="SYS">시스템</option>
             </select>
           </div>
           <div className="flex flex-col gap-1">
             <label className="text-xs font-label uppercase tracking-widest opacity-50">상태</label>
             <select className="bg-surface-container border border-outline-variant/20 px-3 py-1.5 text-sm font-body text-on-surface outline-none focus:border-primary-accent">
-              <option>ACTIVE</option><option>LOCKED</option><option>INACTIVE</option><option>전체</option>
+              <option value="ACTIVE">활성</option><option value="LOCKED">잠금</option><option value="INACTIVE">비활성</option><option>전체</option>
             </select>
           </div>
           <button className="px-4 py-1.5 bg-primary-accent text-black text-xs font-label uppercase tracking-widest font-bold">검색</button>
@@ -73,7 +74,7 @@ export default function USRUsersPage() {
                   <td className="px-4 py-2 text-primary-accent font-bold tabular-nums">{u.userId}</td>
                   <td className="px-4 py-2">{u.name}</td>
                   <td className="px-4 py-2 tabular-nums">{u.level}</td>
-                  <td className="px-4 py-2">{u.departments}</td>
+                  <td className="px-4 py-2">{u.departments.split(',').map(d=>DEPT[d.trim()]||d).join(', ')}</td>
                   <td className="px-4 py-2 text-xs opacity-70">{u.authMethods}</td>
                   <td className="px-4 py-2">
                     <StatusBadge type={STATUS_MAP[u.status]} label={SL[u.status] ?? u.status} />
@@ -93,7 +94,7 @@ export default function USRUsersPage() {
           ))}
         </div>
       </div>
-      <p className="text-xs opacity-40 font-label mt-2">ⓘ 행 클릭 → 상세. status=LOCKED 🔒 → 잠금 해제</p>
+      <p className="text-xs opacity-40 font-label mt-2">ⓘ 행 클릭 → 상세. 잠금 상태 🔒 → 잠금 해제</p>
     </div>
   );
 }
