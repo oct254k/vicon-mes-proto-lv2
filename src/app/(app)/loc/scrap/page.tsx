@@ -9,9 +9,9 @@ const QUICK = [
 ];
 
 const KPI = [
-  { label: "이번 달 SCRAP",  value: "7건",   badge: "warning" as const },
-  { label: "불량 격리 대기",  value: "2건",   badge: "stopped" as const },
-  { label: "자투리 풀",       value: "5건",   badge: "idle"    as const },
+  { label: "이번 달 SCRAP",  value: "7건",   badge: "warning" as const, badgeLabel: "경고" },
+  { label: "불량 격리 대기",  value: "2건",   badge: "stopped" as const, badgeLabel: "정지" },
+  { label: "자투리 풀",       value: "5건",   badge: "idle"    as const, badgeLabel: "유휴" },
 ];
 
 const RECENT = [
@@ -36,7 +36,7 @@ export default function ScrapLandingPage() {
           <div key={k.label} className="bg-surface-elevated border-l-4 border-[#00912F] px-6 py-4">
             <p className="text-xs font-label uppercase tracking-widest text-on-surface/40 mb-1">{k.label}</p>
             <p className="text-2xl font-black font-headline text-on-surface">{k.value}</p>
-            <div className="mt-2"><StatusBadge type={k.badge} label={k.badge.toUpperCase()} /></div>
+            <div className="mt-2"><StatusBadge type={k.badge} label={k.badgeLabel} /></div>
           </div>
         ))}
       </div>

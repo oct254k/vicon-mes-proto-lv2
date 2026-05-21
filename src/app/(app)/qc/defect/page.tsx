@@ -14,7 +14,7 @@ const NAV = [
 
 const LIFECYCLE = [
   { step: "REPORTED", role: "작업자", status: "warning" as const },
-  { step: "CONFIRMED", role: "QC 검사자", status: "running" as const },
+  { step: "확정", role: "QC 검사자", status: "running" as const },
   { step: "DISPOSED", role: "QC 관리자", status: "warning" as const },
   { step: "CLOSED", role: "공장장", status: "idle" as const },
 ];

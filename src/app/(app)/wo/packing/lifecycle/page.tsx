@@ -7,6 +7,11 @@ type Stage = "CREATED" | "IN_PRODUCTION" | "COMPLETED" | "STORED" | "READY" | "H
 
 const STAGES: Stage[] = ["CREATED", "IN_PRODUCTION", "COMPLETED", "STORED", "READY", "HOLD", "LOADED", "SHIPPED"];
 
+const STAGE_LABEL: Record<Stage, string> = {
+  CREATED: "생성", IN_PRODUCTION: "생산중", COMPLETED: "완료", STORED: "저장됨",
+  READY: "준비", HOLD: "보류", LOADED: "적재", SHIPPED: "출하",
+};
+
 const MOCK: Record<Stage, { id: string; woNo: string; member: string; updatedAt: string }[]> = {
   CREATED:       [{ id: "PKG-WO-P3000-20260507-0003-001", woNo: "WO-P3000-20260507-0003", member: "B01-2-G22C-C-201", updatedAt: "2026-05-07 08:00" }],
   IN_PRODUCTION: [
@@ -47,7 +52,7 @@ export default function PackingLifecyclePage() {
           <button key={s} onClick={() => setActive(s)}
             className={`px-3 py-2 text-xs font-label uppercase tracking-widest flex items-center gap-2 border-b-2 transition-colors
               ${active === s ? `${STAGE_COLOR[s]} text-on-surface bg-surface-container` : "border-transparent text-on-surface/40 hover:text-on-surface/70"}`}>
-            {s}
+            {STAGE_LABEL[s]}
             <span className={`px-1.5 py-0.5 text-xs font-bold font-headline
               ${s === "HOLD" ? "bg-error/20 text-error" : MOCK[s].length > 0 ? "bg-primary-accent/20 text-primary-accent" : "bg-surface-container-high text-on-surface/30"}`}>
               {MOCK[s].length}
@@ -57,7 +62,7 @@ export default function PackingLifecyclePage() {
       </div>
 
       <div className="flex items-center gap-3 mb-4">
-        <StatusBadge type={BADGE_TYPE[active]} label={active} />
+        <StatusBadge type={BADGE_TYPE[active]} label={STAGE_LABEL[active]} />
         <span className="text-xs opacity-40 font-label">{rows.length}건</span>
       </div>
 
@@ -68,7 +73,7 @@ export default function PackingLifecyclePage() {
       ) : (
         <div className="bg-surface-container-lowest overflow-x-auto">
           <div className={`p-3 bg-surface-container-highest/30 border-l-4 ${STAGE_COLOR[active]} flex justify-between items-center`}>
-            <span className="font-headline font-black text-xs uppercase tracking-widest">{active} 패킹 그룹</span>
+            <span className="font-headline font-black text-xs uppercase tracking-widest">{STAGE_LABEL[active]} 패킹 그룹</span>
           </div>
           <table className="w-full text-left border-collapse text-sm">
             <thead>

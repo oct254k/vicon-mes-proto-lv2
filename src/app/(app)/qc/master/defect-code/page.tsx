@@ -3,12 +3,12 @@ import { FieldHeader } from "@/components/ui/FieldHeader";
 import { DataTable } from "@/components/ui/DataTable";
 
 const CODES = [
-  { code: "DC-001", name: "가공 불량", stage: "② 생산공정", owner: "생산팀", action: "SCRAP or REWORK", weight: "1.5×", active: "활성" },
-  { code: "DC-002", name: "규격 미달", stage: "① 입고검사", owner: "자재팀", action: "RETURN", weight: "1.0×", active: "활성" },
-  { code: "DC-003", name: "외관 불량", stage: "⑥ 최종검사", owner: "QC팀", action: "SCRAP or CLAIM", weight: "2.0×", active: "활성" },
-  { code: "DC-004", name: "조립 불량", stage: "⑤ 조립", owner: "생산팀", action: "REWORK", weight: "1.8×", active: "활성" },
-  { code: "DC-005", name: "운송 파손", stage: "⑨ 현장도착", owner: "CS팀", action: "CLAIM", weight: "3.0×", active: "활성" },
-  { code: "DC-006", name: "표면 처리 불량", stage: "⑧ 출하검사", owner: "QC팀", action: "SCRAP", weight: "2.5×", active: "비활성" },
+  { code: "DC-001", name: "가공 불량", stage: "② 생산공정", owner: "생산팀", action: "폐기 또는 재작업", weight: "1.5×", active: "활성" },
+  { code: "DC-002", name: "규격 미달", stage: "① 입고검사", owner: "자재팀", action: "반품", weight: "1.0×", active: "활성" },
+  { code: "DC-003", name: "외관 불량", stage: "⑥ 최종검사", owner: "QC팀", action: "폐기 또는 클레임", weight: "2.0×", active: "활성" },
+  { code: "DC-004", name: "조립 불량", stage: "⑤ 조립", owner: "생산팀", action: "재작업", weight: "1.8×", active: "활성" },
+  { code: "DC-005", name: "운송 파손", stage: "⑨ 현장도착", owner: "CS팀", action: "클레임", weight: "3.0×", active: "활성" },
+  { code: "DC-006", name: "표면 처리 불량", stage: "⑧ 출하검사", owner: "QC팀", action: "폐기", weight: "2.5×", active: "비활성" },
 ];
 
 const COLUMNS = [
@@ -40,7 +40,7 @@ export default function QCDefectCodeMasterPage() {
           <option>⑦ 보관</option><option>⑧ 출하검사</option><option>⑨ 현장도착</option>
         </select>
         <select className="bg-surface-container border border-outline-variant/20 text-sm px-3 py-1.5 font-label uppercase tracking-wider">
-          <option>처리 액션 전체</option><option>SCRAP</option><option>REWORK</option><option>RETURN</option><option>CLAIM</option>
+          <option>처리 액션 전체</option><option>폐기</option><option>재작업</option><option>반품</option><option>클레임</option>
         </select>
         <div className="flex-1" />
         <button className="bg-primary-accent text-black text-sm font-label uppercase px-4 py-1.5 font-bold hover:opacity-90">+ 신규 코드</button>

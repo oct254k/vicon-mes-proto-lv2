@@ -2,19 +2,19 @@ import { PageHeader } from "@/components/ui/PageHeader";
 import { StatusBadge } from "@/components/ui/StatusBadge";
 
 const ROWS = [
-  { histId: "LBL-H-20260506-012", target: "B01-1-G22C-C-171", type: "MEMBER",  action: "PRINT",   printer: "PRT-01", issuedAt: "2026-05-06 09:30", issuedBy: "김계획", status: "COMPLETED" },
-  { histId: "LBL-H-20260506-011", target: "PKG-WO-P3000-20260506-0007-001", type: "PACKING", action: "PRINT",   printer: "PRT-01", issuedAt: "2026-05-06 09:25", issuedBy: "김계획", status: "COMPLETED" },
-  { histId: "LBL-H-20260506-010", target: "B01-2-G22C-C-201", type: "MEMBER",  action: "REPRINT", printer: "PRT-02", issuedAt: "2026-05-06 08:10", issuedBy: "박포장", status: "COMPLETED" },
-  { histId: "LBL-H-20260505-008", target: "B02-1-T18B-S-102", type: "MEMBER",  action: "PRINT",   printer: "PRT-01", issuedAt: "2026-05-05 17:00", issuedBy: "김계획", status: "COMPLETED" },
-  { histId: "LBL-H-20260505-007", target: "PKG-WO-P3000-20260505-0001-001", type: "PACKING", action: "PRINT",   printer: "PRT-02", issuedAt: "2026-05-05 16:30", issuedBy: "박포장", status: "FAILED" },
-  { histId: "LBL-H-20260505-005", target: "B01-1-G22C-S-172", type: "MEMBER",  action: "PRINT",   printer: "PRT-01", issuedAt: "2026-05-05 14:15", issuedBy: "김계획", status: "COMPLETED" },
-  { histId: "LBL-H-20260504-003", target: "B03-1-G22C-C-301", type: "SLIPPER", action: "PRINT",   printer: "PRT-03", issuedAt: "2026-05-04 11:00", issuedBy: "최포장", status: "BLOCKED" },
+  { histId: "LBL-H-20260506-012", target: "B01-1-G22C-C-171", type: "부재",  action: "PRINT",   printer: "PRT-01", issuedAt: "2026-05-06 09:30", issuedBy: "김계획", status: "COMPLETED" },
+  { histId: "LBL-H-20260506-011", target: "PKG-WO-P3000-20260506-0007-001", type: "패킹", action: "PRINT",   printer: "PRT-01", issuedAt: "2026-05-06 09:25", issuedBy: "김계획", status: "COMPLETED" },
+  { histId: "LBL-H-20260506-010", target: "B01-2-G22C-C-201", type: "부재",  action: "REPRINT", printer: "PRT-02", issuedAt: "2026-05-06 08:10", issuedBy: "박포장", status: "COMPLETED" },
+  { histId: "LBL-H-20260505-008", target: "B02-1-T18B-S-102", type: "부재",  action: "PRINT",   printer: "PRT-01", issuedAt: "2026-05-05 17:00", issuedBy: "김계획", status: "COMPLETED" },
+  { histId: "LBL-H-20260505-007", target: "PKG-WO-P3000-20260505-0001-001", type: "패킹", action: "PRINT",   printer: "PRT-02", issuedAt: "2026-05-05 16:30", issuedBy: "박포장", status: "FAILED" },
+  { histId: "LBL-H-20260505-005", target: "B01-1-G22C-S-172", type: "부재",  action: "PRINT",   printer: "PRT-01", issuedAt: "2026-05-05 14:15", issuedBy: "김계획", status: "COMPLETED" },
+  { histId: "LBL-H-20260504-003", target: "B03-1-G22C-C-301", type: "슬리퍼", action: "PRINT",   printer: "PRT-03", issuedAt: "2026-05-04 11:00", issuedBy: "최포장", status: "BLOCKED" },
 ];
 
 const STATUS_MAP: Record<string, { type: "running" | "error" | "stopped" | "idle"; label: string }> = {
   COMPLETED: { type: "running", label: "완료" },
   FAILED:    { type: "error",   label: "실패" },
-  BLOCKED:   { type: "stopped", label: "KS BLOCKED" },
+  BLOCKED:   { type: "stopped", label: "KS 차단" },
 };
 
 const ACTION_MAP: Record<string, string> = {

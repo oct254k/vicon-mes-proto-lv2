@@ -15,18 +15,18 @@ const COLS = [
 ];
 
 const DATA = [
-  { locId:"Y-P3000-A-01-01", yard:"Y-RAW", zone:"A-01", material:"—",                       lot:"—",                    qty:"0",     loadPct:"0%",   fifoSeq:"—",    status:"EMPTY" },
-  { locId:"Y-P3000-A-01-02", yard:"Y-RAW", zone:"A-01", material:"M-COIL-A P3000 900m",     lot:"RCV-20260501-0017",     qty:"900",   loadPct:"18%",  fifoSeq:"4521", status:"OCCUPIED" },
-  { locId:"Y-P3000-A-01-03", yard:"Y-RAW", zone:"A-01", material:"M-COIL-A",                lot:"RCV-20260503-0011",     qty:"5,000", loadPct:"100%", fifoSeq:"4500", status:"FULL" },
-  { locId:"Y-P3000-A-02-01", yard:"Y-RAW", zone:"A-02", material:"M-COIL-C",                lot:"RCV-20260502-0009",     qty:"4,200", loadPct:"84%",  fifoSeq:"4450", status:"OCCUPIED" },
-  { locId:"Y-P3000-A-02-03", yard:"Y-RAW", zone:"A-02", material:"M-COIL-A",                lot:"LOT-20260420-007",      qty:"2,800", loadPct:"56%",  fifoSeq:"4300", status:"AGING" },
-  { locId:"Y-P3000-B-01-01", yard:"Y-IN",  zone:"B-01", material:"M-COIL-B",                lot:"RCV-20260504-0021",     qty:"1,800", loadPct:"60%",  fifoSeq:"4522", status:"OCCUPIED" },
+  { locId:"Y-P3000-A-01-01", yard:"Y-RAW", zone:"A-01", material:"—",                       lot:"—",                    qty:"0",     loadPct:"0%",   fifoSeq:"—",    status:"빈자리" },
+  { locId:"Y-P3000-A-01-02", yard:"Y-RAW", zone:"A-01", material:"M-COIL-A P3000 900m",     lot:"RCV-20260501-0017",     qty:"900",   loadPct:"18%",  fifoSeq:"4521", status:"사용중" },
+  { locId:"Y-P3000-A-01-03", yard:"Y-RAW", zone:"A-01", material:"M-COIL-A",                lot:"RCV-20260503-0011",     qty:"5,000", loadPct:"100%", fifoSeq:"4500", status:"가득참" },
+  { locId:"Y-P3000-A-02-01", yard:"Y-RAW", zone:"A-02", material:"M-COIL-C",                lot:"RCV-20260502-0009",     qty:"4,200", loadPct:"84%",  fifoSeq:"4450", status:"사용중" },
+  { locId:"Y-P3000-A-02-03", yard:"Y-RAW", zone:"A-02", material:"M-COIL-A",                lot:"LOT-20260420-007",      qty:"2,800", loadPct:"56%",  fifoSeq:"4300", status:"에이징" },
+  { locId:"Y-P3000-B-01-01", yard:"Y-IN",  zone:"B-01", material:"M-COIL-B",                lot:"RCV-20260504-0021",     qty:"1,800", loadPct:"60%",  fifoSeq:"4522", status:"사용중" },
 ];
 
 const KPI = [
   { label: "적재 위치",  value: "30/38" },
   { label: "빈 위치",    value: "8개" },
-  { label: "AGING 위치", value: "2개" },
+  { label: "에이징 위치", value: "2개" },
 ];
 
 export default function InventoryByLocationPage() {

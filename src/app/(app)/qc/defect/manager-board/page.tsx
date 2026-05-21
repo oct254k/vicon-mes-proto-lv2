@@ -8,12 +8,12 @@ const CONFIRMED = [
   { id: "D-2026-0038", partCode: "M-COIL-A-...011", type: "표면", stage: "① 입고검사", qty: 4, confirmedAt: "2026-05-05 10:30" },
 ];
 
-const ACTIONS = ["SCRAP", "CLAIM", "RETURN", "REWORK"];
+const ACTIONS = ["폐기", "클레임", "반품", "재작업"];
 const ACTION_STYLE: Record<string, string> = {
-  SCRAP: "bg-error text-white",
-  CLAIM: "bg-warning text-black",
-  RETURN: "bg-tertiary text-black",
-  REWORK: "bg-surface-container-highest text-on-surface",
+  폐기: "bg-error text-white",
+  클레임: "bg-warning text-black",
+  반품: "bg-tertiary text-black",
+  재작업: "bg-surface-container-highest text-on-surface",
 };
 
 export default function QCDefectManagerBoardPage() {
@@ -29,7 +29,7 @@ export default function QCDefectManagerBoardPage() {
 
       <div className="bg-surface-container border-l-4 border-warning p-4 mb-6 flex items-start gap-3">
         <StatusBadge type="warning" label="4계층 결재 2단계" />
-        <p className="text-sm opacity-70">CONFIRMED 건을 SCRAP / CLAIM / RETURN / REWORK 4종으로 분기 발행. 발행 시 재고 차감·거래처 통보·격리 입고 자동 실행.</p>
+        <p className="text-sm opacity-70">확정 건을 폐기 / 클레임 / 반품 / 재작업 4종으로 분기 발행. 발행 시 재고 차감·거래처 통보·격리 입고 자동 실행.</p>
       </div>
 
       <div className="grid grid-cols-4 gap-3 mb-6">
@@ -37,14 +37,14 @@ export default function QCDefectManagerBoardPage() {
           <div key={a} className="p-4 border-l-4 border-outline-variant/20 bg-surface-container-low">
             <p className="font-label text-xs uppercase opacity-50 mb-1">{a}</p>
             <p className="font-headline font-black text-2xl">
-              {a === "SCRAP" ? 3 : a === "CLAIM" ? 2 : a === "RETURN" ? 1 : 2}
+              {a === "폐기" ? 3 : a === "클레임" ? 2 : a === "반품" ? 1 : 2}
             </p>
             <p className="text-xs opacity-40 mt-1">이번 달 누적</p>
           </div>
         ))}
       </div>
 
-      <FieldHeader title="CONFIRMED 발행 대기" moduleRef="FNC-QC-054" />
+      <FieldHeader title="확정 발행 대기" moduleRef="FNC-QC-054" />
       <section className="bg-surface-container-lowest">
         <div className="p-4 bg-surface-container-highest/30 border-l-4 border-primary-accent">
           <h3 className="font-headline font-black text-sm uppercase tracking-widest">발행 대기 <span className="opacity-30 font-light ml-2">| Buffer: 003 Entries</span></h3>

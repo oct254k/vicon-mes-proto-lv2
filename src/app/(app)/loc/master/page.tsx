@@ -140,7 +140,7 @@ export default function LOCMasterPage() {
                           >
                             <span className="text-on-surface/80">{lot.id}</span>
                             <span className={`px-1.5 py-0.5 text-[10px] font-bold uppercase ${statusColor[lot.status]}`}>
-                              {lot.status}
+                              {lot.status === "ACTIVE" ? "활성" : lot.status === "FULL" ? "가득참" : lot.status === "MAINTENANCE" ? "점검중" : lot.status}
                             </span>
                           </button>
                         ))}
@@ -167,14 +167,14 @@ export default function LOCMasterPage() {
               <div className="grid grid-cols-2 gap-4 text-sm">
                 {[
                   ["위치 ID", selected.id],
-                  ["상태", selected.status],
+                  ["상태", selected.status === "ACTIVE" ? "활성" : selected.status === "FULL" ? "가득참" : selected.status === "MAINTENANCE" ? "점검중" : selected.status],
                   ["Capacity", `${selected.capacity.toLocaleString()} kg`],
                   ["현재 적재", `${selected.currentLoad.toLocaleString()} kg`],
                   ["점유율", `${selected.loadPct}%`],
                 ].map(([k, v]) => (
                   <div key={k} className="bg-surface-container-high p-3">
                     <p className="font-label text-xs uppercase tracking-widest text-on-surface/40 mb-1">{k}</p>
-                    <p className={`font-headline font-bold ${k === "상태" ? statusColor[v as LocStatus] : ""}`}>{v}</p>
+                    <p className={`font-headline font-bold ${k === "상태" ? statusColor[selected.status] : ""}`}>{v}</p>
                   </div>
                 ))}
                 <div className="bg-surface-container-high p-3">
@@ -216,7 +216,7 @@ export default function LOCMasterPage() {
                     Capacity 수정
                   </button>
                   <button className="bg-warning/10 border border-warning/30 px-4 py-2 text-xs font-label uppercase tracking-widest text-warning hover:bg-warning/20">
-                    MAINTENANCE 등록
+                    점검중 등록
                   </button>
                   <button className="bg-danger/10 border border-danger/30 px-4 py-2 text-xs font-label uppercase tracking-widest text-danger hover:bg-danger/20">
                     폐기 결재

@@ -15,9 +15,9 @@ const COLUMNS = [
 ];
 
 const DATA = [
-  { lot: "PRD-20260506-001", part: "B01-1-G22C-C-171", vendor: "강남금속", type: "DIRECT", sentAt: "2026-05-06", dueAt: "2026-05-08", op: "표면처리", status: "가공중" },
-  { lot: "PRD-20260505-011", part: "B03-1-G22C-C-054", vendor: "서울도금", type: "PROXY", sentAt: "2026-05-05", dueAt: "2026-05-07", op: "도금처리", status: "완료" },
-  { lot: "PRD-20260504-007", part: "B02-2-G22C-C-088", vendor: "강남금속", type: "DIRECT", sentAt: "2026-05-04", dueAt: "2026-05-06", op: "용접보조", status: "납기지연" },
+  { lot: "PRD-20260506-001", part: "B01-1-G22C-C-171", vendor: "강남금속", type: "직접", sentAt: "2026-05-06", dueAt: "2026-05-08", op: "표면처리", status: "가공중" },
+  { lot: "PRD-20260505-011", part: "B03-1-G22C-C-054", vendor: "서울도금", type: "대리", sentAt: "2026-05-05", dueAt: "2026-05-07", op: "도금처리", status: "완료" },
+  { lot: "PRD-20260504-007", part: "B02-2-G22C-C-088", vendor: "강남금속", type: "직접", sentAt: "2026-05-04", dueAt: "2026-05-06", op: "용접보조", status: "납기지연" },
 ];
 
 const STATUS_TYPE: Record<string, "running" | "idle" | "warning" | "stopped"> = {
@@ -27,13 +27,13 @@ const STATUS_TYPE: Record<string, "running" | "idle" | "warning" | "stopped"> = 
 export default function OutsourceProcessPage() {
   return (
     <div className="p-8">
-      <PageHeader title="외주 /" accent="외주 가공 현황" nodeRef="SCR-MFG-051" status="PROTOTYPE" description="외주 가공 PRODUCE 현황 — DIRECT/PROXY 분기" />
+      <PageHeader title="외주 /" accent="외주 가공 현황" nodeRef="SCR-MFG-051" status="PROTOTYPE" description="외주 가공 PRODUCE 현황 — 직접/대리 분기" />
 
       <div className="bg-surface-container border-l-4 border-outline-variant/30 p-4 mb-6">
         <p className="text-xs font-label uppercase tracking-widest text-on-surface/50 mb-2">외주 유형 분기 (FR-MFG-PRC-004)</p>
         <div className="flex gap-4 text-xs">
-          <span><span className="text-primary-accent font-bold">DIRECT</span> — 외주사 직접 실적 입력</span>
-          <span><span className="text-on-surface/60 font-bold">PROXY</span> — 사내 담당자 대리 입력</span>
+          <span><span className="text-primary-accent font-bold">직접</span> — 외주사 직접 실적 입력</span>
+          <span><span className="text-on-surface/60 font-bold">대리</span> — 사내 담당자 대리 입력</span>
         </div>
       </div>
 

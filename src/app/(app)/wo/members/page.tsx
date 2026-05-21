@@ -2,18 +2,18 @@ import { PageHeader } from "@/components/ui/PageHeader";
 import { FieldHeader } from "@/components/ui/FieldHeader";
 
 const MOCK_MEMBERS = [
-  { id: "B01-1-G22C-C-171", woNo: "WO-P3000-20260506-0007", type: "C형", lengthMm: 6000,  drawingNo: "DRW-2026-0001", attemptNo: 1, state: "RELEASED" },
-  { id: "B01-1-G22C-C-172", woNo: "WO-P3000-20260506-0007", type: "C형", lengthMm: 6000,  drawingNo: "DRW-2026-0001", attemptNo: 1, state: "RELEASED" },
-  { id: "B01-1-G22D-S-040", woNo: "WO-P3000-20260506-0008", type: "S형", lengthMm: 12000, drawingNo: "DRW-2026-0002", attemptNo: 2, state: "IN_PROGRESS" },
-  { id: "B01-2-G15A-T-010", woNo: "WO-P3000-20260505-0002", type: "T형", lengthMm: 9000,  drawingNo: "DRW-2026-0003", attemptNo: 1, state: "COMPLETED" },
-  { id: "B01-2-G15A-T-011", woNo: "WO-P3000-20260505-0002", type: "T형", lengthMm: 9000,  drawingNo: "DRW-2026-0003", attemptNo: 1, state: "COMPLETED" },
-  { id: "B02-1-G10B-Z-005", woNo: "WO-P2000-20260506-0003", type: "Z형", lengthMm: 7500,  drawingNo: "DRW-2026-0004", attemptNo: 1, state: "RELEASED" },
+  { id: "B01-1-G22C-C-171", woNo: "WO-P3000-20260506-0007", type: "C형", lengthMm: 6000,  drawingNo: "DRW-2026-0001", attemptNo: 1, state: "출고" },
+  { id: "B01-1-G22C-C-172", woNo: "WO-P3000-20260506-0007", type: "C형", lengthMm: 6000,  drawingNo: "DRW-2026-0001", attemptNo: 1, state: "출고" },
+  { id: "B01-1-G22D-S-040", woNo: "WO-P3000-20260506-0008", type: "S형", lengthMm: 12000, drawingNo: "DRW-2026-0002", attemptNo: 2, state: "진행중" },
+  { id: "B01-2-G15A-T-010", woNo: "WO-P3000-20260505-0002", type: "T형", lengthMm: 9000,  drawingNo: "DRW-2026-0003", attemptNo: 1, state: "완료" },
+  { id: "B01-2-G15A-T-011", woNo: "WO-P3000-20260505-0002", type: "T형", lengthMm: 9000,  drawingNo: "DRW-2026-0003", attemptNo: 1, state: "완료" },
+  { id: "B02-1-G10B-Z-005", woNo: "WO-P2000-20260506-0003", type: "Z형", lengthMm: 7500,  drawingNo: "DRW-2026-0004", attemptNo: 1, state: "출고" },
 ];
 
 function stateColor(state: string) {
-  if (state === "RELEASED")    return "text-primary-accent";
-  if (state === "IN_PROGRESS") return "text-warning";
-  if (state === "COMPLETED")   return "text-tertiary";
+  if (state === "출고")    return "text-primary-accent";
+  if (state === "진행중") return "text-warning";
+  if (state === "완료")   return "text-tertiary";
   return "text-on-surface/40";
 }
 
