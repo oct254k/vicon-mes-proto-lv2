@@ -75,16 +75,22 @@ export default function OPSPlantPage() {
       <div className="bg-surface-container-lowest p-4 mb-8">
         <FieldHeader title="시간별 생산량" moduleRef="FNC-OPS-022" />
         <div className="flex items-end gap-1 h-24">
-          {HOURLY.map((val, i) => (
+          {HOURLY.map((val, i) => {
+            const total = HOURLY.length;
+            const ratio = total > 1 ? i / (total - 1) : 0;
+            const lightness = Math.round(28 + ratio * 42);
+            const barColor = `hsl(142, 55%, ${lightness}%)`;
+            return (
             <div key={i} className="flex flex-col items-center flex-1 gap-1">
-              <span className="text-[10px] text-on-surface-variant font-label tabular-nums">{val}</span>
+              <span className="text-xs text-black font-label font-semibold tabular-nums">{val}</span>
               <div
-                className="bg-primary-accent/60 w-full"
-                style={{ height: `${(val / maxVal) * 72}px` }}
+                className="w-full transition-all"
+                style={{ height: `${(val / maxVal) * 72}px`, backgroundColor: barColor }}
               />
-              <span className="text-[10px] text-on-surface-variant font-label">{HOURS[i]}</span>
+              <span className="text-xs text-black font-label font-medium">{HOURS[i]}</span>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 

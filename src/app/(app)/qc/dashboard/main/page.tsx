@@ -10,10 +10,10 @@ const KPI = [
 ];
 
 const DEFECT_DIST = [
-  { type: "DEFECT", count: 12, color: "bg-warning" },
-  { type: "SCRAP", count: 8, color: "bg-error" },
-  { type: "CLAIM", count: 3, color: "bg-tertiary" },
-  { type: "RETURN", count: 2, color: "bg-surface-container-highest" },
+  { type: "DEFECT", count: 12, color: "bg-warning", textColor: "text-white" },
+  { type: "SCRAP", count: 8, color: "bg-error", textColor: "text-white" },
+  { type: "CLAIM", count: 3, color: "bg-tertiary", textColor: "" },
+  { type: "RETURN", count: 2, color: "bg-surface-container-highest", textColor: "" },
 ];
 
 export default function QCDashboardMain() {
@@ -70,7 +70,7 @@ export default function QCDashboardMain() {
       <div className="flex gap-4 mb-6">
         {DEFECT_DIST.map((d) => (
           <div key={d.type} className="flex-1 bg-surface-container-low p-4 text-center">
-            <div className={`w-12 h-12 ${d.color} mx-auto mb-2 flex items-center justify-center font-headline font-black text-lg`}>{d.count}</div>
+            <div className={`w-12 h-12 ${d.color} ${d.textColor} mx-auto mb-2 flex items-center justify-center font-headline font-black text-lg`}>{d.count}</div>
             <p className="font-label text-xs uppercase tracking-widest opacity-70">{d.type}</p>
           </div>
         ))}

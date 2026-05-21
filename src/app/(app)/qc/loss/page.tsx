@@ -72,19 +72,23 @@ export default function QCLossPage() {
       <FieldHeader title="월별 손실 금액 추이" moduleRef="최근 7개월" />
       <div className="bg-surface-container-lowest p-6 mb-8">
         <div className="flex items-end gap-3 h-40">
-          {MONTHLY_LOSS.map(m => {
+          {MONTHLY_LOSS.map((m, i) => {
+            const total = MONTHLY_LOSS.length;
             const pct = Math.round((m.amount / MAX_AMOUNT) * 100);
+            const ratio = total > 1 ? i / (total - 1) : 0;
+            const lightness = Math.round(28 + ratio * 42);
+            const barColor = `hsl(142, 55%, ${lightness}%)`;
             return (
               <div key={m.month} className="flex flex-col items-center gap-1 flex-1">
-                <span className="text-xs font-label tabular-nums opacity-60" style={{ fontSize: "10px" }}>
+                <span className="text-xs font-label tabular-nums text-black font-semibold">
                   {(m.amount / 10000).toFixed(0)}만
                 </span>
                 <div
-                  className="w-full bg-primary-accent/70 hover:bg-primary-accent transition-colors"
-                  style={{ height: `${pct}%`, minHeight: "4px" }}
+                  className="w-full transition-colors"
+                  style={{ height: `${pct}%`, minHeight: "4px", backgroundColor: barColor }}
                   title={fmt(m.amount)}
                 />
-                <span className="text-xs font-label opacity-50 tabular-nums" style={{ fontSize: "10px" }}>
+                <span className="text-xs font-label tabular-nums text-black font-medium">
                   {m.month.slice(5)}
                 </span>
               </div>

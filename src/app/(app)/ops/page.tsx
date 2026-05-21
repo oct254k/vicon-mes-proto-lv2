@@ -338,28 +338,31 @@ export default function OPSDashboardPage() {
         </div>
         <div className="bg-surface-container-lowest p-5">
           <div className="flex items-end gap-1 h-36">
-            {data.hourly.map((val, i) => (
+            {data.hourly.map((val, i) => {
+              const total = data.hourly.length;
+              const ratio = total > 1 ? i / (total - 1) : 0;
+              const lightness = Math.round(28 + ratio * 42);
+              const barColor = val === 0 ? undefined : `hsl(142, 55%, ${lightness}%)`;
+              return (
               <div key={i} className="flex-1 flex flex-col items-center gap-1">
-                <span className="font-label text-[10px] tabular-nums text-on-surface-variant">
+                <span className="font-label text-xs tabular-nums text-black font-semibold">
                   {val > 0 ? val : ""}
                 </span>
                 <div className="w-full flex items-end" style={{ height: "104px" }}>
                   <div
-                    className={`w-full transition-all ${
-                      val === 0
-                        ? "bg-surface-container"
-                        : "bg-primary-accent/70 hover:bg-primary-accent"
-                    }`}
+                    className="w-full transition-all"
                     style={{
                       height: val > 0 ? `${(val / maxHourly) * 100}%` : "4px",
+                      backgroundColor: barColor ?? "var(--surface-container)",
                     }}
                   />
                 </div>
-                <span className="font-label text-[10px] tabular-nums text-on-surface-variant opacity-60">
+                <span className="font-label text-xs tabular-nums text-black font-medium">
                   {HOURS[i]}
                 </span>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
