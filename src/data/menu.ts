@@ -695,10 +695,10 @@ export const MENU: MenuNode[] = [
       },
       {
         id: "SHP-STORED",
-        label: "STORED·야적 위치 관리",
+        label: "보관·야적 위치 관리",
         url: "/shp/stored",
         children: [
-          { id: "SHP-STORED-BOARD", label: "STORED 패킹 보드 (READY/HOLD 전이)", url: "/shp/stored/board" },
+          { id: "SHP-STORED-BOARD", label: "보관 패킹 보드 (준비/보류 전이)", url: "/shp/stored/board" },
           { id: "SHP-STORED-LOCATION", label: "야적 위치 등록·변경", url: "/shp/stored/location" },
           { id: "SHP-STORED-AGING", label: "AGING 모니터링", url: "/shp/stored/aging" },
         ],
@@ -831,7 +831,7 @@ export const MENU: MenuNode[] = [
       },
       {
         id: "USR-EXT",
-        label: "EXTERNAL 토큰",
+        label: "외부 토큰",
         url: "/usr/external-tokens",
         children: [
           { id: "USR-EXT-ISSUE", label: "토큰 발급", url: "/usr/external-tokens/new" },

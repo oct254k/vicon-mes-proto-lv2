@@ -13,9 +13,9 @@ const SHIPMENTS = [
 ];
 
 const VEHICLES = [
-  { no: "VH-25TON-003", driver: "외부운전자 (EXTERNAL)", origin: "P3000 제3 이천공장", dest: "P1000 제1 이천공장", load: "4,250kg / 25t", status: "SCHEDULED" },
-  { no: "VH-25TON-002", driver: "외부운전자 (EXTERNAL)", origin: "P3000 제3 이천공장", dest: "P2000 제2 이천공장", load: "6,800kg / 25t", status: "IN_PROGRESS" },
-  { no: "VH-25TON-001", driver: "외부운전자 (EXTERNAL)", origin: "P3000 제3 이천공장", dest: "P1000 제1 이천공장", load: "5,200kg / 25t", status: "COMPLETED" },
+  { no: "VH-25TON-003", driver: "외부운전자", origin: "P3000 제3 이천공장", dest: "P1000 제1 이천공장", load: "4,250kg / 25t", status: "SCHEDULED" },
+  { no: "VH-25TON-002", driver: "외부운전자", origin: "P3000 제3 이천공장", dest: "P2000 제2 이천공장", load: "6,800kg / 25t", status: "IN_PROGRESS" },
+  { no: "VH-25TON-001", driver: "외부운전자", origin: "P3000 제3 이천공장", dest: "P1000 제1 이천공장", load: "5,200kg / 25t", status: "COMPLETED" },
 ];
 
 const STATUS_MAP: Record<string, { type: "running" | "stopped" | "warning" | "idle"; label: string }> = {
@@ -39,7 +39,7 @@ export default function SHPSchedulePage() {
 
   return (
     <div className="min-h-screen bg-surface text-on-surface p-8">
-      <PageHeader title="출하 일정" accent="캘린더" nodeRef="IA-SHP-SCHEDULE-CALENDAR" description="출하 일정 관리 · 차량 배차 · SCHEDULED → COMPLETED" />
+      <PageHeader title="출하 일정" accent="캘린더" nodeRef="IA-SHP-SCHEDULE-CALENDAR" description="출하 일정 관리 · 차량 배차" />
 
       {/* Filter Bar */}
       <div className="flex flex-wrap gap-3 mb-6 p-4 bg-surface-container-lowest border border-outline">
