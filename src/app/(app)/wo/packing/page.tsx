@@ -57,7 +57,7 @@ export default function WOPackingPage() {
   return (
     <div>
       <PageHeader title="패킹 라이프사이클 보드" nodeRef="IA-WO-PACKING-LIFECYCLE" status="PROTOTYPE" />
-      <p className="text-xs opacity-40 font-label mb-4">PRC-WO-003 §7 — 8단계 상태머신 (CREATED → SHIPPED)</p>
+      <p className="text-xs opacity-40 font-label mb-4">PRC-WO-003 §7 — 8단계 상태머신</p>
 
       {/* 8단계 탭 */}
       <div className="flex flex-wrap gap-1 mb-4">
@@ -84,11 +84,11 @@ export default function WOPackingPage() {
 
       {/* 현재 탭 상태 배지 */}
       <div className="flex items-center gap-3 mb-4">
-        <StatusBadge type={stageBadgeType(activeTab)} label={activeTab} />
+        <StatusBadge type={stageBadgeType(activeTab)} label={STAGE_LABEL[activeTab]} />
         <span className="text-xs opacity-40 font-label">{rows.length}건</span>
       </div>
 
-      <FieldHeader title={`${activeTab} 패킹 그룹`} moduleRef="FNC-WO-020~029" />
+      <FieldHeader title={`${STAGE_LABEL[activeTab]} 패킹 그룹`} moduleRef="FNC-WO-020~029" />
 
       {rows.length === 0 ? (
         <div className="bg-surface-container-lowest flex items-center justify-center h-32 text-on-surface/30 text-sm font-label">
@@ -116,7 +116,7 @@ export default function WOPackingPage() {
                   <td className="px-4 py-2 text-xs opacity-70">{row.woNo}</td>
                   <td className="px-4 py-2 text-xs">
                     {activeTab === "HOLD"
-                      ? <span className="text-error font-bold">{row.location} ⚠ HOLD</span>
+                      ? <span className="text-error font-bold">{row.location} ⚠ 보류</span>
                       : row.location}
                   </td>
                   <td className="px-4 py-2 tabular-nums text-xs opacity-60">{row.updatedAt}</td>

@@ -17,6 +17,7 @@ const BOARD = {
     { id:"MATCH-2026-0017", po:"PO-2026-0017", inv:"—", reason:"Invoice 미수신" },
   ],
 };
+const REASON_LABEL: Record<string,string> = { QTY_DIFF:"수량 차이", PRICE_DIFF:"단가 차이", MATERIAL_DIFF:"자재 불일치", OVER_DELIVERY:"초과 납품", SHORT_DELIVERY:"부족 납품" };
 const kpis = [{l:"전체",v:6},{l:"합격",v:2},{l:"예외",v:3},{l:"대기",v:1}];
 
 export default function MatchBoardPage() {
@@ -47,12 +48,12 @@ export default function MatchBoardPage() {
         </div>
         {/* EXCEPTION */}
         <div className="bg-surface-container-lowest border-t-2 border-warning p-4">
-          <FieldHeader title="EXCEPTION" moduleRef={`${BOARD.EXCEPTION.length}건`} />
+          <FieldHeader title="예외" moduleRef={`${BOARD.EXCEPTION.length}건`} />
           {BOARD.EXCEPTION.map(m=>(
             <div key={m.id} className="bg-surface-container p-3 mb-2">
               <p className="text-xs font-mono text-primary-accent">{m.id}</p>
               <p className="text-xs opacity-60 mt-0.5">{m.po}</p>
-              <span className="text-xs text-warning font-label">{m.reason}</span>
+              <span className="text-xs text-warning font-label">{REASON_LABEL[m.reason] ?? m.reason}</span>
             </div>
           ))}
         </div>
@@ -63,7 +64,7 @@ export default function MatchBoardPage() {
             <div key={m.id} className="bg-surface-container p-3 mb-2">
               <p className="text-xs font-mono text-primary-accent">{m.id}</p>
               <p className="text-xs opacity-60 mt-0.5">{m.po}</p>
-              <span className="text-xs text-on-surface/40 font-label">{m.reason}</span>
+              <span className="text-xs text-on-surface/40 font-label">{REASON_LABEL[m.reason] ?? m.reason}</span>
             </div>
           ))}
         </div>

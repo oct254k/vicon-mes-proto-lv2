@@ -645,11 +645,11 @@ export const MENU: MenuNode[] = [
       },
       {
         id: "PUR-MATCH",
-        label: "3-Way Matching (8단계)",
+        label: "3자 대사 (8단계)",
         url: "/pur/match",
         children: [
           { id: "PUR-MATCH-BOARD", label: "매칭 결과 보드", url: "/pur/match/board" },
-          { id: "PUR-MATCH-INVOICE", label: "Invoice 등록·수신", url: "/pur/match/invoice" },
+          { id: "PUR-MATCH-INVOICE", label: "인보이스 등록·수신", url: "/pur/match/invoice" },
           { id: "PUR-MATCH-EXCEPTION", label: "매칭 예외 워크리스트", url: "/pur/match/exception" },
         ],
       },

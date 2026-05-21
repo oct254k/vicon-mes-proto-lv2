@@ -5,6 +5,7 @@ import { StatusBadge } from "@/components/ui/StatusBadge";
 import { FieldHeader } from "@/components/ui/FieldHeader";
 
 const REASONS = ["ALL","QTY_DIFF","PRICE_DIFF","MATERIAL_DIFF","OVER_DELIVERY","SHORT_DELIVERY"];
+const REASON_LABEL: Record<string,string> = { ALL:"전체", QTY_DIFF:"수량 차이", PRICE_DIFF:"단가 차이", MATERIAL_DIFF:"자재 불일치", OVER_DELIVERY:"초과 납품", SHORT_DELIVERY:"부족 납품" };
 const MOCK = [
   { id:"EXC-2026-0013", po:"PO-2026-0013", inv:"INV-2026-0007", reason:"QTY_DIFF", poQty:"250 m", invQty:"200 m", diff:"-50 m", handler:"김구매", status:"OPEN" },
   { id:"EXC-2026-0009", po:"PO-2026-0009", inv:"INV-2026-0004", reason:"PRICE_DIFF", poQty:"—", invQty:"—", diff:"+2%", handler:"이구매", status:"REVIEWING" },
@@ -24,7 +25,7 @@ export default function MatchExceptionPage() {
         {REASONS.map(r=>(
           <button key={r} onClick={()=>setRf(r)}
             className={`px-3 py-1 text-xs font-label uppercase tracking-widest border ${rf===r?"bg-primary-accent text-black border-primary-accent":"bg-surface-container border-outline-variant/20"}`}>
-            {r}
+            {REASON_LABEL[r] ?? r}
           </button>
         ))}
       </div>
@@ -41,7 +42,7 @@ export default function MatchExceptionPage() {
                 <td className="px-4 py-2 text-primary-accent font-mono text-xs">{r.id}</td>
                 <td className="px-4 py-2 font-mono text-xs opacity-70">{r.po}</td>
                 <td className="px-4 py-2 font-mono text-xs opacity-70">{r.inv}</td>
-                <td className="px-4 py-2"><span className="text-warning text-xs font-label font-bold">{r.reason}</span></td>
+                <td className="px-4 py-2"><span className="text-warning text-xs font-label font-bold">{REASON_LABEL[r.reason] ?? r.reason}</span></td>
                 <td className="px-4 py-2 tabular-nums text-xs">{r.poQty}</td>
                 <td className="px-4 py-2 tabular-nums text-xs">{r.invQty}</td>
                 <td className="px-4 py-2 text-xs font-bold text-warning">{r.diff}</td>
