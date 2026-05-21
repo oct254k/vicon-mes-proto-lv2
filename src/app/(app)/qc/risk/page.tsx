@@ -106,7 +106,7 @@ export default function QCRiskPage() {
         </div>
         <button
           onClick={() => setSearched(true)}
-          className="px-4 py-1.5 bg-primary-accent text-black text-xs font-label uppercase tracking-widest self-end"
+          className="px-4 py-1.5 bg-primary-accent text-white text-xs font-label uppercase tracking-widest self-end"
         >
           영향 범위 검색
         </button>
@@ -204,7 +204,7 @@ export default function QCRiskPage() {
               ))}
             </div>
             <StatusBadge type={badge.type} label={badge.label} />
-            <button className="ml-auto px-6 py-1.5 bg-primary-accent text-black text-xs font-label uppercase tracking-widest">평가 저장</button>
+            <button className="ml-auto px-6 py-1.5 bg-primary-accent text-white text-xs font-label uppercase tracking-widest">평가 저장</button>
           </div>
         </>
       )}

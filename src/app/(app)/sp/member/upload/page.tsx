@@ -28,7 +28,7 @@ export default function MemberUploadPage() {
           </div>
           <button
             onClick={() => setPhase("preview")}
-            className="px-4 py-3 bg-primary-accent text-black text-xs font-label uppercase tracking-widest font-bold hover:opacity-90"
+            className="px-4 py-3 bg-primary-accent text-white text-xs font-label uppercase tracking-widest font-bold hover:opacity-90"
           >
             업로드 & 미리보기
           </button>
@@ -79,7 +79,7 @@ export default function MemberUploadPage() {
           <button
             onClick={() => setPhase("done")}
             disabled={phase === "done"}
-            className="px-6 py-3 bg-primary-accent text-black text-xs font-label uppercase tracking-widest font-bold hover:opacity-90 disabled:opacity-40"
+            className="px-6 py-3 bg-primary-accent text-white text-xs font-label uppercase tracking-widest font-bold hover:opacity-90 disabled:opacity-40"
           >
             {phase === "done" ? "저장 완료" : "확정 저장"}
           </button>

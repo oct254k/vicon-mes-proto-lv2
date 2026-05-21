@@ -21,7 +21,7 @@ export default function ScheduleVehiclePage() {
       <div className="bg-surface-container-lowest overflow-x-auto">
         <div className="p-4 border-l-4 border-primary-accent bg-surface-container-highest/30 flex justify-between">
           <span className="font-headline font-black text-sm uppercase tracking-widest">배차 목록</span>
-          <button className="px-3 py-1 bg-primary-accent text-black text-xs font-label uppercase">+ 배차 등록</button>
+          <button className="px-3 py-1 bg-primary-accent text-white text-xs font-label uppercase">+ 배차 등록</button>
         </div>
         <table className="w-full text-left border-collapse">
           <thead><tr className="bg-surface-container border-b border-outline">

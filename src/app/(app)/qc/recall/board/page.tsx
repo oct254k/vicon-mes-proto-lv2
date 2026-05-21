@@ -47,7 +47,7 @@ export default function QCRecallBoardPage() {
           {PIPELINE.map((s) => <option key={s}>{s.replace("RECALL_", "")}</option>)}
         </select>
         <div className="flex-1" />
-        <button className="bg-primary-accent text-black text-sm font-label uppercase px-4 py-1.5 font-bold hover:opacity-90">+ 회수 등록</button>
+        <button className="bg-primary-accent text-white text-sm font-label uppercase px-4 py-1.5 font-bold hover:opacity-90">+ 회수 등록</button>
       </div>
 
       <section className="bg-surface-container-lowest">

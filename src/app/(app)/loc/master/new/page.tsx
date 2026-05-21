@@ -117,7 +117,7 @@ export default function LocMasterNewPage() {
 
   const modeBtn=(m:Mode, label:string)=>(
     <button onClick={()=>{setMode(m);setSaved(false);}}
-      className={`px-5 py-2 text-xs font-label uppercase tracking-widest transition-colors ${mode===m?"bg-[#00912F] text-black":"bg-surface-elevated border border-outline/20 text-on-surface/50 hover:border-outline/40"}`}>
+      className={`px-5 py-2 text-xs font-label uppercase tracking-widest transition-colors ${mode===m?"bg-[#00912F] text-white":"bg-surface-elevated border border-outline/20 text-on-surface/50 hover:border-outline/40"}`}>
       {label}
     </button>
   );
@@ -156,7 +156,7 @@ export default function LocMasterNewPage() {
             </select></div>
           <div><label className={labelCls}>Yard 명칭</label><input className={inputCls} placeholder="원자재 야적장"/></div>
           <div className="flex gap-3 pt-2">
-            <button onClick={()=>setSaved(true)} className="bg-[#00912F] text-black font-label font-bold uppercase tracking-widest px-6 py-3 text-sm hover:opacity-90">등록 확정 ▶</button>
+            <button onClick={()=>setSaved(true)} className="bg-[#00912F] text-white font-label font-bold uppercase tracking-widest px-6 py-3 text-sm hover:opacity-90">등록 확정 ▶</button>
           </div>
           {saved && <p className="text-[#00912F] text-xs font-label uppercase tracking-widest">등록 완료</p>}
         </div>
@@ -224,7 +224,7 @@ export default function LocMasterNewPage() {
             )}
 
             <div className="flex gap-3 pt-2">
-              <button onClick={()=>{renderCanvas();setSaved(true);}} className="bg-[#00912F] text-black font-label font-bold uppercase tracking-widest px-6 py-3 text-sm hover:opacity-90">
+              <button onClick={()=>{renderCanvas();setSaved(true);}} className="bg-[#00912F] text-white font-label font-bold uppercase tracking-widest px-6 py-3 text-sm hover:opacity-90">
                 등록 확정 ▶
               </button>
             </div>
@@ -274,7 +274,7 @@ export default function LocMasterNewPage() {
             {lotCount>4&&<p className="text-on-surface/30">... +{lotCount-4}개</p>}
           </div>
           <div className="flex gap-3 pt-2">
-            <button onClick={()=>setSaved(true)} className="bg-[#00912F] text-black font-label font-bold uppercase tracking-widest px-6 py-3 text-sm hover:opacity-90">
+            <button onClick={()=>setSaved(true)} className="bg-[#00912F] text-white font-label font-bold uppercase tracking-widest px-6 py-3 text-sm hover:opacity-90">
               등록 확정 ▶
             </button>
           </div>

@@ -24,7 +24,7 @@ export default function MismatchPage() {
         <div className="flex gap-2 flex-wrap text-xs font-label">
           {REASONS.map(r=><span key={r} className="px-2 py-1 bg-surface-container border border-warning/30 text-warning">{r}</span>)}
         </div>
-        <button onClick={()=>setShowForm(true)} className="px-4 py-2 bg-primary-accent text-black text-xs font-label uppercase tracking-widest">+ 불일치 보고</button>
+        <button onClick={()=>setShowForm(true)} className="px-4 py-2 bg-primary-accent text-white text-xs font-label uppercase tracking-widest">+ 불일치 보고</button>
       </div>
       <FieldHeader title="불일치 목록" moduleRef={`${MOCK.length}건`} />
       <div className="bg-surface-container-lowest overflow-x-auto mb-4">

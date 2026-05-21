@@ -39,7 +39,7 @@ export default function QCCertificateListPage() {
         </select>
         <input type="text" placeholder="거래처 검색" className="bg-surface-container border border-outline-variant/20 px-3 py-1.5 text-sm" />
         <div className="flex-1" />
-        <button className="bg-primary-accent text-black text-sm font-label uppercase px-4 py-1.5 font-bold hover:opacity-90">+ 성적서 발행</button>
+        <button className="bg-primary-accent text-white text-sm font-label uppercase px-4 py-1.5 font-bold hover:opacity-90">+ 성적서 발행</button>
       </div>
 
       <section className="bg-surface-container-lowest">
@@ -69,7 +69,7 @@ export default function QCCertificateListPage() {
                   <td className="px-4 py-2">
                     <button className="bg-surface-container-high border border-outline-variant/20 text-xs font-label uppercase px-2 py-1 hover:opacity-90 mr-1">PDF</button>
                     {c.status !== "DRAFT" && <button className="bg-warning/20 text-warning text-xs font-label uppercase px-2 py-1 hover:opacity-90">재발행</button>}
-                    {c.status === "DRAFT" && <button className="bg-primary-accent text-black text-xs font-label uppercase px-2 py-1 hover:opacity-90">발행</button>}
+                    {c.status === "DRAFT" && <button className="bg-primary-accent text-white text-xs font-label uppercase px-2 py-1 hover:opacity-90">발행</button>}
                   </td>
                 </tr>
               ))}

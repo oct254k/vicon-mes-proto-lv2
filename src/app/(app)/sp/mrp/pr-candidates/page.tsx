@@ -31,7 +31,7 @@ export default function PrCandidatesPage() {
       <div className="flex gap-3 mb-6">
         <button
           disabled={selected.size === 0}
-          className="px-4 py-2 bg-primary-accent text-black text-xs font-label uppercase tracking-widest font-bold hover:opacity-90 disabled:opacity-30"
+          className="px-4 py-2 bg-primary-accent text-white text-xs font-label uppercase tracking-widest font-bold hover:opacity-90 disabled:opacity-30"
         >
           [PUR 연계] ({selected.size})
         </button>

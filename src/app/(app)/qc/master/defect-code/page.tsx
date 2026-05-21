@@ -43,7 +43,7 @@ export default function QCDefectCodeMasterPage() {
           <option>처리 액션 전체</option><option>폐기</option><option>재작업</option><option>반품</option><option>클레임</option>
         </select>
         <div className="flex-1" />
-        <button className="bg-primary-accent text-black text-sm font-label uppercase px-4 py-1.5 font-bold hover:opacity-90">+ 신규 코드</button>
+        <button className="bg-primary-accent text-white text-sm font-label uppercase px-4 py-1.5 font-bold hover:opacity-90">+ 신규 코드</button>
       </div>
 
       <DataTable title="불량 코드 — 6건" columns={COLUMNS} data={CODES} bufferCount={6} />

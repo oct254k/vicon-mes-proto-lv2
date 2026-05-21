@@ -42,7 +42,7 @@ export default function QCLossAccountingQueuePage() {
           <option>상태 전체</option><option>PENDING</option><option>SENT</option><option>CONFIRMED</option>
         </select>
         <div className="flex-1" />
-        <button className="bg-primary-accent text-black text-sm font-label uppercase px-4 py-1.5 font-bold hover:opacity-90">일괄 ERP 전송</button>
+        <button className="bg-primary-accent text-white text-sm font-label uppercase px-4 py-1.5 font-bold hover:opacity-90">일괄 ERP 전송</button>
         <button className="bg-surface-container-high border border-outline-variant/20 text-sm font-label uppercase px-4 py-1.5 hover:opacity-90">CSV 다운로드</button>
       </div>
 
@@ -70,7 +70,7 @@ export default function QCLossAccountingQueuePage() {
                   <td className="px-4 py-2"><StatusBadge type={STAT[r.status].type} label={SL[r.status] ?? r.status} /></td>
                   <td className="px-4 py-2 text-xs opacity-60">{r.erpRef}</td>
                   <td className="px-4 py-2">
-                    {r.status === "PENDING" && <button className="bg-primary-accent text-black text-xs font-label uppercase px-3 py-1 hover:opacity-90">전송</button>}
+                    {r.status === "PENDING" && <button className="bg-primary-accent text-white text-xs font-label uppercase px-3 py-1 hover:opacity-90">전송</button>}
                   </td>
                 </tr>
               ))}

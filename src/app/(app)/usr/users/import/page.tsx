@@ -23,7 +23,7 @@ export default function UsersImportPage() {
         <div className="border-2 border-dashed border-outline-variant/30 p-10 text-center mb-4">
           <p className="text-on-surface/40 text-sm font-body mb-3">CSV 파일을 이곳에 드래그 또는 클릭하여 선택</p>
           <input type="file" accept=".csv" className="hidden" id="csvFile" />
-          <label htmlFor="csvFile" className="px-6 py-2 bg-primary-accent text-black text-xs font-label uppercase tracking-widest font-bold cursor-pointer">파일 선택</label>
+          <label htmlFor="csvFile" className="px-6 py-2 bg-primary-accent text-white text-xs font-label uppercase tracking-widest font-bold cursor-pointer">파일 선택</label>
         </div>
         <div className="flex items-center gap-4 text-xs font-label opacity-50">
           <span>허용 형식: .csv (UTF-8)</span>
@@ -50,7 +50,7 @@ export default function UsersImportPage() {
           </label>
         </div>
         <div className="flex gap-3 mt-4">
-          <button className="px-6 py-2 bg-primary-accent text-black text-xs font-label uppercase tracking-widest font-bold">Import 실행</button>
+          <button className="px-6 py-2 bg-primary-accent text-white text-xs font-label uppercase tracking-widest font-bold">Import 실행</button>
           <button className="px-6 py-2 bg-surface-container border border-outline-variant/20 text-on-surface text-xs font-label uppercase tracking-widest">초기화</button>
         </div>
       </div>

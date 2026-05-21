@@ -52,7 +52,7 @@ export default function DailyPlanPage() {
         </div>
         <button
           onClick={handleConfirm}
-          className={`px-5 py-2 text-sm font-bold uppercase tracking-widest transition-opacity ${confirmed ? "bg-surface-container-high text-on-surface-variant cursor-not-allowed" : "bg-primary-accent text-black hover:opacity-90"}`}
+          className={`px-5 py-2 text-sm font-bold uppercase tracking-widest transition-opacity ${confirmed ? "bg-surface-container-high text-on-surface-variant cursor-not-allowed" : "bg-primary-accent text-white hover:opacity-90"}`}
           disabled={confirmed}
         >
           {confirmed ? "계획 확정됨" : "계획 확정"}

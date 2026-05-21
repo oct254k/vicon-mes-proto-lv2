@@ -37,7 +37,7 @@ export default function DepartPage() {
         </div>
       ) : (
         <button onClick={()=>allLoaded&&setDeparted(true)} disabled={!allLoaded}
-          className="w-full bg-primary-accent text-black py-5 text-base font-headline font-black uppercase tracking-widest disabled:opacity-30">
+          className="w-full bg-primary-accent text-white py-5 text-base font-headline font-black uppercase tracking-widest disabled:opacity-30">
           출발 확인 · SHIPPED ▶
         </button>
       )}

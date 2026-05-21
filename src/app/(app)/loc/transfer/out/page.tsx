@@ -21,7 +21,7 @@ export default function TransferOutPage() {
   };
 
   return (
-    <div>
+    <div className="max-w-sm mx-auto">
       <PageHeader
         title="이동 출발 스캔"
         accent="이동 출고"
@@ -30,7 +30,7 @@ export default function TransferOutPage() {
         description="PDA — 출발 위치에서 Lot 스캔 → 도착 위치 지정 → 이동 출고 확정."
       />
 
-      <div className="max-w-sm mx-auto space-y-5">
+      <div className="space-y-5">
         {done ? (
           <div className="bg-[#00912F]/20 border-l-4 border-[#00912F] p-6">
             <p className="font-label font-bold uppercase tracking-widest text-[#00912F] mb-1">출발 확정 완료</p>
@@ -72,7 +72,7 @@ export default function TransferOutPage() {
             <button
               onClick={() => setDone(true)}
               disabled={items.length === 0 || !toLoc}
-              className="w-full py-3 bg-[#00912F] text-black font-label font-bold uppercase tracking-widest text-sm hover:opacity-90 disabled:opacity-30">
+              className="w-full py-3 bg-[#00912F] text-white font-label font-bold uppercase tracking-widest text-sm hover:opacity-90 disabled:opacity-30">
               출발 확정 ▶
             </button>
           </>

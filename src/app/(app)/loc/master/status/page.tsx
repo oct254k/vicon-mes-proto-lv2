@@ -51,7 +51,7 @@ export default function LocMasterStatusPage() {
       <DataTable title="위치 운영 상태" columns={COLS} data={DATA} bufferCount={DATA.length} />
 
       <div className="flex gap-2 mt-4">
-        <button className="bg-[#00912F] text-black font-label font-bold uppercase tracking-widest px-5 py-2 text-xs hover:opacity-90">
+        <button className="bg-[#00912F] text-white font-label font-bold uppercase tracking-widest px-5 py-2 text-xs hover:opacity-90">
           [상태 변경 ▶]
         </button>
         <button className="bg-danger/10 border border-danger/30 text-danger font-label uppercase tracking-widest px-5 py-2 text-xs hover:bg-danger/20">

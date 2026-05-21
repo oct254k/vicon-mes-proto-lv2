@@ -31,7 +31,7 @@ export default function ReceiveMainPage() {
         ))}
       </div>
       <div className="flex flex-col gap-3">
-        <a href="/shp/receive/scan" className="px-6 py-4 bg-primary-accent text-black text-base font-headline font-black uppercase tracking-widest text-center block">
+        <a href="/shp/receive/scan" className="px-6 py-4 bg-primary-accent text-white text-base font-headline font-black uppercase tracking-widest text-center block">
           QR 스캔 검수 시작 ▶
         </a>
         <a href="/shp/receive/mismatch" className="px-6 py-3 bg-warning/20 border border-warning/40 text-warning text-sm font-label uppercase text-center block">

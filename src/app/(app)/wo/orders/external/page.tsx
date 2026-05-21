@@ -74,7 +74,7 @@ export default function ExternalWoPage() {
 
           <div className="flex gap-3 pt-2">
             <button type="submit"
-              className="px-6 py-3 bg-primary-accent text-black text-xs font-label uppercase tracking-widest font-bold hover:opacity-90">
+              className="px-6 py-3 bg-primary-accent text-white text-xs font-label uppercase tracking-widest font-bold hover:opacity-90">
               외주 WO 발행
             </button>
             <a href="/wo/orders" className="px-4 py-3 bg-surface-container text-xs font-label uppercase tracking-widest hover:bg-surface-container-high">취소</a>

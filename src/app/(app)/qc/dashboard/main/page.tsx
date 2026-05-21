@@ -12,7 +12,7 @@ const KPI = [
 const DEFECT_DIST = [
   { type: "DEFECT", count: 12, color: "bg-warning", textColor: "text-white" },
   { type: "SCRAP", count: 8, color: "bg-error", textColor: "text-white" },
-  { type: "CLAIM", count: 3, color: "bg-tertiary", textColor: "" },
+  { type: "CLAIM", count: 3, color: "bg-tertiary", textColor: "text-white" },
   { type: "RETURN", count: 2, color: "bg-surface-container-highest", textColor: "" },
 ];
 

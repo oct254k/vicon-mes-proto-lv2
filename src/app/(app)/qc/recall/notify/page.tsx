@@ -67,7 +67,7 @@ export default function QCRecallNotifyPage() {
                   <td className="px-4 py-2 tabular-nums text-xs">{r.replyDue}</td>
                   <td className="px-4 py-2"><StatusBadge type={STAT[r.replyStatus].type} label={r.replyStatus} /></td>
                   <td className="px-4 py-2">
-                    {r.replyStatus === "PENDING" && <button className="bg-primary-accent text-black text-xs font-label uppercase px-3 py-1 hover:opacity-90">회신 등록</button>}
+                    {r.replyStatus === "PENDING" && <button className="bg-primary-accent text-white text-xs font-label uppercase px-3 py-1 hover:opacity-90">회신 등록</button>}
                     {r.replyStatus === "REPLIED" && <span className="text-xs opacity-40">완료</span>}
                   </td>
                 </tr>
@@ -78,7 +78,7 @@ export default function QCRecallNotifyPage() {
       </section>
 
       <div className="flex gap-2">
-        <button className="bg-primary-accent text-black text-sm font-label uppercase px-5 py-2 font-bold hover:opacity-90">+ 신규 통보 발송</button>
+        <button className="bg-primary-accent text-white text-sm font-label uppercase px-5 py-2 font-bold hover:opacity-90">+ 신규 통보 발송</button>
         <button className="bg-surface-container-high border border-outline-variant/20 text-sm font-label uppercase px-5 py-2 hover:opacity-90">통보 이력 내보내기</button>
       </div>
     </div>

@@ -24,7 +24,7 @@ export default function MatchExceptionPage() {
       <div className="flex gap-2 mb-4 flex-wrap">
         {REASONS.map(r=>(
           <button key={r} onClick={()=>setRf(r)}
-            className={`px-3 py-1 text-xs font-label uppercase tracking-widest border ${rf===r?"bg-primary-accent text-black border-primary-accent":"bg-surface-container border-outline-variant/20"}`}>
+            className={`px-3 py-1 text-xs font-label uppercase tracking-widest border ${rf===r?"bg-primary-accent text-white border-primary-accent":"bg-surface-container border-outline-variant/20"}`}>
             {REASON_LABEL[r] ?? r}
           </button>
         ))}

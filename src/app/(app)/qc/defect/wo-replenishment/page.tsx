@@ -76,7 +76,7 @@ export default function QCDefectWoReplenishmentPage() {
                   <td className="px-4 py-2 text-xs opacity-70">{r.plannerNote}</td>
                   <td className="px-4 py-2"><StatusBadge type={STAT[r.status].type} label={SL[r.status] ?? r.status} /></td>
                   <td className="px-4 py-2">
-                    {r.status === "PENDING" && <button className="bg-primary-accent text-black text-xs font-label uppercase px-3 py-1 hover:opacity-90">WO 생성</button>}
+                    {r.status === "PENDING" && <button className="bg-primary-accent text-white text-xs font-label uppercase px-3 py-1 hover:opacity-90">WO 생성</button>}
                   </td>
                 </tr>
               ))}

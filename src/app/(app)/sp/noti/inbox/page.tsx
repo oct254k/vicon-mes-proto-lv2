@@ -59,7 +59,7 @@ export default function NotiInboxPage() {
                   <td className="px-4 py-2">
                     <div className="flex gap-2">
                       {n.status !== "RESOLVED" && (
-                        <button onClick={() => resolve(n.id)} className="px-3 py-1 bg-primary-accent text-black text-xs font-bold uppercase tracking-wider hover:opacity-90">
+                        <button onClick={() => resolve(n.id)} className="px-3 py-1 bg-primary-accent text-white text-xs font-bold uppercase tracking-wider hover:opacity-90">
                           확인
                         </button>
                       )}

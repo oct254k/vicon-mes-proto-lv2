@@ -34,7 +34,7 @@ export default function ScheduleChangePage() {
                 <td className="px-4 py-2 text-xs opacity-60">{r.reqBy}</td>
                 <td className="px-4 py-2"><StatusBadge type={SM[r.status]} label={r.status.replace("_"," ")} /></td>
                 <td className="px-4 py-2">
-                  {r.status==="PENDING_L3" && <button className="text-xs px-2 py-1 bg-primary-accent text-black font-label uppercase">결재 ▶</button>}
+                  {r.status==="PENDING_L3" && <button className="text-xs px-2 py-1 bg-primary-accent text-white font-label uppercase">결재 ▶</button>}
                 </td>
               </tr>
             ))}

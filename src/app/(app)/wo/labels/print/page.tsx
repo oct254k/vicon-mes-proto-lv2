@@ -210,7 +210,7 @@ export default function LabelPrintPage() {
                 ? "border-primary-accent bg-surface-container"
                 : "border-outline-variant/20 bg-surface-container-lowest hover:bg-surface-container"}`}>
             <p className="font-headline font-black text-sm uppercase tracking-tight mb-1">{lt.label}</p>
-            <p className="text-xs opacity-50 font-label">{lt.desc}</p>
+            <p className="text-xs font-label text-on-surface">{lt.desc}</p>
           </button>
         ))}
       </div>
@@ -278,7 +278,7 @@ export default function LabelPrintPage() {
                     ? "bg-error-container text-error cursor-not-allowed opacity-60"
                     : !target || printing
                     ? "bg-surface-container text-on-surface/30 cursor-not-allowed"
-                    : "bg-primary-accent text-black hover:opacity-90"}`}>
+                    : "bg-primary-accent text-white hover:opacity-90"}`}>
                 {printing ? "발행 중..." : isBlocked ? "차단됨" : `발행 (${copies}매)`}
               </button>
             </div>

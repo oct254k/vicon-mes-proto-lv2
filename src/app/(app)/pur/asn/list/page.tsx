@@ -26,7 +26,7 @@ export default function ASNListPage() {
           <input value={q} onChange={e=>setQ(e.target.value)} placeholder="ASN ID / 공급사"
             className="bg-surface-container-high text-sm px-3 py-1.5 border border-outline-variant/20 font-label w-52" />
         </div>
-        <button className="px-4 py-1.5 bg-primary-accent text-black text-xs font-label uppercase tracking-widest self-end">조회</button>
+        <button className="px-4 py-1.5 bg-primary-accent text-white text-xs font-label uppercase tracking-widest self-end">조회</button>
         <a href="/pur/asn/new" className="px-4 py-1.5 ml-auto bg-surface-container-high border border-outline-variant/20 text-xs font-label uppercase self-end">+ 수동 ASN 등록</a>
         <a href="/pur/asn/delay" className="px-4 py-1.5 bg-warning/20 border border-warning/40 text-warning text-xs font-label uppercase self-end">지연 알림 →</a>
       </div>

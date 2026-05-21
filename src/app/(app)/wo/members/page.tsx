@@ -45,7 +45,7 @@ export default function WOMembersPage() {
             {["C", "S", "T", "Z", "I"].map(t => <option key={t}>{t}형</option>)}
           </select>
         </div>
-        <button className="px-4 py-1.5 bg-primary-accent text-black text-xs font-label uppercase tracking-widest self-end">검색</button>
+        <button className="px-4 py-1.5 bg-primary-accent text-white text-xs font-label uppercase tracking-widest self-end">검색</button>
         <button className="px-4 py-1.5 bg-warning/80 text-black text-xs font-label uppercase self-end">정규식 검증 ▶</button>
         <button className="px-4 py-1.5 bg-surface-container-high text-xs font-label uppercase border border-outline-variant/20 self-end">신규 부재</button>
       </div>

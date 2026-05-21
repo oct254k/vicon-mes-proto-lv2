@@ -86,7 +86,7 @@ export default function SoNewPage() {
 
       {/* 액션 */}
       <div className="flex gap-4">
-        <button className="px-6 py-2 bg-primary-accent text-black text-sm font-bold uppercase tracking-widest hover:opacity-90">
+        <button className="px-6 py-2 bg-primary-accent text-white text-sm font-bold uppercase tracking-widest hover:opacity-90">
           저장
         </button>
         <a href="/sp/so">

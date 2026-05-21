@@ -45,7 +45,7 @@ export default function QualificationExpirePage() {
                 <td className={`px-4 py-2 tabular-nums font-bold ${q.daysLeft <= 7 ? "text-error" : "text-warning"}`}>{q.daysLeft}일</td>
                 <td className="px-4 py-2"><StatusBadge type={q.status} label={q.status === "error" ? "URGENT" : "SOON"} /></td>
                 <td className="px-4 py-2">
-                  <button className="px-3 py-1 bg-primary-accent text-black text-xs font-label uppercase tracking-widest font-bold">갱신 신청</button>
+                  <button className="px-3 py-1 bg-primary-accent text-white text-xs font-label uppercase tracking-widest font-bold">갱신 신청</button>
                 </td>
               </tr>
             ))}

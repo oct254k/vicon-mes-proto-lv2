@@ -45,7 +45,7 @@ export default function CountPlanPage() {
       <div className="flex items-center gap-4 mb-6">
         <StatusBadge type="warning" label="진행 중 1건" />
         <button onClick={() => setShowForm(!showForm)}
-          className="ml-auto bg-[#00912F] text-black font-label font-bold uppercase tracking-widest px-5 py-2 text-xs hover:opacity-90">
+          className="ml-auto bg-[#00912F] text-white font-label font-bold uppercase tracking-widest px-5 py-2 text-xs hover:opacity-90">
           [계획 생성 ▶]
         </button>
       </div>
@@ -68,7 +68,7 @@ export default function CountPlanPage() {
           <div><label className={labelCls}>예정일</label><input type="date" value={date} onChange={e=>setDate(e.target.value)} className={inputCls} /></div>
           <div className="flex gap-3">
             <button onClick={() => { setSaved(true); setShowForm(false); }}
-              className="bg-[#00912F] text-black font-label font-bold uppercase tracking-widest px-6 py-2 text-sm hover:opacity-90">
+              className="bg-[#00912F] text-white font-label font-bold uppercase tracking-widest px-6 py-2 text-sm hover:opacity-90">
               생성 ▶
             </button>
             <button onClick={() => setShowForm(false)}

@@ -43,7 +43,7 @@ export default function ReceiptPDAPage() {
         <label className="font-label text-xs uppercase tracking-widest opacity-50 block mb-1">바코드/QR 스캔</label>
         <input value={scan} onChange={e=>setScan(e.target.value)} placeholder="ASN ID 스캔 또는 입력"
           className="w-full bg-surface-container-high text-sm px-3 py-3 border border-outline-variant/20 font-label mb-3" />
-        <button onClick={handleScan} className="w-full bg-primary-accent text-black py-4 text-base font-headline font-black uppercase tracking-widest mb-3">
+        <button onClick={handleScan} className="w-full bg-primary-accent text-white py-4 text-base font-headline font-black uppercase tracking-widest mb-3">
           스캔·Lot 채번
         </button>
       </div>
@@ -57,7 +57,7 @@ export default function ReceiptPDAPage() {
             <div className="grid grid-cols-3 gap-2">
               {(["PASS","PARTIAL","FAIL"] as const).map(r=>(
                 <button key={r} onClick={()=>setInspResult(r)}
-                  className={`py-3 text-xs font-label uppercase tracking-widest border ${inspResult===r?"bg-primary-accent text-black":"bg-surface-container-high border-outline-variant/20"}`}>
+                  className={`py-3 text-xs font-label uppercase tracking-widest border ${inspResult===r?"bg-primary-accent text-white":"bg-surface-container-high border-outline-variant/20"}`}>
                   {RESULT_LABEL[r]}
                 </button>
               ))}
@@ -66,7 +66,7 @@ export default function ReceiptPDAPage() {
         </div>
       )}
       {inspResult && (
-        <button className="w-full bg-primary-accent text-black py-4 text-base font-headline font-black uppercase tracking-widest">
+        <button className="w-full bg-primary-accent text-white py-4 text-base font-headline font-black uppercase tracking-widest">
           저장 · 3-Way Matching 연계 ▶
         </button>
       )}

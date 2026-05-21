@@ -16,7 +16,7 @@ export default function NotiRecipientsPage() {
       <PageHeader title="알림 수신자" accent="마스터" nodeRef="SCR-SP-041" description="SP 도메인 알림 수신자 마스터 — 유형별 채널과 활성 여부를 관리합니다." />
 
       <div className="flex gap-3 mb-6">
-        <button className="px-4 py-2 bg-primary-accent text-black text-xs font-label uppercase tracking-widest font-bold hover:opacity-90">
+        <button className="px-4 py-2 bg-primary-accent text-white text-xs font-label uppercase tracking-widest font-bold hover:opacity-90">
           + 수신자 추가
         </button>
       </div>

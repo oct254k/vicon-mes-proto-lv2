@@ -52,7 +52,7 @@ export default function ScheduleCalendarPage() {
         </div>
       </div>
       <div className="flex gap-3 mt-4">
-        <a href="/shp/schedule/new" className="px-4 py-2 bg-primary-accent text-black text-xs font-label uppercase tracking-widest">+ 일정 등록</a>
+        <a href="/shp/schedule/new" className="px-4 py-2 bg-primary-accent text-white text-xs font-label uppercase tracking-widest">+ 일정 등록</a>
         <a href="/shp/schedule/vehicle" className="px-4 py-2 bg-surface-container-high border border-outline-variant/20 text-xs font-label uppercase">차량 배차 →</a>
       </div>
     </div>

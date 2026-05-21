@@ -37,7 +37,7 @@ export default function SignPage() {
         </div>
       ) : (
         <div className="flex flex-col gap-3">
-          <button onClick={()=>setSigned(true)} className="w-full bg-primary-accent text-black py-5 text-base font-headline font-black uppercase tracking-widest">
+          <button onClick={()=>setSigned(true)} className="w-full bg-primary-accent text-white py-5 text-base font-headline font-black uppercase tracking-widest">
             서명 확인 · RECEIVED ▶
           </button>
           <a href="/shp/receive/mismatch" className="w-full block text-center py-3 bg-warning/20 border border-warning/40 text-warning text-sm font-label uppercase">

@@ -18,7 +18,7 @@ export default function QCDefectReportPdaPage() {
         <FieldHeader title="1단계: 부재 스캔" moduleRef="FNC-QC-053" />
         <div className="flex gap-2">
           <input type="text" defaultValue="B01-1-G22C-C-173" className="flex-1 bg-surface-container border border-outline-variant/20 px-3 py-2 text-sm font-mono" readOnly />
-          <button className="bg-primary-accent text-black px-3 py-2 text-xs font-label uppercase font-bold">스캔</button>
+          <button className="bg-primary-accent text-white px-3 py-2 text-xs font-label uppercase font-bold">스캔</button>
         </div>
         <p className="text-xs opacity-50 mt-1">LOT: LOT-20260505-02 | 수량: 1</p>
       </div>
@@ -64,7 +64,7 @@ export default function QCDefectReportPdaPage() {
       </div>
 
       <div className="flex gap-2">
-        <button className="flex-1 bg-primary-accent text-black font-label uppercase tracking-widest py-3 font-bold hover:opacity-90">신고 제출</button>
+        <button className="flex-1 bg-primary-accent text-white font-label uppercase tracking-widest py-3 font-bold hover:opacity-90">신고 제출</button>
         <button className="flex-1 bg-surface-container-high border border-outline-variant/20 font-label uppercase tracking-widest py-3 hover:opacity-90">취소</button>
       </div>
     </div>

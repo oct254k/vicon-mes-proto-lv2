@@ -26,7 +26,7 @@ export default function ShippablePage() {
       />
 
       <div className="flex gap-3 mb-6">
-        <button className="px-4 py-2 bg-primary-accent text-black text-xs font-label uppercase tracking-widest font-bold hover:opacity-90">
+        <button className="px-4 py-2 bg-primary-accent text-white text-xs font-label uppercase tracking-widest font-bold hover:opacity-90">
           출하 스케줄 등록
         </button>
         <button className="px-4 py-2 bg-surface-container text-on-surface text-xs font-label uppercase tracking-widest hover:bg-surface-container-high">

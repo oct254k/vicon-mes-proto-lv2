@@ -57,7 +57,7 @@ export default function QCLossCalcPage() {
                 <input type="number" defaultValue={1} className="w-full bg-surface-container border border-outline-variant/20 px-3 py-2 text-sm font-mono" />
               </div>
             </div>
-            <button className="w-full bg-primary-accent text-black font-label uppercase tracking-widest py-2.5 font-bold hover:opacity-90">손실 산출</button>
+            <button className="w-full bg-primary-accent text-white font-label uppercase tracking-widest py-2.5 font-bold hover:opacity-90">손실 산출</button>
           </div>
         </div>
 
@@ -80,7 +80,7 @@ export default function QCLossCalcPage() {
               </div>
             ))}
             <div className="flex gap-2 mt-4">
-              <button className="flex-1 bg-primary-accent text-black font-label uppercase py-2 font-bold hover:opacity-90">회계 큐 전송</button>
+              <button className="flex-1 bg-primary-accent text-white font-label uppercase py-2 font-bold hover:opacity-90">회계 큐 전송</button>
               <button className="flex-1 bg-surface-container-high border border-outline-variant/20 font-label uppercase py-2 hover:opacity-90">저장</button>
             </div>
           </div>

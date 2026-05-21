@@ -60,7 +60,7 @@ export default function WOLabelsPage() {
             ))}
           </div>
         </div>
-        <button className="px-4 py-1.5 bg-primary-accent text-black text-xs font-label uppercase tracking-widest self-end">검색</button>
+        <button className="px-4 py-1.5 bg-primary-accent text-white text-xs font-label uppercase tracking-widest self-end">검색</button>
         <button className="px-4 py-1.5 bg-surface-container-high text-xs font-label uppercase border border-outline-variant/20 self-end">엑셀</button>
       </div>
 
@@ -191,7 +191,7 @@ export default function WOLabelsPage() {
               {/* 재인쇄 버튼 */}
               <button
                 onClick={() => setReprintTarget(selected.id)}
-                className="w-full mt-4 px-6 py-3 bg-primary-accent text-black text-xs font-label uppercase tracking-widest font-bold hover:bg-primary-accent/80 transition-colors flex items-center justify-center gap-2"
+                className="w-full mt-4 px-6 py-3 bg-primary-accent text-white text-xs font-label uppercase tracking-widest font-bold hover:bg-primary-accent/80 transition-colors flex items-center justify-center gap-2"
               >
                 <span className="material-symbols-outlined text-base">print</span>
                 라벨 재인쇄
@@ -217,7 +217,7 @@ export default function WOLabelsPage() {
               className="w-full bg-surface-container-high text-on-surface text-sm px-3 py-2 border border-outline-variant/20 font-label mb-4 resize-none" />
             <div className="flex gap-2 justify-end">
               <button onClick={() => setReprintTarget(null)} className="px-4 py-2 text-xs font-label uppercase border border-outline-variant/20">취소</button>
-              <button onClick={() => setReprintTarget(null)} className="px-4 py-2 bg-primary-accent text-black text-xs font-label uppercase tracking-widest">재인쇄 ▶</button>
+              <button onClick={() => setReprintTarget(null)} className="px-4 py-2 bg-primary-accent text-white text-xs font-label uppercase tracking-widest">재인쇄 ▶</button>
             </div>
           </div>
         </div>

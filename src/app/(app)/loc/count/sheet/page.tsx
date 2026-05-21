@@ -75,7 +75,7 @@ export default function CountSheetPage() {
       </div>
 
       <div className="flex gap-3 mt-6">
-        <button onClick={() => setSaved(true)} className="bg-[#00912F] text-black font-label font-bold uppercase tracking-widest px-6 py-3 text-sm hover:opacity-90">
+        <button onClick={() => setSaved(true)} className="bg-[#00912F] text-white font-label font-bold uppercase tracking-widest px-6 py-3 text-sm hover:opacity-90">
           시트 저장 ▶
         </button>
         <button className="bg-surface-elevated border border-outline/20 text-on-surface/50 font-label uppercase tracking-widest px-6 py-3 text-sm">취소</button>

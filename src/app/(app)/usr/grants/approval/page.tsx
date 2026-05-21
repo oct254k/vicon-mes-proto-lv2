@@ -31,7 +31,7 @@ export default function GrantApprovalPage() {
               <option>전체</option><option>레벨 상향</option><option>부서 추가</option><option>메뉴 권한 추가</option>
             </select>
           </div>
-          <button className="px-4 py-1.5 bg-primary-accent text-black text-xs font-label uppercase tracking-widest font-bold">검색</button>
+          <button className="px-4 py-1.5 bg-primary-accent text-white text-xs font-label uppercase tracking-widest font-bold">검색</button>
         </div>
       </div>
 
@@ -61,7 +61,7 @@ export default function GrantApprovalPage() {
                 <td className="px-4 py-2">
                   {r.status === "PENDING" && (
                     <div className="flex gap-2">
-                      <button className="px-3 py-1 bg-primary-accent text-black text-xs font-label uppercase tracking-widest font-bold">승인</button>
+                      <button className="px-3 py-1 bg-primary-accent text-white text-xs font-label uppercase tracking-widest font-bold">승인</button>
                       <button className="px-3 py-1 bg-surface-container border border-error/40 text-error text-xs font-label uppercase tracking-widest">반려</button>
                     </div>
                   )}

@@ -42,7 +42,7 @@ export default function ReceiveScanPage() {
       <div className="mt-4">
         <input value={scan} onChange={e=>setScan(e.target.value)} placeholder="QR 코드 스캔"
           className="w-full bg-surface-container-high text-sm px-3 py-3 border border-outline-variant/20 font-label mb-3" />
-        <button onClick={handleScan} className="w-full bg-primary-accent text-black py-4 text-base font-headline font-black uppercase tracking-widest mb-3">
+        <button onClick={handleScan} className="w-full bg-primary-accent text-white py-4 text-base font-headline font-black uppercase tracking-widest mb-3">
           스캔 · 검수
         </button>
         <a href="/shp/receive/mismatch" className="w-full block text-center py-3 bg-warning/20 border border-warning/40 text-warning text-sm font-label uppercase">
@@ -51,7 +51,7 @@ export default function ReceiveScanPage() {
       </div>
       {scanned.length===PKG_LIST.length && (
         <div className="mt-3">
-          <a href="/shp/receive/sign" className="w-full block text-center py-4 bg-primary-accent text-black text-base font-headline font-black uppercase tracking-widest">
+          <a href="/shp/receive/sign" className="w-full block text-center py-4 bg-primary-accent text-white text-base font-headline font-black uppercase tracking-widest">
             서명 수령으로 이동 ▶
           </a>
         </div>

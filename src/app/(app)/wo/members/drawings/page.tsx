@@ -28,7 +28,7 @@ export default function DrawingsPage() {
 
       <div className="flex gap-3 mb-6">
         <button onClick={() => setShowUpload(!showUpload)}
-          className="px-4 py-2 bg-primary-accent text-black text-xs font-label uppercase tracking-widest font-bold hover:opacity-90">
+          className="px-4 py-2 bg-primary-accent text-white text-xs font-label uppercase tracking-widest font-bold hover:opacity-90">
           + 도면 등록
         </button>
       </div>
@@ -44,7 +44,7 @@ export default function DrawingsPage() {
             className="w-full bg-surface-container px-3 py-2 text-sm font-mono border border-outline-variant/20 mb-3 focus:border-primary-accent focus:outline-none" />
           <div className="flex gap-2">
             <button onClick={() => setShowUpload(false)}
-              className="px-4 py-2 bg-primary-accent text-black text-xs font-label uppercase tracking-widest font-bold hover:opacity-90">저장</button>
+              className="px-4 py-2 bg-primary-accent text-white text-xs font-label uppercase tracking-widest font-bold hover:opacity-90">저장</button>
             <button onClick={() => setShowUpload(false)}
               className="px-4 py-2 bg-surface-container text-xs font-label uppercase tracking-widest">취소</button>
           </div>

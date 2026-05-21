@@ -67,7 +67,7 @@ export default function ScrapNewPage() {
 
           <div className="flex gap-3 pt-2">
             <button onClick={() => setDone(true)} disabled={!reason || !qty}
-              className="bg-[#00912F] text-black font-label font-bold uppercase tracking-widest px-6 py-3 text-sm hover:opacity-90 disabled:opacity-30">
+              className="bg-[#00912F] text-white font-label font-bold uppercase tracking-widest px-6 py-3 text-sm hover:opacity-90 disabled:opacity-30">
               등록 확정 ▶
             </button>
             <button className="bg-surface-elevated border border-outline/20 text-on-surface/50 font-label uppercase tracking-widest px-6 py-3 text-sm">취소</button>

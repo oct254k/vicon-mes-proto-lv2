@@ -43,7 +43,7 @@ export default function EQPdaReplacePage() {
           </tbody>
         </table>
       </div>
-      <button className="bg-primary-accent text-black font-label font-bold text-xs uppercase tracking-widest px-8 py-3">
+      <button className="bg-primary-accent text-white font-label font-bold text-xs uppercase tracking-widest px-8 py-3">
         부품 교체 등록
       </button>
     </div>

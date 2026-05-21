@@ -208,7 +208,6 @@ export default function OPSDashboardPage() {
     <div>
       <PageHeader
         title="운영현황·대시보드"
-        accent="OPS"
         nodeRef="SCR-OPS-000"
         status="LIVE"
         description="공장별 실시간 생산현황 · KPI · 공정 가동률 · WO 진척"

@@ -81,7 +81,7 @@ export default function AdjustNewPage() {
         <div><label className={labelCls}>비고</label><input value={note} onChange={e=>setNote(e.target.value)} className={inputCls} placeholder="추가 설명" /></div>
 
         <button onClick={() => setSubmitted(true)} disabled={!reason || !location || !approver}
-          className="bg-[#00912F] text-black font-label font-bold uppercase tracking-widest px-6 py-3 text-sm hover:opacity-90 disabled:opacity-30">
+          className="bg-[#00912F] text-white font-label font-bold uppercase tracking-widest px-6 py-3 text-sm hover:opacity-90 disabled:opacity-30">
           보정 신청 ▶
         </button>
 

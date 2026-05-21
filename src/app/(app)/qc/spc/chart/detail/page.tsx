@@ -69,7 +69,7 @@ export default function QCSpcChartDetailPage() {
                   <td className="px-4 py-2 text-xs">{p.zone}</td>
                   <td className="px-4 py-2">{p.violate ? <StatusBadge type="error" label="위반" /> : <StatusBadge type="running" label="정상" />}</td>
                   <td className="px-4 py-2 text-xs font-bold">{p.rule}</td>
-                  <td className="px-4 py-2">{p.violate ? <button className="bg-primary-accent text-black text-xs font-label uppercase px-2 py-1 hover:opacity-90">조치</button> : null}</td>
+                  <td className="px-4 py-2">{p.violate ? <button className="bg-primary-accent text-white text-xs font-label uppercase px-2 py-1 hover:opacity-90">조치</button> : null}</td>
                 </tr>
               ))}
             </tbody>

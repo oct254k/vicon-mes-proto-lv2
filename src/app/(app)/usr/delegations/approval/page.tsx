@@ -50,7 +50,7 @@ export default function DelegationApprovalPage() {
                 <td className="px-4 py-2"><StatusBadge type={BADGE[r.status]} label={SL[r.status] ?? r.status} /></td>
                 <td className="px-4 py-2">
                   <div className="flex gap-2">
-                    <button className="px-3 py-1 bg-primary-accent text-black text-xs font-label uppercase tracking-widest font-bold">승인</button>
+                    <button className="px-3 py-1 bg-primary-accent text-white text-xs font-label uppercase tracking-widest font-bold">승인</button>
                     <button className="px-3 py-1 bg-surface-container border border-error/40 text-error text-xs font-label uppercase tracking-widest">반려</button>
                   </div>
                 </td>

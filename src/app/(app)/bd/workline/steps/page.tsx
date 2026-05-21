@@ -59,7 +59,7 @@ export default function WorklineStepsPage() {
             <option key={o.key} value={o.key}>{o.label}</option>
           ))}
         </select>
-        <span className="text-xs font-label text-on-surface/30 uppercase tracking-wider self-center">
+        <span className="text-xs font-label text-on-surface/70 uppercase tracking-wider self-center">
           {steps.length}단계 / {rows.length}작업
         </span>
       </div>
@@ -70,7 +70,7 @@ export default function WorklineStepsPage() {
           <div key={step.seq} className="flex items-center gap-2">
             <div className="bg-primary-accent/20 border border-primary-accent/40 px-3 py-1.5 text-xs font-label text-primary-accent">
               {step.seq}. {step.name}
-              <span className="text-on-surface/30 ml-1">({step.operations.length})</span>
+              <span className="text-on-surface/70 ml-1">({step.operations.length})</span>
             </div>
             {i < steps.length - 1 && <span className="text-primary-accent text-sm">→</span>}
           </div>

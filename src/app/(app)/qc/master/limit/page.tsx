@@ -45,7 +45,7 @@ export default function QCMasterLimitPage() {
           <option>ACTIVE만</option><option>전체</option>
         </select>
         <div className="flex-1" />
-        <button className="bg-primary-accent text-black text-sm font-label uppercase px-4 py-1.5 font-bold hover:opacity-90">자동 재산정</button>
+        <button className="bg-primary-accent text-white text-sm font-label uppercase px-4 py-1.5 font-bold hover:opacity-90">자동 재산정</button>
       </div>
 
       <section className="bg-surface-container-lowest">

@@ -108,7 +108,7 @@ export default function QCSpcInputPage() {
             <span className="ml-3 text-on-surface-variant">3건 / 평균 2.299mm — 모두 IN_SPEC (UCL 2.32 / LCL 2.28)</span>
           </div>
           <div className="mt-4">
-            <button className="bg-primary-accent text-black text-sm font-label uppercase tracking-widest px-6 py-2 font-bold hover:opacity-90">
+            <button className="bg-primary-accent text-white text-sm font-label uppercase tracking-widest px-6 py-2 font-bold hover:opacity-90">
               확정 ▶
             </button>
           </div>
@@ -136,7 +136,7 @@ export default function QCSpcInputPage() {
           </div>
           <button
             onClick={handlePdaSubmit}
-            className="w-full bg-primary-accent text-black text-sm font-label uppercase tracking-widest py-3 font-bold hover:opacity-90 mb-4"
+            className="w-full bg-primary-accent text-white text-sm font-label uppercase tracking-widest py-3 font-bold hover:opacity-90 mb-4"
           >
             확정 ▶ 즉시 평가
           </button>

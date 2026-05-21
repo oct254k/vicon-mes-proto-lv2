@@ -44,7 +44,7 @@ export default function GateFallbackPage() {
         <StatusBadge type="warning" label="MANUAL PASS — 감사 로그 기록됨" />
       ) : (
         <div className="flex gap-3">
-          <button onClick={()=>setSaved(true)} className="px-6 py-2 bg-primary-accent text-black text-xs font-label uppercase tracking-widest">수동 통과 확인 ▶</button>
+          <button onClick={()=>setSaved(true)} className="px-6 py-2 bg-primary-accent text-white text-xs font-label uppercase tracking-widest">수동 통과 확인 ▶</button>
           <button className="px-6 py-2 bg-surface-container-high border border-outline-variant/20 text-xs font-label uppercase">취소</button>
         </div>
       )}

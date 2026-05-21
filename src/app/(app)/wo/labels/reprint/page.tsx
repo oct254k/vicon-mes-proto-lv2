@@ -311,7 +311,7 @@ export default function LabelReprintPage() {
           <button key={t.key} onClick={() => setTab(t.key)}
             className={`px-3 py-1.5 text-xs font-label uppercase tracking-widest border transition-colors ${
               tab === t.key
-                ? "bg-primary-accent text-black border-primary-accent"
+                ? "bg-primary-accent text-white border-primary-accent"
                 : "bg-surface-container border-outline-variant/20 text-on-surface-variant hover:border-primary-accent/40"
             }`}>
             {t.label}
@@ -395,7 +395,7 @@ export default function LabelReprintPage() {
                         {/* 재인쇄 */}
                         {r.status !== "BLOCKED" && (
                           <button onClick={() => handleReprint(r.id)}
-                            className="px-2 py-1 bg-primary-accent text-black text-[10px] font-label uppercase tracking-wider hover:opacity-90 whitespace-nowrap">
+                            className="px-2 py-1 bg-primary-accent text-white text-[10px] font-label uppercase tracking-wider hover:opacity-90 whitespace-nowrap">
                             재인쇄
                           </button>
                         )}
@@ -450,7 +450,7 @@ export default function LabelReprintPage() {
               </p>
               {previewRow.status !== "BLOCKED" && (
                 <button onClick={() => { handleReprint(previewRow.id); setPreviewRow(null); }}
-                  className="px-4 py-2 bg-primary-accent text-black text-xs font-label uppercase tracking-wider font-bold hover:opacity-90">
+                  className="px-4 py-2 bg-primary-accent text-white text-xs font-label uppercase tracking-wider font-bold hover:opacity-90">
                   재인쇄
                 </button>
               )}

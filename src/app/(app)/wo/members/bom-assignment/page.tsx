@@ -17,7 +17,7 @@ export default function BomAssignmentPage() {
       <PageHeader title="BOM-부재" accent="할당" nodeRef="SCR-WO-012" description="BOM 다단계 펼침 — 부재 코드별 자재 소요 할당 매트릭스. FNC-WO-004" />
 
       <div className="flex gap-3 mb-6">
-        <button className="px-4 py-2 bg-primary-accent text-black text-xs font-label uppercase tracking-widest font-bold hover:opacity-90">
+        <button className="px-4 py-2 bg-primary-accent text-white text-xs font-label uppercase tracking-widest font-bold hover:opacity-90">
           할당 저장
         </button>
         <button className="px-4 py-2 bg-surface-container text-on-surface text-xs font-label uppercase tracking-widest hover:bg-surface-container-high">

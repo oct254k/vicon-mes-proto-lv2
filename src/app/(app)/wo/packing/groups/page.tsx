@@ -104,7 +104,7 @@ function GroupDetail({ group, onClose, onToggleStatus }: {
           <div className="flex flex-wrap gap-2 pt-1">
             <button
               onClick={() => setSaved(true)}
-              className="px-4 py-2 bg-primary-accent text-black text-xs font-label uppercase tracking-widest font-bold hover:opacity-90"
+              className="px-4 py-2 bg-primary-accent text-white text-xs font-label uppercase tracking-widest font-bold hover:opacity-90"
             >
               저장
             </button>
@@ -186,7 +186,7 @@ export default function PackingGroupsPage() {
 
       <div className="flex gap-3 mb-6">
         <button onClick={() => setShowForm(!showForm)}
-          className="px-4 py-2 bg-primary-accent text-black text-xs font-label uppercase tracking-widest font-bold hover:opacity-90">
+          className="px-4 py-2 bg-primary-accent text-white text-xs font-label uppercase tracking-widest font-bold hover:opacity-90">
           + 신규 그룹
         </button>
       </div>
@@ -198,7 +198,7 @@ export default function PackingGroupsPage() {
             className="w-full bg-surface-container px-3 py-2 text-sm font-headline border border-outline-variant/20 mb-3 focus:border-primary-accent focus:outline-none" />
           <div className="flex gap-2">
             <button onClick={() => { setShowForm(false); setNewName(""); }}
-              className="px-4 py-2 bg-primary-accent text-black text-xs font-label uppercase tracking-widest font-bold hover:opacity-90">저장</button>
+              className="px-4 py-2 bg-primary-accent text-white text-xs font-label uppercase tracking-widest font-bold hover:opacity-90">저장</button>
             <button onClick={() => setShowForm(false)}
               className="px-4 py-2 bg-surface-container text-xs font-label uppercase tracking-widest hover:bg-surface-container-high">취소</button>
           </div>

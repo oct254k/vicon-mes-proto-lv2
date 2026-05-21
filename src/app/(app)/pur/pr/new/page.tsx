@@ -40,7 +40,7 @@ export default function PRNewPage() {
         </div>
       ) : (
         <div className="flex gap-3">
-          <button onClick={()=>setSaved(true)} className="px-6 py-2 bg-primary-accent text-black text-xs font-label uppercase tracking-widest">저장 (DRAFT)</button>
+          <button onClick={()=>setSaved(true)} className="px-6 py-2 bg-primary-accent text-white text-xs font-label uppercase tracking-widest">저장 (DRAFT)</button>
           <button className="px-6 py-2 bg-surface-container-high border border-outline-variant/20 text-xs font-label uppercase">초기화</button>
         </div>
       )}

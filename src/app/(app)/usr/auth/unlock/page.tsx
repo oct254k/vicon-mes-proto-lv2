@@ -45,7 +45,7 @@ export default function UnlockPage() {
                 <td className="px-4 py-2 tabular-nums text-warning font-bold">{u.attempts}</td>
                 <td className="px-4 py-2 text-xs opacity-60">{u.reason}</td>
                 <td className="px-4 py-2">
-                  <button className="px-3 py-1 bg-primary-accent text-black text-xs font-label uppercase tracking-widest font-bold">해제</button>
+                  <button className="px-3 py-1 bg-primary-accent text-white text-xs font-label uppercase tracking-widest font-bold">해제</button>
                 </td>
               </tr>
             ))}
@@ -62,7 +62,7 @@ export default function UnlockPage() {
           </div>
           <div className="col-span-2"><label className={LABEL}>비고</label><input className={INPUT} placeholder="추가 메모 (선택)" /></div>
         </div>
-        <button className="mt-4 px-6 py-2 bg-primary-accent text-black text-xs font-label uppercase tracking-widest font-bold">잠금 해제 실행</button>
+        <button className="mt-4 px-6 py-2 bg-primary-accent text-white text-xs font-label uppercase tracking-widest font-bold">잠금 해제 실행</button>
       </div>
     </div>
   );

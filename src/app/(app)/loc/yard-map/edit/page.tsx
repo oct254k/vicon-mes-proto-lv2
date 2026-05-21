@@ -376,7 +376,7 @@ export default function YardMapEditPage() {
               </div>
             </div>
             <div className="flex gap-2 pt-2">
-              <button onClick={()=>{renderCanvas();setSaved1(true);}} className="bg-[#00912F] text-black font-label font-bold uppercase tracking-widest px-6 py-3 text-xs hover:opacity-90">
+              <button onClick={()=>{renderCanvas();setSaved1(true);}} className="bg-[#00912F] text-white font-label font-bold uppercase tracking-widest px-6 py-3 text-xs hover:opacity-90">
                 저장 ▶
               </button>
               {saved1 && <span className="self-center text-[#00912F] text-[10px] font-label uppercase tracking-widest">저장 완료</span>}
@@ -482,7 +482,7 @@ export default function YardMapEditPage() {
             </div>
 
             <div className="flex gap-2 mt-4">
-              <button onClick={()=>setSaved2(true)} className="bg-[#00912F] text-black font-label font-bold uppercase tracking-widest px-6 py-3 text-sm hover:opacity-90">
+              <button onClick={()=>setSaved2(true)} className="bg-[#00912F] text-white font-label font-bold uppercase tracking-widest px-6 py-3 text-sm hover:opacity-90">
                 배치 저장 ▶
               </button>
               {saved2 && <span className="self-center text-[#00912F] text-xs font-label uppercase tracking-widest">저장 완료</span>}
@@ -546,7 +546,7 @@ export default function YardMapEditPage() {
                 <div className="flex gap-2 pt-1">
                   <button
                     onClick={saveCellEdit}
-                    className="flex-1 bg-[#00912F] text-black font-label font-bold uppercase tracking-widest py-2 text-[10px] hover:opacity-90"
+                    className="flex-1 bg-[#00912F] text-white font-label font-bold uppercase tracking-widest py-2 text-[10px] hover:opacity-90"
                   >
                     저장
                   </button>

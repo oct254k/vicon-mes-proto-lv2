@@ -57,7 +57,7 @@ export default function MatrixImpactPage() {
       </div>
 
       <div className="flex gap-3">
-        <a href="/usr/matrix/approval" className="px-6 py-2 bg-primary-accent text-black text-xs font-label uppercase tracking-widest font-bold">L4 결재 신청</a>
+        <a href="/usr/matrix/approval" className="px-6 py-2 bg-primary-accent text-white text-xs font-label uppercase tracking-widest font-bold">L4 결재 신청</a>
         <a href="/usr/matrix/edit" className="px-6 py-2 bg-surface-container border border-outline-variant/20 text-on-surface text-xs font-label uppercase tracking-widest">편집으로 돌아가기</a>
       </div>
       <p className="text-xs opacity-40 font-label mt-2">ⓘ 회귀 테스트 실패 건 존재 시 L4 결재 신청 불가.</p>

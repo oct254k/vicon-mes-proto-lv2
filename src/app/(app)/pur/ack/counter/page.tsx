@@ -39,7 +39,7 @@ export default function ACKCounterPage() {
         <StatusBadge type={result==="ACCEPTED"?"running":"stopped"} label={result==="ACCEPTED"?"협상 수락 — PO 갱신":"역제안 거부 — 보충 PR 회귀"} />
       ) : (
         <div className="flex gap-3">
-          <button onClick={()=>setResult("ACCEPTED")} className="px-6 py-2 bg-primary-accent text-black text-xs font-label uppercase tracking-widest">수락 ▶</button>
+          <button onClick={()=>setResult("ACCEPTED")} className="px-6 py-2 bg-primary-accent text-white text-xs font-label uppercase tracking-widest">수락 ▶</button>
           <button onClick={()=>setResult("REJECTED")} className="px-6 py-2 bg-error text-white text-xs font-label uppercase tracking-widest">거부 / 보충 PR</button>
           <button className="px-6 py-2 bg-surface-container-high border border-outline-variant/20 text-xs font-label uppercase">취소</button>
         </div>

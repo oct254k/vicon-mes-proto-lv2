@@ -55,7 +55,7 @@ export default function AdjustListPage() {
       <DataTable title="보정 이력" columns={COLS} data={DATA} bufferCount={DATA.length} />
 
       <div className="flex gap-2 mt-4">
-        <button className="bg-[#00912F] text-black font-label font-bold uppercase tracking-widest px-5 py-2 text-xs hover:opacity-90">
+        <button className="bg-[#00912F] text-white font-label font-bold uppercase tracking-widest px-5 py-2 text-xs hover:opacity-90">
           [신규 보정 신청 ▶]
         </button>
         <button className="bg-surface-elevated border border-outline/20 text-on-surface/60 font-label uppercase tracking-widest px-5 py-2 text-xs hover:border-outline/40">

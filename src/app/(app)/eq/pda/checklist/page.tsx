@@ -45,7 +45,7 @@ export default function EQPdaChecklistPage() {
           </button>
         ))}
       </div>
-      <button className="bg-primary-accent text-black font-label font-bold text-xs uppercase tracking-widest px-8 py-3">
+      <button className="bg-primary-accent text-white font-label font-bold text-xs uppercase tracking-widest px-8 py-3">
         체크리스트 제출
       </button>
     </div>

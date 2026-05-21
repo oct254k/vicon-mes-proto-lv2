@@ -70,7 +70,7 @@ export default function QCRecallListPage() {
             {ALL_STEPS.map(s => <option key={s} value={s}>{s}</option>)}
           </select>
         </div>
-        <button className="px-4 py-1.5 bg-primary-accent text-black text-xs font-label uppercase tracking-widest self-end">검색</button>
+        <button className="px-4 py-1.5 bg-primary-accent text-white text-xs font-label uppercase tracking-widest self-end">검색</button>
       </div>
 
       {/* 단계별 집계 */}

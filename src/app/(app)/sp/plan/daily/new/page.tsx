@@ -33,7 +33,7 @@ export default function DailyPlanNewPage() {
           <p className="font-headline font-black text-sm uppercase tracking-widest text-primary-accent">저장 완료</p>
           <p className="text-xs opacity-70 mt-1">일일 계획 항목이 Draft 상태로 등록되었습니다.</p>
           <div className="flex gap-3 mt-4">
-            <a href="/sp/plan/daily" className="px-4 py-2 bg-primary-accent text-black text-xs font-label uppercase tracking-widest font-bold">보드로 이동</a>
+            <a href="/sp/plan/daily" className="px-4 py-2 bg-primary-accent text-white text-xs font-label uppercase tracking-widest font-bold">보드로 이동</a>
             <button onClick={() => setSaved(false)} className="px-4 py-2 bg-surface-container text-xs font-label uppercase tracking-widest">추가 입력</button>
           </div>
         </div>
@@ -82,7 +82,7 @@ export default function DailyPlanNewPage() {
 
           <div className="flex gap-3 pt-2">
             <button type="submit"
-              className="px-6 py-3 bg-primary-accent text-black text-xs font-label uppercase tracking-widest font-bold hover:opacity-90">
+              className="px-6 py-3 bg-primary-accent text-white text-xs font-label uppercase tracking-widest font-bold hover:opacity-90">
               저장 (Draft)
             </button>
             <a href="/sp/plan/daily" className="px-4 py-3 bg-surface-container text-xs font-label uppercase tracking-widest hover:bg-surface-container-high">취소</a>

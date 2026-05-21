@@ -113,7 +113,7 @@ export default function WOReleaseResultPage() {
             <button
               onClick={handleRelease}
               disabled={checked.length === 0}
-              className="px-4 py-2 bg-primary-accent text-black text-xs font-label uppercase tracking-widest disabled:opacity-30"
+              className="px-4 py-2 bg-primary-accent text-white text-xs font-label uppercase tracking-widest disabled:opacity-30"
             >
               발행 ▶
             </button>

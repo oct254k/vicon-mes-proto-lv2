@@ -26,7 +26,7 @@ export default function TransferArrivePage() {
   };
 
   return (
-    <div>
+    <div className="max-w-sm mx-auto">
       <PageHeader
         title="이동 도착 확인"
         accent="이동 입고"
@@ -35,7 +35,7 @@ export default function TransferArrivePage() {
         description="PDA — 도착 위치에서 Lot 스캔 → 실 수량 확인 → MATCH / DISCREPANCY 판정."
       />
 
-      <div className="max-w-sm mx-auto space-y-5">
+      <div className="space-y-5">
         {done ? (
           <div className={`border-l-4 p-6 ${result === "MATCH" ? "bg-[#00912F]/20 border-[#00912F]" : "bg-danger/20 border-danger"}`}>
             <p className={`font-label font-bold uppercase tracking-widest mb-2 ${result === "MATCH" ? "text-[#00912F]" : "text-danger"}`}>
@@ -80,7 +80,7 @@ export default function TransferArrivePage() {
                   )}
                 </div>
 
-                <button onClick={handleConfirm} className="w-full py-3 bg-[#00912F] text-black font-label font-bold uppercase tracking-widest text-sm hover:opacity-90">
+                <button onClick={handleConfirm} className="w-full py-3 bg-[#00912F] text-white font-label font-bold uppercase tracking-widest text-sm hover:opacity-90">
                   도착 확정 ▶
                 </button>
               </>

@@ -205,7 +205,7 @@ export default function WOOrdersPage() {
               className="bg-surface-container-high text-on-surface text-xs px-2 py-1.5 border border-outline-variant/20 font-label" />
           </div>
         </div>
-        <button className="px-4 py-1.5 bg-primary-accent text-black text-xs font-label uppercase tracking-widest self-end">검색</button>
+        <button className="px-4 py-1.5 bg-primary-accent text-white text-xs font-label uppercase tracking-widest self-end">검색</button>
         <button onClick={() => { setPlant("ALL"); setStates(["RELEASED","IN_PROGRESS"]); }}
           className="px-4 py-1.5 bg-surface-container-high text-on-surface text-xs font-label uppercase tracking-widest self-end border border-outline-variant/20">초기화</button>
       </div>

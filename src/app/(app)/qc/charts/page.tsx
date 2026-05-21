@@ -64,7 +64,7 @@ export default function QCChartsPage() {
         <div className="flex gap-2">
           {(["X_BAR","R","p-chart"] as const).map((t) => (
             <button key={t} onClick={() => setChartType(t)}
-              className={`px-3 py-1.5 text-xs font-label uppercase tracking-wider ${chartType === t ? "bg-primary-accent text-black font-bold" : "bg-surface-container text-on-surface-variant border border-outline-variant/20"}`}>
+              className={`px-3 py-1.5 text-xs font-label uppercase tracking-wider ${chartType === t ? "bg-primary-accent text-white font-bold" : "bg-surface-container text-on-surface-variant border border-outline-variant/20"}`}>
               {t}
             </button>
           ))}

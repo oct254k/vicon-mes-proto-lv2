@@ -32,7 +32,7 @@ export default function GrantRevokePage() {
               <option>전체</option><option>PRD</option><option>QC</option><option>SHP</option>
             </select>
           </div>
-          <button className="px-4 py-1.5 bg-primary-accent text-black text-xs font-label uppercase tracking-widest font-bold">검색</button>
+          <button className="px-4 py-1.5 bg-primary-accent text-white text-xs font-label uppercase tracking-widest font-bold">검색</button>
         </div>
       </div>
 

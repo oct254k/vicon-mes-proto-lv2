@@ -53,7 +53,7 @@ export default function QCCertificateTemplatePage() {
       {TABS.map((t, tabIdx) => (
         <div key={t.label} className={tabIdx !== 0 ? "hidden" : ""}>
           <div className="flex justify-end mb-4">
-            <button className="bg-primary-accent text-black text-sm font-label uppercase px-4 py-1.5 font-bold hover:opacity-90">+ 템플릿 추가</button>
+            <button className="bg-primary-accent text-white text-sm font-label uppercase px-4 py-1.5 font-bold hover:opacity-90">+ 템플릿 추가</button>
           </div>
           <DataTable
             title={`${t.label} 양식 — ${t.count}건`}

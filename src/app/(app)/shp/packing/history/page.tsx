@@ -25,7 +25,7 @@ export default function PackingHistoryPage() {
           <input value={q} onChange={e=>setQ(e.target.value)} placeholder="PKG ID / WO 번호"
             className="bg-surface-container-high text-sm px-3 py-1.5 border border-outline-variant/20 font-label w-52" />
         </div>
-        <button className="px-4 py-1.5 bg-primary-accent text-black text-xs font-label uppercase tracking-widest self-end">조회</button>
+        <button className="px-4 py-1.5 bg-primary-accent text-white text-xs font-label uppercase tracking-widest self-end">조회</button>
       </div>
       <FieldHeader title="패킹 이력" moduleRef={`${rows.length}건`} />
       <div className="bg-surface-container-lowest overflow-x-auto">

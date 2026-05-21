@@ -53,7 +53,7 @@ export default function LoadingScanPage() {
       <div className="mt-4">
         <input value={scan} onChange={e=>setScan(e.target.value)} placeholder="PKG 바코드 스캔"
           className="w-full bg-surface-container-high text-sm px-3 py-3 border border-outline-variant/20 font-label mb-3" />
-        <button onClick={handleScan} className="w-full bg-primary-accent text-black py-4 text-base font-headline font-black uppercase tracking-widest">
+        <button onClick={handleScan} className="w-full bg-primary-accent text-white py-4 text-base font-headline font-black uppercase tracking-widest">
           스캔 · LOADED 전이
         </button>
       </div>

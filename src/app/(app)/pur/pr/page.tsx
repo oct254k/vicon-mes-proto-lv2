@@ -50,7 +50,7 @@ export default function PURPrPage() {
             </div>
           ))}
         </div>
-        <button className="bg-primary-accent text-black font-label font-bold text-xs uppercase tracking-widest px-5 py-2 hover:opacity-90">
+        <button className="bg-primary-accent text-white font-label font-bold text-xs uppercase tracking-widest px-5 py-2 hover:opacity-90">
           + 신규 PR
         </button>
       </div>

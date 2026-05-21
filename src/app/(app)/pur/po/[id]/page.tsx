@@ -103,7 +103,7 @@ export default function PODetailPage({ params }: { params: { id: string } }) {
       </div>
 
       <div className="flex gap-3">
-        <button className="bg-primary-accent text-black font-label font-bold text-xs uppercase tracking-widest px-6 py-2 hover:opacity-90">
+        <button className="bg-primary-accent text-white font-label font-bold text-xs uppercase tracking-widest px-6 py-2 hover:opacity-90">
           발송
         </button>
         <button className="border border-error text-error font-label font-bold text-xs uppercase tracking-widest px-6 py-2 hover:bg-error/10">

@@ -37,7 +37,7 @@ export default function LOCReceivePage() {
       onClick={() => setTab(id)}
       className={`px-6 py-2 text-sm font-label uppercase tracking-widest transition-colors ${
         tab === id
-          ? "bg-primary-accent text-black"
+          ? "bg-primary-accent text-white"
           : "bg-surface-container text-on-surface-variant hover:bg-surface-container-high"
       }`}
     >
@@ -102,7 +102,7 @@ export default function LOCReceivePage() {
           </div>
 
           <div className="flex gap-3 pt-4">
-            <button className="px-6 py-2 bg-primary-accent text-black text-sm font-bold uppercase tracking-widest hover:opacity-90">입고 등록 ▶</button>
+            <button className="px-6 py-2 bg-primary-accent text-white text-sm font-bold uppercase tracking-widest hover:opacity-90">입고 등록 ▶</button>
             <button className="px-6 py-2 bg-surface-container text-on-surface-variant text-sm font-bold uppercase tracking-widest hover:bg-surface-container-high" onClick={() => setTab("pda")}>
               PDA 모드로 전환 ▶
             </button>
@@ -138,7 +138,7 @@ export default function LOCReceivePage() {
             <input type="number" className={inputCls + " w-full"} value={pdaQty} onChange={(e) => setPdaQty(e.target.value)} />
             <p className="text-xs text-on-surface-variant">Lot (자동) RCV-20260501-0017&ensp;FIFO 순번 4521</p>
           </div>
-          <button className="w-full py-3 bg-primary-accent text-black text-sm font-bold uppercase tracking-widest hover:opacity-90">입고 확정 ▶</button>
+          <button className="w-full py-3 bg-primary-accent text-white text-sm font-bold uppercase tracking-widest hover:opacity-90">입고 확정 ▶</button>
           <button className="w-full py-2 bg-surface-container text-on-surface-variant text-sm uppercase tracking-widest">취소</button>
           <div className="border-t border-outline pt-3">
             <p className="text-xs uppercase tracking-widest text-on-surface-variant mb-2">최근 5건</p>

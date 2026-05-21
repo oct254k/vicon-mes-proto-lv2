@@ -28,7 +28,7 @@ export default function MemberLandingPage() {
       />
 
       <div className="flex gap-3 mb-6">
-        <a href="/sp/member/board" className="px-4 py-2 bg-primary-accent text-black text-xs font-label uppercase tracking-widest font-bold hover:opacity-90">
+        <a href="/sp/member/board" className="px-4 py-2 bg-primary-accent text-white text-xs font-label uppercase tracking-widest font-bold hover:opacity-90">
           보드 보기
         </a>
         <a href="/sp/member/upload" className="px-4 py-2 bg-surface-container text-on-surface text-xs font-label uppercase tracking-widest hover:bg-surface-container-high">

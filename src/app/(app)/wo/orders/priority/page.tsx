@@ -39,7 +39,7 @@ export default function WoOrdersPriorityPage() {
       <PageHeader title="WO 우선순위" accent="재정렬" nodeRef="SCR-WO-004" description="WO 발행 우선순위를 드래그 또는 ▲▼ 버튼으로 재정렬합니다. — FNC-WO-008" />
 
       <div className="flex gap-3 mb-6">
-        <button className="px-4 py-2 bg-primary-accent text-black text-xs font-label uppercase tracking-widest font-bold hover:opacity-90">
+        <button className="px-4 py-2 bg-primary-accent text-white text-xs font-label uppercase tracking-widest font-bold hover:opacity-90">
           납기 자동 정렬
         </button>
         <button className="px-4 py-2 bg-surface-container text-xs font-label uppercase tracking-widest hover:bg-surface-container-high">

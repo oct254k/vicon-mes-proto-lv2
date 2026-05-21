@@ -56,7 +56,7 @@ export default function QCSpcMasterPage() {
           <option>비활성만</option>
         </select>
         <div className="flex-1" />
-        <button className="bg-primary-accent text-black text-sm font-label uppercase tracking-widest px-4 py-1.5 font-bold hover:opacity-90">
+        <button className="bg-primary-accent text-white text-sm font-label uppercase tracking-widest px-4 py-1.5 font-bold hover:opacity-90">
           + 신규 항목
         </button>
         <button className="bg-surface-container-high border border-outline-variant/20 text-on-surface text-sm font-label uppercase tracking-widest px-4 py-1.5 hover:opacity-90">

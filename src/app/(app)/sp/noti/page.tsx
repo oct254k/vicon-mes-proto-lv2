@@ -36,7 +36,7 @@ export default function SpNotiPage() {
       </div>
 
       <div className="flex gap-3 mb-6">
-        <a href="/sp/noti/inbox" className="px-4 py-2 bg-primary-accent text-black text-xs font-label uppercase tracking-widest font-bold hover:opacity-90">
+        <a href="/sp/noti/inbox" className="px-4 py-2 bg-primary-accent text-white text-xs font-label uppercase tracking-widest font-bold hover:opacity-90">
           인박스
         </a>
         <a href="/sp/noti/recipients" className="px-4 py-2 bg-surface-container text-on-surface text-xs font-label uppercase tracking-widest hover:bg-surface-container-high">

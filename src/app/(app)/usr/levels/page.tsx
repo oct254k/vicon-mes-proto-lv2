@@ -39,7 +39,7 @@ export default function LevelsPage() {
       </div>
 
       <div className="flex gap-3">
-        <a href="/usr/levels/permission-level" className="px-5 py-2 bg-primary-accent text-black text-xs font-label uppercase tracking-widest font-bold">레벨 마스터 관리</a>
+        <a href="/usr/levels/permission-level" className="px-5 py-2 bg-primary-accent text-white text-xs font-label uppercase tracking-widest font-bold">레벨 마스터 관리</a>
         <a href="/usr/levels/department-code" className="px-5 py-2 bg-surface-container border border-outline-variant/20 text-on-surface text-xs font-label uppercase tracking-widest">부서 코드 관리</a>
       </div>
     </div>

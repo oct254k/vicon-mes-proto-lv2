@@ -49,7 +49,7 @@ export default function ChannelPage() {
       {saved ? (
         <p className="text-sm font-label text-primary-accent mt-4">채널 설정 저장 완료</p>
       ) : (
-        <button onClick={()=>setSaved(true)} className="px-6 py-2 bg-primary-accent text-black text-xs font-label uppercase tracking-widest mt-4">저장 ▶</button>
+        <button onClick={()=>setSaved(true)} className="px-6 py-2 bg-primary-accent text-white text-xs font-label uppercase tracking-widest mt-4">저장 ▶</button>
       )}
     </div>
   );

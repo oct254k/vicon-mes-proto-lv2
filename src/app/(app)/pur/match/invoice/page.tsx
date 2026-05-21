@@ -39,7 +39,7 @@ export default function 인보이스Page() {
         </div>
       ) : (
         <div className="flex gap-3">
-          <button onClick={()=>setMatched(true)} className="px-6 py-2 bg-primary-accent text-black text-xs font-label uppercase tracking-widest">저장 · Matching 트리거 ▶</button>
+          <button onClick={()=>setMatched(true)} className="px-6 py-2 bg-primary-accent text-white text-xs font-label uppercase tracking-widest">저장 · Matching 트리거 ▶</button>
           <button className="px-6 py-2 bg-surface-container-high border border-outline-variant/20 text-xs font-label uppercase">취소</button>
         </div>
       )}

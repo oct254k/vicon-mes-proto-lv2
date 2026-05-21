@@ -37,7 +37,7 @@ export default function PRListPage() {
             {STATUSES.map(s=><option key={s}>{s}</option>)}
           </select>
         </div>
-        <button className="px-4 py-1.5 bg-primary-accent text-black text-xs font-label uppercase tracking-widest self-end">조회</button>
+        <button className="px-4 py-1.5 bg-primary-accent text-white text-xs font-label uppercase tracking-widest self-end">조회</button>
         <button className="px-4 py-1.5 ml-auto bg-surface-container-high border border-outline-variant/20 text-xs font-label uppercase">+ 신규 PR</button>
       </div>
       <div className="bg-surface-container-lowest overflow-x-auto">

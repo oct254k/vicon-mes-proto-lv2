@@ -43,7 +43,7 @@ export default function StoredAgingPage() {
                   </div>
                 </td>
                 <td className="px-4 py-2">
-                  <button className="text-xs px-2 py-1 bg-primary-accent text-black font-label uppercase">출하 이동</button>
+                  <button className="text-xs px-2 py-1 bg-primary-accent text-white font-label uppercase">출하 이동</button>
                 </td>
               </tr>
             ))}

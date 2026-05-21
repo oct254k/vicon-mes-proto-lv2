@@ -44,7 +44,7 @@ export default function EQMasterEditPage() {
         </div>
       </div>
       <div className="flex gap-3">
-        <button className="bg-primary-accent text-black font-label font-bold text-xs uppercase tracking-widest px-6 py-2">저장</button>
+        <button className="bg-primary-accent text-white font-label font-bold text-xs uppercase tracking-widest px-6 py-2">저장</button>
         <button className="bg-surface-container text-on-surface font-label font-bold text-xs uppercase tracking-widest px-6 py-2">취소</button>
       </div>
     </div>

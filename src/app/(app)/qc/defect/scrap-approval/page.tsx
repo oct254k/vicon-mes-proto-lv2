@@ -59,7 +59,7 @@ export default function QCDefectScrapApprovalPage() {
                   <td className="px-4 py-2 text-xs opacity-60">{r.disposedBy}</td>
                   <td className="px-4 py-2 tabular-nums text-xs">{r.disposedAt}</td>
                   <td className="px-4 py-2">
-                    <button className="bg-primary-accent text-black text-xs font-label uppercase px-3 py-1 hover:opacity-90 mr-1">승인</button>
+                    <button className="bg-primary-accent text-white text-xs font-label uppercase px-3 py-1 hover:opacity-90 mr-1">승인</button>
                     <button className="bg-error/20 text-error text-xs font-label uppercase px-3 py-1 hover:opacity-90">반려</button>
                   </td>
                 </tr>

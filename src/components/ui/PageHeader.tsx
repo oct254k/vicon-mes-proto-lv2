@@ -6,18 +6,13 @@ interface PageHeaderProps {
   description?: string;
 }
 
-export function PageHeader({ title, accent, status = "CALIBRATED", description }: PageHeaderProps) {
+export function PageHeader({ title, accent, description }: PageHeaderProps) {
   return (
     <header className="mb-10 relative">
       <div className="absolute -left-8 top-0 w-1 h-12 bg-primary-accent" />
       <h1 className="text-2xl md:text-3xl font-black tracking-tighter uppercase font-headline mb-2 leading-none">
         {title}{accent && <span className="ml-2 text-on-surface">{accent}</span>}
       </h1>
-      <div className="flex items-center gap-4 flex-wrap mb-2">
-        <span className="font-label text-sm uppercase tracking-[0.2em] text-on-surface-variant opacity-70">
-          시스템 상태: {status}
-        </span>
-      </div>
       {description && (
         <p className="text-lg text-on-surface-variant/80 font-body leading-relaxed max-w-3xl">
           {description}

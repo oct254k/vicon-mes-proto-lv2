@@ -46,7 +46,7 @@ export default function InventoryTracePage() {
         <select className="bg-surface border border-outline/20 px-3 py-2 text-xs text-on-surface focus:outline-none focus:border-[#00912F]">
           <option>P3000</option><option>P1000</option><option>P2000</option>
         </select>
-        <button className="bg-[#00912F] text-black font-label font-bold uppercase tracking-widest px-4 py-2 text-xs hover:opacity-90">조회</button>
+        <button className="bg-[#00912F] text-white font-label font-bold uppercase tracking-widest px-4 py-2 text-xs hover:opacity-90">조회</button>
       </div>
 
       <FieldHeader title="FIFO 순서 목록 — M-COIL-A / P3000" moduleRef="FNC-LOC-035" />

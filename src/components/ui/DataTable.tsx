@@ -20,7 +20,7 @@ export function DataTable({ title, columns, data, bufferCount }: DataTableProps)
         <h3 className="font-headline font-black text-sm uppercase tracking-widest">
           {title}{" "}
           {bufferCount !== undefined && (
-            <span className="opacity-30 font-light ml-2">
+            <span className="text-on-surface font-light ml-2">
               | Buffer: {String(bufferCount).padStart(3, "0")} Entries
             </span>
           )}

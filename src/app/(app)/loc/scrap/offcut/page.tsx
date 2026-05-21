@@ -51,7 +51,7 @@ export default function ScrapOffcutPage() {
           <div><label className={labelCls}>보관 위치</label><input value={loc} onChange={e=>setLoc(e.target.value)} className={inputCls} /></div>
           <div className="flex gap-3 pt-2">
             <button onClick={() => setSaved(true)} disabled={!length || !width}
-              className="bg-[#00912F] text-black font-label font-bold uppercase tracking-widest px-6 py-3 text-sm hover:opacity-90 disabled:opacity-30">
+              className="bg-[#00912F] text-white font-label font-bold uppercase tracking-widest px-6 py-3 text-sm hover:opacity-90 disabled:opacity-30">
               등록 ▶
             </button>
             {saved && <span className="self-center text-[#00912F] text-xs font-label uppercase tracking-widest">OFC 생성됨</span>}

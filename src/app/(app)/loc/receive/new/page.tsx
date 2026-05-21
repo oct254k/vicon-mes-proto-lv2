@@ -63,10 +63,10 @@ export default function ReceiveNewPage() {
 
           <FieldHeader title="B. 라인별 자재" moduleRef="FNC-LOC-038" />
           <DataTable title="입고 라인" columns={LINE_COLS} data={LINES} bufferCount={LINES.length} />
-          <div className="bg-surface-elevated p-4 text-xs font-label">
-            <p className="uppercase tracking-widest text-on-surface/40 mb-2">Lot 자동채번 미리보기</p>
-            <p><span className="text-[#00912F]">1</span> → RCV-20260501-0017 <span className="text-on-surface/30">(FIFO 순번 4521)</span></p>
-            <p><span className="text-[#00912F]">2</span> → RCV-20260501-0018 <span className="text-on-surface/30">(FIFO 순번 4522)</span></p>
+          <div className="bg-surface-elevated p-4 text-xs font-label text-on-surface font-bold">
+            <p className="uppercase tracking-widest mb-2">Lot 자동채번 미리보기</p>
+            <p><span>1</span> → RCV-20260501-0017 <span>(FIFO 순번 4521)</span></p>
+            <p><span>2</span> → RCV-20260501-0018 <span>(FIFO 순번 4522)</span></p>
           </div>
 
           <FieldHeader title="C. 입고 위치 검증" moduleRef="FNC-LOC-040" />
@@ -80,7 +80,7 @@ export default function ReceiveNewPage() {
           </div>
 
           <div className="flex gap-3 pt-2">
-            <button onClick={() => setDone(true)} className="bg-[#00912F] text-black font-label font-bold uppercase tracking-widest px-6 py-3 text-sm hover:opacity-90">
+            <button onClick={() => setDone(true)} className="bg-[#00912F] text-white font-label font-bold uppercase tracking-widest px-6 py-3 text-sm hover:opacity-90">
               입고 등록 ▶
             </button>
             <button className="bg-surface-elevated border border-outline/20 text-on-surface/50 font-label uppercase tracking-widest px-6 py-3 text-sm">취소</button>

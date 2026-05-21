@@ -54,7 +54,7 @@ export default function InventoryMovePage() {
       <DataTable title="위치 간 이동" columns={COLS} data={DATA} bufferCount={DATA.length} />
 
       <div className="flex gap-2 mt-4">
-        <button className="bg-[#00912F] text-black font-label font-bold uppercase tracking-widest px-5 py-2 text-xs hover:opacity-90">
+        <button className="bg-[#00912F] text-white font-label font-bold uppercase tracking-widest px-5 py-2 text-xs hover:opacity-90">
           [이동 요청 생성 ▶]
         </button>
         <button className="bg-surface-elevated border border-outline/20 text-on-surface/60 font-label uppercase tracking-widest px-5 py-2 text-xs hover:border-outline/40">

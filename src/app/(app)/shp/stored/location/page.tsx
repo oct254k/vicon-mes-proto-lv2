@@ -20,7 +20,7 @@ export default function StoredLocationPage() {
       <div className="bg-surface-container-lowest overflow-x-auto mb-4">
         <div className="p-4 border-l-4 border-primary-accent bg-surface-container-highest/30 flex justify-between">
           <span className="font-headline font-black text-sm uppercase tracking-widest">야적 위치 목록</span>
-          <button className="px-3 py-1 bg-primary-accent text-black text-xs font-label uppercase">위치 변경</button>
+          <button className="px-3 py-1 bg-primary-accent text-white text-xs font-label uppercase">위치 변경</button>
         </div>
         <table className="w-full text-left border-collapse">
           <thead><tr className="bg-surface-container border-b border-outline">

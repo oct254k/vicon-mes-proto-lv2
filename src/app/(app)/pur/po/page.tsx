@@ -71,7 +71,7 @@ export default function PURPoPage() {
 
       <FieldHeader title="PO 목록" moduleRef="SCR-PUR-023" />
       <div className="flex justify-end mb-3">
-        <button className="bg-primary-accent text-black font-label font-bold text-xs uppercase tracking-widest px-5 py-2 hover:opacity-90">
+        <button className="bg-primary-accent text-white font-label font-bold text-xs uppercase tracking-widest px-5 py-2 hover:opacity-90">
           + PO 발행
         </button>
       </div>

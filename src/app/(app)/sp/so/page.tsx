@@ -77,7 +77,7 @@ export default function SoListPage() {
           </select>
         </div>
         <a href="/sp/so/new">
-          <button className="px-5 py-2 bg-primary-accent text-black text-sm font-bold uppercase tracking-widest hover:opacity-90 transition-opacity">
+          <button className="px-5 py-2 bg-primary-accent text-white text-sm font-bold uppercase tracking-widest hover:opacity-90 transition-opacity">
             + 신규 수주
           </button>
         </a>

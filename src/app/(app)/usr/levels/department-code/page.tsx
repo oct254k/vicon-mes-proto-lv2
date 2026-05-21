@@ -34,7 +34,7 @@ export default function DepartmentCodePage() {
       <DataTable title="B. 부서 코드 목록" columns={COLS} data={DEPTS} bufferCount={7} />
 
       <div className="flex gap-3 mt-4">
-        <button className="px-5 py-2 bg-primary-accent text-black text-xs font-label uppercase tracking-widest font-bold">부서 코드 추가</button>
+        <button className="px-5 py-2 bg-primary-accent text-white text-xs font-label uppercase tracking-widest font-bold">부서 코드 추가</button>
         <button className="px-5 py-2 bg-surface-container border border-outline-variant/20 text-on-surface text-xs font-label uppercase tracking-widest">내보내기 (CSV)</button>
       </div>
       <p className="text-xs opacity-40 font-label mt-2">ⓘ 부서 코드 삭제 시 해당 부서 사용자의 부서 재배정이 선행되어야 합니다.</p>

@@ -54,7 +54,7 @@ export default function QCDefectInspectQueuePage() {
                   <td className="px-4 py-2 text-sm tabular-nums">{r.reportedAt}</td>
                   <td className="px-4 py-2"><StatusBadge type={parseInt(r.age) > 12 ? "error" : "warning"} label={r.age} /></td>
                   <td className="px-4 py-2">
-                    <button className="bg-primary-accent text-black text-xs font-label uppercase px-3 py-1 hover:opacity-90">CONFIRM</button>
+                    <button className="bg-primary-accent text-white text-xs font-label uppercase px-3 py-1 hover:opacity-90">CONFIRM</button>
                   </td>
                 </tr>
               ))}

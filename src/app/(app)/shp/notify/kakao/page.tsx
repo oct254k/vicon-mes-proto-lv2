@@ -39,7 +39,7 @@ export default function NotifyKakaoPage() {
       {sent ? (
         <p className="text-sm font-label text-primary-accent">카카오톡 알림 발송 완료</p>
       ) : (
-        <button onClick={()=>setSent(true)} className="px-6 py-2 bg-primary-accent text-black text-xs font-label uppercase tracking-widest">발송 ▶</button>
+        <button onClick={()=>setSent(true)} className="px-6 py-2 bg-primary-accent text-white text-xs font-label uppercase tracking-widest">발송 ▶</button>
       )}
     </div>
   );

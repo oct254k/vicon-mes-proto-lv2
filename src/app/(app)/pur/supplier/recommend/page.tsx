@@ -28,7 +28,7 @@ export default function SupplierRecommendPage() {
           <div key={c.rank} onClick={()=>setSelected(c.rank)}
             className={`bg-surface-container-lowest border-2 p-5 cursor-pointer transition-colors ${selected===c.rank?"border-primary-accent":"border-outline-variant/20 hover:border-primary-accent/50"}`}>
             <div className="flex justify-between items-start mb-3">
-              <span className={`px-2 py-0.5 text-xs font-label font-black ${c.rank===1?"bg-primary-accent text-black":"bg-surface-container"}`}>#{c.rank}순위</span>
+              <span className={`px-2 py-0.5 text-xs font-label font-black ${c.rank===1?"bg-primary-accent text-white":"bg-surface-container"}`}>#{c.rank}순위</span>
               <StatusBadge type={c.tag==="AUTO_RECOMMEND"?"running":"warning"} label={c.tag} />
             </div>
             <p className="font-headline font-black text-lg mb-3">{c.supplier}</p>
@@ -44,7 +44,7 @@ export default function SupplierRecommendPage() {
       </div>
       {selected && (
         <div className="flex gap-3">
-          <button className="px-6 py-2 bg-primary-accent text-black text-xs font-label uppercase tracking-widest">#{selected}순위 선택 · PO 발행 이동 ▶</button>
+          <button className="px-6 py-2 bg-primary-accent text-white text-xs font-label uppercase tracking-widest">#{selected}순위 선택 · PO 발행 이동 ▶</button>
           <a href="/pur/supplier/override" className="px-6 py-2 bg-surface-container-high border border-outline-variant/20 text-xs font-label uppercase">수동 변경 →</a>
         </div>
       )}

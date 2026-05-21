@@ -60,7 +60,7 @@ export default function UserNewPage() {
       </div>
 
       <div className="flex gap-3 mt-2">
-        <button className="px-6 py-2 bg-primary-accent text-black text-xs font-label uppercase tracking-widest font-bold">등록</button>
+        <button className="px-6 py-2 bg-primary-accent text-white text-xs font-label uppercase tracking-widest font-bold">등록</button>
         <button className="px-6 py-2 bg-surface-container border border-outline-variant/20 text-on-surface text-xs font-label uppercase tracking-widest">취소</button>
       </div>
     </div>

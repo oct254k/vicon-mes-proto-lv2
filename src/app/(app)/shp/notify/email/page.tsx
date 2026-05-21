@@ -43,7 +43,7 @@ export default function NotifyEmailPage() {
         <p className="text-sm font-label text-primary-accent">이메일 발송 완료 — 발송 이력 등록됨</p>
       ) : (
         <div className="flex gap-3">
-          <button onClick={()=>setSent(true)} className="px-6 py-2 bg-primary-accent text-black text-xs font-label uppercase tracking-widest">발송 ▶</button>
+          <button onClick={()=>setSent(true)} className="px-6 py-2 bg-primary-accent text-white text-xs font-label uppercase tracking-widest">발송 ▶</button>
           <button className="px-6 py-2 bg-surface-container-high border border-outline-variant/20 text-xs font-label uppercase">미리보기</button>
         </div>
       )}

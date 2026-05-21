@@ -22,7 +22,7 @@ export default function StoredBoardPage() {
       <div className="flex gap-2 mb-4">
         {["ALL","STORED","READY","HOLD"].map(s=>(
           <button key={s} onClick={()=>setFilter(s)}
-            className={`px-3 py-1 text-xs font-label uppercase tracking-widest border ${filter===s?"bg-primary-accent text-black border-primary-accent":"bg-surface-container border-outline-variant/20"}`}>
+            className={`px-3 py-1 text-xs font-label uppercase tracking-widest border ${filter===s?"bg-primary-accent text-white border-primary-accent":"bg-surface-container border-outline-variant/20"}`}>
             {s}
           </button>
         ))}
@@ -45,7 +45,7 @@ export default function StoredBoardPage() {
                 <td className="px-4 py-2 tabular-nums text-xs opacity-70">{r.storedAt}</td>
                 <td className="px-4 py-2 tabular-nums text-xs font-bold">{r.eta}</td>
                 <td className="px-4 py-2">
-                  {r.state==="STORED" && <button className="px-2 py-1 bg-primary-accent text-black text-xs font-label uppercase">READY ▶</button>}
+                  {r.state==="STORED" && <button className="px-2 py-1 bg-primary-accent text-white text-xs font-label uppercase">READY ▶</button>}
                   {r.state==="READY" && <button className="px-2 py-1 bg-warning/80 text-black text-xs font-label uppercase">HOLD</button>}
                 </td>
               </tr>

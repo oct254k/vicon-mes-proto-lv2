@@ -52,7 +52,7 @@ export default function QCRecallPage() {
             <button
               onClick={() => setStep(s)}
               className={`flex flex-col items-center px-5 py-3 text-xs font-label uppercase tracking-widest transition-colors
-                ${s === step ? "bg-primary-accent text-black font-bold" : i < stepIndex ? "bg-surface-container text-primary-accent/60" : "bg-surface-container-lowest text-on-surface/30"}`}
+                ${s === step ? "bg-primary-accent text-white font-bold" : i < stepIndex ? "bg-surface-container text-primary-accent/60" : "bg-surface-container-lowest text-on-surface/30"}`}
             >
               <span className={`text-base font-black mb-0.5 ${s === step ? "text-black" : i < stepIndex ? "text-primary-accent/60" : ""}`}>
                 {String(i + 1).padStart(2, "0")}
@@ -200,7 +200,7 @@ export default function QCRecallPage() {
       {/* 액션 버튼 */}
       <div className="mt-8 flex gap-3">
         {stepIndex < RECALL_STEPS.length - 1 && (
-          <button onClick={advance} className="px-6 py-2 bg-primary-accent text-black text-xs font-label uppercase tracking-widest">
+          <button onClick={advance} className="px-6 py-2 bg-primary-accent text-white text-xs font-label uppercase tracking-widest">
             다음 단계로 진행 ({RECALL_STEPS[stepIndex + 1]})
           </button>
         )}

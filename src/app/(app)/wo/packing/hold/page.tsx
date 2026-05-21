@@ -37,7 +37,7 @@ export default function PackingHoldPage() {
       </div>
 
       <div className="flex gap-3 mb-6">
-        <button className="px-4 py-2 bg-primary-accent text-black text-xs font-label uppercase tracking-widest font-bold hover:opacity-90">
+        <button className="px-4 py-2 bg-primary-accent text-white text-xs font-label uppercase tracking-widest font-bold hover:opacity-90">
           선택 해제 요청
         </button>
         <button className="px-4 py-2 bg-error/20 text-error text-xs font-label uppercase tracking-widest hover:bg-error/30">

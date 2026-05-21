@@ -47,9 +47,9 @@ export default function USRUsersPage() {
               <option value="ACTIVE">활성</option><option value="LOCKED">잠금</option><option value="INACTIVE">비활성</option><option>전체</option>
             </select>
           </div>
-          <button className="px-4 py-1.5 bg-primary-accent text-black text-xs font-label uppercase tracking-widest font-bold">검색</button>
+          <button className="px-4 py-1.5 bg-primary-accent text-white text-xs font-label uppercase tracking-widest font-bold">검색</button>
           <button className="px-4 py-1.5 bg-surface-container border border-outline-variant/20 text-on-surface text-xs font-label uppercase tracking-widest">초기화</button>
-          <a href="/usr/users/new" className="ml-auto px-4 py-1.5 bg-primary-accent text-black text-xs font-label uppercase tracking-widest font-bold">+ 신규 등록</a>
+          <a href="/usr/users/new" className="ml-auto px-4 py-1.5 bg-primary-accent text-white text-xs font-label uppercase tracking-widest font-bold">+ 신규 등록</a>
         </div>
       </div>
 

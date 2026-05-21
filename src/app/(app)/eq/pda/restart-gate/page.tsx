@@ -42,7 +42,7 @@ export default function EQPdaRestartGatePage() {
           </div>
         ))}
       </div>
-      <button disabled={!allPassed} className={`font-label font-bold text-xs uppercase tracking-widest px-8 py-3 ${allPassed ? "bg-primary-accent text-black" : "bg-surface-container text-on-surface/30 cursor-not-allowed"}`}>
+      <button disabled={!allPassed} className={`font-label font-bold text-xs uppercase tracking-widest px-8 py-3 ${allPassed ? "bg-primary-accent text-white" : "bg-surface-container text-on-surface/30 cursor-not-allowed"}`}>
         재가동 승인 제출
       </button>
     </div>

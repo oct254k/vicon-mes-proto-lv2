@@ -49,7 +49,7 @@ export default function QCSpcRuleMapPage() {
           <option>우선순위 전체</option><option>긴급</option><option>높음</option><option>보통</option><option>낮음</option>
         </select>
         <div className="flex-1" />
-        <button className="bg-primary-accent text-black text-sm font-label uppercase px-4 py-1.5 font-bold hover:opacity-90">+ 매핑 추가</button>
+        <button className="bg-primary-accent text-white text-sm font-label uppercase px-4 py-1.5 font-bold hover:opacity-90">+ 매핑 추가</button>
       </div>
 
       <DataTable title="8 Rules 액션 매핑 — 8건" columns={COLUMNS} data={RULES} bufferCount={8} />

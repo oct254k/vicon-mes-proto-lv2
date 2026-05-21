@@ -43,7 +43,7 @@ export default function GrantHistoryPage() {
               <option>전체</option><option>PENDING</option><option>APPROVED</option><option>REJECTED</option>
             </select>
           </div>
-          <button className="px-4 py-1.5 bg-primary-accent text-black text-xs font-label uppercase tracking-widest font-bold">검색</button>
+          <button className="px-4 py-1.5 bg-primary-accent text-white text-xs font-label uppercase tracking-widest font-bold">검색</button>
           <button className="px-4 py-1.5 bg-surface-container border border-outline-variant/20 text-on-surface text-xs font-label uppercase tracking-widest">CSV 내보내기</button>
         </div>
       </div>

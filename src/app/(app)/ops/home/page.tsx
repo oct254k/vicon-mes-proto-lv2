@@ -33,7 +33,7 @@ const FAVORITES = [
 export default function OPSHomePage() {
   return (
     <div className="p-4 bg-surface min-h-screen">
-      <PageHeader title="OPS 운영현황" nodeRef="FNC-OPS-001,007~009" description="역할별 KPI 통합 카드 + 즐겨찾기 · 60초 갱신" />
+      <PageHeader title="운영현황" nodeRef="FNC-OPS-001,007~009" description="역할별 KPI 통합 카드 + 즐겨찾기 · 60초 갱신" />
 
       {/* A. 통합 KPI */}
       <div className="grid grid-cols-4 gap-3 mb-6">

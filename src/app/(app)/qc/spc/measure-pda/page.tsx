@@ -16,7 +16,7 @@ export default function QCSpcMeasurePdaPage() {
         <FieldHeader title="1단계: LOT 스캔" moduleRef="FNC-QC-016" />
         <div className="flex gap-2 mb-2">
           <input type="text" defaultValue="LOT-20260505-01" className="flex-1 bg-surface-container border border-outline-variant/20 px-3 py-2 text-sm font-mono" readOnly />
-          <button className="bg-primary-accent text-black px-3 py-2 text-xs font-label uppercase font-bold">스캔</button>
+          <button className="bg-primary-accent text-white px-3 py-2 text-xs font-label uppercase font-bold">스캔</button>
         </div>
         <p className="text-xs opacity-50">부재코드: B01-1-G22C-C-171 | WC: WC-CUT-01</p>
       </div>
@@ -56,7 +56,7 @@ export default function QCSpcMeasurePdaPage() {
       </div>
 
       <div className="flex gap-2">
-        <button className="flex-1 bg-primary-accent text-black font-label uppercase tracking-widest py-3 font-bold hover:opacity-90">저장</button>
+        <button className="flex-1 bg-primary-accent text-white font-label uppercase tracking-widest py-3 font-bold hover:opacity-90">저장</button>
         <button className="flex-1 bg-surface-container-high border border-outline-variant/20 font-label uppercase tracking-widest py-3 hover:opacity-90">취소</button>
       </div>
     </div>

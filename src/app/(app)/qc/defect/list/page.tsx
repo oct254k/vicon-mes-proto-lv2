@@ -43,7 +43,7 @@ export default function QCDefectListPage() {
           <option>상태 전체</option><option>REPORTED</option><option>CONFIRMED</option><option>DISPOSED</option><option>CLOSED</option>
         </select>
         <div className="flex-1" />
-        <a href="/qc/defect/report-pda" className="bg-primary-accent text-black text-sm font-label uppercase px-4 py-1.5 font-bold hover:opacity-90">+ 신규 신고</a>
+        <a href="/qc/defect/report-pda" className="bg-primary-accent text-white text-sm font-label uppercase px-4 py-1.5 font-bold hover:opacity-90">+ 신규 신고</a>
       </div>
 
       <div className="grid grid-cols-4 gap-3 mb-5">

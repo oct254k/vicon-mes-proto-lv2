@@ -87,7 +87,7 @@ export default function QCRecallExecAlertPage() {
             </div>
             {a.approvedCount < a.approvers.length && (
               <div className="mt-3 flex gap-2">
-                <button className="bg-primary-accent text-black text-xs font-label uppercase px-4 py-1.5 font-bold hover:opacity-90">결재 승인</button>
+                <button className="bg-primary-accent text-white text-xs font-label uppercase px-4 py-1.5 font-bold hover:opacity-90">결재 승인</button>
                 <button className="bg-error/20 text-error text-xs font-label uppercase px-4 py-1.5 hover:opacity-90">재알림 발송</button>
               </div>
             )}
