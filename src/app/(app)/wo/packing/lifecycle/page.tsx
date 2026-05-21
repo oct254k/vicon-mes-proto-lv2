@@ -12,21 +12,30 @@ const STAGE_LABEL: Record<Stage, string> = {
   READY: "준비", HOLD: "보류", LOADED: "적재", SHIPPED: "출하",
 };
 
-const MOCK: Record<Stage, { id: string; woNo: string; member: string; updatedAt: string }[]> = {
-  CREATED:       [{ id: "PKG-WO-P3000-20260507-0003-001", woNo: "WO-P3000-20260507-0003", member: "B01-2-G22C-C-201", updatedAt: "2026-05-07 08:00" }],
+type DestType = "factory1" | "site" | "unknown";
+interface PackingRow { id: string; woNo: string; member: string; updatedAt: string; dest: string; destType: DestType; scheduledAt?: string; }
+
+const MOCK: Record<Stage, PackingRow[]> = {
+  CREATED:       [{ id: "PKG-WO-P3000-20260507-0003-001", woNo: "WO-P3000-20260507-0003", member: "B01-2-G22C-C-201", updatedAt: "2026-05-07 08:00", dest: "미정", destType: "unknown" }],
   IN_PRODUCTION: [
-    { id: "PKG-WO-P3000-20260506-0007-001", woNo: "WO-P3000-20260506-0007", member: "B01-1-G22C-C-171", updatedAt: "2026-05-06 11:30" },
-    { id: "PKG-WO-P3000-20260506-0008-001", woNo: "WO-P3000-20260506-0008", member: "B01-1-G22C-S-172", updatedAt: "2026-05-06 12:00" },
+    { id: "PKG-WO-P3000-20260506-0007-001", woNo: "WO-P3000-20260506-0007", member: "B01-1-G22C-C-171", updatedAt: "2026-05-06 11:30", dest: "송도IFC 현장", destType: "site" },
+    { id: "PKG-WO-P3000-20260506-0008-001", woNo: "WO-P3000-20260506-0008", member: "B01-1-G22C-S-172", updatedAt: "2026-05-06 12:00", dest: "송도IFC 현장", destType: "site" },
   ],
-  COMPLETED:     [{ id: "PKG-WO-P3000-20260505-0002-001", woNo: "WO-P3000-20260505-0002", member: "B02-1-T18B-C-101", updatedAt: "2026-05-05 16:45" }],
+  COMPLETED:     [{ id: "PKG-WO-P3000-20260505-0002-001", woNo: "WO-P3000-20260505-0002", member: "B02-1-T18B-C-101", updatedAt: "2026-05-05 16:45", dest: "판교 현장", destType: "site" }],
   STORED:        [
-    { id: "PKG-WO-P3000-20260505-0001-001", woNo: "WO-P3000-20260505-0001", member: "B02-1-T18B-S-102", updatedAt: "2026-05-05 17:10" },
-    { id: "PKG-WO-P3000-20260504-0002-001", woNo: "WO-P3000-20260504-0002", member: "B03-1-G22C-C-301", updatedAt: "2026-05-04 15:00" },
+    { id: "PKG-WO-P3000-20260505-0001-001", woNo: "WO-P3000-20260505-0001", member: "B02-1-T18B-S-102", updatedAt: "2026-05-05 17:10", dest: "판교 현장", destType: "site",    scheduledAt: "2026-05-22" },
+    { id: "PKG-WO-P3000-20260504-0002-001", woNo: "WO-P3000-20260504-0002", member: "B03-1-G22C-C-301", updatedAt: "2026-05-04 15:00", dest: "제1공장",    destType: "factory1", scheduledAt: "2026-05-21" },
   ],
-  READY:         [{ id: "PKG-WO-P3000-20260504-0001-001", woNo: "WO-P3000-20260504-0001", member: "B01-2-G22C-H-202", updatedAt: "2026-05-06 09:00" }],
-  HOLD:          [{ id: "PKG-WO-P3000-20260420-0001-001", woNo: "WO-P3000-20260420-0001", member: "B01-1-G22C-C-171", updatedAt: "2026-04-20 10:00" }],
-  LOADED:        [{ id: "PKG-WO-P3000-20260503-0001-001", woNo: "WO-P3000-20260503-0001", member: "B02-1-T18B-C-101", updatedAt: "2026-05-06 07:30" }],
+  READY:         [{ id: "PKG-WO-P3000-20260504-0001-001", woNo: "WO-P3000-20260504-0001", member: "B01-2-G22C-H-202", updatedAt: "2026-05-06 09:00", dest: "송도IFC 현장", destType: "site", scheduledAt: "2026-05-21" }],
+  HOLD:          [{ id: "PKG-WO-P3000-20260420-0001-001", woNo: "WO-P3000-20260420-0001", member: "B01-1-G22C-C-171", updatedAt: "2026-04-20 10:00", dest: "송도IFC 현장", destType: "site" }],
+  LOADED:        [{ id: "PKG-WO-P3000-20260503-0001-001", woNo: "WO-P3000-20260503-0001", member: "B02-1-T18B-C-101", updatedAt: "2026-05-06 07:30", dest: "판교 현장",    destType: "site" }],
   SHIPPED:       [],
+};
+
+const DEST_STYLE: Record<DestType, { text: string; dot: string }> = {
+  factory1: { text: "text-tertiary",       dot: "bg-tertiary" },
+  site:     { text: "text-warning",        dot: "bg-warning" },
+  unknown:  { text: "text-on-surface/30",  dot: "bg-on-surface/20" },
 };
 
 const STAGE_COLOR: Record<Stage, string> = {
@@ -78,20 +87,34 @@ export default function PackingLifecyclePage() {
           <table className="w-full text-left border-collapse text-sm">
             <thead>
               <tr className="bg-surface-container border-b border-outline">
-                {["패킹 ID", "WO번호", "부재 코드", "업데이트"].map((h) => (
+                {["패킹 ID", "WO번호", "부재 코드", "목적지", "이동 예정일", "업데이트"].map((h) => (
                   <th key={h} className="px-4 py-2 font-label uppercase tracking-widest text-xs opacity-50">{h}</th>
                 ))}
               </tr>
             </thead>
             <tbody className="font-headline">
-              {rows.map((r) => (
-                <tr key={r.id} className="border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors cursor-pointer">
-                  <td className="px-4 py-2 font-mono text-xs text-primary-accent">{r.id}</td>
-                  <td className="px-4 py-2 text-xs opacity-70">{r.woNo}</td>
-                  <td className="px-4 py-2 font-mono text-xs">{r.member}</td>
-                  <td className="px-4 py-2 tabular-nums text-xs opacity-60">{r.updatedAt}</td>
-                </tr>
-              ))}
+              {rows.map((r) => {
+                const ds = DEST_STYLE[r.destType];
+                return (
+                  <tr key={r.id} className="border-b border-outline-variant hover:bg-surface-container-highest/20 transition-colors cursor-pointer">
+                    <td className="px-4 py-2 font-mono text-xs text-primary-accent">{r.id}</td>
+                    <td className="px-4 py-2 text-xs opacity-70">{r.woNo}</td>
+                    <td className="px-4 py-2 font-mono text-xs">{r.member}</td>
+                    <td className="px-4 py-2 text-xs">
+                      <span className={`flex items-center gap-1.5 ${ds.text} font-bold`}>
+                        <span className={`w-1.5 h-1.5 rounded-full shrink-0 ${ds.dot}`} />
+                        {r.dest}
+                      </span>
+                    </td>
+                    <td className="px-4 py-2 tabular-nums text-xs">
+                      {r.scheduledAt
+                        ? <span className="text-warning font-bold">{r.scheduledAt}</span>
+                        : <span className="opacity-30">—</span>}
+                    </td>
+                    <td className="px-4 py-2 tabular-nums text-xs opacity-60">{r.updatedAt}</td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>
