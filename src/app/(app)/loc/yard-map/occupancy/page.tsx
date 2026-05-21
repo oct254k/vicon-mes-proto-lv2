@@ -4,7 +4,7 @@ import { FieldHeader } from "@/components/ui/FieldHeader";
 
 const KPI = [
   { label: "전체 점유율",  value: "78%",  sub: "30/38 OCCUPIED" },
-  { label: "FULL",         value: "12",   sub: "위치" },
+  { label: "포화",          value: "12",   sub: "위치" },
   { label: "AGING",        value: "5",    sub: "보관 7일+ 위치" },
   { label: "빈 위치",      value: "8",    sub: "즉시 사용 가능" },
 ];
@@ -12,11 +12,11 @@ const KPI = [
 const YARD_COLS = [
   { key: "yard",    label: "Yard" },
   { key: "total",   label: "총 위치" },
-  { key: "empty",   label: "EMPTY" },
-  { key: "occupied",label: "OCCUPIED" },
-  { key: "full",    label: "FULL" },
+  { key: "empty",   label: "비어있음" },
+  { key: "occupied",label: "점유중" },
+  { key: "full",    label: "포화" },
   { key: "aging",   label: "AGING" },
-  { key: "maint",   label: "MAINT" },
+  { key: "maint",   label: "점검" },
   { key: "pct",     label: "점유율" },
 ];
 

@@ -10,7 +10,7 @@ const ROWS = [
 ];
 
 const STATUS_MAP = {
-  HOLD:     { type: "stopped" as const, label: "HOLD" },
+  HOLD:     { type: "stopped" as const, label: "보류" },
   RELEASED: { type: "running" as const, label: "해제됨" },
 };
 

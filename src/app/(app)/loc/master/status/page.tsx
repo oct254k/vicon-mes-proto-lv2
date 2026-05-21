@@ -21,10 +21,10 @@ const DATA = [
 ];
 
 const KPI = [
-  { label: "ACTIVE",      value: "18", badge: "running" as const },
-  { label: "FULL",        value: "12", badge: "warning" as const },
-  { label: "MAINTENANCE", value: "3",  badge: "stopped" as const },
-  { label: "RETIRED",     value: "2",  badge: "idle" as const },
+  { label: "활성",   value: "18", badge: "running" as const },
+  { label: "포화",   value: "12", badge: "warning" as const },
+  { label: "점검중", value: "3",  badge: "stopped" as const },
+  { label: "폐기됨", value: "2",  badge: "idle" as const },
 ];
 
 export default function LocMasterStatusPage() {

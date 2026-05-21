@@ -24,10 +24,10 @@ const LINES = [
 ];
 
 const statusMap: Record<string, { type: "running" | "idle" | "warning" | "stopped"; label: string }> = {
-  Active:     { type: "running", label: "Active" },
-  Draft:      { type: "warning", label: "Draft" },
-  Superseded: { type: "idle",    label: "Superseded" },
-  Retired:    { type: "stopped", label: "Retired" },
+  Active:     { type: "running", label: "활성" },
+  Draft:      { type: "warning", label: "초안" },
+  Superseded: { type: "idle",    label: "대체됨" },
+  Retired:    { type: "stopped", label: "폐기됨" },
 };
 
 export default function BDRoutingPage() {
@@ -127,7 +127,7 @@ export default function BDRoutingPage() {
             onChange={(e) => setFilterStatus(e.target.value)}
             className="bg-surface-container-high border border-outline-variant/30 text-sm px-3 py-1.5 text-on-surface focus:outline-none focus:border-primary-accent"
           >
-            {["전체", "Draft", "Active", "Superseded", "Retired"].map((v) => <option key={v}>{v}</option>)}
+            {[["전체","전체"],["Draft","초안"],["Active","활성"],["Superseded","대체됨"],["Retired","폐기됨"]].map(([v,l]) => <option key={v} value={v}>{l}</option>)}
           </select>
         </div>
         <div className="flex gap-2 ml-auto">

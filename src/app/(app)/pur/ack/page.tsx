@@ -11,10 +11,10 @@ const ACK_DATA = [
 ];
 
 const ACK_STATUS: Record<string, { type: "running" | "warning" | "stopped" | "idle"; label: string }> = {
-  ACCEPTED: { type: "running", label: "ACCEPTED" },
-  PARTIAL:  { type: "warning", label: "PARTIAL" },
+  ACCEPTED: { type: "running", label: "수락" },
+  PARTIAL:  { type: "warning", label: "부분수락" },
   REJECTED: { type: "stopped", label: "반려" },
-  COUNTER:  { type: "warning", label: "COUNTER" },
+  COUNTER:  { type: "warning", label: "대안제안" },
 };
 
 export default function PURAckPage() {
@@ -31,10 +31,10 @@ export default function PURAckPage() {
       {/* KPI */}
       <div className="grid grid-cols-4 gap-4 mb-6">
         {[
-          { label: "ACCEPTED", count: 2, color: "border-primary-accent" },
-          { label: "PARTIAL", count: 1, color: "border-warning" },
-          { label: "REJECTED", count: 2, color: "border-error" },
-          { label: "COUNTER", count: 1, color: "border-outline-variant/40" },
+          { label: "수락", count: 2, color: "border-primary-accent" },
+          { label: "부분수락", count: 1, color: "border-warning" },
+          { label: "반려", count: 2, color: "border-error" },
+          { label: "대안제안", count: 1, color: "border-outline-variant/40" },
         ].map((kpi) => (
           <div key={kpi.label} className={`bg-surface-container-low p-4 border-l-4 ${kpi.color}`}>
             <p className="text-xs font-label uppercase tracking-widest opacity-50 mb-1">{kpi.label}</p>

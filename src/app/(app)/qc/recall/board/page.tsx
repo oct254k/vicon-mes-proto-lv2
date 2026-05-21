@@ -10,10 +10,10 @@ const RECALLS = [
 
 const STAGE_MAP: Record<string, { type: "warning" | "error" | "running" | "idle" | "stopped"; label: string }> = {
   RECALL_DRAFT: { type: "idle", label: "초안" },
-  RECALL_REVIEWED: { type: "warning", label: "REVIEWED" },
-  RECALL_CONFIRMED: { type: "error", label: "CONFIRMED" },
-  RECALL_NOTIFIED: { type: "running", label: "NOTIFIED" },
-  RECALL_CLOSED: { type: "stopped", label: "CLOSED" },
+  RECALL_REVIEWED: { type: "warning", label: "검토됨" },
+  RECALL_CONFIRMED: { type: "error", label: "확정" },
+  RECALL_NOTIFIED: { type: "running", label: "통보됨" },
+  RECALL_CLOSED: { type: "stopped", label: "종료" },
 };
 
 const PIPELINE = ["RECALL_DRAFT", "RECALL_REVIEWED", "RECALL_CONFIRMED", "RECALL_NOTIFIED", "RECALL_CLOSED"];

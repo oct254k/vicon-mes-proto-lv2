@@ -2,9 +2,9 @@ import { PageHeader } from "@/components/ui/PageHeader";
 import { StatusBadge } from "@/components/ui/StatusBadge";
 
 const DEVICE_STATUS: Record<string, { type: "running" | "warning" | "idle" | "error"; label: string }> = {
-  REGISTERED: { type: "running", label: "REGISTERED" },
-  LOST:       { type: "warning", label: "LOST" },
-  RETIRED:    { type: "idle",    label: "RETIRED" },
+  REGISTERED: { type: "running", label: "등록됨" },
+  LOST:       { type: "warning", label: "분실" },
+  RETIRED:    { type: "idle",    label: "폐기됨" },
 };
 
 const MOCK = [

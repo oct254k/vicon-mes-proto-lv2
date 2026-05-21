@@ -40,13 +40,19 @@ type WoState = "RELEASED" | "IN_PROGRESS" | "COMPLETED" | "CANCELLED";
 type WO = typeof MOCK_WOS[0];
 
 function stateLabel(state: string): { type: "running" | "warning" | "idle" | "stopped"; label: string } {
-  if (state === "RELEASED")    return { type: "running", label: "RELEASED" };
-  if (state === "IN_PROGRESS") return { type: "warning", label: "IN_PROGRESS" };
-  if (state === "COMPLETED")   return { type: "idle",    label: "COMPLETED" };
-  return { type: "stopped", label: "CANCELLED" };
+  if (state === "RELEASED")    return { type: "running", label: "발행됨" };
+  if (state === "IN_PROGRESS") return { type: "warning", label: "진행중" };
+  if (state === "COMPLETED")   return { type: "idle",    label: "완료" };
+  return { type: "stopped", label: "취소" };
 }
 
 const STATE_OPTIONS: WoState[] = ["RELEASED", "IN_PROGRESS", "COMPLETED", "CANCELLED"];
+const STATE_LABELS: Record<WoState, string> = {
+  RELEASED:    "발행됨",
+  IN_PROGRESS: "진행중",
+  COMPLETED:   "완료",
+  CANCELLED:   "취소",
+};
 
 function WODetail({ wo, onClose }: { wo: WO; onClose: () => void }) {
   const s = stateLabel(wo.state);
@@ -184,7 +190,7 @@ export default function WOOrdersPage() {
             {STATE_OPTIONS.map(s => (
               <label key={s} className="flex items-center gap-1 text-xs font-label cursor-pointer">
                 <input type="checkbox" checked={states.includes(s)} onChange={() => toggleState(s)} className="accent-primary-accent" />
-                {s}
+                {STATE_LABELS[s]}
               </label>
             ))}
           </div>

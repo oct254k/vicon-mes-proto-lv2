@@ -15,7 +15,7 @@ const COLS = [
   { key: "wo", label: "WO" },
   { key: "location", label: "야적 위치" },
   { key: "memberCount", label: "부재 수" },
-  { key: "storedAt", label: "STORED 일시" },
+  { key: "storedAt", label: "보관 일시" },
   { key: "aging", label: "AGING (일)" },
 ];
 

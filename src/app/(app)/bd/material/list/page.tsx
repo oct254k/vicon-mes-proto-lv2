@@ -6,13 +6,13 @@ import { FieldHeader } from "@/components/ui/FieldHeader";
 import { DataTable } from "@/components/ui/DataTable";
 
 const ALL_MATERIALS = [
-  { code: "M-COIL-A",      name: "코일 A",          spec: "SS400 t3.2×W1219", uom: "m",  category: "M-COIL",  status: "Active" },
-  { code: "M-COIL-B",      name: "코일 B",          spec: "SS275 t2.3×W914",  uom: "m",  category: "M-COIL",  status: "Active" },
-  { code: "M-COIL-HDG",    name: "용융아연도금 코일", spec: "SGHC t1.6×W914",  uom: "m",  category: "M-COIL",  status: "Active" },
-  { code: "M-WIRE-12",     name: "와이어 12mm",      spec: "φ12 SWRH82B",     uom: "kg", category: "M-WIRE",  status: "Active" },
-  { code: "M-PLATE-SS400", name: "후판 SS400",       spec: "SS400 t9×W1500",   uom: "ea", category: "M-PLATE", status: "Active" },
-  { code: "M-BOLT-M16",    name: "볼트 M16×50",     spec: "M16×50 8T ZN",     uom: "ea", category: "M-BOLT",  status: "Inactive" },
-  { code: "M-COIL-C",      name: "코일 C (고장력)",  spec: "SAPH440 t2.0×W1219", uom: "m", category: "M-COIL", status: "Active" },
+  { code: "M-COIL-A",      name: "코일 A",          spec: "SS400 t3.2×W1219", uom: "m",  category: "M-COIL",  status: "활성" },
+  { code: "M-COIL-B",      name: "코일 B",          spec: "SS275 t2.3×W914",  uom: "m",  category: "M-COIL",  status: "활성" },
+  { code: "M-COIL-HDG",    name: "용융아연도금 코일", spec: "SGHC t1.6×W914",  uom: "m",  category: "M-COIL",  status: "활성" },
+  { code: "M-WIRE-12",     name: "와이어 12mm",      spec: "φ12 SWRH82B",     uom: "kg", category: "M-WIRE",  status: "활성" },
+  { code: "M-PLATE-SS400", name: "후판 SS400",       spec: "SS400 t9×W1500",   uom: "ea", category: "M-PLATE", status: "활성" },
+  { code: "M-BOLT-M16",    name: "볼트 M16×50",     spec: "M16×50 8T ZN",     uom: "ea", category: "M-BOLT",  status: "비활성" },
+  { code: "M-COIL-C",      name: "코일 C (고장력)",  spec: "SAPH440 t2.0×W1219", uom: "m", category: "M-COIL", status: "활성" },
 ];
 
 const CATEGORIES = ["전체", "M-COIL", "M-WIRE", "M-PLATE", "M-BOLT"];

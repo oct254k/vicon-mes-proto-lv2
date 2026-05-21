@@ -14,9 +14,9 @@ const MOCK_DEFECTS = [
 ];
 
 const STATUS_MAP: Record<string, { type: "running" | "stopped" | "warning" | "idle" | "error"; label: string }> = {
-  REPORTED: { type: "warning", label: "REPORTED" },
+  REPORTED: { type: "warning", label: "보고됨" },
   CONFIRMED: { type: "running", label: "확정" },
-  DISPOSED: { type: "idle", label: "DISPOSED" },
+  DISPOSED: { type: "idle", label: "처리됨" },
   CLOSED: { type: "stopped", label: "종료" },
 };
 
@@ -90,9 +90,9 @@ export default function QCDefectsPage() {
       <div className="grid grid-cols-4 gap-3 mb-6">
         {[
           { label: "총 건수", value: "24", accent: false },
-          { label: "REPORTED", value: "5", accent: true },
-          { label: "CONFIRMED", value: "4", accent: false },
-          { label: "DISPOSED / CLOSED", value: "8 / 7", accent: false },
+          { label: "보고됨", value: "5", accent: true },
+          { label: "확정", value: "4", accent: false },
+          { label: "처리됨 / 종료", value: "8 / 7", accent: false },
         ].map((kpi) => (
           <div key={kpi.label} className={`p-4 border-l-4 ${kpi.accent ? "border-primary-accent bg-primary-accent/5" : "border-outline-variant/20 bg-surface-container-low"}`}>
             <p className="font-label text-xs uppercase tracking-widest opacity-50 mb-1">{kpi.label}</p>

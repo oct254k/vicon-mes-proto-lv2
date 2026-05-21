@@ -10,8 +10,8 @@ const ALERTS = [
 ];
 
 const STAT_MAP: Record<string, { type: "error" | "warning" | "idle"; label: string }> = {
-  OPEN: { type: "error", label: "OPEN" },
-  INVESTIGATING: { type: "warning", label: "INVESTIGATING" },
+  OPEN: { type: "error", label: "접수" },
+  INVESTIGATING: { type: "warning", label: "조사중" },
   CLOSED: { type: "idle", label: "종료" },
 };
 
@@ -28,9 +28,9 @@ export default function QCSpcAlertPage() {
 
       <div className="grid grid-cols-3 gap-3 mb-6">
         {[
-          { label: "OPEN", value: 8, bad: true },
-          { label: "INVESTIGATING", value: 5, bad: true },
-          { label: "CLOSED (30일)", value: 31, bad: false },
+          { label: "접수", value: 8, bad: true },
+          { label: "조사중", value: 5, bad: true },
+          { label: "종료 (30일)", value: 31, bad: false },
         ].map((k) => (
           <div key={k.label} className={`p-4 border-l-4 ${k.bad ? "border-error" : "border-outline-variant/20"}`}>
             <p className="font-label text-xs uppercase tracking-widest opacity-50 mb-1">{k.label}</p>
@@ -45,7 +45,7 @@ export default function QCSpcAlertPage() {
           <option>전체 Rule</option><option>Rule 1</option><option>Rule 3</option><option>Rule 5</option>
         </select>
         <select className="bg-surface-container border border-outline-variant/20 text-sm px-3 py-1.5 font-label uppercase tracking-wider">
-          <option>전체 상태</option><option>OPEN</option><option>INVESTIGATING</option><option>CLOSED</option>
+          <option>전체 상태</option><option>접수</option><option>조사중</option><option>종료</option>
         </select>
       </div>
 

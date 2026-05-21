@@ -6,14 +6,14 @@ import { FieldHeader } from "@/components/ui/FieldHeader";
 import { DataTable } from "@/components/ui/DataTable";
 
 const DEFECTS = [
-  { code: "DFT-DIM-001", category: "치수 불량", name: "길이 초과",      severity: "Major",  status: "Active" },
-  { code: "DFT-DIM-002", category: "치수 불량", name: "두께 미달",      severity: "Major",  status: "Active" },
-  { code: "DFT-DIM-003", category: "치수 불량", name: "직각도 벗어남",   severity: "Minor",  status: "Active" },
-  { code: "DFT-WLD-001", category: "용접 불량", name: "기공(Porosity)", severity: "Critical", status: "Active" },
-  { code: "DFT-WLD-002", category: "용접 불량", name: "언더컷",          severity: "Major",  status: "Active" },
-  { code: "DFT-EXT-001", category: "외관 불량", name: "스크래치",        severity: "Minor",  status: "Active" },
-  { code: "DFT-EXT-002", category: "외관 불량", name: "녹(발청)",        severity: "Major",  status: "Active" },
-  { code: "DFT-MAT-001", category: "재료 불량", name: "재질 부적합",      severity: "Critical", status: "Active" },
+  { code: "DFT-DIM-001", category: "치수 불량", name: "길이 초과",      severity: "Major",  status: "활성" },
+  { code: "DFT-DIM-002", category: "치수 불량", name: "두께 미달",      severity: "Major",  status: "활성" },
+  { code: "DFT-DIM-003", category: "치수 불량", name: "직각도 벗어남",   severity: "Minor",  status: "활성" },
+  { code: "DFT-WLD-001", category: "용접 불량", name: "기공(Porosity)", severity: "Critical", status: "활성" },
+  { code: "DFT-WLD-002", category: "용접 불량", name: "언더컷",          severity: "Major",  status: "활성" },
+  { code: "DFT-EXT-001", category: "외관 불량", name: "스크래치",        severity: "Minor",  status: "활성" },
+  { code: "DFT-EXT-002", category: "외관 불량", name: "녹(발청)",        severity: "Major",  status: "활성" },
+  { code: "DFT-MAT-001", category: "재료 불량", name: "재질 부적합",      severity: "Critical", status: "활성" },
 ];
 
 const CATEGORIES = ["전체", "치수 불량", "용접 불량", "외관 불량", "재료 불량", "도장 불량", "기타"];

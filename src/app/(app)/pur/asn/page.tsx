@@ -10,9 +10,9 @@ const ASN_DATA = [
 ];
 
 const STATUS_MAP: Record<string, { type: "running" | "warning" | "idle" | "stopped"; label: string }> = {
-  RECEIVED:   { type: "running", label: "RECEIVED" },
-  IN_TRANSIT: { type: "idle", label: "IN TRANSIT" },
-  DELAYED:    { type: "warning", label: "DELAYED" },
+  RECEIVED:   { type: "running", label: "입고됨" },
+  IN_TRANSIT: { type: "idle", label: "운송중" },
+  DELAYED:    { type: "warning", label: "지연" },
   SCHEDULED:  { type: "idle", label: "예정" },
 };
 

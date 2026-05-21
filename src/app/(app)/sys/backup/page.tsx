@@ -10,7 +10,7 @@ const KPI = [
 const BACKUP_STATUS_MAP: Record<string, { type: "running" | "idle" | "warning" | "error"; label: string }> = {
   SCHEDULED: { type: "idle", label: "예정" },
   RUNNING:   { type: "running", label: "실행 중" },
-  SUCCEEDED: { type: "running", label: "SUCCEEDED" },
+  SUCCEEDED: { type: "running", label: "성공" },
   FAILED:    { type: "error", label: "실패" },
 };
 

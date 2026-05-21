@@ -14,9 +14,9 @@ const WCS = [
   { id: "WC-TG-01", name: "TG 전용기",   processLine: "PL-TG",    plant: "P3000", eqCount: 1, machineType: "AUTO",   status: "Active" },
 ];
 
-const statusMap: Record<string, { type: "running" | "idle" | "stopped" | "warning" }> = {
-  Active:   { type: "running" },
-  Inactive: { type: "idle" },
+const statusMap: Record<string, { type: "running" | "idle" | "stopped" | "warning"; label: string }> = {
+  Active:   { type: "running", label: "활성" },
+  Inactive: { type: "idle",    label: "비활성" },
 };
 
 export default function BDWorkcentersPage() {
@@ -52,7 +52,7 @@ export default function BDWorkcentersPage() {
       </span>
     ) as unknown as string,
     statusBadge: (
-      <StatusBadge type={statusMap[w.status].type} label={w.status} />
+      <StatusBadge type={statusMap[w.status].type} label={statusMap[w.status].label} />
     ) as unknown as string,
     action: (
       <div className="flex gap-1">

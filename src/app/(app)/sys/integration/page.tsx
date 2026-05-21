@@ -3,7 +3,7 @@ import { StatusBadge } from "@/components/ui/StatusBadge";
 
 const TOKEN_STATUS: Record<string, { type: "running" | "idle" | "error" | "warning"; label: string }> = {
   ACTIVE:  { type: "running", label: "활성" },
-  REVOKED: { type: "error", label: "REVOKED" },
+  REVOKED: { type: "error", label: "취소됨" },
   EXPIRED: { type: "idle", label: "만료" },
 };
 

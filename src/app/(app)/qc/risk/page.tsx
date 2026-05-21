@@ -51,9 +51,9 @@ const MOCK_IMPACT: ImpactNode[] = [
 ];
 
 function statusStyle(s: RiskStatus): { type: "running" | "warning" | "idle"; label: string } {
-  if (s === "OPEN") return { type: "warning", label: "OPEN" };
-  if (s === "INVESTIGATING") return { type: "running", label: "INVESTIGATING" };
-  return { type: "idle", label: "CLOSED" };
+  if (s === "OPEN") return { type: "warning", label: "접수" };
+  if (s === "INVESTIGATING") return { type: "running", label: "조사중" };
+  return { type: "idle", label: "종료" };
 }
 
 export default function QCRiskPage() {

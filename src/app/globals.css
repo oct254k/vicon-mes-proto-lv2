@@ -47,6 +47,11 @@
   --font-body: "Inter", sans-serif;
   --font-label: "Space Grotesk", sans-serif;
 
+  --text-xs: 1rem;
+  --text-xs--line-height: 1.5rem;
+  --text-sm: 1.125rem;
+  --text-sm--line-height: 1.75rem;
+
   --radius-DEFAULT: 0rem;
   --radius-lg: 0rem;
   --radius-xl: 0rem;

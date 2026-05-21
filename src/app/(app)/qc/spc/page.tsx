@@ -13,8 +13,8 @@ const NAV = [
 ];
 
 const SUMMARY = [
-  { label: "OPEN 알림", value: "8건", status: "error" as const },
-  { label: "INVESTIGATING", value: "5건", status: "warning" as const },
+  { label: "접수 알림", value: "8건", status: "error" as const },
+  { label: "조사중", value: "5건", status: "warning" as const },
   { label: "오늘 측정 수", value: "81건", status: "running" as const },
 ];
 

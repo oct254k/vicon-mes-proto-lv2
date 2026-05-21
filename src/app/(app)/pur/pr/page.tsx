@@ -39,9 +39,9 @@ export default function PURPrPage() {
         <div className="flex gap-6">
           {[
             { label: "전체", count: 4 },
-            { label: "DRAFT", count: 1 },
-            { label: "APPROVED", count: 2 },
-            { label: "CONVERTED", count: 1 },
+            { label: "초안", count: 1 },
+            { label: "승인", count: 2 },
+            { label: "전환", count: 1 },
           ].map((s) => (
             <div key={s.label} className="text-center">
               <p className="font-headline font-black text-2xl">{s.count}</p>

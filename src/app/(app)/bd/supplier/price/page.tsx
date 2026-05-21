@@ -3,13 +3,13 @@ import { FieldHeader } from "@/components/ui/FieldHeader";
 import { DataTable } from "@/components/ui/DataTable";
 
 const PRICES = [
-  { supplier: "현대제철",     material: "M-COIL-A",      uom: "m",  unitPrice: "4,200",  currency: "KRW", validFrom: "2026-01-01", validTo: "2026-12-31", status: "Active" },
-  { supplier: "포스코",       material: "M-COIL-A",      uom: "m",  unitPrice: "4,050",  currency: "KRW", validFrom: "2026-01-01", validTo: "2026-12-31", status: "Active" },
-  { supplier: "현대제철",     material: "M-PLATE-SS400", uom: "ea", unitPrice: "38,000", currency: "KRW", validFrom: "2026-01-01", validTo: "2026-12-31", status: "Active" },
-  { supplier: "동국제강",     material: "M-WIRE-12",     uom: "kg", unitPrice: "1,850",  currency: "KRW", validFrom: "2026-02-01", validTo: "2026-12-31", status: "Active" },
-  { supplier: "포스코",       material: "M-COIL-HDG",    uom: "m",  unitPrice: "5,600",  currency: "KRW", validFrom: "2026-01-01", validTo: "2026-06-30", status: "Active" },
-  { supplier: "Nippon Steel", material: "M-COIL-C",      uom: "m",  unitPrice: "6,100",  currency: "KRW", validFrom: "2026-03-01", validTo: "2026-12-31", status: "Active" },
-  { supplier: "케이에스텍",   material: "M-BOLT-M16",    uom: "ea", unitPrice: "320",    currency: "KRW", validFrom: "2026-01-01", validTo: "2026-12-31", status: "Active" },
+  { supplier: "현대제철",     material: "M-COIL-A",      uom: "m",  unitPrice: "4,200",  currency: "KRW", validFrom: "2026-01-01", validTo: "2026-12-31", status: "활성" },
+  { supplier: "포스코",       material: "M-COIL-A",      uom: "m",  unitPrice: "4,050",  currency: "KRW", validFrom: "2026-01-01", validTo: "2026-12-31", status: "활성" },
+  { supplier: "현대제철",     material: "M-PLATE-SS400", uom: "ea", unitPrice: "38,000", currency: "KRW", validFrom: "2026-01-01", validTo: "2026-12-31", status: "활성" },
+  { supplier: "동국제강",     material: "M-WIRE-12",     uom: "kg", unitPrice: "1,850",  currency: "KRW", validFrom: "2026-02-01", validTo: "2026-12-31", status: "활성" },
+  { supplier: "포스코",       material: "M-COIL-HDG",    uom: "m",  unitPrice: "5,600",  currency: "KRW", validFrom: "2026-01-01", validTo: "2026-06-30", status: "활성" },
+  { supplier: "Nippon Steel", material: "M-COIL-C",      uom: "m",  unitPrice: "6,100",  currency: "KRW", validFrom: "2026-03-01", validTo: "2026-12-31", status: "활성" },
+  { supplier: "케이에스텍",   material: "M-BOLT-M16",    uom: "ea", unitPrice: "320",    currency: "KRW", validFrom: "2026-01-01", validTo: "2026-12-31", status: "활성" },
 ];
 
 const COLUMNS = [

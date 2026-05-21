@@ -14,7 +14,7 @@ const COLS = [
 ];
 
 const STATUS_MAP: Record<string, { type: "running"|"idle"|"warning"|"error"; label: string }> = {
-  PUBLISHED: { type: "running", label: "PUBLISHED" },
+  PUBLISHED: { type: "running", label: "게시됨" },
   DRAFT:     { type: "idle",    label: "초안" },
   EXPIRED:   { type: "warning", label: "만료" },
 };
@@ -38,7 +38,7 @@ export default function NoticeListPage() {
       <PageHeader title="공지 목록" accent="LIST" nodeRef="SCR-SYS-010" status="PROTOTYPE"
         description="DRAFT / PUBLISHED / EXPIRED 상태 필터, 긴급 배지 표시" />
       <div className="flex gap-2 mb-4">
-        {["전체","DRAFT","PUBLISHED","EXPIRED"].map(f => (
+        {["전체","초안","게시됨","만료"].map(f => (
           <button key={f} className="px-3 py-1.5 text-xs font-label uppercase tracking-widest bg-surface-container border border-outline-variant/20 hover:border-[#00912F] transition-colors">
             {f}
           </button>

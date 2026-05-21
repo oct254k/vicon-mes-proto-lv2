@@ -6,13 +6,13 @@ import { FieldHeader } from "@/components/ui/FieldHeader";
 import { DataTable } from "@/components/ui/DataTable";
 
 const SUPPLIERS = [
-  { code: "SUP-001", name: "현대제철",     type: "철강",   contact: "02-3464-5000", country: "KR", grade: "A", status: "Active" },
-  { code: "SUP-002", name: "포스코",       type: "철강",   contact: "054-220-0114", country: "KR", grade: "A", status: "Active" },
-  { code: "SUP-003", name: "동국제강",     type: "철강",   contact: "02-317-1000",  country: "KR", grade: "B", status: "Active" },
-  { code: "SUP-004", name: "세아제강",     type: "강관",   contact: "02-3459-3114", country: "KR", grade: "B", status: "Active" },
-  { code: "SUP-005", name: "케이에스텍",   type: "볼트",   contact: "031-498-1200", country: "KR", grade: "C", status: "Active" },
-  { code: "SUP-006", name: "한국스틸",     type: "철강",   contact: "051-831-9000", country: "KR", grade: "B", status: "Inactive" },
-  { code: "SUP-007", name: "Nippon Steel", type: "철강",   contact: "+81-3-6867-4111", country: "JP", grade: "A", status: "Active" },
+  { code: "SUP-001", name: "현대제철",     type: "철강",   contact: "02-3464-5000", country: "KR", grade: "A", status: "활성" },
+  { code: "SUP-002", name: "포스코",       type: "철강",   contact: "054-220-0114", country: "KR", grade: "A", status: "활성" },
+  { code: "SUP-003", name: "동국제강",     type: "철강",   contact: "02-317-1000",  country: "KR", grade: "B", status: "활성" },
+  { code: "SUP-004", name: "세아제강",     type: "강관",   contact: "02-3459-3114", country: "KR", grade: "B", status: "활성" },
+  { code: "SUP-005", name: "케이에스텍",   type: "볼트",   contact: "031-498-1200", country: "KR", grade: "C", status: "활성" },
+  { code: "SUP-006", name: "한국스틸",     type: "철강",   contact: "051-831-9000", country: "KR", grade: "B", status: "비활성" },
+  { code: "SUP-007", name: "Nippon Steel", type: "철강",   contact: "+81-3-6867-4111", country: "JP", grade: "A", status: "활성" },
 ];
 
 const COLUMNS = [

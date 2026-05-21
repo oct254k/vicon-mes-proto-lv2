@@ -16,11 +16,11 @@ const MOCK_RECALLS = [
 ];
 
 function stepStyle(step: RecallStep): { type: "running" | "warning" | "idle" | "stopped"; label: string } {
-  if (step === "DRAFT")     return { type: "warning", label: "DRAFT" };
-  if (step === "REVIEWED")  return { type: "warning", label: "REVIEWED" };
-  if (step === "CONFIRMED") return { type: "running", label: "CONFIRMED" };
-  if (step === "NOTIFIED")  return { type: "running", label: "NOTIFIED" };
-  return { type: "idle", label: "CLOSED" };
+  if (step === "DRAFT")     return { type: "warning", label: "초안" };
+  if (step === "REVIEWED")  return { type: "warning", label: "검토됨" };
+  if (step === "CONFIRMED") return { type: "running", label: "확정" };
+  if (step === "NOTIFIED")  return { type: "running", label: "통보됨" };
+  return { type: "idle", label: "종료" };
 }
 
 const ALL_STEPS: RecallStep[] = ["DRAFT", "REVIEWED", "CONFIRMED", "NOTIFIED", "CLOSED"];

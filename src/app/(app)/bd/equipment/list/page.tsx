@@ -6,13 +6,13 @@ import { FieldHeader } from "@/components/ui/FieldHeader";
 import { DataTable } from "@/components/ui/DataTable";
 
 const EQUIPMENT = [
-  { code: "EQP-P1-001", name: "롤 성형기 #1",    plant: "P1000", type: "성형", maker: "현대산업",  installDate: "2020-03-15", status: "Running" },
-  { code: "EQP-P1-002", name: "프레스 500T #1",  plant: "P1000", type: "프레스", maker: "삼화산업", installDate: "2019-07-10", status: "Running" },
-  { code: "EQP-P1-003", name: "용접 자동화 라인", plant: "P1000", type: "용접", maker: "현대로보틱스", installDate: "2021-11-20", status: "Running" },
-  { code: "EQP-P2-001", name: "CNC 밴딩기 #1",   plant: "P2000", type: "벤딩", maker: "트럼프",     installDate: "2022-04-01", status: "Running" },
-  { code: "EQP-P2-002", name: "플라즈마 커터",    plant: "P2000", type: "절단", maker: "하이퍼썸",  installDate: "2021-06-15", status: "Idle" },
-  { code: "EQP-P3-001", name: "천장 크레인 30T",  plant: "P3000", type: "운반", maker: "삼성중공업", installDate: "2018-09-01", status: "Running" },
-  { code: "EQP-P1-004", name: "쇼트 블라스터",    plant: "P1000", type: "도장전처리", maker: "파나소닉", installDate: "2020-12-10", status: "Stopped" },
+  { code: "EQP-P1-001", name: "롤 성형기 #1",    plant: "P1000", type: "성형", maker: "현대산업",  installDate: "2020-03-15", status: "가동중" },
+  { code: "EQP-P1-002", name: "프레스 500T #1",  plant: "P1000", type: "프레스", maker: "삼화산업", installDate: "2019-07-10", status: "가동중" },
+  { code: "EQP-P1-003", name: "용접 자동화 라인", plant: "P1000", type: "용접", maker: "현대로보틱스", installDate: "2021-11-20", status: "가동중" },
+  { code: "EQP-P2-001", name: "CNC 밴딩기 #1",   plant: "P2000", type: "벤딩", maker: "트럼프",     installDate: "2022-04-01", status: "가동중" },
+  { code: "EQP-P2-002", name: "플라즈마 커터",    plant: "P2000", type: "절단", maker: "하이퍼썸",  installDate: "2021-06-15", status: "유휴" },
+  { code: "EQP-P3-001", name: "천장 크레인 30T",  plant: "P3000", type: "운반", maker: "삼성중공업", installDate: "2018-09-01", status: "가동중" },
+  { code: "EQP-P1-004", name: "쇼트 블라스터",    plant: "P1000", type: "도장전처리", maker: "파나소닉", installDate: "2020-12-10", status: "정지" },
 ];
 
 const PLANTS = ["전체", "P1000", "P2000", "P3000"];

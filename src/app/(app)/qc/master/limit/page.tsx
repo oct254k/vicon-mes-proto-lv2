@@ -11,8 +11,8 @@ const LIMITS = [
 ];
 
 const STAT_MAP: Record<string, { type: "running" | "idle"; label: string }> = {
-  ACTIVE: { type: "running", label: "ACTIVE" },
-  SUPERSEDED: { type: "idle", label: "SUPERSEDED" },
+  ACTIVE: { type: "running", label: "활성" },
+  SUPERSEDED: { type: "idle", label: "대체됨" },
 };
 
 const COLUMNS = [

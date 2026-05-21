@@ -36,7 +36,7 @@ export default function ReceiveInspectPage() {
   const current = scanned ? items[0] : null;
 
   return (
-    <div>
+    <div className="max-w-sm mx-auto">
       <PageHeader
         title="PDA 검수"
         accent="INSPECT"
@@ -45,7 +45,7 @@ export default function ReceiveInspectPage() {
         description="입고 Lot 스캔 → PASS / FAIL 판정. FAIL 시 격리 위치로 자동 이동."
       />
 
-      <div className="max-w-sm mx-auto space-y-5">
+      <div className="space-y-5">
         <FieldHeader title="1. Lot 스캔" moduleRef="FNC-LOC-041" />
         <div className="bg-surface-elevated p-4 space-y-3">
           <input
