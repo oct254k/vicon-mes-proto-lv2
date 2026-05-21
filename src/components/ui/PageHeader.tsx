@@ -15,7 +15,7 @@ export function PageHeader({ title, accent, status = "CALIBRATED", description }
       </h1>
       <div className="flex items-center gap-4 flex-wrap mb-2">
         <span className="font-label text-sm uppercase tracking-[0.2em] text-on-surface-variant opacity-70">
-          System Status: {status}
+          시스템 상태: {status}
         </span>
       </div>
       {description && (

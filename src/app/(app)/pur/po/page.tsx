@@ -59,7 +59,7 @@ export default function PURPoPage() {
       <div className="grid grid-cols-5 gap-2 mb-8">
         {BOARD_COLS.map((col) => (
           <div key={col} className="bg-surface-container-lowest p-3">
-            <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-3">{col}</p>
+            <p className="font-label text-xs uppercase tracking-widest text-primary-accent mb-3">{SL[col] ?? col}</p>
             <div className="space-y-2">
               {(BOARD_DATA[col] ?? []).map((po) => (
                 <div key={po} className="bg-surface-container p-2 text-xs font-mono">{po}</div>

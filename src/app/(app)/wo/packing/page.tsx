@@ -130,7 +130,7 @@ export default function WOPackingPage() {
       <div className="mt-6 grid grid-cols-4 gap-3">
         {(["CREATED", "IN_PRODUCTION", "COMPLETED", "STORED", "READY", "HOLD", "LOADED", "SHIPPED"] as PackingState[]).map(s => (
           <div key={s} className={`bg-surface-container p-3 border-l-2 ${stageColor(s)}`}>
-            <p className="text-xs font-label uppercase tracking-widest opacity-50 mb-1">{s}</p>
+            <p className="text-xs font-label uppercase tracking-widest opacity-50 mb-1">{STAGE_LABEL[s]}</p>
             <p className="font-headline font-black text-xl">{MOCK[s].length}</p>
           </div>
         ))}

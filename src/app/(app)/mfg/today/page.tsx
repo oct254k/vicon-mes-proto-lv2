@@ -58,7 +58,7 @@ export default function MFGTodayPage() {
                 : "border-outline-variant/30 text-on-surface/40"
             }`}
           >
-            {f === "ALL" ? "전체" : f.replace("_", " ")}
+            {f === "ALL" ? "전체" : (STATUS_MAP[f]?.label ?? f)}
           </button>
         ))}
       </div>
@@ -97,10 +97,10 @@ export default function MFGTodayPage() {
                 {line.status === "IN_PROGRESS" && (
                   <>
                     <a href="/mfg/issue/scan" className="flex-1 bg-surface-container border border-primary-accent/50 text-primary-accent text-center py-4 text-base font-label uppercase tracking-widest">
-                      ISSUE
+                      재투입
                     </a>
                     <a href="/mfg/produce" className="flex-1 bg-primary-accent text-white text-center py-4 text-base font-label uppercase tracking-widest">
-                      PRODUCE
+                      완성
                     </a>
                     <a href="/mfg/transfer" className="flex-1 bg-surface-container border border-outline-variant/30 text-on-surface/60 text-center py-4 text-base font-label uppercase tracking-widest">
                       이동
