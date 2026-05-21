@@ -54,7 +54,7 @@ export default function PackingLifecyclePage() {
 
   return (
     <main className="p-8 bg-surface min-h-screen text-on-surface">
-      <PageHeader title="패킹 라이프사이클" accent="8단계 보드" nodeRef="SCR-WO-021" description="PRC-WO-003 §7 — CREATED → IN_PRODUCTION → COMPLETED → STORED → READY → HOLD → LOADED → SHIPPED" />
+      <PageHeader title="패킹 라이프사이클" accent="8단계 보드" nodeRef="SCR-WO-021" />
 
       <div className="flex flex-wrap gap-1 mb-4">
         {STAGES.map((s) => (
