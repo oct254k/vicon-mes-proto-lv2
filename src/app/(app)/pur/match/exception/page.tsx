@@ -11,6 +11,7 @@ const MOCK = [
   { id:"EXC-2026-0007", po:"PO-2026-0007", inv:"INV-2026-0003", reason:"OVER_DELIVERY", poQty:"80 ea", invQty:"95 ea", diff:"+15 ea", handler:"박구매", status:"RESOLVED" },
 ];
 const SM: Record<string,"warning"|"running"|"idle"> = { OPEN:"warning", REVIEWING:"running", RESOLVED:"idle" };
+const SL: Record<string, string> = { OPEN:"접수", REVIEWING:"검토중", RESOLVED:"처리됨" };
 
 export default function MatchExceptionPage() {
   const [rf, setRf] = useState("ALL");
@@ -45,7 +46,7 @@ export default function MatchExceptionPage() {
                 <td className="px-4 py-2 tabular-nums text-xs">{r.invQty}</td>
                 <td className="px-4 py-2 text-xs font-bold text-warning">{r.diff}</td>
                 <td className="px-4 py-2 opacity-70">{r.handler}</td>
-                <td className="px-4 py-2"><StatusBadge type={SM[r.status]} label={r.status} /></td>
+                <td className="px-4 py-2"><StatusBadge type={SM[r.status]} label={SL[r.status] ?? r.status} /></td>
               </tr>
             ))}
           </tbody>

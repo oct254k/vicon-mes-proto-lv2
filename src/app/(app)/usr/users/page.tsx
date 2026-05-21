@@ -13,6 +13,7 @@ const MOCK_USERS = [
 ];
 
 const STATUS_MAP = { ACTIVE: "running", LOCKED: "warning", INACTIVE: "idle" } as const;
+const SL: Record<string, string> = { ACTIVE:"활성", LOCKED:"잠금", INACTIVE:"비활성" };
 
 export default function USRUsersPage() {
   return (
@@ -75,7 +76,7 @@ export default function USRUsersPage() {
                   <td className="px-4 py-2">{u.departments}</td>
                   <td className="px-4 py-2 text-xs opacity-70">{u.authMethods}</td>
                   <td className="px-4 py-2">
-                    <StatusBadge type={STATUS_MAP[u.status]} label={u.status} />
+                    <StatusBadge type={STATUS_MAP[u.status]} label={SL[u.status] ?? u.status} />
                     {u.status === "LOCKED" && <span className="ml-1 text-warning">🔒</span>}
                   </td>
                   <td className="px-4 py-2 text-xs opacity-70">{u.empType}</td>

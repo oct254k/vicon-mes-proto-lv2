@@ -14,6 +14,7 @@ const STATUS_MAP: Record<string, "running" | "idle" | "warning"> = {
   DRAFT: "idle",
   CONVERTED_TO_PO: "warning",
 };
+const SL: Record<string, string> = { APPROVED:"승인", DRAFT:"초안", CONVERTED_TO_PO:"PO전환" };
 
 const COLUMNS = [
   { key: "id", label: "PR 번호" },
@@ -76,7 +77,7 @@ export default function PURPrPage() {
                 <td className="px-4 py-3 font-body text-sm">{row.qty}</td>
                 <td className="px-4 py-3 font-body text-sm">{row.requester}</td>
                 <td className="px-4 py-3">
-                  <StatusBadge type={STATUS_MAP[row.status] ?? "idle"} label={row.status} />
+                  <StatusBadge type={STATUS_MAP[row.status] ?? "idle"} label={SL[row.status] ?? row.status} />
                 </td>
                 <td className="px-4 py-3 font-mono text-xs opacity-60">{row.created}</td>
               </tr>

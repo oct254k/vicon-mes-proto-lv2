@@ -15,6 +15,7 @@ const MOCK = [
   { id:"NTF-2026-0080", type:"SCHEDULE_CHANGE", ch:"INAPP", shp:"SHP-2026-0022", customer:"DL이앤씨", sentAt:"2026-05-03 09:00", status:"SENT" },
 ];
 const SM: Record<string,"running"|"stopped"> = { SENT:"running", FAILED:"stopped" };
+const SL: Record<string, string> = { SENT:"발송", FAILED:"실패" };
 
 export default function NotifyHistoryPage() {
   const [tf, setTf] = useState("ALL");
@@ -56,7 +57,7 @@ export default function NotifyHistoryPage() {
                 <td className="px-4 py-2 font-mono text-xs opacity-70">{r.shp}</td>
                 <td className="px-4 py-2">{r.customer}</td>
                 <td className="px-4 py-2 tabular-nums text-xs opacity-70">{r.sentAt}</td>
-                <td className="px-4 py-2"><StatusBadge type={SM[r.status]} label={r.status} /></td>
+                <td className="px-4 py-2"><StatusBadge type={SM[r.status]} label={SL[r.status] ?? r.status} /></td>
               </tr>
             ))}
           </tbody>

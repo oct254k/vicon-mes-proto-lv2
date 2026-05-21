@@ -22,6 +22,7 @@ const STATUS_MAP: Record<string, "running" | "idle" | "warning" | "stopped"> = {
   IN_TRANSIT: "running",
   RECEIVED: "idle",
 };
+const SL: Record<string, string> = { DRAFT:"초안", SENT:"발송", ACK:"확인", IN_TRANSIT:"운송중", RECEIVED:"입고됨" };
 
 const BOARD_COLS = ["DRAFT", "SENT", "ACK", "IN_TRANSIT", "RECEIVED"];
 const BOARD_DATA: Record<string, string[]> = {
@@ -95,7 +96,7 @@ export default function PURPoPage() {
                 <td className="px-4 py-3 font-mono text-xs">{row.unitPrice}</td>
                 <td className="px-4 py-3 font-mono text-xs">{row.dueDate}</td>
                 <td className="px-4 py-3">
-                  <StatusBadge type={STATUS_MAP[row.status] ?? "idle"} label={row.status} />
+                  <StatusBadge type={STATUS_MAP[row.status] ?? "idle"} label={SL[row.status] ?? row.status} />
                 </td>
               </tr>
             ))}

@@ -13,6 +13,8 @@ const STAT: Record<string, { type: "warning" | "running" }> = {
   PENDING: { type: "warning" },
   CREATED: { type: "running" },
 };
+const SL: Record<string, string> = { PENDING:"대기", CREATED:"생성됨" };
+const WO_TYPE_LABEL: Record<string, string> = { URGENT:"긴급", NORMAL:"일반" };
 
 const COLS = [
   { key: "defectId", label: "불량 번호" },
@@ -68,11 +70,11 @@ export default function QCDefectWoReplenishmentPage() {
                   <td className="px-4 py-2 font-mono text-xs">{r.partCode}</td>
                   <td className="px-4 py-2 tabular-nums">{r.scrapQty}</td>
                   <td className="px-4 py-2">
-                    <StatusBadge type={r.woType === "URGENT" ? "error" : "idle"} label={r.woType} />
+                    <StatusBadge type={r.woType === "URGENT" ? "error" : "idle"} label={WO_TYPE_LABEL[r.woType] ?? r.woType} />
                   </td>
                   <td className="px-4 py-2 tabular-nums text-xs">{r.targetDate}</td>
                   <td className="px-4 py-2 text-xs opacity-70">{r.plannerNote}</td>
-                  <td className="px-4 py-2"><StatusBadge type={STAT[r.status].type} label={r.status} /></td>
+                  <td className="px-4 py-2"><StatusBadge type={STAT[r.status].type} label={SL[r.status] ?? r.status} /></td>
                   <td className="px-4 py-2">
                     {r.status === "PENDING" && <button className="bg-primary-accent text-black text-xs font-label uppercase px-3 py-1 hover:opacity-90">WO 생성</button>}
                   </td>

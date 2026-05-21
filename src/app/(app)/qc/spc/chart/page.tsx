@@ -15,6 +15,7 @@ const STAT: Record<string, { type: "error" | "warning" | "running" }> = {
   WARNING: { type: "warning" },
   NORMAL: { type: "running" },
 };
+const SL: Record<string, string> = { ALERT: "경보", WARNING: "경고", NORMAL: "정상" };
 
 export default function QCSpcChartPage() {
   return (
@@ -46,7 +47,7 @@ export default function QCSpcChartPage() {
                 <p className="font-headline font-bold text-base">{item.name}</p>
                 <p className="text-xs opacity-50 mt-1">차트 유형: {item.type}</p>
               </div>
-              <StatusBadge type={STAT[item.status].type} label={item.status} />
+              <StatusBadge type={STAT[item.status].type} label={SL[item.status] ?? item.status} />
             </div>
             <div className="flex gap-4 text-xs opacity-60">
               <span>최근 위반: {item.lastViolate}</span>

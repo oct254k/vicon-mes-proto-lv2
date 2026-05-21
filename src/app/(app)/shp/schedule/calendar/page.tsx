@@ -12,6 +12,7 @@ const SHIPMENTS = [
   { id:"SHP-2026-0022", customer:"DL이앤씨", dest:"평택항", days:[11,12], status:"SCHEDULED" },
 ];
 const SM: Record<string,"running"|"idle"> = { IN_PROGRESS:"running", SCHEDULED:"idle" };
+const SL: Record<string,string> = { IN_PROGRESS:"진행 중", SCHEDULED:"예정" };
 const kpis = [{l:"이번 주 출하",v:4},{l:"진행 중",v:1},{l:"예정",v:3},{l:"지연 위험",v:0}];
 
 export default function ScheduleCalendarPage() {
@@ -43,7 +44,7 @@ export default function ScheduleCalendarPage() {
               </div>
               {DAYS.map(d=>(
                 <div key={d} className={`border-b border-outline-variant px-1 py-3 flex items-center justify-center ${s.days.includes(d)?"bg-primary-accent/20":""}`}>
-                  {s.days.includes(d) && s.days[0]===d && <StatusBadge type={SM[s.status]} label={s.status} />}
+                  {s.days.includes(d) && s.days[0]===d && <StatusBadge type={SM[s.status]} label={SL[s.status] ?? s.status} />}
                 </div>
               ))}
             </React.Fragment>

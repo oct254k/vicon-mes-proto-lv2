@@ -14,6 +14,7 @@ const STAT: Record<string, { type: "running" | "warning" | "idle" }> = {
   REISSUED: { type: "warning" },
   DRAFT: { type: "idle" },
 };
+const SL: Record<string, string> = { ISSUED: "발행", REISSUED: "재발행", DRAFT: "초안" };
 
 export default function QCCertificateListPage() {
   return (
@@ -64,7 +65,7 @@ export default function QCCertificateListPage() {
                   <td className="px-4 py-2 font-bold">{c.type}</td>
                   <td className="px-4 py-2 tabular-nums text-xs">{c.issuedAt}</td>
                   <td className="px-4 py-2 text-xs opacity-60">{c.issuedBy}</td>
-                  <td className="px-4 py-2"><StatusBadge type={STAT[c.status].type} label={c.status} /></td>
+                  <td className="px-4 py-2"><StatusBadge type={STAT[c.status].type} label={SL[c.status] ?? c.status} /></td>
                   <td className="px-4 py-2">
                     <button className="bg-surface-container-high border border-outline-variant/20 text-xs font-label uppercase px-2 py-1 hover:opacity-90 mr-1">PDF</button>
                     {c.status !== "DRAFT" && <button className="bg-warning/20 text-warning text-xs font-label uppercase px-2 py-1 hover:opacity-90">재발행</button>}

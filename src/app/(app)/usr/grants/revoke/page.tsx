@@ -8,6 +8,7 @@ const GRANTS = [
   { grantId: "G-EMP3030-SHP", target: "EMP3030 정출하", type: "메뉴 권한 SHP-SHIP", grantedAt: "2026-03-20 09:30", grantedBy: "최관리(L4)", dept: "SHP", status: "ACTIVE" as const },
 ];
 
+const STATUS_LABEL: Record<string, string> = { ACTIVE:"활성", REVOKED:"취소됨" };
 export default function GrantRevokePage() {
   return (
     <div>
@@ -57,7 +58,7 @@ export default function GrantRevokePage() {
                 <td className="px-4 py-2 tabular-nums text-xs opacity-60">{g.grantedAt}</td>
                 <td className="px-4 py-2 text-xs opacity-60">{g.grantedBy}</td>
                 <td className="px-4 py-2 text-xs">{g.dept}</td>
-                <td className="px-4 py-2"><StatusBadge type="running" label={g.status} /></td>
+                <td className="px-4 py-2"><StatusBadge type="running" label={STATUS_LABEL[g.status] ?? g.status} /></td>
                 <td className="px-4 py-2">
                   <button className="px-3 py-1 bg-error/20 text-error border border-error/40 text-xs font-label uppercase tracking-widest">회수</button>
                 </td>

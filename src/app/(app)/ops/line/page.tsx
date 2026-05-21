@@ -14,6 +14,7 @@ const STATUS_COLOR: Record<EquipStatus, string> = {
 const STATUS_BADGE_TYPE: Record<EquipStatus, "running" | "idle" | "stopped" | "warning"> = {
   RUNNING: "running", IDLE: "idle", DOWN: "stopped", MAINTENANCE: "warning",
 };
+const SL: Record<EquipStatus, string> = { RUNNING:"가동중", IDLE:"유휴", DOWN:"중단", MAINTENANCE:"점검중" };
 const EQUIPMENTS = [
   { id: "L01", name: "신선공정 1호",       status: "RUNNING" as EquipStatus, since: "08:00" },
   { id: "L02", name: "신선공정 2호",       status: "RUNNING" as EquipStatus, since: "08:00" },
@@ -145,7 +146,7 @@ export default function OPSLinePage() {
           <div key={eq.id} className="bg-surface-container p-3 flex flex-col gap-2">
             <div className="flex items-start justify-between gap-1">
               <span className="text-xs font-label text-on-surface-variant uppercase tracking-wider">{eq.id}</span>
-              <StatusBadge type={STATUS_BADGE_TYPE[eq.status]} label={eq.status} />
+              <StatusBadge type={STATUS_BADGE_TYPE[eq.status]} label={SL[eq.status]} />
             </div>
             <p className="text-sm font-headline font-bold text-on-surface leading-tight">{eq.name}</p>
             <p className="text-xs text-on-surface-variant font-label">{eq.since} ~</p>

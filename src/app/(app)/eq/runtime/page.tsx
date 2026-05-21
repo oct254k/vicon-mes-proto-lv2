@@ -23,6 +23,7 @@ const statusBorderColor: Record<EqStatus, string> = {
   MAINTENANCE: "#4ade80",
 };
 
+const EQ_LABEL: Record<string, string> = { RUNNING:"가동중", IDLE:"유휴", DOWN:"중단", MAINTENANCE:"점검중" };
 function mapStatus(s: EqStatus): "running" | "idle" | "stopped" | "warning" {
   if (s === "RUNNING") return "running";
   if (s === "IDLE") return "idle";
@@ -73,7 +74,7 @@ export default function EQRuntimePage() {
             <p className="font-label text-xs uppercase opacity-50">{eq.id}</p>
             <p className="font-headline font-bold mt-1 text-sm">{eq.name}</p>
             <div className="mt-1.5">
-              <StatusBadge type={mapStatus(eq.status)} label={eq.status} />
+              <StatusBadge type={mapStatus(eq.status)} label={EQ_LABEL[eq.status] ?? eq.status} />
             </div>
             <p className="text-xs opacity-50 mt-1">{eq.duration}</p>
             {eq.oee != null && (

@@ -11,6 +11,7 @@ const QUEUE = [
   { id:"LBL-2026-0024-001", pkg:"PKG-0024-001", member:"B01-4-G22C-C-180", status:"QUEUED", printAt:"—" },
 ];
 const SM: Record<string,"running"|"stopped"|"idle"> = { PRINTED:"running", DAMAGED:"stopped", QUEUED:"idle" };
+const SL: Record<string, string> = { PRINTED:"인쇄됨", DAMAGED:"파손", QUEUED:"대기" };
 
 export default function LabelPage() {
   const [reprinting, setReprinting] = useState<string|null>(null);
@@ -41,7 +42,7 @@ export default function LabelPage() {
                 <td className="px-4 py-2 text-primary-accent font-mono text-xs">{r.id}</td>
                 <td className="px-4 py-2 font-mono text-xs opacity-70">{r.pkg}</td>
                 <td className="px-4 py-2 font-mono text-xs">{r.member}</td>
-                <td className="px-4 py-2"><StatusBadge type={SM[r.status]} label={r.status} /></td>
+                <td className="px-4 py-2"><StatusBadge type={SM[r.status]} label={SL[r.status] ?? r.status} /></td>
                 <td className="px-4 py-2 tabular-nums text-xs opacity-70">{r.printAt}</td>
                 <td className="px-4 py-2">
                   <button onClick={()=>setReprinting(r.id)} className="text-xs px-2 py-1 bg-surface-container-high border border-outline-variant/20 font-label uppercase">재인쇄</button>

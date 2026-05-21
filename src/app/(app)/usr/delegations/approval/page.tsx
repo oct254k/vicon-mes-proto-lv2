@@ -8,6 +8,7 @@ const INBOX = [
 ];
 
 const BADGE: Record<string, "warning" | "running" | "idle"> = { PENDING: "warning", APPROVED: "running", REJECTED: "idle" };
+const SL: Record<string, string> = { PENDING: "검토중", APPROVED: "승인", REJECTED: "반려" };
 
 export default function DelegationApprovalPage() {
   return (
@@ -46,7 +47,7 @@ export default function DelegationApprovalPage() {
                 <td className="px-4 py-2 text-xs opacity-70">{r.scope}</td>
                 <td className="px-4 py-2 text-xs opacity-60">{r.reason}</td>
                 <td className="px-4 py-2 tabular-nums text-xs opacity-60">{r.requestedAt}</td>
-                <td className="px-4 py-2"><StatusBadge type={BADGE[r.status]} label={r.status} /></td>
+                <td className="px-4 py-2"><StatusBadge type={BADGE[r.status]} label={SL[r.status] ?? r.status} /></td>
                 <td className="px-4 py-2">
                   <div className="flex gap-2">
                     <button className="px-3 py-1 bg-primary-accent text-black text-xs font-label uppercase tracking-widest font-bold">승인</button>

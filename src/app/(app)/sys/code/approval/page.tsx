@@ -22,9 +22,10 @@ const MOCK = [
 ];
 
 const ST_MAP: Record<string, "warning"|"running"|"error"> = { PENDING:"warning", APPROVED:"running", REJECTED:"error" };
+const SL: Record<string, string> = { PENDING: "검토중", APPROVED: "승인", REJECTED: "반려" };
 
 export default function CodeApprovalPage() {
-  const data = MOCK.map(r => ({ ...r, status: <StatusBadge type={ST_MAP[r.status]} label={r.status} /> as unknown as string }));
+  const data = MOCK.map(r => ({ ...r, status: <StatusBadge type={ST_MAP[r.status]} label={SL[r.status] ?? r.status} /> as unknown as string }));
   return (
     <div className="p-8 bg-surface min-h-screen text-on-surface">
       <PageHeader title="코드 변경 결재" accent="APPROVAL" nodeRef="SCR-SYS-031" status="PROTOTYPE"

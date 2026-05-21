@@ -29,6 +29,7 @@ const treeData = {
 };
 
 type Node = { kind: string; id: string; name: string; status?: string; oee7d?: number; mtbfMin?: number; mfg?: string; installedAt?: string; components?: { id: string; name: string; lifePct: number; color: string }[]; children?: Node[] };
+const EQ_STATUS_LABEL: Record<string, string> = { ACTIVE:"활성", INACTIVE:"비활성", MAINTENANCE:"점검중", DOWN:"중단" };
 
 function compColor(pct: number) {
   if (pct >= 100) return "text-error";
@@ -91,7 +92,7 @@ export default function EQHierarchyPage() {
                 {selected.status && (
                   <StatusBadge
                     type={selected.status === "ACTIVE" ? "running" : selected.status === "MAINTENANCE" ? "warning" : "idle"}
-                    label={selected.status}
+                    label={EQ_STATUS_LABEL[selected.status] ?? selected.status}
                   />
                 )}
               </div>

@@ -9,6 +9,7 @@ const SESSIONS = [
 ];
 
 const BADGE: Record<string, "running" | "idle"> = { ACTIVE: "running", EXPIRED: "idle" };
+const SL: Record<string, string> = { ACTIVE: "활성", EXPIRED: "만료" };
 
 export default function SessionPage() {
   return (
@@ -47,7 +48,7 @@ export default function SessionPage() {
                 <td className="px-4 py-2 tabular-nums text-xs">{s.loginAt}</td>
                 <td className="px-4 py-2 tabular-nums text-xs">{s.expiresAt}</td>
                 <td className="px-4 py-2 text-xs opacity-60">{s.shift}</td>
-                <td className="px-4 py-2"><StatusBadge type={BADGE[s.status]} label={s.status} /></td>
+                <td className="px-4 py-2"><StatusBadge type={BADGE[s.status]} label={SL[s.status] ?? s.status} /></td>
                 <td className="px-4 py-2">
                   {s.status === "ACTIVE" && (
                     <button className="text-xs text-error font-label uppercase tracking-widest hover:underline">강제 로그아웃</button>

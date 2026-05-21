@@ -11,6 +11,7 @@ const MOCK = [
   { id:"MIS-2026-0001", shp:"SHP-2026-0021", pkg:"PKG-0021-001", reason:"MISSING", detail:"라벨 누락 2건", reportedAt:"2026-05-01 11:10", status:"CLOSED" },
 ];
 const SM: Record<string,"stopped"|"warning"|"idle"> = { OPEN:"stopped", REVIEWING:"warning", CLOSED:"idle" };
+const SL: Record<string, string> = { OPEN:"접수", REVIEWING:"검토중", CLOSED:"종료" };
 
 export default function MismatchPage() {
   const [showForm, setShowForm] = useState(false);
@@ -41,7 +42,7 @@ export default function MismatchPage() {
                 <td className="px-4 py-2"><span className="text-warning text-xs font-label font-bold">{r.reason}</span></td>
                 <td className="px-4 py-2 text-xs opacity-60 max-w-xs truncate">{r.detail}</td>
                 <td className="px-4 py-2 tabular-nums text-xs opacity-70">{r.reportedAt}</td>
-                <td className="px-4 py-2"><StatusBadge type={SM[r.status]} label={r.status} /></td>
+                <td className="px-4 py-2"><StatusBadge type={SM[r.status]} label={SL[r.status] ?? r.status} /></td>
               </tr>
             ))}
           </tbody>

@@ -6,6 +6,7 @@ const ACTIVE_DELEG = [
   { delegId: "DEL-20260505-001", delegator: "홍길동 (EMP1099)", delegatee: "김철수 (EMP1100)", period: "2026-05-07 ~ 2026-05-09", scope: "PRD WO 결재", status: "APPROVED" as const },
 ];
 
+const STATUS_LABEL: Record<string, string> = { APPROVED:"승인", PENDING:"대기" };
 const CARDS = [
   { href: "/usr/delegations/new", code: "DELEG-NEW", title: "위임 등록", desc: "부재·휴가 시 업무 권한 임시 위임 등록. 30일 한도, 자기 위임 불가." },
   { href: "/usr/delegations/approval", code: "DELEG-APPR", title: "위임 결재", desc: "직속 상위 또는 L3+ 결재 인박스." },
@@ -42,7 +43,7 @@ export default function DelegationsPage() {
                   <td className="py-2 pr-4 text-primary-accent font-bold">{d.delegatee}</td>
                   <td className="py-2 tabular-nums text-xs pr-4">{d.period}</td>
                   <td className="py-2 text-xs opacity-60 pr-4">{d.scope}</td>
-                  <td className="py-2"><StatusBadge type="running" label={d.status} /></td>
+                  <td className="py-2"><StatusBadge type="running" label={STATUS_LABEL[d.status] ?? d.status} /></td>
                 </tr>
               ))}
             </tbody>

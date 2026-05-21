@@ -14,6 +14,7 @@ const MOCK = [
   { po:"PO-2026-0013", supplier:"기타", ch:"EDI", status:"PENDING", sentAt:"—", retry:0 },
 ];
 const SM: Record<string, "running"|"stopped"|"idle"> = { SENT:"running", FAILED:"stopped", PENDING:"idle" };
+const SL: Record<string, string> = { SENT:"발송", FAILED:"실패", PENDING:"대기" };
 
 export default function PONotifyPage() {
   const [ch, setCh] = useState("ALL");
@@ -43,7 +44,7 @@ export default function PONotifyPage() {
                 <td className="px-4 py-2 text-primary-accent font-mono text-xs">{r.po}</td>
                 <td className="px-4 py-2">{r.supplier}</td>
                 <td className="px-4 py-2"><span className="px-2 py-0.5 bg-surface-container text-xs font-label uppercase">{r.ch}</span></td>
-                <td className="px-4 py-2"><StatusBadge type={SM[r.status]} label={r.status} /></td>
+                <td className="px-4 py-2"><StatusBadge type={SM[r.status]} label={SL[r.status] ?? r.status} /></td>
                 <td className="px-4 py-2 tabular-nums text-xs opacity-70">{r.sentAt}</td>
                 <td className="px-4 py-2 tabular-nums text-xs">{r.retry > 0 ? <span className="text-warning">{r.retry}회</span> : "—"}</td>
               </tr>

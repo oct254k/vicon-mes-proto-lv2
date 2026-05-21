@@ -14,6 +14,7 @@ const STAT: Record<string, { type: "warning" | "running" | "idle" }> = {
   SENT: { type: "running" },
   CONFIRMED: { type: "idle" },
 };
+const SL: Record<string, string> = { PENDING: "대기", SENT: "전송", CONFIRMED: "확정" };
 
 export default function QCLossAccountingQueuePage() {
   return (
@@ -66,7 +67,7 @@ export default function QCLossAccountingQueuePage() {
                   <td className="px-4 py-2 text-xs">{r.type}</td>
                   <td className="px-4 py-2 tabular-nums font-bold">{r.amount}</td>
                   <td className="px-4 py-2 tabular-nums text-xs">{r.calcAt}</td>
-                  <td className="px-4 py-2"><StatusBadge type={STAT[r.status].type} label={r.status} /></td>
+                  <td className="px-4 py-2"><StatusBadge type={STAT[r.status].type} label={SL[r.status] ?? r.status} /></td>
                   <td className="px-4 py-2 text-xs opacity-60">{r.erpRef}</td>
                   <td className="px-4 py-2">
                     {r.status === "PENDING" && <button className="bg-primary-accent text-black text-xs font-label uppercase px-3 py-1 hover:opacity-90">전송</button>}

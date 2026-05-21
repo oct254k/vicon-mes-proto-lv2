@@ -9,6 +9,7 @@ const INBOX = [
 ];
 
 const BADGE: Record<string, "warning" | "running" | "idle"> = { PENDING: "warning", APPROVED: "running", REJECTED: "idle" };
+const SL: Record<string, string> = { PENDING:"검토중", APPROVED:"승인", REJECTED:"반려" };
 
 export default function GrantApprovalPage() {
   return (
@@ -56,7 +57,7 @@ export default function GrantApprovalPage() {
                 <td className="px-4 py-2 text-xs">{r.type}</td>
                 <td className="px-4 py-2 tabular-nums text-xs opacity-60">{r.requestedAt}</td>
                 <td className="px-4 py-2 text-xs">{r.priority === "긴급" ? <span className="text-error font-bold">긴급</span> : r.priority}</td>
-                <td className="px-4 py-2"><StatusBadge type={BADGE[r.status]} label={r.status} /></td>
+                <td className="px-4 py-2"><StatusBadge type={BADGE[r.status]} label={SL[r.status] ?? r.status} /></td>
                 <td className="px-4 py-2">
                   {r.status === "PENDING" && (
                     <div className="flex gap-2">

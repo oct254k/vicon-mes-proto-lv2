@@ -11,6 +11,7 @@ const MOCK = [
   { id:"ASN-2026-0009", po:"PO-2026-0014", supplier:"동국제강", mat:"M-SHEET-A3", qty:"80 ea", eta:"2026-05-12", status:"DELAYED" },
 ];
 const SM: Record<string,"running"|"idle"|"warning"|"stopped"> = { IN_TRANSIT:"running", CONFIRMED:"idle", ARRIVED:"running", DELAYED:"stopped" };
+const SL: Record<string, string> = { IN_TRANSIT:"운송중", CONFIRMED:"확정", ARRIVED:"도착", DELAYED:"지연" };
 
 export default function ASNListPage() {
   const [q, setQ] = useState("");
@@ -45,7 +46,7 @@ export default function ASNListPage() {
                 <td className="px-4 py-2">{r.mat}</td>
                 <td className="px-4 py-2 tabular-nums">{r.qty}</td>
                 <td className="px-4 py-2 tabular-nums text-xs">{r.eta}</td>
-                <td className="px-4 py-2"><StatusBadge type={SM[r.status]} label={r.status} /></td>
+                <td className="px-4 py-2"><StatusBadge type={SM[r.status]} label={SL[r.status] ?? r.status} /></td>
               </tr>
             ))}
           </tbody>

@@ -23,6 +23,7 @@ const DATA = [
   { txId:"TX-20260503-0012", lot:"LOT-20260420-007",  material:"M-COIL-A",            qty:"2,800m", from:"P3000·Y-RAW", to:"P3000·Y-DEFECT",elapsed:"30", aging:"⚠ AGING", status:"AGING_TRANSIT" },
 ];
 
+const SL: Record<string, string> = { OCCUPIED_TRANSIT:"이동중", RESERVED:"예약됨", SETTLED:"완료", AGING_TRANSIT:"초과이동" };
 const KPI = [
   { label: "이동 중",     value: "8건",   badge: "warning" as const },
   { label: "AGING(24h+)", value: "2건",   badge: "stopped" as const },
@@ -62,7 +63,7 @@ export default function InTransitPage() {
                   <p className="font-label text-xs uppercase tracking-widest text-warning">⚠ AGING — {r.lot}</p>
                   <p className="text-on-surface/50 text-xs">{r.material} / {r.from} → {r.to} / {r.elapsed}h 경과</p>
                 </div>
-                <StatusBadge type="warning" label={r.status} />
+                <StatusBadge type="warning" label={SL[r.status] ?? r.status} />
               </div>
             ))}
           </div>

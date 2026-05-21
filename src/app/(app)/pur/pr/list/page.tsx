@@ -13,6 +13,7 @@ const MOCK = [
 const SM: Record<string, "running"|"idle"|"warning"|"stopped"> = {
   APPROVED:"running", DRAFT:"idle", CONVERTED_TO_PO:"warning", PARTIALLY_CONVERTED:"warning", CLOSED:"idle", CANCELLED:"stopped"
 };
+const SL: Record<string, string> = { APPROVED:"승인", DRAFT:"초안", CONVERTED_TO_PO:"PO전환", PARTIALLY_CONVERTED:"부분전환", CLOSED:"종료", CANCELLED:"취소" };
 const STATUSES = ["ALL","DRAFT","APPROVED","CONVERTED_TO_PO","PARTIALLY_CONVERTED","CLOSED","CANCELLED"];
 
 export default function PRListPage() {
@@ -56,7 +57,7 @@ export default function PRListPage() {
                 <td className="px-4 py-2">{r.material}</td>
                 <td className="px-4 py-2 tabular-nums">{r.qty}</td>
                 <td className="px-4 py-2 opacity-70">{r.requester}</td>
-                <td className="px-4 py-2"><StatusBadge type={SM[r.status]??'idle'} label={r.status}/></td>
+                <td className="px-4 py-2"><StatusBadge type={SM[r.status]??'idle'} label={SL[r.status] ?? r.status}/></td>
                 <td className="px-4 py-2 tabular-nums opacity-60">{r.date}</td>
               </tr>
             ))}

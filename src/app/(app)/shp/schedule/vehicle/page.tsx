@@ -10,6 +10,7 @@ const MOCK = [
   { id:"VEH-2026-0012", shp:"SHP-2026-0022", plate:"78라3456", driver:"박기사", dept:"2026-05-14 07:00", dest:"평택항", weight:"12.0t", status:"PENDING" },
 ];
 const SM: Record<string,"running"|"idle"|"warning"> = { DEPARTED:"running", SCHEDULED:"idle", PENDING:"warning" };
+const SL: Record<string, string> = { DEPARTED:"출발", SCHEDULED:"예정", PENDING:"대기" };
 
 export default function ScheduleVehiclePage() {
   return (
@@ -37,7 +38,7 @@ export default function ScheduleVehiclePage() {
                 <td className="px-4 py-2 tabular-nums text-xs">{r.dept}</td>
                 <td className="px-4 py-2">{r.dest}</td>
                 <td className="px-4 py-2 tabular-nums text-xs font-bold">{r.weight}</td>
-                <td className="px-4 py-2"><StatusBadge type={SM[r.status]} label={r.status} /></td>
+                <td className="px-4 py-2"><StatusBadge type={SM[r.status]} label={SL[r.status] ?? r.status} /></td>
               </tr>
             ))}
           </tbody>

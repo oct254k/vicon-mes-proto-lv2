@@ -16,6 +16,7 @@ const STAT: Record<string, { type: "warning" | "running" | "idle" | "stopped" }>
   DISPOSED: { type: "idle" },
   CLOSED: { type: "stopped" },
 };
+const SL: Record<string, string> = { REPORTED: "보고됨", CONFIRMED: "확정", DISPOSED: "처리됨", CLOSED: "종료" };
 
 export default function QCDefectListPage() {
   return (
@@ -76,7 +77,7 @@ export default function QCDefectListPage() {
                   <td className="px-4 py-2 text-xs">{d.stage}</td>
                   <td className="px-4 py-2 tabular-nums">{d.qty}</td>
                   <td className="px-4 py-2 text-xs opacity-70">{d.reporter}</td>
-                  <td className="px-4 py-2"><StatusBadge type={STAT[d.status].type} label={d.status} /></td>
+                  <td className="px-4 py-2"><StatusBadge type={STAT[d.status].type} label={SL[d.status] ?? d.status} /></td>
                 </tr>
               ))}
             </tbody>
