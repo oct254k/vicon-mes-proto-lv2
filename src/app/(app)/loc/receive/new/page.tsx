@@ -8,16 +8,16 @@ import { FieldHeader } from "@/components/ui/FieldHeader";
 const LINE_COLS = [
   { key: "lineNo",   label: "#" },
   { key: "material", label: "자재" },
-  { key: "coilId",   label: "공급사 CoilID" },
+  { key: "coilId",   label: "공급사 코일 ID" },
   { key: "qty",      label: "수량(m)" },
   { key: "poRemain", label: "PO 잔량" },
   { key: "isolate",  label: "격리" },
 ];
 
 const LINES = [
-  { lineNo:1, material:"M-COIL-A P3000 900m", coilId:"P-A2305-0017", qty:"900",   poRemain:"1500", isolate:"N" },
-  { lineNo:2, material:"M-COIL-A P3000 900m", coilId:"P-A2305-0018", qty:"820",   poRemain:"680",  isolate:"N" },
-  { lineNo:3, material:"M-COIL-B",            coilId:"P-B2305-0301", qty:"300",   poRemain:"300",  isolate:"Y" },
+  { lineNo:1, material:"M-COIL-A P3000 900m", coilId:"P-A2305-0017", qty:"900",   poRemain:"1500", isolate:"없음" },
+  { lineNo:2, material:"M-COIL-A P3000 900m", coilId:"P-A2305-0018", qty:"820",   poRemain:"680",  isolate:"없음" },
+  { lineNo:3, material:"M-COIL-B",            coilId:"P-B2305-0301", qty:"300",   poRemain:"300",  isolate:"있음" },
 ];
 
 const inputCls = "w-full bg-surface border border-outline/20 px-4 py-2 text-sm text-on-surface focus:outline-none focus:border-[#00912F]";
@@ -34,7 +34,7 @@ export default function ReceiveNewPage() {
     <div>
       <PageHeader
         title="신규 입고 등록"
-        accent="RECEIVE"
+        accent="입고"
         nodeRef="SCR-LOC-020"
         status="PROTOTYPE"
         description="PC 웹 — 송장·PO 첨부, 라인별 자재 등록, 입고 위치 검증 3조건 확인 후 확정."
@@ -58,15 +58,15 @@ export default function ReceiveNewPage() {
           </div>
           <div className="bg-surface-elevated p-3 text-xs text-on-surface/50 border-l-2 border-[#00912F]/40 font-label">
             공급사: <span className="text-on-surface font-bold">포스코</span>&ensp;|&ensp;
-            3-Way Matching: PO <span className="text-[#00912F]">✔</span>&ensp;qty <span className="text-[#00912F]">✔</span>&ensp;단가 <span className="text-warning">PENDING</span>
+            3자 대사: PO <span className="text-[#00912F]">✔</span>&ensp;수량 <span className="text-[#00912F]">✔</span>&ensp;단가 <span className="text-warning">대기</span>
           </div>
 
           <FieldHeader title="B. 라인별 자재" moduleRef="FNC-LOC-038" />
           <DataTable title="입고 라인" columns={LINE_COLS} data={LINES} bufferCount={LINES.length} />
           <div className="bg-surface-elevated p-4 text-xs font-label">
             <p className="uppercase tracking-widest text-on-surface/40 mb-2">Lot 자동채번 미리보기</p>
-            <p><span className="text-[#00912F]">1</span> → RCV-20260501-0017 <span className="text-on-surface/30">(fifo_seq 4521)</span></p>
-            <p><span className="text-[#00912F]">2</span> → RCV-20260501-0018 <span className="text-on-surface/30">(fifo_seq 4522)</span></p>
+            <p><span className="text-[#00912F]">1</span> → RCV-20260501-0017 <span className="text-on-surface/30">(FIFO 순번 4521)</span></p>
+            <p><span className="text-[#00912F]">2</span> → RCV-20260501-0018 <span className="text-on-surface/30">(FIFO 순번 4522)</span></p>
           </div>
 
           <FieldHeader title="C. 입고 위치 검증" moduleRef="FNC-LOC-040" />
@@ -74,7 +74,7 @@ export default function ReceiveNewPage() {
             <div><label className={labelCls}>위치 ID</label><input value={loc} onChange={e=>setLoc(e.target.value)} className={inputCls+" w-52"}/></div>
           </div>
           <div className="flex gap-3 text-xs font-label">
-            {["ACTIVE ✔", "Y-RAW 허용 ✔", "잔여 1,500m ✔"].map(t=>(
+            {["활성 ✔", "Y-RAW 허용 ✔", "잔여 1,500m ✔"].map(t=>(
               <span key={t} className="text-[#00912F]">{t}</span>
             ))}
           </div>
