@@ -94,7 +94,7 @@ const DARK_PALETTE = {
   grid:           "rgba(255,255,255,0.03)",
   road:           "#333",
   roadDash:       "rgba(255,255,255,0.12)",
-  buildingLabel:  "rgba(255,255,255,0.6)",
+  buildingLabel:  "#ffffff",
   compassBg:      "rgba(30,30,30,0.85)",
   compassBorder:  "#555",
   lotEmpty:       "rgba(42,42,42,0.9)",
@@ -109,7 +109,7 @@ const LIGHT_PALETTE = {
   grid:           "rgba(0,0,0,0.04)",
   road:           "#c8ccc4",
   roadDash:       "rgba(0,0,0,0.10)",
-  buildingLabel:  "rgba(0,0,0,0.65)",
+  buildingLabel:  "#ffffff",
   compassBg:      "rgba(240,240,240,0.9)",
   compassBorder:  "#999",
   lotEmpty:       "rgba(200,200,200,0.7)",
@@ -173,7 +173,7 @@ function renderYard(
     else if(b.type==="rect"){ const br=b as any; ctx.beginPath(); ctx.roundRect(br.x,br.y,br.w,br.h,3); ctx.fill(); ctx.stroke(); }
     else if(b.type==="circle"){ const bc=b as any; ctx.beginPath(); ctx.arc(bc.cx,bc.cy,bc.r,0,Math.PI*2); ctx.fill(); ctx.stroke(); }
     if(zoom>0.35){
-      const fs=9/zoom; ctx.fillStyle=palette.buildingLabel; ctx.font=`${fs}px sans-serif`;
+      const fs=14/zoom; ctx.fillStyle=palette.buildingLabel; ctx.font=`${fs}px sans-serif`;
       const lbl=(b as any).label; const tw=ctx.measureText(lbl).width;
       const [bx,by]=b.type==="poly"?polyCenter((b as any).pts):b.type==="rect"?[(b as any).x+(b as any).w/2,(b as any).y+(b as any).h/2]:[(b as any).cx,(b as any).cy];
       ctx.fillText(lbl,bx-tw/2,by+fs*0.4);
@@ -183,13 +183,13 @@ function renderYard(
     ctx.fillStyle=h2r("#15803d",0.18); ctx.strokeStyle="#15803d"; ctx.lineWidth=2.5/zoom;
     drawPoly(ctx,sec.pts); ctx.fill(); ctx.stroke();
     const [cx,cy]=polyCenter(sec.pts);
-    const fs=lod===0?18/zoom:12/zoom;
+    const fs=lod===0?23/zoom:17/zoom;
     ctx.fillStyle="#86efac"; ctx.font=`500 ${fs}px sans-serif`;
     ctx.fillText(sec.label,cx-ctx.measureText(sec.label).width/2,cy+fs*0.35);
     if(lod>=1) sec.zones.forEach(z=>{
       ctx.fillStyle=h2r("#16a34a",0.18); ctx.strokeStyle="#16a34a"; ctx.lineWidth=1.5/zoom;
       drawPoly(ctx,z.pts); ctx.fill(); ctx.stroke();
-      const zfs=9/zoom; ctx.fillStyle="#16a34a"; ctx.font=`500 ${zfs}px sans-serif`;
+      const zfs=14/zoom; ctx.fillStyle="#16a34a"; ctx.font=`500 ${zfs}px sans-serif`;
       ctx.fillText(z.id,z.pts[0][0]+4,z.pts[0][1]+zfs+2/zoom);
       if(lod===2) z.lots.forEach(lot=>{
         const isHL=!!(highlight&&lot.id===highlight);
@@ -207,7 +207,7 @@ function renderYard(
         ctx.globalAlpha = 1;
         if(isHL){ ctx.strokeStyle="#fff"; ctx.lineWidth=2/zoom; ctx.beginPath(); ctx.roundRect(lot.x-1/zoom,lot.y-1/zoom,lot.w+2/zoom,lot.h+2/zoom,2); ctx.stroke(); }
         if(lot.w*zoom>18){
-          const lfs=Math.min(7/zoom,lot.h*0.38);
+          const lfs=Math.min(12/zoom,lot.h*0.38);
           ctx.fillStyle=lot.status==="가용"?palette.lotText:palette.lotTextOcc;
           ctx.font=`${lfs}px sans-serif`;
           const n=String(lot.num);
@@ -234,12 +234,12 @@ function renderYard(
   // 게이트
   ctx.fillStyle="#c8b97a"; ctx.strokeStyle="#8a7a3a"; ctx.lineWidth=2/zoom;
   ctx.beginPath(); ctx.roundRect(180,10,80,18,3); ctx.fill(); ctx.stroke();
-  ctx.fillStyle="#3a2a0a"; ctx.font=`bold ${8/zoom}px sans-serif`; ctx.fillText("MAIN GATE",192,22/zoom);
+  ctx.fillStyle="#3a2a0a"; ctx.font=`bold ${13/zoom}px sans-serif`; ctx.fillText("MAIN GATE",192,22/zoom);
   // 나침반
   const[ncx,ncy,nr]=[W-40,50,18];
   ctx.fillStyle=palette.compassBg; ctx.beginPath(); ctx.arc(ncx,ncy,nr,0,Math.PI*2); ctx.fill();
   ctx.strokeStyle=palette.compassBorder; ctx.lineWidth=1/zoom; ctx.beginPath(); ctx.arc(ncx,ncy,nr,0,Math.PI*2); ctx.stroke();
-  ctx.fillStyle="#16a34a"; ctx.font=`bold ${9/zoom}px sans-serif`; ctx.fillText("N",ncx-3/zoom,ncy-5/zoom);
+  ctx.fillStyle="#16a34a"; ctx.font=`bold ${14/zoom}px sans-serif`; ctx.fillText("N",ncx-3/zoom,ncy-5/zoom);
   ctx.strokeStyle="#16a34a"; ctx.lineWidth=1.5/zoom;
   ctx.beginPath(); ctx.moveTo(ncx,ncy-14); ctx.lineTo(ncx,ncy+14); ctx.stroke();
   ctx.beginPath(); ctx.moveTo(ncx-10,ncy); ctx.lineTo(ncx+10,ncy); ctx.stroke();
@@ -568,7 +568,6 @@ export default function YardMapViewPage() {
         title="야적장 도면"
         nodeRef="SCR-LOC-010"
         status="PROTOTYPE"
-        description="Canvas LOD 렌더러 — zoom 레벨에 따라 구역→Zone→Lot 자동 전환. Lot 레벨에서 드래그로 위치 이동. 이동 시 패킹리스트 발행."
       />
 
       {/* 상단 컨트롤 */}
@@ -625,11 +624,11 @@ export default function YardMapViewPage() {
         {/* 사이드바 */}
         <div className="w-52 shrink-0 space-y-4">
           <div className="bg-surface-elevated border border-outline/20 p-4">
-            <p className="font-label text-[10px] uppercase tracking-widest text-on-surface/40 mb-3">범례</p>
+            <p className="font-label text-[16px] uppercase tracking-widest text-on-surface/80 mb-3">범례</p>
             {([["가용","#2a2a2a"],["점유","#00912F"],["만재","#4ade80"],["정비","#14532d"],["이동대기중","#166534"]] as [string,string][]).map(([s,c])=>(
-              <div key={s} className="flex items-center gap-2 mb-1.5">
-                <div className="w-4 h-4 rounded-sm border border-outline/30" style={{background:c+"44"}}/>
-                <span className="text-[10px] font-label text-on-surface/50">{s}</span>
+              <div key={s} className="flex items-center gap-2 mb-2">
+                <div className="w-[23px] h-[23px] rounded-sm border border-outline/30" style={{background:c+"88"}}/>
+                <span className="text-[15px] font-label text-on-surface/80">{s}</span>
               </div>
             ))}
           </div>
@@ -711,7 +710,7 @@ export default function YardMapViewPage() {
             </div>
             {/* 버튼 */}
             <div className="flex gap-2 px-5 py-4">
-              <button onClick={confirmMove} className="flex-1 bg-[#00912F] text-black font-label font-bold uppercase tracking-widest py-3 text-xs hover:opacity-90">
+              <button onClick={confirmMove} className="flex-1 bg-[#00912F] text-white font-label font-bold uppercase tracking-widest py-3 text-xs hover:opacity-90">
                 확인·이동
               </button>
               <button onClick={()=>{dragLotRef.current=null;setIsDraggingLot(false);setPackingInfo(null);}} className="flex-1 bg-surface border border-outline/20 text-on-surface/50 font-label uppercase tracking-widest py-3 text-xs hover:border-outline/50">
