@@ -11,18 +11,18 @@ const COLS = [
 ];
 
 const MOCK = [
-  { order:1,  menuId:"MNU-011", label:"공지 목록",     device:"PC",   pinned:"Y" },
-  { order:2,  menuId:"MNU-031", label:"코드 목록",     device:"PC",   pinned:"Y" },
-  { order:3,  menuId:"MNU-090", label:"헬스 대시보드", device:"PC",   pinned:"N" },
-  { order:4,  menuId:"MNU-060", label:"백업 정책",     device:"PC",   pinned:"N" },
-  { order:5,  menuId:"MNU-050", label:"감사 로그",     device:"PC",   pinned:"N" },
-  { order:6,  menuId:"MNU-012", label:"공지 수신함",   device:"MOBILE",pinned:"Y" },
+  { order:1,  menuId:"MNU-011", label:"공지 목록",     device:"PC",   pinned:"예" },
+  { order:2,  menuId:"MNU-031", label:"코드 목록",     device:"PC",   pinned:"예" },
+  { order:3,  menuId:"MNU-090", label:"헬스 대시보드", device:"PC",   pinned:"아니오" },
+  { order:4,  menuId:"MNU-060", label:"백업 정책",     device:"PC",   pinned:"아니오" },
+  { order:5,  menuId:"MNU-050", label:"감사 로그",     device:"PC",   pinned:"아니오" },
+  { order:6,  menuId:"MNU-012", label:"공지 수신함",   device:"MOBILE",pinned:"예" },
 ];
 
 export default function MenuFavoritePage() {
   return (
     <div className="p-8 bg-surface min-h-screen text-on-surface">
-      <PageHeader title="즐겨찾기 관리" accent="FAVORITE" nodeRef="SCR-SYS-022" status="PROTOTYPE"
+      <PageHeader title="즐겨찾기 관리" accent="즐겨찾기" nodeRef="SCR-SYS-022" status="PROTOTYPE"
         description="사용자 즐겨찾기 ≤20건, PC↔MOBILE 동기화 (FNC-SYS-023·024)" />
       <div className="flex justify-between items-center mb-4">
         <p className="text-xs font-label text-on-surface-variant opacity-60">현재 {MOCK.length} / 20 항목</p>

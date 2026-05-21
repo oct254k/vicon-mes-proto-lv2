@@ -3,21 +3,21 @@ import { FieldHeader } from "@/components/ui/FieldHeader";
 import { StatusBadge } from "@/components/ui/StatusBadge";
 
 const TREE = [
-  { lv:1, id:"MNU-001", label:"시스템관리", device:"BOTH",   visible:"Y", order:10 },
-  { lv:2, id:"MNU-010", label:"공지사항",   device:"BOTH",   visible:"Y", order:10 },
-  { lv:3, id:"MNU-011", label:"공지 목록",  device:"PC",     visible:"Y", order:10 },
-  { lv:3, id:"MNU-012", label:"공지 수신함",device:"MOBILE", visible:"Y", order:20 },
-  { lv:2, id:"MNU-020", label:"메뉴 관리",  device:"PC",     visible:"Y", order:20 },
-  { lv:3, id:"MNU-021", label:"트리 편집",  device:"PC",     visible:"Y", order:10 },
-  { lv:3, id:"MNU-022", label:"권한 매트릭스",device:"PC",   visible:"Y", order:20 },
-  { lv:2, id:"MNU-030", label:"코드 마스터",device:"PC",     visible:"Y", order:30 },
-  { lv:3, id:"MNU-031", label:"코드 목록",  device:"PC",     visible:"N", order:10 },
+  { lv:1, id:"MNU-001", label:"시스템관리", device:"BOTH",   visible:"노출", order:10 },
+  { lv:2, id:"MNU-010", label:"공지사항",   device:"BOTH",   visible:"노출", order:10 },
+  { lv:3, id:"MNU-011", label:"공지 목록",  device:"PC",     visible:"노출", order:10 },
+  { lv:3, id:"MNU-012", label:"공지 수신함",device:"MOBILE", visible:"노출", order:20 },
+  { lv:2, id:"MNU-020", label:"메뉴 관리",  device:"PC",     visible:"노출", order:20 },
+  { lv:3, id:"MNU-021", label:"트리 편집",  device:"PC",     visible:"노출", order:10 },
+  { lv:3, id:"MNU-022", label:"권한 매트릭스",device:"PC",   visible:"노출", order:20 },
+  { lv:2, id:"MNU-030", label:"코드 마스터",device:"PC",     visible:"노출", order:30 },
+  { lv:3, id:"MNU-031", label:"코드 목록",  device:"PC",     visible:"숨김", order:10 },
 ];
 
 export default function MenuTreePage() {
   return (
     <div className="p-8 bg-surface min-h-screen text-on-surface">
-      <PageHeader title="메뉴 트리 편집" accent="TREE" nodeRef="SCR-SYS-020" status="PROTOTYPE"
+      <PageHeader title="메뉴 트리 편집" accent="트리" nodeRef="SCR-SYS-020" status="PROTOTYPE"
         description="3단계 계층 트리 구조, 신규 메뉴 자동 비노출, 단말 PC/MOBILE/BOTH 분기 (FNC-SYS-020·022·025)" />
       <div className="flex gap-2 mb-4">
         <button className="px-4 py-1.5 text-xs font-label uppercase tracking-widest bg-[#00912F] text-white">+ 노드 추가</button>

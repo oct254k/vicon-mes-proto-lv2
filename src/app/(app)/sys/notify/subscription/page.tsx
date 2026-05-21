@@ -13,20 +13,20 @@ const COLS = [
 ];
 
 const MOCK = [
-  { userId:"admin",     channel:"EMAIL",     eventType:"BACKUP_FAIL",    forced:"Y", priority:1, active:"ACTIVE" },
-  { userId:"admin",     channel:"INAPP",     eventType:"HEALTH_WARN",    forced:"Y", priority:1, active:"ACTIVE" },
-  { userId:"operator1", channel:"EMAIL",     eventType:"WO_COMPLETE",    forced:"N", priority:2, active:"ACTIVE" },
-  { userId:"operator1", channel:"SMS",       eventType:"DEVICE_LOST",    forced:"Y", priority:1, active:"ACTIVE" },
-  { userId:"operator2", channel:"KAKAOTALK", eventType:"QC_FAIL",        forced:"N", priority:3, active:"INACTIVE" },
-  { userId:"auditor",   channel:"EMAIL",     eventType:"AUDIT_EXPORT",   forced:"Y", priority:1, active:"ACTIVE" },
-  { userId:"user1",     channel:"INAPP",     eventType:"NOTICE_PUBLISH", forced:"N", priority:5, active:"ACTIVE" },
+  { userId:"admin",     channel:"EMAIL",     eventType:"BACKUP_FAIL",    forced:"예", priority:1, active:"ACTIVE" },
+  { userId:"admin",     channel:"INAPP",     eventType:"HEALTH_WARN",    forced:"예", priority:1, active:"ACTIVE" },
+  { userId:"operator1", channel:"EMAIL",     eventType:"WO_COMPLETE",    forced:"아니오", priority:2, active:"ACTIVE" },
+  { userId:"operator1", channel:"SMS",       eventType:"DEVICE_LOST",    forced:"예", priority:1, active:"ACTIVE" },
+  { userId:"operator2", channel:"KAKAOTALK", eventType:"QC_FAIL",        forced:"아니오", priority:3, active:"INACTIVE" },
+  { userId:"auditor",   channel:"EMAIL",     eventType:"AUDIT_EXPORT",   forced:"예", priority:1, active:"ACTIVE" },
+  { userId:"user1",     channel:"INAPP",     eventType:"NOTICE_PUBLISH", forced:"아니오", priority:5, active:"ACTIVE" },
 ];
 
 export default function NotifySubscriptionPage() {
-  const data = MOCK.map(r => ({ ...r, active: <StatusBadge type={r.active === "ACTIVE" ? "running" : "idle"} label={r.active} /> as unknown as string }));
+  const data = MOCK.map(r => ({ ...r, active: <StatusBadge type={r.active === "ACTIVE" ? "running" : "idle"} label={r.active === "ACTIVE" ? "활성" : "비활성"} /> as unknown as string }));
   return (
     <div className="p-8 bg-surface min-h-screen text-on-surface">
-      <PageHeader title="구독 관리" accent="SUBSCRIPTION" nodeRef="SCR-SYS-041" status="PROTOTYPE"
+      <PageHeader title="구독 관리" accent="구독 관리" nodeRef="SCR-SYS-041" status="PROTOTYPE"
         description="강제 구독(Y) + 사용자 우선순위 설정 — USR 도메인 cross (FNC-SYS-042)" />
       <div className="flex gap-2 mb-4">
         <button className="px-4 py-1.5 text-xs font-label uppercase tracking-widest bg-[#00912F] text-white">+ 구독 추가</button>

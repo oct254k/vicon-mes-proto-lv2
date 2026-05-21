@@ -5,9 +5,9 @@ import { DataTable } from "@/components/ui/DataTable";
 import { FieldHeader } from "@/components/ui/FieldHeader";
 
 const RECEIVE_LINES = [
-  { lineNo: 1, material: "M-COIL-A", supplierCoilId: "P-A2305-0017", qty: "812.4", unit: "m", poRemain: "1500.0", isolate: "N" },
-  { lineNo: 2, material: "M-COIL-A", supplierCoilId: "P-A2305-0018", qty: "820.0", unit: "m", poRemain: "687.6",  isolate: "N" },
-  { lineNo: 3, material: "M-COIL-B", supplierCoilId: "P-B2305-0301", qty: "300.0", unit: "m", poRemain: "300.0",  isolate: "Y" },
+  { lineNo: 1, material: "M-COIL-A", supplierCoilId: "P-A2305-0017", qty: "812.4", unit: "m", poRemain: "1500.0", isolate: "없음" },
+  { lineNo: 2, material: "M-COIL-A", supplierCoilId: "P-A2305-0018", qty: "820.0", unit: "m", poRemain: "687.6",  isolate: "없음" },
+  { lineNo: 3, material: "M-COIL-B", supplierCoilId: "P-B2305-0301", qty: "300.0", unit: "m", poRemain: "300.0",  isolate: "있음" },
 ];
 const PREVIEW_LOTS = [
   { lineNo: 1, lotNo: "RCV-20260501-0017", fifoSeq: 4521 },
@@ -15,8 +15,8 @@ const PREVIEW_LOTS = [
 ];
 const LINE_COLS = [
   { key: "lineNo",         label: "#" },
-  { key: "material",       label: "Material" },
-  { key: "supplierCoilId", label: "공급사 CoilID" },
+  { key: "material",       label: "자재" },
+  { key: "supplierCoilId", label: "공급사 코일 ID" },
   { key: "qty",            label: "수량(m)" },
   { key: "poRemain",       label: "PO 잔량" },
   { key: "isolate",        label: "격리" },
@@ -47,7 +47,7 @@ export default function LOCReceivePage() {
 
   return (
     <main className="p-8 bg-surface min-h-screen text-on-surface">
-      <PageHeader title="입고" accent="RECEIVE" nodeRef="SCR-LOC-020" status="PROTOTYPE" />
+      <PageHeader title="입고" accent="입고" nodeRef="SCR-LOC-020" status="PROTOTYPE" />
       <div className="flex gap-0 mb-8">{tabBtn("pc", "PC 등록")}{tabBtn("pda", "PDA 스캔")}</div>
 
       {tab === "pc" && (
@@ -67,9 +67,9 @@ export default function LOCReceivePage() {
           </div>
           <div className="bg-surface-container-low p-3 text-xs text-on-surface-variant border-l-2 border-primary-accent/40">
             공급사: <span className="text-on-surface font-bold">포스코</span>
-            &ensp;|&ensp;3-Way Matching: PO <span className="text-tertiary">✔</span>
-            &ensp;qty <span className="text-tertiary">✔</span>
-            &ensp;단가 <span className="text-warning">PENDING</span>
+            &ensp;|&ensp;3자 대사: PO <span className="text-tertiary">✔</span>
+            &ensp;수량 <span className="text-tertiary">✔</span>
+            &ensp;단가 <span className="text-warning">대기</span>
           </div>
 
           <FieldHeader title="B. 라인별 자재" moduleRef="FNC-LOC-038" />
@@ -81,7 +81,7 @@ export default function LOCReceivePage() {
                 <span className="text-primary-accent">{l.lineNo}</span>
                 {" → "}
                 <span className="text-on-surface">{l.lotNo}</span>
-                <span className="opacity-40 ml-2">(fifo_seq {l.fifoSeq})</span>
+                <span className="opacity-40 ml-2">(FIFO 순번 {l.fifoSeq})</span>
               </p>
             ))}
           </div>
@@ -96,7 +96,7 @@ export default function LOCReceivePage() {
             ))}
           </div>
           <div className="flex gap-4 text-xs mt-1">
-            {["ACTIVE ✔", "Y-RAW 허용 ✔", "잔여 1500m ✔"].map((t) => (
+            {["활성 ✔", "Y-RAW 허용 ✔", "잔여 1500m ✔"].map((t) => (
               <span key={t} className="text-tertiary">{t}</span>
             ))}
           </div>
@@ -116,7 +116,7 @@ export default function LOCReceivePage() {
           <FieldHeader title="PDA 입고 스캔" moduleRef="SCR-LOC-021" />
           <div className="bg-surface-container p-4 space-y-3">
             <p className="text-xs uppercase tracking-widest text-primary-accent">1단계 코일 라벨 스캔</p>
-            <input className={inputCls + " w-full"} placeholder="Lot / CoilID 스캔" value={scanLot} onChange={(e) => setScanLot(e.target.value)} />
+            <input className={inputCls + " w-full"} placeholder="Lot / 코일 ID 스캔" value={scanLot} onChange={(e) => setScanLot(e.target.value)} />
             {scanLot && (
               <div className="text-sm">
                 <p>M-COIL-A &nbsp;<span className="text-on-surface-variant">812.4 m</span></p>
@@ -128,7 +128,7 @@ export default function LOCReceivePage() {
             <p className="text-xs uppercase tracking-widest text-primary-accent">2단계 위치 라벨 스캔</p>
             <input className={inputCls + " w-full"} value={scanLoc} onChange={(e) => setScanLoc(e.target.value)} placeholder="위치 ID 스캔" />
             <div className="flex gap-2 text-xs">
-              <span className="text-tertiary">✔ ACTIVE</span>
+              <span className="text-tertiary">✔ 활성</span>
               <span className="text-tertiary">✔ Y-RAW</span>
               <span className="text-tertiary">✔ 잔여 2000m</span>
             </div>
@@ -136,7 +136,7 @@ export default function LOCReceivePage() {
           <div className="bg-surface-container p-4 space-y-2">
             <p className="text-xs uppercase tracking-widest text-primary-accent">입고 수량 (m)</p>
             <input type="number" className={inputCls + " w-full"} value={pdaQty} onChange={(e) => setPdaQty(e.target.value)} />
-            <p className="text-xs text-on-surface-variant">Lot (자동) RCV-20260501-0017&ensp;fifo_seq 4521</p>
+            <p className="text-xs text-on-surface-variant">Lot (자동) RCV-20260501-0017&ensp;FIFO 순번 4521</p>
           </div>
           <button className="w-full py-3 bg-primary-accent text-black text-sm font-bold uppercase tracking-widest hover:opacity-90">입고 확정 ▶</button>
           <button className="w-full py-2 bg-surface-container text-on-surface-variant text-sm uppercase tracking-widest">취소</button>

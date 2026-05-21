@@ -15,15 +15,15 @@ const COLS = [
 ];
 
 const MOCK = [
-  { plantId:"P1000", plantName:"울산 1공장",   timezone:"Asia/Seoul",     currency:"KRW", language:"ko", shift:"3SHIFT",  rfid:"Y", fifo:"Y", closingDay:"말일" },
-  { plantId:"P2000", plantName:"창원 2공장",   timezone:"Asia/Seoul",     currency:"KRW", language:"ko", shift:"2SHIFT",  rfid:"Y", fifo:"N", closingDay:"말일" },
-  { plantId:"P3000", plantName:"베트남 법인",  timezone:"Asia/Ho_Chi_Minh",currency:"VND", language:"vi", shift:"1SHIFT",  rfid:"N", fifo:"Y", closingDay:"25일" },
+  { plantId:"P1000", plantName:"울산 1공장",   timezone:"Asia/Seoul",     currency:"KRW", language:"ko", shift:"3SHIFT",  rfid:"예", fifo:"예", closingDay:"말일" },
+  { plantId:"P2000", plantName:"창원 2공장",   timezone:"Asia/Seoul",     currency:"KRW", language:"ko", shift:"2SHIFT",  rfid:"예", fifo:"아니오", closingDay:"말일" },
+  { plantId:"P3000", plantName:"베트남 법인",  timezone:"Asia/Ho_Chi_Minh",currency:"VND", language:"vi", shift:"1SHIFT",  rfid:"아니오", fifo:"예", closingDay:"25일" },
 ];
 
 export default function PlantPolicyPage() {
   return (
     <div className="p-8 bg-surface min-h-screen text-on-surface">
-      <PageHeader title="Plant 정책 설정" accent="POLICY" nodeRef="SCR-SYS-080" status="PROTOTYPE"
+      <PageHeader title="Plant 정책 설정" accent="정책 설정" nodeRef="SCR-SYS-080" status="PROTOTYPE"
         description="Plant별 Timezone·통화·언어·교대·RFID·FIFO 플래그 — 변경 시 사유 코드 필수 (FNC-SYS-080~083)" />
       <div className="flex gap-3 mb-4">
         <button className="px-4 py-2 text-xs font-label uppercase tracking-widest bg-[#00912F] text-white">정책 저장 (사유 코드)</button>

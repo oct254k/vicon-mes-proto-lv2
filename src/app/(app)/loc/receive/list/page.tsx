@@ -16,11 +16,11 @@ const COLS = [
 ];
 
 const DATA = [
-  { rcvId:"RCV-20260501-0017", poId:"PO-2026-00417", material:"M-COIL-A P3000 900m", lot:"RCV-20260501-0017", qty:"900",   location:"Y-P3000-A-01-03", rcvDate:"2026-05-01", status:"완료", qcFlag:"N" },
-  { rcvId:"RCV-20260501-0018", poId:"PO-2026-00417", material:"M-COIL-A P3000 900m", lot:"RCV-20260501-0018", qty:"820",   location:"Y-P3000-A-01-02", rcvDate:"2026-05-01", status:"완료", qcFlag:"N" },
-  { rcvId:"RCV-20260503-0011", poId:"PO-2026-00381", material:"M-COIL-C",            lot:"RCV-20260503-0011", qty:"4,200", location:"Y-P3000-A-02-01", rcvDate:"2026-05-03", status:"완료", qcFlag:"N" },
-  { rcvId:"RCV-20260504-0021", poId:"PO-2026-00420", material:"M-COIL-B",            lot:"RCV-20260504-0021", qty:"1,800", location:"Y-P3000-A-01-05", rcvDate:"2026-05-04", status:"검수중", qcFlag:"Y" },
-  { rcvId:"RCV-20260505-0003", poId:"PO-2026-00431", material:"M-PLATE-01",          lot:"RCV-20260505-0003", qty:"2,200", location:"Y-P3000-C-02-03", rcvDate:"2026-05-05", status:"완료", qcFlag:"N" },
+  { rcvId:"RCV-20260501-0017", poId:"PO-2026-00417", material:"M-COIL-A P3000 900m", lot:"RCV-20260501-0017", qty:"900",   location:"Y-P3000-A-01-03", rcvDate:"2026-05-01", status:"완료", qcFlag:"없음" },
+  { rcvId:"RCV-20260501-0018", poId:"PO-2026-00417", material:"M-COIL-A P3000 900m", lot:"RCV-20260501-0018", qty:"820",   location:"Y-P3000-A-01-02", rcvDate:"2026-05-01", status:"완료", qcFlag:"없음" },
+  { rcvId:"RCV-20260503-0011", poId:"PO-2026-00381", material:"M-COIL-C",            lot:"RCV-20260503-0011", qty:"4,200", location:"Y-P3000-A-02-01", rcvDate:"2026-05-03", status:"완료", qcFlag:"없음" },
+  { rcvId:"RCV-20260504-0021", poId:"PO-2026-00420", material:"M-COIL-B",            lot:"RCV-20260504-0021", qty:"1,800", location:"Y-P3000-A-01-05", rcvDate:"2026-05-04", status:"검수중", qcFlag:"있음" },
+  { rcvId:"RCV-20260505-0003", poId:"PO-2026-00431", material:"M-PLATE-01",          lot:"RCV-20260505-0003", qty:"2,200", location:"Y-P3000-C-02-03", rcvDate:"2026-05-05", status:"완료", qcFlag:"없음" },
 ];
 
 const KPI = [
@@ -34,7 +34,7 @@ export default function ReceiveListPage() {
     <div>
       <PageHeader
         title="입고 목록"
-        accent="RECEIVE"
+        accent="입고"
         nodeRef="SCR-LOC-022"
         status="PROTOTYPE"
         description="입고 이력 전체 조회 및 검수·격리 현황. 행 선택 후 검수 진입 가능."
