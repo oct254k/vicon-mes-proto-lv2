@@ -74,10 +74,10 @@ const PLANT_DATA: Record<string, PlantData> = {
       { type: "자재", count: 0 },
     ],
     eqData: [
-      { id: "EQ-P1100-FRM-001", name: "포밍기 #1",    process: "포밍공정", status: "RUNNING", uptime: "96.2%", mtbf: "1,840" },
-      { id: "EQ-P1100-FRM-002", name: "포밍기 #2",    process: "포밍공정", status: "WARNING", uptime: "81.4%", mtbf: "520" },
-      { id: "EQ-P1100-WLD-001", name: "CO2 용접기 A", process: "용접공정", status: "RUNNING", uptime: "98.1%", mtbf: "2,100" },
-      { id: "EQ-P1100-WLD-002", name: "저항 용접기",  process: "용접공정", status: "RUNNING", uptime: "94.3%", mtbf: "1,260" },
+      { id: "EQ-P1100-FRM-001", name: "포밍기 #1",    process: "포밍공정", status: "작동중", uptime: "96.2%", mtbf: "1,840" },
+      { id: "EQ-P1100-FRM-002", name: "포밍기 #2",    process: "포밍공정", status: "경고", uptime: "81.4%", mtbf: "520" },
+      { id: "EQ-P1100-WLD-001", name: "CO2 용접기 A", process: "용접공정", status: "작동중", uptime: "98.1%", mtbf: "2,100" },
+      { id: "EQ-P1100-WLD-002", name: "저항 용접기",  process: "용접공정", status: "작동중", uptime: "94.3%", mtbf: "1,260" },
     ],
     woData: [
       { id: "WO-P1100-20260514-0003", total: "15", done: "12", rate: "80%", status: "진행중" },
@@ -100,9 +100,9 @@ const PLANT_DATA: Record<string, PlantData> = {
       { type: "자재", count: 0 },
     ],
     eqData: [
-      { id: "EQ-P1200-FRM-001", name: "포밍기 #1",    process: "포밍공정", status: "RUNNING", uptime: "97.5%", mtbf: "2,050" },
-      { id: "EQ-P1200-WLD-001", name: "CO2 용접기 A", process: "용접공정", status: "RUNNING", uptime: "99.0%", mtbf: "2,380" },
-      { id: "EQ-P1200-WLD-002", name: "저항 용접기",  process: "용접공정", status: "STOPPED", uptime: "0.0%",  mtbf: "180" },
+      { id: "EQ-P1200-FRM-001", name: "포밍기 #1",    process: "포밍공정", status: "작동중", uptime: "97.5%", mtbf: "2,050" },
+      { id: "EQ-P1200-WLD-001", name: "CO2 용접기 A", process: "용접공정", status: "작동중", uptime: "99.0%", mtbf: "2,380" },
+      { id: "EQ-P1200-WLD-002", name: "저항 용접기",  process: "용접공정", status: "정지", uptime: "0.0%",  mtbf: "180" },
     ],
     woData: [
       { id: "WO-P1200-20260514-0002", total: "18", done: "15", rate: "83%",  status: "진행중" },
@@ -127,10 +127,10 @@ const PLANT_DATA: Record<string, PlantData> = {
       { type: "자재", count: 0 },
     ],
     eqData: [
-      { id: "EQ-P2000-CUT-001", name: "절단기 #1",   process: "절단공정", status: "RUNNING", uptime: "91.8%", mtbf: "1,650" },
-      { id: "EQ-P2000-ASM-001", name: "볼팅 머신",   process: "조립공정", status: "WARNING", uptime: "74.2%", mtbf: "430" },
-      { id: "EQ-P2000-WLD-001", name: "MIG 용접기",  process: "용접공정", status: "RUNNING", uptime: "88.5%", mtbf: "980" },
-      { id: "EQ-P2000-PKG-001", name: "번들링 머신", process: "포장공정", status: "RUNNING", uptime: "95.0%", mtbf: "2,200" },
+      { id: "EQ-P2000-CUT-001", name: "절단기 #1",   process: "절단공정", status: "작동중", uptime: "91.8%", mtbf: "1,650" },
+      { id: "EQ-P2000-ASM-001", name: "볼팅 머신",   process: "조립공정", status: "경고", uptime: "74.2%", mtbf: "430" },
+      { id: "EQ-P2000-WLD-001", name: "MIG 용접기",  process: "용접공정", status: "작동중", uptime: "88.5%", mtbf: "980" },
+      { id: "EQ-P2000-PKG-001", name: "번들링 머신", process: "포장공정", status: "작동중", uptime: "95.0%", mtbf: "2,200" },
     ],
     woData: [
       { id: "WO-P2000-20260514-0005", total: "22", done: "14", rate: "64%",  status: "진행중" },
@@ -156,11 +156,11 @@ const PLANT_DATA: Record<string, PlantData> = {
       { type: "자재", count: 1 },
     ],
     eqData: [
-      { id: "EQ-P3000-DRW-001", name: "신선기 M1",     process: "신선공정",       status: "RUNNING", uptime: "98.2%", mtbf: "1,420" },
-      { id: "EQ-P3000-TG-001",  name: "TG 유닛 A",     process: "TG공정",         status: "RUNNING", uptime: "96.7%", mtbf: "890" },
-      { id: "EQ-P3000-FRM-001", name: "포밍 프레스 #1", process: "포밍공정",       status: "WARNING", uptime: "87.1%", mtbf: "620" },
-      { id: "EQ-P3000-FRM-002", name: "포밍 프레스 #2", process: "포밍공정",       status: "STOPPED", uptime: "0.0%",  mtbf: "340" },
-      { id: "EQ-P3000-DCK-001", name: "데크 점용접기",  process: "데크플레이트공정", status: "RUNNING", uptime: "93.4%", mtbf: "1,180" },
+      { id: "EQ-P3000-DRW-001", name: "신선기 M1",     process: "신선공정",       status: "작동중", uptime: "98.2%", mtbf: "1,420" },
+      { id: "EQ-P3000-TG-001",  name: "TG 유닛 A",     process: "TG공정",         status: "작동중", uptime: "96.7%", mtbf: "890" },
+      { id: "EQ-P3000-FRM-001", name: "포밍 프레스 #1", process: "포밍공정",       status: "경고", uptime: "87.1%", mtbf: "620" },
+      { id: "EQ-P3000-FRM-002", name: "포밍 프레스 #2", process: "포밍공정",       status: "정지", uptime: "0.0%",  mtbf: "340" },
+      { id: "EQ-P3000-DCK-001", name: "데크 점용접기",  process: "데크플레이트공정", status: "작동중", uptime: "93.4%", mtbf: "1,180" },
     ],
     woData: [
       { id: "WO-P3000-20260514-0007", total: "12", done: "9",  rate: "75%",  status: "진행중" },
