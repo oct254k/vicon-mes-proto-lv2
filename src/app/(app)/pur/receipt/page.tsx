@@ -14,6 +14,7 @@ const RESULT_MAP: Record<string, { type: "running" | "stopped" | "warning" }> = 
   FAIL:    { type: "stopped" },
   PARTIAL: { type: "warning" },
 };
+const SL: Record<string, string> = { PASS:"합격", FAIL:"불합격", PARTIAL:"부분합격" };
 
 export default function PURReceiptPage() {
   const pass = RECEIPT_DATA.filter((r) => r.result === "PASS").length;
@@ -33,15 +34,15 @@ export default function PURReceiptPage() {
       {/* KPI */}
       <div className="grid grid-cols-3 gap-4 mb-6">
         <div className="bg-surface-container-low p-4 border-l-4 border-primary-accent">
-          <p className="text-xs font-label uppercase tracking-widest opacity-50 mb-1">PASS</p>
+          <p className="text-xs font-label uppercase tracking-widest opacity-50 mb-1">합격</p>
           <p className="text-2xl font-headline font-black text-primary-accent">{pass}</p>
         </div>
         <div className="bg-surface-container-low p-4 border-l-4 border-warning">
-          <p className="text-xs font-label uppercase tracking-widest opacity-50 mb-1">PARTIAL</p>
+          <p className="text-xs font-label uppercase tracking-widest opacity-50 mb-1">부분합격</p>
           <p className="text-2xl font-headline font-black text-warning">{partial}</p>
         </div>
         <div className="bg-surface-container-low p-4 border-l-4 border-error">
-          <p className="text-xs font-label uppercase tracking-widest opacity-50 mb-1">FAIL</p>
+          <p className="text-xs font-label uppercase tracking-widest opacity-50 mb-1">불합격</p>
           <p className="text-2xl font-headline font-black">{fail}</p>
         </div>
       </div>
@@ -81,7 +82,7 @@ export default function PURReceiptPage() {
                   <td className="px-4 py-2">
                     <StatusBadge
                       type={RESULT_MAP[row.result]?.type ?? "idle"}
-                      label={row.result}
+                      label={SL[row.result] ?? row.result}
                     />
                   </td>
                   <td className="px-4 py-2 tabular-nums text-xs opacity-70">{row.inspectedAt}</td>

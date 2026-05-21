@@ -9,6 +9,7 @@ type Result = "PENDING" | "PASS" | "FAIL";
 
 interface InspectItem { lot: string; material: string; qty: string; result: Result; note: string; }
 
+const RESULT_LABEL: Record<string, string> = { PENDING:"대기", PASS:"합격", FAIL:"불합격" };
 const INIT: InspectItem[] = [
   { lot: "RCV-20260504-0021", material: "M-COIL-B", qty: "300m", result: "PENDING", note: "" },
 ];
@@ -39,10 +40,10 @@ export default function ReceiveInspectPage() {
     <div className="max-w-sm mx-auto">
       <PageHeader
         title="PDA 검수"
-        accent="INSPECT"
+        accent="검수"
         nodeRef="SCR-LOC-022"
         status="PROTOTYPE"
-        description="입고 Lot 스캔 → PASS / FAIL 판정. FAIL 시 격리 위치로 자동 이동."
+        description="입고 Lot 스캔 → 합격 / 불합격 판정. 불합격 시 격리 위치로 자동 이동."
       />
 
       <div className="space-y-5">
@@ -70,7 +71,7 @@ export default function ReceiveInspectPage() {
                 </div>
               ))}
               <div className="pt-1">
-                <StatusBadge type={current.result === "PASS" ? "running" : current.result === "FAIL" ? "stopped" : "idle"} label={current.result} />
+                <StatusBadge type={current.result === "PASS" ? "running" : current.result === "FAIL" ? "stopped" : "idle"} label={RESULT_LABEL[current.result]} />
               </div>
             </div>
 
@@ -79,11 +80,11 @@ export default function ReceiveInspectPage() {
               <button
                 onClick={() => setResult(current.lot, "PASS")}
                 className={`flex-1 py-3 font-label font-bold uppercase tracking-widest text-sm transition-colors ${current.result === "PASS" ? "bg-[#00912F] text-black" : "bg-surface-elevated border border-outline/20 text-on-surface/60 hover:border-[#00912F]"}`}
-              >PASS ✔</button>
+              >합격 ✔</button>
               <button
                 onClick={() => setResult(current.lot, "FAIL")}
                 className={`flex-1 py-3 font-label font-bold uppercase tracking-widest text-sm transition-colors ${current.result === "FAIL" ? "bg-danger text-white" : "bg-surface-elevated border border-outline/20 text-on-surface/60 hover:border-danger"}`}
-              >FAIL ✗</button>
+              >불합격 ✗</button>
             </div>
 
             {current.result === "FAIL" && (

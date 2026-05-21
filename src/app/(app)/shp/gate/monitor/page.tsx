@@ -10,6 +10,7 @@ const MOCK = [
   { id:"GATE-2026-0122", shp:"SHP-2026-0022", plate:"미인식", mode:"MANUAL", passAt:"2026-05-03 08:45", result:"FALLBACK" },
 ];
 const SM: Record<string,"running"|"warning"> = { PASS:"running", FALLBACK:"warning" };
+const SL: Record<string, string> = { PASS:"통과", FALLBACK:"수동처리" };
 const MM: Record<string,"idle"|"warning"> = { RFID:"idle", MANUAL:"warning" };
 const kpis = [{l:"금일 통과",v:2},{l:"RFID 인식",v:3},{l:"수동 처리",v:2},{l:"오류",v:0}];
 
@@ -45,7 +46,7 @@ export default function GateMonitorPage() {
                 <td className="px-4 py-2 font-mono text-xs">{r.plate}</td>
                 <td className="px-4 py-2"><StatusBadge type={MM[r.mode]} label={r.mode} /></td>
                 <td className="px-4 py-2 tabular-nums text-xs opacity-70">{r.passAt}</td>
-                <td className="px-4 py-2"><StatusBadge type={SM[r.result]} label={r.result} /></td>
+                <td className="px-4 py-2"><StatusBadge type={SM[r.result]} label={SL[r.result] ?? r.result} /></td>
               </tr>
             ))}
           </tbody>

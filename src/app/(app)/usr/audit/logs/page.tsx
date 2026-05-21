@@ -11,6 +11,7 @@ const LOGS = [
 ];
 
 const RESULT_BADGE: Record<string, "running" | "error"> = { SUCCESS: "running", FAIL: "error" };
+const SL: Record<string, string> = { SUCCESS:"성공", FAIL:"실패" };
 
 export default function AuditLogsPage() {
   return (
@@ -72,7 +73,7 @@ export default function AuditLogsPage() {
                   <td className="px-4 py-2 text-xs opacity-60">{l.device}</td>
                   <td className="px-4 py-2 tabular-nums text-xs opacity-50">{l.ip}</td>
                   <td className="px-4 py-2 tabular-nums text-xs">{l.occurredAt}</td>
-                  <td className="px-4 py-2"><StatusBadge type={RESULT_BADGE[l.result]} label={l.result} /></td>
+                  <td className="px-4 py-2"><StatusBadge type={RESULT_BADGE[l.result]} label={SL[l.result] ?? l.result} /></td>
                   <td className="px-4 py-2 text-xs opacity-60">{l.detail}</td>
                 </tr>
               ))}

@@ -11,6 +11,7 @@ const MOCK = [
   { lot:"LOT-20260428-001", po:"PO-2026-0008", mat:"M-ROD-C4", qty:"300 ea", recvQty:"300 ea", insp:"FAIL", rcvAt:"2026-04-28 15:30", whs:"WH-B02" },
 ];
 const SM: Record<string,"running"|"warning"|"stopped"> = { PASS:"running", PARTIAL:"warning", FAIL:"stopped" };
+const SL: Record<string, string> = { PASS:"합격", PARTIAL:"부분합격", FAIL:"불합격" };
 
 export default function ReceiptHistoryPage() {
   const [q, setQ] = useState("");
@@ -43,7 +44,7 @@ export default function ReceiptHistoryPage() {
                 <td className="px-4 py-2">{r.mat}</td>
                 <td className="px-4 py-2 tabular-nums text-xs">{r.qty}</td>
                 <td className="px-4 py-2 tabular-nums text-xs">{r.recvQty}</td>
-                <td className="px-4 py-2"><StatusBadge type={SM[r.insp]} label={r.insp} /></td>
+                <td className="px-4 py-2"><StatusBadge type={SM[r.insp]} label={SL[r.insp] ?? r.insp} /></td>
                 <td className="px-4 py-2 tabular-nums text-xs opacity-70">{r.rcvAt}</td>
                 <td className="px-4 py-2 font-mono text-xs opacity-60">{r.whs}</td>
               </tr>

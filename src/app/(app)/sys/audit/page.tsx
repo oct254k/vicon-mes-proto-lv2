@@ -3,14 +3,14 @@ import { useState } from "react";
 import { PageHeader } from "@/components/ui/PageHeader";
 
 const MOCK = [
-  { ts: "2026-05-06 08:21:03", user: "admin01", event: "LOGIN", domain: "AUTH", ip: "10.0.1.5", result: "SUCCESS" },
-  { ts: "2026-05-06 08:22:15", user: "admin01", event: "CODE_UPDATE", domain: "SYS", ip: "10.0.1.5", result: "SUCCESS" },
-  { ts: "2026-05-06 08:35:44", user: "oper02", event: "LOGIN", domain: "AUTH", ip: "10.0.2.12", result: "FAIL" },
-  { ts: "2026-05-06 08:36:01", user: "oper02", event: "LOGIN", domain: "AUTH", ip: "10.0.2.12", result: "SUCCESS" },
-  { ts: "2026-05-06 09:01:22", user: "admin01", event: "BACKUP_TRIGGER", domain: "SYS", ip: "10.0.1.5", result: "SUCCESS" },
-  { ts: "2026-05-06 09:15:30", user: "audit01", event: "LOG_EXPORT", domain: "SYS", ip: "10.0.3.8", result: "SUCCESS" },
-  { ts: "2026-05-06 09:42:17", user: "oper03", event: "TOKEN_REVOKE", domain: "SYS", ip: "10.0.2.18", result: "FAIL" },
-  { ts: "2026-05-06 10:05:00", user: "admin01", event: "PLANT_POLICY_SAVE", domain: "SYS", ip: "10.0.1.5", result: "SUCCESS" },
+  { ts: "2026-05-06 08:21:03", user: "admin01", event: "LOGIN", domain: "AUTH", ip: "10.0.1.5", result: "성공" },
+  { ts: "2026-05-06 08:22:15", user: "admin01", event: "CODE_UPDATE", domain: "SYS", ip: "10.0.1.5", result: "성공" },
+  { ts: "2026-05-06 08:35:44", user: "oper02", event: "LOGIN", domain: "AUTH", ip: "10.0.2.12", result: "실패" },
+  { ts: "2026-05-06 08:36:01", user: "oper02", event: "LOGIN", domain: "AUTH", ip: "10.0.2.12", result: "성공" },
+  { ts: "2026-05-06 09:01:22", user: "admin01", event: "BACKUP_TRIGGER", domain: "SYS", ip: "10.0.1.5", result: "성공" },
+  { ts: "2026-05-06 09:15:30", user: "audit01", event: "LOG_EXPORT", domain: "SYS", ip: "10.0.3.8", result: "성공" },
+  { ts: "2026-05-06 09:42:17", user: "oper03", event: "TOKEN_REVOKE", domain: "SYS", ip: "10.0.2.18", result: "실패" },
+  { ts: "2026-05-06 10:05:00", user: "admin01", event: "PLANT_POLICY_SAVE", domain: "SYS", ip: "10.0.1.5", result: "성공" },
 ];
 
 export default function SYSAuditPage() {
@@ -36,8 +36,8 @@ export default function SYSAuditPage() {
         <select value={resultFilter} onChange={e => setResultFilter(e.target.value)}
           className="bg-surface-container-high px-3 py-2 text-sm outline-none border border-outline-variant/20 text-on-surface">
           <option value="">결과 전체</option>
-          <option value="SUCCESS">SUCCESS</option>
-          <option value="FAIL">FAIL</option>
+          <option value="성공">성공</option>
+          <option value="실패">실패</option>
         </select>
         <div className="flex-1" />
         <div className="flex flex-col items-end gap-1">
@@ -70,7 +70,7 @@ export default function SYSAuditPage() {
                   <td className="px-4 py-2 text-xs text-[#00912F]">{row.domain}</td>
                   <td className="px-4 py-2 tabular-nums text-on-surface-variant text-xs">{row.ip}</td>
                   <td className="px-4 py-2">
-                    <span className={`px-2 py-0.5 text-xs font-label uppercase ${row.result === "SUCCESS" ? "bg-[#00912F]/20 text-[#00912F]" : "bg-error/20 text-error"}`}>
+                    <span className={`px-2 py-0.5 text-xs font-label uppercase ${row.result === "성공" ? "bg-[#00912F]/20 text-[#00912F]" : "bg-error/20 text-error"}`}>
                       {row.result}
                     </span>
                   </td>

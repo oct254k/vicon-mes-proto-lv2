@@ -11,6 +11,7 @@ const PENDING = [
 export default function ReceiptPDAPage() {
   const [scan, setScan] = useState("");
   const [inspResult, setInspResult] = useState<""|"PASS"|"FAIL"|"PARTIAL">("");
+  const RESULT_LABEL: Record<string, string> = { PASS:"합격", PARTIAL:"부분합격", FAIL:"불합격" };
   const [lotIssued, setLotIssued] = useState("");
 
   function handleScan() {
@@ -57,7 +58,7 @@ export default function ReceiptPDAPage() {
               {(["PASS","PARTIAL","FAIL"] as const).map(r=>(
                 <button key={r} onClick={()=>setInspResult(r)}
                   className={`py-3 text-xs font-label uppercase tracking-widest border ${inspResult===r?"bg-primary-accent text-black":"bg-surface-container-high border-outline-variant/20"}`}>
-                  {r}
+                  {RESULT_LABEL[r]}
                 </button>
               ))}
             </div>

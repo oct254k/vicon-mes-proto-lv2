@@ -17,7 +17,7 @@ const BOARD = {
     { id:"MATCH-2026-0017", po:"PO-2026-0017", inv:"—", reason:"Invoice 미수신" },
   ],
 };
-const kpis = [{l:"전체",v:6},{l:"PASS",v:2},{l:"예외",v:3},{l:"대기",v:1}];
+const kpis = [{l:"전체",v:6},{l:"합격",v:2},{l:"예외",v:3},{l:"대기",v:1}];
 
 export default function MatchBoardPage() {
   return (
@@ -35,13 +35,13 @@ export default function MatchBoardPage() {
       <div className="grid grid-cols-3 gap-4">
         {/* PASS */}
         <div className="bg-surface-container-lowest border-t-2 border-primary-accent p-4">
-          <FieldHeader title="PASS" moduleRef={`${BOARD.PASS.length}건`} />
+          <FieldHeader title="합격" moduleRef={`${BOARD.PASS.length}건`} />
           {BOARD.PASS.map(m=>(
             <div key={m.id} className="bg-surface-container p-3 mb-2">
               <p className="text-xs font-mono text-primary-accent">{m.id}</p>
               <p className="text-xs opacity-60 mt-0.5">{m.po} / {m.inv}</p>
               <p className="text-xs opacity-40">{m.matchAt}</p>
-              <StatusBadge type="running" label="PASS" />
+              <StatusBadge type="running" label="합격" />
             </div>
           ))}
         </div>
@@ -58,7 +58,7 @@ export default function MatchBoardPage() {
         </div>
         {/* PENDING */}
         <div className="bg-surface-container-lowest border-t-2 border-outline-variant/30 p-4">
-          <FieldHeader title="PENDING" moduleRef={`${BOARD.PENDING.length}건`} />
+          <FieldHeader title="대기" moduleRef={`${BOARD.PENDING.length}건`} />
           {BOARD.PENDING.map(m=>(
             <div key={m.id} className="bg-surface-container p-3 mb-2">
               <p className="text-xs font-mono text-primary-accent">{m.id}</p>
