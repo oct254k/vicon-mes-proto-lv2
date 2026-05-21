@@ -37,7 +37,7 @@ export default function CountSheetPage() {
     <div>
       <PageHeader
         title="실사 입력 시트"
-        accent="COUNT-SHEET"
+        accent="실사표"
         nodeRef="SCR-LOC-051"
         status="PROTOTYPE"
         description="PDA/PC 카운트 입력 시트. 맹검 — 시스템 수량은 가려짐. 실측 입력 후 차이 자동 계산."

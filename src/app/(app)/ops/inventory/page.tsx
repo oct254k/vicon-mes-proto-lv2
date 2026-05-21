@@ -21,7 +21,7 @@ export default function OPSInventoryPage() {
     <div className="p-6 bg-surface min-h-screen">
       <PageHeader
         title="재고 종합"
-        accent="INVENTORY"
+        accent="재고"
         nodeRef="SCR-OPS-070"
         description="Plant × Material 재고 매트릭스 · 5분 갱신"
       />

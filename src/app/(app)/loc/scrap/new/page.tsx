@@ -23,7 +23,7 @@ export default function ScrapNewPage() {
     <div>
       <PageHeader
         title="SCRAP 등록"
-        accent="SCRAP-NEW"
+        accent="스크랩 등록"
         nodeRef="SCR-LOC-042"
         status="PROTOTYPE"
         description="신규 SCRAP 등록 폼. 유형(SCRAP/OFFCUT), 사유, 대상 자재·Lot, 수량 입력 후 확정."

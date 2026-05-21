@@ -39,7 +39,7 @@ export default function QCRecallPage() {
     <div>
       <PageHeader
         title="불량품 회수 처리"
-        accent="RECALL"
+        accent="회수"
         nodeRef="IA-QC-RECALL-WORKFLOW"
         status="PROTOTYPE"
         description="불량 LOT 회수 5단계 워크플로 — RECALL-2026-0003"

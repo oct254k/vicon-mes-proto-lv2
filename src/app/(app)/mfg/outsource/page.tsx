@@ -49,7 +49,7 @@ export default function MFGOutsourcePage() {
     <div className="px-4 py-6">
       <PageHeader
         title="외주 공정 현황"
-        accent="OUTSOURCE"
+        accent="외주"
         nodeRef="SCR-MFG-050"
         status="PROTOTYPE"
       />

@@ -21,7 +21,7 @@ export default function QCLossAccountingQueuePage() {
     <div>
       <PageHeader
         title="회계 처리 큐"
-        accent="LOSS"
+        accent="손실"
         nodeRef="SCR-QC-072"
         status="PROTOTYPE"
         description="손실 환산 → 회계 ERP 전송 큐·다운로드 모니터링 (FNC-QC-104)"

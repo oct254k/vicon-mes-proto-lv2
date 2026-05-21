@@ -44,7 +44,7 @@ export default function PURClaimsPage() {
     <div>
       <PageHeader
         title="클레임"
-        accent="CLAIMS"
+        accent="클레임"
         nodeRef="SCR-PUR-024"
         status="PROTOTYPE"
         description="공급사 클레임 · 반품 처리 관리"

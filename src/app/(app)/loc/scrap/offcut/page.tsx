@@ -36,7 +36,7 @@ export default function ScrapOffcutPage() {
     <div>
       <PageHeader
         title="자투리 등록"
-        accent="OFFCUT"
+        accent="잔재"
         nodeRef="SCR-LOC-042"
         status="PROTOTYPE"
         description="Offcut Pool — 가공 후 남은 자투리 자재 등록 및 재사용 가용 현황 관리."

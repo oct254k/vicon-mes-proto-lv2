@@ -35,7 +35,7 @@ export default function InventoryHistoryPage() {
     <div>
       <PageHeader
         title="재고 트랜잭션 이력"
-        accent="HISTORY"
+        accent="이력"
         nodeRef="SCR-LOC-062"
         status="PROTOTYPE"
         description="inventory_transaction 전체 이력 조회 (감사 영구 보존). TX 유형별 색상 구분."

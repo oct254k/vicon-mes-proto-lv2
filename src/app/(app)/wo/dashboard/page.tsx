@@ -22,7 +22,7 @@ export default function WODashboardPage() {
     <div>
       <PageHeader
         title="WO·패킹 진척"
-        accent="DASHBOARD"
+        accent="대시보드"
         nodeRef="SCR-WO-050"
         status="PROTOTYPE"
         description="작업지시 발행·진행·완료 현황 및 패킹 대기 수량을 한눈에 확인합니다."

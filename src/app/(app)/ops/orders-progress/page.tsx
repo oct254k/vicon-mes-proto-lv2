@@ -38,7 +38,7 @@ export default function OPSOrdersProgressPage() {
     <div className="p-6 bg-surface min-h-screen">
       <PageHeader
         title="수주별 진척"
-        accent="ORDERS"
+        accent="수주 진행"
         nodeRef="SCR-OPS-040"
         description="거래처 / 현장 / 동 단위 수주 진척 현황 · 5분 갱신"
       />

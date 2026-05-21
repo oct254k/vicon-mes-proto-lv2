@@ -19,7 +19,7 @@ export default function USRQualificationPage() {
     <div>
       <PageHeader
         title="공정 자격 매트릭스"
-        accent="QUALIFICATION"
+        accent="자격"
         nodeRef="SCR-USR-060"
         status="PROTOTYPE"
         description="사용자(행) × 공정(열) — 보유 자격 현황."

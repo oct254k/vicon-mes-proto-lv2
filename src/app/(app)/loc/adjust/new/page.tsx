@@ -29,7 +29,7 @@ export default function AdjustNewPage() {
     <div>
       <PageHeader
         title="보정 신청"
-        accent="ADJUST"
+        accent="조정"
         nodeRef="SCR-LOC-040"
         status="PROTOTYPE"
         description="재고 수량 보정 신청 폼. 사유 코드·결재자 지정 후 LOC-MANAGER 결재 요청."

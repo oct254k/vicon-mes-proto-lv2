@@ -24,7 +24,7 @@ export default function QCCertificateLanding() {
     <div>
       <PageHeader
         title="품질 성적서"
-        accent="CERTIFICATE"
+        accent="인증서"
         nodeRef="IA-QC-CERT"
         status="PROTOTYPE"
         description="품질 성적서 발급·이력·KS/CE/3S 템플릿 관리 진입점 (FNC-QC-120~124)"

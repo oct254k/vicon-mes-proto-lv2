@@ -11,7 +11,7 @@ export default function EQPMSchedulePage() {
     <div className="p-8">
       <PageHeader
         title="PM 스케줄"
-        accent="PM SCHEDULE"
+        accent="PM 일정"
         nodeRef="SCR-EQ-PM"
         status="PROTOTYPE"
         description="설비별 예방정비(PM) 계획 수립·관리."

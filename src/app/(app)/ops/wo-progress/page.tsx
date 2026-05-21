@@ -58,7 +58,7 @@ export default function OPSWoProgressPage() {
     <div className="p-6 bg-surface min-h-screen">
       <PageHeader
         title="WO·부재 진척"
-        accent="WO BOARD"
+        accent="WO 보드"
         nodeRef="SCR-OPS-050"
         description="작업지시 단위 계획 vs 진척 보드 · 60초 자동 갱신"
       />

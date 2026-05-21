@@ -34,7 +34,7 @@ export default function InventoryByLocationPage() {
     <div>
       <PageHeader
         title="위치별 재고"
-        accent="INVENTORY"
+        accent="재고"
         nodeRef="SCR-LOC-060"
         status="PROTOTYPE"
         description="위치 4단계 어느 레벨에서든 조회 가능. 위치 ID 기준 재고·Lot·FIFO 현황."

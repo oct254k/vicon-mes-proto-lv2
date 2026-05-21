@@ -25,7 +25,7 @@ export default function OPSPlantPage() {
     <div className="p-6 bg-surface min-h-screen">
       <PageHeader
         title="Plant 종합"
-        accent="DASHBOARD"
+        accent="대시보드"
         nodeRef="SCR-OPS-020"
         description="제3공장 4분면 대시보드 · 60초 자동 갱신"
       />

@@ -55,7 +55,7 @@ export default function MFGRecallPage() {
     <div className="px-4 py-6">
       <PageHeader
         title="회수 워크플로"
-        accent="RECALL"
+        accent="회수"
         nodeRef="SCR-MFG-040"
         status="PROTOTYPE"
       />

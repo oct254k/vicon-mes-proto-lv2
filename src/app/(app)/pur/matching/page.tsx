@@ -18,7 +18,7 @@ export default function PURMatchingPage() {
     <div>
       <PageHeader
         title="3-Way"
-        accent="Matching"
+        accent="매칭"
         nodeRef="SCR-PUR-021"
         status="PROTOTYPE"
         description="PO · Invoice · 입고 3-Way Matching 자동 검증"

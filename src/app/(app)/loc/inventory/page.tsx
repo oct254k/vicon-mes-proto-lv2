@@ -34,7 +34,7 @@ export default function LOCInventoryPage() {
     <div>
       <PageHeader
         title="재고 현황"
-        accent="INVENTORY"
+        accent="재고"
         nodeRef="SCR-LOC-045"
         status="PROTOTYPE"
         description="Plant·자재 카테고리별 실시간 재고 현황을 조회합니다."

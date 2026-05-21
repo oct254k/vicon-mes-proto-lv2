@@ -25,7 +25,7 @@ export default function ScrapLandingPage() {
     <div>
       <PageHeader
         title="SCRAP 관리"
-        accent="SCRAP"
+        accent="스크랩"
         nodeRef="SCR-LOC-042"
         status="PROTOTYPE"
         description="SCRAP 등록·불량 처리·자투리(Offcut) Pool 관리 랜딩. 빠른 진입 카드."

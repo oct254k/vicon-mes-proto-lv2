@@ -39,7 +39,7 @@ export default function MFGTransferMonitorPage() {
     <div className="px-4 py-6">
       <PageHeader
         title="이동 모니터링"
-        accent="IN-TRANSIT"
+        accent="이동중"
         nodeRef="SCR-MFG-033"
         status="PROTOTYPE"
       />

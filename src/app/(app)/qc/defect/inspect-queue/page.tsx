@@ -13,7 +13,7 @@ export default function QCDefectInspectQueuePage() {
     <div>
       <PageHeader
         title="검사 대기 큐"
-        accent="INSPECT"
+        accent="검수"
         nodeRef="SCR-QC-040"
         status="PROTOTYPE"
         description="QC 검사자 결재 큐 REPORTED→CONFIRMED (FNC-QC-050~052, 064, 071)"

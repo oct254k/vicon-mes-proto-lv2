@@ -19,7 +19,7 @@ export default function QCMasterLanding() {
     <div>
       <PageHeader
         title="QC 마스터"
-        accent="MASTER"
+        accent="마스터"
         nodeRef="IA-QC-MASTER"
         status="PROTOTYPE"
         description="SPC 측정 항목·관리 한계·불량 코드 마스터 진입점 (FNC-QC-010~018, 051)"

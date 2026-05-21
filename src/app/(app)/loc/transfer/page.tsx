@@ -45,7 +45,7 @@ export default function LOCTransferPage() {
     <div>
       <PageHeader
         title="위치 간 이동"
-        accent="TRANSFER"
+        accent="이동"
         nodeRef="SCR-LOC-030"
         status="PROTOTYPE"
         description="PDA 스타일 — 출발·도착 위치를 선택하고 이동 자재를 스캔 후 확정합니다."

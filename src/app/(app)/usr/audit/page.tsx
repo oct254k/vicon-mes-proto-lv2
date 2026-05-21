@@ -32,7 +32,7 @@ export default function USRAuditPage() {
     <div>
       <PageHeader
         title="감사 로그"
-        accent="AUDIT"
+        accent="감사"
         nodeRef="SCR-USR-082"
         status="PROTOTYPE"
         description="사용자 행위·시스템 이벤트 감사 이력 조회."

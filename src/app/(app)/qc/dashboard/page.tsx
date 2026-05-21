@@ -20,7 +20,7 @@ export default function QCDashboardLanding() {
     <div>
       <PageHeader
         title="QC 대시보드"
-        accent="DASHBOARD"
+        accent="대시보드"
         nodeRef="IA-QC-DASH"
         status="PROTOTYPE"
         description="품질 KPI·SPC 알림·손실 요약 통합 대시보드 진입점 (FNC-QC-004~007)"

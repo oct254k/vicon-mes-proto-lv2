@@ -26,7 +26,7 @@ export default function EquipmentComponentPage() {
     <div className="p-8">
       <PageHeader
         title="기준정보 /"
-        accent="Component 마스터"
+        accent="컴포넌트 마스터"
         nodeRef="SCR-BD-081"
         description="설비별 부품(Component) 교체 주기·사유 등록 및 차기 교체일 관리"
       />

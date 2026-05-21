@@ -33,7 +33,7 @@ export default function AdjustListPage() {
     <div>
       <PageHeader
         title="보정 이력"
-        accent="ADJUST"
+        accent="조정"
         nodeRef="SCR-LOC-041"
         status="PROTOTYPE"
         description="재고 보정 전체 이력 조회 (감사 영구 보존). 결재 대기 건 클릭 → 결재 승인."

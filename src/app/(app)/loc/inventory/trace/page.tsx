@@ -27,7 +27,7 @@ export default function InventoryTracePage() {
     <div>
       <PageHeader
         title="FIFO 추적"
-        accent="TRACE"
+        accent="추적"
         nodeRef="SCR-LOC-061"
         status="PROTOTYPE"
         description="FIFO 강제 — fifo_seq 기준 오래된 자재 우선 출고 추적. AGING 위치 경보."

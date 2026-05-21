@@ -24,7 +24,7 @@ export default function TransferOutPage() {
     <div>
       <PageHeader
         title="이동 출발 스캔"
-        accent="TRANSFER-OUT"
+        accent="이동 출고"
         nodeRef="SCR-LOC-030"
         status="PROTOTYPE"
         description="PDA — 출발 위치에서 Lot 스캔 → 도착 위치 지정 → 이동 출고 확정."

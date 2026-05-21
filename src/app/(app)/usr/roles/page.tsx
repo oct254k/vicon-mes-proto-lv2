@@ -31,7 +31,7 @@ export default function USRRolesPage() {
     <div>
       <PageHeader
         title="권한·부서 마스터"
-        accent="ROLES"
+        accent="역할"
         nodeRef="SCR-USR-020"
         status="PROTOTYPE"
         description="권한 레벨 정의 및 부서 코드 마스터 조회."

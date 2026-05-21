@@ -15,7 +15,7 @@ export default function SPNotificationsPage() {
     <div>
       <PageHeader
         title="SP 알림 설정"
-        accent="NOTIFICATIONS"
+        accent="알림"
         nodeRef="SCR-SP-023"
         status="PROTOTYPE"
         description="수주·계획·MRP 이벤트별 알림 채널 및 수신자 설정."

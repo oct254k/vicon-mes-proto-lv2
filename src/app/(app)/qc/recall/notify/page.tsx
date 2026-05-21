@@ -27,7 +27,7 @@ export default function QCRecallNotifyPage() {
     <div>
       <PageHeader
         title="통보 발송"
-        accent="RECALL"
+        accent="회수"
         nodeRef="SCR-QC-053"
         status="PROTOTYPE"
         description="RECALL_NOTIFIED 거래처 통보 발송·회신 큐 (FNC-QC-094~095)"

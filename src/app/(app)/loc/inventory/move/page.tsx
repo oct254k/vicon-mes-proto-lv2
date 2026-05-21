@@ -34,7 +34,7 @@ export default function InventoryMovePage() {
     <div>
       <PageHeader
         title="위치 간 이동 요청"
-        accent="MOVE"
+        accent="이동"
         nodeRef="SCR-LOC-063"
         status="PROTOTYPE"
         description="동일 Plant 내 위치 간 이동 요청 DataTable. PDA 스캔 연계. 이동 사유·완료 추적."

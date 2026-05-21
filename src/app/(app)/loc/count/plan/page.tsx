@@ -36,7 +36,7 @@ export default function CountPlanPage() {
     <div>
       <PageHeader
         title="실사 계획"
-        accent="COUNT-PLAN"
+        accent="실사 계획"
         nodeRef="SCR-LOC-050"
         status="PROTOTYPE"
         description="실사 계획 DataTable. [계획 생성] 클릭 → 맹검 카운트 시트 발행."

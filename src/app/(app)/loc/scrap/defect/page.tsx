@@ -32,7 +32,7 @@ export default function ScrapDefectPage() {
     <div>
       <PageHeader
         title="불량 처리"
-        accent="DEFECT"
+        accent="불량"
         nodeRef="SCR-LOC-043"
         status="PROTOTYPE"
         description="불량 격리·폐기 결재 DataTable. QC-INSPECTOR 검수 후 LOC-MANAGER 폐기 결재."

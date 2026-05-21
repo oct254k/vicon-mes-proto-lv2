@@ -117,7 +117,7 @@ export default function MFGRecallTracePage() {
     <div className="px-4 py-6">
       <PageHeader
         title="LOT 역방향 추적"
-        accent="TRACE"
+        accent="추적"
         nodeRef="SCR-MFG-042"
         status="PROTOTYPE"
       />

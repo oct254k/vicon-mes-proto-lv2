@@ -19,7 +19,7 @@ export default function OPSProductionPage() {
     <div className="p-6 bg-surface min-h-screen">
       <PageHeader
         title="생산·불량·가동"
-        accent="COMBINED"
+        accent="통합"
         nodeRef="SCR-OPS-060"
         description="OEE × 불량률 통합 대시보드 · 60초 자동 갱신"
       />

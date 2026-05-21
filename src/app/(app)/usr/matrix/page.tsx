@@ -32,7 +32,7 @@ export default function USRMatrixPage() {
     <div>
       <PageHeader
         title="권한 매트릭스"
-        accent="MATRIX"
+        accent="매트릭스"
         nodeRef="SCR-USR-040"
         status="PROTOTYPE"
         description="화면(행) × 역할(열) — CRUD/A 권한 조회."

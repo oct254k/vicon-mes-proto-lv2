@@ -27,7 +27,7 @@ export default function USRDelegationPage() {
     <div>
       <PageHeader
         title="임시 위임"
-        accent="DELEGATION"
+        accent="위임"
         nodeRef="SCR-USR-050"
         status="PROTOTYPE"
         description="부재·휴가 시 권한을 임시로 위임하고 이력을 관리합니다."

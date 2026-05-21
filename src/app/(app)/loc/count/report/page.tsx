@@ -30,7 +30,7 @@ export default function CountReportPage() {
     <div>
       <PageHeader
         title="실사 보고서"
-        accent="COUNT-REPORT"
+        accent="실사 결과"
         nodeRef="SCR-LOC-052"
         status="PROTOTYPE"
         description="실사 정합률·차이 Top N 보고서. 차이 건에 대한 자동 ADJUST 처리 결과 포함."

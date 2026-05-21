@@ -22,7 +22,7 @@ export default function PURAckPage() {
     <div>
       <PageHeader
         title="공급사 답신"
-        accent="ACK"
+        accent="확인"
         nodeRef="SCR-PUR-011"
         status="PROTOTYPE"
         description="발주 납기 확인 인박스 · 공급사 답신 처리"

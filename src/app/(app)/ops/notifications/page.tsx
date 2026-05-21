@@ -88,7 +88,7 @@ export default function OPSNotificationsPage() {
       <div className="flex items-start justify-between mb-2">
         <PageHeader
           title="알림 센터"
-          accent="INBOX"
+          accent="수신함"
           nodeRef="SCR-OPS-080"
           description="5채널 통합 인박스 · 4종 액션 · 30초 자동 갱신"
         />

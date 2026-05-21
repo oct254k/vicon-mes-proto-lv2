@@ -39,7 +39,7 @@ export default function LOCAdjustPage() {
     <div>
       <PageHeader
         title="재고 보정"
-        accent="ADJUST"
+        accent="조정"
         nodeRef="SCR-LOC-063"
         status="PROTOTYPE"
         description="실사차이·손상·기타 사유에 의한 재고 수량 보정 신청 및 이력 관리."

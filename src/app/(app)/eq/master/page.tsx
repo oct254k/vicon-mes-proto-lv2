@@ -13,7 +13,7 @@ export default function EQMasterPage() {
     <div className="p-8">
       <PageHeader
         title="설비 마스터"
-        accent="MASTER"
+        accent="마스터"
         nodeRef="SCR-EQ-MASTER"
         status="PROTOTYPE"
         description="Site → Plant → Line → Equipment 4단계 계층 기반 설비 마스터 관리."

@@ -21,7 +21,7 @@ export default function SPOrdersPage() {
     <div>
       <PageHeader
         title="수주 관리"
-        accent="ORDERS"
+        accent="수주"
         nodeRef="SCR-SP-001"
         status="PROTOTYPE"
         description="SP 도메인 랜딩 — 수주 현황 요약 및 바로가기."

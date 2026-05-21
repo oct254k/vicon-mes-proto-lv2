@@ -37,7 +37,7 @@ export default function MFGTransferPage() {
     <div className="max-w-sm mx-auto px-4 py-6">
       <PageHeader
         title="공장 간 이동"
-        accent="TRANSFER"
+        accent="이동"
         nodeRef="SCR-MFG-030"
         status="PROTOTYPE"
       />

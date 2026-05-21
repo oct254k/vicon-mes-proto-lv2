@@ -13,7 +13,7 @@ export default function EQMaintOrderPage() {
     <div className="p-8">
       <PageHeader
         title="정비 작업지시"
-        accent="MAINT ORDER"
+        accent="정비지시"
         nodeRef="SCR-EQ-MO"
         status="PROTOTYPE"
         description="정비 작업지시(MO) 생성·결재·일정·협의 관리."

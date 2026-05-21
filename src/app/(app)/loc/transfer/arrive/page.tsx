@@ -29,7 +29,7 @@ export default function TransferArrivePage() {
     <div>
       <PageHeader
         title="이동 도착 확인"
-        accent="TRANSFER-IN"
+        accent="이동 입고"
         nodeRef="SCR-LOC-031"
         status="PROTOTYPE"
         description="PDA — 도착 위치에서 Lot 스캔 → 실 수량 확인 → MATCH / DISCREPANCY 판정."

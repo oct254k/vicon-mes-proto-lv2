@@ -24,7 +24,7 @@ export default function SPMembersPage() {
     <div>
       <PageHeader
         title="부재 리스트"
-        accent="MEMBERS"
+        accent="부재 목록"
         nodeRef="SCR-SP-020"
         status="PROTOTYPE"
         description="수주 분해 기반 부재리스트 — 수주 선택 후 상세 부재 목록을 조회합니다."

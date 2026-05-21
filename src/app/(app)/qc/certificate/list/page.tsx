@@ -21,7 +21,7 @@ export default function QCCertificateListPage() {
     <div>
       <PageHeader
         title="성적서 목록"
-        accent="CERT"
+        accent="인증서"
         nodeRef="SCR-QC-081~082"
         status="PROTOTYPE"
         description="품질 성적서 PDF 발급·재발행·이력 조회·다운로드 (FNC-QC-120~122, 124)"

@@ -34,7 +34,7 @@ export default function InventoryByMaterialPage() {
     <div>
       <PageHeader
         title="자재별 재고"
-        accent="INVENTORY"
+        accent="재고"
         nodeRef="SCR-LOC-061"
         status="PROTOTYPE"
         description="(Material × Plant) 가용 재고 현황 조회. FIFO 최선순 표시. 최소 재고 미만 경보."

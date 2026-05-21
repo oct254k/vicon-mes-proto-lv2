@@ -28,7 +28,7 @@ export default function SPPlansPage() {
     <div>
       <PageHeader
         title="생산 계획"
-        accent="PLANS"
+        accent="계획"
         nodeRef="SCR-SP-011"
         status="PROTOTYPE"
         description="일일 생산계획 현황 및 확정·미확정 계획 관리."

@@ -36,7 +36,7 @@ export default function YardMapLandingPage() {
     <div>
       <PageHeader
         title="야적장 도면"
-        accent="YARD-MAP"
+        accent="야드맵"
         nodeRef="SCR-LOC-010"
         status="PROTOTYPE"
         description="Plant P3000 야적장 전체 현황. Yard 카드 클릭 → 격자 상세 조회."

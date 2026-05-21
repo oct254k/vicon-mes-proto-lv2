@@ -41,7 +41,7 @@ export default function QCRecallExecAlertPage() {
     <div>
       <PageHeader
         title="임원 에스컬레이션"
-        accent="RECALL"
+        accent="회수"
         nodeRef="SCR-QC-052"
         status="PROTOTYPE"
         description="RECALL_CONFIRMED 공장장+임원 즉시 통보 (FNC-QC-096~097)"

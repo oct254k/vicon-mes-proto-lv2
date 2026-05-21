@@ -24,7 +24,7 @@ export default function CountLandingPage() {
     <div>
       <PageHeader
         title="실사 관리"
-        accent="COUNT"
+        accent="재고 실사"
         nodeRef="SCR-LOC-050"
         status="PROTOTYPE"
         description="재고 실사 계획·카운트·보고서 랜딩. 맹검 카운트 방식, FIFO 기반 자동 ADJUST."

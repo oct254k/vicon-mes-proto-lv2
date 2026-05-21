@@ -48,7 +48,7 @@ export default function OPSMultisitePage() {
     <div className="p-6 bg-surface min-h-screen">
       <PageHeader
         title="다공장 비교"
-        accent="MULTISITE"
+        accent="다중 사이트"
         nodeRef="SCR-OPS-030"
         description="그룹사 전체 Plant KPI 비교 · 60초 자동 갱신"
       />

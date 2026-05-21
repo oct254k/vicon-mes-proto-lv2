@@ -14,7 +14,7 @@ export default function USRTokensPage() {
     <div>
       <PageHeader
         title="EXTERNAL 토큰"
-        accent="TOKENS"
+        accent="토큰"
         nodeRef="SCR-USR-080"
         status="PROTOTYPE"
         description="외부 연계 API 토큰 발급·조회·무효화."

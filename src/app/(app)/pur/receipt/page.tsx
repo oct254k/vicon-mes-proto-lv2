@@ -25,7 +25,7 @@ export default function PURReceiptPage() {
     <div>
       <PageHeader
         title="입고·검수"
-        accent="RECEIPT"
+        accent="입고"
         nodeRef="SCR-PUR-017"
         status="PROTOTYPE"
         description="ASN 입고 처리 · 수입검사 결과 등록 · Lot 추적"
