@@ -39,8 +39,7 @@ export default function ReceiveInspectPage() {
   return (
     <div className="max-w-sm mx-auto">
       <PageHeader
-        title="PDA 검수"
-        accent="검수"
+        title="PDA 입고 검수"
         nodeRef="SCR-LOC-022"
         status="PROTOTYPE"
         description="입고 Lot 스캔 → 합격 / 불합격 판정. 불합격 시 격리 위치로 자동 이동."
@@ -55,7 +54,7 @@ export default function ReceiveInspectPage() {
             value={scan}
             onChange={e => setScan(e.target.value)}
           />
-          <button onClick={handleScan} className="w-full bg-[#00912F] text-black font-label font-bold uppercase tracking-widest py-2 text-sm hover:opacity-90">
+          <button onClick={handleScan} className="w-full bg-[#00912F] text-white font-label font-bold uppercase tracking-widest py-2 text-sm hover:opacity-90">
             스캔 ▶
           </button>
         </div>
@@ -79,7 +78,7 @@ export default function ReceiveInspectPage() {
             <div className="flex gap-3">
               <button
                 onClick={() => setResult(current.lot, "PASS")}
-                className={`flex-1 py-3 font-label font-bold uppercase tracking-widest text-sm transition-colors ${current.result === "PASS" ? "bg-[#00912F] text-black" : "bg-surface-elevated border border-outline/20 text-on-surface/60 hover:border-[#00912F]"}`}
+                className={`flex-1 py-3 font-label font-bold uppercase tracking-widest text-sm transition-colors ${current.result === "PASS" ? "bg-[#00912F] text-white" : "bg-surface-elevated border border-outline/20 text-on-surface/60 hover:border-[#00912F]"}`}
               >합격 ✔</button>
               <button
                 onClick={() => setResult(current.lot, "FAIL")}
@@ -95,7 +94,7 @@ export default function ReceiveInspectPage() {
               </div>
             )}
 
-            <button className="w-full py-3 bg-[#00912F] text-black font-label font-bold uppercase tracking-widest text-sm hover:opacity-90 disabled:opacity-30"
+            <button className="w-full py-3 bg-[#00912F] text-white font-label font-bold uppercase tracking-widest text-sm hover:opacity-90 disabled:opacity-30"
               disabled={current.result === "PENDING"}>
               검수 확정 ▶
             </button>
