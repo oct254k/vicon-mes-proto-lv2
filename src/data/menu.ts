@@ -9,6 +9,7 @@ export interface MenuNode {
   url?: string;        // route path; absent for expand-only nodes
   icon?: string;       // Material Symbol name; only on 1Depth domain roots
   role?: string[];     // primary roles (currently omitted everywhere — IA roles are placeholders)
+  hidden?: boolean;    // true면 사이드바 트리에서 숨김 (라우트/정의는 유지)
   children?: MenuNode[];
 }
 
@@ -397,7 +398,7 @@ export const MENU: MenuNode[] = [
   // ===== QC : 품질·SPC·불량 (SPC-CHART under SPC has 4Depth children — preserve) =====
   {
     id: "QC",
-    label: "품질·SPC·불량",
+    label: "품질·불량",
     icon: "verified",
     children: [
       {
@@ -406,13 +407,14 @@ export const MENU: MenuNode[] = [
         url: "/qc/dashboard",
         children: [
           { id: "QC-DASH-MAIN", label: "품질 KPI 메인", url: "/qc/dashboard/main" },
-          { id: "QC-DASH-LOSS-SUMMARY", label: "손실 요약 위젯", url: "/qc/dashboard/loss-summary" },
+          { id: "QC-DASH-LOSS-SUMMARY", label: "손실 요약 위젯", url: "/qc/dashboard/loss-summary", hidden: true },
         ],
       },
       {
         id: "QC-SPC",
         label: "SPC 측정·관리도",
         url: "/qc/spc",
+        hidden: true,
         children: [
           { id: "QC-SPC-MEASURE-PDA", label: "SPC 측정 입력 (PDA)", url: "/qc/spc/measure-pda" },
           {
@@ -445,6 +447,7 @@ export const MENU: MenuNode[] = [
         id: "QC-RECALL",
         label: "위험 확산 평가·회수",
         url: "/qc/recall",
+        hidden: true,
         children: [
           { id: "QC-RECALL-BOARD", label: "위험 확산 평가 보드", url: "/qc/recall/board" },
           { id: "QC-RECALL-NOTIFY", label: "거래처 통보 회신 큐", url: "/qc/recall/notify" },
@@ -455,6 +458,7 @@ export const MENU: MenuNode[] = [
         id: "QC-LOSS",
         label: "손실 환산·회계",
         url: "/qc/loss",
+        hidden: true,
         children: [
           { id: "QC-LOSS-CALC", label: "손실 환산 산출·조회", url: "/qc/loss/calc" },
           { id: "QC-LOSS-WEIGHT-MASTER", label: "시점 가중치 정책 마스터", url: "/qc/loss/weight-master" },

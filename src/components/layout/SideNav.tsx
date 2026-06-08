@@ -18,6 +18,16 @@ function matchesSearch(node: MenuNode, q: string): boolean {
   return node.children?.some((c) => matchesSearch(c, q)) ?? false;
 }
 
+// hidden 표시된 노드를 트리에서 제거 (자식도 재귀적으로 필터)
+function stripHidden(nodes: MenuNode[]): MenuNode[] {
+  return nodes
+    .filter((n) => !n.hidden)
+    .map((n) => ({
+      ...n,
+      children: n.children ? stripHidden(n.children) : undefined,
+    }));
+}
+
 // 검색 결과에서 매칭 노드만 포함한 트리 반환
 function filterTree(nodes: MenuNode[], q: string): MenuNode[] {
   return nodes
@@ -184,9 +194,10 @@ export function SideNav({ open = false, onClose }: SideNavProps) {
     return () => window.removeEventListener("keydown", handler);
   }, []);
 
+  const visibleMenu = stripHidden(MENU);
   const displayMenu = query.trim()
-    ? filterTree(MENU, query.trim())
-    : MENU;
+    ? filterTree(visibleMenu, query.trim())
+    : visibleMenu;
 
   return (
     <aside className={[
